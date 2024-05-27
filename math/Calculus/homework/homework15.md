@@ -241,6 +241,10 @@ Prove or disprove the following statements:
 
 ### Answer 2a
 
+> if $(a_n)$ is a convergent sequence where $a_n\neq0$ for all $n$, then the series $\sum_{n=1}^{\infty}\frac{a_{n+1}-a_n}{a_n\cdot a_{n+1}}$ converges if and only if $\lim_{n\to\infty}{a_n}\neq0$.
+
+#TODO
+
 ### Answer 2b
 
 > - b. If $a_n>0$ for all $n$, then the series $\sum_{n=1}^{\infty}{a_n}$ converges if and only if the series $\sum_{n=1}^{\infty}(a_n+a_{2n})$ converges.
@@ -277,11 +281,36 @@ the sequence $(a_n (n-1))$ is increasing (since $\frac{a_{n+1}}{a_n}\geq\frac{n-
 
 > - a. Prove that if the series $\sum_{n+1}^{\infty}(a_n+b_n)$ converges, and $\lim a_n=0$, then the series $a_1+b_1+a_2+b_2+\cdots$ converges.
 
+#TODO
 
+### Answer 4b
 
+> - b. Show that if $\lim a_n$ not necessarily equal to $0$, then the series $a_1+b_1+a_2+b_2+\cdots$ diverges, even if the series $\sum_{n+1}^{\infty}(a_n+b_n)$ converges.
+
+- Let's take $a_n=-1$ and $b_n=1$ for all $n$.
+- then $\sum_{n+1}^{\infty}(a_n+b_n)=\sum_{n+1}^{\infty}0$ converges. (since $\lim \sum_{k=1}^{n}0=0$)
+- but the series $a_1+b_1+a_2+b_2+\cdots=-1+1-1+1-\cdots$ diverges. (since $\lim (-1)^k \neq 0$. (by 5.5))
+
+### Answer 4c
+
+> - c. if $\sum_{n=1}^{\infty}a_n$ diverges, and $(a_n)$ is a null sequence of positive terms. prove that the series $a_1-a_1+a_2-a_2+\cdots$ converges conditionally.
+
+- if we'll take $b_n=-a_n$ for all $n$, then by (4a) since the series $\sum_{n+1}^{\infty}(a_n-a_n)=\sum_{n+1}^{\infty}0=0$ converges, then the series $a_1-a_1+a_2-a_2+\cdots$ converges. and since $\sum_{n=1}^{\infty}a_n$ diverges, then by 5.24, it converges conditionally.
+
+> find its sum. 
+
+#TODO
+
+> can we rearrange the terms such that the series diverges?
+
+#TODO
 
 ## Q5 
 
-Given a series $\sum a_n$ that diverges, and $a_n>0$ for all $n\in\mathbb{N}$. and $(S_n)=\sum_{k=1}^{n}a_k$.
+Given a series $\sum a_n$ that diverges, and $a_n>0$ for all $n\in\mathbb{N}$. and $S_n=\sum_{k=1}^{n}a_k$. Prove that the series $\sum_{n=1}^{\infty}\frac{a_n}{S_n}$ diverges.
 
-Prove that the series $\sum_{n=1}^{\infty}\frac{a_n}{S_n}$ diverges.
+### Answer 5
+
+- by 5.13, since the series $\sum a_n$ diverges and $a_n>0$ for all $n$, then the sequence of partial sums $(S_n)$ is unbounded.
+
+#TODO

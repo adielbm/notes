@@ -13,7 +13,7 @@
 - (5.6) If the seires $\sum \left|a_n\right|$ converges, then $\sum a_n$ converges as well.
 - see also [[Series#Convergence Absolutely]]
 
-## Monotone conv. thrm for Series  
+## Monotone Converges Theorem for Series  
 
 - (5.13) If $\forall n,a_n\geq0$, then $(s_n)$ is increasing. And:
 	- The series $\sum_{n=1}^{\infty}a_n$ converges if and only if $(s_n)$ is bounded
