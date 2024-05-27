@@ -16,31 +16,7 @@
     - ($\sum a_n^+$ and $\sum a_n^-$ are called the **positive** and **negative** parts of the series $\sum a_n$ respectively.)
 - (5.24b) If $\sum a_n$ converges conditionally, then $\sum a_n^+$ and $\sum a_n^-$ diverge to $\infty$.
 
-# Well-known Series
-
-## Telescoping series
-
-- A **telescoping series** is a series of the form $\displaystyle\sum_{n=1}^{\infty}(b_n-b_{n+1})$.
-- A **telescoping sum** is a sum of the form $\displaystyle\sum_{n=1}^{N}(b_n-b_{n+1})=b_1-b_{N+1}$.
-
-## Geometric series
-
-- A **geomorphic series** is a series of the form $\sum_{n=0}^{\infty}ar^n$ where $a\neq0$ and the **common ratio** $r$ are constants.
-	- Finite series
-		- ${\displaystyle\sum _{k=1}^{n}ar^{k-1}={\begin{cases}a\left({\frac {1-r^{n}}{1-r}}\right)&r\neq 1\\an&{\text{otherwise}}\end{cases}}}$
-	- Infinite series
-		- if $|r|<1$, $\sum_{n=0}^{\infty}ar^n=\frac{a}{1-r}$.
-		- if $|r|\geq1$, $\sum_{n=0}^{\infty}ar^n$ diverges.
-			- if $r=1$, $\sum_{n=0}^{\infty}ar^n$ diverges to $\infty$ if $a>0$ (or $-\infty$ if $a<0$).
-
-## p-series & harmonic series
-
-- A series of the form $\sum_{n=1}^{\infty}\frac{1}{n^p}$ is called a **p-series**. 
-	- (e5.8) The p-series converges if $p>1$ and diverges if $p\leq1$.
-	- When $p=1$, the series is called the **harmonic series** $\sum_{n=1}^{\infty}\frac{1}{n}$, which diverges.
-
-- The **alternating harmonic series** is the series $\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}=\ln 2$.
-
+> Related Convergence Tests: [[Convergence Tests#Absolute Convergence Test|Absolute Convergence Test]], [[Convergence Tests#Root test (Cauchy)|Root test]], [[Convergence Tests#Ratio test (d'Alembert)|Ratio test]] 
 # Theorems & Properties
 
 - Additivity (5.9) - If $\sum_{k=1}^{\infty}a_k$ and $\sum_{k=1}^{\infty}b_k$ converge, then $\sum_{k=1}^{\infty}(a_k\pm b_k)$ converges and $\sum_{k=1}^{\infty}(a_k\pm b_k)=\sum_{k=1}^{\infty}a_k\pm\sum_{k=1}^{\infty}b_k$.
@@ -49,7 +25,7 @@
 	- (q5.12) If $\sum_{k=1}^{\infty}a_k=\infty$, and $c>0$, then $\sum_{k=1}^{\infty}ca_k=\infty$.  
 
 - (q5.33) for $\theta\neq2\pi m$ for any integer $m$, the series $\sum\sin n\theta$ and $\sum\cos n\theta$ are **bounded** (i.e. their partial sums are bounded).
-
+- (q5.16) Given a convergent series $\sum_{k=1}^{\infty}a_k$, then $\left( {\sum_{k=n+1}^{\infty}a_k} \right)$ is a null sequence (i.e. the **tail** of a convergent series tends to zero)
 ## Rearranging (Commutativity)
 
 - A series $\sum a_n$ is a **rearrangement** of a series $\sum b_n$ if there exists a bijection $\sigma:\mathbb{N}\to\mathbb{N}$ such that $a_n=b_{\sigma(n)}$ for all $n\in\mathbb{N}$.
@@ -76,3 +52,29 @@
 	- (in other words, if a series converges, then every series obtained by deleting or adding a *finite* number of terms converges too).
 	- In which case, $\sum_{n=1}^{\infty}a_n=(a_1+a_2+\cdots+a_k)+\sum_{n=1}^{\infty}a_{n+k}$.
 	- (q5.14) Let $m$ be a natural number. $\sum_{k=1}^{\infty}a_k=\infty$ if and only if $\sum_{k=m}^{\infty}a_{k}=\infty$.
+
+# Well-known Series
+
+## Telescoping series
+
+- A **telescoping series** is a series of the form $\displaystyle\sum_{n=1}^{\infty}(b_n-b_{n+1})$.
+- A **telescoping sum** is a sum of the form $\displaystyle\sum_{n=1}^{N}(b_n-b_{n+1})=b_1-b_{N+1}$.
+
+## Geometric series
+
+- A **geomorphic series** is a series of the form $\sum_{n=0}^{\infty}ar^n$ where $a\neq0$ and the **common ratio** $r$ are constants.
+	- Finite series
+		- ${\displaystyle\sum _{k=1}^{n}ar^{k-1}={\begin{cases}a\left({\frac {1-r^{n}}{1-r}}\right)&r\neq 1\\an&{\text{otherwise}}\end{cases}}}$
+	- Infinite series
+		- if $|r|<1$, $\sum_{n=0}^{\infty}ar^n=\frac{a}{1-r}$.
+		- if $|r|\geq1$, $\sum_{n=0}^{\infty}ar^n$ diverges.
+			- if $r=1$, $\sum_{n=0}^{\infty}ar^n$ diverges to $\infty$ if $a>0$ (or $-\infty$ if $a<0$).
+
+## p-series & harmonic series
+
+- A series of the form $\sum_{n=1}^{\infty}\frac{1}{n^p}$ is called a **p-series**. 
+	- (e5.8) The p-series converges if $p>1$ and diverges if $p\leq1$.
+	- When $p=1$, the series is called the **harmonic series** $\sum_{n=1}^{\infty}\frac{1}{n}$, which diverges.
+
+- The **alternating harmonic series** is the series $\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}=\ln 2$.
+

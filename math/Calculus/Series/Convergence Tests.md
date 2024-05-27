@@ -1,10 +1,9 @@
 
-Strategy for Series https://eddieguo.ca/assets/downloads/notes/math101.pdf
-
-- (q5.16) Given a convergent series $\sum_{k=1}^{\infty}a_k$, then $\displaystyle\lim_{n\to\infty}{\sum_{k=n+1}^{\infty}a_k}=0$.
+> Strategy for Series Convergence Tests https://eddieguo.ca/assets/downloads/notes/math101.pdf
 ## Cauchy's Convergence Test
 
 - (5.4) The series $\sum a_n$ converges if and only if for every $\varepsilon>0$ there exists $N_{\varepsilon}$ such that if $\forall n>N_{\varepsilon}$, and $\forall p \in \mathbb{N}$ we have $\left|s_{n+p}-s_{n}\right|=\left|a_{n+1}+a_{n+2}+\cdots+a_{n+p}\right|<\varepsilon$.
+
 ## Divergence Test
 
 - (5.5) If $\sum_{n=1}^{\infty}a_n$ converges, then $\displaystyle\lim_{n\to\infty}a_n=0$.
@@ -12,6 +11,7 @@ Strategy for Series https://eddieguo.ca/assets/downloads/notes/math101.pdf
 ## Absolute Convergence Test
 
 - (5.6) If the seires $\sum \left|a_n\right|$ converges, then $\sum a_n$ converges as well.
+- see also [[Series#Convergence Absolutely]]
 
 ## Monotone conv. thrm for Series  
 
@@ -61,7 +61,7 @@ Given $a_n\geq0$ and $b_n\geq0$ for all $n>N$.
 		- If $c=1$, then the test is inconclusive.
 	(q5.26) If there exists $q<1$ such that $\left|\frac{a_{n+1}}{a_n}\right|\leq q<1$ for almost all $n$, then there exists $q\leq q'<1$ such that $\sqrt[n]{|a_n|}\leq q'$ for almost all $n$.
 
-> If we found that $\sum a_n$ diverges by either ratio test or root test, then $\lim_{n\to\infty}a_n\neq0$.
+> If we found that $\sum a_n$ diverges by either ratio test or root test, then $\displaystyle\lim_{n\to\infty}a_n\neq0$.
 
 ## Cauchy Condensation Test
 
