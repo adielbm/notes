@@ -8,10 +8,13 @@
 		- If $\displaystyle\lim_{n\to\infty}s_n=-\infty$, then we say that the series **diverges to negative infinity**. And denote its sum by $\sum_{n=1}^{\infty}a_n=-\infty$.
 
 
-#### Convergence Absolutely
+## Convergence Absolutely
 
 - (d5.7) A series $\sum_{n=1}^{\infty}a_n$ is said to **converge absolutely** if the series of absolute values $\sum_{n=1}^{\infty}|a_n|$ converges.
 - (d5.8) A series $\sum_{n=1}^{\infty}a_n$ is said to **converge conditionally** if it converges but does not converge absolutely.
+- (5.24a) The series $\sum a_n$ converges absolutely if and only if the series $\sum a_n^+$ and $\sum a_n^-$ converge.
+    - ($\sum a_n^+$ and $\sum a_n^-$ are called the **positive** and **negative** parts of the series $\sum a_n$ respectively.)
+- (5.24b) If $\sum a_n$ converges conditionally, then $\sum a_n^+$ and $\sum a_n^-$ diverge to $\infty$.
 
 # Well-known Series
 
@@ -38,37 +41,38 @@
 
 - The **alternating harmonic series** is the series $\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}=\ln 2$.
 
-# Arithmetic
+# Theorems & Properties
 
 - Additivity (5.9) - If $\sum_{k=1}^{\infty}a_k$ and $\sum_{k=1}^{\infty}b_k$ converge, then $\sum_{k=1}^{\infty}(a_k\pm b_k)$ converges and $\sum_{k=1}^{\infty}(a_k\pm b_k)=\sum_{k=1}^{\infty}a_k\pm\sum_{k=1}^{\infty}b_k$.
-- (5.10) If $c\neq0$, then $\sum_{k=1}^{\infty}a_k$ converges if and only if $\sum_{k=1}^{\infty}ca_k$ converges and $\sum_{k=1}^{\infty}ca_k=c\sum_{k=1}^{\infty}a_k$.
-- If $\sum_{k=1}^{\infty}a_k$ converges, then $\sum_{k=1}^{\infty}ca_k$ converges and $\sum_{k=1}^{\infty}ca_k=c\sum_{k=1}^{\infty}a_k$.
-- (q5.12) If $\sum_{k=1}^{\infty}a_k=\infty$, and $c>0$, then $\sum_{k=1}^{\infty}ca_k=\infty$.  
+- Multiplication by a constant 
+	- (5.10) - If $c\neq0$, then $\sum_{k=1}^{\infty}a_k$ converges if and only if $\sum_{k=1}^{\infty}ca_k$ converges. (in this case, $\sum_{k=1}^{\infty}ca_k=c\sum_{k=1}^{\infty}a_k$. )
+	- (q5.12) If $\sum_{k=1}^{\infty}a_k=\infty$, and $c>0$, then $\sum_{k=1}^{\infty}ca_k=\infty$.  
 
-- Convergence or divergence is unaffected by deleting a finite number of terms from a series; in particular, for any positive integer $K$, the series $\sum_{k=1}^{\infty}a_k$ converges if and only if the series $\sum_{k=K}^{\infty}a_k$ converges.
+- (q5.33) for $\theta\neq2\pi m$ for any integer $m$, the series $\sum\sin n\theta$ and $\sum\cos n\theta$ are **bounded** (i.e. their partial sums are bounded).
 
-# Rearranging Series
+## Rearranging (Commutativity)
 
-- If $\sum a_n$ absolutely converges, then every series obtained by reordering the terms of $\sum a_n$ absolutely converges to the same sum. (Known as Riemann's theorem, or the Riemann rearrangement theorem or Riemann's theorem on rearrangement of series.)
-- If $\sum a_n$ converges conditionally, then there exists a permutation of the terms of $\sum a_n$ that converges to any real number or diverges. (Known as the Riemann series theorem)
-- If $\sum a_n$ converges, then every series obtained by inserting parentheses, converges to the same sum. (Known as the associative law for series.)
+- A series $\sum a_n$ is a **rearrangement** of a series $\sum b_n$ if there exists a bijection $\sigma:\mathbb{N}\to\mathbb{N}$ such that $a_n=b_{\sigma(n)}$ for all $n\in\mathbb{N}$.
+- Given $\sum b_n$ is a rearrangement of $\sum a_n$
+	- (5.25) If $a_n\geq 0$, then $\sum b_n$ converges if and only if $\sum a_n$ converges.
+	- (5.26) $\sum a_n$ converges absolutely if and only if $\sum b_n$ converges absolutely. 
+	- In these two cases, $\sum a_n=\sum b_n$.
+- (5.27) If $\sum a_n$ converges conditionally, then: 
+	- For every $S\in\mathbb{R}$, there exists a rearrangement series of $\sum a_n$ such that $S$ is its sum. 
+	- There exists rearrangement series of $\sum a_n$ that diverge to $\infty$ and $-\infty$.
+	- There exists a rearrangement series of $\sum a_n$ that diverges. (not to $\infty$ or $-\infty$)
+- (5.27') If $\sum a_n$ converges conditionally, and $A\leq B$ are real numbers, then there exists a rearrangement series of $\sum a_n$ such that $A$ is the limit inferior of the partial sums and $B$ is the limit superior of the partial sums. (the same is true for $A=-\infty$ and $B=\infty$)
 
+## Inserting Parentheses (Associativity)
 
-- (5.25) If $\sum a_n$ is a series of nonnegative terms, and $\sum b_n$ that obtains by rearranging the terms of $\sum a_n$, then $\sum b_n$ converges if and only if $\sum a_n$ converges. In this case, $\sum a_n=\sum b_n$. (Riemann's theorem)
+- If $\sum a_n$ converges, then every series obtained by inserting parentheses, converges to the same sum.
 
-- (5.26) If $\sum a_n$ is a series, and $\sum b_n$ that obtains by rearranging the terms of $\sum a_n$, then $\sum b_n$ absolutely converges if and only if $\sum a_n$ absolutely converges. In this case, $\sum a_n=\sum b_n$. (Riemann's theorem)
+- (5.11) If $\sum a_k$ is a convergent series. And $(k_i)$ is an increasing sequence of natural numbers. And $b_1=a_1+\cdots+a_{k_1}$ and $b_{i+1}=a_{k_{i}}+\cdots+a_{k_{i+1}}$ for all $i\in\mathbb{N}$. Then the series $\sum b_i$ converges and $\sum b_i=\sum a_k$. (in other words, if a series converges, then every series obtained by inserting parentheses converges to the same sum)
+	- the opposite is not necessarily true.
 
-- (5.27) Riemann series theorem for conditional convergence - If $\sum a_n$ converges conditionally, then: 
-	- for every $S\in\mathbb{R}$, there exists a series that obtains by rearranging the terms of $\sum a_n$ such that $S$ is its sum. 
-	- Also there exists series that obtains by rearranging the terms of $\sum a_n$ that diverges to $\infty$ and $-\infty$.
-	- Also, there exists a series that obtains by rearranging the terms of $\sum a_n$ that diverges. (not to $\infty$ or $-\infty$)
+## Deleting/Adding Terms 
 
-# Exmaples
-
-- $\displaystyle\sin x=\sum_{n=0}^{\infty}\frac{(-1)^n}{(2n+1)!}x^{2n+1}$ 
-- $\displaystyle\cos x=\sum_{n=0}^{\infty}\frac{(-1)^n}{(2n)!}x^{2n}$ 
-- $\displaystyle e^x=\sum_{n=0}^{\infty}\frac{1}{n!}x^n$
-- $\displaystyle e^{-x}\sum_{n=0}^{\infty}\frac{(-1)^n}{n!}x^n$
-- $\displaystyle\ln(1+x)=\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}x^{n}$
-- $\displaystyle\ln(1-x)=-\sum_{n=1}^{\infty}\frac{1}{n}x^{n}$
-
+- (5.12) Let $k$ be a natural number. The series $\sum_{n=1}^{\infty}a_n$ converges if and only if the series $\sum_{n=1}^{\infty}a_{n+k}$ converges.
+	- (in other words, if a series converges, then every series obtained by deleting or adding a *finite* number of terms converges too).
+	- In which case, $\sum_{n=1}^{\infty}a_n=(a_1+a_2+\cdots+a_k)+\sum_{n=1}^{\infty}a_{n+k}$.
+	- (q5.14) Let $m$ be a natural number. $\sum_{k=1}^{\infty}a_k=\infty$ if and only if $\sum_{k=m}^{\infty}a_{k}=\infty$.

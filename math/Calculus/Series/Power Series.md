@@ -20,7 +20,8 @@ Given a power series $\displaystyle\sum_{n=0}^{\infty}a_nx^n$
 	- (c.) The function $f$ is continuously differentiable on $(-R,R)$, and for all $x\in(-R,R)$, we have $f'(x)=\sum_{n=0}^{\infty}a_n(n+1)x^n=\sum_{n=1}^{\infty}na_nx^{n-1}$.
 	- The power series in (b.) and (c.) have the same radius of convergence $R$ as the original power series.
 - (6.13, Abel's Theorem) Let $0<R\in\mathbb{R}$ be the radius of convergence, and let $f(x)=\sum_{n=0}^{\infty}a_nx^n$ be the function defined on $(-R,R)$. If the series converges at $x=R$ (or $x=-R$), then the function $f$ is continuous at $x=R$ from the left, i.e. $\displaystyle\lim_{x\to R^{-}}f(x)=f(R)$ (or $\displaystyle\lim_{x\to -R^{+}}f(x)=f(-R)$, respectively).
-- (6.14a) $\forall x \in(-r,r),\,\displaystyle f(x)=\sum_{n=0}^{\infty}a_n(x)^n\implies f$ is [[Derivative#Continuously Differentiability|infinitely differentiable]] on $(-r,r)$
+- (p210) A power series with finite radius of convergence $R>0$ uniformly converges on the domain of convergence if and only if the series converges at the endpoints $x=R$ and $x=-R$. 
+- (6.14a) $\forall x \in(-r,r),\,\displaystyle f(x)=\sum_{n=0}^{\infty}a_nx^n\implies f$ is [[Derivative#Continuously Differentiability|infinitely differentiable]] on $(-r,r)$
 - (6.14b) $\forall x \in(-r,r),\,\displaystyle f(x)=\sum_{n=0}^{\infty}a_n(x-c)^n\implies\forall n\geq 0,a_n=\frac{f^{(n)}(c)}{n!}$
 	- $\forall x \in(-r,r),\,\displaystyle f(x)=\sum_{n=0}^{\infty}a_nx^n\implies\forall n\geq 0,a_n=\frac{f^{(n)}(0)}{n!}$
 
@@ -142,3 +143,12 @@ Suppose that $f$ is $n+1$ times continuously differentiable in an interval $I$ c
 - (4.6) if $f$ is a $n+1$ times differentiable function on $I$ where $a\in I$ and $R_{n}(x)$ is the n-th remainder of $f$ at $a$. Let be $b\in I$ and $b\neq a$, and be a continuous function $\psi:[a,b]\to\mathbb{R}$, where $\psi$ is differentiable on $(a,b)$ and $\psi(a)=0$ and $\psi'(t)\neq 0$ for all between $a$ and $b$. Then there exists a number $c$ between $a$ and $b$ s.t: $\displaystyle R_{n}(b)=\frac{\psi(b)}{\psi'(c)}\cdot\frac{f^{(n+1)}(c)}{n!}(b-c)^{n}$.
 - Schlömilch’s Form (see q4.37)
 
+
+# Exmaples
+
+- $\displaystyle\sin x=\sum_{n=0}^{\infty}\frac{(-1)^n}{(2n+1)!}x^{2n+1}$ 
+- $\displaystyle\cos x=\sum_{n=0}^{\infty}\frac{(-1)^n}{(2n)!}x^{2n}$ 
+- $\displaystyle e^x=\sum_{n=0}^{\infty}\frac{1}{n!}x^n$
+- $\displaystyle e^{-x}\sum_{n=0}^{\infty}\frac{(-1)^n}{n!}x^n$
+- $\displaystyle\ln(1+x)=\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}x^{n}$
+- $\displaystyle\ln(1-x)=-\sum_{n=1}^{\infty}\frac{1}{n}x^{n}$

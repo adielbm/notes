@@ -13,18 +13,11 @@ Strategy for Series https://eddieguo.ca/assets/downloads/notes/math101.pdf
 
 - (5.6) If the seires $\sum \left|a_n\right|$ converges, then $\sum a_n$ converges as well.
 
-## todo 
-
-- (5.11) #todo 
-- (5.12) Let $k$ be a natural number. The series $\sum_{n=1}^{\infty}a_n$ converges if and only if the series $\sum_{n=1}^{\infty}a_{n+k}$ converges.
-	- In which case, $\sum_{n=1}^{\infty}a_n=(a_1+a_2+\cdots+a_k)+\sum_{n=1}^{\infty}a_{n+k}$.
-	- (q5.14) Let $m$ be a natural number. $\sum_{k=1}^{\infty}a_k=\infty$ if and only if $\sum_{k=m}^{\infty}a_{k}=\infty$.
-
 ## Monotone conv. thrm for Series  
 
 - (5.13) If $\forall n,a_n\geq0$, then $(s_n)$ is increasing. And:
 	- The series $\sum_{n=1}^{\infty}a_n$ converges if and only if $(s_n)$ is bounded
-		- In this case, $\sum_{n=1}^{\infty}a_n=\lim(s_n)=\sup\{s_n:n\in\mathbb{N}\}$ 
+		- In this case, $\sum_{n=1}^{\infty}a_n=\lim{s_n}=\sup\{s_n:n\in\mathbb{N}\}$ 
 	- The series $\sum_{n=1}^{\infty}a_n$ diverges to infinity if and only if $(s_n)$ is unbounded. 
 
 ## Comparison test
@@ -93,7 +86,7 @@ The series $\sum a_k$ converges if and only if the improper integral $\int_{1}^{
 		- (B.) $S$ is between $S_n$ and $S_{n+1}$.
 		- (C.) The error $|S-S_n|$ is less than $a_{n+1}$.
 
-> A seires of the form $\sum (-1)^{n+1}a_n$ is called an **alternating series**
+> A series of the form $\sum (-1)^{n+1}a_n$ is called an **alternating series**
 
 > These conclusions hold also for the series $\sum (-1)^{n}a_n$.
 
