@@ -1,25 +1,59 @@
-- Suppose that $F(x)$ and $G(x)$ are antiderivatives of $f(x)$ and $g(x)$, respectively
+Suppose that $F(x)$ and $G(x)$ are antiderivatives of $f(x)$ and $g(x)$, respectively
 
-|                         | Formula                                                            |                          |
-| ----------------------- | ------------------------------------------------------------------ | ------------------------ |
-| Constant Multiplication | $\displaystyle\int cf(x)dx=c\int f(x)dx$                           | $c\in\mathbb{R}$         |
-|                         | $\displaystyle\int x^n \, dx=\frac{x^{n+1}}{n+1}+C$                | (for integers $n\geq 0$) |
-| Sum                     | $\displaystyle \int [f(x)\pm g(x)]dx= \int f(x)dx\pm \int  g(x)dx$ |                          |
-| U-Substitution          | $\displaystyle\int f(g(x)) g'(x)=F(g(x))+C$                        |                          |
+|                         | Formula                                                                                          |                         |
+| ----------------------- | ------------------------------------------------------------------------------------------------ | ----------------------- |
+| Constant Multiplication | $\displaystyle\int cf(x)dx=c\int f(x)dx$                                                         | $c\in\mathbb{R}$        |
+| Sum / Difference        | $\displaystyle \int \left(f(x)\pm g(x)\right)dx= \int f(x)dx\pm \int  g(x)dx$                    |                         |
+| (2.4) Linearity         | $\displaystyle\int (\alpha f(x)+\beta g(x)) \, dx=\alpha\int f(x) \, dx+\beta \int g(x) \, dx$   |                         |
+| Power Rule              | $\displaystyle\int x^r \, dx=\frac{x^{r+1}}{r+1}+C$                                              | $-1\neq r\in\mathbb{R}$ |
+|                         | $\displaystyle\int \frac{1}{x} \, dx = \ln\vert {x}\vert + C$                                    |                         |
+| Exponential             | $\displaystyle\int a^x \, dx=\frac{a^x}{\ln a}$ (Special Case $\displaystyle\int e^x \, dx=e^x$) | $a\neq 1,a>0$           |
+| U-Substitution          | $\displaystyle\int f(g(x)) g'(x)=F(g(x))+C$                                                      |                         |
 
 
-- (2.4) Linearity 
-	- $\int (\alpha f(x)+\beta g(x)) \, dx=\alpha\int f(x) \, dx+\beta \int g(x) \, dx$
 
-# Integration by parts
+
+
+- ln
+	- $\displaystyle\int \ln x \, dx=x\ln x-x+C$
+- Trigonometric
+	- $\displaystyle\int \sin x \, dx=-\cos x+C$
+	- $\displaystyle\int  \cos x\, dx=\sin x+C$
+	- $\displaystyle\int \tan x \, dx=\ln\left|\cos x\right|+C$
+	- $\displaystyle\int \cot x\, dx=\ln\left|\sin x\right|+C$
+- Reciprocal Trigonometric
+	- $\displaystyle\int \frac{1}{\sin x} \, dx=\ln\left|\tan \frac{x}{2}\right|+C$
+	- $\displaystyle\int \frac{1}{\cos x} \, dx=-\ln\left|\tan \left( \frac{x}{2}-\frac{\pi}{4} \right)\right|+C$
+	- $\displaystyle\int \frac{1}{\sin^2x} \, dx=-\cot x$
+	- $\displaystyle\int \frac{1}{\cos^2x} \, dx=\tan x$
+- Inverse Trigonometric
+	- $\displaystyle\int \frac{1}{1 + x^2} \, dx = \arctan x + C$
+	- $\displaystyle\int \frac{1}{\sqrt{1 - x^2}} \, dx = \arcsin x + C$
+	- $\displaystyle\int \frac{1}{\sqrt{ a^2+x^2 }} \, dx=\arcsin \frac{x}{a}+C$
+
+
+some exmaple
+
+- (2.8a) $\displaystyle\int x\ln x \, dx=\frac{x^2\ln x}{2}-\frac{x^2}{4}+C$
+- (2.9) $\displaystyle\int \ln x \, dx=x\ln x-x+C$
+- (2.10) $\displaystyle\int \ln^2x \, dx=x\ln^2x-2x\ln x+2x+C$
+- (e2.12) $\displaystyle I_{m}=\int \frac{1}{(x^2+a^2)^{m}} \, dx={\begin{cases}I_{1}=\frac{1}{a}\arctan \frac{x}{a}+C \\ I_{m+1}=\frac{1}{2ma^2}\cdot \frac{x}{(x^2+a^2)^m}+\frac{2m-1}{2ma^2}I_{m} \end{cases}}$
+- (by power rule)
+	- $\int \frac{1}{\sqrt{ x }} \, dx=2\sqrt{ x }+C$ 
+	- $\int 0 \, dx=C$
+	- $\int 1 \, dx=\int  \, dx=x+C$
+
+- $\displaystyle\int (ax+b)^n \, dx=\frac{(ax+b)^{n+1}}{a(n+1)}+C$ (for $\alpha\neq -1$) #todo 
+
+> Read More 
+> https://en.wikipedia.org/wiki/Integration_by_reduction_formulae
+> https://en.wikipedia.org/wiki/Lists_of_integrals
+> 
+
+# Integration by Parts
 
 - (2.6) Integration by parts
 	- $\int f(x)g'(x) \, dx=f(x)g(x) -\int f'(x)g(x) \, dx$ 
-
-
-
-- (2.7) 
-	- 
 
 # Substitution
 
@@ -28,40 +62,29 @@
 - substitute and evaluate:
 $$\int f(\varphi(x))\varphi'(x)\, dx={\color{gray}\left[\begin{align} t &= \varphi(x) \\ dt &= \varphi'(x)dx \end{align}\right]}=\int f(t) \, dt$$
 - return to $x$ by substitute $t=\varphi(x)$
-
 - assumptions:
-	- (assume $\varphi$ is continuously differentiable on $J$ )
-	- (assume $f$ is continuous on $I$, and $\varphi(J)\subseteq I$ (so that $f \circ \varphi$ is defined))
+	- $\varphi$ is continuously differentiable on $J$
+	- $f$ is continuous on $I$
+	- $\varphi(J)\subseteq I$ (so that $f \circ \varphi$ is defined)
+
+- Thomas' & Stewart
+	- $u=g(x)$ is a differentiable function whose range is an interval $I$
+	- $f$ is continuous on $I$
+	- $\int f(g(x)) \cdot g'(x) \, dx=\int f(u) \, du$
+- Goldstein-Lay-Calculus
+	- substitute $\begin{align} u &= g(x) \\ du &= g'(x)dx \end{align}$ (assume $g$ is continuously differentiable on $J$ )
+	- Integrate the resulting function of $u$.
+	- Rewrite the answer in terms of $x$ by replacing $u$ by $g(x)$
+- Briggs
+	- Given an indefinite integral involving a composite function $f(g(x))$, indentify the inner function $u=g(x)$ such that a constant multiple of the $g'(x)$ appears in the integrand.
+	- Substitute $\begin{align} u &= g(x) \\ du &= g'(x)dx \end{align}$
+	- Evaluate the new indefinite integral with respect to $u$.
+	- Write the result in terms of $x$ by replacing $u$ by $g(x)$.
 
 
-
-
-
-
-
-###### Logarithmic Differentiation
+##### Logarithmic Differentiation
 
 - $\displaystyle\int \frac{f'(x)}{f(x)} \, dx=\ln|f(x)|+C$
-
-###### Thomas' & Stewart
-
-- $u=g(x)$ is a differentiable function whose range is an interval I, and $f$ is continuous on I
-- $\int f(g(x)) \cdot g'(x) \, dx=\int f(u) \, du$
-
-###### Goldstein-Lay-Calculus
-
-- substitute $\begin{align} u &= g(x) \\ du &= g'(x)dx \end{align}$ (assume $g$ is continuously differentiable on $J$ )
-- Integrate the resulting function of $u$.
-- Rewrite the answer in terms of $x$ by replacing $u$ by $g(x)$
-
-
-###### Briggs
-
-
-- Given an indefinite integral involving a composite function $f(g(x))$, indentify the inner function $u=g(x)$ such that a constant multiple of the $g'(x)$ appears in the integrand.
-- Substitute $\begin{align} u &= g(x) \\ du &= g'(x)dx \end{align}$
-- Evaluate the new indefinite integral with respect to $u$.
-- Write the result in terms of $x$ by replacing $u$ by $g(x)$.
 
 
 ####  Version 2
@@ -127,42 +150,6 @@ $\int f(x) \, dx=\int f(g(t))g'(t) \, dt\Big\vert_{t=g'(x)}$
 	- $m,n$ are even:
 		- #todo 
 
-# Integration Formulas
-
-- $\displaystyle\int 0 \, dx=C$
-- Cavalieri's quadrature formula
-	- $\displaystyle\int x^\alpha \, dx=\frac{x^{\alpha+1}}{\alpha+1}+C$ (for $\alpha\neq -1$)
-		- $\displaystyle\int (ax+b)^n \, dx=\frac{(ax+b)^{n+1}}{a(n+1)}+C$ (for $\alpha\neq -1$)
-- $\displaystyle\int 1 \, dx=\int  \, dx=x+C$
-
-- $\displaystyle\int a^x \, dx=\frac{a^x}{\ln a}$ (for $a\neq 1,a>0$)
-	- $\displaystyle\int e^x \, dx=e^x$
-- $\displaystyle\int \frac{1}{x} \, dx = \ln|x| + C$
-- $\displaystyle\int \sin x \, dx=-\cos x+C$
-- $\displaystyle\int  \cos x\, dx=\sin x+C$
-- $\displaystyle\int \frac{1}{\cos^2x} \, dx=\tan x$
-- $\displaystyle\int \frac{1}{\sin^2x} \, dx=-\cot x$
-- $\displaystyle\int \frac{1}{1 + x^2} \, dx = \arctan(x) + C$
-- $\displaystyle\int \frac{1}{\sqrt{1 - x^2}} \, dx = \arcsin(x) + C$
-- $\displaystyle\int \ln x \, dx=x\ln x-x+C$
-- $\displaystyle\int \tan x \, dx=\ln\left|\cos x\right|+C$
-- $\displaystyle\int \cot x\, dx=\ln\left|\sin x\right|+C$
-- $\displaystyle\int \frac{1}{\sin x} \, dx=\ln\left|\tan \frac{x}{2}\right|+C$
-- $\displaystyle\int \frac{1}{\cos x} \, dx=-\ln\left|\tan \left( \frac{x}{2}-\frac{\pi}{4} \right)\right|+C$
-- $\int \frac{1}{\sqrt{ x }} \, dx=2\sqrt{ x }+C$
-
-
-
-- $\displaystyle\int \frac{1}{\sqrt{ a^2+x^2 }} \, dx=\arcsin \frac{x}{a}+C$
-
-
-## Examples 
-
-- (2.8a) $\displaystyle\int x\ln x \, dx=\frac{x^2\ln x}{2}-\frac{x^2}{4}+C$
-- (2.9) $\displaystyle\int \ln x \, dx=x\ln x-x+C$
-- (2.10) $\displaystyle\int \ln^2x \, dx=x\ln^2x-2x\ln x+2x+C$
-- (e2.12) $\displaystyle I_{m}=\int \frac{1}{(x^2+a^2)^{m}} \, dx={\begin{cases}I_{1}=\frac{1}{a}\arctan \frac{x}{a}+C \\ I_{m+1}=\frac{1}{2ma^2}\cdot \frac{x}{(x^2+a^2)^m}+\frac{2m-1}{2ma^2}I_{m} \end{cases}}$
-
 # Rational Functions
 
 - $\displaystyle \frac{a}{(x-p)^k}$ (where $a,p \in \mathbb{R},\,k \in \mathbb{N}$)
@@ -211,10 +198,8 @@ Decomposition of a [[rational function]] $N(x)/D(x)$ into partial fractions
 |                | $\displaystyle\int ^a_{a}f(x) \, dx=0$                                            |                                          |
 |                |                                                                                   |                                          |
 
+- Cavalieri's Quadrature Formula $\displaystyle\int ^b_{a} x^n\, dx=\begin{cases}\displaystyle{\frac{b^{n+1}-a^{n+1}}{n+1}}&{n=1}\\\displaystyle{\ln\left(\frac{b}{a}\right)}&{n=-1}\end{cases}$ (where $a,b,x\in\mathbb{R}$)
 
-
-
-	
 ## Integration by parts
 
 - (2.10) Integration by parts for definite integrals

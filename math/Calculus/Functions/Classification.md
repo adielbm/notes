@@ -1,6 +1,7 @@
-## Elementary functions
+## Elementary Functions
 
-- All elementary functions are continuous on their domains.
+- An **elementary function** is a function which belongs to the class of functions consisting of the polynomials, the exponential functions, the logarithmic functions, the trigonometric functions, the inverse trigonometric functions, and the functions obtained from those listed by the four arithmetic operations and/or by composition, applied finitely many times (see d2.3-infi2)
+	- All elementary functions are continuous on their domains.
 
 ### Algebraic functions
 

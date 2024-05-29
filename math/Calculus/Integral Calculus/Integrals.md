@@ -1,19 +1,15 @@
-# Antiderivative
-
-- (d1.12) $F$ is called an **antiderivative** of $f$ on some interval if $F'(x)=f(x)$ for all $x$ in that interval
-
-> The process of finding a function from its derivative (i.e. finding an antiderivative) is called **[[integration]]** (or **antidifferentiation**)
-
 # Indefinite Integral
 
-- (d2.1) The collection of all antiderivatives called the **indefinite integral** of the $f$ with respect to $x$ and denote by: 
+- (d1.12) $F$ is called an **antiderivative** of $f$ on some interval if $F'(x)=f(x)$ for all $x$ in that interval
+	- The process of finding an antiderivative $F$ from its derivative $f=F'$ is called **[[integration]]** (or **antidifferentiation**)
+- (d2.1) The set of all antiderivatives called the **indefinite integral** of the $f$ with respect to $x$ and denote by: 
 	- $\displaystyle\int f(x) dx= \{ F(x):F'(x)=f(x),x \in I \}$
 		- The symbol $\int$ is an **integral sign**
 		- The function $f$ is the **integrand** of the integral
 		- $x$ is the **variable of integration**
-- (2.2) if $F$ is an antiderivative of $f$ then $\int f(x) \, dx=\{ G:G=F+c,c \in \mathbb{R} \}$. (or shortly, $F'=f\implies \int f(x) \, dx=F(x)+C$)
+- (2.2) if $F$ is an antiderivative of $f$ then $\int f(x) \, dx=\{ G:G=F+c,c \in \mathbb{R} \}$. 
+	- (or shortly, $F'=f\implies \int f(x) \, dx=F(x)+C$)
 
->  if $f$ is integrable on $[a,b]$ and $c \in [a,b]$ then the function $\displaystyle F_{c}(x)=\int ^x_{c}f(t) \, dt$ which is defined on $[a,b]$ is a (אינטגרל לא מסויים (d1.30)) of $f$ on $[a,b]$ 
 
 # Definite Integral
 
@@ -44,7 +40,7 @@
 
 ### Darboux integral
 
-- (d1.8) A bounded function $f:[a,b]\to \mathbb{R}$ is **Darboux-integrable** if $\displaystyle {\overline {\int _{a}^{b}}}f(x)\,\mathrm {d} x= {\underline {\int _{a}^{b}}}f(x)\,\mathrm {d} x$, in such case, the common value is called the **Darboux integral** of $f$ and denote as $\displaystyle\int^{b}_{a} f(x) \, dx$
+- (d1.8) A bounded function $f:[a,b]\to \mathbb{R}$ is **Darboux-integrable** if $\displaystyle {\overline {\int _{a}^{b}}}f(x)\,dx= {\underline {\int _{a}^{b}}}f(x)\,dx$, in such case, the common value is called the **Darboux integral** of $f$ and denote as $\displaystyle\int^{b}_{a} f(x) \, dx$
 ## by Riemann
 
 ### Riemann Sums
@@ -85,7 +81,7 @@ Equivalence of Definitions of Riemann and Darboux Integrals
 
 ### Integrabletly
 
-##### Necessary & Sufficient Conditions
+#### Necessary & Sufficient Conditions
 
 - (1.10) $f$ is integrable, if and only if, $\forall \varepsilon>0,\exists P:U_{f,P}-L_{f,P}<\varepsilon$
 
@@ -93,7 +89,7 @@ Equivalence of Definitions of Riemann and Darboux Integrals
 	- If $a<c<b$ then $f$ is integrable on $[a,b]$ iff $f$ is ingerable on $[a,c]$ and $[c,b]$. In that case: $\displaystyle\int_a^b f(x) \; dx = \int_a^c f(x) \; dx \, + \int_c^b f(x) \; dx$
 
 
-##### Sufficient Conditions
+#### Sufficient Conditions
 
 Sufficient conditions for integrabletly of $f$ on $[a,b]$:
 
@@ -102,11 +98,11 @@ Sufficient conditions for integrabletly of $f$ on $[a,b]$:
 - (1.17) if $f$ is bounded and piecewise monotone on $[a,b]$
 - (1.18) if $f$ is continuous (thus bounded) on $[a,b]$ 
 - (1.19) if $f$ is bounded and continuous on $[a,b]$ (possibly expect finites number of discontinuity points)
-##### Necessary Conditions
+#### Integrable Function Properties 
 
 Given $f$ (and $g$) is integrable on $[a,b]$
 
-- (1.13, הנוסחה היסודית, Newton–Leibniz theorem) 
+- (1.13, הנוסחה היסודית, Newton–Leibniz theorem, 2nd fundamental theorem of calculus) 
 	- if $F$ is any antiderivative of $f$ on $[a,b]$, then $\displaystyle\int^{b}_{a} f(x) \, dx=F(b)-F(a)=F(x) \bigg\rvert_a^b$
 - (1.27) $|f|$ is also integrable on $[a,b]$
 - (1.32) $F_{a}(x)=\displaystyle\int ^x_{a}f(t) \, dt$ is continuous on $[a,b]$
@@ -133,14 +129,22 @@ Given $f$ (and $g$) is integrable on $[a,b]$
 if $f$ is continuous on $[a,b]$ then:
 
 - (1.18) $f$ is integrable (thus bounded) on $[a,b]$ 
-- (1.29 - MVT for Integrals) $\exists c \in[a,b]:\displaystyle\int ^b_{a}f(x) \, dx=f(c)(b-a)$ (see also [[#Average Value]])
+- (1.29) MVT for Integrals 
+	- $\exists c \in[a,b]:\displaystyle\int ^b_{a}f(x) \, dx=f(c)(b-a)$ 
+	- (see also [[#Average Value]])
 - (q1.57) for all $c \in [a,b]$, the indefinite integral $\displaystyle\int ^x_{c}f(t) \, dt$ is an antiderivative of $f$ on $[a,b]$
-- (1.33) The Fundamental Theorem of Calculus 
-	- $\displaystyle F_{a}(x)=\int_{a}^{x}f(t)  \, dt$ is differentiable on $[a,b]$ and 
-	- $\displaystyle F'_{a}(x)=\frac{d}{dx}\left[ \int_{a}^{x}f(t)  \, dt \right]=f(x)$
-- (1.33') The Fundamental Theorem of Calculus
-	- $f$ has an antiderivative function on $[a,b]$
-	- every antiderivative function of $f$ on $[a,b]$ is of the form $\displaystyle\int ^x_{a}f(t) \, dt+C$ where $C$ is some real number
+- The Fundamental Theorem of Calculus
+	- (1.33) 
+		- The [[#area function]] $\displaystyle F_{a}(x)=\int_{a}^{x}f(t)  \, dt$ is differentiable on $[a,b]$, and 
+		- $\displaystyle F'_{a}(x)=\frac{d}{dx}\left[ \int_{a}^{x}f(t)  \, dt \right]=f(x)$
+	- (1.33')
+		- $f$ has an antiderivative function on $[a,b]$
+		- every antiderivative function of $f$ on $[a,b]$ is of the form $\displaystyle\int ^x_{a}f(t) \, dt+C$ where $C$ is some real number
+	- (see also [[#Integrable Function Properties|Newton–Leibniz theorem]] which is sometimes referred to as the second fundamental theorem of calculus)
+
+## Area Function
+
+- if $f$ is integrable on $[a,b]$ and $c \in [a,b]$ then the **area function** of $f$ on $[a,b]$ is defined by $\displaystyle F_{c}(x)=\int ^x_{c}f(t) \, dt$. (אינטגרל לא מסויים (d1.30)) 
 
 # Applications
 

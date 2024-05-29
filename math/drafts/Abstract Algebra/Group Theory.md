@@ -30,3 +30,10 @@
 	- The functions $\log$ and $\exp$ are inverses of each other (i.e. $\log \exp x=x$ and $\exp \log y=y$), so $\log$ and $\exp$ are a homomorphism that has an inverse that is also a homomorphism, therefore they are both an isomorphism of groups
 
 
+# Subgroup
+
+- If a subset $H$ of a group $G$ is itself a group under the operation of $G$, we say that $H$ is a **subgroup** of $G$ and write $H ≤ G$
+	- If $H\neq G$, we say that $H$ is a **proper subgroup** of $G$ and write $H < G$
+	- The subgroup $\{e\}$ is called the **trivial subgroup** of $G$
+	- If $H\neq \{e\}$, we say that $H$ is a **nontrivial subgroup** of $G$
+

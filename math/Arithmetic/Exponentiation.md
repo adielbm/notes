@@ -1,4 +1,4 @@
-### Integer exponents
+### Integer Exponents
 
 - $\displaystyle  {\displaystyle a^{n}=\underbrace {a\times a\times \dots \times a\times a} _{n{\text{ times}}}}$
 
@@ -17,16 +17,30 @@
 
 >  Order of operations $a^{n^m}=a^{(n^m)}$
 
-### Rational exponents 
+### Rational Exponents 
 
 - $\displaystyle a^{m/n}:=\sqrt[n]{a^m}$
 
 - The *exponents rules* also hold for rational exponents
 
-### Real exponents
+### Real Exponents
 
 > Assumption  $r\in\mathbb{R},\quad a>0,\quad \displaystyle \lim_{ n \to \infty }{q_{n}}=r$
 
 - Definition - $\displaystyle a^r:=\lim_{ n \to \infty }a^{q_{n}}$
 
 - The *exponents rules* also hold for real exponents
+
+
+
+# Domain of $f(x)=x^r$
+
+#todo 
+
+|                                                                                                         | $r<0$                        | $r>0$         |
+| ------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------- |
+| $r\in\mathbb{Z}$  or <br>$r=\frac{p}{q}\in\mathbb{Q}$ and $q$ is **odd**,<br>(OR, for complex solution) | $\mathbb{R} \setminus \{0\}$ | $\mathbb{R}$  |
+| $r=\frac{p}{q}\in\mathbb{Q}$ and $q$ is **even**, OR<br>$r\in\mathbb{R}\setminus \mathbb{Q}$            | $(0, \infty)$                | $[0, \infty)$ |
+
+
+

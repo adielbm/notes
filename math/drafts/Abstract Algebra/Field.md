@@ -16,6 +16,8 @@
 	- Inverse $\forall a \in \mathbb{F} \setminus \{0\}, \exists b \in \mathbb{F} : a \cdot b = 1$
 - Distributive $a · (b + c) = a · b + a · c$
 
+> A field can define as a [[Ring|commutative ring]] with unity in which every nonzero element is a unit (i.e., has a multiplicative inverse).
+
 ### Examples
 
 - Rational numbers
