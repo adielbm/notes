@@ -52,47 +52,31 @@ some exmaple
 
 # Integration by Parts
 
-- (2.6) Integration by parts
-	- $\int f(x)g'(x) \, dx=f(x)g(x) -\int f'(x)g(x) \, dx$ 
+(2.6)
+$$\displaystyle \int f(x)g'(x) \, dx=f(x)g(x) -\int f'(x)g(x) \, dx$$
+By substitution, $\small\displaystyle{\begin{align} u=f(x)&\implies du=f'(x)\,dx \\ dv=g'(x)\,dx &\implies v=\int g'(x) \, dx=g(x) \end{align}}$ we get:
+$$\displaystyle \int u\,dv =uv-\int v\,du$$
 
+> The **LIATE** rule: choose $u=f(x)$ as the function that appears first in LIATE and choose $dv=g'(x)\,dx$ as the last one. (Logarithmic, Inverse-trig, Algebric, Trig, Exponential)
 # Substitution
 
-#### Version 1
-
-- substitute and evaluate:
-$$\int f(\varphi(x))\varphi'(x)\, dx={\color{gray}\left[\begin{align} t &= \varphi(x) \\ dt &= \varphi'(x)dx \end{align}\right]}=\int f(t) \, dt$$
-- return to $x$ by substitute $t=\varphi(x)$
-- assumptions:
-	- $\varphi$ is continuously differentiable on $J$
+- Assumptions:
 	- $f$ is continuous on $I$
-	- $\varphi(J)\subseteq I$ (so that $f \circ \varphi$ is defined)
+	- $g$ is continuously differentiable on $J$
+	- $g(J)\subseteq I$ (i.e. image of $g$ is subset of $I$, so that $f \circ g$ is defined)
+- Substitute & Evaluate:
+$$\displaystyle \int f(g(x))g'(x)\, dx={\color{gray}\left[\begin{align} u &= g(x) \\ du &= g'(x)dx \end{align}\right]}=\int f(u) \, du$$
+- Return to $x$ by substitute $u=g(x)$
 
-- Thomas' & Stewart
-	- $u=g(x)$ is a differentiable function whose range is an interval $I$
-	- $f$ is continuous on $I$
-	- $\int f(g(x)) \cdot g'(x) \, dx=\int f(u) \, du$
-- Goldstein-Lay-Calculus
-	- substitute $\begin{align} u &= g(x) \\ du &= g'(x)dx \end{align}$ (assume $g$ is continuously differentiable on $J$ )
-	- Integrate the resulting function of $u$.
-	- Rewrite the answer in terms of $x$ by replacing $u$ by $g(x)$
-- Briggs
-	- Given an indefinite integral involving a composite function $f(g(x))$, indentify the inner function $u=g(x)$ such that a constant multiple of the $g'(x)$ appears in the integrand.
-	- Substitute $\begin{align} u &= g(x) \\ du &= g'(x)dx \end{align}$
-	- Evaluate the new indefinite integral with respect to $u$.
-	- Write the result in terms of $x$ by replacing $u$ by $g(x)$.
+##### Logarithmic Integration
 
+- $\displaystyle\int \frac{f'(x)}{f(x)} \, dx=\ln|f(x)|+C$ (Logarithmic Integration, a substitution of $u=f(x)$ p136)
 
-##### Logarithmic Differentiation
+###  Version 2
 
-- $\displaystyle\int \frac{f'(x)}{f(x)} \, dx=\ln|f(x)|+C$
-
-
-####  Version 2
-
-- first, substitute and evaluate:
+- Substitute & Evaluate:
 $$\int f(x) \, dx={\color{gray}\left[\begin{align} x &= \varphi(t) \\ dx &= \varphi'(t)dt \end{align}\right]}=\int f(\varphi(t))\varphi'(t) \, dt$$
-- and then return to $x$ by substitute $t=\varphi^{-1}(x)$
-
+- return to $x$ by substitute $t=\varphi^{-1}(x)$
 
 
 
@@ -110,8 +94,7 @@ $\int f(x) \, dx=\int f(g(t))g'(t) \, dt\Big\vert_{t=g'(x)}$
 | ${a^2+x^2}$          | $x=a\tan t$  <br>$dx=a\sec^2 t \,dt$ <br>$t=\arctan {\frac {x}{a}}$     | $\tan^2t+1=\sec^2t$ | $-\frac{\pi}{2}<t<\frac{\pi}{2}$                      | $a^2(1+\tan^2t)$       | $a^2\sec ^2t$        |
 | ${x^2-a^2}$          | $x=a\sec t$$dx=a\sec t\tan t \,dt$ <br>$t=\text{arcsec} {\frac {x}{a}}$ | $\sec^2t-1=\tan^2t$ | $0\leq t<\frac{\pi}{2}$ or $\pi\leq t<\frac{3\pi}{2}$ | $a^2(\sec^2t-1)$       | $a^2\tan ^2t$        |
 
-
-
+ 
 
 | Integrands                                     | Substitutions                                                             |
 | ---------------------------------------------- | ------------------------------------------------------------------------- |
@@ -126,10 +109,7 @@ $\int f(x) \, dx=\int f(g(t))g'(t) \, dt\Big\vert_{t=g'(x)}$
 | $\displaystyle\frac{a^{n}-x^{n}}{a^{n}+x^{n}}$ | $x^{n}=a^{n}\cos\theta$                                                   |
 
 
-
-
 #### Tangent half-angle substitution
-
 
 - $\displaystyle \sin x={\frac {2t}{1+t^{2}}}$
 - $\displaystyle\cos x={\frac {1-t^{2}}{1+t^{2}}}$
@@ -185,11 +165,10 @@ Decomposition of a [[rational function]] $N(x)/D(x)$ into partial fractions
 
 
 
-
 # Definite Integrals
 
 
-|                |                                                                                   |                                          |
+|                | Formula                                                                           |                                          |
 | -------------- | --------------------------------------------------------------------------------- | ---------------------------------------- |
 | Additivity     | $\displaystyle\int_a^b f(x) \; dx = \int_a^c f(x) \; dx \, + \int_c^b f(x) \; dx$ | $a<c<b$ and $f$ is integrable on $[a,b]$ |
 | Shift Property | $\displaystyle\int_a^b f(x) \; dx = \int_{a-c}^{b-c} f(x+c) \; dx$                |                                          |
@@ -199,12 +178,16 @@ Decomposition of a [[rational function]] $N(x)/D(x)$ into partial fractions
 |                |                                                                                   |                                          |
 
 - Cavalieri's Quadrature Formula $\displaystyle\int ^b_{a} x^n\, dx=\begin{cases}\displaystyle{\frac{b^{n+1}-a^{n+1}}{n+1}}&{n=1}\\\displaystyle{\ln\left(\frac{b}{a}\right)}&{n=-1}\end{cases}$ (where $a,b,x\in\mathbb{R}$)
+	
+## Integration by Parts
 
-## Integration by parts
+(2.10) Integration by Parts for Definite Integrals
 
-- (2.10) Integration by parts for definite integrals
-	- $\int ^b_{a}uv' \, dx=uv|^b_{a}-\int ^{b}_{a}u'v \, dx$
+$$\displaystyle\int_{a}^{b}f(x)g'(x)\,dx={\Big [}f(x)g(x){\Big ]}_{a}^{b}-\int _{a}^{b}f'(x)g(x)\,dx$$
 
+By substitution, $\small\displaystyle{\begin{align} u=f(x)&\implies du=f'(x)\,dx \\ dv=g'(x)\,dx &\implies v=\int g'(x) \, dx=g(x) \end{align}}$ we get:
+
+$$\displaystyle\int ^b_{a}u\,dv=\Big[uv\Big]^b_{a}-\int ^{b}_{a}v \, du$$
 ## Substitution in Definite Integrals
 
 (2.11) conditions:

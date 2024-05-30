@@ -78,7 +78,12 @@ Equivalence of Definitions of Riemann and Darboux Integrals
 
 - if $f$ is integrable on an interval where $a$ and $b$ are its endpoints and $|f(x)|\leq M$ for all $x$ in that interval, then $\displaystyle\left|\int^b_{a} f(t) \, dt\right|\leq M|b-a|$
 - (1.41) if $f$ is Darboux-integrable on $[a,b]$, then $\displaystyle \lim_{ \lambda(P) \to 0 }(S(P)-s(P))=0$
-
+- Odd / Even Functions (continuous on $\mathbb{R}$)
+	- (q2.43, Odd) $f(-x)=-f(x)$ for all $x$, then $\displaystyle\int ^a_{-a}f(x) \, dx=0$ for all $a$. 
+	- (Even) if $f(-x)=f(x)$ for all $x$, then $\displaystyle\int ^a_{-a}f(x) \, dx=2\int ^a_{0}f(x) \, dx$ for all $a$.
+- Periodic functions
+	- If $f(x)=f(x+P)$ for all $x$, then $\displaystyle\int ^{b+P}_{a+P}f(x) \, dx=\int ^{b}_{a}f(x) \, dx$ for all $a,b$.
+	
 ### Integrabletly
 
 #### Necessary & Sufficient Conditions
@@ -142,6 +147,7 @@ if $f$ is continuous on $[a,b]$ then:
 		- every antiderivative function of $f$ on $[a,b]$ is of the form $\displaystyle\int ^x_{a}f(t) \, dt+C$ where $C$ is some real number
 	- (see also [[#Integrable Function Properties|Newton–Leibniz theorem]] which is sometimes referred to as the second fundamental theorem of calculus)
 
+
 ## Area Function
 
 - if $f$ is integrable on $[a,b]$ and $c \in [a,b]$ then the **area function** of $f$ on $[a,b]$ is defined by $\displaystyle F_{c}(x)=\int ^x_{c}f(t) \, dt$. (אינטגרל לא מסויים (d1.30)) 
@@ -156,7 +162,7 @@ if $f$ is continuous on $[a,b]$ then:
 
 - If $f$ (and $g$) are continuous
 	- $\displaystyle\int^{b}_{a} |f(x)| \, dx$ is the area of of the region that lies between the graph of $f$ and the interval $[a, b]$ on the $x$-axis
-	-  $\displaystyle A =\left|{\int^{x_{2}}_{x_{1}}(f(x)-g(x))  \, dx}\right|$ is the area between the curves $f(x)$ and $g(x)$ over the interval $[x_1, x_2]$
+	-  $\displaystyle A =\left|{\int^{b}_{a}(f(x)-g(x))  \, dx}\right|$ is the area between the curves $f(x)$ and $g(x)$ over the interval $[a, b]$
 
 - If $f(x)$ is nonnegative and integrable over a closed interval $[a,b]$, then the area under the curve $f(x)$ over $[a,b]$ is the integral of $f$ from $a$ to $b$, $A=\int _{a}^{b}f(x) \, dx$
 
