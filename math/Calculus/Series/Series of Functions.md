@@ -14,16 +14,24 @@ A sequence of functions is a function whose domain is $\mathbb{N}$ and whose ran
 
 - If $(f_n)$ converges pointwise to $f$ on $[a,b]$
 	- (6.9) term-by-term differentiation - If each $f_n$ is continuously differentiable on $[a,b]$, and if the sequence of derivatives $(f_n')$ converges uniformly on $[a,b]$, then $f$ is differentiable on $[a,b]$ and $\displaystyle f'(x) = \lim_{n \to \infty} f_n'(x)$ for all $x\in [a,b]$.
+	- (6.5) Dini's Theorem - If $f$ is continuous on $[a,b]$, and $(f_n)$ is increasing ($\forall n \in \mathbb{N},\forall x\in [a,b],f_n(x)\leq f_{n+1}(x)$), or decreasing, then $(f_n)$ converges uniformly to $f$ on $[a,b]$
 
 ### Uniform Convergence
 
-- (d6.2) Given a sequence of functions $(f_n)$ defined on an interval $D$. We say that the sequence $(f_n)$ **converges uniformly** to $f$ on $D$ if for every $\varepsilon > 0$, there exists an integer $N$ such that for all $n\geq N$ and for all $x\in D$ we have $|f_n(x) - f(x)| < \varepsilon$. In which case, we say that the sequence $(f_n)$ **converges uniformly** to $f$ on $D$, and we write $\displaystyle f_n \to f$ uniformly on $D$. Also, we say that $f$ is the **uniform limit** of the sequence $(f_n)$ on $D$.
-    - ($N$ depends only on $\varepsilon$. So, we can write $N = N(\varepsilon)$.)
-- (6.3) $(f_n)$ converges uniformly to $f$ on $I$ if and only if $\displaystyle \lim_{n \to \infty} \sup_{x\in I} |f_n(x) - f(x)| = 0$.
-- (q6.5) Uniform convergence implies pointwise convergence (but not conversely!).
-- (6.5) Dini's Theorem - Given a sequence of functions $(f_n)$ defined on an interval $[a,b]$ convergget pointwise to a continuous function $f$ on $[a,b]$. Then, if $(f_n)$ is increasing (i.e. for all $n$ and for all $x\in [a,b]$, we have $f_n(x) \leq f_{n+1}(x)$), then $(f_n)$ converges uniformly to $f$ on $[a,b]$.
-- (6.6) (Cauchy Criterion for Uniform Convergence) A sequence of functions $(f_n)$ converges uniformly on a domain $D$ if and only if for every $\varepsilon > 0$, there exists an integer $N$ such that for all $n>N$ and for all $p\in \mathbb{N}$, we have $|f_{n+p}(x) - f_n(x)| < \varepsilon$ for all $x\in D$. 
+Given a sequence of functions $(f_n)$ defined on an interval $D$
+
+- Given a sequence of functions $(f_n)$ defined on an interval $D$, the following are equivalent: (d6.2, 6.3)
+	- $(f_n)$ **converges uniformly** to $f$ on $D$
+	- $\displaystyle f_n \to f$ **uniformly** on $D$
+	- $\forall\varepsilon > 0,\exists N:\forall n\geq N,\forall x \in{D},|f_n(x) - f(x)| < \varepsilon$
+	- $f$ is the **uniform limit** of $(f_n)$ on $D$
+	- $\displaystyle \lim_{n \to \infty} \sup_{x\in D} |f_n(x) - f(x)| = 0$
+
+- ((6.6) Cauchy Criterion for Uniform Convergence) There exists a function $f$ s.t. $(f_n)\to f$ uniformly on $D$, if and only if $\forall\varepsilon > 0 ,\exists N:\forall n>N,\forall p\in \mathbb{N},\forall x \in D,|f_{n+p}(x) - f_n(x)| < \varepsilon$
+
+
 - If $(f_n)$ converges uniformly to $f$ on $D$, then:
+	- (q6.5) $(f_{n})$ converges converges pointwise to $f$ on $D$
 	- (6.4) If each $f_n$ is continuous on $D$, then $f$ is continuous on $D$.
 	- If each $f_n$ is integrable on $[a,b]$ and if $(f_n)$ converges uniformly to $f$ on $[a,b]$, then $f$ is integrable on $[a,b]$ and $\displaystyle \int_{a}^{b} f(x) dx = \lim_{n \to \infty} \int_{a}^{b} f_n(x) dx$.
 	- If each $f_n$ is differentiable continuously on $[a,b]$ and if the sequence of derivatives $(f_n')$ converges uniformly on $I$, and if $(f_n)$ converges at some point $x_0\in I$, then $(f_n)$ converges uniformly on $I$ to a function $f$ that is differentiable on $I$ and $\displaystyle f'(x) = \lim_{n \to \infty} f_n'(x)$ for all $x\in I$.

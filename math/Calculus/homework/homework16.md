@@ -1,5 +1,3 @@
-# HOMEWORK #16 
-
 - Unit: 6 (Seq. & Series of functions, Power series, Taylor series)
 - Due date: May 22, 2024
 - Points: 4
@@ -16,6 +14,24 @@ Determine whether the sequence $(f_n)$ uniformly converges on $[0,1]$.
 ### Answer 1
 
 #TODO
+
+> (6.5) Dini's Theorem - if $(f_n)$ converges pointwise to $f$ on $[a,b]$ and $f$ is continuous on $[a,b]$, and $(f_n)$ is increasing ($\forall n \in \mathbb{N},\forall x\in [a,b],f_n(x)\leq f_{n+1}(x)$), or decreasing, then $(f_n)$ converges uniformly to $f$ on $[a,b]$.
+
+- by induction, we can show that $f_n(x)\geq x$ for all $n\geq 1$ and $x\in [0,1]$.
+    - Base case $n=1$: $f_1(x)=1\geq x$ for all $x\in [0,1]$.
+    - Assume $f_n(x)\geq x$ for all $x\in [0,1]$. 
+    - Then, $f_{n+1}(x)=\sqrt{x f_n(x)}\geq \sqrt{x^2}=x$ for all $x\in [0,1]$. 
+    - Thus, $f_n(x)\geq x$ for all $n\geq 1$ and $x\in [0,1]$. QED.
+- by induction, we can show that the sequence $(f_n)$ is decreasing for all $x\in [0,1]$.
+    - Base case $n=1$: $f_1(x)=1\geq f_2(x)=\sqrt{x}$ for all $x\in [0,1]$.
+    - Assume $f_n(x)\geq f_{n+1}(x)$ for all $x\in [0,1]$. 
+    - Then, $f_{n+1}(x)=\sqrt{x f_n(x)}\geq \sqrt{x f_{n+1}(x)}=f_{n+2}(x)$ for all $x\in [0,1]$. 
+    - Thus, $f_n(x)\geq f_{n+1}(x)$ for all $n\geq 1$ and $x\in [0,1]$. QED.
+- by 3.16 (Monotone Convergence Theorem), $\lim_{n\to\infty}f_n(x)\in\mathbb{R}$ for all $x\in [0,1]$.
+- since $\lim f_n(x)=\lim f_{n+1}(x)$ 
+    - $\lim f_n(x)=\lim \sqrt{x f_n(x)}$
+    - $\lim f_n(x)=\sqrt{x} \cdot  \sqrt{ \lim f_n(x)}$
+    - $\lim f_n(x)=x$ (since $f_n(x)\geq x\implies \lim f_n(x)\geq \lim x=x$, and $f_n(x)\leq x\implies \lim f_n(x)\leq \lim x=x$) ???? #todo
 
 
 ## Q2
