@@ -1,4 +1,4 @@
-# Vector space
+# Vector Space
 
 ## Definition
 

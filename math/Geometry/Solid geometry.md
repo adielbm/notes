@@ -6,4 +6,4 @@
 		- volume ${\displaystyle V=B\cdot h}$
 
 - Solid of revolution
-	- [[Integrals#Solid of Revolution|volume]]
+	- [[Definite Integral#Solid of Revolution|volume]]

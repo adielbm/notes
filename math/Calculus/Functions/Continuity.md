@@ -68,6 +68,7 @@
 	- (q8.25) if $f$ is **monotonic** on $(a,b)$ then $f$ is **monotonic** on $[a,b]$ 
 	- (5.48) **Heine–Cantor theorem** - $f$ is uniformly continuous on it.
 	- $\forall x \in[a,b],f(x)>0\implies \inf{f((a,b))>0}$ (e2019b91q9)
+	- (see more on [[Definite Integral#Theorems of Continuous Function]])
 
 
 ## Examples
@@ -90,3 +91,15 @@ Theorems
 - (5.47) if $f$ is uniformly continuous on $I$, then it is $f$ is continuous on $I$
 - (5.48) **Heine–Cantor theorem** - if $f$ is continuous on the closed interval $I=[a,b]$, then $f$ is uniformly continuous on it.
 - (5.48) If $f$ is defined on the open interval $I=(a,b)$, then $f$ is uniformly continuous on it, if and only if, $f$ is continuous on it, and the one-side limits $\displaystyle\lim_{ x \to a^{+} }f(x)$ and $\displaystyle\lim_{ x \to b^{-} }f(x)$ are defined.
+
+# Piecewise Continuous Function
+
+#not-in-course
+
+- A function $f:[a,b]\to\mathbb{R}$ is **piecewise continuous** if there exists a finite subset $\{ x_{0},x_{1},\dots, x_{n} \}\subseteq[a,b]$ such that:
+	- $a\leq x_{0}<x_{1}<\ldots<x_{n}\leq b$
+	- $f$ is continuous on each open interval $(x_{i-1},x_{i})$ for $i=1,2,\dots,n$
+	- For each $i$, the one-sided limits $\displaystyle\lim_{ x \to x_{i-1}^{+} }f(x)$ and $\displaystyle\lim_{ x \to x_{i}^{-} }f(x)$ exist and are finite. (we make the obvious variations if either $x_0=a$ or $x_n=b$)
+- If $f$ is defined on $\mathbb{R}$, then $f$ is piecewise continuous if it is piecewise continuous restricted to every bounded closed interval $[a,b]$.
+- All piecewise continuous functions are [[Definite Integral|integrable]]
+- The points of discontinuity subdivide $[a,b]$ into open and half-open subintervals on which $f$ is continuous, and the limit criteria above guarantee that $f$ has a continuous extension to the closure of each subinterval.

@@ -38,7 +38,7 @@ Definitions. The following statements are **equivalent**:
 - $A\mathbf{x}=\mathbf{b}\text{ is consistent}$.   ($A$ is $K$'s vectors as columns)
 
 **Theorems:**
-- $\text{Sp}(K)$ is [[Vector spaces|subspace]]
+- $\text{Sp}(K)$ is [[Vector Spaces|subspace]]
 - $B\subseteq{\text{Sp}{(K)}}\implies{K\text{ spans }V}$. (where $\text{Sp}({B})=V$)
 - $m<n\implies K\text{ is {\bf not} span }V$
 - (7.5.4) $\text{Sp}{(K)}=\text{Sp}{(L)}\iff{K\subseteq\text{Sp}{(L)}\land{L\subseteq\text{Sp}{(K)}}}$
