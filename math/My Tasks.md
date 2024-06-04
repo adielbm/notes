@@ -3,16 +3,30 @@
 
 - calculus
 	- [ ] [[homework15]] June 8
+		- [ ] Q1a
+		- [x] Q1b
+		- [ ] Q2a
+		- [x] Q2b
+		- [x] Q3
+		- [ ] Q4a
+		- [x] Q4b
+		- [ ] Q4c
+		- [ ] Q5
+		- [ ] Translating to Hebrew 
 	- [ ] [[homework16]] June 22
-		- [ ] Q1
-		- [ ] Q2
+		- [ ] Q1 (to finish)
+		- [x] Q2
 		- [ ] Q3
-		- [ ] Q4
+		- [x] Q4
 		- [ ] Q5
 		- [ ] Q6
+		- [ ] Translating to Hebrew 
 
-- logic
-	- [ ] homework-2 - from June 4 to June 19
+## Logic (HW-2)
+
+- from June 4 to June 19
+
+
 
 # Study 📚
 
@@ -35,8 +49,6 @@
 		- [ ] version 2
 	- [ ] The REAL power rule https://www.youtube.com/watch?v=3FI9jn57Oho
 	- [ ] $g(x)^{h(x)}$ https://calculuscollege.com/logarithmic_differentiation_lesson.html
-
-- [ ] [[Improper Integral#DRAFT--AI]] 
 
 
 ## Sereis 
@@ -89,5 +101,4 @@
 
 - [ ] https://english.stackexchange.com/questions/40364/what-reasoning-is-behind-the-names-of-the-trigonometric-functions-sine-secan
 
-# Other 
 
