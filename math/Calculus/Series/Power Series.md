@@ -116,6 +116,7 @@ Suppose that $f$ is $n+1$ times continuously differentiable in an interval $I$ c
 
 
 - $P_{n}^{(m)}(a)=f^{(m)}(a)$ (for all $m=0,\dots,n$)
+
 - (q4.11) Let $f(x)=x^k$ for $k\in\mathbb{N}$, and $P_{n}(x)$ Maclaurin polynomial of $f$, and $R_{n}(x)$ the reminder, then
 	- for all $k>n$, $f(x)=R_{n}(x)$
 	- for all $k\leq n$, $f(x)=P_{n}(x)$

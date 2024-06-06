@@ -2,7 +2,7 @@
 - A set $\{ \mathsf{T},\mathsf{F} \}$ of **truth values**
 - $\mathcal{S}$ is the set of the elementary propositions
 - $\overline{\mathcal{S}}$ is the set of the propositions generated from $\mathcal{S}$
-- A **model** (or **truth assignment**) of for a set $\overline{\mathcal{S}}$ is a function $M:\overline{\mathcal{S}}\to\{ \mathsf{T},\mathsf{F} \}$, which is defined in [[Syntax#Structural Induction|structural induction]]:
+- A **model** (or **truth assignment**) of for a set $\overline{\mathcal{S}}$ is a function $M:\overline{\mathcal{S}}\to\{ \mathsf{T},\mathsf{F} \}$, which is defined in [[Logic/CS Logic (20466)/Propositional Logic/Syntax#Structural Induction|structural induction]]:
 	- First, we define $M_{e}:{\mathcal{S}}\to\{ \mathsf{T},\mathsf{F} \}$, for each $Q\in\mathcal{S}$
 	- For each $\varphi\in\overline{\mathcal{S}}$
 		- If $\varphi \in\mathcal{S}$, then $M(\varphi)$ is already defined
@@ -28,13 +28,16 @@
 ## Tautology & Contradiction
 
 - A proposition $\varphi$ is a **tautology** (and denoted by $\models \varphi$) if and only if it is true in every model in the language of the proposition. 
+	- טאוטולוגיה, פסוק אמיתי לוגית
 - A proposition is a **contradiction** if and only if it is false in every model in the language of the proposition.
+	- סתירה לוגית, פסוק שקרי לוגית
 - $\varphi$ is a tautology if and only if $\lnot \varphi$ is a contradiction
 - $\varphi$ is a contradiction if and only if $\lnot \varphi$ is a tautology
 ## Logical Equivalence
 
-- Propositions $\varphi$ and $\psi$ are **logically equivalent** (and denoted $\varphi \equiv \psi$ or $\varphi\iff \psi$) if and only if they are true in the same models exactly
-	- Propositions are logically equivalent if and only if $\varphi\leftrightarrow{\psi}$ is a tautology
+- Propositions $\varphi$ and $\psi$ are **logically equivalent** (and denoted $\varphi \equiv \psi$ (or $\varphi\iff \psi$)) if and only if they are true in the same models exactly
+	- If two propositions $\varphi$ and $\psi$ have the same elementary propositions, then:
+		- $\varphi \equiv \psi$ if and only if $(\varphi\leftrightarrow{\psi})$ is a tautology
 	- Propositions are logically equivalent if and only if they always have the same truth values
 	- Examples: [[Rules of Replacement]]
 
@@ -61,6 +64,7 @@
 | פסוק דיסיונקטיבי נורמלי | דיסיונקציה של קוניוקציות פשוטות                                             | **Disjunctive normal form (DNF)**<br>DNF→(Conjunction)∨DNF<br>DNF→(Conjunction) |
 |                         |                                                                             | **Conjunctive normal form (CNF)**<br>CNF→(Disjunction)∨CNF<br>CNF→(Disjunction) |
 | קוניונקציה פשוטה מלאה   | קוניונקציה פשוטה שמופיעה בה כל פסוק אלמנטרי (לחיוב או לשלילה) בדיוק פעם אחת | **Full Conjunction**                                                            |
+|                         |                                                                             |                                                                                 |
 |                         |                                                                             |                                                                                 |
 
 

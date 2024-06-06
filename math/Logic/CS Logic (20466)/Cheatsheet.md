@@ -2,21 +2,30 @@
 
 # 
 
-1. $\varphi \equiv \lnot \lnot \varphi$ (known as double negation, or negation elimination)
-2. $\varphi \equiv \lnot \psi$ then $\lnot \varphi \equiv \psi$
-3. $(\varphi \to \psi) \equiv (\lnot \varphi \lor \psi)$ (material implication)
-4. $(\varphi \lor \psi) \equiv (\lnot \varphi \to \psi)$ (material implication)
-5. (a) $\lnot(\varphi \to \lnot \psi) \equiv (\varphi \land \psi)$
-5. (b) $\lnot(\varphi \to \psi) \equiv (\varphi \land \lnot \psi)$
-6. (a) $\lnot(\varphi \lor \psi) \equiv (\lnot \varphi \land \lnot \psi)$ (De Morgan)
-6. (b) $(\varphi \lor \psi) \equiv \lnot(\lnot \varphi \land \lnot \psi)$ (De Morgan)
-7. (a) $\lnot(\varphi \land \psi) \equiv (\lnot \varphi \lor \lnot \psi)$ (De Morgan)
-7. (b) $(\varphi \land \psi) \equiv \lnot(\lnot \varphi \lor \lnot \psi)$ (De Morgan)
-8. $(\varphi \lor (\psi \land \theta)) \equiv ((\varphi \lor \psi) \land (\varphi \lor \theta))$ (distributivity)
-9. $(\varphi \land (\psi \lor \theta)) \equiv ((\varphi \land \psi) \lor (\varphi \land \theta))$ (distributivity)
-10. $(\lnot \varphi \to \lnot \psi) \equiv (\psi \to \varphi)$ (contraposition)
-11. $(\varphi \leftrightarrow \psi) \equiv ((\varphi \to \psi) \land (\psi \to \varphi))$ (biconditional)
-12. $(\varphi \leftrightarrow \psi) \equiv ((\varphi \land \psi) \lor (\lnot \varphi \land \lnot \psi))$ (exclusive or)
+- Double Negation
+    (1) $\varphi \equiv \lnot \lnot \varphi$ 
+- 
+    (2) if $\varphi \equiv \lnot \psi$ then $\lnot \varphi \equiv \psi$
+- Material Implication
+    3. $(\varphi \to \psi) \equiv (\lnot \varphi \lor \psi)$ 
+    4. $(\varphi \lor \psi) \equiv (\lnot \varphi \to \psi)$ 
+- 
+    - (5A) $\lnot(\varphi \to \lnot \psi) \equiv (\varphi \land \psi)$ 
+    - (5B) $\lnot(\varphi \to \psi) \equiv (\varphi \land \lnot \psi)$ 
+- De Morgan
+    - (6A) $\lnot(\varphi \lor \psi) \equiv (\lnot \varphi \land \lnot \psi)$
+    - (6B) $(\varphi \lor \psi) \equiv \lnot(\lnot \varphi \land \lnot \psi)$ 
+    - (7A) $\lnot(\varphi \land \psi) \equiv (\lnot \varphi \lor \lnot \psi)$ 
+    - (7B) $(\varphi \land \psi) \equiv \lnot(\lnot \varphi \lor \lnot \psi)$ 
+- Distributivity
+    - (8) $(\varphi \lor (\psi \land \theta)) \equiv ((\varphi \lor \psi) \land (\varphi \lor \theta))$ 
+    - (9) $(\varphi \land (\psi \lor \theta)) \equiv ((\varphi \land \psi) \lor (\varphi \land \theta))$ 
+- Contraposition
+    - (10) $(\lnot \varphi \to \lnot \psi) \equiv (\psi \to \varphi)$
+- Biconditional
+    - (11) $(\varphi \leftrightarrow \psi) \equiv ((\varphi \to \psi) \land (\psi \to \varphi))$ 
+- Exclusive OR
+    - (12) $(\varphi \leftrightarrow \psi) \equiv ((\varphi \land \psi) \lor (\lnot \varphi \land \lnot \psi))$
 
 # Claculus Axioms in propositional language ${L_{\to}}$
 

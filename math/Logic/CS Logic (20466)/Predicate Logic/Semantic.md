@@ -1,86 +1,3 @@
-# Syntax
-
-## Alphabet 
-
-The alphabet of a first-order language consists of the following distinct symbols:
-### Logical symbols
-
-|                            | Logical symbols                                                      |
-| -------------------------- | -------------------------------------------------------------------- |
-| Logical connectives        | $\lnot,\rightarrow,\lor,\land,\leftrightarrow$                       |
-| Punctuation Symbols        | Comma and Parentheses                                                |
-| Variables ($\mathrm{VAR}$) | $v_{0},v_{1},v_{2},\dots$                                            |
-| Quantifier symbols         | $∀$ (universal quantification), <br>$∃$ (existential quantification) |
-| Equality (optional)        | $=$                                                                  |
-### Non-logical symbols
-
-|                             | Non-logical symbols                                               |
-| --------------------------- | ----------------------------------------------------------------- |
-| Predicate Symbols           | $P_{0}^{n}, P_{1}^{n},P_{2}^{n},\dots$ (For each arity $n\geq 0$) |
-| Function Symbols (optional) | $F_{0}^{n}, F_{1}^{n},F_{2}^{n},\dots$ (For each arity $n\geq 0$) |
-| Constant Symbols (optional) | $C_{0},C_{1},C_{2},\dots$                                         |
-## Language
-
-### Terms
-
-The set of terms is inductively defined by the following rules:
-
-- Each variable and each constant symbol is a **term**
-- If $F$ is an $n$-ary function symbol, and $t_{1},\dots, t_{n}$ are terms, then $F(t_{1},\dots,t_{n})$ is a term
-### Formulas
-
-The set of **formulas** (also called **well-formed formulas** or **WFFs**) is inductively defined by the following rules:
-
-- *Predicate symbols*. If $P$ is an $n$-ary predicate symbol and $t_{1}, \dots, t_{n}$ are terms then $P(t_{1},\dots,t_{n})$ is a formula. 
-- *Negation*. If $φ$ is a formula, then $¬ φ$ is a formula. 
-- *Binary connectives*. If $φ$ and $ψ$ are formulas, then $( φ → ψ )$ is a formula. (Similar rules apply to other binary logical connectives). 
-- *Quantifiers*. If φ is a formula and $x$ is a variable, then $∀xφ$ (for all $x$, $φ$ holds) and $∃xφ$ (there exists $x$ such that $φ$) are formulas
-
-Only expressions which can be obtained by finitely many applications of rules  are formulas. 
-
-The formulas obtained from the first two rules are said to be **atomic formulas**.
-
-#### Unique Readability
-
-#todo 
-
-#### Induction on wffs principle 
-
-- (Theorem 5.4) 
-	- Prove $H(A)$ for all atomic formulas A #todo 
-
-
-### Free & Bound Variables
-
-- For any quantifier $Q$, and let be a formula $QxB$, we say that $B$ is the **scope** of $Qx$
-- The concept that a variable $x$ **occurs free** or **bound** (also: $x$ is a **free** or **bound occurrence**) in formula is defined recursively as follows:
-	- Atomic formulas:
-		- If $φ$ is an atomic formula, then $x$ occurs free in $φ$ if and only if $x$ occurs in $φ$. 
-		- Moreover, there are no bound variables in any atomic formula.
-	- Negation:
-		- $x$ occurs free in $¬φ$ if and only if $x$ occurs free in φ. 
-		- $x$ occurs bound in $¬φ$ if and only if $x$ occurs bound in φ
-	- Binary connectives:
-		- $x$ occurs free in $(φ → ψ)$ if and only if $x$ occurs free in either $φ$ or $ψ$. 
-		- $x$ occurs bound in $(φ → ψ)$ if and only if $x$ occurs bound in either $φ$ or $ψ$. 
-		- (The same rule applies to any other binary connective in place of $→$.)
-	- Quantifiers: ($Q$ is either $\forall$ or $\exists$)
-		- $x$ occurs free in $Qyφ$, if and only if $x$ occurs free in $φ$ and $x$ is a different symbol from $y$. 
-		- $x$ occurs bound in $Qyφ$, if and only if $x$ is $y$ or $x$ occurs bound in $φ$. 
-
-- A variable $x$ is a **free variable** in $φ$, if and only if, it has at least one free occurrence in $\varphi$ 
-- A variable $x$ is a **bound variable** in $φ$, if and only if, all occurrences of $x$ in $φ$ are bound
-##### Sentence
-
-- A formula $\varphi$ is called a **sentence**, if these is no free variable in $\varphi$, i.e. all occurrences of $x$ in $φ$ are bound
-
-### Substitution
-
-- The **substitution** $\varphi[t/x]$ replaces each free occurrence of the variable $x$ in the formula $\varphi$ with the term $t$
-- The substitution $\varphi[t/x]$ is a **capture-avoiding substitution** if and only if no variable occur in $t$ become bonud (we say that $t$ is **substitutable** for $x$ in $\varphi$, or the quantifier $Qx$ does not **capture** the variable $x$ in $t$.)
-
-# Semantic
-
 ## Structure (Model)
 
 - (C5.4) A **model** or **structure** $M = \langle A; c_1^M, \ldots; F_1^M, \ldots ;P_{1}^{M},\dots\rangle$ is defined as
@@ -156,13 +73,14 @@ If the set of relation symbols, function symbols, and constant symbols of a lang
 #todo 5.4.7
 
 
-## Logical validity
+## Logical Validity
 
-- A formula $\varphi$ is **logical valid** if and only if it is true in every structure (in particular, and in every assignment of $\varphi$) and denote by $\models \varphi$
-
+- A formula $\varphi$ is **logically valid** if and only if it is true in every [[#Structure (Model)|structure]], and true in every [[#Variable Assignment|assignment]] and denote by $\models \varphi$
+	- (c5.6) אמיתית לוגית
+	-  maybe it's also called *tautology*. don't confuse with [[#First-order Tautologies]] here, or with [[Logic/CS Logic (20466)/Propositional Logic/Semantic#Tautology & Contradiction|tautology]] in prop. logic
 ## Logical Equivalence
 
-- Two formulas $φ$ and $ψ$ are **logically equivalent** (denoted by $φ\equiv ψ$) if and only if, $\varphi\leftrightarrow\psi$ is logical valid. i.e.
+- Two formulas $φ$ and $ψ$ are **logically equivalent** (denoted by $φ\equiv ψ$) if and only if, $\varphi\leftrightarrow\psi$ is [[#Logical Validity|logically valid]]. i.e.
 	- $φ\equiv ψ$ if and only if for each structure $M$ and for each assignment $S$, we hold $S\models\varphi$ if and only if $S\models\psi$ 
 	- (Theorem 5.8) 
 		- if $\varphi\equiv \psi$ then: 
@@ -171,18 +89,30 @@ If the set of relation symbols, function symbols, and constant symbols of a lang
 			- $\forall x\varphi\equiv \forall x\psi$ and $\exists x\varphi\equiv \exists x\psi$ (for each varaible $x$)
 		- If $\varphi'$ is arrived from $\varphi$ by replacing sub-formula $\psi$ in $\psi'$ where $\psi\equiv \psi'$ then $\varphi'\equiv \varphi$
 
-- #todo tautology (5.9)
+## First-order Tautologies
+
+- (5.9) Let $\varphi$ be a [[Propositional Logic/Syntax#Language|proposition]] where all its [[Propositional Logic/Syntax#Language|elementary proposition]] are from $P_1,\dots ,P_n$. And Let $\alpha_1,\dots,\alpha_n$ be formulas. And let $\varphi'$ be the string that is obtained by replacing each $P_i$ in $\varphi$ by $\alpha_i$. Then:
+	- $\varphi'$ is a [[Predicate Logic/Syntax#Formulas|formula]]
+	- If $M$ is a [[Propositional Logic/Semantic|model]] of the propositional logic, and $S$ is an [[#Variable Assignment|assignment]] of the predicate logic, where $M(P_i)=S(\alpha_i)$ for each $i\leq n$, then $M(\varphi)=S(\varphi')$
+	- If $\varphi$ is a [[Logic/CS Logic (20466)/Propositional Logic/Semantic#Tautology & Contradiction|tautology]] then $\varphi'$ is [[Predicate Logic/Semantic#Logical Validity|logical valid]] and $\varphi'$ is called a **first-order tautology**.
 
 
-- #todo like Logical Implication in propositional logic but for predicate logic  
-### minimal language
+## Logical Implication
+
+- #todo like [[Logic/CS Logic (20466)/Propositional Logic/Semantic#Logical Implication|Logical Implication]] in propositional logic but for predicate logic
+
+
+## Minimal Language
 
 #todo 
 
+
+## Normal Forms
 #### Prenex Normal Form (5.7.2)
 
-- A formula $\varphi$ is said to be in **prenex form** if it is of the form $Q_{1}x_{1}Q_{2}x_{2} \dots Q_{n} x_{n} B$ where each $Q$ is either $∃$ or $∀$, and where $B$ contains no quantifiers. The sequence of quantifiers and variables at the beginning is called the **prefix**, and the quantifier-free formula that follows the **matrix**.
-	- If $\varphi$ is in prenex form and its metrix is DNF then it is said to be in  **prenex normal form**
+- A formula $\varphi$ is said to be in **prenex form** if it is of the form $Q_{1}x_{1}Q_{2}x_{2} \dots Q_{n} x_{n} B$ where each $Q$ is either $∃$ or $∀$, and where $B$ contains no quantifiers. 
+	- The sequence of quantifiers and variables at the beginning is called the **prefix**, and the quantifier-free formula that follows the **matrix**.
+	- If $\varphi$ is in prenex form and its metrix is [[Propositional Logic/Semantic#CNF & DNF|DNF]] then it is said to be in **prenex normal form** (PNF)
 
 
 ____
@@ -190,7 +120,7 @@ ____
 
 
 - A set of sentences $K$ is said to be **inconsistent** if there exists a sentence $\varphi$ such that $K ⊢ \varphi$ and $K ⊢ ¬\varphi$. Moreover, $K$ is **consistent** if for no sentences $\varphi$ we have $K ⊢ \varphi$ and $K ⊢ ¬\varphi$
-- A **theory** is a consistent set of [[Predicate Logic#Free & Bound Variables|sentences]]
+- A **theory** is a consistent set of [[Predicate Logic/Syntax#Free & Bound Variables|sentences]]
 - A theory $K$ is said to be **complete** if for every sentence $φ$, either $K \vdash\varphi$ or $K \vdash\lnot\varphi$
 
 

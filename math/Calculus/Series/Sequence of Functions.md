@@ -1,7 +1,7 @@
-A sequence of functions is a function whose domain is $\mathbb{N}$ and whose range is a set of functions.
-## Convergence
+A **sequence of functions** is a function whose domain is $\mathbb{N}$ and whose range is a set of functions.
+# Convergence
 
-### Pointwise Convergence
+## Pointwise Convergence
 
 - (d6.1) Given a sequence of functions $(f_n)$, and a function $f$ such that all functions defined on an interval $I$. The following are equivalent: 
 	- The sequence $(f_n)$ **converges pointwise** on $I$ to the **limit function** $f$
@@ -15,7 +15,7 @@ A sequence of functions is a function whose domain is $\mathbb{N}$ and whose ran
 	- (6.9) term-by-term differentiation - If each $f_n$ is continuously differentiable on $[a,b]$, and if the sequence of derivatives $(f_n')$ converges uniformly on $[a,b]$, then $f$ is differentiable on $[a,b]$ and $\displaystyle f'(x) = \lim_{n \to \infty} f_n'(x)$ for all $x\in [a,b]$.
 	- (6.5) Dini's Theorem - If $f$ is continuous on $[a,b]$, and $(f_n)$ is increasing ($\forall n \in \mathbb{N},\forall x\in [a,b],f_n(x)\leq f_{n+1}(x)$), or decreasing, then $(f_n)$ converges uniformly to $f$ on $[a,b]$
 
-### Uniform Convergence
+## Uniform Convergence
 
 - (d6.2, 6.3) Given a sequence of functions $(f_n)$, and a function $f$ such that all functions defined on an interval $I$. The following are equivalent: 
 	- The sequence $(f_n)$ **converges uniformly** on $I$ to the **uniform limit** $f$
@@ -26,10 +26,13 @@ A sequence of functions is a function whose domain is $\mathbb{N}$ and whose ran
 	- (q6.7) There exists a null sequence $(a_n)$ such that for almost all $n$ and for all $x\in I$, we have $|f_n(x) - f(x)| \leq a_n$
 
 
+### Cauchy Criterion for UC
+
 - Given a sequence of functions $(f_n)$ such that all functions defined on an interval $I$. The following are equivalent: 
 	- There exists a function $f$ such that $f_n\to f$ uniformly on $I$
 	- ((6.6) Cauchy Criterion for U.C.) $\forall\varepsilon > 0 ,\exists N:\forall n>N,\forall p\in \mathbb{N},\forall x \in I,|f_{n+p}(x) - f_n(x)| < \varepsilon$
 
+### Theorems & Properties
 
 - If $f_{n}\to f$ uniformly on $I$, then:
 	- (q6.5) $f_{n}\to f$ pointwise on $I$

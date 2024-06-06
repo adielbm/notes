@@ -1,8 +1,7 @@
 - Unit: 5 
 - Due date: 2024-06-08
 - Points: 4
-- Semester: Spring 2024
-- Course: MATH CALCULUS II (MATH 102)
+- Course: CALCULUS II
 - Questions: 5
 
 ## Q1
@@ -12,30 +11,38 @@ detemine for each of the following series if it absolutely converges, conditiona
 - a. $\sum_{n=1}^{\infty}\left(\frac{\cos n}{\ln(n^{2n}+n^2)}+1-\cos\frac{1}{n}\right)$
 - b. $\sum_{n=1}^{\infty}u_n$ where $u_1$ is a real number and $u_{n+1}=\frac{\sin(1/n)}{e^{u_n}}$ for all $n\in\mathbb{N}$.
 
-
 ### Answer 1a
 
+> $$\sum_{n=1}^{\infty}\left(\frac{\cos n}{\ln(n^{2n}+n^2)}+1-\cos\frac{1}{n}\right)$$
 
-$a_n=1-\cos\frac{1}{n}\geq0$
-
-$b_n=\frac{1}{n^2}\geq0$
-
-
-$\displaystyle\lim_{n\to\infty}\frac{a_n}{b_n}=\lim_{n\to\infty}\frac{1-\cos\frac{1}{n}}{\frac{1}{n^2}}\underset{\text{L'Hopital}}{=}\lim_{n\to\infty}\frac{-\frac{1}{n^2}\sin\frac{1}{n}}{\frac{-2}{n^3}}=\lim_{n\to\infty}\frac{n}{2}\sin\frac{1}{n}=\frac{1}{2}\lim_{n\to\infty}\frac{\sin\frac{1}{n}}{\frac{1}{n}}\underset{\text{L'Hopital}}{=}\frac{1}{2}\lim_{n\to\infty}\frac{\cos\frac{1}{n}\cdot\frac{-1}{n^2}}{\frac{-1}{n^2}}=\frac{1}{2}\lim_{n\to\infty}\cos\frac{1}{n}=\frac{1}{2}>0$
-
-- by limit comparison test (5.15), $a_n$ and $b_n$ have the same behavior, and since $\sum_{n=1}^{\infty}b_n=\sum_{n=1}^{\infty}\frac{1}{n^2}$ converges, then $\sum_{n=1}^{\infty}a_n=\sum_{n=1}^{\infty}\left(1-\cos\frac{1}{n}\right)$ converges. (absolutely because $a_n\geq0$ for all $n$).
-- $\displaystyle\lim\frac{1}{\ln(n^{2n}+n^2)}=0$ (by $\frac{1}{\ln(n^{2n}+n^2)}\leq\frac{1}{\ln(n^{2n})}=\frac{1}{2n\ln n}$)
-- and $\sum \cos n$ is a bounded series. (by q5.33a)
-- by Dirichlet's test (5.22), the series $\sum_{n=1}^{\infty}\left(\frac{\cos n}{\ln(n^{2n}+n^2)}\right)$ converges. but not absolutely, if we assume #TODO❓
-
-
-now, since the series $\sum_{n=1}^{\infty}\left(\frac{\cos n}{\ln(n^{2n}+n^2)}+1-\cos\frac{1}{n}\right)$ is a sum of two convergent series, then it converges by the additivity of series (5.9). but not absolutely, #todo
-
+- Let's show that $\sum \left( 1-\cos\left( \frac{1}{n} \right) \right)$ converges (absolutely).
+	- $a_n=1-\cos\frac{1}{n}\geq0$
+	- $b_n=\frac{1}{n^2}\geq0$
+	- $\displaystyle\lim_{n\to\infty}\frac{a_n}{b_n}=\lim_{n\to\infty}\frac{1-\cos\frac{1}{n}}{\frac{1}{n^2}}\underset{\text{L'Hopital}}{=}\lim_{n\to\infty}\frac{-\frac{1}{n^2}\sin\frac{1}{n}}{\frac{-2}{n^3}}=$
+	  $\displaystyle=\displaystyle\lim_{n\to\infty}\frac{n}{2}\sin\frac{1}{n}=\frac{1}{2}\lim_{n\to\infty}\frac{\sin\frac{1}{n}}{\frac{1}{n}}\underset{\text{L'Hopital}}{=}\frac{1}{2}\lim_{n\to\infty}\frac{\cos\frac{1}{n}\cdot\frac{-1}{n^2}}{\frac{-1}{n^2}}=$
+	  $\displaystyle=\frac{1}{2}\lim_{n\to\infty}\cos\frac{1}{n}=\frac{1}{2}>0$
+	  - by limit comparison test (5.15), $a_n$ and $b_n$ have the same behavior, and since $\sum_{n=1}^{\infty}b_n=\sum_{n=1}^{\infty}\frac{1}{n^2}$ converges, then $\sum_{n=1}^{\infty}a_n=\sum_{n=1}^{\infty}\left(1-\cos\frac{1}{n}\right)$ converges. (absolutely because $a_n\geq0$ for all $n$).
+- Let's show that $\sum \frac{\cos n}{\ln(n^{2n}+n^2)}$ converges.
+	- First, $\displaystyle\frac{1}{\ln(n^{2n}+n^2)}\to0$ (since $0\leq\frac{1}{\ln(n^{2n}+n^2)}\leq\frac{1}{\ln(n^{2n})}=\frac{1}{2n\ln n}\leq \frac{1}{n}\to{0}$) and monotonic.
+	- Also, $\sum \cos n$ is a bounded series. (by q5.33a)
+	- by Dirichlet's test (5.22), the series $\sum\frac{\cos n}{\ln(n^{2n}+n^2)}$ converges.
+- Let's show that $\sum \frac{\cos n}{\ln(n^{2n}+n^2)}$ conditionally converges.
+	- #todo
+- Since the series $\sum_{n=1}^{\infty}\left(\frac{\cos n}{\ln(n^{2n}+n^2)}+1-\cos\frac{1}{n}\right)$ is a sum of two convergent series, then it converges by the additivity of series (5.9). 
+- Let's prove **in general** that the sum of an absolutely convergent series $\sum a_n$ and a conditionally convergent series $\sum b_n$ is conditionally convergent.
+	- Assume for contradiction, $\sum |a_n+b_n|$.
+	- Since $|b_n|-|a_n|\leq|a_n+b_n|$, then
+	- $|b_n|\leq|a_n+b_n|+|a_n|$, then 
+	- $\sum |b_n|\leq\sum |a_n+b_n|+\sum |a_n|$, then
+	- $\sum |b_n|$ converges (by the comparison test (5.4))
+	- then $\sum b_n$ converges absolutely, contradiction!
+	- therefore, the series $\sum a_n+\sum b_n$ is conditionally convergent.
+- **conclusion**: the series $\sum_{n=1}^{\infty}\left(\frac{\cos n}{\ln(n^{2n}+n^2)}+1-\cos\frac{1}{n}\right)$ **conditionally converges**.
 
 
 ### Answer 1b
 
-> - b. $\sum_{n=1}^{\infty}u_n$ where $u_1$ is a real number and $u_{n+1}=\frac{\sin(1/n)}{e^{u_n}}$ for all $n\in\mathbb{N}$.
+> $\sum_{n=1}^{\infty}u_n$ where $u_1$ is a real number and $u_{n+1}=\frac{\sin(1/n)}{e^{u_n}}$ for all $n\in\mathbb{N}$.
 
 
 - $u_{n+1}=\frac{\sin(1/n)}{e^{u_n}}>0$ for all $n\in\mathbb{N}$. therefore, $u_n>0$ for all $n>1$.
@@ -53,9 +60,19 @@ Prove or disprove the following statements:
 
 ### Answer 2a
 
-> if $(a_n)$ is a convergent sequence where $a_n\neq0$ for all $n$, then the series $\sum_{n=1}^{\infty}\frac{a_{n+1}-a_n}{a_n\cdot a_{n+1}}$ converges if and only if $\lim_{n\to\infty}{a_n}\neq0$.
+> if $(a_n)$ is a convergent sequence where $a_n\neq0$ for all $n$, then the series $\sum_{n=1}^{\infty}\frac{a_{n+1}-a_n}{a_n\cdot a_{n+1}}$ converges if and only if $\displaystyle\lim_{n\to\infty}{a_n}\neq0$.
 
-#TODO
+- The statement is true.
+- (given) $(a_n)$ is a convergent sequence where $a_n\neq0$ for all $n$.
+- let's denote: $S_n=\sum_{k=1}^{n}\frac{a_{k+1}-a_k}{a_k\cdot a_{k+1}}$.
+- $S_n=\sum_{k=1}^{n}\frac{a_{k+1}-a_k}{a_k\cdot a_{k+1}}=\sum_{k=1}^{n}\left(\frac{1}{a_k}-\frac{1}{a_{k+1}}\right)=\frac{1}{a_1}-\frac{1}{a_{n+1}}$. (by telescoping sum).
+- Case 1: $\displaystyle\lim_{n\to\infty}{a_n}\neq 0$
+	- $\displaystyle\lim_{n\to\infty}{S_n}=\frac{1}{a_1}-\frac{1}{\displaystyle\lim_{n\to\infty}{a_{n+1}}}=\frac{1}{a_1}-\frac{1}{\displaystyle\lim_{n\to\infty}{a_{n}}}$. (since $\displaystyle\lim_{n\to\infty}{a_{n+1}}=\displaystyle\lim_{n\to\infty}{a_{n}}$, and $\displaystyle\lim_{n\to\infty}{a_n}\neq 0$, and given that $a_n\neq0$ for all $n$ and $(a_n)$ is convergent so the limit exists and is finite).
+	- therefore, the series $\sum_{n=1}^{\infty}\frac{a_{n+1}-a_n}{a_n\cdot a_{n+1}}$ converges.
+- Case 2: $\displaystyle\lim_{n\to\infty}{a_n}=0$
+	- $\displaystyle\lim_{n\to\infty}\frac{1}{a_n}$ diverges.
+	- $\displaystyle\lim_{n\to\infty}S_n=\frac{1}{a_1}-\frac{1}{\displaystyle\lim_{n\to\infty}{a_{n+1}}}$ diverges.
+	- therefore, the series $\sum_{n=1}^{\infty}\frac{a_{n+1}-a_n}{a_n\cdot a_{n+1}}$ diverges.
 
 ### Answer 2b
 
@@ -91,9 +108,10 @@ the sequence $(a_n (n-1))$ is increasing (since $\frac{a_{n+1}}{a_n}\geq\frac{n-
 
 ### Answer 4a
 
-> - a. Prove that if the series $\sum_{n+1}^{\infty}(a_n+b_n)$ converges, and $\lim a_n=0$, then the series $a_1+b_1+a_2+b_2+\cdots$ converges.
+> Prove that if the series $\sum_{n+1}^{\infty}(a_n+b_n)$ converges, and $\lim a_n=0$, then the series $a_1+b_1+a_2+b_2+\cdots$ converges.
 
 #TODO
+
 
 ### Answer 4b
 

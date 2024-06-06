@@ -1,6 +1,6 @@
 
 - A function $f:V^{n}\to V$ where $V$ is a set of truth values and $n$ is a natural number is called $n$-ary **truth function** 
-- Example: [[Syntax#Language|Logical Connectives]]
+- Example: [[Logic/CS Logic (20466)/Propositional Logic/Syntax#Language|Logical Connectives]]
 
 ### Functional completeness
 
@@ -17,7 +17,7 @@ A set of truth functions is called **functionally complete** if it can express a
 
 - A function $f:\{0,1\}^{k}\to\{0,1\}$ is called a **Boolean function**. (which is a truth function with the set of truth values $\{0,1\}$ or $\{\mathsf{F},\mathsf{T}\}$)
 
-- Example: [[Syntax#Language|Logical Connectives]]
+- Example: [[Logic/CS Logic (20466)/Propositional Logic/Syntax#Language|Logical Connectives]]
 
 - The set $\{0,1\}$ is known as the **Boolean domain**.
 - The number $k$ is a non-negative integer called the **arity** of the function, and it is the number of **arguments** the function takes.

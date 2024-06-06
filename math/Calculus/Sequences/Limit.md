@@ -90,14 +90,14 @@
 
 - (2.43, q2.39) **arithmetics of infinite limits**
 
-| $a_{n}$ | $b_{n}$ | $\implies$ | $a_{n}+b_{n}$ | $a_{n}b_{n}$ | $a_{n}/b_{n}$ |
-| ---- | ---- | ---- | ---- | ---- | ---- |
-| $\infty$ | $\infty$ |  | $\infty$ | $\infty$ |  |
-| $-\infty$ | $-\infty$ |  | $-\infty$ | $\infty$ |  |
-| $-\infty$ | $\infty$ |  |  | $-\infty$ |  |
-| $\infty$ | $L\in\mathbb{R}$ |  | $\infty$ |  |  |
-| $\infty$ | $L>0$ |  |  | $\infty$ |  |
-| $0$ | $\infty$ |  | $\infty$ |  | $0$ |
+| $a_{n}$   | $b_{n}$          | $\implies$ | $a_{n}+b_{n}$ | $a_{n}b_{n}$ | $a_{n}/b_{n}$ |
+| --------- | ---------------- | ---------- | ------------- | ------------ | ------------- |
+| $\infty$  | $\infty$         |            | $\infty$      | $\infty$     |               |
+| $-\infty$ | $-\infty$        |            | $-\infty$     | $\infty$     |               |
+| $-\infty$ | $\infty$         |            |               | $-\infty$    |               |
+| $\infty$  | $L\in\mathbb{R}$ |            | $\infty$      |              |               |
+| $\infty$  | $L>0$            |            |               | $\infty$     |               |
+| $0$       | $\infty$         |            | $\infty$      |              | $0$           |
 
 - ${a_{n}\to \infty}\implies 1/a_{n}\to0$
 - (q2.57a) ${|a_{n}|\to \infty}\implies 1/a_{n}\to0$

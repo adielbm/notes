@@ -20,10 +20,13 @@
 
 ## Monotone Converges Theorem for Series  
 
-- (5.13) If $\forall n,a_n\geq0$, then $(s_n)$ is increasing. And:
-	- The series $\sum_{n=1}^{\infty}a_n$ converges if and only if $(s_n)$ is bounded
-		- In this case, $\sum_{n=1}^{\infty}a_n=\lim{s_n}=\sup\{s_n:n\in\mathbb{N}\}$ 
-	- The series $\sum_{n=1}^{\infty}a_n$ diverges to infinity if and only if $(s_n)$ is unbounded. 
+- (5.13 MCT) $(a_n)\geq0\iff(s_n)$ is [[Calculus/Sequences/Monotonicity|increasing]]. In this case:
+	-  $\sum a_n$ converges $\iff$ $\sum a_n$ is [[Series#Bounded Series|bounded]] $\iff$ $(s_n)$ is bounded
+		- In this case, $\sum a_n=\lim{s_n}=\sup\{s_n:n\in\mathbb{N}\}$ 
+	- The series $\sum a_n$ diverges to infinity $\iff$ $(s_n)$ is unbounded. 
+- $(a_n)>0\iff(s_n)$ is strictly increasing.
+- $(a_n)\leq0\iff(s_n)$ is decreasing.
+- $(a_n)<0\iff(s_n)$ is strictly decreasing.
 
 ## Comparison test
 
@@ -95,11 +98,10 @@ The series $\sum a_k$ converges if and only if the improper integral $\int_{1}^{
 
 > These conclusions hold also for the series $\sum (-1)^{n}a_n$.
 
-## Dirichlet's test
+## Dirichlet's Test
 
-- (5.22) Let $\sum a_k$ be a bounded series (i.e., the sequence of partial sums is bounded). Let $(b_k)$ be a monotone sequence that converges to $0$. Then the series $\sum a_kb_k$ converges.
+- (5.22) Let $\sum a_k$ be a [[series#bounded series|bounded]] series, and $(b_k)$ be a [[Calculus/Sequences/Monotonicity|monotone]] [[Calculus/Sequences/Limit#Null Sequence|null sequence]]. Then the series $\sum a_kb_k$ converges.
 
-
-## Abel's test
+## Abel's Test
 
 - (5.23) Let $\sum a_k$ be a convergent series, and let $(b_k)$ be a sequence that is bounded and monotone. Then the series $\sum a_kb_k$ converges.

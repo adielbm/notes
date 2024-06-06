@@ -2,12 +2,12 @@
 Here we describe an example of a [[proof system]], which is [[Proof System#Strong completeness|complete]]
 #  Characterization
 
-#### Language
+## Language
 
 - Connectives $\{ \lnot,\to \}$
 - Quantifier $\forall$
 
-#### Axioms 
+## Axioms 
 
 |                | Taulogical Axioms                                                          |                                          |
 | -------------- | -------------------------------------------------------------------------- | ---------------------------------------- |
@@ -15,8 +15,10 @@ Here we describe an example of a [[proof system]], which is [[Proof System#Stron
 |                | $[\varphi\to(\psi\to \theta)]\to[(\varphi\to \psi)\to(\varphi\to \theta)]$ |                                          |
 | Contrapositive | $[(\lnot\varphi\to\lnot\psi)\to(\psi\to\varphi)]$                          |                                          |
 |                | **Axioms of $\forall$**                                                    |                                          |
-|                | $\forall x \varphi\to \varphi[t/x]$                                        | if no variable occur in $t$ become bonud |
-|                | $\forall x(\varphi\to \psi)\to(\varphi\to \forall x\psi)$                  | if $x$ is not occur freely in $\varphi$  |
+| אקסיומת ההצבה  | $\forall x \varphi\to \varphi[t/x]$                                        | if no variable occur in $t$ become bonud |
+| הזזת הכמת      | $\forall x(\varphi\to \psi)\to(\varphi\to \forall x\psi)$                  | if $x$ is not occur freely in $\varphi$  |
+
+### Axioms of Equality
 
 If it is first-order logic with equality, then we have also
 
@@ -29,15 +31,15 @@ If it is first-order logic with equality, then we have also
 |              | $\begin{align}\forall v_{0}\forall v_{1}\dots \forall_{2n-2}\forall_{2n-1}(((v_{0}=v_{n})\land\dots \land(v_{n-1}=v_{2n-1}))\to\\(F(v_{0},\dots,v_{n-1})=F(v_{n},\dots,v_{2n-1})))\end{align}$                |
 |              | $\begin{align}\forall v_{0}\forall v_{1}\dots \forall_{2n-2}\forall_{2n-1}(((v_{0}=v_{n})\land\dots \land(v_{n-1}=v_{2n-1}))\to\\(P(v_{0},\dots,v_{n-1})\leftrightarrow P(v_{n},\dots,v_{2n-1})))\end{align}$ |
 
-#### Rules of inference
+## Rules of inference
 
-- Universal generalization $\displaystyle\frac{\varphi}{\forall x\varphi}$
-- Modus ponens $\displaystyle\frac{\varphi,(\varphi\to \psi)}{\psi}$
+- Universal Generalization $\displaystyle\frac{\varphi}{\forall x\varphi}$
+- Modus Ponens $\displaystyle\frac{\varphi,(\varphi\to \psi)}{\psi}$
 
 
 # Definitions
 
-- Let $K$ be a theory, a **proof sequence** from a [[Predicate Logic#Theory|theory]] $K$ (in our calculus) is a sequence of formulas such that each formula in the sequence is either:
+- Let $K$ be a theory, a **proof sequence** from a [[Predicate Logic/Semantic#Theory|theory]] $K$ (in our calculus) is a sequence of formulas such that each formula in the sequence is either:
 	- A logical axiom
 	- A formula in the set $K$
 	- Derived from two previous formulas in the sequence using one of the rules of inference
@@ -51,13 +53,13 @@ If it is first-order logic with equality, then we have also
 - (6.1)
 	- Let $\varphi$ be a proposition (of the propositional language) such that all of its elementary proposition are from $P_{1}, ..., P_{n}$. Let $\alpha_{1}, ..., \alpha_{n}$ be formulas of predicate logic, and let $\varphi'$ be the string obtained by replacing all occurrences of $P_{i}$  with $\alpha_{i}$, for $i=1, \dots, n$. Then:
 		- $\varphi'$ is a formula of predicate logic.
-		- If $M$ is a [[Semantic|model]] of the propositional language and $S$ is an [[Predicate Logic#Variable Assignment|assignment]] of predicate logic such that $M(P_{i}) = S(\alpha_{i})$ for all ${i}\leq n$, then $M(\varphi) = S(\varphi ')$
+		- If $M$ is a [[Logic/CS Logic (20466)/Propositional Logic/Semantic|model]] of the propositional language and $S$ is an [[Predicate Logic/Semantic#Variable Assignment|assignment]] of predicate logic such that $M(P_{i}) = S(\alpha_{i})$ for all ${i}\leq n$, then $M(\varphi) = S(\varphi ')$
 		- If $\varphi$ is a tautology, then $\varphi'$ is logically true
 	- A formula obtained by systematic substitution in a tautology of formulas in place of elementary propositions is called a **tautology of predicate logic**, and according to (t6.1.c) it is logically true
 - (6.2) Soundness Theorem
 	- This proof system is [[Proof System#Soundness|sound]], i.e.
-	- Let $K$ be a set of formulas and $\psi$ be a proposition. If $K\vdash \varphi$ (provable), then $K \models\varphi$ ([[Semantic#Logical Implication|logically implied]])
-- Given $K$ is a [[Predicate Logic#Theory|theory]], $\psi$ is a sentence and $\varphi$ is a formula. 
+	- Let $K$ be a set of formulas and $\psi$ be a proposition. If $K\vdash \varphi$ (provable), then $K \models\varphi$ ([[Logic/CS Logic (20466)/Propositional Logic/Semantic#Logical Implication|logically implied]])
+- Given $K$ is a [[Predicate Logic/Semantic#Theory|theory]], $\psi$ is a sentence and $\varphi$ is a formula. 
 	- (6.3) Deduction theorem - If $K\cup \{ \psi \}\vdash \varphi$ then $K \vdash ( \psi \to \varphi)$
 	- (6.4a) Principle of explosion - $\{ \psi,\lnot \psi \}\vdash \varphi$ (thus, every inconsistent set of sentences prove every formula)
 	- (6.4b) if $K\cup \{ \lnot \varphi \}$ is inconsistent then $K \vdash \varphi$

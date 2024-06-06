@@ -1,11 +1,14 @@
 
+- [ ] [Can you change a sum by rearranging its numbers? --- The Riemann Series Theorem](https://www.youtube.com/watch?v=U0w0f0PDdPA&t=547s "Can you change a sum by rearranging its numbers? --- The Riemann Series Theorem")
+- [ ] [The Subtle Reason Taylor Series Work | Smooth vs. Analytic Functions](https://www.youtube.com/watch?v=0HaBNdmUWXY "The Subtle Reason Taylor Series Work | Smooth vs. Analytic Functions")
+
 # Homework ✏️
 
 - calculus
 	- [ ] [[homework15]] June 8
-		- [ ] Q1a
+		- [ ] Q1a - almost
 		- [x] Q1b
-		- [ ] Q2a
+		- [x] Q2a
 		- [x] Q2b
 		- [x] Q3
 		- [ ] Q4a
@@ -16,7 +19,9 @@
 	- [ ] [[homework16]] June 22
 		- [ ] Q1 (to finish)
 		- [x] Q2
-		- [ ] Q3
+		- [x] Q3a
+		- [x] Q3b
+		- [ ] Q3c
 		- [x] Q4
 		- [ ] Q5
 		- [ ] Q6
@@ -24,9 +29,13 @@
 
 ## Logic (HW-2)
 
-- from June 4 to June 19
-
-
+- from June 4 to June 19 
+- [ ] [[hw2]]
+	- [ ] q1
+	- [ ] q2
+	- [ ] q3
+	- [ ] q4
+	- [ ] q5
 
 # Study 📚
 
@@ -34,7 +43,7 @@
 	- [x] Unit 1
 	- [x] Unit 2
 	- [x] 3 - improper integral
-	- [ ] 4 - taylor 
+	- [x] 4 - taylor 
 	- [ ] 5 - series
 	- [ ] 6 - power series
 
@@ -47,7 +56,7 @@
 		- [x] reduction formulas 
 	- [x] [[Integration#Substitution]] to tidy 
 		- [ ] version 2
-	- [ ] The REAL power rule https://www.youtube.com/watch?v=3FI9jn57Oho
+
 	- [ ] $g(x)^{h(x)}$ https://calculuscollege.com/logarithmic_differentiation_lesson.html
 
 
@@ -61,12 +70,12 @@
 	- [ ] 50
 
 
-- [ ] power series of $(1+x)^{\alpha}$ 📙(6.2.4)
+- [x] power series of $(1+x)^{\alpha}$ 📙(6.2.4)
 - [ ] end-of-chapter 6 exercises
 
 ## Logic
 
-- [ ] [[logic-5.pdf]]
+- [ ] [[logic-5.pdf]] 
 - [ ] [[logic-7.pdf]]
 
 # Exams 💪
@@ -97,8 +106,12 @@
 - [ ] [[test4.pdf]] - [[test4_sol.pdf]]
 - [ ] [[test5.pdf]] - [[test5_sol.pdf]]
 
-# Reading 📜
 
+# Other
+
+- [ ] [When CAN'T Math Be Generalized? | The Limits of Analytic Continuation](https://www.youtube.com/watch?v=krtf-v19TJg&t=166s "When CAN'T Math Be Generalized? | The Limits of Analytic Continuation")
 - [ ] https://english.stackexchange.com/questions/40364/what-reasoning-is-behind-the-names-of-the-trigonometric-functions-sine-secan
-
-
+- [ ] The REAL power rule https://www.youtube.com/watch?v=3FI9jn57Oho
+- Highlights of Calculus
+	- [ ] https://www.youtube.com/watch?v=U0xlKuFqCuI&list=PLBE9407EA64E2C318&index=14
+	- [ ] 

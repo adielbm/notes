@@ -1,13 +1,13 @@
 -  An **(infinite) series** is an expression that can be written in the form $\displaystyle\sum _{n=1}^{\infty}a_n=a_{1}+a_{2}+\dots+ a_{n}+\dots$ where $(a_{n})$ is a sequence
 
-	- The numbers $a_{1},a_{2},\dots$ are called the **terms** of the series. The number $a_n$ is called the $n$-th **term** of the series.
-	- The sequence $(s_n)$ defined by $s_n=\sum_{k=1}^{n}a_k$ is called the **sequence of partial sums** of the series. The number $s_n$ is called the **$n$-th partial sum** of the series.
-	- If $(s_n)$ converges to $L$, we say that the series **converges** and that its **sum** is $L$ and write $$a_1+a_2+a_3+\cdots=\sum_{n=1}^{\infty}a_n=\lim_{ n \to \infty }\underbrace{\sum _{k=1}^{n}a_k}_{s_{n}}=L$$
+	- The sequence $(a_{n})$ is **sequence of terms** of the series. 
+		- The number $a_n$ is called the $n$-th **term** of the series.
+	- The sequence $(s_n)$ defined by $s_n=\sum_{k=1}^{n}a_k$ is called the **sequence of partial sums** of the series. 
+		- The number $s_n$ is called the **$n$-th partial sum** of the series.
+	- If $s_n\to L \in\mathbb{R}$, we say the series **converges**, and $L$ is its **sum**, and write $$a_1+a_2+a_3+\cdots=\sum_{n=1}^{\infty}a_n=\lim_{ n \to \infty }\underbrace{\sum _{k=1}^{n}a_k}_{s_{n}}=L$$
 	- If the sequence of partial sums $(s_n)$ diverges, then we say that the series **diverges**.  
 		- If $\displaystyle\lim_{n\to\infty}s_n=\infty$, then we say that the series **diverges to infinity**. And denote its sum by $\sum_{n=1}^{\infty}a_n=\infty$. 
 		- If $\displaystyle\lim_{n\to\infty}s_n=-\infty$, then we say that the series **diverges to negative infinity**. And denote its sum by $\sum_{n=1}^{\infty}a_n=-\infty$.
-
-
 ## Convergence Absolutely
 
 - (d5.7) A series $\sum_{n=1}^{\infty}a_n$ is said to **converge absolutely** if the series of absolute values $\sum_{n=1}^{\infty}|a_n|$ converges.
@@ -17,14 +17,22 @@
 - (5.24b) If $\sum a_n$ converges conditionally, then $\sum a_n^+$ and $\sum a_n^-$ diverge to $\infty$.
 
 > Related Convergence Tests: [[Convergence Tests#Absolute Convergence Test|Absolute Convergence Test]], [[Convergence Tests#Root test (Cauchy)|Root test]], [[Convergence Tests#Ratio test (d'Alembert)|Ratio test]] 
+
+## Bounded Series
+
+- (d5.21) A series $\sum a_n$ is said to be **bounded** if the sequence of partial sums $(s_n)$ is bounded.
+	- (q5.31) Every convergent series is bounded.
+	- (q5.33) for $\theta\neq2\pi m$ for any integer $m$, the series $\sum\sin n\theta$ and $\sum\cos n\theta$ are bounded
+	- see [[Convergence Tests#Dirichlet's Test|Dirichlet's Test]] 
 # Theorems & Properties
 
-- Additivity (5.9) - If $\sum_{k=1}^{\infty}a_k$ and $\sum_{k=1}^{\infty}b_k$ converge, then $\sum_{k=1}^{\infty}(a_k\pm b_k)$ converges and $\sum_{k=1}^{\infty}(a_k\pm b_k)=\sum_{k=1}^{\infty}a_k\pm\sum_{k=1}^{\infty}b_k$.
+- Additivity 
+	- (5.9) If $\sum a_n$ and $\sum b_n$ converge, then $\sum (a_n\pm b_n)$ converges and $\sum (a_n\pm b_n)=\sum a_n\pm\sum b_n$.
+	- If $\sum a_n$ absolutely converge, $\sum b_n$ conditionally converge, then $\sum (a_n+b_n)$ conditionally converge.
 - Multiplication by a constant 
 	- (5.10) - If $c\neq0$, then $\sum_{k=1}^{\infty}a_k$ converges if and only if $\sum_{k=1}^{\infty}ca_k$ converges. (in this case, $\sum_{k=1}^{\infty}ca_k=c\sum_{k=1}^{\infty}a_k$. )
 	- (q5.12) If $\sum_{k=1}^{\infty}a_k=\infty$, and $c>0$, then $\sum_{k=1}^{\infty}ca_k=\infty$.  
 
-- (q5.33) for $\theta\neq2\pi m$ for any integer $m$, the series $\sum\sin n\theta$ and $\sum\cos n\theta$ are **bounded** (i.e. their partial sums are bounded).
 - (q5.16) Given a convergent series $\sum_{k=1}^{\infty}a_k$, then $\left( {\sum_{k=n+1}^{\infty}a_k} \right)$ is a null sequence (i.e. the **tail** of a convergent series tends to zero)
 ## Rearranging (Commutativity)
 
@@ -33,11 +41,12 @@
 	- (5.25) If $a_n\geq 0$, then $\sum b_n$ converges if and only if $\sum a_n$ converges.
 	- (5.26) $\sum a_n$ converges absolutely if and only if $\sum b_n$ converges absolutely. 
 	- In these two cases, $\sum a_n=\sum b_n$.
-- (5.27) If $\sum a_n$ converges conditionally, then: 
-	- For every $S\in\mathbb{R}$, there exists a rearrangement series of $\sum a_n$ such that $S$ is its sum. 
-	- There exists rearrangement series of $\sum a_n$ that diverge to $\infty$ and $-\infty$.
-	- There exists a rearrangement series of $\sum a_n$ that diverges. (not to $\infty$ or $-\infty$)
-- (5.27') If $\sum a_n$ converges conditionally, and $A\leq B$ are real numbers, then there exists a rearrangement series of $\sum a_n$ such that $A$ is the limit inferior of the partial sums and $B$ is the limit superior of the partial sums. (the same is true for $A=-\infty$ and $B=\infty$)
+- Riemann series theorem #todo 
+	- (5.27) If $\sum a_n$ converges conditionally, then: 
+		- For every $S\in\mathbb{R}$, there exists a rearrangement series of $\sum a_n$ such that $S$ is its sum. 
+		- There exists rearrangement series of $\sum a_n$ that diverge to $\infty$ and $-\infty$.
+		- There exists a rearrangement series of $\sum a_n$ that diverges. (not to $\infty$ or $-\infty$)
+	- (5.27') If $\sum a_n$ converges conditionally, and $A\leq B$ are real numbers, then there exists a rearrangement series of $\sum a_n$ such that $A$ is the limit inferior of the partial sums and $B$ is the limit superior of the partial sums. (the same is true for $A=-\infty$ and $B=\infty$)
 
 ## Inserting Parentheses (Associativity)
 
@@ -59,6 +68,10 @@
 
 - A **telescoping series** is a series of the form $\displaystyle\sum_{n=1}^{\infty}(b_n-b_{n+1})$.
 - A **telescoping sum** is a sum of the form $\displaystyle\sum_{n=1}^{N}(b_n-b_{n+1})=b_1-b_{N+1}$.
+	- $\sum_{n=1}^{N}(b_{n+1}-b_n)=b_{N+1}-b_1$.
+
+
+
 
 ## Geometric series
 
