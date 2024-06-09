@@ -1,7 +1,7 @@
 - A **power series** (centered at $c$) is a series of the form $\displaystyle\sum_{n=0}^{\infty}a_n(x-c)^n$ where $(a_n)$ is a sequence of real numbers and $c$ is a real number.
 	- The number $c$ is called the **center** of the power series.
 	- The constants $a_0,a_1,a_2,\ldots$ are called the **coefficients** of the power series.
-	- A power series is actually a [[series of functions]], where $f_n(x)=a_n(x-c)^n$.
+	- A power series is actually a [[Series of Functions|series of functions]], where $f_n(x)=a_n(x-c)^n$.
 	- A power series is a function of $x$, and it is defined for all $x$ in the interval of convergence.
 	- In this discussion, we will talk about power series centered at $0$, of the form $\displaystyle\sum_{n=0}^{\infty}a_nx^n$. But the results can be generalized to power series centered at any real number $c$, by substituting $y=x-c$.
 	

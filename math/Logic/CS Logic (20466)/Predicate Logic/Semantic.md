@@ -92,10 +92,10 @@ If the set of relation symbols, function symbols, and constant symbols of a lang
 
 ## First-order Tautologies
 
-- (5.9) Let $\varphi$ be a [[Propositional Logic/Syntax#Language|proposition]] where all its [[Propositional Logic/Syntax#Language|elementary proposition]] are from $P_1,\dots ,P_n$. And Let $\alpha_1,\dots,\alpha_n$ be formulas. And let $\varphi'$ be the string that is obtained by replacing each $P_i$ in $\varphi$ by $\alpha_i$. Then:
-	- $\varphi'$ is a [[Predicate Logic/Syntax#Formulas|formula]]
+- (5.9) Let $\varphi$ be a [[Logic/CS Logic (20466)/Propositional Logic/Syntax#Language|proposition]] where all its [[Logic/CS Logic (20466)/Propositional Logic/Syntax#Language|elementary proposition]] are from $P_1,\dots ,P_n$. And Let $\alpha_1,\dots,\alpha_n$ be formulas. And let $\varphi'$ be the string that is obtained by replacing each $P_i$ in $\varphi$ by $\alpha_i$. Then:
+	- $\varphi'$ is a [[Logic/CS Logic (20466)/Predicate Logic/Syntax#Formulas|formula]]
 	- If $M$ is a [[Propositional Logic/Semantic|model]] of the propositional logic, and $S$ is an [[#Variable Assignment|assignment]] of the predicate logic, where $M(P_i)=S(\alpha_i)$ for each $i\leq n$, then $M(\varphi)=S(\varphi')$
-	- If $\varphi$ is a [[Logic/CS Logic (20466)/Propositional Logic/Semantic#Tautology & Contradiction|tautology]] then $\varphi'$ is [[Predicate Logic/Semantic#Logical Validity|logical valid]] and $\varphi'$ is called a **first-order tautology**.
+	- If $\varphi$ is a [[Logic/CS Logic (20466)/Propositional Logic/Semantic#Tautology & Contradiction|tautology]] then $\varphi'$ is [[#Logical Validity|logical valid]] and $\varphi'$ is called a **first-order tautology**.
 
 
 ## Logical Implication
@@ -113,17 +113,17 @@ If the set of relation symbols, function symbols, and constant symbols of a lang
 
 - A formula $\varphi$ is said to be in **prenex form** if it is of the form $Q_{1}x_{1}Q_{2}x_{2} \dots Q_{n} x_{n} B$ where each $Q$ is either $∃$ or $∀$, and where $B$ contains no quantifiers. 
 	- The sequence of quantifiers and variables at the beginning is called the **prefix**, and the quantifier-free formula that follows the **matrix**.
-	- If $\varphi$ is in prenex form and its metrix is [[Propositional Logic/Semantic#CNF & DNF|DNF]] then it is said to be in **prenex normal form** (PNF)
+	- If $\varphi$ is in prenex form and its metrix is [[Logic/CS Logic (20466)/Propositional Logic/Semantic#CNF & DNF|DNF]] then it is said to be in **prenex normal form** (PNF)
 
 
 ## Theory
 
-- A set of [[Predicate Logic/Syntax#Free & Bound Variables|sentences]] $K$ is said to be **inconsistent** if there exists a sentence $\varphi$ such that $K ⊢ \varphi$ and $K ⊢ ¬\varphi$. Moreover, $K$ is **consistent** if for no sentences $\varphi$ we have $K ⊢ \varphi$ and $K ⊢ ¬\varphi$
+- A set of [[Logic/CS Logic (20466)/Predicate Logic/Syntax#Free & Bound Variables|sentences]] $K$ is said to be **inconsistent** if there exists a sentence $\varphi$ such that $K ⊢ \varphi$ and $K ⊢ ¬\varphi$. Moreover, $K$ is **consistent** if for no sentences $\varphi$ we have $K ⊢ \varphi$ and $K ⊢ ¬\varphi$
 - A **theory** is a consistent set of sentences
 - A theory $K$ is said to be **complete** if for every sentence $φ$, either $K \vdash\varphi$ or $K \vdash\lnot\varphi$
 
 
-> In the propositional logic a [[Hilbert System#Theory|complete theory]] has [[Hilbert System#Completeness Theorem|unique model]] (4.5), but in the predicate logic, a complete theory may have many models.
+> In the propositional logic a [[Hilbert System#Completeness Theorem|complete theory]] has [[Hilbert System#Completeness Theorem|unique model]] (4.5), but in the predicate logic, a complete theory may have many models.
 
 >  #todo antoher definition  (from *D. Cunningham*)  
 	- A set of sentences $K$ is said to be a **theory** if and only if $K$ is closed under logical implication, that is, for any sentence $\varphi$ of the language, if $K \models \varphi$, then $\varphi \in K$

@@ -1,7 +1,7 @@
 
 - A **series of functions** is an expression of the form $\displaystyle \sum_{n=1}^{\infty} f_n(x)$, where $(f_n)$ is a [[sequence of functions]]. 
 - The series $\displaystyle \sum_{n=1}^{\infty} f_n(x)$ **converges** pointwise (or uniformly) to $f$ on $I$ if the sequence of partial sums $(S_n)$ [[Sequence of Functions#Convergence|converges]] pointwise (or uniformly) to $f$ on $I$. (where $\displaystyle S_n(x) = \sum_{k=1}^{n} f_k(x)$).
-- Examples of series of functions include [[power series]], and Fourier series.
+- Examples of series of functions include [[Power Series|power series]], and Fourier series.
 
 # Theorems
 
