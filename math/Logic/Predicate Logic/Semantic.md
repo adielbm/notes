@@ -78,7 +78,7 @@ If the set of relation symbols, function symbols, and constant symbols of a lang
 
 - A formula $\varphi$ is **logically valid** if and only if it is true in every [[#Structure (Model)|structure]], and true in every [[#Variable Assignment|assignment]] and denote by $\models \varphi$
 	- (c5.6) אמיתית לוגית
-	-  maybe it's also called *tautology*. don't confuse with [[#First-order Tautologies]] here, or with [[Logic/CS Logic (20466)/Propositional Logic/Semantic#Tautology & Contradiction|tautology]] in prop. logic
+	-  maybe it's also called *tautology*. don't confuse with [[#First-order Tautologies]] here, or with [[Logic/Propositional Logic/Semantic#Tautology & Contradiction|tautology]] in prop. logic
 ## Logical Equivalence
 
 - Two formulas $φ$ and $ψ$ are **logically equivalent** (denoted by $φ\equiv ψ$) if and only if, $\varphi\leftrightarrow\psi$ is [[#Logical Validity|logically valid]]. i.e.
@@ -92,15 +92,15 @@ If the set of relation symbols, function symbols, and constant symbols of a lang
 
 ## First-order Tautologies
 
-- (5.9) Let $\varphi$ be a [[Logic/CS Logic (20466)/Propositional Logic/Syntax#Language|proposition]] where all its [[Logic/CS Logic (20466)/Propositional Logic/Syntax#Language|elementary proposition]] are from $P_1,\dots ,P_n$. And Let $\alpha_1,\dots,\alpha_n$ be formulas. And let $\varphi'$ be the string that is obtained by replacing each $P_i$ in $\varphi$ by $\alpha_i$. Then:
-	- $\varphi'$ is a [[Logic/CS Logic (20466)/Predicate Logic/Syntax#Formulas|formula]]
-	- If $M$ is a [[Propositional Logic/Semantic|model]] of the propositional logic, and $S$ is an [[#Variable Assignment|assignment]] of the predicate logic, where $M(P_i)=S(\alpha_i)$ for each $i\leq n$, then $M(\varphi)=S(\varphi')$
-	- If $\varphi$ is a [[Logic/CS Logic (20466)/Propositional Logic/Semantic#Tautology & Contradiction|tautology]] then $\varphi'$ is [[#Logical Validity|logical valid]] and $\varphi'$ is called a **first-order tautology**.
+- (5.9) Let $\varphi$ be a [[Logic/Propositional Logic/Syntax#Language|proposition]] where all its [[Logic/Propositional Logic/Syntax#Language|elementary proposition]] are from $P_1,\dots ,P_n$. And Let $\alpha_1,\dots,\alpha_n$ be formulas. And let $\varphi'$ be the string that is obtained by replacing each $P_i$ in $\varphi$ by $\alpha_i$. Then:
+	- $\varphi'$ is a [[Logic/Predicate Logic/Syntax#Formulas|formula]]
+	- If $M$ is a [[Logic/Propositional Logic/Semantic|model]] of the propositional logic, and $S$ is an [[#Variable Assignment|assignment]] of the predicate logic, where $M(P_i)=S(\alpha_i)$ for each $i\leq n$, then $M(\varphi)=S(\varphi')$
+	- If $\varphi$ is a [[Logic/Propositional Logic/Semantic#Tautology & Contradiction|tautology]] then $\varphi'$ is [[#Logical Validity|logical valid]] and $\varphi'$ is called a **first-order tautology**.
 
 
 ## Logical Implication
 
-- #todo like [[Logic/CS Logic (20466)/Propositional Logic/Semantic#Logical Implication|Logical Implication]] in propositional logic but for predicate logic
+- #todo like [[Logic/Propositional Logic/Semantic#Logical Implication|Logical Implication]] in propositional logic but for predicate logic
 
 
 ## Minimal Language
@@ -113,12 +113,12 @@ If the set of relation symbols, function symbols, and constant symbols of a lang
 
 - A formula $\varphi$ is said to be in **prenex form** if it is of the form $Q_{1}x_{1}Q_{2}x_{2} \dots Q_{n} x_{n} B$ where each $Q$ is either $∃$ or $∀$, and where $B$ contains no quantifiers. 
 	- The sequence of quantifiers and variables at the beginning is called the **prefix**, and the quantifier-free formula that follows the **matrix**.
-	- If $\varphi$ is in prenex form and its metrix is [[Logic/CS Logic (20466)/Propositional Logic/Semantic#CNF & DNF|DNF]] then it is said to be in **prenex normal form** (PNF)
+	- If $\varphi$ is in prenex form and its metrix is [[Logic/Propositional Logic/Semantic#CNF & DNF|DNF]] then it is said to be in **prenex normal form** (PNF)
 
 
 ## Theory
 
-- A set of [[Logic/CS Logic (20466)/Predicate Logic/Syntax#Free & Bound Variables|sentences]] $K$ is said to be **inconsistent** if there exists a sentence $\varphi$ such that $K ⊢ \varphi$ and $K ⊢ ¬\varphi$. Moreover, $K$ is **consistent** if for no sentences $\varphi$ we have $K ⊢ \varphi$ and $K ⊢ ¬\varphi$
+- A set of [[Logic/Predicate Logic/Syntax#Free & Bound Variables|sentences]] $K$ is said to be **inconsistent** if there exists a sentence $\varphi$ such that $K ⊢ \varphi$ and $K ⊢ ¬\varphi$. Moreover, $K$ is **consistent** if for no sentences $\varphi$ we have $K ⊢ \varphi$ and $K ⊢ ¬\varphi$
 - A **theory** is a consistent set of sentences
 - A theory $K$ is said to be **complete** if for every sentence $φ$, either $K \vdash\varphi$ or $K \vdash\lnot\varphi$
 

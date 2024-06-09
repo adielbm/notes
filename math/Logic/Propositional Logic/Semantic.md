@@ -3,7 +3,7 @@
 - A set $\{ \mathsf{T},\mathsf{F} \}$ of **truth values**
 - $\mathcal{S}$ is the set of the elementary propositions
 - $\overline{\mathcal{S}}$ is the set of the propositions generated from $\mathcal{S}$
-- A **model** (or **truth assignment**) of for a set $\overline{\mathcal{S}}$ is a function $M:\overline{\mathcal{S}}\to\{ \mathsf{T},\mathsf{F} \}$, which is defined in [[Logic/CS Logic (20466)/Propositional Logic/Syntax#Structural Induction|structural induction]]:
+- A **model** (or **truth assignment**) of for a set $\overline{\mathcal{S}}$ is a function $M:\overline{\mathcal{S}}\to\{ \mathsf{T},\mathsf{F} \}$, which is defined in [[Logic/Propositional Logic/Syntax#Structural Induction|structural induction]]:
 	- First, we define $M_{e}:{\mathcal{S}}\to\{ \mathsf{T},\mathsf{F} \}$, for each $Q\in\mathcal{S}$
 	- For each $\varphi\in\overline{\mathcal{S}}$
 		- If $\varphi \in\mathcal{S}$, then $M(\varphi)$ is already defined

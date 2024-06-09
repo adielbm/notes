@@ -46,9 +46,9 @@ If it is first-order logic with equality, then we have also
 
 ## Proof Sequence (סדרת הוכחה)
 
-- (c6.1) A **proof sequence** from a [[Predicate Logic/Semantic#Theory|theory]] $K$ (in our calculus) is a sequence of formulas such that each formula in the sequence is either:
+- (c6.1) A **proof sequence** from a [[Logic/Predicate Logic/Semantic#Theory|theory]] $K$ (in our calculus) is a sequence of formulas such that each formula in the sequence is either:
 	- A logical axiom
-	- A [[Logic/CS Logic (20466)/Predicate Logic/Syntax#Sentence|sentence]] in the set $K$
+	- A [[Logic/Predicate Logic/Syntax#Sentence|sentence]] in the set $K$
 	- Derived from two previous formulas in the sequence using one of the rules of inference
 - A formula $\varphi$ is **theorem** (משפט) of $K$ (or is **provable** (יכיח) from $K$) and denoted by $K \vdash \varphi$, if and only if, there exists a proof sequence from $K$ such that $\varphi$ is the last formula
 
@@ -59,13 +59,13 @@ If it is first-order logic with equality, then we have also
 - (6.1)
 	- Let $\varphi$ be a proposition (of the propositional language) such that all of its elementary proposition are from $P_{1}, ..., P_{n}$. Let $\alpha_{1}, ..., \alpha_{n}$ be formulas of predicate logic, and let $\varphi'$ be the string obtained by replacing all occurrences of $P_{i}$  with $\alpha_{i}$, for $i=1, \dots, n$. Then:
 		- $\varphi'$ is a formula of predicate logic.
-		- If $M$ is a [[Logic/CS Logic (20466)/Propositional Logic/Semantic|model]] of the propositional language and $S$ is an [[Predicate Logic/Semantic#Variable Assignment|assignment]] of predicate logic such that $M(P_{i}) = S(\alpha_{i})$ for all ${i}\leq n$, then $M(\varphi) = S(\varphi ')$
+		- If $M$ is a [[Logic/Propositional Logic/Semantic|model]] of the propositional language and $S$ is an [[Logic/Predicate Logic/Semantic#Variable Assignment|assignment]] of predicate logic such that $M(P_{i}) = S(\alpha_{i})$ for all ${i}\leq n$, then $M(\varphi) = S(\varphi ')$
 		- If $\varphi$ is a tautology, then $\varphi'$ is logically true
 	- A formula obtained by systematic substitution in a tautology of formulas in place of elementary propositions is called a **tautology of predicate logic**, and according to (t6.1.c) it is logically true
 - (6.2) Soundness Theorem
 	- This proof system is [[Proof Calculus#Soundness|sound]], i.e.
-	- Let $K$ be a set of formulas and $\psi$ be a proposition. If $K\vdash \varphi$ (provable), then $K \models\varphi$ ([[Logic/CS Logic (20466)/Propositional Logic/Semantic#Logical Implication|logically implied]])
-- Given $K$ is a [[Predicate Logic/Semantic#Theory|theory]], $\psi$ is a sentence and $\varphi$ is a formula. 
+	- Let $K$ be a set of formulas and $\psi$ be a proposition. If $K\vdash \varphi$ (provable), then $K \models\varphi$ ([[Logic/Propositional Logic/Semantic#Logical Implication|logically implied]])
+- Given $K$ is a [[Logic/Predicate Logic/Semantic#Theory|theory]], $\psi$ is a sentence and $\varphi$ is a formula. 
 	- (6.3) Deduction theorem - If $K\cup \{ \psi \}\vdash \varphi$ then $K \vdash ( \psi \to \varphi)$
 	- (6.4a) Principle of explosion - $\{ \psi,\lnot \psi \}\vdash \varphi$ (thus, every inconsistent set of sentences prove every formula)
 	- (6.4b) if $K\cup \{ \lnot \varphi \}$ is inconsistent then $K \vdash \varphi$

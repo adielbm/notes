@@ -35,6 +35,6 @@
 
 
 
-- is $P$ a [[Logic/CS Logic (20466)/Predicate Logic/Semantic#Theory|complete]] theory?
+- is $P$ a [[Logic/Predicate Logic/Semantic#Theory|complete]] theory?
 - 
-- [[Logic/CS Logic (20466)/Predicate Logic/Semantic#Theory|consistency]]
+- [[Logic/Predicate Logic/Semantic#Theory|consistency]]

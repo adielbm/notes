@@ -75,7 +75,7 @@
 ##### Soundness
 
 - (4.4) **Soundness Theorem** (נאותות)
-	- Let $K$ be a set of propositions and $\psi$ be a proposition. If $K\vdash \varphi$ (provable), then $K\implies\varphi$ ([[Logic/CS Logic (20466)/Propositional Logic/Semantic#Logical Implication|logically implied]]. common notation $K \models\varphi$)
+	- Let $K$ be a set of propositions and $\psi$ be a proposition. If $K\vdash \varphi$ (provable), then $K\implies\varphi$ ([[Logic/Propositional Logic/Semantic#Logical Implication|logically implied]]. common notation $K \models\varphi$)
 		- In particular, if $\emptyset\vdash \varphi$ then, $\varphi$ is a tautology ($\models \varphi$)
 		- Corollary: If a set of propositions has a model then it is consistent
 ##### Theory
@@ -93,7 +93,7 @@
 - (4.6) For each theory $K$ there exist a complete theory $\overline{K}$ such that $K\subseteq{\overline{K}}$
 - (4.7) **Completeness Theorem** (*Semantic completeness*)
 	- A theory has a model, or in an equivalence way, 
-	- If a theory $K$ [[Logic/CS Logic (20466)/Propositional Logic/Semantic#Logical Implication|logically implies]] a proposition $\psi$ (denoted by $K \implies \psi$) then $\psi$ is *provable from* (or *theorem of*) $K$ (denoted by $K \vdash \psi$)
+	- If a theory $K$ [[Logic/Propositional Logic/Semantic#Logical Implication|logically implies]] a proposition $\psi$ (denoted by $K \implies \psi$) then $\psi$ is *provable from* (or *theorem of*) $K$ (denoted by $K \vdash \psi$)
 
 
 #### Example (c4.3.5)
