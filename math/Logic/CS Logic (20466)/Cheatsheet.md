@@ -30,7 +30,7 @@
 # Claculus Axioms in propositional language ${L_{\to}}$
 
 1. $(\varphi \to (\psi \to \theta))$
-2. $(\varphi \to (\psi \land \theta))\to((\varphi \to \psi) \land (\varphi \to \theta))$
+2. $(\varphi \to (\psi \land \theta))\to((\varphi \to \psi) \to (\varphi \to \theta))$
 3. $(\lnot \varphi \to \lnot \psi)\to(\psi \to \varphi)$
 
 # Additional Claculus Axioms in propositional language $L$

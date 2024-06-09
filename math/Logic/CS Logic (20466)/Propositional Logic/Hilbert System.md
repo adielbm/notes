@@ -84,8 +84,8 @@
 	- i.e. $K$ is a **theory** iff there is no proposition $\varphi$ such that both $K\vdash{\varphi}$ and $K\vdash{\lnot{\varphi}}$ 
 	- (In some books, the definitions requires the set is closed under logical implication)
 - Syntactical completeness
-	- A theory is a **complete theory** iff every proposition in it can be **proved** or **disproved**
-	- A theory is a **complete theory** iff for every proposition $\varphi$, either $K\vdash{\varphi}$ or $K\vdash{\lnot{\varphi}}$
+	- A theory is **complete** iff every proposition in it can be **proved** or **disproved**
+	- A theory is **complete** iff for every proposition $\varphi$, either $K\vdash{\varphi}$ or $K\vdash{\lnot{\varphi}}$
 
 ##### Completeness Theorem
 

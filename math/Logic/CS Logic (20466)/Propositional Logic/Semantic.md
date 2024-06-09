@@ -1,3 +1,4 @@
+## Model
 
 - A set $\{ \mathsf{T},\mathsf{F} \}$ of **truth values**
 - $\mathcal{S}$ is the set of the elementary propositions

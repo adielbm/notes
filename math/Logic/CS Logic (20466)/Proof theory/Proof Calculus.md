@@ -1,28 +1,28 @@
-A **proof system** consists of a language, rules of inference and axioms
+A **proof calculus** (**תחשיב הוכחה** or **proof system**) consists of a language, rules of inference and axioms
 ## Examples from the Course Book
 
 - [[Hilbert System#Example (c4.3)]]
 - [[Hilbert System#Example (c4.3.5)]]
 - [[Hilbert System#Example (c4.3.5)]]
-- [[Proof System (6.1)]]
+- [[Predicate Calculus]]
 
 # Properties 
 
 ## Completeness
 #### Strong completeness
 
- - A proof system is **strongly complete** (תחשיב שלם) iff, for every set of formulas $Γ$ , any formula that semantically follows from $Γ$ is provable from $Γ$ . That is: if $Γ ⊨ φ$ , then $Γ ⊢ φ$
+ - A proof calculus is **strongly complete** (תחשיב שלם) iff, for every set of formulas $Γ$ , any formula that semantically follows from $Γ$ is provable from $Γ$ . That is: if $Γ ⊨ φ$ , then $Γ ⊢ φ$
 
 > In this course, when we say *תחשיב שלם* for *strong completeness*. 
 
 > Strong completeness implies semantic completeness #todo 
 #### Semantic completeness
 
- - A proof system is **semantically complete** (or **weak complete**) if in every theory $\displaystyle  \models _{\mathcal {S}}\varphi \ \to \ \vdash _{\mathcal {S}}\varphi$
+ - A proof calculus is **semantically complete** (or **weak complete**) if in every theory $\displaystyle  \models _{\mathcal {S}}\varphi \ \to \ \vdash _{\mathcal {S}}\varphi$
 ### Soundness
 
- - A proof system is **(strongly) sound** iff for every set of formulas $Γ$, if $Γ ⊢ φ$ then $Γ ⊨ φ$ 
-- A proof system is **(weakly) sound** if every provable formula is valid
+ - A proof calculus is **(strongly) sound** iff for every set of formulas $Γ$, if $Γ ⊢ φ$ then $Γ ⊨ φ$ 
+- A proof calculus is **(weakly) sound** if every provable formula is valid
 
 ## 4.4 Compactness Theorem
 

@@ -39,7 +39,6 @@ detemine for each of the following series if it absolutely converges, conditiona
 	- therefore, the series $\sum a_n+\sum b_n$ is conditionally convergent.
 - **conclusion**: the series $\sum_{n=1}^{\infty}\left(\frac{\cos n}{\ln(n^{2n}+n^2)}+1-\cos\frac{1}{n}\right)$ **conditionally converges**.
 
-
 ### Answer 1b
 
 > $\sum_{n=1}^{\infty}u_n$ where $u_1$ is a real number and $u_{n+1}=\frac{\sin(1/n)}{e^{u_n}}$ for all $n\in\mathbb{N}$.
@@ -108,9 +107,14 @@ the sequence $(a_n (n-1))$ is increasing (since $\frac{a_{n+1}}{a_n}\geq\frac{n-
 
 ### Answer 4a
 
-> Prove that if the series $\sum_{n+1}^{\infty}(a_n+b_n)$ converges, and $\lim a_n=0$, then the series $a_1+b_1+a_2+b_2+\cdots$ converges.
+given:
+- $\sum_{n+1}^{\infty}(a_n+b_n)$ converges
+- $\lim a_n=0$
 
-#TODO
+prove that: the series $a_1+b_1+a_2+b_2+\cdots$ converges
+
+- since $\sum_{n+1}^{\infty}(a_n+b_n)$ converges, then $\lim (a_n+b_n)=0$.
+- $\displaystyle\lim_{n\to\infty} (a_1+b_1+a_2+b_2+\cdots+a_n+b_n)=\lim_{n\to\infty} (a_1+b_1+a_2+b_2+\cdots+a_n+b_n)=\lim_{n\to\infty} (a_1+b_1+a_2+b_2+\cdots+a_n+b_n)=0$.
 
 
 ### Answer 4b
@@ -120,6 +124,7 @@ the sequence $(a_n (n-1))$ is increasing (since $\frac{a_{n+1}}{a_n}\geq\frac{n-
 - Let's take $a_n=-1$ and $b_n=1$ for all $n$.
 - then $\sum_{n+1}^{\infty}(a_n+b_n)=\sum_{n+1}^{\infty}0$ converges. (since $\lim \sum_{k=1}^{n}0=0$)
 - but the series $a_1+b_1+a_2+b_2+\cdots=-1+1-1+1-\cdots$ diverges. (since $\lim (-1)^k \neq 0$. (by 5.5))
+
 
 ### Answer 4c
 
@@ -137,10 +142,19 @@ the sequence $(a_n (n-1))$ is increasing (since $\frac{a_{n+1}}{a_n}\geq\frac{n-
 
 ## Q5 
 
-Given a series $\sum a_n$ that diverges, and $a_n>0$ for all $n\in\mathbb{N}$. and $S_n=\sum_{k=1}^{n}a_k$. Prove that the series $\sum_{n=1}^{\infty}\frac{a_n}{S_n}$ diverges.
+Given:
+- a series $\sum a_n$ that diverges, 
+- $a_n>0$ for all $n\in\mathbb{N}$. 
+- $S_n=\sum_{k=1}^{n}a_k$. 
 
+Prove that the series $\sum_{n=1}^{\infty}\frac{a_n}{S_n}$ diverges.
 ### Answer 5
 
-- by 5.13, since the series $\sum a_n$ diverges and $a_n>0$ for all $n$, then the sequence of partial sums $(S_n)$ is unbounded.
+- $(a_n)>0\implies(S_n)$ is strictly increasing.
+- $\sum a_n$ diverges $\implies(S_n)$ is unbounded. (by 5.13)
+- Therefore, $\displaystyle\lim_{n\to\infty}S_n=\infty$.
+- For all $n\geq1$, there exists $m$ such that $S_m>2S_n$.
+- In particular $\displaystyle\sum _{k=n+1}^{m}\frac{a_k}{S_k}>\sum _{k=n+1}^{m}\frac{a_k}{S_m}=\frac{1}{S_m}\sum _{k=n+1}^{m}a_k=\frac{S_m-S_n}{S_m}=1-\frac{S_n}{S_m}\geq\frac{1}{2}>0$.
+- Therefore, the series $\displaystyle\sum_{k=1}^{\infty}\frac{a_k}{S_k}\geq\sum_{k=n+1}^{\infty}\frac{a_k}{S_k}=\lim_{m\to\infty}\sum_{k=n+1}^{m}\frac{a_k}{S_k}\geq\frac{1}{2}$.
+- Therefore, the series $\sum_{n=1}^{\infty}\frac{a_n}{S_n}$ diverges (by 5.5).
 
-#TODO

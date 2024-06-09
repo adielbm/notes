@@ -50,7 +50,8 @@ Given a model $M$
 
 ##### Satisfiable Set
 
-- A set of sentences $K$ is said to be **satisfiable** iff there is some $M$ such that $M\models K$.
+- A set of sentences $K$ is said to be **satisfiable** if there exists some model $M$ such that $M\models K$.
+- **Soundeness Theorem (6.2)** - If $K$ is satisfiable, then it is [[#Theory|consistent]]
 
 #### Universal closure
 
@@ -115,19 +116,35 @@ If the set of relation symbols, function symbols, and constant symbols of a lang
 	- If $\varphi$ is in prenex form and its metrix is [[Propositional Logic/Semantic#CNF & DNF|DNF]] then it is said to be in **prenex normal form** (PNF)
 
 
-____
 ## Theory
 
-
-- A set of sentences $K$ is said to be **inconsistent** if there exists a sentence $\varphi$ such that $K ⊢ \varphi$ and $K ⊢ ¬\varphi$. Moreover, $K$ is **consistent** if for no sentences $\varphi$ we have $K ⊢ \varphi$ and $K ⊢ ¬\varphi$
-- A **theory** is a consistent set of [[Predicate Logic/Syntax#Free & Bound Variables|sentences]]
+- A set of [[Predicate Logic/Syntax#Free & Bound Variables|sentences]] $K$ is said to be **inconsistent** if there exists a sentence $\varphi$ such that $K ⊢ \varphi$ and $K ⊢ ¬\varphi$. Moreover, $K$ is **consistent** if for no sentences $\varphi$ we have $K ⊢ \varphi$ and $K ⊢ ¬\varphi$
+- A **theory** is a consistent set of sentences
 - A theory $K$ is said to be **complete** if for every sentence $φ$, either $K \vdash\varphi$ or $K \vdash\lnot\varphi$
 
 
-- examples:
-	- $P$ : [[Peano axioms]] 
+> In the propositional logic a [[Hilbert System#Theory|complete theory]] has [[Hilbert System#Completeness Theorem|unique model]] (4.5), but in the predicate logic, a complete theory may have many models.
 
-
-- #todo antoher definition  (from *D. Cunningham*)  
+>  #todo antoher definition  (from *D. Cunningham*)  
 	- A set of sentences $K$ is said to be a **theory** if and only if $K$ is closed under logical implication, that is, for any sentence $\varphi$ of the language, if $K \models \varphi$, then $\varphi \in K$
 	- A theory $K$ is said to be **complete** if for every sentence $φ$, either $φ ∈ K$ or $¬φ ∈ K$
+
+
+### Henkin Theory
+
+- A complete theory $K$ is said to be a **Henkin theory** if the following condition holds: "If $K$ contains the sentence $\lnot \forall x \varphi$ then there is a constant $c \in L$ for which $K$ contains $\lnot \varphi [c / x]$". (The constant $c$ is called a **Henkin witness** for $\lnot \forall x \varphi$)
+
+
+- (6.6) Completeness Theorem (without equality) 
+	- (A.) Every theory $K$ in a language $L$ can be extended to a Henkin theory in a language $L'$ such that $L'$ adds only constants to $L$.
+	- (B.) For every Henkin theory in a language $L'$, there exists a model in $L'$. Reducing the model to the language $L$ gives a model of the theory $K$ in the language $L$. 
+
+
+- #todo (6.8) Completeness Theorem (with equality)
+
+
+
+
+
+- #todo t6.7
+- 

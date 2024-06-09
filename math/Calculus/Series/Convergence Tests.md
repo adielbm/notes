@@ -12,7 +12,6 @@
 ## p-Test
 
 - (e5.8) The [[Series#p-series & harmonic series|p-series]] $\displaystyle\sum_{n=1}^{\infty}\frac{1}{n^p}$ converges if $p>1$ and diverges if $p\leq1$
-
 ## Absolute Convergence Test
 
 - (5.6) If the seires $\sum \left|a_n\right|$ converges, then $\sum a_n$ converges as well.

@@ -1,6 +1,6 @@
 
 - [ ] [Can you change a sum by rearranging its numbers? --- The Riemann Series Theorem](https://www.youtube.com/watch?v=U0w0f0PDdPA&t=547s "Can you change a sum by rearranging its numbers? --- The Riemann Series Theorem")
-- [ ] [The Subtle Reason Taylor Series Work | Smooth vs. Analytic Functions](https://www.youtube.com/watch?v=0HaBNdmUWXY "The Subtle Reason Taylor Series Work | Smooth vs. Analytic Functions")
+- [x] [The Subtle Reason Taylor Series Work | Smooth vs. Analytic Functions](https://www.youtube.com/watch?v=0HaBNdmUWXY "The Subtle Reason Taylor Series Work | Smooth vs. Analytic Functions")
 
 # Homework ✏️
 
@@ -78,6 +78,20 @@
 - [ ] [[logic-5.pdf]] 
 - [ ] [[logic-7.pdf]]
 
+### textbook
+
+- [ ] פרק 6
+	- [ ] 6.1 תורת ההוכחה בתחשיב הילברט
+	- [ ] 6.2 - 6.4      הנקין איזומורפיזם תורת המודלים
+	- [ ] 6.6.    
+		- [ ] especially: 6.6.1 - 6.6.1
+- [ ] chap 7
+	- [ ] 7.4.1 - 7.4.3 גדירות
+- [ ] 8 - submodels
+	- [ ] 8.1
+	- [ ] 8.2.2
+- [ ] chap 9.2 - high order logic
+
 # Exams 💪
 
 ## CALC-2
@@ -115,3 +129,7 @@
 - Highlights of Calculus
 	- [ ] https://www.youtube.com/watch?v=U0xlKuFqCuI&list=PLBE9407EA64E2C318&index=14
 	- [ ] 
+
+
+
+- A Brief History of Logic - Moshe Y. Vardi https://www.cs.rice.edu/~vardi/comp409/history.pdf
