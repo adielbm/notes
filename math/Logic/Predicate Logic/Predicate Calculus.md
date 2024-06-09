@@ -1,16 +1,20 @@
 
-> Here we describe an example (C6.1) of a [[Proof Calculus]] (תחשיב הוכחה), which is [[Proof Calculus#Strong completeness|complete]].  This is kind of expansion of [[Hilbert System#Example (c4.3)]]
+> Here we describe an example (C6.1) of a [[Proof Calculus]] (תחשיב הוכחה), which is [[Proof Calculus#Strong completeness|complete]].  This is kind of expansion of [[Propositional Calculus#Example (c4.3)]]
 
-#  Characterization
+# Characterization
 
-## Language $L_{\to}$
+## Language
 
-- Connectives $\{ \lnot,\to \}$
+- Connectives $\lnot,\to$
 - Quantifier $\forall$
 
-## Axioms 
+## Logical Axioms 
 
-Claculus Axioms in propositional language ${L_{\to}}$
+> **Note:** The *logical axioms* (as opposed to the axioms of a concrete theory $K$) can be formulas that are not sentences, and therefore, in proof sequences, there may also be formulas with free variables.
+
+### Taulogical Axioms
+
+> These axioms are from [[Propositional Calculus#Example (c4.3)]], but here $\varphi,\psi,\theta$ can be [[Logic/Predicate Logic/Syntax#Formulas|formulas of predicate of logic]] 
 
 |     |                | Taulogical Axioms                                                          |
 | --- | -------------- | -------------------------------------------------------------------------- |
@@ -42,29 +46,21 @@ If it is first-order logic with equality, then we have also
 - Universal Generalization $\displaystyle\frac{\varphi}{\forall x\varphi}$
 - Modus Ponens $\displaystyle\frac{\varphi,(\varphi\to \psi)}{\psi}$
 
-# Definitions
+# Proof Sequence 
 
-## Proof Sequence (סדרת הוכחה)
-
-- (c6.1) A **proof sequence** from a [[Logic/Predicate Logic/Semantic#Theory|theory]] $K$ (in our calculus) is a sequence of formulas such that each formula in the sequence is either:
-	- A logical axiom
+- (c6.1) A **proof sequence** (סדרת הוכחה) from a [[Logic/Predicate Logic/Semantic#Theory|theory]] $K$ (in this proof calculus) is a sequence of formulas such that each formula in the sequence is either:
+	- A logical axiom (in this proof calculus)
 	- A [[Logic/Predicate Logic/Syntax#Sentence|sentence]] in the set $K$
 	- Derived from two previous formulas in the sequence using one of the rules of inference
 - A formula $\varphi$ is **theorem** (משפט) of $K$ (or is **provable** (יכיח) from $K$) and denoted by $K \vdash \varphi$, if and only if, there exists a proof sequence from $K$ such that $\varphi$ is the last formula
 
 > **Note**: Here we restrict a theory to be set of *sentences*. but there are definitions without this restriction. Also, in a *proof sequence* (unlike to a *theory*), may be formulas that are *not* sentences.
 
-# Theorems
+# Properties
 
-- (6.1)
-	- Let $\varphi$ be a proposition (of the propositional language) such that all of its elementary proposition are from $P_{1}, ..., P_{n}$. Let $\alpha_{1}, ..., \alpha_{n}$ be formulas of predicate logic, and let $\varphi'$ be the string obtained by replacing all occurrences of $P_{i}$  with $\alpha_{i}$, for $i=1, \dots, n$. Then:
-		- $\varphi'$ is a formula of predicate logic.
-		- If $M$ is a [[Logic/Propositional Logic/Semantic|model]] of the propositional language and $S$ is an [[Logic/Predicate Logic/Semantic#Variable Assignment|assignment]] of predicate logic such that $M(P_{i}) = S(\alpha_{i})$ for all ${i}\leq n$, then $M(\varphi) = S(\varphi ')$
-		- If $\varphi$ is a tautology, then $\varphi'$ is logically true
-	- A formula obtained by systematic substitution in a tautology of formulas in place of elementary propositions is called a **tautology of predicate logic**, and according to (t6.1.c) it is logically true
-- (6.2) Soundness Theorem
-	- This proof system is [[Proof Calculus#Soundness|sound]], i.e.
-	- Let $K$ be a set of formulas and $\psi$ be a proposition. If $K\vdash \varphi$ (provable), then $K \models\varphi$ ([[Logic/Propositional Logic/Semantic#Logical Implication|logically implied]])
+- (6.1) Every [[Logic/Predicate Logic/Semantic#First-order Tautologies|first-order tautology]] is provable
+- (6.2) Soundness Theorem - This proof calculus is [[Proof Calculus#Soundness|sound]], i.e. 
+	- for every set of formulas $K$, and a formula $\varphi$, If $K\vdash \varphi$ (provable), then $K \models\varphi$ ([[Logic/Propositional Logic/Semantic#Logical Implication|logically implied]])
 - Given $K$ is a [[Logic/Predicate Logic/Semantic#Theory|theory]], $\psi$ is a sentence and $\varphi$ is a formula. 
 	- (6.3) Deduction theorem - If $K\cup \{ \psi \}\vdash \varphi$ then $K \vdash ( \psi \to \varphi)$
 	- (6.4a) Principle of explosion - $\{ \psi,\lnot \psi \}\vdash \varphi$ (thus, every inconsistent set of sentences prove every formula)

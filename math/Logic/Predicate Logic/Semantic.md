@@ -78,7 +78,9 @@ If the set of relation symbols, function symbols, and constant symbols of a lang
 
 - A formula $\varphi$ is **logically valid** if and only if it is true in every [[#Structure (Model)|structure]], and true in every [[#Variable Assignment|assignment]] and denote by $\models \varphi$
 	- (c5.6) אמיתית לוגית
-	-  maybe it's also called *tautology*. don't confuse with [[#First-order Tautologies]] here, or with [[Logic/Propositional Logic/Semantic#Tautology & Contradiction|tautology]] in prop. logic
+
+>  maybe it's also called *tautology*. don't confuse with [[#First-order Tautologies]] here, or with [[Logic/Propositional Logic/Semantic#Tautology & Contradiction|tautology]] in prop. logic
+
 ## Logical Equivalence
 
 - Two formulas $φ$ and $ψ$ are **logically equivalent** (denoted by $φ\equiv ψ$) if and only if, $\varphi\leftrightarrow\psi$ is [[#Logical Validity|logically valid]]. i.e.
@@ -96,6 +98,7 @@ If the set of relation symbols, function symbols, and constant symbols of a lang
 	- $\varphi'$ is a [[Logic/Predicate Logic/Syntax#Formulas|formula]]
 	- If $M$ is a [[Logic/Propositional Logic/Semantic|model]] of the propositional logic, and $S$ is an [[#Variable Assignment|assignment]] of the predicate logic, where $M(P_i)=S(\alpha_i)$ for each $i\leq n$, then $M(\varphi)=S(\varphi')$
 	- If $\varphi$ is a [[Logic/Propositional Logic/Semantic#Tautology & Contradiction|tautology]] then $\varphi'$ is [[#Logical Validity|logical valid]] and $\varphi'$ is called a **first-order tautology**.
+- see also [[Predicate Calculus#Properties|Predicate Calculus (6.1)]]
 
 
 ## Logical Implication
@@ -122,13 +125,13 @@ If the set of relation symbols, function symbols, and constant symbols of a lang
 - A **theory** is a consistent set of sentences
 - A theory $K$ is said to be **complete** if for every sentence $φ$, either $K \vdash\varphi$ or $K \vdash\lnot\varphi$
 
+> See also the defitnion of [[Predicate Calculus#Proof Sequence|proof sequence]] (in some proof claculus)
 
-> In the propositional logic a [[Hilbert System#Completeness Theorem|complete theory]] has [[Hilbert System#Completeness Theorem|unique model]] (4.5), but in the predicate logic, a complete theory may have many models.
+> In the propositional logic a [[Propositional Calculus#Completeness Theorem|complete theory]] has [[Propositional Calculus#Completeness Theorem|unique model]] (4.5), but in the predicate logic, a complete theory may have many models.
 
 >  #todo antoher definition  (from *D. Cunningham*)  
 	- A set of sentences $K$ is said to be a **theory** if and only if $K$ is closed under logical implication, that is, for any sentence $\varphi$ of the language, if $K \models \varphi$, then $\varphi \in K$
 	- A theory $K$ is said to be **complete** if for every sentence $φ$, either $φ ∈ K$ or $¬φ ∈ K$
-
 
 ### Henkin Theory
 

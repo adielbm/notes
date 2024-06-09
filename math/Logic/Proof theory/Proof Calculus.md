@@ -1,10 +1,23 @@
-A **proof calculus** (**תחשיב הוכחה** or **proof system**) consists of a language, rules of inference and axioms
-## Examples from the Course Book
+- A **proof calculus** (**תחשיב הוכחה** or **proof system**) consists of: 
+	- language 
+	- rules of inference
+	- logical axioms
 
-- [[Hilbert System#Example (c4.3)]]
-- [[Hilbert System#Example (c4.3.5)]]
-- [[Hilbert System#Example (c4.3.5)]]
-- [[Predicate Calculus]]
+## Examples
+
+- **Hilbert Systems** are a class of proof systems for propositional and predicate logic. Hilbert systems can be characterised by the choice of a large number of logical axioms and a small set of rules of inference (typically only Modus Ponens (or also Universal Generalization)).
+	- Examples from the Course Book of Hilbert Systems:
+		- [[Propositional Calculus#Example (c4.3)]]
+		- [[Propositional Calculus#Example (c4.3.5)]]
+		- [[Propositional Calculus#Example (c4.3.5)]]
+		- [[Predicate Calculus]]
+
+## Proof Sequence
+
+- A **proof sequence** (סדרת הוכחה) is a finite sequence of *propositions* (in propositional logic, or *formulas* for predicate logic) in which each one is either a logical axiom (in the proof calculus we are using) or derived from propositions (or *formulas*) that appeared before it in the sequence through inference rules (in the proof calculus we are using).
+	- Definitions of **proof sequence** in the course book:
+		- [[Predicate Calculus#Proof Sequence]] (c6.1)
+		- [[Propositional Calculus#Proof Sequence]] (c4.3.1)
 
 # Properties 
 

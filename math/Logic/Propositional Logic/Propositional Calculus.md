@@ -1,20 +1,5 @@
 
-
-- **Hilbert Systems** are a class of proof systems for propositional and predicate logic. Their characteristics include
-	- Axioms
-	- Rule of Inferences: (Typically only Modus Ponens)
-
-
-- A **Hilbert system**
-	- A set of propositions that will be called the **logical axioms** (אקסיומות לוגיות) of the calculus. 
-		- Naturally, these should be propositions whose truth we trust, but it is equally important that they be useful. The selection of axioms is not a process of discovering everything that is certainly true, but rather a process of identifying the facts that are clearly likely to be helpful in proving additional facts.
-	- A set of rules, which will be called the **inference rules** (כללי גזירה) of the calculus. 
-		- If we accept as proven several propositions, called the **assumptions** (הנחות), then according to the inference rules, we are allowed to add an additional proposition to the proven claims, which will be called the **conclusion** (מסקנה)
-
-
-
-- A **proof sequence** (סדרת הוכחה) is a finite sequence of propositions in which each proposition is either a logical axiom or derived from propositions that appeared before it in the sequence through inference rules. (Typically, we think of the proof sequence as proving the last proposition appearing in the sequence, and we say it is a proof sequence for that proposition.) 
-- A proposition that has a proof sequence is called a **provable** (יכיח) proposition (in the calculus)
+> Here we describe some examples of [[Proof Calculus|proof calculus]] which are also examples of [[Proof Calculus#Examples|hilbert systems]]
 
 #### Example (c4.3)
 
@@ -29,7 +14,9 @@
 	- Inference rules (actually one here)
 		- Modus ponens $\displaystyle\frac{\varphi,(\varphi \rightarrow \psi)}{\psi}$
 
-	- Definitions for our calculus:
+##### Proof Sequence
+
+- Definitions for our calculus:
 	- Let $K$ be a set of propositions, a **proof sequence from a set** $K$ (in our calculus) is a sequence of propositions $\varphi_{1},\dots,\varphi_{n}$ such that each proposition in the sequence is either: 
 		- A logical axiom
 		- A proposition in the set $K$
