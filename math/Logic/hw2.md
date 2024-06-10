@@ -22,6 +22,8 @@ answer: a
 
 ![[Pasted image 20240605210704.png]]
 
+answer: e
+
 # Q4
 
 ![[Pasted image 20240605210716.png]]

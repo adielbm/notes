@@ -84,31 +84,12 @@ The formulas obtained from the first two rules are said to be **atomic formulas*
 
 # Theory
 
-- A set of [[Logic/Predicate Logic/Syntax#Free & Bound Variables|sentences]] $K$ is said to be **inconsistent** if there exists a sentence $\varphi$ such that $K ⊢ \varphi$ and $K ⊢ ¬\varphi$. Moreover, $K$ is **consistent** if for no sentences $\varphi$ we have $K ⊢ \varphi$ and $K ⊢ ¬\varphi$
-- A **theory** is a consistent set of sentences
-- A theory $K$ is said to be **complete** if for every sentence $φ$, either $K \vdash\varphi$ or $K \vdash\lnot\varphi$
--  #todo #not-in-course  antoher definition  (from *D. Cunningham*)  
-	- A set of sentences $K$ is said to be a **theory** if and only if $K$ is closed under logical implication, that is, for any sentence $\varphi$ of the language, if $K \models \varphi$, then $\varphi \in K$
-	- A theory $K$ is said to be **complete** if for every sentence $φ$, either $φ ∈ K$ or $¬φ ∈ K$
+- A **theory** is a [[Predicate Calculus#Theory|consistent]] set of sentences
 
 > In the propositional logic a [[Propositional Calculus#Completeness Theorem|complete theory]] has [[Propositional Calculus#Completeness Theorem|unique model]] (4.5), but in the predicate logic, a complete theory may have many models.
 
 > A theory can be considered on two levels. One is the _proof theory_ level (see [[Predicate Calculus]]), where we focus on the syntactic aspects (strings (which are formulas) and on manipulating strings according to rules). The other is the _[[Model Theory|model theory]]_ level, where we focus on the semantic aspects as the class of all models of the theory.
 
-## Henkin Theory
-
-- A complete theory $K$ is said to be a **Henkin theory** if the following condition holds: "If $K$ contains the sentence $\lnot \forall x \varphi$ then there is a constant $c \in L$ for which $K$ contains $\lnot \varphi [c / x]$". (The constant $c$ is called a **Henkin witness** for $\lnot \forall x \varphi$)
-
-
-- #todo check if Completeness theorem depends on predicare calc.
-- (6.6) Completeness Theorem (without equality) 
-	- (A.) Every theory $K$ in a language $L$ can be extended to a Henkin theory in a language $L'$ such that $L'$ adds only constants to $L$.
-	- (B.) For every Henkin theory in a language $L'$, there exists a model in $L'$. Reducing the model to the language $L$ gives a model of the theory $K$ in the language $L$. 
-- #todo (6.8) Completeness Theorem (with equality)
-
-
-- #todo t6.7
-- 
 
 # BNF
 

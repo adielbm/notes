@@ -25,7 +25,7 @@
 		- $H$ is a homomorphism
 		- $H$ is surjective (onto) $M'$
 
-
+- #todo 6.7
 
 > If one of the relation in $L$ is the equality relation, (and it is the real equality in $M$ and $M'$), then by the property "H reflects relations" we have that H is injective, therefore in that case "isomorphism" is the same as "איזומורפיזם מוכלל"
 

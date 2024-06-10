@@ -4,14 +4,99 @@
 - (6.9) **Compactness Theorem** - Let $K$ be an infinite set of [[Logic/Predicate Logic/Syntax#Sentence|sentences]]. If every finite subset of $K$ is [[Logic/Predicate Logic/Semantic#Satisfiable Set|satisfiable]], then $K$ is satisfiable
 - (6.10) **Löwenheim–Skolem theorem** - if a [[Logic/Predicate Logic/Syntax#Theory|theory]] $K$ [[Logic/Predicate Logic/Semantic#Model of Set|has an infinite model]], then it has also countable model
 	- (6.10') if a theory $K$ has an infinite model, then for every infinite cardinality $\alpha$, the theory has model with cardinality $\alpha$
-- (6.11a)
-- (6.11b)
-- (6.12) for every theory $K$, either
+- (q6.6) Given a predicate language $L$ and a set of sentences $K$ and let $L'$ be the language obtained by adding constants, functions, and predicates to $L$. let $\varphi$ be a sentence in $L$. Then #todo
+- (6.11)
+	- (A.) _There is no theory force a model to be the set of all natural numbers_:
+		- Let $L$ a predicate language such that the set of all natural numbers is the domain of some model of $L$. Let $T$ be the set of all sentences in $L$ that are true in the model. Then $T$ has also models which are not countable. Moreover, $T$ has models in every infinite cardinality.
+	- (B.) _There is no theory force a model to be the set of all real numbers_:
+		- Let $L$ a predicate language such that the set of all real numbers is the domain of some model of $L$. Let $T$ be the set of all sentences in $L$ that are true in the the model. Then $T$ has also models which are countable.
+- (6.12) _It is impossible to characterize in the language the finite models_: 
+	For every theory $K$, one and only one of the following holds:
 	- there exists $k \in \mathbb{N}$ such that $T\vdash \psi_{n}$, where $\psi_{n}$ is a sentence that says "there at most $n$ obejct, such that every model of T has at most $n$ objects". or,
 	- T has models in every infinite cardinalities
-- (6.13)
+- (6.13) Let $T$ be a theory that has finite models. (i.e. for all $n$ there exists a finite model of $T$ with domain of size at least $n$). Let $\Phi=\{\varphi_n \mid n\in \mathbb{N}\}$ such that $\varphi_n$ is a sentence that says "there at least $n$ obejcts in the domain". Then:
+	- (A.) $T\cup \Phi$ is a theory whose models are exactly the finite models of $T$.
+	- (B.) There is no theory (finite or infinite) $\Phi'$ such that the models of $T\cup \Phi'$ are exactly the finite models of $T$.
+	- (C.) There is no finite set $\theta_1,\dots,\theta_k$ such that the models of $T\cup \{\theta_1,\dots,\theta_k\}$ are exactly the infinite models of $T$.
 
+# Exapmles
 
+Here are some important [[Logic/Predicate Logic/Syntax#Theory|theories]] in mathematics. 
+
+## Theories of Order
+
+In the language there is one binary relation symbol $<$. (we prefer to denote $t<s$ instead of $<(t,s)$)
+
+### Partial Order
+
+- $T_{\text{order}}$, has two axioms:
+	- $\forall v_0 \lnot(v_0<v_0)$ (irreflexivity)
+	- $\forall v_0 \forall v_1 \forall v_2 ((v_0<v_1)\land(v_1<v_2))\to(v_0<v_2)$ (transitivity)
+
+> See also: [[Binary Relation#Transitive Relations]] (strict partial order)
+
+> [!Exercise]
+> Prove that $T_{\text{order}}\vdash \forall v_0 \forall v_1 ((v_0<v_1)\to\lnot(v_1<v_0))$ 
+
+###  Linear Order (Total Order)
+
+- $T_{\text{LO}}$=$T_{\text{order}}\cup\{\forall v_0 \forall v_1 (v_0=v_1)\lor(v_0<v_1)\lor(v_1<v_0)\}$ (totality)
+
+> See also: [[Binary Relation#Transitive Relations]] (strict total order)
+
+> [!Exercise]
+> (1.) Show that for all $n$, $T_{\text{LO}}$ has a model with domain of size $n$. (every two such are isomorphic).
+> (2.) There is also infinite models. Show two such models. (which are not isomorphic)
+
+### Dense Linear Order
+
+- $T_{\text{DLO}}$ is $T_{\text{LO}}$ with the following axioms:
+	- $\forall v_0 \forall v_1 ((v_0<v_1)\to\exists v_2 ((v_0<v_2)\land(v_2<v_1)))$ (dense)
+	- $\forall v_0 \exists v_1 \exists v_2 ((v_0<v_1)\land(v_2<v_0))$ (no first or last element)
+
+> [!Exercise]
+> Prove that every model of $T_{\text{DLO}}$ is infinite.
+
+## Theories of Groups
+
+The language has a constant $0$, a unary function symbol, $-$, amd a binary function symbol, $+$. 
+
+### Group Theory
+
+- $T_{\text{G}}$ has the following axioms:
+	- $\forall x \forall y \forall z (((x+y)+z)=x+(y+z))$ (associativity)
+	- $\forall x (x+0)=x$ (identity)
+	- $\forall x ((-x+x)=0)$ (inverse)
+
+> [!Exercise]
+> Prove that $T_{\text{G}}\vdash \forall x \forall y \forall z (((x+y)=(x+z))\to(y=z))$ (cancellation law)
+
+> See also: [[Group Theory]]
+
+### Commutative Group Theory
+
+- $T_{\text{CG}}=T_{\text{G}}\cup\{\forall x \forall y ((x+y)=(y+x))\}$ (commutativity)
+
+## Theory of Fields
+
+The language is the same as the group theory with an additional binary function symbol, $\cdot$, and a constant symbol, $1$.
+
+The axioms of the theory $T_{\text{F}}$ are the axioms of the commutative group theory with the following additional axioms:
+
+- $\forall x \forall y \forall z ((x\cdot(y\cdot z))=((x\cdot y)\cdot z))$ (associativity)
+- $\forall x (x\cdot 1)=x$ (identity)
+- $\forall x (\lnot(x=0)\to(\exists y (x\cdot y)=1))$ (inverse)
+- $\forall x \forall y ((x\cdot y)=(y\cdot x))$ (commutativity)
+- $\forall x \forall y \forall z ((x\cdot(y+z))=((x\cdot y)+(x\cdot z)))$ (distributivity)
+
+> Imortant models of the theory are the rational numbers, the real numbers, and the complex numbers. But there are also finite models, such as $Z_p$ (the integers modulo $p$) for a prime number $p$.
+> Exmaple for sentence that is true in the field of real numbers but not in the field of rational numbers: $\exists y (y\cdot y=1+1)$. (see more in [[Real Numbers#Completeness of R]])
+
+> See also: [[Abstract Algebra/Field]]
+
+> [!Exercise]
+> Prove that $T_{\text{F}}\vdash \forall x (x\cdot 0=0)$. (zero property)
+> 
 
 # Definable set
 

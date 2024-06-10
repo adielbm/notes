@@ -46,19 +46,40 @@ If it is first-order logic with equality, then we have also
 - Universal Generalization $\displaystyle\frac{\varphi}{\forall x\varphi}$
 - Modus Ponens $\displaystyle\frac{\varphi,(\varphi\to \psi)}{\psi}$
 
-# Proof Sequence 
+
+# Definitions 
+
+Here are some definitions related a proof calculus:
+## Proof Sequence 
 
 - (c6.1) A **proof sequence** (סדרת הוכחה) from a [[Logic/Predicate Logic/Syntax#Theory|theory]] $K$ (in this proof calculus) is a sequence of formulas such that each formula in the sequence is either:
 	- A logical axiom (in this proof calculus)
 	- A [[Logic/Predicate Logic/Syntax#Sentence|sentence]] in the set $K$
 	- Derived from two previous formulas in the sequence using one of the rules of inference
-- A formula $\varphi$ is **theorem** (משפט) of $K$ (or is **provable** (יכיח) from $K$) and denoted by $K \vdash \varphi$, if and only if, there exists a proof sequence from $K$ such that $\varphi$ is the last formula
 
 > See also more general defitnion of [[Predicate Calculus#Proof Sequence|proof sequence]] (in some proof claculus)
 
 > **Note**: Here we restrict a theory to be set of *sentences*. but there are definitions without this restriction. Also, in a *proof sequence* (unlike to a *theory*), may be formulas that are *not* sentences.
 
+## Provable Formula
+
+- (*syntactic consequence*) A formula $\varphi$ is **theorem** (משפט) of $K$ (or is **provable** (יכיח) from $K$) and denoted by $K \vdash \varphi$, if and only if, there exists a proof sequence from $K$ such that $\varphi$ is the last formula
+
+## Theory
+
+- A set of [[Logic/Predicate Logic/Syntax#Free & Bound Variables|sentences]] $K$ is said to be **inconsistent** if there exists a sentence $\varphi$ such that $K ⊢ \varphi$ and $K ⊢ ¬\varphi$. Moreover, $K$ is **consistent** if for no sentences $\varphi$ we have $K ⊢ \varphi$ and $K ⊢ ¬\varphi$
+- A **theory** is a consistent set of sentences
+- (syntactical completeness) A theory $K$ is said to be **complete** if for every sentence $φ$, either $K \vdash\varphi$ or $K \vdash\lnot\varphi$
+
+> Usually a theory is understood to be closed under the relation of logical consequence. Some accounts define a theory to be closed under the [[Logic/Predicate Logic/Semantic#Logical Implication|semantic consequence]] relation, (i.e. if $K \models \varphi$, then $\varphi \in K$), while others define it to be closed under the [[#Provable Formula|syntactic consequence]], (i.e. if $K \vdash \varphi$, then $\varphi \in K$). [wikipedia](https://en.wikipedia.org/wiki/Theorem#Theorems_in_logic)
+
+### Henkin Theory
+
+- A complete theory $K$ is said to be a **Henkin theory** if the following condition holds: "If $K$ contains the sentence $\lnot \forall x \varphi$ then there is a constant $c \in L$ for which $K$ contains $\lnot \varphi [c / x]$". (The constant $c$ is called a **Henkin witness** for $\lnot \forall x \varphi$)
+
 # Properties
+
+Properties of and theorems about this proof calculus:
 
 - (6.1) Every [[Logic/Predicate Logic/Semantic#First-order Tautologies|first-order tautology]] is provable
 - (6.2) Soundness Theorem - This proof calculus is [[Proof Calculus#Soundness|sound]], i.e. 
@@ -72,4 +93,9 @@ If it is first-order logic with equality, then we have also
 - Given $L'$ a language that adds constants to a language $L$, and $K$ a set of sentences in $L$
 	- (6.5c) for every sentence $\varphi$ in $L$, if $K \vdash \varphi$ in $L'$ then $K \vdash \varphi$ in $L$
 	- (6.5d) if $K$ is consistent in $L$, then it is consistent in $L'$
-
+- **Completeness Theorem**
+	- (6.6) (without equality) 
+		- (A.) Every theory $K$ in a language $L$ can be extended to a Henkin theory in a language $L'$ such that $L'$ adds only constants to $L$.
+		- (B.) For every Henkin theory in a language $L'$, there exists a model in $L'$. Reducing the model to the language $L$ gives a model of the theory $K$ in the language $L$. 
+	- (6.8) (with equality)
+		- For every consistent set of sentences has a model in which the relation "$=$" is interpreted as the identity relation

@@ -100,7 +100,7 @@ If the set of relation symbols, function symbols, and constant symbols of a lang
 
 ## Logical Implication
 
-- A formula $\varphi$ **logically implied** by a set of formulas $K$ (denoted by $K\models\varphi$) if for every model $M$ such that $M\models K$ ($M$ is a [[#Model of Set|model of]] $K$) we have $M\models\varphi$ ($M$ is a [[#Truth Value of formula in Model|model of]] $\varphi$).
+- (*semantic consequence*) A formula $\varphi$ **logically implied** by a set of formulas $K$ (denoted by $K\models\varphi$) if for every model $M$ such that $M\models K$ ($M$ is a [[#Model of Set|model of]] $K$) we have $M\models\varphi$ ($M$ is a [[#Truth Value of formula in Model|model of]] $\varphi$).
 
 ## Minimal Language
 

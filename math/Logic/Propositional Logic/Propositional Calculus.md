@@ -54,14 +54,14 @@ Here are some properties of this proof calculus
 	- If $K\cup \{ \lnot \varphi \}$ is inconsistent, then $K\vdash{\varphi}$
 - examples #todo 
 - (4.4) **Soundness Theorem** (נאותות)
-	- This proof system is [[Proof Calculus#Soundness|sound]], i.e.
+	- This proof calculus is [[Proof Calculus#Soundness|sound]], i.e.
 	- Let $K$ be a set of propositions and $\psi$ be a proposition. If $K\vdash \varphi$ ([[#Proof Sequence|provable]]), then $K\implies\varphi$ ([[Logic/Propositional Logic/Semantic#Logical Implication|logically implied]]. common notation $K \models\varphi$)
 		- In particular, if $\emptyset\vdash \varphi$ then, $\varphi$ is a tautology ($\models \varphi$)
 		- Corollary: If a set of propositions has a [[Logic/Propositional Logic/Semantic#Model|model]], then it is consistent
 - (4.5) Every [[Logic/Propositional Logic/Semantic#Theory|complete theory]] has unique model
 - #todo If a set of propositions $K$ has unique model, then $K$ is a complete theory 
 - (4.6) For each theory $K$ there exist a complete theory $\overline{K}$ such that $K\subseteq{\overline{K}}$
-- (4.7) **Completeness Theorem** (*Semantic completeness*)
+- (4.7) **Completeness Theorem** (This proof calculus is [[Proof Calculus#Strong completeness|strongly complete]])
 	- Every theory has a model. Or in an equivalence way, 
 	- If a theory $K$ [[Logic/Propositional Logic/Semantic#Logical Implication|logically implies]] a proposition $\psi$ (denoted by $K \implies \psi$) then $\psi$ is *provable from* (or *theorem of*) $K$ (denoted by $K \vdash \psi$)
 

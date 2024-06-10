@@ -26,12 +26,11 @@
 
  - A proof calculus is **strongly complete** (תחשיב שלם) iff, for every set of formulas $Γ$ , any formula that semantically follows from $Γ$ is provable from $Γ$ . That is: if $Γ ⊨ φ$ , then $Γ ⊢ φ$
 
-> In this course, when we say *תחשיב שלם* for *strong completeness*. 
-
-> Strong completeness implies semantic completeness #todo 
+> *Strong completeness* implies *semantic completeness*. (it's special case when the set is empty) 
 #### Semantic completeness
 
  - A proof calculus is **semantically complete** (or **weak complete**) if in every theory $\displaystyle  \models _{\mathcal {S}}\varphi \ \to \ \vdash _{\mathcal {S}}\varphi$
+
 ### Soundness
 
  - A proof calculus is **(strongly) sound** iff for every set of formulas $Γ$, if $Γ ⊢ φ$ then $Γ ⊨ φ$ 
