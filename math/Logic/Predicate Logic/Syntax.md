@@ -87,14 +87,13 @@ The formulas obtained from the first two rules are said to be **atomic formulas*
 - A set of [[Logic/Predicate Logic/Syntax#Free & Bound Variables|sentences]] $K$ is said to be **inconsistent** if there exists a sentence $\varphi$ such that $K ⊢ \varphi$ and $K ⊢ ¬\varphi$. Moreover, $K$ is **consistent** if for no sentences $\varphi$ we have $K ⊢ \varphi$ and $K ⊢ ¬\varphi$
 - A **theory** is a consistent set of sentences
 - A theory $K$ is said to be **complete** if for every sentence $φ$, either $K \vdash\varphi$ or $K \vdash\lnot\varphi$
-
-> See also the defitnion of [[Predicate Calculus#Proof Sequence|proof sequence]] (in some proof claculus)
+-  #todo #not-in-course  antoher definition  (from *D. Cunningham*)  
+	- A set of sentences $K$ is said to be a **theory** if and only if $K$ is closed under logical implication, that is, for any sentence $\varphi$ of the language, if $K \models \varphi$, then $\varphi \in K$
+	- A theory $K$ is said to be **complete** if for every sentence $φ$, either $φ ∈ K$ or $¬φ ∈ K$
 
 > In the propositional logic a [[Propositional Calculus#Completeness Theorem|complete theory]] has [[Propositional Calculus#Completeness Theorem|unique model]] (4.5), but in the predicate logic, a complete theory may have many models.
 
->  #todo antoher definition  (from *D. Cunningham*)  
-	- A set of sentences $K$ is said to be a **theory** if and only if $K$ is closed under logical implication, that is, for any sentence $\varphi$ of the language, if $K \models \varphi$, then $\varphi \in K$
-	- A theory $K$ is said to be **complete** if for every sentence $φ$, either $φ ∈ K$ or $¬φ ∈ K$
+> A theory can be considered on two levels. One is the _proof theory_ level (see [[Predicate Calculus]]), where we focus on the syntactic aspects (strings (which are formulas) and on manipulating strings according to rules). The other is the _[[Model Theory|model theory]]_ level, where we focus on the semantic aspects as the class of all models of the theory.
 
 ## Henkin Theory
 

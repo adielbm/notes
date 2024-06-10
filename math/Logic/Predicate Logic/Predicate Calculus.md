@@ -54,6 +54,8 @@ If it is first-order logic with equality, then we have also
 	- Derived from two previous formulas in the sequence using one of the rules of inference
 - A formula $\varphi$ is **theorem** (משפט) of $K$ (or is **provable** (יכיח) from $K$) and denoted by $K \vdash \varphi$, if and only if, there exists a proof sequence from $K$ such that $\varphi$ is the last formula
 
+> See also more general defitnion of [[Predicate Calculus#Proof Sequence|proof sequence]] (in some proof claculus)
+
 > **Note**: Here we restrict a theory to be set of *sentences*. but there are definitions without this restriction. Also, in a *proof sequence* (unlike to a *theory*), may be formulas that are *not* sentences.
 
 # Properties

@@ -115,8 +115,7 @@ If the set of relation symbols, function symbols, and constant symbols of a lang
 	- If $\varphi$ is in prenex form and its metrix is [[Logic/Propositional Logic/Semantic#CNF & DNF|DNF]] then it is said to be in **prenex normal form** (PNF)
 
 
-
-# Definablity
+# Definable set
 
 ## Set of Models
 
