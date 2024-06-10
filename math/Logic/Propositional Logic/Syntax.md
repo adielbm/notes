@@ -192,3 +192,9 @@ A formation Sequence is #todo
 	- It has a formation sequence
 
 
+# Dialects
+
+- Language $L_{\to}$
+	- $\leftrightarrow ,\rightarrow ,\lor,\land$
+	- $\otimes$ (XOR)
+

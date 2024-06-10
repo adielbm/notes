@@ -1,5 +1,5 @@
 
-> Here we describe an example (C6.1) of a [[Proof Calculus]] (תחשיב הוכחה), which is [[Proof Calculus#Strong completeness|complete]].  This is kind of expansion of [[Propositional Calculus#Example (c4.3)]]
+> Here we describe an example (C6.1) of a [[Proof Calculus]] (תחשיב הוכחה), which is [[Proof Calculus#Strong completeness|complete]].  This is kind of expansion of the proof calculus described in [[Propositional Calculus]]
 
 # Characterization
 
@@ -14,7 +14,7 @@
 
 ### Taulogical Axioms
 
-> These axioms are from [[Propositional Calculus#Example (c4.3)]], but here $\varphi,\psi,\theta$ can be [[Logic/Predicate Logic/Syntax#Formulas|formulas of predicate of logic]] 
+> These axioms are from [[Propositional Calculus]], but here $\varphi,\psi,\theta$ can be [[Logic/Predicate Logic/Syntax#Formulas|formulas of predicate of logic]]
 
 |     |                | Taulogical Axioms                                                          |
 | --- | -------------- | -------------------------------------------------------------------------- |
@@ -48,7 +48,7 @@ If it is first-order logic with equality, then we have also
 
 # Proof Sequence 
 
-- (c6.1) A **proof sequence** (סדרת הוכחה) from a [[Logic/Predicate Logic/Semantic#Theory|theory]] $K$ (in this proof calculus) is a sequence of formulas such that each formula in the sequence is either:
+- (c6.1) A **proof sequence** (סדרת הוכחה) from a [[Logic/Predicate Logic/Syntax#Theory|theory]] $K$ (in this proof calculus) is a sequence of formulas such that each formula in the sequence is either:
 	- A logical axiom (in this proof calculus)
 	- A [[Logic/Predicate Logic/Syntax#Sentence|sentence]] in the set $K$
 	- Derived from two previous formulas in the sequence using one of the rules of inference
@@ -61,7 +61,7 @@ If it is first-order logic with equality, then we have also
 - (6.1) Every [[Logic/Predicate Logic/Semantic#First-order Tautologies|first-order tautology]] is provable
 - (6.2) Soundness Theorem - This proof calculus is [[Proof Calculus#Soundness|sound]], i.e. 
 	- for every set of formulas $K$, and a formula $\varphi$, If $K\vdash \varphi$ (provable), then $K \models\varphi$ ([[Logic/Propositional Logic/Semantic#Logical Implication|logically implied]])
-- Given $K$ is a [[Logic/Predicate Logic/Semantic#Theory|theory]], $\psi$ is a sentence and $\varphi$ is a formula. 
+- Given $K$ is a [[Logic/Predicate Logic/Syntax#Theory|theory]], $\psi$ is a sentence and $\varphi$ is a formula. 
 	- (6.3) Deduction theorem - If $K\cup \{ \psi \}\vdash \varphi$ then $K \vdash ( \psi \to \varphi)$
 	- (6.4a) Principle of explosion - $\{ \psi,\lnot \psi \}\vdash \varphi$ (thus, every inconsistent set of sentences prove every formula)
 	- (6.4b) if $K\cup \{ \lnot \varphi \}$ is inconsistent then $K \vdash \varphi$

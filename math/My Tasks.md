@@ -1,21 +1,14 @@
 
+
+
+
 - [ ] [Can you change a sum by rearranging its numbers? --- The Riemann Series Theorem](https://www.youtube.com/watch?v=U0w0f0PDdPA&t=547s "Can you change a sum by rearranging its numbers? --- The Riemann Series Theorem")
 - [x] [The Subtle Reason Taylor Series Work | Smooth vs. Analytic Functions](https://www.youtube.com/watch?v=0HaBNdmUWXY "The Subtle Reason Taylor Series Work | Smooth vs. Analytic Functions")
 
 # Homework ✏️
 
 - calculus
-	- [ ] [[homework15]] June 8
-		- [ ] Q1a - almost
-		- [x] Q1b
-		- [x] Q2a
-		- [x] Q2b
-		- [x] Q3
-		- [ ] Q4a
-		- [x] Q4b
-		- [ ] Q4c
-		- [ ] Q5
-		- [ ] Translating to Hebrew 
+	- [x] [[homework15]] June 8
 	- [ ] [[homework16]] June 22
 		- [ ] Q1 (to finish)
 		- [x] Q2
@@ -94,25 +87,11 @@
 
 # Exams 💪
 
-## CALC-2
-
-- tests:
-	- 26/06/2024
-	- 29/07/2024
-	- 05/09/2024
-
-- [ ] [[2023a-a1.pdf]] - [[solution-2023a-a1.pdf]]
-- [ ] [[2023a-a2.pdf]] - [[solution-2023a-a2.pdf]]
-- [ ] [[2023a-b.pdf]] - [[solution-2023a-b.pdf]]
-- [ ] [[2023b-a1.pdf]] - [[solution-2023b-a1.pdf]]
-
 ## LOGIC
 
-- tests:
-	- 26/06/2024
-	- 24/07/2024
-	- 09/09/2024
-
+- 🟢 Wed. **26/06/2024** (כג סיון) 📅🟢
+- ~~24/07/2024~~
+- ~~09/09/2024~~
 
 - [x] [[test1.pdf|test1]] - [[test1_sol.pdf]]
 - [ ] [[test2.pdf]] - [[test2_sol.pdf]]
@@ -120,6 +99,27 @@
 - [ ] [[test4.pdf]] - [[test4_sol.pdf]]
 - [ ] [[test5.pdf]] - [[test5_sol.pdf]]
 
+## CALC-2
+
+- ~~26/06/2024 ~~
+- [ ] **29/07/2024** - probably this date. need to register. (כג תמוז)
+- ~~05/09/2024~~
+- ~~26/09/24 - Elul כג~~
+- ~~25/11/24 - Cheshvan כד~~
+
+- [ ] [[2023a-a1.pdf]] - [[solution-2023a-a1.pdf]]
+- [ ] [[2023a-a2.pdf]] - [[solution-2023a-a2.pdf]]
+- [ ] [[2023a-b.pdf]] - [[solution-2023a-b.pdf]]
+- [ ] [[2023b-a1.pdf]] - [[solution-2023b-a1.pdf]]
+
+## L. Algebra
+
+
+- 26/06/2024
+- 04/07/2024 
+- 02/09/2024 (probably this date...) כט אב
+- 26/09/24 - Elul כג
+- 25/11/24 - Cheshvan כד
 
 # Other
 

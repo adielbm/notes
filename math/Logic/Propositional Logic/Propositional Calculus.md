@@ -1,32 +1,28 @@
+	
+> Here we describe an example (c4.3) of [[Proof Calculus|proof calculus]] which are also examples of [[Proof Calculus#Examples|hilbert systems]]. In the end, we show some variations (c4.3.5, and q4.9) of this proof calculus
 
-> Here we describe some examples of [[Proof Calculus|proof calculus]] which are also examples of [[Proof Calculus#Examples|hilbert systems]]
+# Characterization
 
-#### Example (c4.3)
+- Language: The dialect $L_{\rightarrow }$ of the proposional language 
+	- convectives: $\{ \lnot,\rightarrow \}$
+	- the propositions are either elementary propositions, negation propositions in the form $\lnot{\varphi}$, or propositions in the form $(\varphi\rightarrow \psi)$
+- Logical Axioms: (Each one is general form of one of infinite propositions. Also, these axioms are tautologies (q4.6))
+	- $(\varphi\rightarrow (\psi\rightarrow \varphi))$
+	- $([\varphi\rightarrow (\psi\rightarrow \theta)]\rightarrow [(\varphi\rightarrow \psi)\rightarrow (\psi\rightarrow \theta)])$
+	- $[(\lnot \varphi\rightarrow \lnot\psi )\rightarrow (\psi\rightarrow \varphi)]$
+- Rules of inference (actually one here)
+	- Modus ponens $\displaystyle\frac{\varphi,(\varphi \rightarrow \psi)}{\psi}$
 
-- **Our calculus** is an example of Hilbert calculus:
-	- Language: The dialect $L_{\rightarrow }$ of the proposional language 
-		- convectives: $\{ \lnot,\rightarrow \}$
-		- the propositions are either elementary propositions, negation propositions in the form $\lnot{\varphi}$, or propositions in the form $(\varphi\rightarrow \psi)$
-	- Axioms: (Each one is general form of one of infinite propositions. Also, these axioms are tautologies (q4.6))
-		- $(\varphi\rightarrow (\psi\rightarrow \varphi))$
-		- $([\varphi\rightarrow (\psi\rightarrow \theta)]\rightarrow [(\varphi\rightarrow \psi)\rightarrow (\psi\rightarrow \theta)])$
-		- $[(\lnot \varphi\rightarrow \lnot\psi )\rightarrow (\psi\rightarrow \varphi)]$
-	- Inference rules (actually one here)
-		- Modus ponens $\displaystyle\frac{\varphi,(\varphi \rightarrow \psi)}{\psi}$
+# Proof Sequence
 
-##### Proof Sequence
-
-- Definitions for our calculus:
-	- Let $K$ be a set of propositions, a **proof sequence from a set** $K$ (in our calculus) is a sequence of propositions $\varphi_{1},\dots,\varphi_{n}$ such that each proposition in the sequence is either: 
-		- A logical axiom
-		- A proposition in the set $K$
-		- Derived from two previous propositions in the sequence using modus ponens
-	- A **proof sequence in the calculus** is proof sequence from the empty set. (i.e. each proposition is either a logical axiom or derived from two previous propositions)
-	- A **proof sequence from $K$ to** $\varphi$ is a proof sequence from $K$, such that $\varphi$ is the last proposition
-	- $\varphi$ is **theorem** (משפט) of $K$ (or is **provable** (יכיח) from $K$) and denoted by $K \vdash \varphi$, if and only if it has (at least one) proof sequence from $K$ 
-
-
-- (Theorem 4.2, (note: these properties are not unique to our calculus))
+- Let $K$ be a set of propositions, a **proof sequence from a set** $K$ (in our calculus) is a sequence of propositions $\varphi_{1},\dots,\varphi_{n}$ such that each proposition in the sequence is either: 
+	- A logical axiom
+	- A proposition in the set $K$
+	- Derived from two previous propositions in the sequence using rules of inference (here is only modus ponens)
+- A **proof sequence in the calculus** is proof sequence from the empty set. (i.e. each proposition is either a logical axiom or derived from two previous propositions)
+- A **proof sequence from $K$ to** $\varphi$ is a proof sequence from $K$, such that $\varphi$ is the last proposition
+- $\varphi$ is **theorem** (משפט) of $K$ (or is **provable** (יכיח) from $K$) and denoted by $K \vdash \varphi$, if and only if it has (at least one) proof sequence from $K$ 
+- (4.1) 
 	- If $\varphi_{1},\dots,\varphi_{n}$ is a proof sequence from $K$, then for each $i\leq n$ the proof sequence $\varphi_{1},\dots,\varphi_{i}$ is is a proof sequence from $K$. ( #todo )
 	- If $\varphi_{1},\dots,\varphi_{n}$ is a proof sequence from $K$, and $\psi_{1},\dots,\psi_{n}$ is also a proof sequence from $K$, then  $\varphi_{1},\dots,\varphi_{n},\psi_{1},\dots,\psi_{n}$
 	- If $K\vdash \varphi$ and $K \subseteq K'$ then $K' \vdash \varphi$
@@ -35,10 +31,13 @@
 	- If $K \vdash \varphi$ then there exists a finite subset of $K'$ such that $K' \vdash \varphi$
 
 
+> Note: all these properties (4.1) are not unique to the specific calculus we chose with three axioms and the MP rule.
+
 >We can show that a proposition is a *theorem* (provable), using either showing its proof sequence or using t4.3 below
 
+# Properties
 
-##### Deduction (4.3.2)
+Here are some properties of this proof calculus
 
 - lemma:
 	- if $\varphi$ is a logical axiom or $\varphi \in K$ then $K \vdash \varphi$
@@ -47,49 +46,45 @@
 	- for each proposition $\varphi$: $K\vdash(\varphi \rightarrow \varphi )$
 - (4.2) Deduction theorem: if $K\cup \{ \psi \}\vdash\varphi$ then $K\vdash(\psi\rightarrow\varphi)$
 	- example: arrow transitivty
-
-##### Consistency (4.3.3)
-
-- A set of propositions $K$ is said to be **inconsistent** if there exists a proposition $\varphi$ such that $K ⊢ \varphi$ and $K ⊢ ¬\varphi$. Moreover, $K$ is **consistent** if for no proposition $\varphi$ we have $K ⊢ \varphi$ and $K ⊢ ¬\varphi$
-	- (Lemma) Let $K$ be an infinite set of proposition. If $K$ is inconsistent, then there exists a finite inconsistent subset of $K$. 
-	- q4.7 #todo 
-	- Proof by Contradiction Theorem (4.3)
-		- For each proposition $\varphi$: $\{ \psi,\lnot\psi \}\vdash\varphi$
-		- If $K$ is inconsistent, then $K\vdash{\varphi}$ for each proposition $\varphi$
-		- If $K\cup \{ \lnot \varphi \}$ is inconsistent, then $K\vdash{\varphi}$
-	- examples #todo 
-
-##### Soundness
-
+- (Lemma) Let $K$ be an infinite set of proposition. If $K$ is [[Logic/Propositional Logic/Semantic#Theory|inconsistent]], then there exists a finite inconsistent subset of $K$. 
+- q4.7 #todo 
+- (4.3) Proof-by-Contradiction Theorem 
+	- For each proposition $\varphi$: $\{ \psi,\lnot\psi \}\vdash\varphi$
+	- If $K$ is inconsistent, then $K\vdash{\varphi}$ for each proposition $\varphi$ ( #todo is it iff?)
+	- If $K\cup \{ \lnot \varphi \}$ is inconsistent, then $K\vdash{\varphi}$
+- examples #todo 
 - (4.4) **Soundness Theorem** (נאותות)
-	- Let $K$ be a set of propositions and $\psi$ be a proposition. If $K\vdash \varphi$ (provable), then $K\implies\varphi$ ([[Logic/Propositional Logic/Semantic#Logical Implication|logically implied]]. common notation $K \models\varphi$)
+	- This proof system is [[Proof Calculus#Soundness|sound]], i.e.
+	- Let $K$ be a set of propositions and $\psi$ be a proposition. If $K\vdash \varphi$ ([[#Proof Sequence|provable]]), then $K\implies\varphi$ ([[Logic/Propositional Logic/Semantic#Logical Implication|logically implied]]. common notation $K \models\varphi$)
 		- In particular, if $\emptyset\vdash \varphi$ then, $\varphi$ is a tautology ($\models \varphi$)
-		- Corollary: If a set of propositions has a model then it is consistent
-##### Theory
-
-- A a set of propositions is a **theory** iff it is consistent
-	- i.e. $K$ is a **theory** iff there is no proposition $\varphi$ such that both $K\vdash{\varphi}$ and $K\vdash{\lnot{\varphi}}$ 
-	- (In some books, the definitions requires the set is closed under logical implication)
-- Syntactical completeness
-	- A theory is **complete** iff every proposition in it can be **proved** or **disproved**
-	- A theory is **complete** iff for every proposition $\varphi$, either $K\vdash{\varphi}$ or $K\vdash{\lnot{\varphi}}$
-
-##### Completeness Theorem
-
-- (4.5) A complete theory has unique model ( #todo is it iff?)
+		- Corollary: If a set of propositions has a [[Logic/Propositional Logic/Semantic#Model|model]], then it is consistent
+- (4.5) Every [[Logic/Propositional Logic/Semantic#Theory|complete theory]] has unique model
+- #todo If a set of propositions $K$ has unique model, then $K$ is a complete theory 
 - (4.6) For each theory $K$ there exist a complete theory $\overline{K}$ such that $K\subseteq{\overline{K}}$
 - (4.7) **Completeness Theorem** (*Semantic completeness*)
-	- A theory has a model, or in an equivalence way, 
+	- Every theory has a model. Or in an equivalence way, 
 	- If a theory $K$ [[Logic/Propositional Logic/Semantic#Logical Implication|logically implies]] a proposition $\psi$ (denoted by $K \implies \psi$) then $\psi$ is *provable from* (or *theorem of*) $K$ (denoted by $K \vdash \psi$)
 
+## Summary 
+
+| Syntax                                                                                                                  | Semantics                                                                                                                              |
+| ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| $\xrightarrow{\text{Soundness}}$                                                                                        | $\xleftarrow{\text{Completeness}}$                                                                                                     |
+| $K\vdash\varphi$<br>($\varphi$ is [[#Proof Sequence\|provable]] from $K$)                                               | $K\models\varphi$ (or $K \implies \psi$)<br>($K$ [[Logic/Propositional Logic/Semantic#Logical Implication\|logically implies]] $\psi$) |
+| $\vdash\varphi$ (or  $\emptyset\vdash \varphi$)<br>($\varphi$ is [[#Proof Sequence\|provable]] from the logical axioms) | $\models\varphi$<br>($\varphi$ is a [[Logic/Propositional Logic/Semantic#Tautology & Contradiction\|tautology]])                       |
+| $K$ is [[Logic/Propositional Logic/Semantic#Theory\|consistent]] (theory)                                               | $M\models K$<br>($K$ has a [[Logic/Propositional Logic/Semantic#Model\|model]] $M$ (or, $K$ is satisfiable))                           |
+| $K$ is a complete theory                                                                                                | $K$ has unique model                                                                                                                   |
+
+___
+
+# Other Variations 
+
+here we show some variations (c4.3.5, and q4.9) of proof calculus we saw above.
 
 #### Example (c4.3.5)
 
-- (4.3.5) Like Hilbert System (4.3) but with $L=\{ \lnot,\land,\lor,\to,\leftrightarrow \}$ and other axioms #todo
-
+- (4.3.5) Like (4.3) but with $L=\{ \lnot,\land,\lor,\to,\leftrightarrow \}$ and other axioms #todo
 
 #### Example (q4.9)
 
-q4.9 - $L=\{ \lnot,\to,\land \}$ and other axioms  #todo
-
-#todo 
+- q4.9 - $L=\{ \lnot,\to,\land \}$ and other axioms  #todo

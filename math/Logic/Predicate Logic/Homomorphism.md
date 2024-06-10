@@ -1,5 +1,5 @@
 
-- Let $M$ and $M'$ [[Logic/Predicate Logic/Semantic#Structure (Model)|model]] in $L$. and $H\colon M\to M'$ a function
+- Let $M$ and $M'$ [[Logic/Predicate Logic/Semantic#Model|model]] in $L$. and $H\colon M\to M'$ a function
 	- $H$ is a **homomorphism** of $M$ into $M'$ if:
 		-  $H$ **preserves** constants: For every [[Logic/Predicate Logic/Syntax#Terms|term]] $c$ in $L$, $H(c^M)=c^{M'}$ ( #todo in other book this goes on *constants* only)
 		-  $H$ **preserves** functions: For every n-ary [[Logic/Predicate Logic/Syntax#Non-logical symbols|function symbol]] $f$ and for all $a_{1},\dots,a_{n}$ elements of the domain $A$ we have: 
@@ -32,12 +32,12 @@
 
 ## Congruence Relation
 
-- A [[Binary Relation|binary relation]] $E$ on a [[Logic/Predicate Logic/Semantic#Structure (Model)|structure]] $M$ in $L$ is called a **congruence (relation)** on $M$ if
+- A [[Binary Relation|binary relation]] $E$ on a [[Logic/Predicate Logic/Semantic#Model|model]] $M$ in $L$ is called a **congruence (relation)** on $M$ if
 	- $E$ is an [[Binary Relation#Equivalence relation|equivalence relation]]
 	- if $f$ is n-ary function in $L$, and $(b_{1},a_{1})\in E,\dots,(b_{n},a_{n}) \in E$, then $(f^{M}(b_{1},\dots,b_{n}),f^{M}(a_{1},\dots,a_{n}))\in E$
 	- if $R$ is n-ary relation in $L$, and $(b_{1},a_{1})\in E,\dots ,(b_{n},a_{n})\in E$, then $(b_{1},\dots,b_{n})\in{R}\iff (a_{1},\dots,a_{n})\in {R}$
 
-- Let be a [[Logic/Predicate Logic/Semantic#Structure (Model)|structure]] $M$ in $L$, with the domain $D$, and let $D'$ be the [[Binary Relation#Quotient Set|quotient set]] of $D$ induced by $E$.
+- Let be a [[Logic/Predicate Logic/Semantic#Model|model]] $M$ in $L$, with the domain $D$, and let $D'$ be the [[Binary Relation#Quotient Set|quotient set]] of $D$ induced by $E$.
 	- We define $M'$ as follow:
 		- $c^{M'}=[c^M]$
 		- Let be a n-ary function, and let $C_{1},\dots,C_{n}$ the [[Binary Relation#Equivalence Class|equivalence classes]] in $M'$, and let $a_{1},\dots,a_{n}$ where $a_{i}\in C_{i}$. we define: $f^{M'}([a_{1}],\dots ,[a_{n}])=[f^{M}(a_{1},\dots ,a_{n})]$

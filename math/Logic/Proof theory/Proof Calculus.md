@@ -7,9 +7,9 @@
 
 - **Hilbert Systems** are a class of proof systems for propositional and predicate logic. Hilbert systems can be characterised by the choice of a large number of logical axioms and a small set of rules of inference (typically only Modus Ponens (or also Universal Generalization)).
 	- Examples from the Course Book of Hilbert Systems:
-		- [[Propositional Calculus#Example (c4.3)]]
-		- [[Propositional Calculus#Example (c4.3.5)]]
-		- [[Propositional Calculus#Example (c4.3.5)]]
+		- [[Propositional Calculus]]
+			- [[Propositional Calculus#Example (c4.3.5)]]
+			- [[Propositional Calculus#Example (c4.3.5)]]
 		- [[Predicate Calculus]]
 
 ## Proof Sequence
@@ -35,7 +35,7 @@
 ### Soundness
 
  - A proof calculus is **(strongly) sound** iff for every set of formulas $Γ$, if $Γ ⊢ φ$ then $Γ ⊨ φ$ 
-- A proof calculus is **(weakly) sound** if every provable formula is valid
+- A proof calculus is **weakly sound** if every provable formula is valid
 
 ## 4.4 Compactness Theorem
 

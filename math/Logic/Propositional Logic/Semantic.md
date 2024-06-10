@@ -78,15 +78,25 @@
 - A **clause** is a disjunction (or rarely, conjunction) of literals
 
 
-# 4.1 Dialects
+# Theory
 
-- Language $L_{\to}$
-	- $\leftrightarrow ,\rightarrow ,\lor,\land$
-	- $\otimes$ (XOR)
+- A set of propositions $K$ is said to be **inconsistent** if there exists a proposition $\varphi$ such that $K ⊢ \varphi$ and $K ⊢ ¬\varphi$. 
+	- Moreover, $K$ is **consistent** if for no proposition $\varphi$ we have $K ⊢ \varphi$ and $K ⊢ ¬\varphi$
+- A a set of propositions is a **theory** iff it is consistent
+	- i.e. $K$ is a **theory** iff there is no proposition $\varphi$ such that both $K\vdash{\varphi}$ and $K\vdash{\lnot{\varphi}}$ 
+	- (In some books, the definitions requires the set is closed under logical implication)
+- Syntactical completeness
+	- A theory is **complete** (תורה שלמה) if for every proposition $\varphi$, either $K\vdash{\varphi}$ ([[Propositional Calculus#Proof Sequence|provable]]) or $K\vdash{\lnot{\varphi}}$ (disproved)
 
 
 
+# Definabllty
+
+(from Sarai Sheinvald)
+
+- Let be $\Sigma$ be a set of propositions, and $M(\Sigma)$ be the set of all models of $\Sigma$. Where $M(\Sigma)=\{ M \mid M\models \Sigma \}$
+- Given a set of models $X$. 
+	- If there exists a set of propositions $\Sigma$ such that $X=M(\Sigma)$ then we say that the set $X$ is **definable** (גדירה) by $\Sigma$
 
 
- 
- -
+

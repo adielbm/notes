@@ -19,7 +19,7 @@
 | $\Pi$      | $\pi$                  | `\pi`                  | `/ˈpaɪ/`       |
 | $P$        | $\rho$                 | `\rho`                 | `/ˈroʊ/`       |
 | $\Sigma$   | $\sigma$               | `\sigma`               | `/ˈsɪɡmə/`     |
-| $T$        | $\tau$                 | `\tau`                 | `/taʊ/`        |
+| $T$        | $\tau, \uptau$         | `\tau, \uptau`         | `/taʊ/`        |
 | $\Upsilon$ | $\upsilon$             | `\upsilon`             | `/ˈʌpsɪˌlɒn/`  |
 | $\Phi$     | $\phi$ or $\varphi$    | `\phi` or `\varphi`    | `/faɪ/`        |
 | $X$        | $\chi$                 | `\chi`                 | `/ˈkaɪ/`       |
