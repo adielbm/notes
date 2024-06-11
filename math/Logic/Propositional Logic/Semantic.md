@@ -28,10 +28,8 @@
 
 ## Tautology & Contradiction
 
-- A proposition $\varphi$ is a **tautology** (and denoted by $\models \varphi$) if and only if it is true in every model in the language of the proposition. 
-	- טאוטולוגיה, פסוק אמיתי לוגית
-- A proposition is a **contradiction** if and only if it is false in every model in the language of the proposition.
-	- סתירה לוגית, פסוק שקרי לוגית
+- A proposition $\varphi$ is a **tautology** (and denoted by $\models \varphi$) if and only if it is true in every model in the language of the proposition. (טאוטולוגיה, פסוק אמיתי לוגית)
+- A proposition is a **contradiction** if and only if it is false in every model in the language of the proposition. (סתירה לוגית, פסוק שקרי לוגית)
 - $\varphi$ is a tautology if and only if $\lnot \varphi$ is a contradiction
 - $\varphi$ is a contradiction if and only if $\lnot \varphi$ is a tautology
 ## Logical Equivalence
@@ -76,19 +74,6 @@
 
 - A CNF is a conjunction of clauses
 - A **clause** is a disjunction (or rarely, conjunction) of literals
-
-
-# Theory
-
-- A set of propositions $K$ is said to be **inconsistent** if there exists a proposition $\varphi$ such that $K ⊢ \varphi$ and $K ⊢ ¬\varphi$. 
-	- Moreover, $K$ is **consistent** if for no proposition $\varphi$ we have $K ⊢ \varphi$ and $K ⊢ ¬\varphi$
-- A a set of propositions is a **theory** iff it is consistent
-	- i.e. $K$ is a **theory** iff there is no proposition $\varphi$ such that both $K\vdash{\varphi}$ and $K\vdash{\lnot{\varphi}}$ 
-	- (In some books, the definitions requires the set is closed under logical implication)
-- Syntactical completeness
-	- A theory is **complete** (תורה שלמה) if for every proposition $\varphi$, either $K\vdash{\varphi}$ ([[Propositional Calculus#Proof Sequence|provable]]) or $K\vdash{\lnot{\varphi}}$ (disproved)
-
-
 
 # Definabllty
 

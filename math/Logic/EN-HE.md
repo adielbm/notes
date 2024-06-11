@@ -20,7 +20,7 @@
 | כלל הניתוק                     | Modus Ponens           | MP                                                                      |     |
 |                                |                        |                                                                         |     |
 | אינדוקציה מבנית (הוכחה, הגדרה) |                        |                                                                         |     |
-| סדרת בניה                      | Formation sequence     | construction sequence                                                   |     |
+| סדרת בנייה                     | Formation sequence     | construction sequence                                                   |     |
 |                                |                        |                                                                         |     |
 | סדרת הוכחה                     | proof sequence         | deduction, derivation, formal proof, formal deduction                   |     |
 | תחשיב הוכחה                    | proof calculus         | proof system                                                            |     |

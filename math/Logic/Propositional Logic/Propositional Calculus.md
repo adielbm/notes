@@ -13,7 +13,10 @@
 - Rules of inference (actually one here)
 	- Modus ponens $\displaystyle\frac{\varphi,(\varphi \rightarrow \psi)}{\psi}$
 
-# Proof Sequence
+# Definitions
+
+Here are some definitions related to this proof calculus:
+## Proof Sequence
 
 - Let $K$ be a set of propositions, a **proof sequence from a set** $K$ (in our calculus) is a sequence of propositions $\varphi_{1},\dots,\varphi_{n}$ such that each proposition in the sequence is either: 
 	- A logical axiom
@@ -21,6 +24,9 @@
 	- Derived from two previous propositions in the sequence using rules of inference (here is only modus ponens)
 - A **proof sequence in the calculus** is proof sequence from the empty set. (i.e. each proposition is either a logical axiom or derived from two previous propositions)
 - A **proof sequence from $K$ to** $\varphi$ is a proof sequence from $K$, such that $\varphi$ is the last proposition
+
+## Provable Proposition
+
 - $\varphi$ is **theorem** (משפט) of $K$ (or is **provable** (יכיח) from $K$) and denoted by $K \vdash \varphi$, if and only if it has (at least one) proof sequence from $K$ 
 - (4.1) 
 	- If $\varphi_{1},\dots,\varphi_{n}$ is a proof sequence from $K$, then for each $i\leq n$ the proof sequence $\varphi_{1},\dots,\varphi_{i}$ is is a proof sequence from $K$. ( #todo )
@@ -33,7 +39,17 @@
 
 > Note: all these properties (4.1) are not unique to the specific calculus we chose with three axioms and the MP rule.
 
->We can show that a proposition is a *theorem* (provable), using either showing its proof sequence or using t4.3 below
+>We can show that a proposition is a *theorem* (provable), using either showing its proof sequence or using t4.3
+
+## Theory
+
+- A set of propositions $K$ is said to be **inconsistent** if there exists a proposition $\varphi$ such that $K ⊢ \varphi$ and $K ⊢ ¬\varphi$. 
+	- Moreover, $K$ is **consistent** if for no proposition $\varphi$ we have $K ⊢ \varphi$ and $K ⊢ ¬\varphi$
+- A a set of propositions is a **theory** iff it is consistent
+	- i.e. $K$ is a **theory** iff there is no proposition $\varphi$ such that both $K\vdash{\varphi}$ and $K\vdash{\lnot{\varphi}}$ 
+	- (In some books, the definitions requires the set is closed under logical implication)
+- Syntactical completeness
+	- A theory is **complete** (תורה שלמה) if for every proposition $\varphi$, either $K\vdash{\varphi}$ ([[Propositional Calculus#Provable Proposition|provable]]) or $K\vdash{\lnot{\varphi}}$ (disproved)
 
 # Properties
 
@@ -46,7 +62,7 @@ Here are some properties of this proof calculus
 	- for each proposition $\varphi$: $K\vdash(\varphi \rightarrow \varphi )$
 - (4.2) Deduction theorem: if $K\cup \{ \psi \}\vdash\varphi$ then $K\vdash(\psi\rightarrow\varphi)$
 	- example: arrow transitivty
-- (Lemma) Let $K$ be an infinite set of proposition. If $K$ is [[Logic/Propositional Logic/Semantic#Theory|inconsistent]], then there exists a finite inconsistent subset of $K$. 
+- (Lemma) Let $K$ be an infinite set of proposition. If $K$ is [[#Theory|inconsistent]], then there exists a finite inconsistent subset of $K$. 
 - q4.7 #todo 
 - (4.3) Proof-by-Contradiction Theorem 
 	- For each proposition $\varphi$: $\{ \psi,\lnot\psi \}\vdash\varphi$
@@ -58,12 +74,13 @@ Here are some properties of this proof calculus
 	- Let $K$ be a set of propositions and $\psi$ be a proposition. If $K\vdash \varphi$ ([[#Proof Sequence|provable]]), then $K\implies\varphi$ ([[Logic/Propositional Logic/Semantic#Logical Implication|logically implied]]. common notation $K \models\varphi$)
 		- In particular, if $\emptyset\vdash \varphi$ then, $\varphi$ is a tautology ($\models \varphi$)
 		- Corollary: If a set of propositions has a [[Logic/Propositional Logic/Semantic#Model|model]], then it is consistent
-- (4.5) Every [[Logic/Propositional Logic/Semantic#Theory|complete theory]] has unique model
+- (4.5) Every [[#Theory|complete theory]] has unique model
 - #todo If a set of propositions $K$ has unique model, then $K$ is a complete theory 
 - (4.6) For each theory $K$ there exist a complete theory $\overline{K}$ such that $K\subseteq{\overline{K}}$
 - (4.7) **Completeness Theorem** (This proof calculus is [[Proof Calculus#Strong completeness|strongly complete]])
 	- Every theory has a model. Or in an equivalence way, 
 	- If a theory $K$ [[Logic/Propositional Logic/Semantic#Logical Implication|logically implies]] a proposition $\psi$ (denoted by $K \implies \psi$) then $\psi$ is *provable from* (or *theorem of*) $K$ (denoted by $K \vdash \psi$)
+- 
 
 ## Summary 
 
@@ -72,7 +89,7 @@ Here are some properties of this proof calculus
 | $\xrightarrow{\text{Soundness}}$                                                                                        | $\xleftarrow{\text{Completeness}}$                                                                                                     |
 | $K\vdash\varphi$<br>($\varphi$ is [[#Proof Sequence\|provable]] from $K$)                                               | $K\models\varphi$ (or $K \implies \psi$)<br>($K$ [[Logic/Propositional Logic/Semantic#Logical Implication\|logically implies]] $\psi$) |
 | $\vdash\varphi$ (or  $\emptyset\vdash \varphi$)<br>($\varphi$ is [[#Proof Sequence\|provable]] from the logical axioms) | $\models\varphi$<br>($\varphi$ is a [[Logic/Propositional Logic/Semantic#Tautology & Contradiction\|tautology]])                       |
-| $K$ is [[Logic/Propositional Logic/Semantic#Theory\|consistent]] (theory)                                               | $M\models K$<br>($K$ has a [[Logic/Propositional Logic/Semantic#Model\|model]] $M$ (or, $K$ is satisfiable))                           |
+| $K$ is [[#Theory\|consistent]] (theory)                                               | $M\models K$<br>($K$ has a [[Logic/Propositional Logic/Semantic#Model\|model]] $M$ (or, $K$ is satisfiable))                           |
 | $K$ is a complete theory                                                                                                | $K$ has unique model                                                                                                                   |
 
 ___

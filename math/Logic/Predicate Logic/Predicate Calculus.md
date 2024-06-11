@@ -49,7 +49,7 @@ If it is first-order logic with equality, then we have also
 
 # Definitions 
 
-Here are some definitions related a proof calculus:
+Here are some definitions related to this proof calculus:
 ## Proof Sequence 
 
 - (c6.1) A **proof sequence** (סדרת הוכחה) from a [[Logic/Predicate Logic/Syntax#Theory|theory]] $K$ (in this proof calculus) is a sequence of formulas such that each formula in the sequence is either:
