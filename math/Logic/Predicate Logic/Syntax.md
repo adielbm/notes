@@ -10,6 +10,7 @@ The alphabet of a first-order language consists of the following distinct symbol
 | Variables ($\mathrm{VAR}$) | $v_{0},v_{1},v_{2},\dots$                                            |
 | Quantifier symbols         | $∀$ (universal quantification), <br>$∃$ (existential quantification) |
 | Equality (optional)        | $=$                                                                  |
+
 ### Non-logical symbols (Signature)
 
 |                             | Non-logical symbols                                               |
@@ -17,6 +18,13 @@ The alphabet of a first-order language consists of the following distinct symbol
 | Predicate Symbols           | $P_{0}^{n}, P_{1}^{n},P_{2}^{n},\dots$ (For each arity $n\geq 0$) |
 | Function Symbols (optional) | $F_{0}^{n}, F_{1}^{n},F_{2}^{n},\dots$ (For each arity $n\geq 0$) |
 | Constant Symbols (optional) | $C_{0},C_{1},C_{2},\dots$                                         |
+
+
+- The set of constant symbols, function symbols, and predicate symbols is called the **signature** of the language.
+- The set of all symbols is called the **alphabet** of the language.
+- The function that assigns to each symbol its arity is called the **signature function**.
+- 
+
 ## Language
 
 ### Terms
@@ -37,6 +45,14 @@ The set of **formulas** (also called **well-formed formulas** or **WFFs**) is in
 Only expressions which can be obtained by finitely many applications of rules  are formulas. 
 
 The formulas obtained from the first two rules are said to be **atomic formulas**.
+
+- Let $\Sigma$ be a set of formulas
+	- A **boolean combination** of formulas from $\Sigma$ is a formula that can be obtained from formulas from $\Sigma$ by finitely many applications of the rules for binary connectives and negation.
+	- A **positive boolean combination** of formulas from $\Sigma$ is a formula that can be obtained from formulas from $\Sigma$ by finitely many applications of the rules for binary connectives.
+	- The **boolean closure** of $\Sigma$ is the set of all boolean combinations of formulas from $\Sigma$.
+- A formula is **positive** if it can be obtained from atomic formulas using only binary connectives and quantifiers.
+- A **negative** formula is a negated positive formula.
+- A formula is **quantifier-free** if it contains no quantifiers
 
 #### Unique Readability
 

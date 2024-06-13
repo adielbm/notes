@@ -19,8 +19,12 @@
 - Model of a propositions Set
 	- Let $K$ a set of propositions, $M$ is a **structure** (see §5.2.3 #todo ), we say that $M$ is a **model** of $K$ and denote $M \models K$ if and only if every proposition in $K$ is true in $M$
 		- If $K=\{ \varphi_{1},\dots ,\varphi_{n} \}$ is a finite set of propositions then $M \models K$ if and only if $M \models \varphi_{1}\land\dots\land\varphi_{n}$
+- A set of propositions $K$ is **satisfiable** if and only if there exists a model of $K$
 
-> Terminology: $M(\varphi)=\mathsf{T}$; $\varphi$ is **true** in the model $M$; the **truth value** of $\varphi$ is $\mathsf{T}$; $M$ **satisfies** $\varphi$; $M$ is a model of $\varphi$
+> Terminology: 
+> (Model of a proposition) $M(\varphi)=\mathsf{T}$; $\varphi$ is **true** in the model $M$; the **truth value** of $\varphi$ is $\mathsf{T}$; $M$ **satisfies** $\varphi$; $M$ is a model of $\varphi$.
+> (Model of a propositions Set) $M \models K$; $M$ is a model of $K$; $M$ **satisfies** $K$; $M$ is a model of $K$; For every $\varphi\in K$, $M$ is a model of $\varphi$.
+> (satisfiable set) $K$ is satisfiable; there exists a model of $K$; $K$ has a model; 
 
 - (3.1, special-case of 2.4) Let $L_{1}$ and $L_{2}$ be proportional languages (possibly $L_{1}=L_{2}$), and let $\varphi$ be a proposition in both (and therefore the elementary propositions in $\varphi$ are in both languages). And let $M_{1}$ be a model of $L_{1}$ and $M_{2}$ be a model of $L_{2}$ such that for each elementary proposition $Q$ in $\varphi$ we have $M_{1}(Q)=M_{2}(Q)$ then $M_{1}(\varphi)=M_{2}(\varphi)$
 - In a language with $n$ elementary propositions there are $2^n$ models
@@ -39,15 +43,25 @@
 		- $\varphi \equiv \psi$ if and only if $(\varphi\leftrightarrow{\psi})$ is a tautology
 	- Propositions are logically equivalent if and only if they always have the same truth values
 	- Examples: [[Rules of Replacement]]
+- $\varphi \equiv \psi$ if and only if $\varphi \models \psi$ and $\psi \models \varphi$ #todo
+- $\varphi \equiv \psi$ if and only if for every model $M$ for $\varphi$ and $\psi$, we have $M(\varphi)=M(\psi)$ #todo
+
+> is *tautologically equivalent* (D. Cunningham) equivalent to *logically equivalent* #todo
 
 ## Logical Implication
-
 
 - A proposition $\varphi$ **logically implies** a proposition $\psi$ (or $\psi$ **logically implied by** $\varphi$), and denoted by $\varphi \implies \psi$ (or more common $\varphi \models \psi$), if and only if, in every model $M$, if $M\models{\varphi}$ then $M\models{\psi}$. 
 	- $\varphi$ logically implies a proposition $\psi$ if and only if $\varphi\rightarrow{\psi}$ is a tautology. In other words, $\varphi \implies \psi$ if and only if $\models (\varphi\rightarrow{\psi})$
 - A set propositions $K$ **logically implies** a proposition $\psi$ (and $\psi$ **logically implied by** $K$), and denoted by $K \implies \psi$ (or more common $K \models \psi$), if and only if, in every model in which all proposition in $K$ are true, also $\psi$ is true
-	- If $K=\{ \varphi_{1},\dots ,\varphi_{n} \}$ is a finite set of propositions, then, $K\implies \psi$ if and only if $\varphi_{1}\land\dots\land\varphi_{n}\implies \psi$. Hence, $\{ \varphi_{1},\dots ,\varphi_{n} \}\implies \psi$ if and only if $\models((\varphi_{1}\land\dots\land\varphi_{n})\to \psi)$
-	- (3.6 **Compactness theorem**) if $K\implies \psi$ then there exists a finite subset $\{ \varphi_{1},\dots ,\varphi_{n} \}\subseteq K$ such that $\{ \varphi_{1},\dots ,\varphi_{n} \}\implies \psi$
+	- If $K=\{ \varphi_{1},\dots ,\varphi_{n} \}$ is a finite set of propositions, then, $K\implies \psi$ if and only if $\varphi_{1}\land\dots\land\varphi_{n}\implies \psi$. 
+		- Hence, $\{ \varphi_{1},\dots ,\varphi_{n} \}\implies \psi$ if and only if $\models((\varphi_{1}\land\dots\land\varphi_{n})\to \psi)$
+	- (4.8, 3.6) **Compactness theorem** - Let $K$ be a propositions set, 
+		- if every finite subset of $K$ has at least one model, then there exist a model of $K$
+		- if $K \implies \psi$ then there exists a finite subset $\{ \varphi_{1},\dots,\varphi_{n} \}\subseteq K$ such that $\{ \varphi_{1},\dots ,\varphi_{n} \}\implies \psi$
+
+> is *tautologically implies* (D. Cunningham) equivalent to *logically implies* #todo
+
+> Note: If $\emptyset \models \varphi$ then $\varphi$ is a [[#Tautology & Contradiction|tautology]]
 
 > $\varphi \implies \psi$ and $K\implies \varphi$ in this course are more commonly denoted by notations $\varphi \models \psi$ and $K\models \varphi$
 

@@ -22,7 +22,7 @@
 | אינדוקציה מבנית (הוכחה, הגדרה) |                        |                                                                         |     |
 | סדרת בנייה                     | Formation sequence     | construction sequence                                                   |     |
 |                                |                        |                                                                         |     |
-| סדרת הוכחה                     | proof sequence         | deduction, derivation, formal proof, formal deduction                   |     |
+| סדרת הוכחה                     | proof sequence         | deduction (sequence), derivation, formal proof, formal deduction        |     |
 | תחשיב הוכחה                    | proof calculus         | proof system                                                            |     |
 | תחשיב הילברט                   | hilbert system         | hilbert calculus                                                        |     |
 | תורה, מערכת אקסיומות           | theory                 |                                                                         |     |

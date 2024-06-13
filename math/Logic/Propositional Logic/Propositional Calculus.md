@@ -60,12 +60,12 @@ Here are some properties of this proof calculus
 	- if $K \vdash \psi$ and $K \vdash (\psi\rightarrow\varphi )$ then $K \vdash \varphi$
 	- if $K \vdash \varphi$ then for each proposition $\psi$: $K\vdash(\psi \rightarrow \varphi)$
 	- for each proposition $\varphi$: $K\vdash(\varphi \rightarrow \varphi )$
-- (4.2) Deduction theorem: if $K\cup \{ \psi \}\vdash\varphi$ then $K\vdash(\psi\rightarrow\varphi)$
+- (4.2) Deduction theorem: if $K\cup \{ \psi \}\vdash\varphi$ then $K\vdash(\psi\rightarrow\varphi)$ (in Cunningham's he shows the reverse direction)
 	- example: arrow transitivty
 - (Lemma) Let $K$ be an infinite set of proposition. If $K$ is [[#Theory|inconsistent]], then there exists a finite inconsistent subset of $K$. 
 - q4.7 #todo 
 - (4.3) Proof-by-Contradiction Theorem 
-	- For each proposition $\varphi$: $\{ \psi,\lnot\psi \}\vdash\varphi$
+	- For each proposition $\varphi$, $\{ \psi,\lnot\psi \}\vdash\varphi$
 	- If $K$ is inconsistent, then $K\vdash{\varphi}$ for each proposition $\varphi$ ( #todo is it iff?)
 	- If $K\cup \{ \lnot \varphi \}$ is inconsistent, then $K\vdash{\varphi}$
 - examples #todo 

@@ -22,12 +22,12 @@
 # Properties 
 
 ## Completeness
-#### Strong completeness
+### Strong completeness
 
  - A proof calculus is **strongly complete** (תחשיב שלם) iff, for every set of formulas $Γ$ , any formula that semantically follows from $Γ$ is provable from $Γ$ . That is: if $Γ ⊨ φ$ , then $Γ ⊢ φ$
 
 > *Strong completeness* implies *semantic completeness*. (it's special case when the set is empty) 
-#### Semantic completeness
+### Semantic completeness
 
  - A proof calculus is **semantically complete** (or **weak complete**) if in every theory $\displaystyle  \models _{\mathcal {S}}\varphi \ \to \ \vdash _{\mathcal {S}}\varphi$
 
@@ -36,12 +36,11 @@
  - A proof calculus is **(strongly) sound** iff for every set of formulas $Γ$, if $Γ ⊢ φ$ then $Γ ⊨ φ$ 
 - A proof calculus is **weakly sound** if every provable formula is valid
 
-## 4.4 Compactness Theorem
+### Compactness 
 
-- **Compactness theorem** (4.8)
-	- Let $K$ be a propositions set, 
-		- if every finite subset of $K$ has at least one model, then there exist a model of $K$
-		- if $K \implies \psi$ then there is a finite subset $\{ \varphi_{1},\dots,\varphi_{n} \}\subseteq K$ such that $\{ \varphi_{1},\dots ,\varphi_{n} \}\implies \psi$. (see t3.6)
+#todo 
+
+
 
 
 # 4.5 summary

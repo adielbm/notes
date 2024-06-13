@@ -1,50 +1,67 @@
 
-- Let $M$ and $M'$ [[Logic/Predicate Logic/Semantic#Model|model]] in $L$. and $H\colon M\to M'$ a function
+- Let $\mathcal{M}$ and $\mathcal{N}$ [[Logic/Predicate Logic/Semantic#Model|model]] in $L$, and $H\colon \mathcal{M}\to \mathcal{N}$ a function
 	- We say that $H$ **preserves** the relations if for every $n$-ary [[Logic/Predicate Logic/Syntax#Non-logical symbols (Signature)|predicate symbol]] $R$ in $L$, and for all $a_{1},\dots,a_{n}$ elements of the domain, we have:
-		- $(a_{1},\dots,a_{n})\in R^{M}\implies (H(a_{1}),\dots,H(a_{n}))\in R^{M'}$
+		- $(a_{1},\dots,a_{n})\in R^{\mathcal{M}}\implies (H(a_{1}),\dots,H(a_{n}))\in R^{\mathcal{N}}$
 	- We say that $H$ **reflects** the relations if for every $n$-ary predicate symbol $R$ in $L$, and for all $a_{1},\dots,a_{n}$ elements of the domain, we have:
-		- $(a_{1},\dots,a_{n})\in R^{M}\impliedby (H(a_{1}),\dots,H(a_{n}))\in R^{M'}$
-	- $H$ is a **homomorphism** of $M$ into $M'$ if:
-		-  ($H$ **preserves** constants) For every [[Logic/Predicate Logic/Syntax#Terms|term]] $c$ in $L$, we have $H(c^M)=c^{M'}$ 
+		- $(a_{1},\dots,a_{n})\in R^{\mathcal{M}}\impliedby (H(a_{1}),\dots,H(a_{n}))\in R^{\mathcal{N}}$
+	- $H$ is a **homomorphism** of $\mathcal{M}$ into $\mathcal{N}$ if:
+		-  ($H$ **preserves** constants) For every [[Logic/Predicate Logic/Syntax#Terms|term]] $c$ in $L$, we have $H(c^{\mathcal{M}})=c^{\mathcal{N}}$ 
 			- ( #todo in other book this goes on *constants* only)
-		-  ($H$ **preserves** functions) For every n-ary [[Logic/Predicate Logic/Syntax#Non-logical symbols (Signature)|function symbol]] $f$ and for all $a_{1},\dots,a_{n}$ elements of the domain $A$ we have: 
-			- $H(f^M(a_{1},\dots,a_{n}))=f^{M'}(H(a_{1}),\dots,H(a_{n}))$
+		-  ($H$ **preserves** functions) For every $n$-ary [[Logic/Predicate Logic/Syntax#Non-logical symbols (Signature)|function symbol]] $f$ and for all $a_{1},\dots,a_{n}$ elements of the domain $A$ we have: 
+			- $H(f^{\mathcal{M}}(a_{1},\dots,a_{n}))=f^{\mathcal{N}}(H(a_{1}),\dots,H(a_{n}))$
 		- $H$ preserves relations
-	- $H$ is an **strong homomorphism** if:
+	- $H$ is a **strong homomorphism** if:
 		- $H$ is a homomorphism 
 		- $H$ reflects relations
-	- $H$ is an **embedding** if:
+	- $H$ is an **embedding** if:
 		- $H$ is a homomorphism 
 		- $H$ is injective (one-to-one)
 		- $H$ reflects relations
-	- $H$ is an **isomorphism** if:
-		- $H$ is an homomorphism
+	- $H$ is an **isomorphism** if:
+		- $H$ is a homomorphism
 		- $H$ is injective (one-to-one)
-		- $H$ is surjective (onto) $M'$
+		- $H$ is surjective (onto) $\mathcal{N}$
 		- $H$ reflects relations
-	- $M$ and $M'$ are **isomorphic** if an isomorphism exists between them
+	- $\mathcal{M}$ and $\mathcal{N}$ are **isomorphic** if an isomorphism exists between them
 	- $H$ is called an **epimorphism** if:
 		- $H$ is a homomorphism
-		- $H$ is surjective (onto) $M'$
+		- $H$ is surjective (onto) $\mathcal{N}$
 		- $H$ reflects relations (possibly excluding the equality relation)
 	- $H$ is called an **automorphism** if:
 		- $H$ is an isomorphism
-		- $M=M'$
+		- $\mathcal{M} = \mathcal{N}$
 	- $H$ is called an **endomorphism** if:
 		- $H$ is a homomorphism
-		- $M=M'$
-	- $H$ is called an **monomorphism** if:
+		- $\mathcal{M} = \mathcal{N}$
+	- $H$ is called a **monomorphism** if:
 		- $H$ is a homomorphism
 		- $H$ is injective (one-to-one)
 
-- If $H$ is an epimorphism that reflects also the equality relation, then $H$ is called a
+
+
+- The model $\mathcal{N}$ is a **(strong) homomorphic image** of the model $\mathcal{M}$ if there exists a (strong) homomorphism from $\mathcal{M}$ onto $\mathcal{N}$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- If $H$ is an epimorphism that reflects also the equality relation, then $H$ is called #todo
 
 
 > In algebra, when dealing with groups, rings, and linear spaces, the focus is on functions (operations) and not on relations, therefore the condition _$H$ reflects relations_ is not relevant, therefore, for example, a surjective homomorphism is an epimorphism
 
-> If one of the relation in $L$ is the equality relation, (and it is the real equality in $M$ and $M'$), then by the property "$H$ reflects relations" we have that $H$ is injective. Therefore, in this case, an epimorphism is an isomorphism.
+> If one of the relation in $L$ is the equality relation, (and it is the real equality in $\mathcal{M}$ and $\mathcal{N}$), then by the property "$H$ reflects relations" we have that $H$ is injective. Therefore, in this case, an epimorphism is an isomorphism.
 
-- (6.7) (asuume L with equality) Let $H:M\to M'$ be an isomorphism, and $\varphi[x_{1},\dots,x_{n}]$ a formula (i.e. a formula with free variables $x_{1},\dots,x_{n}$), and let $a_{1},\dots,a_{n}$ elements of the domain of $M$. Then $M\models \varphi[a_{1},\dots,a_{n}]\iff M'\models \varphi[H(a_{1}),\dots,H(a_{n})]$
+- (6.7) (assume $L$ with equality) Let $H:\mathcal{M} \to \mathcal{N}$ be an isomorphism, and $\varphi[x_{1},\dots,x_{n}]$ a formula (i.e. a formula with free variables $x_{1},\dots,x_{n}$), and let $a_{1},\dots,a_{n}$ elements of the domain of $\mathcal{M}$. Then $\mathcal{M}\models \varphi[a_{1},\dots,a_{n}]\iff \mathcal{N}\models \varphi[H(a_{1}),\dots,H(a_{n})]$
 
 ## draft
 
