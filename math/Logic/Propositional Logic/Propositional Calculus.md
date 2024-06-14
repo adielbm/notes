@@ -77,10 +77,11 @@ Here are some properties of this proof calculus
 - (4.5) Every [[#Theory|complete theory]] has unique model
 - #todo If a set of propositions $K$ has unique model, then $K$ is a complete theory 
 - (4.6) For each theory $K$ there exist a complete theory $\overline{K}$ such that $K\subseteq{\overline{K}}$
-- (4.7) **Completeness Theorem** (This proof calculus is [[Proof Calculus#Strong completeness|strongly complete]])
-	- Every theory has a model. Or in an equivalence way, 
-	- If a theory $K$ [[Logic/Propositional Logic/Semantic#Logical Implication|logically implies]] a proposition $\psi$ (denoted by $K \implies \psi$) then $\psi$ is *provable from* (or *theorem of*) $K$ (denoted by $K \vdash \psi$)
-- 
+- (4.7) **Completeness Theorem**
+	- This proof calculus is [[Proof Calculus#Strong completeness|strongly complete]]
+	- For every theory $K$, there exists a [[Logic/Propositional Logic/Semantic#Model|model]] $M$ such that $M \models K$ 
+	- If a theory $K$ [[Logic/Propositional Logic/Semantic#Logical Implication|logically implies]] a proposition $\psi$, then $\psi$ is [[#Provable Proposition|provable]] from $K$
+	- If $K \implies \psi$ then $K \vdash \psi$
 
 ## Summary 
 

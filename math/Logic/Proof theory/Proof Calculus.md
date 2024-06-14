@@ -29,8 +29,10 @@
 > *Strong completeness* implies *semantic completeness*. (it's special case when the set is empty) 
 ### Semantic completeness
 
- - A proof calculus is **semantically complete** (or **weak complete**) if in every theory $\displaystyle  \models _{\mathcal {S}}\varphi \ \to \ \vdash _{\mathcal {S}}\varphi$
-
+ - A proof calculus is **semantically complete** (or **weak complete**) if we have: 
+	 - for every $\varphi$, if $\models\varphi$ then $\vdash \varphi$. In other words,
+	 - Every tautology is provable
+		- (tautology: [[Logic/Propositional Logic/Semantic#Tautology & Contradiction|PL]], [[Logic/Predicate Logic/Semantic#Logical Validity|FOL]]; provable: [[Propositional Calculus#Provable Proposition|PL]], [[Predicate Calculus#Provable Formula|FOL]])
 ### Soundness
 
  - A proof calculus is **(strongly) sound** iff for every set of formulas $Γ$, if $Γ ⊢ φ$ then $Γ ⊨ φ$ 

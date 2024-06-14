@@ -1,18 +1,17 @@
 ## Model
 
-- A set $\{ \mathsf{T},\mathsf{F} \}$ of **truth values**
-- $\mathcal{S}$ is the set of the elementary propositions
-- $\overline{\mathcal{S}}$ is the set of the propositions generated from $\mathcal{S}$
-- A **model** (or **truth assignment**) of for a set $\overline{\mathcal{S}}$ is a function $M:\overline{\mathcal{S}}\to\{ \mathsf{T},\mathsf{F} \}$, which is defined in [[Logic/Propositional Logic/Syntax#Structural Induction|structural induction]]:
-	- First, we define $M_{e}:{\mathcal{S}}\to\{ \mathsf{T},\mathsf{F} \}$, for each $Q\in\mathcal{S}$
-	- For each $\varphi\in\overline{\mathcal{S}}$
-		- If $\varphi \in\mathcal{S}$, then $M(\varphi)$ is already defined
-		- if $\varphi=\lnot{\psi}$ then $M(\varphi)=\begin{cases}\mathsf{T} & M(\psi)=\mathsf{F}\\ \mathsf{F} & M(\psi)=\mathsf{T} \end{cases}$
-		- if $\varphi=(\psi \lor \theta)$ then $M(\varphi)=\begin{cases}\mathsf{T} & M(\psi)=\mathsf{T} \text{ or } M(\theta)=\mathsf{T}\\ \mathsf{F} & \text{otherwise} \end{cases}$
-		- if $\varphi=(\psi \land \theta)$ then $M(\varphi)=\begin{cases}\mathsf{T} & M(\psi)=\mathsf{T} \text{ and } M(\theta)=\mathsf{T}\\ \mathsf{F} & \text{otherwise} \end{cases}$
-		- if $\varphi=(\psi \rightarrow \theta)$ then $M(\varphi)=\begin{cases}\mathsf{T} & M(\psi)=\mathsf{F} \text{ or } M(\theta)=\mathsf{T}\\ \mathsf{F} & \text{otherwise} \end{cases}$
-		- if $\varphi=(\psi \leftrightarrow \theta)$ then $M(\varphi)=\begin{cases}\mathsf{T} & (M(\psi)=\mathsf{T} \text{ and } M(\theta)=\mathsf{T}) \text{ or } (M(\psi)=\mathsf{F} \text{ and } M(\theta)=\mathsf{F})\\ \mathsf{F} & \text{otherwise} \end{cases}$
-	- Therefore, by structural induction (2.3), there exist an unique function $M:\overline{\mathcal{S}}\to\{ \mathsf{T},\mathsf{F} \}$
+- The set of the **truth values** (or **Boolean values**) is $\mathbb{B}=\{ \mathsf{T},\mathsf{F} \}$
+- ${\mathcal{P}}$ is the set of the propositions recursively defined by the set $\mathcal{S}$ of the elementary propositions
+- A **truth assignment** is a function $\nu:{\mathcal{S}}\to\mathbb{B}$, which assigns a truth value to each proposition in ${\mathcal{S}}$
+- A **truth valuation** (or **model**) is a function $\mathcal{V}:\mathcal{P}\to\mathbb{B}$, which assigns a truth value to each proposition in $\mathcal{P}$
+	- By structural induction the truth valuation $\mathcal{V}$ is uniquely defined by the truth assignment $\nu$:
+		- For each $Q\in\mathcal{S}$, $\mathcal{V}(Q)=\nu(Q)$
+		- For each $\varphi\in\mathcal{P}$
+			- If $\varphi=\lnot{\psi}$ then $\mathcal{V}(\varphi)=\begin{cases}\mathsf{T} & \mathcal{V}(\psi)=\mathsf{F}\\ \mathsf{F} & \mathcal{V}(\psi)=\mathsf{T} \end{cases}$
+			- If $\varphi=(\psi \lor \theta)$ then $\mathcal{V}(\varphi)=\begin{cases}\mathsf{T} & \mathcal{V}(\psi)=\mathsf{T} \text{ or } \mathcal{V}(\theta)=\mathsf{T}\\ \mathsf{F} & \text{otherwise} \end{cases}$
+			- If $\varphi=(\psi \land \theta)$ then $\mathcal{V}(\varphi)=\begin{cases}\mathsf{T} & \mathcal{V}(\psi)=\mathsf{T} \text{ and } \mathcal{V}(\theta)=\mathsf{T}\\ \mathsf{F} & \text{otherwise} \end{cases}$
+			- If $\varphi=(\psi \rightarrow \theta)$ then $\mathcal{V}(\varphi)=\begin{cases}\mathsf{T} & \mathcal{V}(\psi)=\mathsf{F} \text{ or } \mathcal{V}(\theta)=\mathsf{T}\\ \mathsf{F} & \text{otherwise} \end{cases}$
+			- If $\varphi=(\psi \leftrightarrow \theta)$ then $\mathcal{V}(\varphi)=\begin{cases}\mathsf{T} & (\mathcal{V}(\psi)=\mathsf{T} \text{ and } \mathcal{V}(\theta)=\mathsf{T}) \text{ or } (\mathcal{V}(\psi)=\mathsf{F} \text{ and } \mathcal{V}(\theta)=\mathsf{F}) \\ \mathsf{F} & \text{otherwise} \end{cases}$
 - Model of a proposition
 	- if $M(\varphi)=\mathsf{T}$ we say that $\varphi$ is **true** in the model $M$, and denote $M \models \varphi$
 	- if $M(\varphi)=\mathsf{F}$ we say that $\varphi$ is **false** in the model $M$, and denote $M \not\models \varphi$
@@ -46,7 +45,7 @@
 - $\varphi \equiv \psi$ if and only if $\varphi \models \psi$ and $\psi \models \varphi$ #todo
 - $\varphi \equiv \psi$ if and only if for every model $M$ for $\varphi$ and $\psi$, we have $M(\varphi)=M(\psi)$ #todo
 
-> is *tautologically equivalent* (D. Cunningham) equivalent to *logically equivalent* #todo
+> is the term *tautologically equivalent* (Cunningham) equivalent to *logically equivalent* #todo
 
 ## Logical Implication
 
@@ -59,9 +58,9 @@
 		- if every finite subset of $K$ has at least one model, then there exist a model of $K$
 		- if $K \implies \psi$ then there exists a finite subset $\{ \varphi_{1},\dots,\varphi_{n} \}\subseteq K$ such that $\{ \varphi_{1},\dots ,\varphi_{n} \}\implies \psi$
 
-> is *tautologically implies* (D. Cunningham) equivalent to *logically implies* #todo
+> is the term *tautologically implies* (Cunningham) equivalent to *logically implies* #todo
 
-> Note: If $\emptyset \models \varphi$ then $\varphi$ is a [[#Tautology & Contradiction|tautology]]
+> Note: If $\emptyset \models \varphi$ then $\varphi$ is a [[#Tautology & Contradiction|tautology]] which is denoted by $\models\varphi$
 
 > $\varphi \implies \psi$ and $K\implies \varphi$ in this course are more commonly denoted by notations $\varphi \models \psi$ and $K\models \varphi$
 
