@@ -1,6 +1,5 @@
-
-
-# 
+# Propositional Logic
+## Logical Equivalence
 
 - Double Negation
     (1) $\varphi \equiv \lnot \lnot \varphi$ 
@@ -27,13 +26,15 @@
 - Exclusive OR
     - (12) $(\varphi \leftrightarrow \psi) \equiv ((\varphi \land \psi) \lor (\lnot \varphi \land \lnot \psi))$
 
-# Claculus Axioms in propositional language ${L_{\to}}$
+## Proof Claculus
+
+##### Logical Axioms in Propositional Language ${L_{\to}}$
 
 1. $(\varphi \to (\psi \to \theta))$
 2. $(\varphi \to (\psi \land \theta))\to((\varphi \to \psi) \to (\varphi \to \theta))$
 3. $(\lnot \varphi \to \lnot \psi)\to(\psi \to \varphi)$
 
-# Additional Claculus Axioms in propositional language $L$
+##### Additional Logical Axioms in propositional language $L$
 
 4. (a) $((\alpha \land \beta) \to \alpha)$ (conjunction elimination)
 4. (b) $((\alpha \land \beta) \to \beta)$ (conjunction elimination)
@@ -45,12 +46,12 @@
 8. (b) $((\alpha \leftrightarrow \beta) \to (\beta \to \alpha))$ (biconditional elimination)
 9. $((\alpha \to \beta) \land ((\beta \to \alpha) \to (\alpha \leftrightarrow \beta)))$ (biconditional introduction)
 
-# Modus Ponens
+### Rules of Inference (Modus Ponens) 
 
-$\frac{\varphi,( \varphi \to \psi)}{\psi}$ (modus ponens)
+$\displaystyle\frac{\varphi,( \varphi \to \psi)}{\psi}$ (modus ponens)
 
-# Additional Axioms in predicate language
-
+# Predicate Logic
+## Additional L. Axioms in Predicate Language
 
 | **Axioms of $\forall$**                                                    |                                          |
 | -------------------------------------------------------------------------- | ---------------------------------------- |
@@ -60,21 +61,23 @@ $\frac{\varphi,( \varphi \to \psi)}{\psi}$ (modus ponens)
 
 - $\frac{\varphi}{\forall x\varphi}$ (generalization)
 
-# Natural Deduction
+## Natural Deduction 
 
-- $\frac{\varphi \alpha}{\exists x \varphi x}$
-- $\frac{\exists x \varphi x}{\varphi \alpha}$ 
-- $\frac{\varphi x}{\forall y \varphi y}$ (where $x$ is a variable, and $y$ is not free in $\varphi x$ #todo)
-- (Universal instantiation) $\frac{\forall y \varphi y}{\varphi a}$ (where $y$ is a variable, and $a$ is a constant)
+|                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------- |
+| $\displaystyle\frac{\varphi \alpha}{\exists x \varphi x}$                                                           |
+| $\displaystyle\frac{\exists x \varphi x}{\varphi \alpha}$                                                           |
+| $\displaystyle\frac{\varphi x}{\forall y \varphi y}$ (where $x$ is a var., and $y$ isn't free in $\varphi x$ #todo) |
+| $\displaystyle\frac{\forall y \varphi y}{\varphi a}$ (where $y$ is a variable, and $a$ is a constant)               |
 
-# 
+## Logical Validity (אמיתות לוגיות)
 
 - $(\forall x \varphi)\leftrightarrow (\lnot \exists x \lnot \varphi)$
 - $(\lnot \forall x \varphi)\leftrightarrow (\exists x \lnot \varphi)$
 - $(\exists x \varphi)\leftrightarrow (\lnot \forall x \lnot \varphi)$
 - $(\lnot \exists x \varphi)\leftrightarrow (\forall x \lnot \varphi)$
 
-where $x$ is not free in $\varphi$, then the following formulas are logical tauatologies:
+where $x$ is not free in $\psi$, then the following formulas are logical valid:
 
 - $[(\forall x \varphi) \land \psi] \leftrightarrow \forall x (\varphi \land \psi)$
 - $[(\forall x \varphi) \lor \psi] \leftrightarrow \forall x (\varphi \lor \psi)$
@@ -85,6 +88,3 @@ where $x$ is not free in $\varphi$, then the following formulas are logical taua
 - $\exists x (\psi \to \varphi) \leftrightarrow [\psi \to (\exists x \varphi)]$
 - $\forall x (\varphi \to \psi) \leftrightarrow [(\exists x \varphi) \to \psi]$
 - $\exists x (\varphi \to \psi) \leftrightarrow [(\forall x \varphi) \to \psi]$
-
-the first four formulas are called quantifier distributivity laws.
-the last four formulas are called quantifier exchange laws.

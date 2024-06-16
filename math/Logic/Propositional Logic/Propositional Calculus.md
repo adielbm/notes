@@ -43,14 +43,14 @@ Here are some definitions related to this proof calculus:
 
 ## Theory
 
-- A set of propositions $K$ is said to be **inconsistent** if there exists a proposition $\varphi$ such that $K ⊢ \varphi$ and $K ⊢ ¬\varphi$. 
-	- Moreover, $K$ is **consistent** if for no proposition $\varphi$ we have $K ⊢ \varphi$ and $K ⊢ ¬\varphi$
-- A a set of propositions is a **theory** iff it is consistent
-	- i.e. $K$ is a **theory** iff there is no proposition $\varphi$ such that both $K\vdash{\varphi}$ and $K\vdash{\lnot{\varphi}}$ 
-	- (In some books, the definitions requires the set is closed under logical implication)
-- Syntactical completeness
-	- A theory is **complete** (תורה שלמה) if for every proposition $\varphi$, either $K\vdash{\varphi}$ ([[Propositional Calculus#Provable Proposition|provable]]) or $K\vdash{\lnot{\varphi}}$ (disproved)
+- Given a set of propositions $K$ 
+	- $K$ is **inconsistent** if there exists a proposition $\varphi$ s.t. $K ⊢ \varphi$ and $K ⊢ ¬\varphi$ 
+	- $K$ is **consistent** if it is not inconsistent
+	- $K$ is **maximally consistent** if every superset of $K$ is inconsistent
+- A consistent set of propositions is called a **theory**
+- (Syntactical completeness) A theory is **complete** (תורה שלמה) if for every proposition $\varphi$, either $K\vdash{\varphi}$ ([[Propositional Calculus#Provable Proposition|provable]]) or $K\vdash{\lnot{\varphi}}$ (disproved)
 
+> In some books, the definitions requires a _theory_ to be closed under logical implication
 # Properties
 
 Here are some properties of this proof calculus
@@ -89,7 +89,7 @@ Here are some properties of this proof calculus
 | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | $\xrightarrow{\text{Soundness}}$                                                                                        | $\xleftarrow{\text{Completeness}}$                                                                                                     |
 | $K\vdash\varphi$<br>($\varphi$ is [[#Proof Sequence\|provable]] from $K$)                                               | $K\models\varphi$ (or $K \implies \psi$)<br>($K$ [[Logic/Propositional Logic/Semantic#Logical Implication\|logically implies]] $\psi$) |
-| $\vdash\varphi$ (or  $\emptyset\vdash \varphi$)<br>($\varphi$ is [[#Proof Sequence\|provable]] from the logical axioms) | $\models\varphi$<br>($\varphi$ is a [[Logic/Propositional Logic/Semantic#Tautology & Contradiction\|tautology]])                       |
+| $\vdash\varphi$ (or  $\emptyset\vdash \varphi$)<br>($\varphi$ is [[#Proof Sequence\|provable]] from the logical axioms) | $\models\varphi$<br>($\varphi$ is a [[Logic/Propositional Logic/Semantic#Logical Validity\|tautology]])                                |
 | $K$ is [[#Theory\|consistent]] (theory)                                               | $M\models K$<br>($K$ has a [[Logic/Propositional Logic/Semantic#Model\|model]] $M$ (or, $K$ is satisfiable))                           |
 | $K$ is a complete theory                                                                                                | $K$ has unique model                                                                                                                   |
 

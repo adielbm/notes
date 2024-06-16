@@ -12,8 +12,8 @@
 
 
 - An **unrestricted grammar** (aka: phrase structure grammar, semi-Thue) is a formal grammar $\displaystyle {\textstyle G=(N,T,P,S)}$, where
-	- $\displaystyle N$ is a finite set of non-terminal symbols (or variables)
-	- $\displaystyle T$ is a finite set of terminal symbols with $\displaystyle N$ and $\displaystyle T$ disjoint,
+	- $\displaystyle N$ is a finite set of **non-terminal symbols** (or **variables**)
+	- $\displaystyle T$ is a finite set of **terminal symbols** with $\displaystyle N$ and $\displaystyle T$ disjoint,
 	- $\displaystyle P$ is a finite set of production rules of the form $\displaystyle \alpha \to \beta$ , where $\displaystyle \alpha$ and $\displaystyle \beta$ are strings of symbols in $\Sigma=\displaystyle N\cup T$, and $\displaystyle \alpha$ is not the empty string
 	- $\displaystyle S\in N$ is a specially designated start symbol
 

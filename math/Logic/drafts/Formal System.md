@@ -16,6 +16,9 @@
 		- A formal system will usually have associated with it a finite set of strings of symbols from $K∪P∪V∪{,⇒}$ . Strings in this set are called axioms.
 
 
+- A **formal theory** is a set of sentences expressed in a formal language
+- A **formal theory** is an axiomatic system (usually formulated within model theory) that describes a set of sentences that is closed under logical implication
+
 ### Properties 
 
 - A formal system is **sound** if and only if every well-formed formula that can be proven in the system is logically valid with respect to the logical semantics of the system.

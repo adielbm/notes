@@ -1,5 +1,5 @@
 
-
+Dictionary of Logic as Applied in the Study of Language 📚
 
 
 - [ ] [Can you change a sum by rearranging its numbers? --- The Riemann Series Theorem](https://www.youtube.com/watch?v=U0w0f0PDdPA&t=547s "Can you change a sum by rearranging its numbers? --- The Riemann Series Theorem")

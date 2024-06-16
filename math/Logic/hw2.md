@@ -15,21 +15,23 @@ https://docs.google.com/forms/d/e/1FAIpQLSfIwNtt7LdF6yZbFXcUFNDlYZBBy1aZw9vQVJYN
 
 ![[Pasted image 20240605210645.png]]
 
-
-answer: a 
+**answer**: a 
 
 # Q3
 
 ![[Pasted image 20240605210704.png]]
 
-answer: e
+**answer**: e
 
 # Q4
 
-![[Pasted image 20240605210716.png]]
+![[Pasted image 20240616180459.png]]
 
 
 # Q5
 
 
-![[Pasted image 20240605210729.png]]
+![[Pasted image 20240616180418.png]]
+
+
+**b.** 2 & 4 true!

@@ -1,8 +1,8 @@
 
 # Basic Theorems
 
-- (6.9) **Compactness Theorem** - Let $K$ be an infinite set of [[Logic/Predicate Logic/Syntax#Sentence|sentences]]. If every finite subset of $K$ is [[Logic/Predicate Logic/Semantic#Satisfiable Set|satisfiable]], then $K$ is satisfiable
-- (6.10) **Löwenheim–Skolem theorem** - if a [[Logic/Predicate Logic/Syntax#Theory|theory]] $K$ [[Logic/Predicate Logic/Semantic#Model of Set|has an infinite model]], then it has also countable model
+- (6.9) **Compactness Theorem** - Let $K$ be an infinite set of [[Logic/Predicate Logic/Syntax#Sentence|sentences]]. If every finite subset of $K$ is [[Logic/Predicate Logic/Semantic#Satisfiability|satisfiable]], then $K$ is satisfiable
+- (6.10) **Löwenheim–Skolem theorem** - if a [[Logic/Predicate Logic/Syntax#Theory|theory]] $K$ [[Logic/Predicate Logic/Semantic#Truth Value in Model|has an infinite model]], then it has also countable model
 	- (6.10') if a theory $K$ has an infinite model, then for every infinite cardinality $\alpha$, the theory has model with cardinality $\alpha$
 - (q6.6) Given a predicate language $L$ and a set of sentences $K$ and let $L'$ be the language obtained by adding constants, functions, and predicates to $L$. let $\varphi$ be a sentence in $L$. Then #todo
 - (6.11)

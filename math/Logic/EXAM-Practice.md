@@ -31,3 +31,5 @@ $\varphi[x,y,z]=\left( x=z+y \right)$
 > (FOL) Let assume that the formula $A'$ is obtained from the formula $A$ by replacing the formulas $B_1,B_2,...,B_n$ with the formulas $B_1',B_2',...,B_n'$ respectively. 
 > Prove ([[Structural Induction|structure induction]]) that if the formulas $B_1\leftrightarrow B_1',B_2\leftrightarrow B_2',...,B_n\leftrightarrow B_n'$ are [[Predicate Logic/Semantic#Logical Validity|logically valid]], then the formula $A\leftrightarrow A'$ is logically valid.
 
+
+

@@ -17,7 +17,7 @@ A **model** $\mathcal{M}$ for a [[Logic/Predicate Logic/Syntax#Non-logical symbo
 
 > If we don't mention other, we are in **first-order logic with equality**, which means, the equality symbol ̇$=$ is defined as the identity relation $R = \{(x, x) : x \in A\}$
 
-# Variable Assignment
+## Variable Assignment
 
 - $V(\varphi)$ is the set of variables which occur freely in $\varphi$
 - A **(variable) assignment** for a model $M$ with the domain $A$ is a mapping $S:\text{dom}(S)\to A$ where $\text{dom}(S)\subseteq{VAR}$
@@ -25,9 +25,11 @@ A **model** $\mathcal{M}$ for a [[Logic/Predicate Logic/Syntax#Non-logical symbo
 		- If $\varphi$ is a sentence, then every assignment is *for a formula* $\varphi$, because $V(\varphi)=\emptyset$
 	- If $S$ is an assignment for a model $M$, and $x \in \text{VAR}$, and $a\in{A}$ we denote $S\langle{x|a}\rangle$ if $S(x)=a$
 
+
+
 # Truth Value
 
-## Truth Value of formula in Assignment
+#### Truth Value in Assignment
 
 Given model $M$, and an assignment $S$ for a formula $\varphi$.
 
@@ -39,7 +41,7 @@ Given model $M$, and an assignment $S$ for a formula $\varphi$.
 - Notaion: if $\varphi$ is true we can denote $S(\varphi)=\mathsf{T}$ or $S\models{\varphi}$ or $M\models_{S}\varphi$. If $\varphi$ is false we denote $S(\varphi)=\mathsf{F}$ or $S\nvDash\varphi$ or $M\nvDash_{S}\varphi$.
 - Given model $M$, and two assignments $S_{1}$ and $S_{2}$ for a formula $\varphi$, such that $S_{1}(x)=S_{2}(x)$ for each $x \in V(\varphi)$, then $S_{1}(\varphi)=S_{2}(\varphi)$.
 
-## Truth Value of formula in Model
+#### Truth Value in Model
 
 Given a model $M$
 
@@ -49,44 +51,34 @@ Given a model $M$
 - A formula $\varphi$ is **true in** $M$ (denoted by $M\models{\varphi}$), if for every assignment $S$ we have $M\models_{S}{\varphi}$ 
 	- notation other terminology: $M$ **satisfied** $\varphi$; $M$ is a model of $\varphi$; $\varphi$ holds in $M$
 	- If $x$ is a variable, then $\varphi$ is true in model $M$ if and only if $\forall x\varphi$ is true in $M$
-
-## Logical Validity
-
-- A formula $\varphi$ is **logically valid** if for every model $M$ we have $M\models{\varphi}$. 
-	- (c5.6) אמיתית לוגית. (or **tautology** #todo)
-- A formula $\varphi$ is **unsatisfiable** if for every model $M$ we have $M\not\models{\varphi}$.
-- A formula $\varphi$ is **satisfiable** if there exists a model $M$ and an assignment $S$ such that $M_{S}\models{\varphi}$.
-
-> Don't confuse with [[#First-order Tautologies]] here, or with [[Logic/Propositional Logic/Semantic#Tautology & Contradiction|tautology]] in prop. logic.
-
-## Model of Set
-
+	- The formula $\varphi$ is true in $M$ if and only if its [[Logic/Predicate Logic/Syntax#Universal Closure|universal closure]] $\forall x_{1}\dots \forall x_{r}\varphi$ is true in $M$
 - A model $M$ is said to be a **model of** a set of sentences $K$, (denoted by $M\models K$), if for each $\varphi \in K$ we have $M\models{\varphi}$
 
-## Satisfiable Set
+# Satisfiability
 
-- A set of sentences $K$ is said to be **satisfiable** if there exists a model $M$ such that $M\models K$.
+- A formula $\varphi$ is **satisfiable** if there exists a model $M$ and an assignment $S$ such that $M\models_{S}{\varphi}$.
+- A formula $\varphi$ is **unsatisfiable** if for every model $M$ we have $M\not\models{\varphi}$.
+- A set of sentences $K$ is said to be **satisfiable** if there exists a model $M$ such that $M\models K$
+- A formula $\varphi$ is **falsifiable** (denoted by $\not\models\varphi$) if $\varphi$ is not logically valid 
 - **Soundeness Theorem (6.2)** - If $K$ is satisfiable, then it is [[Logic/Predicate Logic/Syntax#Theory|consistent]]
 
-## Universal closure
+# Logical Validity
 
-- Given $V(\varphi)=\{ x_{1},\dots,x_{r} \}$, then $\forall x_{1}\dots \forall x_{r}\varphi$ the **universal closure** of the formula $\varphi$
-	- The formula $\varphi$ is true in $M$ if and only if its universal closure $\forall x_{1}\dots \forall x_{r}\varphi$ is true in $M$
+- (c5.6) A formula $\varphi$ is **logically valid** (אמיתית לוגית) and denoted by $\models \varphi$, if for every model $M$ we have $M\models{\varphi}$. 
+
+> A _logically valid_ formula can also be called a _tautology_, but we avoid this term to prevent confusion with [[#First-order Tautologies]] here or with [[Logic/Propositional Logic/Semantic#Logical Validity|tautology]] in propositional logic
 
 
-## Restricted languages
+> [!EXAMPLE] **Examples of logically valid formulas**:
+> - $\forall x \varphi \rightarrow \varphi[t/x]$ (given  $\varphi[t/x]$ is a capture-avoiding [[Logic/Predicate Logic/Syntax#Substitution|substitution]])
+> - $(\forall x \varphi \leftrightarrow \forall y \varphi[y/x])$ (given the variable $y$ is not appear in $\varphi$)
+> - $(\lnot \forall x \varphi) \leftrightarrow (\exists x \lnot \varphi)$
+> - $(\forall x \varphi) \leftrightarrow (\lnot \exists x \lnot \varphi)$ 
+> - $(\lnot \exists x \varphi) \leftrightarrow (\forall x \lnot \varphi)$
+> - $(\exists x \varphi) \leftrightarrow (\lnot \forall x \lnot \varphi)$
 
-```
-If the set of relation symbols, function symbols, and constant symbols of a language $L$ is a subset of the set of alphabet symbols of $L'$, then $L$ is called a **reduction** of the language $L'$, and $L'$ is called an **enrichment** of the language L. Every noun in $L$ is also a noun in $L'$, and every formula in $L$ is also a formula in $L'$. If M is a model in the extended language $L'$, then the reduction of M to the language $L$ is obtained by ignoring the relations and functions that have been named in $L'$ but are not in the language $L$ (on the other hand, if M is a model in the language L, then there are many enrichments of the model to a model in the language $L'$, because there are many functions and relations in the model to which the additional names can be assigned). It is important to note that the locality of the definition by induction (of the value of a noun in an assignment, and of the truth value of a formula in an assignment) ensures that the definition of the truth value of a formula does not depend on the interpretation that the model gives to the symbols that are not mentioned in the formula. In precise terms, this means:
 
-- (Theorem 5.7) Let $M_{1}$ and $M_{2}$ be two models in the languages $L_{1}$ and $L_{2}$, respectively, whose domain is the same set $A$, such that every assignment in one model is also an assignment in the other model. Let $\varphi$ be a formula that is in the intersection of the two languages. If the two models interpret the relation symbols, the function symbols, and the constant symbols that appear in the formula ϕ in the same way, then for every assignment S in the domain A: $M_{1}⊨_{S}​\varphi\iff M_{2}⊨_{S}​\varphi$
-	- In particular, if $L_{2}$ is a reduction of $L_{1}$ and $M_{2}$ is the reduction of $M_{1}$, then for every assignment $S$ and for every formula $\varphi$ in $L_{2}$: we have $M_{1}⊨_{S}​\varphi\iff M_{2}⊨_{S}​\varphi$
-```
-
-#todo 5.4.6
-#todo 5.4.7
-
-## Logical Equivalence
+# Logical Equivalence
 
 - Two formulas $φ$ and $ψ$ are **logically equivalent** (denoted by $φ\equiv ψ$) if and only if, $\varphi\leftrightarrow\psi$ is [[#Logical Validity|logically valid]]. i.e.
 	- $φ\equiv ψ$ if and only if for each model $M$ and for each assignment $S$, we hold $S\models\varphi$ if and only if $S\models\psi$ 
@@ -97,28 +89,19 @@ If the set of relation symbols, function symbols, and constant symbols of a lang
 			- $\forall x\varphi\equiv \forall x\psi$ and $\exists x\varphi\equiv \exists x\psi$ (for each varaible $x$)
 		- If $\varphi'$ is arrived from $\varphi$ by replacing sub-formula $\psi$ in $\psi'$ where $\psi\equiv \psi'$ then $\varphi'\equiv \varphi$
 
-## First-order Tautologies
+# Logical Implication
 
-- (5.9) Let $\varphi$ be a [[Logic/Propositional Logic/Syntax#Language|proposition]] where all its [[Logic/Propositional Logic/Syntax#Language|elementary proposition]] are from $P_1,\dots ,P_n$. And Let $\alpha_1,\dots,\alpha_n$ be formulas. And let $\varphi'$ be the string that is obtained by replacing each $P_i$ in $\varphi$ by $\alpha_i$. Then:
+
+- A formula $\varphi$ **logically implies** a formula $\psi$ (or $\psi$ **logically implied by** $\varphi$), and denoted by $\varphi \implies \psi$ (or more common $\varphi \models \psi$), if and only if, in every model $M$, if $M\models{\varphi}$ then $M\models{\psi}$. 
+	- $\varphi$ logically implies a formula $\psi$ if and only if $\varphi\rightarrow{\psi}$ is logically valid
+		- In other words, $\varphi \implies \psi$ if and only if $\models (\varphi\rightarrow{\psi})$
+
+- (*semantic consequence*) A formula $\varphi$ **logically implied** by a set of formulas $K$ (denoted by $K\models\varphi$) if for every model $M$ such that $M\models K$ ($M$ is a [[#Truth Value in Model|model of]] $K$) we have $M\models\varphi$ ($M$ is a [[#Truth Value in Model|model of]] $\varphi$).
+
+# First-order Tautologies
+
+- (5.9) Let $\varphi$ be a [[Logic/Propositional Logic/Syntax#Propositions|proposition]] where all its [[Logic/Propositional Logic/Syntax#Propositions|elementary proposition]] are from $P_1,\dots ,P_n$. And Let $\alpha_1,\dots,\alpha_n$ be formulas. And let $\varphi'$ be the string that is obtained by replacing each $P_i$ in $\varphi$ by $\alpha_i$. Then:
 	- $\varphi'$ is a [[Logic/Predicate Logic/Syntax#Formulas|formula]]
 	- If $M$ is a [[Logic/Propositional Logic/Semantic|model]] of the propositional logic, and $S$ is an [[#Variable Assignment|assignment]] of the predicate logic, where $M(P_i)=S(\alpha_i)$ for each $i\leq n$, then $M(\varphi)=S(\varphi')$
-	- If $\varphi$ is a [[Logic/Propositional Logic/Semantic#Tautology & Contradiction|tautology]] then $\varphi'$ is [[#Logical Validity|logical valid]] and $\varphi'$ is called a **first-order tautology**.
+	- If $\varphi$ is a [[Logic/Propositional Logic/Semantic#Logical Validity|tautology]] then $\varphi'$ is [[#Logical Validity|logical valid]] and $\varphi'$ is called a **first-order tautology**.
 - see also [[Predicate Calculus#Properties|Predicate Calculus (6.1)]]
-
-
-## Logical Implication
-
-- (*semantic consequence*) A formula $\varphi$ **logically implied** by a set of formulas $K$ (denoted by $K\models\varphi$) if for every model $M$ such that $M\models K$ ($M$ is a [[#Model of Set|model of]] $K$) we have $M\models\varphi$ ($M$ is a [[#Truth Value of formula in Model|model of]] $\varphi$).
-
-## Minimal Language
-
-#todo 
-
-
-# Normal Forms
-#### Prenex Normal Form (5.7.2)
-
-- A formula $\varphi$ is said to be in **prenex form** if it is of the form $Q_{1}x_{1}Q_{2}x_{2} \dots Q_{n} x_{n} B$ where each $Q$ is either $∃$ or $∀$, and where $B$ contains no quantifiers. 
-	- The sequence of quantifiers and variables at the beginning is called the **prefix**, and the quantifier-free formula that follows the **matrix**.
-	- If $\varphi$ is in prenex form and its metrix is [[Logic/Propositional Logic/Semantic#CNF & DNF|DNF]] then it is said to be in **prenex normal form** (PNF)
-

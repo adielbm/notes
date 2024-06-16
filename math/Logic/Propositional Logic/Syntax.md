@@ -1,6 +1,6 @@
-# Language
+# Alphabet
 
-## Alphabet
+## Logical Symbols
 
 - Logical Connectives
 	- Unary connective
@@ -12,8 +12,11 @@
 		- **logical biconditional** (or **material biconditional**) $\leftrightarrow$ 
 	- $n$-ary connective
 - Punctuation: '$($' and '$)$'
+
+## Non-Logical Symbols
+
 - Sentence Symbols (proposition letters):  $P_{1},P_{2},\dots ,P_{n},\dots$
-## Propositions
+# Propositions
 
 ### Recursive Definition
 
@@ -99,10 +102,14 @@ The unique readability theorem provides us with an algorithm that, given a strin
 	- (2.) $F_{1}(Q)=F_{2}(Q)$ for each elementary proposition $Q$ in the string $\varphi$.
 	- Then: $F_{1}(\varphi)=F_{2}(\varphi)$.
 
+### Substitution
+
+- We say that a string $\varphi'$ is obtained from a string $\varphi$ by **substitution** if $\varphi'$ is obtained from $\varphi$ by replacing all occurrences of a the string $Q$ in $\varphi$ by a string $\psi$. We denote this by $\varphi[\psi/Q]$
+
 ### Subproposition
 
 - (2.5) $\psi$ is a **subproposition** of $\varphi$ if and only if it is substring of $\varphi$ which is also a proposition
-	- (2.6) Let $\varphi$ and $\theta$ propositions such that $\theta$ is also substring of $\varphi$, i.e. there exist strings $\alpha$ and $\beta$ such that $\varphi=\alpha \theta \beta$. let $\psi$ be a proposition. let $\varphi '$ the string by replacing the substring $\theta$ in $\psi$ such that $\varphi'=\alpha \psi \beta$. then $\varphi'$ is also a proposition.
+- (2.6) If $\alpha\theta\beta$ and $\theta$ and $\psi$ are propositions, then $\alpha\psi\beta$ is also a proposition
 
 ### Formation Sequence
 
@@ -124,7 +131,7 @@ The unique readability theorem provides us with an algorithm that, given a strin
 	- It has a structure tree
 	- It has a formation sequence
 
-## BNF Grammar
+### BNF Grammar
 
 
 ```xml
@@ -134,9 +141,27 @@ The unique readability theorem provides us with an algorithm that, given a strin
 <BiP> ::= (<P>∧<P>) | (<P>∨<P>) | (<P>→<P>) | (<P>↔<P>)
 ```
 
-# Dialects
 
-- Language $L_{\to}$
-	- $\leftrightarrow ,\rightarrow ,\lor,\land$
-	- $\otimes$ (XOR)
+## CNF & DNF
 
+| Course Term             |                                                                             | BNF                                                                             |
+| ----------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| קוניונקציה מרובה        | $\varphi_{1} \land\dots \land \varphi_{n}$                                  |                                                                                 |
+| דיסיונקציה מרובה        | $\varphi_{1} \lor\dots \lor \varphi_{n}$                                    |                                                                                 |
+| פסוק בסיסי              | $P$ or $\lnot P$                                                            | **Literal**<br>*Literal→¬Variable*<br>*Literal→Variable*<br>                    |
+|                         |                                                                             | **Disjunction**<br>Disjunction→Literal∨Disjunction<br>Disjunction→Literal       |
+| קוניונקציה פשוטה        | קוניונקציה מרובה של פסוקים בסיסיים                                          | **Conjunction**<br>Conjunction→Literal∧Conjunction<br>Conjunction→Literal       |
+| פסוק דיסיונקטיבי נורמלי | דיסיונקציה של קוניוקציות פשוטות                                             | **Disjunctive normal form (DNF)**<br>DNF→(Conjunction)∨DNF<br>DNF→(Conjunction) |
+|                         |                                                                             | **Conjunctive normal form (CNF)**<br>CNF→(Disjunction)∨CNF<br>CNF→(Disjunction) |
+| קוניונקציה פשוטה מלאה   | קוניונקציה פשוטה שמופיעה בה כל פסוק אלמנטרי (לחיוב או לשלילה) בדיוק פעם אחת | **Full Conjunction**                                                            |
+|                         |                                                                             |                                                                                 |
+|                         |                                                                             |                                                                                 |
+
+
+- Notation of full conjunction: $C=\varepsilon_{1}P_{1}\land\dots \land \varepsilon_nP_{n}$
+- In a language $L_{n}$ with the elementary propositions $\{ P_{1},\dots,P_{n} \}$ there are exactly $2^n$ full conjunctions 
+
+- (3.5) Every proposition has an equivalent DNF (see algorithm 3.3.2.1 #todo )
+
+- A CNF is a conjunction of clauses
+- A **clause** is a disjunction (or rarely, conjunction) of literals

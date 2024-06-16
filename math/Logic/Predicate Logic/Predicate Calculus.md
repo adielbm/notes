@@ -12,6 +12,7 @@
 
 > **Note:** The *logical axioms* (as opposed to the axioms of a concrete theory $K$) can be formulas that are not sentences, and therefore, in proof sequences, there may also be formulas with free variables.
 
+The set $\Lambda$ of **logical axioms** consists of
 ### Taulogical Axioms
 
 > These axioms are from [[Propositional Calculus]], but here $\varphi,\psi,\theta$ can be [[Logic/Predicate Logic/Syntax#Formulas|formulas of predicate of logic]]
@@ -21,7 +22,7 @@
 | Ax1 |                | $[\varphi\to(\psi\to \varphi)]$                                            |
 | Ax2 |                | $[\varphi\to(\psi\to \theta)]\to[(\varphi\to \psi)\to(\varphi\to \theta)]$ |
 | Ax3 | Contrapositive | $[(\lnot\varphi\to\lnot\psi)\to(\psi\to\varphi)]$                          |
-### Axioms of $∀$
+### Axioms of ∀
 
 |      |               | **Axioms of $\forall$**                                   |                                          |
 | ---- | ------------- | --------------------------------------------------------- | ---------------------------------------- |
@@ -67,11 +68,14 @@ Here are some definitions related to this proof calculus:
 
 ## Theory
 
-- A set of [[Logic/Predicate Logic/Syntax#Free & Bound Variables|sentences]] $K$ is said to be **inconsistent** if there exists a sentence $\varphi$ such that $K ⊢ \varphi$ and $K ⊢ ¬\varphi$. Moreover, $K$ is **consistent** if for no sentences $\varphi$ we have $K ⊢ \varphi$ and $K ⊢ ¬\varphi$
-- A **theory** is a consistent set of sentences
-- (syntactical completeness) A theory $K$ is said to be **complete** if for every sentence $φ$, either $K \vdash\varphi$ or $K \vdash\lnot\varphi$
+- Given a set of sentences $K$ 
+	- $K$ is **inconsistent** if there exists a sentence $\varphi$ s.t. $K ⊢ \varphi$ and $K ⊢ ¬\varphi$ 
+	- $K$ is **consistent** if it is not inconsistent
+	- $K$ is **maximally consistent** if every superset of $K$ is inconsistent
+- A consistent set of sentences is called a **theory** (תורה)
+- (syntactical completeness) A theory $K$ is **complete** (שלמה) if for every sentence $φ$, either $K \vdash\varphi$ or $K \vdash\lnot\varphi$
 
-> Usually a theory is understood to be closed under the relation of logical consequence. Some accounts define a theory to be closed under the [[Logic/Predicate Logic/Semantic#Logical Implication|semantic consequence]] relation, (i.e. if $K \models \varphi$, then $\varphi \in K$), while others define it to be closed under the [[#Provable Formula|syntactic consequence]], (i.e. if $K \vdash \varphi$, then $\varphi \in K$). [wikipedia](https://en.wikipedia.org/wiki/Theorem#Theorems_in_logic)
+> Usually a theory is understood to be closed under the relation of logical implication. Some accounts define a theory to be closed under the [[Logic/Predicate Logic/Semantic#Logical Implication|semantic consequence]] relation, (i.e. if $K \models \varphi$, then $\varphi \in K$), while others define it to be closed under the [[#Provable Formula|syntactic consequence]], (i.e. if $K \vdash \varphi$, then $\varphi \in K$). [wikipedia](https://en.wikipedia.org/wiki/Theorem#Theorems_in_logic)
 
 ### Henkin Theory
 
@@ -87,7 +91,7 @@ Properties of and theorems about this proof calculus:
 - Given $K$ is a [[Logic/Predicate Logic/Syntax#Theory|theory]], $\psi$ is a sentence and $\varphi$ is a formula. 
 	- (6.3) Deduction theorem - If $K\cup \{ \psi \}\vdash \varphi$ then $K \vdash ( \psi \to \varphi)$
 	- (6.4a) Principle of explosion - $\{ \psi,\lnot \psi \}\vdash \varphi$ (thus, every inconsistent set of sentences prove every formula)
-	- (6.4b) if $K\cup \{ \lnot \varphi \}$ is inconsistent then $K \vdash \varphi$
+	- (6.4b) if $K\cup \{ \lnot \varphi \}$ is inconsistent then $K \vdash \varphi$ (is it _iff_? #todo )
 	- (6.5a) if $K\vdash \forall x\varphi$ and the variable $v$ does not appear in $\varphi$ then $K \vdash \forall y \varphi[y/x]$
 	- (6.5b) Given the constant $c$ that does not appear neither in the sentences of $K$ nor in $\varphi$. If $K \vdash \varphi[c / x]$ then $K \vdash \forall x \varphi$
 - Given $L'$ a language that adds constants to a language $L$, and $K$ a set of sentences in $L$
