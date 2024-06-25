@@ -27,7 +27,7 @@ https://docs.google.com/forms/d/e/1FAIpQLSfIwNtt7LdF6yZbFXcUFNDlYZBBy1aZw9vQVJYN
 
 ![[Pasted image 20240616180459.png]]
 
-
+survey: d
 # Q5
 
 

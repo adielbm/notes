@@ -3,15 +3,25 @@
 
 # Characterization
 
-- Language: The dialect $L_{\rightarrow }$ of the proposional language 
+## Language
+
+- The dialect $L_{\rightarrow }$ of the proposional language 
 	- convectives: $\{ \lnot,\rightarrow \}$
 	- the propositions are either elementary propositions, negation propositions in the form $\lnot{\varphi}$, or propositions in the form $(\varphi\rightarrow \psi)$
-- Logical Axioms: (Each one is general form of one of infinite propositions. Also, these axioms are tautologies (q4.6))
-	- $(\varphi\rightarrow (\psi\rightarrow \varphi))$
-	- $([\varphi\rightarrow (\psi\rightarrow \theta)]\rightarrow [(\varphi\rightarrow \psi)\rightarrow (\psi\rightarrow \theta)])$
-	- $[(\lnot \varphi\rightarrow \lnot\psi )\rightarrow (\psi\rightarrow \varphi)]$
-- Rules of inference (actually one here)
-	- Modus ponens $\displaystyle\frac{\varphi,(\varphi \rightarrow \psi)}{\psi}$
+
+## Logical Axioms
+
+(Each one is general form of one of infinite propositions. Also, these axioms are tautologies (q4.6))
+
+|     | Logical Axioms                                                                                                               |
+| --- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Ax1 | $(\varphi\rightarrow (\psi\rightarrow \varphi))$                                                                             |
+| Ax2 | $([\varphi\rightarrow (\psi\rightarrow \theta)]\rightarrow [(\varphi\rightarrow \psi)\rightarrow (\psi\rightarrow \theta)])$ |
+| Ax3 | $[(\lnot \varphi\rightarrow \lnot\psi )\rightarrow (\psi\rightarrow \varphi)]$                                               |
+
+## Rules of inference
+
+(Modus ponens) $\displaystyle\frac{\varphi,(\varphi \rightarrow \psi)}{\psi}$
 
 # Definitions
 
@@ -82,6 +92,7 @@ Here are some properties of this proof calculus
 	- For every theory $K$, there exists a [[Logic/Propositional Logic/Semantic#Model|model]] $M$ such that $M \models K$ 
 	- If a theory $K$ [[Logic/Propositional Logic/Semantic#Logical Implication|logically implies]] a proposition $\psi$, then $\psi$ is [[#Provable Proposition|provable]] from $K$
 	- If $K \implies \psi$ then $K \vdash \psi$
+- Corollary: A set of propositions is consistent iff it is satisfiable
 
 ## Summary 
 
@@ -90,7 +101,7 @@ Here are some properties of this proof calculus
 | $\xrightarrow{\text{Soundness}}$                                                                                        | $\xleftarrow{\text{Completeness}}$                                                                                                     |
 | $K\vdash\varphi$<br>($\varphi$ is [[#Proof Sequence\|provable]] from $K$)                                               | $K\models\varphi$ (or $K \implies \psi$)<br>($K$ [[Logic/Propositional Logic/Semantic#Logical Implication\|logically implies]] $\psi$) |
 | $\vdash\varphi$ (or  $\emptyset\vdash \varphi$)<br>($\varphi$ is [[#Proof Sequence\|provable]] from the logical axioms) | $\models\varphi$<br>($\varphi$ is a [[Logic/Propositional Logic/Semantic#Logical Validity\|tautology]])                                |
-| $K$ is [[#Theory\|consistent]] (theory)                                               | $M\models K$<br>($K$ has a [[Logic/Propositional Logic/Semantic#Model\|model]] $M$ (or, $K$ is satisfiable))                           |
+| $K$ is [[#Theory\|consistent]] (theory)                                                                                 | $M\models K$<br>($K$ has a [[Logic/Propositional Logic/Semantic#Model\|model]] $M$ (or, $K$ is satisfiable))                           |
 | $K$ is a complete theory                                                                                                | $K$ has unique model                                                                                                                   |
 
 ___
@@ -101,7 +112,26 @@ here we show some variations (c4.3.5, and q4.9) of proof calculus we saw above.
 
 #### Example (c4.3.5)
 
-- (4.3.5) Like (4.3) but with $L=\{ \lnot,\land,\lor,\to,\leftrightarrow \}$ and other axioms #todo
+This is an expansion of the proof calculus we saw above
+###### Language
+
+Convectives: $\{ \lnot,\land,\lor,\to,\leftrightarrow \}$
+###### Logical Axioms
+ 
+ ![[#Logical Axioms|Ax1-3]] 
+ plus the following
+
+|       | Logical Axioms                                                                                           |
+| ----- | -------------------------------------------------------------------------------------------------------- |
+| Ax4.1 | $(\alpha\land\beta)\rightarrow\alpha$                                                                    |
+| Ax4.2 | $(\alpha\land\beta)\rightarrow\beta$                                                                     |
+| Ax5   | $(\alpha\rightarrow(\beta\rightarrow(\alpha\land\beta)))$                                                |
+| Ax6.1 | $\alpha\rightarrow(\alpha\lor\beta)$                                                                     |
+| Ax6.2 | $\beta\rightarrow(\alpha\lor\beta)$                                                                      |
+| Ax7   | $[\lnot\alpha\rightarrow((\alpha\lor\beta)\rightarrow\beta)]$                                            |
+| Ax8.1 | $[(\alpha\leftrightarrow\beta)\rightarrow((\alpha\rightarrow\beta))]$                                    |
+| Ax8.2 | $[(\alpha\leftrightarrow\beta)\rightarrow((\beta\rightarrow\alpha))]$                                    |
+| Ax9   | $((\alpha\rightarrow\beta)\rightarrow((\beta\rightarrow\alpha)\rightarrow(\alpha\leftrightarrow\beta)))$ |
 
 #### Example (q4.9)
 

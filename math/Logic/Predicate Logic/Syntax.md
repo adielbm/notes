@@ -118,6 +118,9 @@ The formulas obtained from the first two rules are said to be **atomic formulas*
 	- The sequence of quantifiers and variables at the beginning is called the **prefix**, and the quantifier-free formula that follows the **matrix**.
 	- If $\varphi$ is in prenex form and its metrix is [[Logic/Propositional Logic/Semantic#CNF & DNF|DNF]] then it is said to be in **prenex normal form** (PNF)
 
+## Skolem normal form
+
+https://en.wikipedia.org/wiki/Skolem_normal_form
 
 # BNF
 

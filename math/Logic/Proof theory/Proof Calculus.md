@@ -44,10 +44,16 @@
 
 # Examples
 
-- **Hilbert Systems** are a class of proof systems for propositional and predicate logic. Hilbert systems can be characterised by the choice of a large number of logical axioms and a small set of rules of inference (typically only Modus Ponens (or also Universal Generalization)).
+- **Hilbert Systems** are a class of proof systems for propositional and predicate logic, that can be characterised by the choice of a large number of logical axioms and a small set of rules of inference (typically only Modus Ponens (or also Universal Generalization)).
 	- Examples from the Course Book of Hilbert Systems:
 		- [[Propositional Calculus]]
 			- [[Propositional Calculus#Example (c4.3.5)]]
 			- [[Propositional Calculus#Example (c4.3.5)]]
 		- [[Predicate Calculus]]
+- Systems of **natural deduction** take the opposite tack, including many rules of inference but very few or no logical axioms.
+- **sequent calculus** #todo 
 
+
+
+
+> #todo (form Wikipedia) A characteristic feature of the many variants of Hilbert systems is that the context is not changed in any of their rules of inference, while both natural deduction and sequent calculus contain some context-changing rules.

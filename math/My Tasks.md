@@ -68,22 +68,9 @@ Dictionary of Logic as Applied in the Study of Language 📚
 
 ## Logic
 
-- [ ] [[logic-5.pdf]] 
-- [ ] [[logic-7.pdf]]
+- [x] [[logic-5.pdf]] 
+- [x] [[logic-7.pdf]]
 
-### textbook
-
-- [ ] פרק 6
-	- [ ] 6.1 תורת ההוכחה בתחשיב הילברט
-	- [ ] 6.2 - 6.4      הנקין איזומורפיזם תורת המודלים
-	- [ ] 6.6.    
-		- [ ] especially: 6.6.1 - 6.6.1
-- [ ] chap 7
-	- [ ] 7.4.1 - 7.4.3 גדירות
-- [ ] 8 - submodels
-	- [ ] 8.1
-	- [ ] 8.2.2
-- [ ] chap 9.2 - high order logic
 
 # Exams 💪
 
@@ -94,10 +81,10 @@ Dictionary of Logic as Applied in the Study of Language 📚
 - ~~09/09/2024~~
 
 - [x] [[test1.pdf|test1]] - [[test1_sol.pdf]]
-- [ ] [[test2.pdf]] - [[test2_sol.pdf]]
-- [ ] [[test3.pdf]] - [[test3_sol.pdf]]
-- [ ] [[test4.pdf]] - [[test4_sol.pdf]]
-- [ ] [[test5.pdf]] - [[test5_sol.pdf]]
+- [x] [[test2.pdf]] - [[test2_sol.pdf]]
+- [x] [[test3.pdf]] - [[test3_sol.pdf]]
+- [x] [[test4.pdf]] - [[test4_sol.pdf]]
+- [x] [[test5.pdf]] - [[test5_sol.pdf]]
 
 ## CALC-2
 

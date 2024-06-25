@@ -7,8 +7,13 @@
 - A set of truth functions is called **functionally complete** if every truth function can be expressed using only the functions in the set.
 	- קבוצת (מערכת) קשרים שלמה (מלאה) (see 4.1.2, 4.1.3, 3.3.1) 
 
-- examples $\{ \lnot,\land \},\{ \lnot,\lor \},\{ \to,\mathsf{F}\},\{ \lnot,\land,\lor \},\{ \lnot,\to \}$
-- non-example $\{ \land,\lor \}$
+- Given $A\subseteq B$
+	- If $A$ is functionally complete then $B$ is functionally complete
+	- If $B$ is not functionally complete then $A$ is not functionally complete
+
+
+> **Examples:** $\{ \lnot,\land \},\{ \lnot,\lor \},\{ \to,\mathsf{F}\},\{ \lnot,\land,\lor \},\{ \lnot,\to \}$
+> **Non-Example:** $\{ \land,\lor \}$
 
 
 A set of truth functions is called **functionally complete** if it can express all possible truth tables by combining members of the set into a Boolean expression

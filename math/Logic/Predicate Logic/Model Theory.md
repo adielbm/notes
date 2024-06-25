@@ -110,7 +110,6 @@ The axioms of the theory $T_{\text{F}}$ are the axioms of the commutative group 
 - Given a set of models $K=\{M_1,M_2,\dots\}$, if there exists a set of sentences $\Sigma$ such that $K=\text{Mod}(\Sigma)$, then we say that $K$ is **definable** (גדירה) by $\Sigma$.
 
 
-
 > [!EXAMPLE] Examples (the language is FOL with equality)
 > 
 >  - Ex. We denote $K_{\geq m}$ the set of models in $K$ with domain of size at least $m$.
@@ -135,19 +134,35 @@ The axioms of the theory $T_{\text{F}}$ are the axioms of the commutative group 
 > - Exercies: 
 > 	- Given a language $L=\{F,G,N,a,p\}$ where $F$ and $G$ are binary function symbols, $N$ is a unary function symbol, $a$ and $p$ are constants symbols.
 > 	- Given a model $M=\langle \mathbb{N}; +, \cdot, s(x)=x+1, 0, 1 \rangle$ where $\mathbb{N}$ is the set of natural numbers.
-> 	- Is $0$ definable in $M$? Yes, by the formula $\varphi(x):=(x=0)$
-> 	- Is $3$ definable in $M$? Yes, by the formula $\varphi(x):=(x=s(s(1)))$
-> 	- Is the set $\{1,3\}$ definable in $M$? Yes, by the formula $\varphi(x):=((x=1)\lor(x=s(s(1))))$
-> 	- Is the set of even numbers definable in $M$? Yes, by the formula $\varphi(x):=(\exists y (x=y+y))$
-> 	- Is the set of odd numbers definable in $M$? Yes, by the formula $\varphi=(\exists y (x=s(y+y)))$ or by $\varphi(x):=\lnot(\exists y (x=y+y))$
-> 	- Is the set of prime numbers definable in $M$? Yes, by the formula $\varphi(x):=(\forall y \forall z (x=y\cdot z)\to((y=x)\lor(z=x))\land\lnot(x=0)\land\lnot(x=1))$
-> 	- Is the predicate $<$ definable in $M$? Yes, by the formula $\varphi(x,y):=(\exists z (x+z=y)\land\lnot(z=0))$
+> 		- Is $0$ definable in $M$? 
+> 			- Yes, by the formula $\varphi(x):=(x=0)$
+> 		- Is $3$ definable in $M$? 
+> 			- Yes, by the formula $\varphi(x):=(x=s(s(1)))$
+> 		- Is the set $\{1,3\}$ definable in $M$? 
+> 			- Yes, by the formula $\varphi(x):=((x=1)\lor(x=s(s(1))))$
+> 		- Is the set of even numbers definable in $M$? 
+> 			- Yes, by the formula $\varphi(x):=(\exists y (x=y+y))$
+> 		- Is the set of odd numbers definable in $M$? 
+> 			- Yes, by the formula $\varphi=(\exists y (x=s(y+y)))$ or by $\varphi(x):=\lnot(\exists y (x=y+y))$
+> 		- Is the set of prime numbers definable in $M$? 
+> 			- Yes, by the formula $\varphi(x):=(\forall y \forall z (x=y\cdot z)\to((y=x)\lor(z=x))\land\lnot(x=0)\land\lnot(x=1))$
+> 		- Is the predicate $<$ definable in $M$? 
+> 			- Yes, by the formula $\varphi(x,y):=(\exists z (x+z=y)\land\lnot(z=0))$
 > - Exercies: Given a language $L=\{F\}$ where $F$ is a binary function symbol. And given a model $M=\langle \mathbb{N}; + \rangle$ where $\mathbb{N}$ is the set of natural numbers. 
-> 	- Is $0$ definable in $M$? Yes, by the formula $\varphi(x):=F(x,x)=x$
+> 	- Is $0$ definable in $M$? 
+> 		- Yes, by the formula $\varphi(x):=F(x,x)=x$
 > - Exercies: Given a language $L=\{R\}$ where $R$ is a binary relation symbol. And given a model $M=\langle \mathbb{N}; < \rangle$ where $\mathbb{N}$ is the set of natural numbers. 
-> 	- Is $0$ definable in $M$? Yes, by the formula $\varphi(x):=\lnot(\exists y (R(x,y)))$
+> 	- Is $0$ definable in $M$? 
+> 		- Yes, by the formula $\varphi(x):=\lnot(\exists y (R(x,y)))$
 > - Exercies: Given a language $L=\set{R}$ where $R$ is a binary relation symbol. And given a model $M=\langle \mathbb{Z}; < \rangle$ where $\mathbb{Z}$ is the set of integers. 
 > 	- Is $0$ definable in $M$? No.
+> - Exercies: Given model $M=\langle \mathbb{R}; N, +, \cdot, \rangle$ where $\mathbb{R}$ is the set of real numbers, and $N$ an unary relation symbol that indicates if a number is a natural number.
+> 	- Define the relation $<$ in $M$ on the set of natural numbers.
+> 		- By the formula $\varphi(x,y):=(N(x)\land N(y)\land\exists z (N(z)\land x+z=y)\land\lnot(x=y))$
+> 	- Define the division on real numbers in $M$.
+> 		- By the formula $\varphi(x,y):=(\exists z (x\cdot z=y))$
+
+
 
 # Submodels
 

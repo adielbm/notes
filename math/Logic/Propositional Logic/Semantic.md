@@ -1,12 +1,12 @@
 # Model
 
 - The set of the **truth values** (or **Boolean values**) is $\mathbb{B}=\{ \mathsf{T},\mathsf{F} \}$
-- ${\mathcal{P}}$ is the set of the propositions recursively defined by the set $\mathcal{S}$ of a elementary propositions
-- A **truth assignment** is a function $\nu:{\mathcal{S}}\to\mathbb{B}$, which assigns a truth value to each proposition in ${\mathcal{S}}$
-- A **truth valuation** (or **model**) is a function $\mathcal{V}:\mathcal{P}\to\mathbb{B}$, which assigns a truth value to each proposition in $\mathcal{P}$
+- ${\mathcal{L}}$ is the set of the propositions recursively defined by the set $\mathcal{P}$ of a proposition variables
+- A **truth assignment** is a function $\nu:{\mathcal{P}}\to\mathbb{B}$, which assigns a truth value to each proposition in ${\mathcal{S}}$
+- A **truth valuation** (or **model**) is a function $\mathcal{V}:\mathcal{L}\to\mathbb{B}$, which assigns a truth value to each proposition in $\mathcal{L}$
 	- By structural induction the truth valuation $\mathcal{V}$ is uniquely defined by the truth assignment $\nu$:
-		- For each $Q\in\mathcal{S}$, $\mathcal{V}(Q)=\nu(Q)$
-		- For each $\varphi\in\mathcal{P}$
+		- For each $P\in\mathcal{P}$, $\mathcal{V}(P)=\nu(P)$
+		- For each $\varphi\in\mathcal{L}$
 			- If $\varphi=\lnot{\psi}$ then $\mathcal{V}(\varphi)=\begin{cases}\mathsf{T} & \mathcal{V}(\psi)=\mathsf{F}\\ \mathsf{F} & \mathcal{V}(\psi)=\mathsf{T} \end{cases}$
 			- If $\varphi=(\psi \lor \theta)$ then $\mathcal{V}(\varphi)=\begin{cases}\mathsf{T} & \mathcal{V}(\psi)=\mathsf{T} \text{ or } \mathcal{V}(\theta)=\mathsf{T}\\ \mathsf{F} & \text{otherwise} \end{cases}$
 			- If $\varphi=(\psi \land \theta)$ then $\mathcal{V}(\varphi)=\begin{cases}\mathsf{T} & \mathcal{V}(\psi)=\mathsf{T} \text{ and } \mathcal{V}(\theta)=\mathsf{T}\\ \mathsf{F} & \text{otherwise} \end{cases}$
@@ -47,6 +47,7 @@ Given a model $M$,
 # Logical Validity
 
 - A proposition $\varphi$ is a **tautology** (or **logically valid**) (and denoted by $\models \varphi$) if for every model $M$ we have $M\models{\varphi}$. (טאוטולוגיה, פסוק אמיתי לוגית)
+	- Examples: [[Propositional Calculus#Logical Axioms]] (q4.6)
 - A proposition is a **contradiction** if and only if it is false in every model in the language of the proposition. (סתירה לוגית, פסוק שקרי לוגית)
 - $\varphi$ is a tautology if and only if $\lnot \varphi$ is a contradiction
 - $\varphi$ is a contradiction if and only if $\lnot \varphi$ is a tautology
