@@ -60,8 +60,8 @@ Given a power series $\displaystyle\sum_{n=0}^{\infty}a_nx^n$
 
 # Taylor Series
 
-- The **Taylor series** of a function $f(x)$ (that is [[Derivative#Continuously Differentiability|infinitely differentiable]]) at a point $a$, is the power series $\displaystyle\sum_{n=0}^{\infty}\frac{f^{(n)}(a)}{n!}(x-a)^n$. 
-	- When $a=0$ the series is called the **Maclaurin series**.
+- The **Taylor series** of an [[Derivative#Continuously Differentiability|infinitely differentiable]] function $f$ at a point $a$, is the power series $\displaystyle\sum_{n=0}^{\infty}\frac{f^{(n)}(a)}{n!}(x-a)^n$. 
+	- When $a=0$ the series is called the **Maclaurin series** of $f$
 	- The partial sum formed by the first $n+1$ terms of a Taylor series is a polynomial of degree $n$ that is called the $n$th [[#Taylor Polynomial]] of $f$ at $a$. (or the $n$th Maclaurin polynomial of $f$)
 
 ## Representing Functions
