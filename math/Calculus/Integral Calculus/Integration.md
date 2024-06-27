@@ -54,7 +54,7 @@ some exmaple
 
 (2.6)
 $$\displaystyle \int f(x)g'(x) \, dx=f(x)g(x) -\int f'(x)g(x) \, dx$$
-By substitution, $\small\displaystyle{\begin{align} u=f(x)&\implies du=f'(x)\,dx \\ dv=g'(x)\,dx &\implies v=\int g'(x) \, dx=g(x) \end{align}}$ we get:
+By substitution, $$\small\displaystyle{\begin{align} u=f(x)&\implies du=f'(x)\,dx \\ dv=g'(x)\,dx &\implies v=\int g'(x) \, dx=g(x) \end{align}}$$ we get:
 $$\displaystyle \int u\,dv =uv-\int v\,du$$
 
 > The **LIATE** rule: choose $u=f(x)$ as the function that appears first in LIATE and choose $dv=g'(x)\,dx$ as the last one. (Logarithmic, Inverse-trig, Algebric, Trig, Exponential)
@@ -185,7 +185,7 @@ Decomposition of a [[rational function]] $N(x)/D(x)$ into partial fractions
 
 $$\displaystyle\int_{a}^{b}f(x)g'(x)\,dx={\Big [}f(x)g(x){\Big ]}_{a}^{b}-\int _{a}^{b}f'(x)g(x)\,dx$$
 
-By substitution, $\small\displaystyle{\begin{align} u=f(x)&\implies du=f'(x)\,dx \\ dv=g'(x)\,dx &\implies v=\int g'(x) \, dx=g(x) \end{align}}$ we get:
+By substitution, $$\small\displaystyle{\begin{align} u=f(x)&\implies du=f'(x)\,dx \\ dv=g'(x)\,dx &\implies v=\int g'(x) \, dx=g(x) \end{align}}$$ we get:
 
 $$\displaystyle\int ^b_{a}u\,dv=\Big[uv\Big]^b_{a}-\int ^{b}_{a}v \, du$$
 ## Substitution in Definite Integrals
