@@ -33,5 +33,5 @@ export const defaultListPageLayout: PageLayout = {
   ],
   right: [
     Component.Darkmode(),
-  ],
+  ]
 }
