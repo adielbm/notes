@@ -32,6 +32,7 @@ Suppose that $F(x)$ and $G(x)$ are antiderivatives of $f(x)$ and $g(x)$, respect
 	- $\displaystyle\int \frac{1}{\sqrt{ a^2+x^2 }} \, dx=\arcsin \frac{x}{a}+C$
 
 
+
 some exmaple
 
 - (2.8a) $\displaystyle\int x\ln x \, dx=\frac{x^2\ln x}{2}-\frac{x^2}{4}+C$

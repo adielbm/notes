@@ -5,33 +5,28 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  footer: Component.Empty()
+  footer: Component.Empty(),
 }
 
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle()],
-  left: [
-    Component.PageTitle(),
-    Component.Search(),
-    Component.DesktopOnly(Component.Explorer()),
-  ],
+  left: [Component.PageTitle(), Component.Search(), Component.DesktopOnly(Component.Explorer())],
   right: [
     Component.Darkmode(),
     Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks()
+    Component.Backlinks(),
   ],
 }
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
-  left: [
-    Component.PageTitle(),
-    Component.Search(),
-    Component.DesktopOnly(Component.Explorer()),
+  beforeBody: [
+    Component.Breadcrumbs(),
+    Component.ArticleTitle(),
+    Component.ContentMeta(),
+    Component.Content(),
   ],
-  right: [
-    Component.Darkmode(),
-  ]
+  left: [Component.PageTitle(), Component.Search(), Component.DesktopOnly(Component.Explorer())],
+  right: [Component.Darkmode()],
 }

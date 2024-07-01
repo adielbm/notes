@@ -76,7 +76,8 @@ export const FolderPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOpt
           defaultProcessedContent({
             slug: joinSegments(folder, "index") as FullSlug,
             frontmatter: {
-              title: `${i18n(cfg.locale).pages.folderContent.folder}: ${folder}`,
+              // title: `${i18n(cfg.locale).pages.folderContent.folder}: ${folder}`,
+              title: `${folder}`,
               tags: [],
             },
           }),

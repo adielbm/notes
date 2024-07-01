@@ -1,35 +1,3 @@
-
-Dictionary of Logic as Applied in the Study of Language 📚
-
-
-- [ ] [Can you change a sum by rearranging its numbers? --- The Riemann Series Theorem](https://www.youtube.com/watch?v=U0w0f0PDdPA&t=547s "Can you change a sum by rearranging its numbers? --- The Riemann Series Theorem")
-- [x] [The Subtle Reason Taylor Series Work | Smooth vs. Analytic Functions](https://www.youtube.com/watch?v=0HaBNdmUWXY "The Subtle Reason Taylor Series Work | Smooth vs. Analytic Functions")
-
-# Homework ✏️
-
-- calculus
-	- [x] [[homework15]] June 8
-	- [ ] [[homework16]] June 22
-		- [ ] Q1 (to finish)
-		- [x] Q2
-		- [x] Q3a
-		- [x] Q3b
-		- [ ] Q3c
-		- [x] Q4
-		- [ ] Q5
-		- [ ] Q6
-		- [ ] Translating to Hebrew 
-
-## Logic (HW-2)
-
-- from June 4 to June 19 
-- [ ] [[hw2]]
-	- [ ] q1
-	- [ ] q2
-	- [ ] q3
-	- [ ] q4
-	- [ ] q5
-
 # Study 📚
 
 - [ ] Cheat sheet - [[calculus2_cheat_sheet.pdf]] 
@@ -52,40 +20,47 @@ Dictionary of Logic as Applied in the Study of Language 📚
 
 	- [ ] $g(x)^{h(x)}$ https://calculuscollege.com/logarithmic_differentiation_lesson.html
 
+# Exercices 🏋️‍♂️
 
-## Sereis 
-
-- 100 series 💪
+- 100 Integrals 
+	- [x] 10
+	- [ ] 20 https://youtu.be/dgm4-3-Iv3s?t=2234
+	- [ ] 30
+	- [ ] 40
+	- [ ] 50
+	- [ ] 60
+	- [ ] 70
+	- [ ] 80
+	- [ ] 90
+	- [ ] 100
+- 100 series 
 	- [x] 10
 	- [x] 20 
 	- [ ] 30 https://youtu.be/jTuTEcwvkP4?t=6191
 	- [ ] 40 
 	- [ ] 50
+	- [ ] 60
+	- [ ] 70
+	- [ ] 80
+	- [ ] 90
+	- [ ] 100 
+- 100 CALC 2 Problems https://www.youtube.com/watch?v=Kwyk_mteyNc
+	- [ ] 10
+	- [ ] 20
+	- [ ] 30
+	- [ ] 40
+	- [ ] 50
+	- [ ] 60
+	- [ ] 70
+	- [ ] 80
+	- [ ] 90
+	- [ ] 100
 
 
 - [x] power series of $(1+x)^{\alpha}$ 📙(6.2.4)
 - [ ] end-of-chapter 6 exercises
 
-## Logic
-
-- [x] [[logic-5.pdf]] 
-- [x] [[logic-7.pdf]]
-
-
 # Exams 💪
-
-## LOGIC
-
-- 🟢 Wed. **26/06/2024** (כג סיון) 📅🟢
-- ~~24/07/2024~~
-- ~~09/09/2024~~
-
-- [x] [[test1.pdf|test1]] - [[test1_sol.pdf]]
-- [x] [[test2.pdf]] - [[test2_sol.pdf]]
-- [x] [[test3.pdf]] - [[test3_sol.pdf]]
-- [x] [[test4.pdf]] - [[test4_sol.pdf]]
-- [x] [[test5.pdf]] - [[test5_sol.pdf]]
-
 ## CALC-2
 
 - ~~26/06/2024 ~~
@@ -108,8 +83,11 @@ Dictionary of Logic as Applied in the Study of Language 📚
 - 26/09/24 - Elul כג
 - 25/11/24 - Cheshvan כד
 
+
 # Other
 
+- [ ] [Can you change a sum by rearranging its numbers? --- The Riemann Series Theorem](https://www.youtube.com/watch?v=U0w0f0PDdPA&t=547s "Can you change a sum by rearranging its numbers? --- The Riemann Series Theorem")
+- [x] [The Subtle Reason Taylor Series Work | Smooth vs. Analytic Functions](https://www.youtube.com/watch?v=0HaBNdmUWXY "The Subtle Reason Taylor Series Work | Smooth vs. Analytic Functions")
 - [ ] [When CAN'T Math Be Generalized? | The Limits of Analytic Continuation](https://www.youtube.com/watch?v=krtf-v19TJg&t=166s "When CAN'T Math Be Generalized? | The Limits of Analytic Continuation")
 - [ ] https://english.stackexchange.com/questions/40364/what-reasoning-is-behind-the-names-of-the-trigonometric-functions-sine-secan
 - [ ] The REAL power rule https://www.youtube.com/watch?v=3FI9jn57Oho
@@ -120,3 +98,85 @@ Dictionary of Logic as Applied in the Study of Language 📚
 
 
 - A Brief History of Logic - Moshe Y. Vardi https://www.cs.rice.edu/~vardi/comp409/history.pdf
+
+
+
+
+# Archive 📜
+## LOGIC
+
+- [x]  ~~Wed. **26/06/2024** (כג סיון)~~
+- ~~24/07/2024~~
+- ~~09/09/2024~~
+
+- [x] [[test1.pdf|test1]] - [[test1_sol.pdf]]
+- [x] [[test2.pdf]] - [[test2_sol.pdf]]
+- [x] [[test3.pdf]] - [[test3_sol.pdf]]
+- [x] [[test4.pdf]] - [[test4_sol.pdf]]
+- [x] [[test5.pdf]] - [[test5_sol.pdf]]
+
+## Logic
+
+- [x] [[logic-5.pdf]] 
+- [x] [[logic-7.pdf]]
+
+Dictionary of Logic as Applied in the Study of Language 📚
+
+# Physics
+
+## Fundamentals of Physics
+
+###### I: Mechanics, Relativity, and Thermodynamics
+
+- [ ] 1. The Structure of Mechanics
+- [ ] 2. Motion in Higher Dimensions
+- [ ] 3. Newton's Laws I
+- [ ] 4. Newton's Laws II
+- [ ] 5. Law of Conservation of Energy
+- [ ] 6. Conservation of Energy in d=2
+7. ~~The Kepler Problem~~
+8. ~~Multi-particle Dynamics~~
+- [ ] 9. Rotational Dynamics I
+10. ~~Rotational Dynamics II~~
+11. ~~Rotational Dynamics III~~
+12. ~~Special Relativity I: The Lorentz Transformation~~
+13. ~~Special Relativity II: Some Consequences~~
+14. ~~Special Relativity III: Past, Present, and Future~~
+15. ~~Four-momentum~~
+16. ~~Mathematical Methods~~
+- [ ] 17. Simple Harmonic Motion
+- [ ] 18. Waves I
+- [ ] 19. Waves II
+20. ~~Fluids~~
+21. ~~Heat~~
+22. ~~Thermodynamics I~~
+23. ~~Thermodynamics II~~
+24. ~~Entropy and Irreversibility~~
+
+###### II: Electromagnetism, Optics, and Quantum Mechanics
+
+1. Electrostatics I
+2. The Electric Field
+3. Gauss's Law I
+4. ~~Gauss's Law II: Applications~~
+5. ~~The Coulomb Potential~~
+6. Conductors and Capacitors
+7. Circuits and Currents
+8. Magnetism I
+9. Magnetism II: Biot-Savart Law
+10. Ampere II, Faraday and Lenz
+11. More Faraday
+12. AC Circuits
+13. LCR Circuits and Displacement Current
+14. Electromagnetic Waves
+15. Electromagnetism and Relativity
+16. Optics I: Geometric Optics Revisited
+17. Optics II: More Mirrors and Lenses
+18. Wave Theory of Light
+19. Quantum Mechanics: The Main Experiment
+20. The Wave Function and Its Interpretation
+21. Quantization and Measurement
+22. States of Definite Energy
+23. Scattering and Dynamic
+24. Summary and Outlook
+
