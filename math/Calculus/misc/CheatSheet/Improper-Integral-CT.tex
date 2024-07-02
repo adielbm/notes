@@ -1,0 +1,183 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage[landscape]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{enumitem}
+
+% To make this come out properly in landscape mode, do one of the following
+% 1.
+%  pdflatex latexsheet.tex
+%
+% 2.
+%  latex latexsheet.tex
+%  dvips -P pdf  -t landscape latexsheet.dvi
+%  ps2pdf latexsheet.ps
+
+
+% If you're reading this, be prepared for confusion.  Making this was
+% a learning experience for me, and it shows.  Much of the placement
+% was hacked in; if you make it better, let me know...
+
+
+% 2008-04
+% Changed page margin code to use the geometry package. Also added code for
+% conditional page margins, depending on paper size. Thanks to Uwe Ziegenhagen
+% for the suggestions.
+
+% 2006-08
+% Made changes based on suggestions from Gene Cooperman. <gene at ccs.neu.edu>
+
+
+% To Do:
+% \listoffigures \listoftables
+% \setcounter{secnumdepth}{0}
+
+
+% This sets page margins to .5 inch if using letter paper, and to 1cm
+% if using A4 paper. (This probably isn't strictly necessary.)
+% If using another size paper, use default 1cm margins.
+\ifthenelse{\lengthtest { \paperwidth = 11in}}
+	{ \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
+	{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
+		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+	}
+
+% Turn off header and footer
+\pagestyle{empty}
+ 
+
+% Redefine section commands to use less space
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {1ex plus .2ex}%
+                                {\normalfont\small\bfseries}}
+
+
+% Don't print section numbers
+\setcounter{secnumdepth}{0}
+
+
+\setlength{\parindent}{3pt}
+\setlength{\parskip}{0pt plus 0.2ex}
+
+\begin{document}
+
+
+
+\begin{multicols}{2}
+
+% multicol parameters
+% These lengths are set only within the two main columns
+%\setlength{\columnseprule}{0.25pt}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{1pt}
+
+\section{Improper Integrals (Convergence Tests)}
+
+\subsection{P-Test}
+
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item (3.2,q3.5) $\displaystyle\int _{0}^b\frac{dx}{x^p}$  and $\displaystyle\int _{a}^b\frac{dx}{(x-a)^p}$ and $\displaystyle\int _{a}^b\frac{dx}{(b-a)^p}$ converges iff $p<1$
+    \item (3.12) if $a>0$ then $\displaystyle\int ^\infty_{a} \frac{dx}{x^p}$ converges iff $p>1$
+    \item $\displaystyle\int ^\infty_{1}\frac{dx}{x^{p}} \, dx=\begin{cases} \frac{1}{p-1} &  p>1 \\ \text{diverges} & {p\leq 1}\end{cases}$
+\end{itemize}
+
+
+\subsection{Cauchy's Criterion}
+(3.4) Let $f(x)$ be defined on $(a,b]$ and integrable on every interval $[t,b]$ (where $a<t<b$). Then:
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item $\displaystyle\int ^b_{a}f(x) \, dx$ converges iff $\forall\varepsilon>0,\exists \delta>0:\forall r,s\in[a,a+\delta],\,\displaystyle\left|\int ^s_{r}f(x) \, dx\right|<\varepsilon$
+\end{itemize}
+(3.15) Let $f(x)$ be defined on $[a,\infty)$ and integrable on every interval $[a,t]$ (where $a<t$). Then:
+\begin{itemize}
+    \item $\displaystyle\int ^\infty_{a}f(x) \, dx$ conv. iff $\forall\varepsilon>0,\exists M>a:\forall r,s\in[M,\infty),\,\,\displaystyle\left|\int ^s_{r}f(x) \, dx\right|<\varepsilon$
+\end{itemize}
+
+\small(similar for $[a,b)$ and $(-\infty,b]$)
+\normalsize
+
+\subsection{Comparison Test $(a,b]$}
+Let $f,g$ be non-negative functions defined on $(a,b]$ and integrable on every closed subinterval of $(a,b]$. 
+
+\subsubsection{Direct Comparison Test}
+
+(3.5) If $\exists \delta>0:\forall x\in(a,a+\delta),\,0\leq f(x)\leq g(x)$ then:
+
+\begin{itemize}
+    \item if $\int ^b_{a} g$ converges, then $\int ^b_{a} f$ converges
+    \item if $\int ^b_{a} f$ diverges, then $\int ^b_{a} g$ diverges
+\end{itemize}
+
+\small(similar test for $[a,b)$)
+\normalsize
+
+\subsubsection{Limit Comparison Test}
+
+\small
+(3.5\*) Given $\displaystyle\lim_{ x \to a^+ }\frac{f(x)}{g(x)}=L$ exists, then:
+\normalsize
+\begin{itemize}
+    \setlength\itemsep{0em}
+	\item if $0<L<\infty$ then $\displaystyle\int ^b_{a}g$ converges iff $\displaystyle\int ^b_{a}f$ converges
+	\item if $L=0$ and $\displaystyle\int ^b_{a}g$ converges, then $\displaystyle\int ^b_{a}f$ converges
+	\item if $L=\infty$ and $\displaystyle\int ^b_{a}g$ diverge, then $\displaystyle\int ^b_{a}f$ diverge
+	\item (similar test for $[a,b)$)
+\end{itemize}
+
+
+\subsection{Comparison Tests $[a,∞)$}
+
+$f,g$ non-negative on $[a,\infty)$ and integrable on every closed subinterval $[a,t]\subset [a,\infty)$.
+
+\subsubsection{Direct Comparison Test}
+(3.16) If $\exists A\geq a:\forall x\in[A,\infty),\,0\leq f(x)\leq g(x)$ then:
+
+\begin{itemize}
+    \item if $\int ^\infty_{a} g$ converges, then $\int ^\infty_{a} f$ converges
+	\item if $\int ^\infty_{a} f$ diverges, then $\int ^\infty_{a} g$ diverges
+\end{itemize}
+
+\subsubsection{Limit Comparison Test}
+
+(3.16-\*) Given $\displaystyle\lim_{ x \to \infty }\frac{f(x)}{g(x)}=L$ exists (finite or infinite) then:
+
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item if $0<L<\infty$ then $\int ^b_{a}g(x) \, dx$ converges if and only if $\int ^b_{a}g(x) \, dx$ converges
+	\item if $L=0$ and $\int ^b_{a}g(x) \, dx$ converges then $\int ^b_{a}g(x) \, dx$ converges
+	\item if $L=\infty$ and $\int ^b_{a}g(x) \, dx$ diverge then $\int ^b_{a}g(x) \, dx$ diverge
+\end{itemize}
+
+% TODO: 
+% - Dirichlet's Test
+% - Integral Test
+% - Absolutely Integrable Function
+
+
+\end{multicols}
+\end{document}

@@ -1,0 +1,215 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage[landscape]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{enumitem}
+
+% To make this come out properly in landscape mode, do one of the following
+% 1.
+%  pdflatex latexsheet.tex
+%
+% 2.
+%  latex latexsheet.tex
+%  dvips -P pdf  -t landscape latexsheet.dvi
+%  ps2pdf latexsheet.ps
+
+
+% If you're reading this, be prepared for confusion.  Making this was
+% a learning experience for me, and it shows.  Much of the placement
+% was hacked in; if you make it better, let me know...
+
+
+% 2008-04
+% Changed page margin code to use the geometry package. Also added code for
+% conditional page margins, depending on paper size. Thanks to Uwe Ziegenhagen
+% for the suggestions.
+
+% 2006-08
+% Made changes based on suggestions from Gene Cooperman. <gene at ccs.neu.edu>
+
+
+% To Do:
+% \listoffigures \listoftables
+% \setcounter{secnumdepth}{0}
+
+
+% This sets page margins to .5 inch if using letter paper, and to 1cm
+% if using A4 paper. (This probably isn't strictly necessary.)
+% If using another size paper, use default 1cm margins.
+\ifthenelse{\lengthtest { \paperwidth = 11in}}
+	{ \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
+	{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
+		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+	}
+
+% Turn off header and footer
+\pagestyle{empty}
+ 
+
+% Redefine section commands to use less space
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {1ex plus .2ex}%
+                                {\normalfont\small\bfseries}}
+
+
+% Don't print section numbers
+\setcounter{secnumdepth}{0}
+
+
+\setlength{\parindent}{3pt}
+\setlength{\parskip}{0pt plus 0.2ex}
+
+\begin{document}
+
+
+
+\begin{multicols}{2}
+
+% multicol parameters
+% These lengths are set only within the two main columns
+%\setlength{\columnseprule}{0.25pt}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{1pt}
+
+\section{Integrals}
+\begin{tabular}{@{}ll@{}l@{}}
+Linearity & $\int (\alpha f+\beta g)=\alpha\int f +\beta \int g$ \\
+Power Rule & $\int x^r \, dx=\frac{x^{r+1}}{r+1}+C$ & $r\neq -1$ \\
+& $\int \frac{1}{x} \, dx=\ln|x|+C$ & \\
+Exponential & $\int a^x \, dx=\frac{a^x}{\ln a}+C$ & $a>0, a\neq 1$ \\
+& $\int e^x \, dx=e^x+C$ & \\
+
+\end{tabular}
+
+
+
+\subsection{Integration by Parts}
+
+\large
+\[
+\int f(x)g'(x) \, dx=f(x)g(x) -\int f'(x)g(x) \, dx
+\] 
+\[
+\int u \, dv = uv - \int v \, du
+\]
+\subsection{Substitution}
+
+\renewcommand{\arraystretch}{1} % Adjust the value to increase row spacing
+
+\[
+\int f(g(x))g'(x)\, dx = {\color{gray}\left[\begin{array}{rl}
+u&= g(x) \\ du&= g'(x)dx \end{array}\right]} = \int f(u) \, du 
+\]
+\normalsize
+
+Return to $x$ by substitute $u=g(x)$
+
+\small
+(Assumptions: $f$ is continuous on $I$, $g$ is continuously differentiable on $J$, $g(J) \subseteq I$ (i.e. image of $g$ is subset of $I$, so that $f \circ g$ is defined))
+
+
+\normalsize
+
+\subsubsection{Logarithmic Integration}
+\[
+\int \frac{f'(x)}{f(x)} \, dx = \ln|f(x)| + C
+\]
+
+% \small (special case of substitution with $u = f(x)$ and $du = f'(x)dx$)
+
+\subsection{Substitution V2}
+\[
+\int f(x) \, dx = {\color{gray}\left[\begin{array}{rl} x &= \varphi(t) \\ dx &= \varphi'(t)dt \end{array}\right]} = \int f(\varphi(t))\varphi'(t) \, dt 
+\]
+
+Return to $x$ by substitute $t=\varphi^{-1}(x)$
+
+
+\subsection{2.5}
+
+$\displaystyle\int f(x) \, dx=F(x)+C\implies\displaystyle\int f(\alpha x+\beta) \, dx=\frac{1}{\alpha}F(\alpha x+\beta)+C$ 
+
+
+
+\subsection{Trigonometric Substitution} 
+
+\subsection{Formulas}
+
+\begin{tabular}{@{}ll@{}l@{}}
+
+
+
+ln & $\int \ln x \, dx=x\ln x-x+C$ \\
+
+
+Trigonometric & $\int \sin x \, dx=-\cos x+C$ \\
+& $\int \cos x \, dx=\sin x+C$ \\
+& $\int \tan x \, dx=-\ln|\cos x|+C$ \\
+& $\int \cot x \, dx=\ln|\sin x|+C$ \\
+Reciprocal Trig. & $\displaystyle\int \frac{1}{\sin x} \, dx=\ln\left|\tan \frac{x}{2}\right|+C$ \\
+& $\displaystyle\int \frac{1}{\cos x} \, dx=-\ln\left|\tan \left( \frac{x}{2}-\frac{\pi}{4} \right)\right|+C$ \\
+& $\displaystyle\int \frac{1}{\sin^2x} \, dx=-\cot x$ \\
+& $\displaystyle\int \frac{1}{\cos^2x} \, dx=\tan x$ \\
+
+Inverse Trig. &  $\displaystyle\int \arcsin x \, dx=x\arcsin x+\sqrt{ 1-x^2 }+C$ \\	
+
+& $\displaystyle\int \arctan x \, dx=x\arctan x-\frac{1}{2}\ln(x^2+1)+C$ \\
+ 
+Der. of Inverse Trig. & $\displaystyle\int \frac{1}{1 + x^2} \, dx = \arctan x + C$ \\
+& $\displaystyle\int \frac{1}{\sqrt{1 - x^2}} \, dx = \arcsin x + C$ \\
+& $\displaystyle\int \frac{1}{\sqrt{ a^2+x^2 }} \, dx=\arcsin \frac{x}{a}+C$ \\
+
+
+
+(2.8a) & $\displaystyle\int x\ln x \, dx=\frac{x^2\ln x}{2}-\frac{x^2}{4}+C$ \\
+(2.9) & $\displaystyle\int \ln x \, dx=x\ln x-x+C$ \\
+(2.10) & $\displaystyle\int \ln^2x \, dx=x\ln^2x-2x\ln x+2x+C$ \\
+% (e2.12) & $\displaystyle I_{m}=\int \frac{1}{(x^2+a^2)^{m}} \, dx={\begin{cases}I_{1}=\frac{1}{a}\arctan \frac{x}{a}+C \\ I_{m+1}=\frac{1}{2ma^2}\cdot \frac{x}{(x^2+a^2)^m}+\frac{2m-1}{2ma^2}I_{m} \end{cases}}$ \\
+(by power rule) & $\int \frac{1}{\sqrt{ x }} \, dx=2\sqrt{ x }+C$ \\
+& $\int 0 \, dx=C$ \\
+& $\int 1 \, dx=\int  \, dx=x+C$ \\
+
+\end{tabular}
+
+
+\newpage
+
+\section{Definite Integrals}
+
+\begin{tabular}{@{}ll@{}l@{}}   
+Additivity & $\int_{a}^{b} f(x) \, dx = \int_{a}^{c} f(x) \, dx + \int_{c}^{b} f(x) \, dx$ &  $a<c<b$ and $f$ is int. on $[a,b]$ \\
+Shift Property & $\int_{a}^{b} f(x) \, dx = \int_{a-c}^{b-c} f(x+c) \, dx$ \\
+& $\int_{0}^{a} f(x) \, dx = \int_{0}^{a} f(a-x) \, dx$ \\
+& $\int_{a}^{b} c \, dx = c(b-a)$ \\
+& $\int_{a}^{a} f(x) \, dx = 0$ \\
+
+
+\end{tabular}
+
+
+\end{multicols}
+\end{document}
