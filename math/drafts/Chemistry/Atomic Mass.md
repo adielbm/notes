@@ -4,19 +4,44 @@
     - (mass of proton) $m_{\text{p}} \approx 1.007 276 466 5789 \, \text{u}$
     - (mass of neutron) $m_{\text{n}} \approx 1.008 664 916 06 \, \text{u}$
     - (mass of electron) $m_{\text{e}} \approx 5.485 799 090 441 \times 10^{-4} \, \text{u}$
+    - Atomic mass is sometimes called **atomic weight** or **standard atomic weight**.
 - An **unified atomic mass unit** (u) or **dalton** (Da) is a non-SI unit of mass defined as $\frac{1}{12}$ of the mass of an unbound neutral atom of carbon-12 in its nuclear and electronic ground state and at rest.
     - The **atomic mass constant** is a constant defined as $m_{u} =\frac{1}{12} m(^{12}\text{C}) = 1 \, \text{u} = 1.66053906892(52) \times 10^{-27} \, \text{kg}$
-- **(atomic) mass number** (A) is the total number of protons and neutrons in the nucleus of an atom. (A = Z + N)
-    - It is approximately equal to the atomic mass of the atom in unified atomic mass units.
-- **relative atomic mass** ($A_r$) is a dimensionless quantity defined as $A_r=\sum_i \left( m_i \cdot f_i \right)$, where: 
-    - $m_i$ is the mass of the $i$-th isotope of the element 
-    - $f_i$ is the fractional abundance of the $i$-th isotope.
+- The **atomic nucleus** of an atom is the small, dense region consisting of protons and neutrons at the center of the atom.
+- The **(atomic) mass number** (A) is the total number of protons and neutrons (together known as nucleons) in an atomic nucleus. (A = Z + N)
+    - It is approximatelly equal to the atomic mass of the atom in unified atomic mass units.
+- Notaion:
+    - **Nuclear Symbol Notation**: $^{A}_{Z}\ce{X}$
+        - $A$ is the mass number
+        - $Z$ is the atomic number (optional if the element is known)
+        - $\ce{X}$ is the chemical symbol of the element
+        - Examples: 
+            - (carbon-14) $\ce{^{14}_{6}C}$ or $\ce{^{14}C}$
+            - (neon-20) $\ce{^{20}_{10}Ne}$ or $\ce{^{20}Ne}$
+    - **Hyphen Notation**: $\ce{X}\text{-}A$
+        - $A$ is the mass number
+        - $\ce{X}$ is the chemical symbol or name of the element
+        - Examples:
+            - (carbon-14) $\ce{C-14}$ or $\ce{carbon-14}$
+            - (neon-20) $\ce{Ne-20}$ or $\ce{neon-20}$
+- Atoms with the same number of protons but different numbers of neutrons are called **isotopes**.
+- The **natural abundance** (NA) of an isotope is the percentage of that isotope that occurs in nature.
+- The **relative isotopic mass** of a particular isotope of an element is the mass the isotope relative to the mass of carbon-12.
+    - It defined as $m_i = \frac{m}{m_{\text{C}}}$, where:
+        - $m_i$ is the relative isotopic mass of the isotope (dimensionless)
+        - $m$ is the mass of the isotope (in $\text{u}$)
+        - $m_{\text{C}}$ is the mass of carbon-12 (in $\text{u}$)
+- The **relative atomic mass** ($A_r$) of an element is the weighted average of the atomic masses of the naturally occurring isotopes of the element.  
+    - It defined as $A_r=\sum_i \left( m_i \cdot f_i \right)$, where: 
+        - $m_i$ is the mass of the $i$-th isotope of the element (in $\text{u}$)
+        - $f_i$ is the fractional abundance of the $i$-th isotope
     - (aka: **atomic weight** or **average atomic mass**)
-- **amount of substance** (n) is the number of entities (atoms, molecules, ions, etc.) in a sample of matter
+- The **standard atomic weight** ($A_r^\circ(E)$ for an element $E$) is the weighted arithmetic mean #todo
+- The **amount of substance** (n) of a sample of matter is the number of entities (atoms, molecules, ions, etc.) in the sample.
 - **mole** (mol) is SI unit of amount of substance
     - The **Avogadro number** is $N_0=6.02214076×10^{23}$ which is the number of entities in one mole of a substance
     - The **Avogadro constant** $N_\text{A}=6.02214076×10^{23} \, \text{mol}^{-1}$ 
-    - Approximatlly one mole based on the number of atoms in 12 grams of carbon-12
+    - Approximatlly one mole is based on the number of atoms in 12 grams of carbon-12
 - **molar mass** ($M$) is the mass of one mole of a substance (expressed in g/mol)
     - $M=\frac{m}{N_A}$  
         - $m$ is the mass of the substance in grams 
