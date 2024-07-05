@@ -91,3 +91,8 @@
 
 - The **alternating harmonic series** is the series $\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}=\ln 2$.
 
+
+## Misc.
+
+- (q5.27a) The series $\displaystyle\sum \frac{1}{n (\ln n)^\alpha}$ converges if $\alpha>1$ and diverges if $\alpha\leq1$.
+

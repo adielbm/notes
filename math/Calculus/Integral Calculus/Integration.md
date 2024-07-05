@@ -27,6 +27,9 @@ Suppose that $F(x)$ and $G(x)$ are antiderivatives of $f(x)$ and $g(x)$, respect
 	- $\displaystyle\int \frac{1}{\sin^2x} \, dx=-\cot x$
 	- $\displaystyle\int \frac{1}{\cos^2x} \, dx=\tan x$
 - Inverse Trigonometric
+	- $\displaystyle\int \arcsin x \, dx=x\arcsin x+\sqrt{ 1-x^2 }+C$
+	- $\displaystyle\int \arctan x \, dx=x\arctan x-\frac{1}{2}\ln(x^2+1)+C$
+- Der. of Inverse Trigonometric
 	- $\displaystyle\int \frac{1}{1 + x^2} \, dx = \arctan x + C$
 	- $\displaystyle\int \frac{1}{\sqrt{1 - x^2}} \, dx = \arcsin x + C$
 	- $\displaystyle\int \frac{1}{\sqrt{ a^2+x^2 }} \, dx=\arcsin \frac{x}{a}+C$
@@ -45,6 +48,9 @@ some exmaple
 	- $\int 1 \, dx=\int  \, dx=x+C$
 
 - $\displaystyle\int (ax+b)^n \, dx=\frac{(ax+b)^{n+1}}{a(n+1)}+C$ (for $\alpha\neq -1$) #todo 
+
+
+- ${\displaystyle \int {\frac {c}{ax+b}}\,dx={\frac {c}{a}}\ln \left|ax+b\right|+C}$
 
 > Read More 
 > https://en.wikipedia.org/wiki/Integration_by_reduction_formulae
@@ -84,7 +90,7 @@ $$\int f(x) \, dx={\color{gray}\left[\begin{align} x &= \varphi(t) \\ dx &= \var
 $\int f(x) \, dx=\int f(g(t))g'(t) \, dt\Big\vert_{t=g'(x)}$
 
 
-- (2.5)  $f(\alpha x+\beta)$ from (where $\alpha\neq 0$)
+- (2.5)  $f(\alpha x+\beta)$ form (where $\alpha\neq 0$)
 	- $\displaystyle\int f(x) \, dx=F(x)+C\implies\displaystyle\int f(\alpha x+\beta) \, dx=\frac{1}{\alpha}F(\alpha x+\beta)+C$ 
 
 #### Trigonometric substitution

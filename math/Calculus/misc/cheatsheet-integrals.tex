@@ -106,53 +106,16 @@ Exponential & $\int a^x \, dx=\frac{a^x}{\ln a}+C$ & $a>0, a\neq 1$ \\
 \end{tabular}
 
 
-\begin{tabular}{@{}ll@{}l@{}}
-
-
-ln & $\int \ln x \, dx=x\ln x-x+C$ \\
-
-
-Trigonometric & $\int \sin x \, dx=-\cos x+C$ \\
-& $\int \cos x \, dx=\sin x+C$ \\
-& $\int \tan x \, dx=-\ln|\cos x|+C$ \\
-& $\int \cot x \, dx=\ln|\sin x|+C$ \\
-Reciprocal Trig. & $\displaystyle\int \frac{1}{\sin x} \, dx=\ln\left|\tan \frac{x}{2}\right|+C$ \\
-& $\displaystyle\int \frac{1}{\cos x} \, dx=-\ln\left|\tan \left( \frac{x}{2}-\frac{\pi}{4} \right)\right|+C$ \\
-& $\displaystyle\int \frac{1}{\sin^2x} \, dx=-\cot x$ \\
-& $\displaystyle\int \frac{1}{\cos^2x} \, dx=\tan x$ \\
-
-Inverse Trig. &  $\displaystyle\int \arcsin x \, dx=x\arcsin x+\sqrt{ 1-x^2 }+C$ \\	
-
-& $\displaystyle\int \arctan x \, dx=x\arctan x-\frac{1}{2}\ln(x^2+1)+C$ \\
- 
-Der. of Inverse Trig. & $\displaystyle\int \frac{1}{1 + x^2} \, dx = \arctan x + C$ \\
-& $\displaystyle\int \frac{1}{\sqrt{1 - x^2}} \, dx = \arcsin x + C$ \\
-& $\displaystyle\int \frac{1}{\sqrt{ a^2+x^2 }} \, dx=\arcsin \frac{x}{a}+C$ \\
-
-
-
-(2.8a) & $\displaystyle\int x\ln x \, dx=\frac{x^2\ln x}{2}-\frac{x^2}{4}+C$ \\
-(2.9) & $\displaystyle\int \ln x \, dx=x\ln x-x+C$ \\
-(2.10) & $\int \ln^2x \, dx=x\ln^2x-2x\ln x+2x+C$ \\
-% (e2.12) & $\displaystyle I_{m}=\int \frac{1}{(x^2+a^2)^{m}} \, dx={\begin{cases}I_{1}=\frac{1}{a}\arctan \frac{x}{a}+C \\ I_{m+1}=\frac{1}{2ma^2}\cdot \frac{x}{(x^2+a^2)^m}+\frac{2m-1}{2ma^2}I_{m} \end{cases}}$ \\
-(by power rule) & $\int \frac{1}{\sqrt{ x }} \, dx=2\sqrt{ x }+C$ \\
-& $\int 0 \, dx=C$ \\
-& $\int 1 \, dx=\int  \, dx=x+C$ \\
-
-\end{tabular}
 
 \subsection{Integration by Parts}
 
-
+\large
 \[
 \int f(x)g'(x) \, dx=f(x)g(x) -\int f'(x)g(x) \, dx
 \] 
 \[
 \int u \, dv = uv - \int v \, du
 \]
-
-($u=f(x)\longleftarrow$ LIATE $\longrightarrow g'(x)\, dx$)
-
 \subsection{Substitution}
 
 \renewcommand{\arraystretch}{1} % Adjust the value to increase row spacing
@@ -194,20 +157,43 @@ $\displaystyle\int f(x) \, dx=F(x)+C\implies\displaystyle\int f(\alpha x+\beta) 
 
 \subsection{Trigonometric Substitution} 
 
-\begin{array}{|c|c|c|c|}
-\hline
-\text{Expression} & \text{Substitution} & \text{Domain} & \text{Simplified Expression} \\
-\hline
-a^2 - x^2 & \begin{array}{c} x = a \sin t \\ dx = a \cos t \, dt \\ t = \arcsin \frac{x}{a} \end{array} & -\frac{\pi}{2} \leq t \leq \frac{\pi}{2} & a^2 \cos^2 t \\
-\hline
-a^2 + x^2 & \begin{array}{c} x = a \tan t \\ dx = a \sec^2 t \, dt \\ t = \arctan \frac{x}{a} \end{array} & -\frac{\pi}{2} < t < \frac{\pi}{2} & a^2 \sec^2 t \\
-\hline
-x^2 - a^2 & \begin{array}{c} x = a \sec t \\ dx = a \sec t \tan t \, dt \\ t = \text{arcsec} \frac{x}{a} \end{array} & \begin{array}{c} 0 \leq t < \frac{\pi}{2} \\ \pi \leq t < \frac{3\pi}{2} \end{array} & a^2 \tan^2 t \\
-\hline
-\end{array}
+\subsection{Formulas}
+
+\begin{tabular}{@{}ll@{}l@{}}
 
 
 
+ln & $\int \ln x \, dx=x\ln x-x+C$ \\
+
+
+Trigonometric & $\int \sin x \, dx=-\cos x+C$ \\
+& $\int \cos x \, dx=\sin x+C$ \\
+& $\int \tan x \, dx=-\ln|\cos x|+C$ \\
+& $\int \cot x \, dx=\ln|\sin x|+C$ \\
+Reciprocal Trig. & $\displaystyle\int \frac{1}{\sin x} \, dx=\ln\left|\tan \frac{x}{2}\right|+C$ \\
+& $\displaystyle\int \frac{1}{\cos x} \, dx=-\ln\left|\tan \left( \frac{x}{2}-\frac{\pi}{4} \right)\right|+C$ \\
+& $\displaystyle\int \frac{1}{\sin^2x} \, dx=-\cot x$ \\
+& $\displaystyle\int \frac{1}{\cos^2x} \, dx=\tan x$ \\
+
+Inverse Trig. &  $\displaystyle\int \arcsin x \, dx=x\arcsin x+\sqrt{ 1-x^2 }+C$ \\	
+
+& $\displaystyle\int \arctan x \, dx=x\arctan x-\frac{1}{2}\ln(x^2+1)+C$ \\
+ 
+Der. of Inverse Trig. & $\displaystyle\int \frac{1}{1 + x^2} \, dx = \arctan x + C$ \\
+& $\displaystyle\int \frac{1}{\sqrt{1 - x^2}} \, dx = \arcsin x + C$ \\
+& $\displaystyle\int \frac{1}{\sqrt{ a^2+x^2 }} \, dx=\arcsin \frac{x}{a}+C$ \\
+
+
+
+(2.8a) & $\displaystyle\int x\ln x \, dx=\frac{x^2\ln x}{2}-\frac{x^2}{4}+C$ \\
+(2.9) & $\displaystyle\int \ln x \, dx=x\ln x-x+C$ \\
+(2.10) & $\displaystyle\int \ln^2x \, dx=x\ln^2x-2x\ln x+2x+C$ \\
+% (e2.12) & $\displaystyle I_{m}=\int \frac{1}{(x^2+a^2)^{m}} \, dx={\begin{cases}I_{1}=\frac{1}{a}\arctan \frac{x}{a}+C \\ I_{m+1}=\frac{1}{2ma^2}\cdot \frac{x}{(x^2+a^2)^m}+\frac{2m-1}{2ma^2}I_{m} \end{cases}}$ \\
+(by power rule) & $\int \frac{1}{\sqrt{ x }} \, dx=2\sqrt{ x }+C$ \\
+& $\int 0 \, dx=C$ \\
+& $\int 1 \, dx=\int  \, dx=x+C$ \\
+
+\end{tabular}
 
 
 \newpage

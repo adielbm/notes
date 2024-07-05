@@ -29,7 +29,7 @@
 
 |                        | Quantity     | in SI base units                    |                                                                                |
 | ---------------------- | ------------ | ----------------------------------- | ------------------------------------------------------------------------------ |
-| $ρ, D$                 | density      | $\mathsf{{kg/m}^3}$                 |                                                                                |
+| $ρ, D$                 | density      | $\mathsf{{kg/m}^3}$                 | $\rho=\frac{m}{V}$                                                             |
 | $\mathbf{v},v,\vec{v}$ | velocity     | $\mathsf{m/s}$                      |                                                                                |
 | $a$                    | acceleration | $\mathsf{m/s^2}$ or $\mathsf{N/kg}$ | $\mathbf {a} ={\frac {d\mathbf {v} }{dt}}={\frac {d^{2}\mathbf {x} }{dt^{2}}}$ |
 | $A$                    | area         | $\mathsf{m^2}$                      |                                                                                |

@@ -13,6 +13,7 @@
 \usepackage{xcolor}
 \usepackage{colortbl}
 \usepackage{array}
+\usepackage{enumitem}
 
 % To make this come out properly in landscape mode, do one of the following
 % 1.
@@ -81,11 +82,10 @@
 \setcounter{secnumdepth}{0}
 
 
-\setlength{\parindent}{10pt}
-\setlength{\parskip}{0pt plus 0.5ex}
+\setlength{\parindent}{3pt}
+\setlength{\parskip}{0pt plus 0.2ex}
 
-\newcommand{\sep}{\\[-1.5ex]\arrayrulecolor{gray}\hline & \\[-1.5ex]}
-
+\newcommand{\sep}{\\[1ex]\arrayrulecolor{gray}\hline}
 
 
 % -----------------------------------------------------------------------
@@ -94,6 +94,7 @@
 
 \raggedright
 \footnotesize
+
 \begin{multicols}{2}
 
 % multicol parameters
@@ -102,19 +103,21 @@
 \setlength{\premulticols}{1pt}
 \setlength{\postmulticols}{1pt}
 \setlength{\multicolsep}{1pt}
-\setlength{\columnsep}{2pt}
+\setlength{\columnsep}{1pt}
 
-\begin{center}
-     \Large{\textbf{Cheat Sheet}} \\
-\end{center}
 
 \section{Series (Convergence Tests)}
+
+\renewcommand{\arraystretch}{2} % Adjust the value to increase row spacing
+
+
 \begin{tabular}{@{}ll@{}l@{}}
-Divergence Test & $\lim_{n\to\infty} a_n \neq 0 \implies \sum a_n$ diverges \\
-Geometric Series & $\sum_{n=0}^{\infty} ar^n = \frac{a}{1-r}$ if $|r|<1$ \\
-P-Series & $\sum_{n=1}^{\infty} \frac{1}{n^p}$ converges if $p>1$ \\
-Integral Test & $\int_{1}^{\infty} f(x) \, dx$ and $\sum_{n=1}^{\infty} f(n)$ converge together \\
-Cauchy C.T. & $\sum a_n$ conv. iff $\forall \varepsilon > 0, \exists N: \forall n \geq N, \forall p \in \mathbb{N}, \sum_{k=n+1}^{n+p} a_k < \varepsilon$ \\
+Divergence Test & $\displaystyle\lim_{n\to\infty} a_n \neq 0 \implies \sum a_n$ diverges \\
+Geometric Series & $\displaystyle\sum ar^n = \frac{a}{1-r}$ (if $|r|<1$) \\
+P-Series & $\displaystyle\sum_{n=1}^{\infty} \frac{1}{n^p}$ converges (if $p>1$) \\
+Integral Test & $\displaystyle\int_{1}^{\infty} f(x) \, dx$ and $\displaystyle\sum_{n=1}^{\infty} f(n)$ converge together \\
+Cauchy C.T. & $\displaystyle\sum a_n$ conv. iff \\
+& $\forall \varepsilon > 0, \exists N: \forall n \geq N, \forall p \in \mathbb{N}, \sum_{k=n+1}^{n+p} a_k < \varepsilon$ \\
 Absolute C.T. & $\sum |a_n|$ converges $\implies \sum a_n$ converges \\
 MCT \\
 
@@ -128,7 +131,7 @@ MCT \\
 \end{itemize}
 
 \textbf{Limit Comparison} 
-($\displaystyle\lim_{n\to\infty} \frac{a_n}{b_n} = c > 0$)
+($\lim_{n\to\infty} \frac{a_n}{b_n} = c > 0$)
 \begin{itemize}
 \item $\sum b_n$ converges $\iff \sum a_n$ converges
 \item  $\sum b_n$ diverges $\iff \sum a_n$ diverges 
@@ -137,34 +140,23 @@ MCT \\
 \subsubsection{Root Test (Cauchy)}
 
 \begin{itemize}
-\item (5.16) 
-\begin{enumerate}
-	\item (a.) If there exists $q<1$ such that $\sqrt[n]{|a_n|}\leq q$ for almost all $n$, then the series $\sum a_n$ converges absolutely. 
-	\item (b.) If $\sqrt[n]{|a_n|}\geq 1$ for infinitely many $n$, then the series $\sum a_n$ diverges.
-\end{enumerate}
-\item (5.16*) Given $c=\displaystyle\limsup_{n\to\infty}\sqrt[n]{|a_n|}$. or ($c=\displaystyle\lim_{n\to\infty}\sqrt[n]{|a_n|}$ exists (5.16**))
-\begin{itemize}
-    \item If $c<1$, then the series $\sum a_n$ converges absolutely.
-    \item If $c>1$, then the series $\sum a_n$ diverges.
-    \item If $c=1$, then the test is inconclusive.
-\end{itemize}
+\item (5.16a) If there exists $q<1$ such that $\sqrt[n]{|a_n|}\leq q$ for almost all $n$, then the series $\sum a_n$ converges absolutely. 
+\item (5.16b) If $\sqrt[n]{|a_n|}\geq 1$ for infinitely many $n$, then the series $\sum a_n$ diverges.
+
+\item (5.16*,**) Given $c=\displaystyle\limsup_{n\to\infty}\sqrt[n]{|a_n|}$. or ($c=\displaystyle\lim_{n\to\infty}\sqrt[n]{|a_n|}$ exists) \\
+    $c<1\implies\sum a_n$ converges absolutely.\\
+    $c>1\implies\sum a_n$ diverges.
 \end{itemize}
 
 \subsubsection{Ratio Test (d'Alembert)}
 Given $a_n\neq0$ for all $n$ \\
 
 \begin{itemize}
-\item (5.17)
-\begin{itemize}
-    \item (a.) If there exists $q<1$ such that $\left|\frac{a_{n+1}}{a_n}\right|\leq q$ for almost all $n$, then the series $\sum a_n$ converges absolutely.
-    \item (b.) If $\left|\frac{a_{n+1}}{a_n}\right|\geq 1$ for almost all $n$, then the series $\sum a_n$ diverges.    
-\end{itemize}
-\item (5.17**) Given $c=\displaystyle\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|$.
-\begin{itemize}
-    \item If $c<1$, then the series $\sum a_n$ converges absolutely.
-    \item If $c>1$, then the series $\sum a_n$ diverges.
-    \item If $c=1$, then the test is inconclusive.
-\end{itemize}
+\item (5.17a) If there exists $q<1$ such that $\left|\frac{a_{n+1}}{a_n}\right|\leq q$ for almost all $n$, then the series $\sum a_n$ converges absolutely.
+\item (5.17b) If $\left|\frac{a_{n+1}}{a_n}\right|\geq 1$ for almost all $n$, then the series $\sum a_n$ diverges.    
+\item (5.17**) Given $c=\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|$.
+    \\ $c<1\implies\sum a_n$ converges absolutely.
+    \\ $c>1\implies\sum a_n$ diverges.
 \item (q5.26) If there exists $q<1$ such that $\left|\frac{a_{n+1}}{a_n}\right|\leq q<1$ for almost all $n$, then there exists $q\leq q'<1$ such that $\sqrt[n]{|a_n|}\leq q'$ for almost all $n$.
 \end{itemize}
 
@@ -172,19 +164,29 @@ Given $a_n\neq0$ for all $n$ \\
 
 \subsubsection{Cauchy Condensation Test}
 
-- (5.18) Cauchy condensation test - Let $(a_n)$ be a decreasing sequence of nonnegative terms. The series $\sum_{n=1}^{\infty}a_n$ converges if and only if the series $\sum_{n=1}^{\infty}2^na_{2^n}$ converges.
+(5.18) Let $(a_n)$ be a decreasing sequence of non-negative terms. 
+
+\[
+\displaystyle\sum_{n=1}^{\infty}a_n \text{ converges} \displaystyle\iff\sum_{n=1}^{\infty}2^na_{2^n} \text{ converges}
+\]
 
 \subsubsection{Alternating Series Test (Leibniz)}
 
-- (5.20) Let $(a_n)$ be a decreasing, null, (thus nonnegative) sequence. Then:
-	- (A.) The series $\sum_{n=1}^{\infty}(-1)^{n+1}a_n$ converges. (This is a special case of [[#Dirichlet's test]]. see q5.32)
-	- Alternating Series Estimation Theorem - If $S=\sum (-1)^{n+1}a_n$, and $S_n$ is the $n$-th partial sum, then for all $n$ we have:
-		- (B.) $S$ is between $S_n$ and $S_{n+1}$.
-		- (C.) The error $|S-S_n|$ is less than $a_{n+1}$.
+(5.20) Let $(a_n)$ be a decreasing, null, (thus nonnegative) sequence. Then:
+
+\begin{enumerate}[label=\Alph*.]
+    \item The series $\sum_{n=1}^{\infty}(-1)^{n+1}a_n$ converges. (This is a special case of Dirichlet's test. see q5.32) 
+\end{enumerate}
+
+Alternating Series Estimation Theorem - If $S=\sum (-1)^{n+1}a_n$, and $S_n$ is the $n$-th partial sum, then for all $n$ we have:
+
+\begin{enumerate}[label=\Alph*. , start=2]
+    \item $S$ is between $S_n$ and $S_{n+1}$.
+    \item The error $|S-S_n|$ is less than $a_{n+1}$.
+\end{enumerate}
 
 
 \section{Integrals}
-
 Suppose that $F(x)$ and $G(x)$ are antiderivatives of $f(x)$ and $g(x)$, respectively
 
 \begin{tabular}{@{}ll@{}l@{}}
@@ -201,30 +203,21 @@ U-Substitution & $\int f(g(x))g'(x) \, dx=\int F(g(x)) + C$ \\
 
 \subsection{Common Integrals}
 \begin{tabular}{@{}ll@{}l@{}}
-ln & $\int \ln x \, dx=x\ln x-x+C$ \\
-
+ln & $\int \ln x \, dx=x\ln x-x+C$
 \sep
 Trigonometric & $\int \sin x \, dx=-\cos x+C$ \\
 & $\int \cos x \, dx=\sin x+C$ \\
 & $\int \tan x \, dx=-\ln|\cos x|+C$ \\
-& $\int \cot x \, dx=\ln|\sin x|+C$ \\
-
-
+& $\int \cot x \, dx=\ln|\sin x|+C$
 \sep
-
 Reciprocal Trig. & $\displaystyle\int \frac{1}{\sin x} \, dx=\ln\left|\tan \frac{x}{2}\right|+C$ \\
 & $\displaystyle\int \frac{1}{\cos x} \, dx=-\ln\left|\tan \left( \frac{x}{2}-\frac{\pi}{4} \right)\right|+C$ \\
 & $\displaystyle\int \frac{1}{\sin^2x} \, dx=-\cot x$ \\
-& $\displaystyle\int \frac{1}{\cos^2x} \, dx=\tan x$ \\
-
-
+& $\displaystyle\int \frac{1}{\cos^2x} \, dx=\tan x$ 
 \sep
-
 Inverse Trigonometric & $\displaystyle\int \frac{1}{1 + x^2} \, dx = \arctan x + C$ \\
 & $\displaystyle\int \frac{1}{\sqrt{1 - x^2}} \, dx = \arcsin x + C$ \\
-& $\displaystyle\int \frac{1}{\sqrt{ a^2+x^2 }} \, dx=\arcsin \frac{x}{a}+C$ \\
-
-
+& $\displaystyle\int \frac{1}{\sqrt{ a^2+x^2 }} \, dx=\arcsin \frac{x}{a}+C$
 \sep
 
 (2.8a) & $\displaystyle\int x\ln x \, dx=\frac{x^2\ln x}{2}-\frac{x^2}{4}+C$ \\
@@ -236,45 +229,31 @@ Inverse Trigonometric & $\displaystyle\int \frac{1}{1 + x^2} \, dx = \arctan x +
 & $\int 1 \, dx=\int  \, dx=x+C$ \\
 
 \end{tabular}
-
-
-
 \subsection{Integration by Parts}
-
-
-\begin{tabular}{@{}ll@{}l@{}}
-(2.6) & $\displaystyle \int f(x)g'(x) \, dx=f(x)g(x) -\int f'(x)g(x) \, dx$ \\
-By substitution, & $\displaystyle{\begin{align} u=f(x)&\implies du=f'(x)\,dx \\ dv=g'(x)\,dx &\implies v=\int g'(x) \, dx=g(x) \end{align}}$ \\
-we get: & $\displaystyle \int u\,dv =uv-\int v\,du$ \\
-\end{tabular}
-    
-
+\[
+\int f(x)g'(x) \, dx=f(x)g(x) -\int f'(x)g(x) \, dx
+\] 
+\[
+\int u \, dv = uv - \int v \, du
+\]
 \subsection{Substitution}
 
-\subsubsection{Assumptions}
+\renewcommand{\arraystretch}{1} % Adjust the value to increase row spacing
+
+$\displaystyle\int f(g(x))g'(x)\, dx = {\color{gray}\left[\begin{array}{rl}
+u&= g(x) \\ du&= g'(x)dx \end{array}\right]} = \int f(u) \, du $
+
 \begin{itemize}
     \item $f$ is continuous on $I$
     \item $g$ is continuously differentiable on $J$
     \item $g(J) \subseteq I$ (i.e. image of $g$ is subset of $I$, so that $f \circ g$ is defined)
 \end{itemize}
-
-\subsubsection{Substitute \& Evaluate}
-\[
-\int f(g(x))g'(x)\, dx = {\color{gray}\left[\begin{array}{rl}
-u &= g(x) \\
-du &= g'(x)dx 
-\end{array}\right]} = \int f(u) \, du
-\]
-
-\subsubsection{Return to $x$}
-Substitute $u = g(x)$
-
 \subsection{Logarithmic Integration}
 \[
 \int \frac{f'(x)}{f(x)} \, dx = \ln|f(x)| + C
 \]
 
-it's special case of substitution with $u = f(x)$ and $du = f'(x)dx$
+(special case of substitution with $u = f(x)$ and $du = f'(x)dx$)
 
 \subsection{Substitution V2}
 \subsubsection{Substitute \& Evaluate}

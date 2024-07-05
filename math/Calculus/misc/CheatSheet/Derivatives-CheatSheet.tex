@@ -1,0 +1,150 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage[portrait]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{enumitem}
+
+% To make this come out properly in landscape mode, do one of the following
+% 1.
+%  pdflatex latexsheet.tex
+%
+% 2.
+%  latex latexsheet.tex
+%  dvips -P pdf  -t landscape latexsheet.dvi
+%  ps2pdf latexsheet.ps
+
+
+% If you're reading this, be prepared for confusion.  Making this was
+% a learning experience for me, and it shows.  Much of the placement
+% was hacked in; if you make it better, let me know...
+
+
+% 2008-04
+% Changed page margin code to use the geometry package. Also added code for
+% conditional page margins, depending on paper size. Thanks to Uwe Ziegenhagen
+% for the suggestions.
+
+% 2006-08
+% Made changes based on suggestions from Gene Cooperman. <gene at ccs.neu.edu>
+
+
+% To Do:
+% \listoffigures \listoftables
+% \setcounter{secnumdepth}{0}
+
+
+% This sets page margins to .5 inch if using letter paper, and to 1cm
+% if using A4 paper. (This probably isn't strictly necessary.)
+% If using another size paper, use default 1cm margins.
+\ifthenelse{\lengthtest { \paperwidth = 11in}}
+	{ \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
+	{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
+		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+	}
+
+% Turn off header and footer
+\pagestyle{empty}
+ 
+
+% Redefine section commands to use less space
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {1ex plus .2ex}%
+                                {\normalfont\small\bfseries}}
+
+
+% Don't print section numbers
+\setcounter{secnumdepth}{0}
+
+
+\setlength{\parindent}{3pt}
+\setlength{\parskip}{0pt plus 0.2ex}
+
+\begin{document}
+
+\renewcommand{\arraystretch}{2}
+
+
+
+
+% multicol parameters
+% These lengths are set only within the two main columns
+%\setlength{\columnseprule}{0.25pt}
+\setlength{\premulticols}{5pt}
+\setlength{\postmulticols}{5pt}
+\setlength{\multicolsep}{5pt}
+\setlength{\columnsep}{6pt}
+
+\section{Derivatives}
+\begin{tabular}{lll}
+Linearity & 
+$\displaystyle {\frac {d}{{{d}}x}}(\alpha f +\beta g )=\alpha f'+\beta g'$  \\
+Product & $(fg)'={fg'}+{f'g}$ & \\
+(7.17) & $(f^{n})'(x)=nf^{n-1}(x)\cdot f'(x)$ & \\
+Power & 
+\begin{tabular}{l}
+$(x^n)'=nx^{n-1}$ (integer $n\neq 0$) \\
+$(x^r)'=rx^{r-1}$ ($r\in\mathbb{R}$, $x>0$)
+\end{tabular} & \\
+Quotient & $\displaystyle\left( \frac{f}{g} \right)'(x)=\frac{f'g-fg'}{g^2}$ & $g(x)\neq 0$ \\
+Reciprocal & 
+\begin{tabular}{l}
+$\displaystyle\left( \frac{1}{f} \right)'=\frac{{-f'}}{f^2}$ \\
+$\displaystyle\frac{d}{dx}\left[ \frac{1}{f(x)} \right]=\frac{{-f'(x)}}{[f(x)]^2}$
+\end{tabular} & $f(x)\neq 0$ \\
+Chain Rule & 
+\begin{tabular}{l}
+$(f(g(x)))'=f'(g(x))\cdot g'(x)$ \\
+$(f(g(h(x))))'=f'(g(h(x))) \cdot g'(h(x)) \cdot h'(x)$ \\
+\end{tabular} & 
+$\displaystyle {\frac {dz}{dx}}={\frac {dz}{dy}}\cdot {\frac {dy}{dx}}$ \\
+Inverse & $\displaystyle \big(f^{−1}\big)'(x)=\frac{1}{f'\big(f^{−1}(x)\big)}$
+
+\end{tabular}
+
+\subsubsection{Common Derivatives}
+
+\begin{tabular}{ll}
+
+$\displaystyle {\color{gray}\frac{d}{dx} \left( {\color{black}{\sqrt{x}}}\right) } = \frac{1}{2\sqrt{x}}$ \\
+$\displaystyle {\color{gray}\frac{d}{dx} \left( {\color{black}{\sqrt{g(x)}}}\right) } = \frac{g'(x)}{2\sqrt{g(x)}}$ \\
+\hline
+$\displaystyle {\color{gray}\frac{d}{dx} \left( {\color{black}{\log_a x}}\right) } = \frac{1}{x \ln a}$ \\
+$\displaystyle {\color{gray}\frac{d}{dx} \left( {\color{black}{\ln x}}\right) } = \frac{1}{x}$ \\
+$\displaystyle {\color{gray}\frac{d}{dx} \left( {\color{black}{a^x}}\right) } = a^x \ln a$ \\
+$\displaystyle {\color{gray}\frac{d}{dx} \left( {\color{black}{e^x}}\right) } = e^x$ \\
+\hline
+$\displaystyle {\color{gray}\frac{d}{dx} \left( {\color{black}{\sin x}}\right) } = \cos x$ \\
+$\displaystyle {\color{gray}\frac{d}{dx} \left( {\color{black}{\cos x}}\right) } = -\sin x$ \\
+$\displaystyle {\color{gray}\frac{d}{dx} \left( {\color{black}{\tan x}}\right) } = \sec^2 x=1+\tan^2 x$ \\
+$\displaystyle {\color{gray}\frac{d}{dx} \left( {\color{black}{\cot x}}\right) } = -\csc^2 x=-1-\cot^2 x$ \\
+\hline
+$\displaystyle {\color{gray}\frac{d}{dx} \left( {\color{black}{\arcsin x}}\right) } = \frac{1}{\sqrt{1-x^2}}$ \\
+$\displaystyle {\color{gray}\frac{d}{dx} \left( {\color{black}{\arccos x}}\right) } = -\frac{1}{\sqrt{1-x^2}}$ \\
+$\displaystyle {\color{gray}\frac{d}{dx} \left( {\color{black}{\arctan x}}\right) } = \frac{1}{1+x^2}$ \\
+$\displaystyle {\color{gray}\frac{d}{dx} \left( {\color{black}{\text{arccot} x}}\right) } = -\frac{1}{1+x^2}$
+
+\end{tabular}
+
+\end{document}

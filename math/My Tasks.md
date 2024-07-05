@@ -1,32 +1,18 @@
-# Study 📚
+# Exams 💪
+## CALC-2 (July 29)
 
-- [ ] Cheat sheet - [[calculus2_cheat_sheet.pdf]] 
-	- [x] Unit 1
-	- [x] Unit 2
-	- [x] 3 - improper integral
-	- [x] 4 - taylor 
-	- [ ] 5 - series
-	- [ ] 6 - power series
+- [ ] [[2023a-a1.pdf]] - [[solution-2023a-a1.pdf]]
+- [ ] [[2023a-a2.pdf]] - [[solution-2023a-a2.pdf]]
+- [ ] [[2023a-b.pdf]] - [[solution-2023a-b.pdf]]
+- [ ] [[2023b-a1.pdf]] - [[solution-2023b-a1.pdf]]
 
-## Integrals 
-
-- [[Integration]]
-	- [x] [[Integration#Integration by Parts]]
-		- [x] DI https://arnoldfw.com/pdf/di_method.pdf 
-		- [x] https://en.wikipedia.org/wiki/Integration_by_parts
-		- [x] reduction formulas 
-	- [x] [[Integration#Substitution]] to tidy 
-		- [ ] version 2
-
-	- [ ] $g(x)^{h(x)}$ https://calculuscollege.com/logarithmic_differentiation_lesson.html
-
-# Exercices 🏋️‍♂️
+- [ ] alon l - infi 2 - https://www.youtube.com/watch?v=2KgGERhRZLc&list=PL7UMPWfWjqscR6cA6YKzZro5yS6RUhjCA&index=5
 
 - 100 Integrals 
 	- [x] 10
-	- [ ] 20 https://youtu.be/dgm4-3-Iv3s?t=2234
-	- [ ] 30
-	- [ ] 40
+	- [x] 20 https://youtu.be/dgm4-3-Iv3s?t=2234
+	- [x] 30 https://youtu.be/dgm4-3-Iv3s?t=4458
+	- [ ] 40 https://youtu.be/dgm4-3-Iv3s?t=6601
 	- [ ] 50
 	- [ ] 60
 	- [ ] 70
@@ -60,21 +46,12 @@
 - [x] power series of $(1+x)^{\alpha}$ 📙(6.2.4)
 - [ ] end-of-chapter 6 exercises
 
-# Exams 💪
-## CALC-2
-
-- ~~26/06/2024 ~~
-- [ ] **29/07/2024** - probably this date. need to register. (כג תמוז)
+- [ ] **29/07/2024** - registration sent wait to response. (כג תמוז)
 - ~~05/09/2024~~
 - ~~26/09/24 - Elul כג~~
 - ~~25/11/24 - Cheshvan כד~~
 
-- [ ] [[2023a-a1.pdf]] - [[solution-2023a-a1.pdf]]
-- [ ] [[2023a-a2.pdf]] - [[solution-2023a-a2.pdf]]
-- [ ] [[2023a-b.pdf]] - [[solution-2023a-b.pdf]]
-- [ ] [[2023b-a1.pdf]] - [[solution-2023b-a1.pdf]]
-
-## L. Algebra
+## Linear Algebra 1 (Sep. 2)
 
 
 - 26/06/2024
@@ -82,6 +59,29 @@
 - 02/09/2024 (probably this date...) כט אב
 - 26/09/24 - Elul כג
 - 25/11/24 - Cheshvan כד
+
+
+# Study 📚
+
+- [ ] Cheat sheet - [[calculus2_cheat_sheet.pdf]] 
+	- [x] Unit 1
+	- [x] Unit 2
+	- [x] 3 - improper integral
+	- [x] 4 - taylor 
+	- [ ] 5 - series
+	- [ ] 6 - power series
+
+## Integrals 
+
+- [[Integration]]
+	- [x] [[Integration#Integration by Parts]]
+		- [x] DI https://arnoldfw.com/pdf/di_method.pdf 
+		- [x] https://en.wikipedia.org/wiki/Integration_by_parts
+		- [x] reduction formulas 
+	- [x] [[Integration#Substitution]] to tidy 
+		- [ ] version 2
+
+	- [ ] $g(x)^{h(x)}$ https://calculuscollege.com/logarithmic_differentiation_lesson.html
 
 
 # Other
@@ -121,6 +121,10 @@
 - [x] [[logic-7.pdf]]
 
 Dictionary of Logic as Applied in the Study of Language 📚
+
+# Chemistry 
+
+- [ ] Mass spectrometry - https://www.khanacademy.org/science/ap-chemistry-beta/x2eef969c74e0d802:atomic-structure-and-properties/x2eef969c74e0d802:mass-spectrometry-of-elements/a/isotopes-and-mass-spectrometry#:~:text=.-,Mass%20spectrometry,%3F,-The%20answer%20is
 
 # Physics
 
