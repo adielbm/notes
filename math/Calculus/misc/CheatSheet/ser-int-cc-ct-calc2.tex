@@ -1,0 +1,250 @@
+\documentclass[a4paper,landscape]{article}
+\usepackage[landscape,margin=0.5in]{geometry}
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{titlesec}
+
+% Turn off header and footer
+\pagestyle{empty}
+ 
+% Adjust these values to minimize gaps
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\topsep}{0pt}
+\setlength{\partopsep}{0pt}
+
+% Don't print section numbers
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{1pt}
+
+\setlist[itemize]{noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt}
+
+% Adjust multicols settings
+\setlength{\columnsep}{3pt}
+\setlength{\multicolsep}{3pt}
+
+\newcommand{\tnum}[1]{{\color{gray}\footnotesize\texttt{(#1)}}}
+
+\setlength{\columnsep}{0.5cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5ex}
+
+\titlespacing*{\section}{2pt}{1ex}{0ex}
+\titlespacing*{\subsection}{2pt}{1ex}{0ex}
+\titlespacing*{\subsubsection}{2pt}{1ex}{0ex}
+
+\titleformat{\section}{\fontsize{20}{24}\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\fontsize{18}{22}\bfseries}{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}{\fontsize{16}{20}\bfseries}{\thesubsubsection}{1em}{}
+
+
+\begin{document}
+
+\fontsize{12.5}{15}\selectfont
+
+\begin{multicols}{2}
+
+% multicol parameters
+% These lengths are set only within the two main columns
+%\setlength{\columnseprule}{0.25pt}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{1pt}
+
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{0pt}
+
+\section{Series (Convergence Tests)}
+
+\renewcommand{\arraystretch}{1.5} % Adjust the value to increase row spacing
+
+
+\begin{tabular}{@{}ll@{}l@{}}
+\textbf{Divergence Test} & $\displaystyle\lim_{n\to\infty} a_n \neq 0 \implies \sum a_n$ diverges \\
+\textbf{Geometric Series} & $\displaystyle\sum ar^n = \frac{a}{1-r}$ (if $|r|<1$) \\
+\textbf{P-Series} & $\displaystyle\sum_{n=1}^{\infty} \frac{1}{n^p}$ converges (if $p>1$) \\
+\textbf{Integral Test} & $\displaystyle\int_{1}^{\infty} f(x) \, dx$ and $\displaystyle\sum_{n=1}^{\infty} f(n)$ converge together \\
+\textbf{Cauchy C.T.} & $\displaystyle\sum a_n$ conv. iff \\
+& $\forall \varepsilon > 0, \exists N: \forall n \geq N, \forall p \in \mathbb{N}, \sum_{k=n+1}^{n+p} a_k < \varepsilon$ \\
+\textbf{Absolute C.T.} & $\sum |a_n|$ converges $\implies \sum a_n$ converges \\
+\end{tabular}
+
+\subsubsection{Direct Comparison ({\small$\forall n \geq N, 0 \leq a_n \leq b_n$}) }
+\begin{itemize}
+
+\item $\sum b_n$ converges $\implies \sum a_n$ converges
+\item $\sum a_n$ diverges $\implies \sum b_n$ diverges (both to infinity)
+\end{itemize}
+
+\subsubsection{Limit Comparison ({\small $\displaystyle\lim_{n\to\infty} \frac{a_n}{b_n} = c > 0$})}
+
+\begin{itemize}
+\item $\sum b_n$ converges $\iff \sum a_n$ converges
+\item  $\sum b_n$ diverges $\iff \sum a_n$ diverges 
+\end{itemize}
+
+\subsubsection{Root Test (Cauchy)}
+
+\begin{itemize}
+
+\item \tnum{5.16a}  $\exists q<1:\forall n> N,\sqrt[n]{|a_n|}\leq q\implies\sum a_n$ converges abs. 
+\item \tnum{5.16b} If $\sqrt[n]{|a_n|}\geq 1$ for infinitely many $n$  $\implies\sum a_n$ div.
+
+\item \tnum{5.16',''} Given $c=\displaystyle\limsup_{n\to\infty}\sqrt[n]{|a_n|}$. or ($c=\displaystyle\lim_{n\to\infty}\sqrt[n]{|a_n|}$ exists) \\
+    $c<1\implies\sum a_n$ converges absolutely.\\
+    $c>1\implies\sum a_n$ diverges.
+\end{itemize}
+
+\columnbreak
+
+\subsubsection{Ratio Test (d'Alembert)}
+Given $a_n\neq0$ for all $n$
+
+\begin{itemize}
+
+
+\item \tnum{5.17a} If there exists $q<1$ such that $\left|\frac{a_{n+1}}{a_n}\right|\leq q$ for almost all $n$, then the series $\sum a_n$ converges absolutely.
+\item \tnum{5.17b} If $\left|\frac{a_{n+1}}{a_n}\right|\geq 1$ for almost all $n$, then the series $\sum a_n$ diverges.    
+\item \tnum{5.17**} Given $c=\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|$.
+    \\ $c<1\implies\sum a_n$ converges absolutely.
+    \\ $c>1\implies\sum a_n$ diverges.
+\item \tnum{q5.26} If there exists $q<1$ such that $\left|\frac{a_{n+1}}{a_n}\right|\leq q<1$ for almost all $n$, then there exists $q\leq q'<1$ such that $\sqrt[n]{|a_n|}\leq q'$ for almost all $n$.
+\end{itemize}
+
+
+
+\subsubsection{Cauchy Condensation Test \tnum{5.18}}
+$(a_n)$ is dec. and non-neg.
+\[
+\displaystyle\sum a_n \text{ converges} \displaystyle\iff\sum 2^na_{2^n} \text{ converges}
+\]
+\subsubsection{Integral Test \tnum{5.19}}
+\begin{itemize}
+    \item $(a_n)$ is dec. and non-neg.
+    \item $f$ is dec. (w), non-neg. on $[1,\infty)$, and integ. on every finite interval. 
+    \item $\forall n\in\mathbb{N},\,a_n=f(n)$
+\end{itemize} \[ \displaystyle\sum_{n=1}^{\infty}a_n \text{ converges} \displaystyle\iff\int_{1}^{\infty} f(x) \, dx \text{ converges}
+\]
+\subsubsection{Alternating Series Test (Leibniz)}
+\tnum{5.20} Let $(a_n)$ be a decreasing, null, (thus non-neg.) sequence. Then:
+\tnum{A} $\sum_{n=1}^{\infty}(-1)^{n+1}a_n$ conv. (Dirichlet T. special case \tnum{q5.32}) \\
+\textbf{A.S. Est.}: If $S=\sum (-1)^{n+1}a_n$, and $S_n$ is the $n$-th partial sum, then: \\
+\tnum{B} for all $n$, $S$ is between $S_n$ and $S_{n+1}$. \\
+\tnum{C} for all $n$, The error $|S-S_n|$ is less than $a_{n+1}$.
+\subsubsection{Dirichlet's Test \tnum{5.22}}
+$\sum a_n$ is bounded, and, $(b_n)$ is mono. null $\implies \sum a_nb_n$ converges.
+\subsubsection{Abel's Test \tnum{5.23}}
+$\sum a_n$ converges, and, $(b_n)$ is mono. bounded $\implies \sum a_nb_n$ converges.
+\end{multicols}
+
+\newpage
+
+
+
+\begin{multicols}{2}
+
+\section{Improper Integrals}
+
+\begin{itemize}
+    \item \tnum{3.3} If $f$ is integrable on $[a,b]$ then the improper integral over $(a,b]$ (or $[a,b)$ or $(a,b)$) is equal to the integral over $[a,b]$
+    \item \tnum{q3.33} If $\displaystyle\int_a^{\infty}f(x) \, dx$ converges, and $\displaystyle\lim_{x\to\infty}f(x)$ exists, then $\displaystyle\lim_{x\to\infty}f(x)=0$
+\end{itemize}
+
+
+% multicol parameters
+% These lengths are set only within the two main columns
+%\setlength{\columnseprule}{0.25pt}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{1pt}
+
+
+
+\section{Convergence Tests}
+
+\subsection{P-Test}
+
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item \tnum{3.2,q3.5} $\displaystyle\int _{0}^b\frac{dx}{x^p}$  and $\displaystyle\int _{a}^b\frac{dx}{(x-a)^p}$ and $\displaystyle\int _{a}^b\frac{dx}{(b-a)^p}$ converges iff $p<1$
+    \item \tnum{3.12} if $a>0$ then $\displaystyle\int ^\infty_{a} \frac{dx}{x^p}$ converges iff $p>1$
+    \item $\displaystyle\int ^\infty_{1}\frac{dx}{x^{p}} \, dx=\begin{cases} \frac{1}{p-1} &  p>1 \\ \text{diverges} & {p\leq 1}\end{cases}$
+\end{itemize}
+
+
+\subsection{Cauchy's Criterion}
+\tnum{3.4} Let $f(x)$ be defined on $(a,b]$ and integrable on every interval $[t,b]$ (where $a<t<b$). Then: \\
+ $\displaystyle\int ^b_{a}f(x) \, dx$ conv. iff $\forall\varepsilon>0,\exists \delta>0:\forall r,s\in[a,a+\delta],\,\displaystyle\left|\int ^s_{r}f(x) \, dx\right|<\varepsilon$
+
+\tnum{3.15} Let $f(x)$ be defined on $[a,\infty)$ and integrable on every interval $[a,t]$ (where $a<t$). Then: \\
+ $\displaystyle\int ^\infty_{a}f(x) \, dx$ conv. iff $\forall\varepsilon>0,\exists M>a:\forall r,s\in[M,\infty),\,\,\displaystyle\left|\int ^s_{r}f(x) \, dx\right|<\varepsilon$
+
+{\small(similar for $[a,b)$ and $(-\infty,b]$)}
+
+\columnbreak
+
+\section{Comparison Test $(a,b]$}
+$f,g$ are non-negative on $(a,b]$ and integrable on every closed subinterval
+
+\subsubsection{Direct Comparison Test}
+
+\tnum{3.5} If $\exists \delta>0:\forall x\in(a,a+\delta),\,0\leq f(x)\leq g(x)$ then:
+
+\begin{itemize}
+    \item $\int ^b_{a} g$ converges, $\implies\int ^b_{a} f$ converges
+    \item $\int ^b_{a} f$ diverges, $\implies\int ^b_{a} g$ diverges
+\end{itemize}
+
+{\small(similar test for $[a,b)$)}
+
+\subsubsection{Limit Comparison Test}
+
+\tnum{3.5\*} Given $\displaystyle\lim_{ x \to a^+ }\frac{f(x)}{g(x)}=L$ exists, then:
+
+\begin{itemize}
+    \item if $0<L<\infty$ then $\displaystyle\int ^b_{a}g$ converges iff $\displaystyle\int ^b_{a}f$ converges
+    \item if $L=0$ and $\displaystyle\int ^b_{a}g$ converges, then $\displaystyle\int ^b_{a}f$ converges
+    \item if $L=\infty$ and $\displaystyle\int ^b_{a}g$ diverge, then $\displaystyle\int ^b_{a}f$ diverge
+    \item (similar test for $[a,b)$)
+\end{itemize}
+
+
+\section{Comparison Tests $[a,\infty)$}
+
+$f,g$ non-negative on $[a,\infty)$ and integrable on every closed subinterval
+
+\subsubsection{Direct Comparison Test}
+\tnum{3.16} If $\exists A\geq a:\forall x\in[A,\infty),\,0\leq f(x)\leq g(x)$ then:
+
+\begin{itemize}
+    \item if $\int ^\infty_{a} g$ converges, then $\int ^\infty_{a} f$ converges
+    \item if $\int ^\infty_{a} f$ diverges, then $\int ^\infty_{a} g$ diverges
+\end{itemize}
+
+\subsubsection{Limit Comparison Test}
+
+\tnum{3.16*} Given $\displaystyle\lim_{ x \to \infty }\frac{f(x)}{g(x)}=L$ exists (finite or infinite) then:
+
+\begin{itemize}
+    \item ($\small 0<L<\infty$) $\int ^b_{a}g(x) \, dx$ converges  $\iff\int ^b_{a}g(x) \, dx$ converges
+    \item ($\small L=0$) $\int ^b_{a}g(x) \, dx$ converges $\implies\int ^b_{a}g(x) \, dx$ converges
+    \item ($\small L=\infty$) $\int ^b_{a}g(x) \, dx$ diverge $\implies\int ^b_{a}g(x) \, dx$ diverge
+\end{itemize}
+
+\end{multicols}
+
+\end{document}
