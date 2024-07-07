@@ -121,7 +121,7 @@ Given $a_n\neq0$ for all $n$
 \item \tnum{5.17**} Given $c=\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|$.
     \\ $c<1\implies\sum a_n$ converges absolutely.
     \\ $c>1\implies\sum a_n$ diverges.
-\item \tnum{q5.26} If there exists $q<1$ such that $\left|\frac{a_{n+1}}{a_n}\right|\leq q<1$ for almost all $n$, then there exists $q\leq q'<1$ such that $\sqrt[n]{|a_n|}\leq q'$ for almost all $n$.
+\item \tnum{q5.26} If there exists $q<1$ s.t. $\left|\frac{a_{n+1}}{a_n}\right|\leq q<1$ for almost all $n$, then there exists $q\leq q'<1$ s.t. $\sqrt[n]{|a_n|}\leq q'$ for almost all $n$.
 \end{itemize}
 
 
@@ -160,7 +160,7 @@ $\sum a_n$ converges, and, $(b_n)$ is mono. bounded $\implies \sum a_nb_n$ conve
 
 \begin{itemize}
     \item \tnum{3.3} If $f$ is integrable on $[a,b]$ then the improper integral over $(a,b]$ (or $[a,b)$ or $(a,b)$) is equal to the integral over $[a,b]$
-    \item \tnum{q3.33} If $\displaystyle\int_a^{\infty}f(x) \, dx$ converges, and $\displaystyle\lim_{x\to\infty}f(x)$ exists, then $\displaystyle\lim_{x\to\infty}f(x)=0$
+    \item \tnum{q3.33} If $\displaystyle\int_a^{\infty}f(x) \, dx$ conv., and $\displaystyle\lim_{x\to\infty}f(x)$ exists, then $\displaystyle\lim_{x\to\infty}f(x)=0$
 \end{itemize}
 
 
@@ -216,12 +216,12 @@ $f,g$ are non-negative on $(a,b]$ and integrable on every closed subinterval
 \tnum{3.5\*} Given $\displaystyle\lim_{ x \to a^+ }\frac{f(x)}{g(x)}=L$ exists, then:
 
 \begin{itemize}
-    \item if $0<L<\infty$ then $\displaystyle\int ^b_{a}g$ converges iff $\displaystyle\int ^b_{a}f$ converges
-    \item if $L=0$ and $\displaystyle\int ^b_{a}g$ converges, then $\displaystyle\int ^b_{a}f$ converges
-    \item if $L=\infty$ and $\displaystyle\int ^b_{a}g$ diverge, then $\displaystyle\int ^b_{a}f$ diverge
-    \item (similar test for $[a,b)$)
+    \item ($0<L<\infty$) $\displaystyle\int ^b_{a}g$ converges  $\iff\displaystyle\int ^b_{a}f$ converges
+    \item ($L=0$) $\displaystyle\int ^b_{a}g$ converges $\implies\displaystyle\int ^b_{a}f$ converges
+    \item ($L=\infty$) $\displaystyle\int ^b_{a}g$ diverge $\implies\displaystyle\int ^b_{a}f$ diverge
 \end{itemize}
-
+{\small
+(similar test for $[a,b)$)}
 
 \section{Comparison Tests $[a,\infty)$}
 
@@ -231,8 +231,8 @@ $f,g$ non-negative on $[a,\infty)$ and integrable on every closed subinterval
 \tnum{3.16} If $\exists A\geq a:\forall x\in[A,\infty),\,0\leq f(x)\leq g(x)$ then:
 
 \begin{itemize}
-    \item if $\int ^\infty_{a} g$ converges, then $\int ^\infty_{a} f$ converges
-    \item if $\int ^\infty_{a} f$ diverges, then $\int ^\infty_{a} g$ diverges
+    \item $\int ^\infty_{a} g$ converges, $\implies\int ^\infty_{a} f$ converges
+    \item $\int ^\infty_{a} f$ diverges, $\implies\int ^\infty_{a} g$ diverges
 \end{itemize}
 
 \subsubsection{Limit Comparison Test}
