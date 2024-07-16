@@ -21,6 +21,14 @@
 	- $f$ is defined on $\mathbb{R}$, and $F'=f$, then: $\displaystyle\int^\infty_{-\infty} f(x) \, dx$ converges iff $\displaystyle\lim_{ x \to \infty }F(x)$ and $\displaystyle\lim_{ x \to -\infty }F(x)$ exist. 
 		- in such case $\int^\infty_{-\infty} f(x) \, dx=\displaystyle\lim_{ x \to \infty }F(x)-\lim_{ x \to -\infty }F(x)$
 - (q3.33) If $\displaystyle\int ^\infty_{a}f(x) \, dx$ converges and $\displaystyle\lim_{ x \to \infty }f(x)$ exists then $\displaystyle\lim_{ x \to \infty }f(x)=0$
+
+# Examples 
+
+- (e3.11a) $\displaystyle\int _{1}^{\infty}\frac{\sin x}{x^2} \, dx$ conv.
+- (e3.11b) $\displaystyle\int _{1}^\infty \frac{p(x)}{e^x} \, dx$ converge for every polynomial $p$
+- 
+
+
 # Convergence Tests
 
 ### p-test
@@ -68,9 +76,9 @@ Let $f,g$ be non-negative functions defined on $[a,\infty)$ and integrable on ev
 #### Limit Comparison Test
 
 - (3.16-\*) Given $\displaystyle\lim_{ x \to \infty }\frac{f(x)}{g(x)}=L$ exists (finite or infinite) then:
-	- if $0<L<\infty$ then $\int ^b_{a}g(x) \, dx$ converges if and only if $\int ^b_{a}g(x) \, dx$ converges
-	- if $L=0$ and $\int ^b_{a}g(x) \, dx$ converges then $\int ^b_{a}g(x) \, dx$ converges
-	- if $L=\infty$ and $\int ^b_{a}g(x) \, dx$ diverge then $\int ^b_{a}g(x) \, dx$ diverge
+	- if $0<L<\infty$ then $\int ^b_{a}g(x) \, dx$ converges if and only if $\int ^b_{a}f(x) \, dx$ converges
+	- if $L=0$ and $\int ^b_{a}g(x) \, dx$ converges then $\int ^b_{a}f(x) \, dx$ converges
+	- if $L=\infty$ and $\int ^b_{a}g(x) \, dx$ diverge then $\int ^b_{a}f(x) \, dx$ diverge
 ### Dirichlet's Test
 
 - (3.19) Let $f$ and $g$ be continuous on $[a,\infty)$

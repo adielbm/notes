@@ -23,18 +23,18 @@
 
 
 
-### Notation
+### AZE Notation
 
-- **Nuclear Symbol Notation**: $^{A}_{Z}\ce{X}$
+- **Nuclear Symbol Notation**: $^{A}_{Z}\ce{E}$
     - $A$ is the mass number
     - $Z$ is the atomic number (optional if the element is known)
-    - $\ce{X}$ is the chemical symbol of the element
+    - $\ce{E}$ is the chemical symbol of the element
     - Examples: 
         - (carbon-14) $\ce{^{14}_{6}C}$ or $\ce{^{14}C}$
         - (neon-20) $\ce{^{20}_{10}Ne}$ or $\ce{^{20}Ne}$
-- **Hyphen Notation**: $\ce{X}\text{-}A$
+- **Hyphen Notation**: $\ce{E}\text{-}A$
     - $A$ is the mass number
-    - $\ce{X}$ is the chemical symbol or name of the element
+    - $\ce{E}$ is the chemical symbol or name of the element
     - Examples:
         - (carbon-14) $\ce{C-14}$ or $\ce{carbon-14}$
         - (neon-20) $\ce{Ne-20}$ or $\ce{neon-20}$
@@ -51,15 +51,18 @@
     - Examples: 
         - $m(\ce{^{12}C})=12 \, \mathsf{u}$ (the atomic mass of an carbon-12 atom is $12 \, \mathsf{u}$)
         - $m(\ce{^{13}C})=13.0033548378 \, \mathsf{u}$ (the atomic mass of an carbon-13 atom is $13.0033548378 \, \mathsf{u}$)
-    - Because substances are usually not isotopically pure, (i.e., they are a mixture of isotopes of the element) it is convenient to use the **average atomic mass** which is the weighted average of the atomic masses of the naturally occurring isotopes of the element to calculate the atomic mass of given sample of the element.
-        - Example:
-            - The natural abundance of $\ce{^{12}C}$ is $98.93\%$ and the natural abundance of $\ce{^{13}C}$ is $1.07\%$.
-            - The average atomic mass of carbon is $m(\ce{C})=\left( m(\ce{^{12}C}) \times \text{NA}(\ce{^{12}C}) \right) + \left( m(\ce{^{13}C}) \times \text{NA}(\ce{^{13}C}) \right)=12.011 \, \mathsf{u}$ 
-        - General formula for calculating the average atomic mass of an element:
-            - $m(E)=\sum_i \left( m_i \cdot f_i \right)$, where:
-                - $m(E)$ is the average atomic mass of the element $E$ (in $\mathsf{u}$)
-                - $m_i$ is the atomic mass of the $i$-th isotope of the element (in $\mathsf{u}$)
-                - $f_i$ is the natural abundance of the $i$-th isotope of the element (in $\%$)
+
+### Average Atomic Mass
+
+Because substances are usually not isotopically pure, (i.e., they are a mixture of isotopes of the element) it is convenient to use the **average atomic mass** (or **atomic weight**) which is the weighted average of the atomic masses of the naturally occurring isotopes of the element to calculate the atomic mass of given sample of the element.
+    - General formula for calculating the average atomic mass of an element:
+        - $m(E)=\sum_i \left( m_i \cdot f_i \right)$, where:
+            - $m(E)$ is the average atomic mass of the element $E$ (in $\mathsf{u}$)
+            - $m_i$ is the atomic mass of the $i$-th isotope of the element (in $\mathsf{u}$)
+            - $f_i$ is the natural abundance of the $i$-th isotope of the element (in $\%$)
+    - Example:
+        - The natural abundance of $\ce{^{12}C}$ and $\ce{^{13}C}$ are $98.93\%$ and $1.07\%$ respectively.
+        - The average atomic mass of carbon is $m(\ce{C})=\left( m(\ce{^{12}C}) \times \text{NA}(\ce{^{12}C}) \right) + \left( m(\ce{^{13}C}) \times \text{NA}(\ce{^{13}C}) \right)=12.011 \, \mathsf{u}$ 
 
 ## Relative Atomic Mass
 
@@ -72,7 +75,7 @@
         - $m_i$ is the relative isotopic mass of the isotope (dimensionless)
     - Example:
         - The relative isotopic mass of $\ce{^{13}C}$ is $m_{\ce{^{13}C}}=\frac{13.0033548378}{12}=1.083$
-- The **relative atomic mass** ($A_r$) is a dimensionless physical quantity.
+- The **relative atomic mass** ($A_r$) is a dimensionless quantity.
     - $\displaystyle A_r=\frac{\text{average atomic mass of the element in u}}{\frac{1}{12} \times \text{atomic mass of } \ce{^{12}C}}=\frac{m(E)}{1 \, \text{u}}$
     - Example: $A_r(\ce{C})=\frac{12.011\, \mathsf{u}}{1 \, \mathsf{u}}=12.011$
         
@@ -132,6 +135,76 @@
 >   - **Answer:** The molar mass of $\ce{NaCl}$ is $(22.99 + 35.45) \, \mathsf{g/mol}=58.44 \, \mathsf{g/mol}$, so, by the formula $n=\frac{m}{M}$, the number of moles of $737 \, \mathsf{g}$ of $\ce{NaCl}$ is $n=\frac{737 \, \mathsf{g}}{58.44 \, \mathsf{g/mol}}=12.6 \, \mathsf{mol}$.
 
 
+> [!INFO] Calculating the mass of a substance in a mixture
+> **Problem:**
+> Given:
+> - $m(\text{Sample})$ - The mass of a sample containing a compound. 
+> - $P$ - The percentage by mass of a specific element in the sample.
+> 
+> Find:
+> - $M(\text{Compound})$ - The molar mass of the compound 
+> - $m(\text{Element})$ - The mass of the element in the sample.
+> - $m(\text{Compound})$ - The mass of the compound required to provide the calculated mass of the element in the sample.
+> 
+> **Answer:**
+> 1. Calculate the molar mass of the compound.
+> See [[#Molar Mass]] (of a compound)
+> 2. Calculate the mass of the element in the sample.
+> $m(\text{Element})=\frac{P}{100} \times m(\text{Sample})$
+> 3. Determine the mass of the compound required to provide the calculated mass of the element.
+> $m(\text{Compound})=m(\text{Element}) \times \frac{M(\text{Compound})}{M(\text{Element})}$
+>
+> > [!EXAMPLE]
+> > - $m\text{(Sample)}=0.450 \, \mathsf{g}$ - The mass of a sample containing a compound
+> > - $\text{Element}=\ce{K}$ - The element is _potassium_
+> > - $P=22.0\%$ - The percentage by mass of $\ce{K}$ in the sample,
+> > - $\text{Compound}=\ce{KCl}$ - The compound is _potassium chloride_
+> > 
+> > **Solution:**
+> > 1. $M(\ce{KCl})=74.55 \, \mathsf{g/mol}$ is the molar mass of $\ce{KCl}$
+> > 2. $m(\ce{K})=\frac{22.0}{100} \times 0.450=0.099 \, \mathsf{g}$ is the mass of $\ce{K}$ in the sample
+> > 3. $m(\ce{KCl})=0.099 \, \mathsf{g} \times \frac{74.55 \, \mathsf{g/mol}}{39.10 \, \mathsf{g/mol}}=\boxed{0.188 \, \mathsf{g}}$ is the mass of $\ce{KCl}$.
+
+
+
+> [!INFO] Calculating the Mass Percent of an Element in a Mixture
+> **Problem:**
+> Given:
+> - $m(\text{Mixture})$ - The mass of a mixture containing different compounds.
+> - $n(\text{Compound})$ - The number of moles of a specific compound in the mixture.
+> 
+> Find:
+> - $M(\text{Compound})$ - The molar mass of the specific compound.
+> - $m(\text{Element})$ - The mass of the specific element in the mixture.
+> - $\text{Mass Percent}$ - The mass percent of the specific element in the mixture.
+> 
+> **Answer:**
+> 1. Calculate the molar mass of the compound.
+> See [[#Molar Mass]] (of a compound)
+> 2. Calculate the mass of the compound in the mixture.
+> $m(\text{Compound}) = n(\text{Compound}) \times M(\text{Compound})$
+> 3. Calculate the mass of the element in the compound.
+> $m(\text{Element}) = n(\text{Compound}) \times M(\text{Element in Compound})$
+> 4. Determine the mass percent of the element in the mixture.
+> $\text{Mass Percent} = \frac{m(\text{Element})}{m(\text{Mixture})} \times 100$
+>
+> > [!EXAMPLE]
+> > Given:
+> > - $m(\text{Mixture}) = 1.5 \, \mathsf{g}$ - The mass of a mixture containing $\ce{CaCO3}$ and $\ce{NaHCO3}$.
+> > - $n(\ce{NaHCO3}) = 0.010 \, \mathsf{mol}$ - The number of moles of $\ce{NaHCO3}$ in the mixture.
+> > 
+> > **Solution:**
+> > 1. Calculate the molar mass of $\ce{NaHCO3}$.
+> > $M(\ce{NaHCO3}) = 84.01 \, \mathsf{g/mol}$
+> > 2. Calculate the mass of $\ce{NaHCO3}$ in the mixture.
+> > $m(\ce{NaHCO3}) = 0.010 \, \mathsf{mol} \times 84.01 \, \mathsf{g/mol} = 0.8401 \, \mathsf{g}$
+> > 3. Calculate the mass of sodium ($\ce{Na}$) in $\ce{NaHCO3}$.
+> > $M(\ce{Na}) = 22.99 \, \mathsf{g/mol}$
+> > $m(\ce{Na}) = 0.010 \, \mathsf{mol} \times 22.99 \, \mathsf{g/mol} = 0.2299 \, \mathsf{g}$
+> > 4. Determine the mass percent of sodium in the mixture.
+> > $\text{Mass Percent} = \frac{0.2299 \, \mathsf{g}}{1.5 \, \mathsf{g}} \times 100 = \boxed{15.33\%}$
+
+
 
 ### Calculating Masses in Reactions
 
@@ -148,13 +221,6 @@
 - In general, given a balanced chemical equation, we want to find the maximum mass of a product that can be produced when a certain mass of a reactant is used, the mass of the product is the product of the number of moles of the limiting reactant and the molar mass of the product, $m(\text{product})=n(\text{limiting reactant}) \times M(\text{product})$
 
 
-        
-
-
-
-
-
-
 ## Ions
 
 - An **ion** is an atom or molecule that has a net electrical charge. 
@@ -167,3 +233,63 @@
     - $\ce{Cl-}$ is a chloride anion
     - $\ce{Al^{3+}}$ is an aluminum cation
     - $\ce{O^{2-}}$ is an oxide anion
+
+
+# Volume of Gases
+
+- The **Molar volume** ($V_m$) of a substance is the ration of the volume occupied by a substance to the amount of substance.
+    - $V_m=\frac{M}{\rho}$, where:
+        - $V_m$ is the molar volume of the substance (in $\mathsf{m^3/mol}$)
+        - $M$ is the molar mass of the substance (in $\mathsf{g/mol}$)
+        - $\rho$ is the density of the substance (in $\mathsf{g/m^3}$)
+
+## Ideal Gas Law
+
+The **ideal gas law** is the equation of state for an ideal gas, given by
+
+$$PV=nRT$$
+
+where:
+
+- $P$ is the pressure
+- $V$ is the volume
+- $n$ is the amount of substance of the gas (in moles)
+- $T$ is the absolute temperature
+- $R$ is the gas constant 
+    - $R$ must be expressed in units consistent with those chosen for pressure, volume and temperature. 
+    - For example, when pressure is expressed in pascals, volume in cubic meters, and absolute temperature in kelvin, the value of the gas constant is $R=8.3145 \, \mathsf{J \cdot K^{-1}\cdot mol^{-1} }$.
+
+
+# Chemical Formulas
+
+- The **molecular formula** of a compound gives the actual number of atoms of each element in a molecule of the compound.
+- The **empirical formula** of a compound gives the simplest whole-number ratio of the atoms of each element in the compound.
+- The **structural formula** uses lines to represent covalent bonds and *shows* how atoms in a molecule connect or bond to each other.
+
+
+| Name of Compound | Empirical Formula | Molecular Formula |
+| ---------------- | ----------------- | ----------------- |
+| Benzene          | $\ce{CH}$         | $\ce{C6H6}$       |
+| Acetylene        | $\ce{CH}$         | $\ce{C2H2}$       |
+| Glucose          | $\ce{CH2O}$       | $\ce{C6H12O6}$    |
+| Ammonia          | $\ce{NH3}$        | $\ce{NH3}$        |
+
+## Empirical Formula
+
+> [!EXAMPLE] Determining Empirical Formula of a Compound from Mass Percentages 
+> Suppose you have a compound with the following composition by mass: 40.0% Carbon (C), 6.7% Hydrogen (H), and 53.3% Oxygen (O). Determine the empirical formula of the compound.
+> **Answer:**
+> 1. Assume you have 100 g of the compound, so you have:
+> - $40.0 \, \mathsf{g}$ of Carbon
+> - $6.7 \, \mathsf{g}$ of Hydrogen
+> - $53.3 \, \mathsf{g}$ of Oxygen
+> 2. Calculate the number of moles of each element:
+> - $n(\ce{C})=\frac{40.0 \, \mathsf{g}}{12.011 \, \mathsf{g/mol}}=3.33 \, \mathsf{mol}$
+> - $n(\ce{H})=\frac{6.7 \, \mathsf{g}}{1.008 \, \mathsf{g/mol}}=6.65 \, \mathsf{mol}$
+> - $n(\ce{O})=\frac{53.3 \, \mathsf{g}}{16.00 \, \mathsf{g/mol}}=3.33 \, \mathsf{mol}$
+> 3. Divide the number of moles of each element by the smallest number of moles to get the simplest whole-number ratio:
+> - $\ce{C}: \ce{H}: \ce{O} = 3.33:6.65:3.33=1:2:1$
+> 4. The empirical formula of the compound is $$\ce{CH2O}$$.
+
+
+

@@ -145,7 +145,7 @@ Suppose that $f$ is $n+1$ times continuously differentiable in an interval $I$ c
 - Schlömilch’s Form (see q4.37)
 
 
-# Exmaples
+# Examples
 
 - $\displaystyle\sin x=\sum_{n=0}^{\infty}\frac{(-1)^n}{(2n+1)!}x^{2n+1}$ 
 - $\displaystyle\cos x=\sum_{n=0}^{\infty}\frac{(-1)^n}{(2n)!}x^{2n}$ 

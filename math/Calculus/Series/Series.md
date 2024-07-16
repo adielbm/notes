@@ -29,6 +29,7 @@
 - Additivity 
 	- (5.9) If $\sum a_n$ and $\sum b_n$ converge, then $\sum (a_n\pm b_n)$ converges and $\sum (a_n\pm b_n)=\sum a_n\pm\sum b_n$.
 	- If $\sum a_n$ absolutely converge, $\sum b_n$ conditionally converge, then $\sum (a_n+b_n)$ conditionally converge.
+	- If $\sum a_{n}$ and $\sum (a_{n}+b_{n})$ conv. then $\sum b_{n}$ conv.
 - Multiplication by a constant 
 	- (5.10) - If $c\neq0$, then $\sum_{k=1}^{\infty}a_k$ converges if and only if $\sum_{k=1}^{\infty}ca_k$ converges. (in this case, $\sum_{k=1}^{\infty}ca_k=c\sum_{k=1}^{\infty}a_k$. )
 	- (q5.12) If $\sum_{k=1}^{\infty}a_k=\infty$, and $c>0$, then $\sum_{k=1}^{\infty}ca_k=\infty$.  

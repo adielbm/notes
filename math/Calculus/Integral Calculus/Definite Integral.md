@@ -87,8 +87,8 @@ Given $f$ is an function integrable on $[a,b]$
 - if $f$ is integrable on an interval where $a$ and $b$ are its endpoints and $|f(x)|\leq M$ for all $x$ in that interval, then $\displaystyle\left|\int^b_{a} f(t) \, dt\right|\leq M|b-a|$
 - (1.41) if $f$ is Darboux-integrable on $[a,b]$, then $\displaystyle \lim_{ \lambda(P) \to 0 }(S(P)-s(P))=0$
 - Odd / Even Functions (continuous on $\mathbb{R}$)
-	- (q2.43, Odd) $f(-x)=-f(x)$ for all $x$, then $\displaystyle\int ^a_{-a}f(x) \, dx=0$ for all $a$. 
-	- (Even) if $f(-x)=f(x)$ for all $x$, then $\displaystyle\int ^a_{-a}f(x) \, dx=2\int ^a_{0}f(x) \, dx$ for all $a$.
+	- (q2.43, Odd)  $\forall x,f(-x)=-f(x)\implies \forall a,\displaystyle\int ^a_{-a}f(x) \, dx=0$
+	- (Even) $\forall x, f(-x)=f(x)\implies\forall a,\displaystyle\int ^a_{-a}f(x) \, dx=2\int ^a_{0}f(x) \, dx$
 - Periodic functions
 	- If $f(x)=f(x+P)$ for all $x$, then $\displaystyle\int ^{b+P}_{a+P}f(x) \, dx=\int ^{b}_{a}f(x) \, dx$ for all $a,b$.
 	
@@ -106,7 +106,7 @@ Sufficient conditions for integrabletly of $f$ on $[a,b]$:
 
 Given $f$ (and $g$) is integrable (usually on $[a,b]$, unless otherwise stated)
 
-- (1.13, הנוסחה היסודית, Newton–Leibniz theorem, 2nd fundamental theorem of calculus) - If $F$ is an [[Indefinite Integral|antiderivative]] of $f$ on $[a,b]$, then: 
+- (1.13, Newton–Leibniz theorem, 2nd fundamental theorem  of calculus, (הנו' היסודית)) - If $F$ is an [[Indefinite Integral|antiderivative]] of $f$ on $[a,b]$, then: 
 	- $\displaystyle\int^{b}_{a} f(x) \, dx=F(b)-F(a)=F(x) \bigg\rvert_a^b$
 - $\forall a,b,c$ we have $\displaystyle\int ^b_{a}c \, dt=c(b-a)$ 
 - (1.21) $f$ is integrable on $[c,d]\subseteq[a,b]$

@@ -1,10 +1,26 @@
-# Exams 💪
+# Exams
 ## CALC-2 (July 29)
 
-- [ ] [[2023a-a1.pdf]] - [[solution-2023a-a1.pdf]]
-- [ ] [[2023a-a2.pdf]] - [[solution-2023a-a2.pdf]]
-- [ ] [[2023a-b.pdf]] - [[solution-2023a-b.pdf]]
-- [ ] [[2023b-a1.pdf]] - [[solution-2023b-a1.pdf]]
+- 2022a
+	- [x] [[2022a-a2.pdf]] - [[solution-2022a-a2.pdf]]
+		- [x] q1
+	- [x] [[2022a-a1.pdf]] - [[solution-2022a-a1.pdf]]
+	- [x] [[2022a-b.pdf]] - [[solution-2022a-b.pdf]]
+- 2022b
+	- [ ] [[2022b-a1.pdf]] - [[solution-2022b-a1.pdf]]
+	- [ ] [[2022b-a2.pdf]] - [[solution-2022b-a2 (1).pdf]]
+	- [ ] [[2022b-b.pdf]] - [[solution-2022b-b.pdf]]
+- 2023
+	- [x] [[2023a-a1.pdf]] - [[solution-2023a-a1.pdf]]
+	- [x] [[2023a-a2.pdf]] - [[solution-2023a-a2.pdf]]
+	- [x] [[2023a-b.pdf]] - [[solution-2023a-b.pdf]]
+	- [x] [[2023b-a1.pdf]] - [[solution-2023b-a1.pdf]]
+- 2024
+	- [ ] [[2024a-a2.pdf]] - [[solution-2024a-a2.pdf]]
+	- [ ] [[2024b-a1.pdf]] - [[solution-2024b-a1.pdf]]
+
+
+
 
 - [ ] alon l - infi 2 - https://www.youtube.com/watch?v=2KgGERhRZLc&list=PL7UMPWfWjqscR6cA6YKzZro5yS6RUhjCA&index=5
 
@@ -30,8 +46,8 @@
 	- [ ] 80
 	- [ ] 90
 	- [ ] 100 
-- 100 CALC 2 Problems https://www.youtube.com/watch?v=Kwyk_mteyNc
-	- [ ] 10
+- 100 CALC 2 Problems
+	- [ ] 10 https://www.youtube.com/watch?v=Kwyk_mteyNc&t=11838s
 	- [ ] 20
 	- [ ] 30
 	- [ ] 40

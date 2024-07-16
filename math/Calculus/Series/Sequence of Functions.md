@@ -22,7 +22,7 @@ A **sequence of functions** is a function whose domain is $\mathbb{N}$ and whose
 	- $f_n\to f$ **uniformly** on $I$
 	- $\forall\varepsilon > 0,\exists N\in\mathbb{N}:\forall n\geq N,\forall x \in{I},|f_n(x) - f(x)| < \varepsilon$
 	- $f$ is the **uniform limit** of $(f_n)$ on $I$
-	- (6.3) $\displaystyle \lim_{n \to \infty} \sup_{x\in I} |f_n(x) - f(x)| = 0$
+	- (6.3) $\displaystyle\sup_{x\in I} |f_n(x) - f(x)|\to 0$
 	- (q6.7) There exists a null sequence $(a_n)$ such that for almost all $n$ and for all $x\in I$, we have $|f_n(x) - f(x)| \leq a_n$
 
 
