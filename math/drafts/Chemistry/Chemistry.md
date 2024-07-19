@@ -15,6 +15,7 @@
 | Neutron            | $n^0$  | $0$    | $1.00866491588$                | Nucleus          |
 | Electron           | $e^-$  | $-1$   | $5.48579909070 \times 10^{-4}$ | Electron cloud   |
 
+
 ## Isotopes
 
 - Atoms with the same number of protons but different numbers of neutrons are called **isotopes**.
@@ -206,6 +207,40 @@ Because substances are usually not isotopically pure, (i.e., they are a mixture 
 
 
 
+
+> [!INFO] Calculating the Mass Percent of a Compound in a Mixture
+> **Problem:**
+> Given:
+> - $m(\text{Mixture})$ - The mass of a mixture containing different compounds.
+> - $n(\text{Compound})$ - The number of moles of a specific compound in the mixture.
+> - $M(\text{Compound})$ - The molar mass of the specific compound.
+> 
+> Find:
+> - $m(\text{Compound})$ - The mass of the compound in the mixture.
+> - $\text{Mass Percent}$ - The mass percent of the compound in the mixture.
+>
+> **Answer:**
+> 1. Calculate the mass of the compound in the mixture.
+> $m(\text{Compound}) = n(\text{Compound}) \times M(\text{Compound})$
+> 2. Determine the mass percent of the compound in the mixture.
+> $\text{Mass Percent} = \frac{m(\text{Compound})}{m(\text{Mixture})} \times 100$
+>
+> > [!EXAMPLE]
+> > Given:
+> > - $m(\text{Mixture}) = 1.6 \, \mathsf{g}$
+> > - $n(\ce{CaCO3}) = 0.0133 \, \mathsf{mol}$ of $\ce{C2H5NO2}$ (amino acid glycine)
+> > - $M(\ce{C2H5NO2}) = 75.07 \, \mathsf{g/mol}$
+> >
+> > **Solution:**
+> > 1. Calculate the mass of $\ce{C2H5NO2}$ in the mixture.
+> > $m(\ce{C2H5NO2}) = 0.0133 \, \mathsf{mol} \times 75.07 \, \mathsf{g/mol} = 0.998 \, \mathsf{g}$
+> > 2. Determine the mass percent of $\ce{C2H5NO2}$ in the mixture.
+> > $\text{Mass Percent} = \frac{0.998 \, \mathsf{g}}{1.6 \, \mathsf{g}} \times 100 = \boxed{62.4\%}$
+
+
+
+
+
 ### Calculating Masses in Reactions
 
 - $\ce{2Fe + 3Cl2 → 2FeCl3}$, what's the maximum mass of iron chloride that can be produced from 2.24 g of iron reacts with excess chlorine?
@@ -290,6 +325,60 @@ where:
 > 3. Divide the number of moles of each element by the smallest number of moles to get the simplest whole-number ratio:
 > - $\ce{C}: \ce{H}: \ce{O} = 3.33:6.65:3.33=1:2:1$
 > 4. The empirical formula of the compound is $$\ce{CH2O}$$.
+
+
+
+
+# Electron Configuration
+
+- The **energy state** of an electron is determined by the **quantum numbers**:
+	- **Principal Quantum Number** ($n$)
+		- $n=1,2,3,4,\dots$
+        - Determines the **electron shell** 
+        - Electrons with the same $n$ are in the same shell.
+        - Orbitals with the same $n$ are said to be in the same shell.
+        - The **energy level** of an electron is determined by the principal quantum number
+        - The number of orbitals in a shell is $n^2$.
+        - The maximum number of electrons in a shell is $2n^2$.
+    - **Azimuthal Quantum Number** ($\ell$) (Angular Momentum Quantum Number)
+        - Determines the shape of the orbital
+		- $\ell=0,1,2,3,\dots,n-1$
+        - Electrons with the same $n$ and $\ell$ are said to be in the same **subshell**
+        - Orbitals with the same $n$ and $\ell$ are said to be in the same subshell (or sublevel)
+        - For every subshell (given by $n$ and $\ell$):
+            - The number of orbitals is $2\ell+1$.
+            - The maximum number of electrons is $2(2\ell+1)$.
+	- **Magnetic Quantum Number** ($m_{l}$)
+        - Electrons with the same $n$, $\ell$, and $m_{l}$ are in the same **orbital**. (they have the same energy level, shape, and orientation)
+        - Determines the orientation of the orbital 
+		- $m_{l}=-\ell,\dots,0,\dots,\ell$
+	- **Spin Quantum Number** ($m_{s}$)
+        - Determines the orientation of the electron's spin
+- Every atomic orbital can hold a maximum of two electrons.
+- The **valence electrons** of an atom are the electrons in the **valence shell** (outermost shell) of the atom.
+- The **core electrons** are the electrons in the inner shells of the atom. 
+- energy level 
+- Aufbau principle:
+    - Electrons fill the lowest energy
+- Pauli exclusion principle:
+    - No two electrons in an atom can have the same set of four quantum numbers.
+- Hund's rule:
+    - Electrons fill orbitals singly before pairing up.
+
+| Letter | $\ell$ | electrons $2(2\ell +1)$ | Shells containing it | Orbitals |
+| ------ | ------ | ----------------------- | -------------------- | -------- |
+| $s$    | $0$    | $2$                     | Every shell          | $s$                 |
+| $p$    | $1$    | $6$                     | 2nd shell onwards    | $p_x$, $p_y$, $p_z$ |
+| $d$    | $2$    | $10$                    | 3rd shell onwards    | $d_{xy}$, $d_{yz}$, $d_{xz}$, $d_{x^2-y^2}$, $d_{z^2}$ |
+| $f$    | $3$    | $14$                    | 4th shell onwards    |  |
+
+| Shell | $n$ | $\ell=0$ | $1$  | $2$  | $3$  | Total electrons in shell ($2n^2$) |
+| ---------- | --- | -------- | ---- | ---- | ---- | -------------------- |
+| $K$        | $1$ | $1s$     |      |      |      | $2$                  |
+| $L$        | $2$ | $2s$     | $2p$ |      |      | $8$                  |
+| $M$        | $3$ | $3s$     | $3p$ | $3d$ |      | $18$                 |
+| $N$        | $4$ | $4s$     | $4p$ | $4d$ | $4f$ | $32$                 |
+| $O$        | $5$ | $5s$     | $5p$ | $5d$ | $5f$ | $50$                 |
 
 
 

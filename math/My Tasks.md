@@ -7,9 +7,9 @@
 	- [x] [[2022a-a1.pdf]] - [[solution-2022a-a1.pdf]]
 	- [x] [[2022a-b.pdf]] - [[solution-2022a-b.pdf]]
 - 2022b
-	- [ ] [[2022b-a1.pdf]] - [[solution-2022b-a1.pdf]]
-	- [ ] [[2022b-a2.pdf]] - [[solution-2022b-a2 (1).pdf]]
-	- [ ] [[2022b-b.pdf]] - [[solution-2022b-b.pdf]]
+	- [x] [[2022b-a1.pdf]] - [[solution-2022b-a1.pdf]]
+	- [x] [[2022b-a2.pdf]] - [[solution-2022b-a2 (1).pdf]]
+	- [x] [[2022b-b.pdf]] - [[solution-2022b-b.pdf]]
 - 2023
 	- [x] [[2023a-a1.pdf]] - [[solution-2023a-a1.pdf]]
 	- [x] [[2023a-a2.pdf]] - [[solution-2023a-a2.pdf]]
@@ -110,45 +110,20 @@
 - Highlights of Calculus
 	- [ ] https://www.youtube.com/watch?v=U0xlKuFqCuI&list=PLBE9407EA64E2C318&index=14
 	- [ ] 
-
-
-
 - A Brief History of Logic - Moshe Y. Vardi https://www.cs.rice.edu/~vardi/comp409/history.pdf
 
+# Chemistry 🧪
 
+ https://www.khanacademy.org/science/ap-chemistry-beta/
+ ![[ap-chemistry-course-at-a-glance.pdf]]
 
-
-# Archive 📜
-## LOGIC
-
-- [x]  ~~Wed. **26/06/2024** (כג סיון)~~
-- ~~24/07/2024~~
-- ~~09/09/2024~~
-
-- [x] [[test1.pdf|test1]] - [[test1_sol.pdf]]
-- [x] [[test2.pdf]] - [[test2_sol.pdf]]
-- [x] [[test3.pdf]] - [[test3_sol.pdf]]
-- [x] [[test4.pdf]] - [[test4_sol.pdf]]
-- [x] [[test5.pdf]] - [[test5_sol.pdf]]
-
-## Logic
-
-- [x] [[logic-5.pdf]] 
-- [x] [[logic-7.pdf]]
-
-Dictionary of Logic as Applied in the Study of Language 📚
-
-# Chemistry 
-
-- [ ] Mass spectrometry - https://www.khanacademy.org/science/ap-chemistry-beta/x2eef969c74e0d802:atomic-structure-and-properties/x2eef969c74e0d802:mass-spectrometry-of-elements/a/isotopes-and-mass-spectrometry#:~:text=.-,Mass%20spectrometry,%3F,-The%20answer%20is
-
-# Physics
+# Physics 🚀
 
 ## Fundamentals of Physics
 
 ###### I: Mechanics, Relativity, and Thermodynamics
 
-- [ ] 1. The Structure of Mechanics
+- [x] 1. The Structure of Mechanics
 - [ ] 2. Motion in Higher Dimensions
 - [ ] 3. Newton's Laws I
 - [ ] 4. Newton's Laws II
