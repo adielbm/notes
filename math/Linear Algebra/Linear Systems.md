@@ -14,7 +14,10 @@
 	- The system is **consistent** if its solution set is not empty
 	- The system is **inconsistent** if its solution set is empty
 	- The system is **determined** if its solution set is a singleton
-	- The **solution set** of the homogeneous system is called the **nullspace** of $A$ and denoted by $\text{null}(A)$
+	- The solution set of a homogeneous system is called the [[Matrices#Null space|null-space]] of $A$ and denoted by $\text{null}(A)$
+		- $\text{null}(A)$ is a subspace of $\mathbb{F}^n$
+		- $\mathbf{v},\mathbf{u}\in\text{null}(A)\implies \mathbf{v}+\mathbf{u}\in\text{null}(A)$
+		- $\mathbf{v}\in\text{null}(A)\implies c\mathbf{v}\in\text{null}(A)$
 
 
 ## Equivalence
