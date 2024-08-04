@@ -135,7 +135,7 @@ In this section $A$ is a $m\times n$ matrix
 	- $A$ has **full rank**
 	- $\text{rank}{(A)}=\min{\{ m,n \}}$
 	- $\text{rank}{(A)}=m$ or $\text{rank}{(A)}=n$
-	- $A$ is [[#Rank Deficient|not rank deficient]]
+	- $A$ is not [[#Rank Deficient|rank deficient]]
 	- $A$ has either [[#Full Column Rank|full column rank]] or [[#Full Row Rank|full row rank]]
 
 #### Full Column Rank
@@ -168,13 +168,18 @@ In this section $A$ is a $m\times n$ matrix
 	- The matrix $AA^T$ is invertible
 	- $A$ is **right-invertible** (There exists a matrix $B_{n\times m}$ such that $AB=I_{m}$)
 
+#### Full Row-and-Column Rank
+
+- The following statements are equivalent:
+	- $A$ has both **full row rank** and **full column rank**
+	- $A$ is [[#Invertibility|invertible]]
+
 ### Rank Deficient
 
 - The following statements are equivalent:
 	- $A$ is **rank deficient**
 	- $\text{rank}(A) < \min{\{ m,n \}}$
-	- The columns of $A$ are linearly dependent
-	- The rows of $A$ are linearly dependent
+	- The columns and rows of $A$ are linearly dependent
 	- $T_A$ is neither [[Linear Transformations#Injective (One-to-One)|injective]] nor [[Linear Transformations#Surjective (Onto)|surjective]]
 	- $\text{null}(A) \neq \{0\}$
 	- $\text{nullity}(A) \neq 0$
@@ -185,7 +190,7 @@ In this section $A$ is a $m\times n$ matrix
 	- $A$ is neither **left-invertible** nor **right-invertible**
 	- $A^T$ has neither [[#Full Row Rank|full row rank]] nor [[#Full Column Rank|full column rank]]
 
-### Zero Rank
+#### Zero Rank
 
 - The following statements are equivalent:
 	- $A$ has **zero rank**

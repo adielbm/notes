@@ -28,48 +28,66 @@
 	- The augmented matrices $[A|\mathbf{b}]$ and $[C|\mathbf{d}]$ are row equivalent
 	- $\text{RREF}(A|\mathbf{b})=\text{RREF}(C|\mathbf{d})$
 
+# Augmented Matrix Characterization
+
+Given $\mathbf{b}\in\mathbb{F}^m$ and a linear system $A\mathbf{x}=\mathbf{b}$ ($m$ equations, $n$ variables) over $\mathbb{F}$
+
 ## Consistency 
 
-- The following statements are **equivalent**: (For each $\mathbf{b}\in\mathbb{F}^m$)
+- The following statements are **equivalent**: 
 	- $A\mathbf{x}=\mathbf{b}$ is **consistent**
 	- (8.6.2) **Rouché–Capelli theorem** $\rho([A|\mathbf{b}])=\rho(A)$
 	- $\text{REF}[A|\mathbf{b}]$ has no row $\left[\begin{array}& 0 & \cdots & 0 & b \end{array}\right]$ in which $b\neq 0$ 
 	- $\mathbf{b}$ is a linear combination of the colmuns of $A$
 	- $\mathbf{b}\in \text{column-space}(A)$
 
-- Properties of a consistent system $A\mathbf{x}=\mathbf{b}$
-	- if there are no free variables, there is a unique solution
-	- if there is at least one free variable, there are infinitely many solutions
+### Determinacy
+
+- The following statements are **equivalent**:
+	- The system $A\mathbf{x}=\mathbf{b}$ is **determined**
+	- $\text{Sol}(A,\mathbf{b})$ is a singleton
+	- $A\mathbf{x}=\mathbf{b}$ is [[#Consistency|consistent]] and $A$ has [[Matrices#Full Column Rank|full column rank]]
+
+### Infinite Solutions Case
+
+- The following statements are **equivalent**:
+	- The system $A\mathbf{x}=\mathbf{b}$ has **infinitely many solutions**
+	- $\text{Sol}(A,\mathbf{b})$ is an affine subspace of $\mathbb{F}^n$
+	- $A\mathbf{x}=\mathbf{b}$ is [[#Consistency|consistent]] and $A$ has not [[Matrices#Full Column Rank|full column rank]]
 
 
-## Coefficient Matrix Properties
+## Inconsistency
 
-- The following statements are equivalent
-	- For each $\mathbf{b}\in\mathbb{F}^m$, the system $A\mathbf{x}=\mathbf{b}$ is consistent
-	- $A$ has [[Matrices#Full Row Rank|full row rank]]
+- The following statements are **equivalent**:
+	- The system $A\mathbf{x}=\mathbf{b}$ is **inconsistent**
+	- $\text{Sol}(A,\mathbf{b})=\emptyset$
+	- $\text{rank}(A)<\text{rank}([A|\mathbf{b}])$
+	- $\text{REF}[A|\mathbf{b}]$ has a row $\left[\begin{array}& 0 & \cdots & 0 & b \end{array}\right]$ in which $b\neq 0$
+	- $\mathbf{b}\notin \text{column-space}(A)$
 
-## Homogeneous system
+# Homogeneous System
+
 $$\large A\mathbf{x}=\mathbf{0}$$
 - Homogeneous system is consistent
 - if $m<n$, then it has infinitely many solutions
 
 - The following statements are equivalent
 	- $A\mathbf{x}=\mathbf{0}$ has a nontrivial solution
-	- The columns of a matrix $A$ are linearly dependent
+	- $A$ has not [[Matrices#Full Column Rank|full column rank]] (i.e. $\text{rank}(A)<n$)
 	- $A\mathbf{x}=\mathbf{0}$ has at least one free variable
 - The following statements are equivalent
 	- $A\mathbf{x}=\mathbf{0}$ has only the trivial solution
 	- $A$ has [[Matrices#Full Column Rank|full column rank]]
 
-# Overdetermined Case (m>n)
+# Coefficient Matrix Characterization
 
-- Given $m>n$ 
-	- There exists a vector $\mathbf{b}\in\mathbb{R}^m$ s.t. $A\mathbf{x}=\mathbf{b}$ is inconsistent
-# Underdetermined Case (m<n)
+- The following statements are equivalent
+	- For each $\mathbf{b}\in\mathbb{F}^m$, the system $A\mathbf{x}=\mathbf{b}$ is consistent
+	- $A$ has [[Matrices#Full Row Rank|full row rank]]
+- if $m>n$ then there exists a vector $\mathbf{b}\in\mathbb{R}^m$ s.t. $A\mathbf{x}=\mathbf{b}$ is inconsistent
+- if $m<n$ then for each vector $\mathbf{b}$ in $\mathbb{R}^m$ the system $A\mathbf{x}=\mathbf{b}$ is either inconsistent or has infinitely many solutions
 
-- Given $m<n$
-	- For each vector $\mathbf{b}$ in $\mathbb{R}^m$ the system $A\mathbf{x}=\mathbf{b}$ is either inconsistent or has infinitely many solutions
-# Square System (m=n)
+## Square System (m=n)
 
 - The following statements are **equivalent**:
 	- $A$ is [[Matrices#Invertibility|Invertible]]
@@ -79,6 +97,4 @@ $$\large A\mathbf{x}=\mathbf{0}$$
 - The following statements are **equivalent**:
 	- $A$ is singular
 	- $A\mathbf{x}=\mathbf{0}$ has **non trivial** solution
-- (4.6.1)  Cramer's rule: if $A$ is inevitable, then, $\mathbf{x}=(x_{1},\dots,x_{n})$, $x_i = \frac{\det(A_i)}{\det(A)}$, $i = 1, \ldots, n$, where $A_{i}$ is the matrix formed by replacing the $i$-th column of $A$ by the column vector $\mathbf{b}$
-
-
+- (4.6.1) Cramer's rule: if $A$ is inevitable, then, $\mathbf{x}=(x_{1},\dots,x_{n})$, $x_i = \frac{\det(A_i)}{\det(A)}$, $i = 1, \ldots, n$, where $A_{i}$ is the matrix formed by replacing the $i$-th column of $A$ by the column vector $\mathbf{b}$
