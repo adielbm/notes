@@ -40,11 +40,8 @@
         - (carbon-14) $\ce{C-14}$ or $\ce{carbon-14}$
         - (neon-20) $\ce{Ne-20}$ or $\ce{neon-20}$
 
-## Unified Atomic Mass Unit (u)
 
-- An **unified atomic mass unit** (u) (or **dalton** (Da)) is a non-SI unit of mass defined as $\frac{1}{12}$ of the mass of an unbound neutral atom of carbon-12 in its nuclear and electronic ground state and at rest.
-    - The **atomic mass constant** is a constant defined as $m_{u} =\frac{1}{12} m(^{12}\text{C}) = 1 \, \text{u} = 1.66053906892(52) \times 10^{-27} \, \text{kg}$
-
+# Mass
 ## Atomic Mass
 
 - The atomic mass ($m$ or $m_{\text{a}}$) is the mass of an atom
@@ -52,6 +49,11 @@
     - Examples: 
         - $m(\ce{^{12}C})=12 \, \mathsf{u}$ (the atomic mass of an carbon-12 atom is $12 \, \mathsf{u}$)
         - $m(\ce{^{13}C})=13.0033548378 \, \mathsf{u}$ (the atomic mass of an carbon-13 atom is $13.0033548378 \, \mathsf{u}$)
+
+### Unified Atomic Mass Unit (u)
+
+- An **unified atomic mass unit** (u) (or **dalton** (Da)) is a non-SI unit of mass defined as $\frac{1}{12}$ of the mass of an unbound neutral atom of carbon-12 in its nuclear and electronic ground state and at rest.
+    - The **atomic mass constant** is a constant defined as $m_{u} =\frac{1}{12} m(^{12}\text{C}) = 1 \, \text{u} = 1.66053906892(52) \times 10^{-27} \, \text{kg}$
 
 ### Average Atomic Mass
 
@@ -256,18 +258,7 @@ Because substances are usually not isotopically pure, (i.e., they are a mixture 
 - In general, given a balanced chemical equation, we want to find the maximum mass of a product that can be produced when a certain mass of a reactant is used, the mass of the product is the product of the number of moles of the limiting reactant and the molar mass of the product, $m(\text{product})=n(\text{limiting reactant}) \times M(\text{product})$
 
 
-## Ions
 
-- An **ion** is an atom or molecule that has a net electrical charge. 
-- The **ionic charge** of an ion is the charge of the ion and its magnitude is the number of electrons gained or lost by the atom.
-    - **Cation**: A positively charged ion (lost electrons)
-    - **Anion**: A negatively charged ion (gained electrons)
-- The ion charge is written as a superscript after the chemical symbol.
-- Examples:
-    - $\ce{Na+}$ is a sodium cation
-    - $\ce{Cl-}$ is a chloride anion
-    - $\ce{Al^{3+}}$ is an aluminum cation
-    - $\ce{O^{2-}}$ is an oxide anion
 
 
 # Volume of Gases
@@ -308,6 +299,7 @@ where:
 | Acetylene        | $\ce{CH}$         | $\ce{C2H2}$       |
 | Glucose          | $\ce{CH2O}$       | $\ce{C6H12O6}$    |
 | Ammonia          | $\ce{NH3}$        | $\ce{NH3}$        |
+| Water            | $\ce{H2O}$        | $\ce{H2O}$        |
 
 ## Empirical Formula
 
@@ -328,8 +320,22 @@ where:
 
 
 
+# Electrons
 
-# Electron Configuration
+## Ions
+
+- An **ion** is an atom or molecule that has a net electrical charge. 
+- The **ionic charge** of an ion is the charge of the ion and its magnitude is the number of electrons gained or lost by the atom.
+    - **Cation**: A positively charged ion (lost electrons)
+    - **Anion**: A negatively charged ion (gained electrons)
+- The ion charge is written as a superscript after the chemical symbol.
+- Examples:
+    - $\ce{Na+}$ is a sodium cation
+    - $\ce{Cl-}$ is a chloride anion
+    - $\ce{Al^{3+}}$ is an aluminum cation
+    - $\ce{O^{2-}}$ is an oxide anion
+
+## Electron Configuration
 
 - The **energy state** of an electron is determined by the **quantum numbers**:
 	- **Principal Quantum Number** ($n$)
@@ -370,15 +376,47 @@ where:
 | $s$    | $0$    | $2$                     | Every shell          | $s$                 |
 | $p$    | $1$    | $6$                     | 2nd shell onwards    | $p_x$, $p_y$, $p_z$ |
 | $d$    | $2$    | $10$                    | 3rd shell onwards    | $d_{xy}$, $d_{yz}$, $d_{xz}$, $d_{x^2-y^2}$, $d_{z^2}$ |
-| $f$    | $3$    | $14$                    | 4th shell onwards    |  |
+| $f$    | $3$    | $14$                    | 4th shell onwards    | |
 
 | Shell | $n$ | $\ell=0$ | $1$  | $2$  | $3$  | Total electrons in shell ($2n^2$) |
-| ---------- | --- | -------- | ---- | ---- | ---- | -------------------- |
-| $K$        | $1$ | $1s$     |      |      |      | $2$                  |
-| $L$        | $2$ | $2s$     | $2p$ |      |      | $8$                  |
-| $M$        | $3$ | $3s$     | $3p$ | $3d$ |      | $18$                 |
-| $N$        | $4$ | $4s$     | $4p$ | $4d$ | $4f$ | $32$                 |
-| $O$        | $5$ | $5s$     | $5p$ | $5d$ | $5f$ | $50$                 |
+| ----- | --- | -------- | ---- | ---- | ---- | --------------------------------- |
+| $K$   | $1$ | $1s$     |      |      |      | $2$                               |
+| $L$   | $2$ | $2s$     | $2p$ |      |      | $8$                               |
+| $M$   | $3$ | $3s$     | $3p$ | $3d$ |      | $18$                              |
+| $N$   | $4$ | $4s$     | $4p$ | $4d$ | $4f$ | $32$                              |
+| $O$   | $5$ | $5s$     | $5p$ | $5d$ | $5f$ | $50$                              |
 
+## Periodic Trends
 
+### Coulomb's Law
+
+$$\displaystyle  F \propto \frac{q_1 q_2}{r^2}$$
+- $F$ is the magnitude of the force between two charged particles
+- $q_1$ and $q_2$ are the charges of the particles
+- $r$ is the distance between the particles
+
+### Effective Nuclear Charge (Z-effective)
+
+$$Z_{\mathrm {eff} }=Z-S$$
+
+- $Z_\text{eff}$ is effective nuclear charge
+- $Z$ is the atomic number (number of protons)
+- $S$ is the **shielding constant**
+	- It represents the portion of the nuclear charge that is screened from a valence electron by the other electrons in the atom. 
+	- Because core electrons are most effective at screening a valence electron from the nucleus, the value of  is usually close to the number of core electrons
+
+## Periodic Table Trends
+
+- Effective Charge (Z-effective) 
+- Atomic Radius
+- Ionization Energy
+	- The **ionization energy** of an atom or ion is the minimum energy required to remove an electron from the ground state of the isolated gaseous atom or ion
+	- Highest for noble gases and halogens
+	- Lowest for alkali metals (bottom left)
+- Electron Affinity
+	- Lowest for noble gases and alkali metals
+	- Highest for halogens
+- Electronegativity
+	- Follows a similar trend to electron affinity
+	- Increases from bottom left to top right of the periodic table
 

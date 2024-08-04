@@ -102,7 +102,7 @@ Sufficient conditions for integrabletly of $f$ on $[a,b]$:
 - (1.18) if $f$ is continuous (thus bounded) on $[a,b]$ 
 - (1.19) if $f$ is bounded and continuous on $[a,b]$ (possibly expect finites number of discontinuity points)
 - if $f$ is [[Continuity#Piecewise Continuous Function|piecewise continuous function]] on $[a,b]$
-## Integrable Function Properties 
+ ## Integrable Function Properties 
 
 Given $f$ (and $g$) is integrable (usually on $[a,b]$, unless otherwise stated)
 

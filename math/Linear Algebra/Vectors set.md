@@ -119,7 +119,7 @@ $K=\{ \textbf{u}_{1}, \dots,\textbf{u}_{k} \} \subseteq\mathbb{R}^n$ is orthogon
 
 - $\forall a \in A, b \in B: a \perp b\iff A\perp B$
 
-## **Gram–Schmidt process** (12.5.2) 
+## Gram–Schmidt process (12.5.2) 
 
 Convert a basis $\{ \mathbf{u}_{1},\dots,\mathbf{u}_{k} \}$ into an orthogonal basis $\{ \mathbf{v}_{1},\dots,\mathbf{v}_{k} \}$:
 

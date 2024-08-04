@@ -1,9 +1,40 @@
+
+
+
+
 # Exams
+
+## Linear Algebra 1 (Sep. 2)
+
+- Wrath of Math
+	- Linear Algebra
+		- https://www.youtube.com/playlist?list=PLztBpqftvzxWT5z53AxSqkSaWDhAeToDG
+	- Linear Algebra Exercises
+		- https://youtube.com/playlist?list=PLztBpqftvzxVmiiFW7KtPwBpnHNkTVeJc
+
+
+
+
+- 26/06/2024
+- 04/07/2024 
+- 02/09/2024 (probably this date...) כט אב
+- 26/09/24 - Elul כג
+- 25/11/24 - Cheshvan כד
+
+
+
 ## CALC-2 (July 29)
 
+- 2018a
+	- [ ] [[2018a-a1.pdf]] - [[sol-2018a-a1.pdf]]
+	- [ ] [[2018a-a2.pdf]] - [[sol-2018a-a2.pdf]]
+	- [ ] [[2018a-b.pdf]] - [[sol-2018a-b.pdf]]
+- 2018b
+	- [ ] [[2018b-a1.pdf]] - [[sol-2018b-a1.pdf]]
+	- [ ] [[2018b-a2.pdf]] - [[sol-2018b-a2.pdf]]
+	- [ ] [[2018b-b.pdf]] - [[sol-2018b-b.pdf]]
 - 2022a
 	- [x] [[2022a-a2.pdf]] - [[solution-2022a-a2.pdf]]
-		- [x] q1
 	- [x] [[2022a-a1.pdf]] - [[solution-2022a-a1.pdf]]
 	- [x] [[2022a-b.pdf]] - [[solution-2022a-b.pdf]]
 - 2022b
@@ -16,8 +47,8 @@
 	- [x] [[2023a-b.pdf]] - [[solution-2023a-b.pdf]]
 	- [x] [[2023b-a1.pdf]] - [[solution-2023b-a1.pdf]]
 - 2024
-	- [ ] [[2024a-a2.pdf]] - [[solution-2024a-a2.pdf]]
-	- [ ] [[2024b-a1.pdf]] - [[solution-2024b-a1.pdf]]
+		- [ ] [[2024a-a2.pdf]] - [[solution-2024a-a2.pdf]]
+	- [x] [[2024b-a1.pdf]] - [[solution-2024b-a1.pdf]]
 
 
 
@@ -67,14 +98,6 @@
 - ~~26/09/24 - Elul כג~~
 - ~~25/11/24 - Cheshvan כד~~
 
-## Linear Algebra 1 (Sep. 2)
-
-
-- 26/06/2024
-- 04/07/2024 
-- 02/09/2024 (probably this date...) כט אב
-- 26/09/24 - Elul כג
-- 25/11/24 - Cheshvan כד
 
 
 # Study 📚
@@ -110,9 +133,10 @@
 - Highlights of Calculus
 	- [ ] https://www.youtube.com/watch?v=U0xlKuFqCuI&list=PLBE9407EA64E2C318&index=14
 	- [ ] 
-- A Brief History of Logic - Moshe Y. Vardi https://www.cs.rice.edu/~vardi/comp409/history.pdf
-
 # Chemistry 🧪
+
+- AP Chemistry Review Professor Dave Explains
+	 - https://www.youtube.com/playlist?list=PLybg94GvOJ9EWw6ZBXAQuLPDJeiFNmqkg
 
  https://www.khanacademy.org/science/ap-chemistry-beta/
  ![[ap-chemistry-course-at-a-glance.pdf]]

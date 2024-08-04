@@ -2,7 +2,7 @@
 
 ## Definition
 
-A **vector space** over a [[Field]] $F$ is a non-empty set $V$ together with a binary operation and a binary function that satisfy the eight axioms listed below. 
+A **vector space** over a [[Field|field]] $F$ is a non-empty set $V$ together with a binary operation and a binary function that satisfy the eight axioms listed below. 
 - In this context, the elements of $V$ are commonly called **vectors**, and the elements of $F$ are called **scalars**.
 - The binary operation, called **vector addition** or simply **addition** assigns to any two vectors $v$ and $w$ in $V$ a third vector in $V$ which is commonly written as $v + w$, and called the sum of these two vectors.
 - The binary function, called **scalar multiplication**, assigns to any scalar $a$ in $F$ and any vector $v$ in $V$ another vector in $V$, which is denoted $av$
@@ -36,12 +36,25 @@ A **vector space** over a [[Field]] $F$ is a non-empty set $V$ together with a b
 - $-(\mathbf{u}+\mathbf{v})=(-\mathbf{u})+(-\mathbf{v})$
 - $\mathbf{u}-\mathbf{v}=\mathbf{0}\implies \mathbf{u}=\mathbf{v}$
 
+## Examples
+
+- $\mathbb{R}^n$ is a vector space over $\mathbb{R}$ 
+- $\mathbb{C}^n$ is a vector space over $\mathbb{C}$
+- $\mathbb{F}^{n}$ is a vector space over $\mathbb{F}$
+- $\mathbf{M}_{m\times n}(\mathbb{F})$ (the set of all $m\times n$ matrices with entries in $\mathbb{F}$) is a vector space over $\mathbb{F}$
+	- $\mathbf{M}_{m\times n}(\mathbb{F})$ is isomorphic to $\mathbb{F}^{mn}$
+	- $\dim(\mathbf{M}_{m\times n}(\mathbb{F}))=mn$
+- $\mathbb{P}_{n}(\mathbb{F})$ (the set of all polynomials of degree **less than** $n$ with coefficients in $\mathbb{F}$) is a vector space over $\mathbb{F}$
+	- $\dim(\mathbb{P}_{n}(\mathbb{F}))=n$
+	- (some define $\mathbb{P}_{n}(\mathbb{F})$ as the set of all polynomials of degree **less than or equal** to $n$, then $\dim(\mathbb{P}_{n}(\mathbb{F}))=n+1$)
+
 ## Operations
 
 - [[#Definition|Scalar Multiplication]] ($\textit{scalar}\cdot\mathbf{vector}=\mathbf{vector}$)
 - [[#Definition|Vector Addition]] ($\mathbf{vector}+\mathbf{vector}=\mathbf{vector}$)
 - [[#Dot Product]] ($\mathbf{vector}\cdot\mathbf{vector}=\textit{saclar}$)
 - [[#Cross Product]] ($\mathbf{vector}\times\mathbf{vector}=\mathbf{vector}$)
+
 
 ### Dot Product
 

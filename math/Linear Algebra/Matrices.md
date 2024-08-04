@@ -1,5 +1,4 @@
-$\large A$ is $m\times n$ matrix 
-
+- The set of all $m\times n$ matrices is denoted by $\mathbf{M}_{m\times n}(\mathbb{F})$ (or $M_{m\times n}$ if the field is understood, or $M_{n}$ if $m=n$), or by $\mathbb{F}^{m\times n}$ is a [[Vector Spaces#Examples|vector space]] over $\mathbb{F}$ where $\dim(\mathbf{M}_{m\times n}(\mathbb{F}))=mn$
 ## Arithmetic 
 
 ### Matrix addition & multiplication 
@@ -26,61 +25,85 @@ $\large A$ is $m\times n$ matrix
 
 - $A\mathbf{u}=A\mathbf{v}\iff A(\mathbf{u}-\mathbf{v})=0$
 
+# Matrix
+
+In this section $A$ is a $m\times n$ matrix
+
 ## Row Echelon form (REF)
 
-- (1.11.1) $\text{REF}(A)$ is row equivalence to $\text{RREF}(A)$
-- (8.5.1) The non-zero rows of $\text{REF}(A)$ are a basis for $\text{row-space(A)}$.
+- (1.11.1) $\text{REF}(A)$ and $\text{RREF}(A)$ are row equivalent
+- (8.5.1) The non-zero rows of $\text{REF}(A)$ are a basis of $\text{row-space(A)}$
 
 ### Reduced Row Echelon form (RREF)
 
 - **Uniqueness:** Each matrix is row equivalent to one and only one reduced echelon matrix. 
 
-## Row equivalence
+## Elementary Row Operations
 
-Row equivalence is an *equivalence relation*
+- $EA$ is the matrix obtained by applying the elementary row operation $E$ to the matrix $A$.
+- An elementary row operation is represented by a left-multiplication of $A$ by an [[#Elementary matrix|elementary matrix]] $E$ (of the order $m$)
 
-**Equivalent Definitions:** 
-- $A$ and $B$ are **row equivalent**
-- It is possible to transform $A$ into $B$ by a sequence of elementary row operations
-- (q7.5.12) $\text{row-space}(A)=\text{row-space}(B)$
-- $\text{null}(A)=\text{null}(B)$
-- There exists an invertible matrix $P$ such that $A=PB$.
+
+|               | Operation                           |
+| ------------- | ----------------------------------- |
+| Row Switching | $R_{i}\leftrightarrow R_{j}$        |
+| Row Scaling   | $R_{i}\to kR_{i}$ (where $k\neq 0$) |
+| Row Addition  | $R_{i}\to R_{i}+kR_{j}$             |
+
+
+### Row equivalence
+
+> _Row equivalence_ is an [[Binary Relation#Equivalence relation|equivalence relation]] on the set $M_{m\times n}(\mathbb{F})$
+
+- The following statements are equivalent:
+	- $A$ and $B$ are **row equivalent**
+	- It is possible to transform $A$ into $B$ by a sequence of elementary row operations
+	- (q7.5.12) $\text{row-space}(A)=\text{row-space}(B)$
+	- $\text{null}(A)=\text{null}(B)$
+	- There exists an invertible matrix $P$ such that $A=PB$.
 
 **Properties:**
-If $A$ and $B$ are row equivalent matrices, then: 
-- A given set of column vectors of $A$ is linearly independent if and only if the corresponding column vectors of $B$ are linearly independent. 
-- A given set of column vectors of $A$ forms a basis for the column space of $A$ if and only if the corresponding column vectors of $B$ form a basis for the column space of $B$. 
-- $A$ and $B$ have the same rank
-- (4.2.2) $\det{A}=0\iff\det{B}=0$
 
+- If $A$ and $B$ are row equivalent matrices, then: 
+	- A given set of column vectors of $A$ is linearly independent if and only if the corresponding column vectors of $B$ are linearly independent. 
+	- A given set of column vectors of $A$ forms a basis for the column space of $A$ if and only if the corresponding column vectors of $B$ form a basis for the column space of $B$. 
+	- $\text{rank}(A)=\text{rank}(B)$
+	- (4.2.2) $\det{A}=0\iff\det{B}=0$ (for square matrices)
+ 
 ## Fundamental Spaces
 
 ### Row space
 
-**Definitions:**
-- $\text{row-space}(A)=$
+- $\text{row-space}(A)=\text{Sp}(\{ \text{row}_{1}(A),\dots,\text{row}_{m}(A) \})$
 
-**Theorems:**
-- $\text{row-space}(A+B)\subseteq\text{row-space}(A)+\text{row-space}(B)$
 ### Column space
 
-**Theorems:**
-- (9.8.7a) $\text{column-spcae}(BA) \subseteq \text{column-spcae}(B)$
-- (9.8.7c) $\text{column-spcae}(BA)=B(\text{column-spcae}(A))$
+- $\text{column-space}(A)=\text{Sp}(\{ \text{column}_{1}(A),\dots,\text{column}_{n}(A) \})$
+
 ### Null space
 
-**Definitions:**
-- $\text{null}(A)=\{ v \mid Av=0 \}$. (in the book it's notated as $P(A)$ (!!) )
+- $\text{null}(A)=\{ v \mid Av=0 \}$. (in the book it's denoted by $P(A)$ (!!!))
 
-**Theorems:**
+### Left null space
+
+- $\text{null}(A^t)$
+
+### Theorems
+
+- $\text{row-space}(A)\subseteq \mathbb{F}^n$
+- $\text{column-space}(A)\subseteq \mathbb{F}^m$
+- $\text{null}(A)\subseteq \mathbb{F}^n$
+- $\text{null}(A^t)\subseteq \mathbb{F}^m$
+- $\text{row-space}(A)=\text{column-space}(A^t)$
+- $\text{column-space}(A)=\text{row-space}(A^t)$
+- $\text{row-space}(A)=\text{row-space}(\text{REF}(A))$
+- $\text{row-space}(A+B)\subseteq\text{row-space}(A)+\text{row-space}(B)$
+- (9.8.7a) $\text{column-spcae}(BA) \subseteq \text{column-spcae}(B)$
+- (9.8.7c) $\text{column-spcae}(BA)=B(\text{column-spcae}(A))$
 - (9.8.7b) $\text{null}(A) \subseteq \text{null}(BA)$
 
 ## Rank
 
-> [!notation] 
-> $\text{rank}{(A)}=\rho{(A)}$
-
-**Definitions:**
 - (d8.5.4) $\rho{(A)}=\dim(\text{row-space(A)})=\dim(\text{column-space(A)})$
 - $\rho(A)$ is the number of linearly independent **rows**
 - $\rho(A)$ is the number of linearly independent **columns**
@@ -89,29 +112,92 @@ If $A$ and $B$ are row equivalent matrices, then:
 - $\rho(A)$ is the number of the non-zero rows of $\text{REF}(A)$
 - $\rho(A)$ is the number of pivots in $\text{RREF}(A)$
 
-**Theorems:**
-- (q8.5.4) $\rho{(A)}=\rho{(A^t)}$
-- (q8.5.5) $\rho{(A_{m \times n})}\leq\min{\{ m,n \}}$
-	- if $\rho{(A)}=\min{\{ m,n \}}$ then $A$ has **full rank**.
-		- if $\rho{(A)}=n$ then $A$ has **full column rank**. ($f(\mathbf{x})=A\mathbf{x}$ is injective)
-		- if $\rho{(A)}=m$ then $A$ has **full row rank**. ($f(\mathbf{x})=A\mathbf{x}$ is surjective) (A's rows are linearly indepndent #todo )
-	- Otherwise if $\rho{(A)}<\min{\{ m,n \}}$, then $A$ has **rank deficient**. 
+> $\text{rank}{(A)}=\rho{(A)}$
 
+### Theorems
+
+- (8.6.1) **Rank–nullity theorem**  $$\text{rank}(A)+\text{nullity}{(A)}=n$$
+
+- (q8.5.4) $\rho{(A)}=\rho{(A^t)}$
 - (q8.5.6) $\rho{(AB)}\leq\min{\{ \rho{(A)}, \rho{(B)} \}}$
 - if $A_{n}$ is invertible matrix, then 
 	- (q8.5.7a) $\rho(BA)=\rho(B)$ for any matrix $B_{m \times n}$
 	- (q8.5.7b) $\rho(AB)=\rho(B)$ for any matrix $B_{n \times m}$
-- (8.6.1) **Rank–nullity** theorem  $\rho(A)+\dim(\text{null}{(A)})=n$
-- $A=0\iff \rho(A)=0$
 - Row equivalent matrices have the same rank #todo 
 - #todo  $\rho(A+B)\leq \rho(A)+\rho(B)$
 - (8.3.4a+8.6.1) $\text{null}(AB) \subseteq \text{null}(B)\implies \rho(B)\leq \rho(AB)$
 
-- rank of **square matrix:** let $A,B$ are square matrices of order $n$, then:
-	- (q8.5.8a) $\rho(A)=n \iff \det(A)\neq 0$  
-	- (q10.5.3) Sylvester’s inequality $\rho(A)+\rho(B)\leq \rho(AB)+n$
-	- $\rho(B)-\dim(\text{null}(A))\leq \rho(AB)$. (from Sylvester’s inequality and  Rank–nullity theorem)
-	- $AB=0\implies \rho(A)+\rho(B)\leq n$
+### Full Rank
+
+> q8.5.5
+
+- The following statements are equivalent:
+	- $A$ has **full rank**
+	- $\text{rank}{(A)}=\min{\{ m,n \}}$
+	- $\text{rank}{(A)}=m$ or $\text{rank}{(A)}=n$
+	- $A$ is [[#Rank Deficient|not rank deficient]]
+	- $A$ has either [[#Full Column Rank|full column rank]] or [[#Full Row Rank|full row rank]]
+
+#### Full Column Rank
+
+- The following statements are equivalent:
+	- $A$ has **full column rank**
+	- $\text{rank}(A) = n$
+	- The columns of $A$ are linearly independent
+	- $T_A$ is [[Linear Transformations#Injective (One-to-One)|injective]] (one-to-one)
+	- $\text{null}(A) = \{0\}$ 
+	- $\text{nullity}(A)=0$
+	- $\text{row-space}(A) = \mathbb{F}^n$
+	- The matrix $A^T A$ is invertible
+	- For every $\mathbf{b} \in \mathbb{F}^m$, the system $A\mathbf{x} = \mathbf{b}$ has at most one solution
+	- $A$ is **left-invertible** (There exists a matrix $B_{n\times m}$ such that $BA=I_{n}$)
+	- $A^T$ has [[#Full Row Rank|full row rank]]
+
+#### Full Row Rank
+
+- The following statements are equivalent:
+	- $A$ has **full row rank**
+	- $\text{rank}(A) = m$
+	- The rows of $A$ are linearly independent
+	- $T_A$ is [[Linear Transformations#Surjective (Onto)|surjective]] (onto)
+	- $A^T$ has [[#Full Column Rank|full column rank]]
+	- For every $\mathbf{b} \in \mathbb{F}^m$, the system $A\mathbf{x} = \mathbf{b}$ is consistent
+	- Every $\mathbf{b}$ in $\mathbb{F}^m$ is a linear combination of the columns of $A$
+	- $\text{column-space}(A) = \mathbb{F}^m$
+	- $A$ has a pivot position in every row
+	- The matrix $AA^T$ is invertible
+	- $A$ is **right-invertible** (There exists a matrix $B_{n\times m}$ such that $AB=I_{m}$)
+
+### Rank Deficient
+
+- The following statements are equivalent:
+	- $A$ is **rank deficient**
+	- $\text{rank}(A) < \min{\{ m,n \}}$
+	- The columns of $A$ are linearly dependent
+	- The rows of $A$ are linearly dependent
+	- $T_A$ is neither [[Linear Transformations#Injective (One-to-One)|injective]] nor [[Linear Transformations#Surjective (Onto)|surjective]]
+	- $\text{null}(A) \neq \{0\}$
+	- $\text{nullity}(A) \neq 0$
+	- $\text{row-space}(A) \neq \mathbb{F}^n$
+	- $\text{column-space}(A) \neq \mathbb{F}^m$
+	- $A^T A$ is not invertible
+	- There exists a $\mathbf{b} \in \mathbb{F}^m$ such that the system $A\mathbf{x} = \mathbf{b}$ has more than one solution
+	- $A$ is neither **left-invertible** nor **right-invertible**
+	- $A^T$ has neither [[#Full Row Rank|full row rank]] nor [[#Full Column Rank|full column rank]]
+
+### Zero Rank
+
+- The following statements are equivalent:
+	- $A$ has **zero rank**
+	- $\text{rank}(A) = 0$
+	- $\text{rank}(A^T) = 0$
+	- $A$ is the zero (null) matrix (of order $m \times n$)
+	- $A = 0$
+	- $\text{null}(A) = \mathbb{F}^n$
+	- $\text{nullity}(A) = n$
+	- $\text{row-space}(A) = \{0\}$
+	- $\text{column-space}(A) = \{0\}$
+	- $T_A: \mathbb{F}^n \to \mathbb{F}^m$ is the zero transformation
 
 ## Nullity 
 
@@ -147,20 +233,6 @@ Equivalent matrices represent the same linear transformation $T:V\to{W}$ under t
 - $P$ is change-of-basis $m\times m$ invertible matrix of $W$ from $C$ to $C'$
 - $A=[T]^{B}_{C}$ is the transformation matrix by the **old bases**
 - $A'=[T]^{B'}_{C'}$ is the transformation matrix by the **new bases**
-
-## Theorems 
-
-- The following statements are **equivalent**:
-	- For each $\mathbf{b}$ in $\mathbb{R}^m$, the equation $A\mathbf{x}=\mathbf{b}$ has a solution
-	- Each $\mathbf{b}$ in $\mathbb{R}^m$ is a linear combination of the columns of $A$
-	- The columns of $A$ span $\mathbb{R}^m$
-	- $A$ has a pivot postion in every row
-
-- The following statements are **equivalent**:
-	- The equation $A\mathbf{x}=\mathbf{b}$ has a unique least-squares for each $\mathbf{b}$ in $\mathbb{R}^m$
-	- The columns of $A$ are linearly indepndent
-	- The matrix $A^tA$ is invertible 
-
 
 - $AB=0\iff \text{column-space}(B)\subseteq{\text{null}(A)}$
 
@@ -232,6 +304,14 @@ Equivalent matrices represent the same linear transformation $T:V\to{W}$ under t
 
 > **WolframAlpha** `inverse [matrix]`
 
+
+## Rank
+
+- rank of **square matrix:** let $A,B$ are square matrices of order $n$, then:
+	- (q8.5.8a) $\rho(A)=n \iff \det(A)\neq 0$  
+	- (q10.5.3) Sylvester’s inequality $\rho(A)+\rho(B)\leq \rho(AB)+n$
+	- $\rho(B)-\dim(\text{null}(A))\leq \rho(AB)$. (from Sylvester’s inequality and  Rank–nullity theorem)
+	- $AB=0\implies \rho(A)+\rho(B)\leq n$
 ## Elementary matrix
 
 - $A$ is called an **elementary matrix** if it can be obtained from an identity matrix by performing a single elementary row operation. 
@@ -265,6 +345,7 @@ Equivalent matrices represent the same linear transformation $T:V\to{W}$ under t
 		- (4.3.6) If a multiple of one row of $A$ is **added** to another row to produce a matrix $B$, then $\det B=\det A$
 		- (4.3.2) If two rows of $A$ are **interchanged** to produce $B$, then $\det B=-\det A$
 		- (4.3.3) if one row of $A$ is **multiplied** by $k$ to produce $B$, then $\det B=k \cdot \det A$ 
+			- ($\det (kA)=k^n\det A$)
 	- (q4.3.3b) **Homogeneity:** $\det (tA)=t^n \det A$
 	- $\det A$ is equal to the product of its eigenvalues (see q11.4.7)
 	- (q4.3.10) determinant of an odd dimension anti-symmetric matrix is zero
@@ -365,7 +446,7 @@ Definitions of the **eigenspace of** $A$ **associated with its eigenvalue** $\la
 
 ## Similarity
 
-Similarity is an *equivalence relation* on the space of square matrices.
+Similarity is an [[Binary Relation#Equivalence relation|equivalence relation]] on the space of square matrices.
 
 $A$ and $B$ are square matrices
 
@@ -373,7 +454,7 @@ Definitions of **similarity**. The following statements are **equivalent**:
 - $A$ and $B$ are similar
 - (d10.7.1) There exists an invertible matrix $P$ such that $A=P^{-1}BP$ 
 	- $P$ being the change of basis matrix
-- (10.7.2) $A$ and $B$ represent **the same linear transformation**. (possibly different bases)
+- (10.7.2) $A$ and $B$ represent the same linear transformation (possibly different bases)
 
 **Theorems:**
 - (q10.7.8) *zero matrix* is similar only to itself. *identify matrix* is similar only to itself. 
@@ -386,11 +467,11 @@ Definitions of **similarity**. The following statements are **equivalent**:
 	- $A=I\iff B=I$ #todo 
 	- $A=0\iff B=0$ #todo 
 	- $A$ is **invertible**, if and only if $B$ is also **invertible** #todo 
-	- $\det(A)=\det(B)$ (10.7.3)
-	- $\text{tr}(A)=\text{tr}(B)$ (10.7.5)
-	- $A$ and $B$ have the same **eigenvalues** (11.3.3)
-	- $A$ and $B$ have the same **algebraic multiplicities** of eigenvalues #todo 
-	- $A$ and $B$ have the same **characteristic polynomial** (11.4.3)
+	- (10.7.3) $\det(A)=\det(B)$ 
+	- (10.7.5) $\text{tr}(A)=\text{tr}(B)$ 
+	- (11.3.3) $A$ and $B$ have the same _eigenvalues_
+	- $A$ and $B$ have the same _algebraic multiplicities_ of eigenvalues #todo 
+	- (11.4.3) $A$ and $B$ have the same _characteristic polynomial_
 	- $\dim(\text{null}(A))=\dim(\text{null}(B))$
 	- $\text{rank}(A)=\text{rank}(B)$
 

@@ -47,7 +47,7 @@ $$\large T:V\to W$$
 
 - Definition: $\ker(T) = \{ v \in V : T(v) = 0_W\}$
 - (9.3.5) $\ker T$ is subspace of $V$
-- (9.5.2) $T$ is injective, if and only if, $\ker{T}=\{ 0 \}$
+	- (9.5.2) $T$ is injective, if and only if, $\ker{T}=\{ 0 \}$
 
 >see 9.6.2 
 
