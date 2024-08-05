@@ -1,7 +1,3 @@
-
-
-
-
 # Exams
 
 ## Linear Algebra 1 (Sep. 2)
@@ -12,16 +8,22 @@
 	- Linear Algebra Exercises
 		- https://youtube.com/playlist?list=PLztBpqftvzxVmiiFW7KtPwBpnHNkTVeJc
 
-
-
-
-- 26/06/2024
-- 04/07/2024 
-- 02/09/2024 (probably this date...) כט אב
-- 26/09/24 - Elul כג
-- 25/11/24 - Cheshvan כד
-
-
+- 2021
+	- [ ] [[2021a-75.pdf]] - [[2021a-75-solution.pdf]]
+	- [ ] [[2021a-89.pdf]] - [[2021a-89-solution.pdf]]
+	- [ ] [[2021b-52.pdf]] - [[2021b-52-solution.pdf]]
+	- [ ] [[2021b-62.pdf]] - [[2021b-62-solution.pdf]]
+	- [ ] [[2021b-92.pdf]] - [[2021b-92-solution.pdf]]
+	- [ ] [[2021c-84.pdf]] - [[2021c-84-solution.pdf]]
+	- [ ] [[2021c-95.pdf]] - [[2021c-95-solution.pdf]]
+- 2022
+- 2023
+- 2024
+	- [ ]  [[moed 84 - 2024a-20109.pdf]] - [[solution moed 84 - 2024a-20109.pdf]]
+	- [ ]  [[moed 83 - 2024b-20109.pdf]] - [[solution moed 83 - 2024b-20109.pdf]]
+	- [ ] [[moed 81 - 2024b-20109.pdf]] - [[solution moed 81 - 2024b-20109.pdf]]
+	- [ ] [[moed 86 - 2024a-20109.pdf]] - [[solution moed 86 - 2024a-20109.pdf]]
+	- [ ] [[moed 93 - 2024a-20109.pdf]] - [[solution moed 93 - 2024a-20109.pdf]]
 
 ## CALC-2 (July 29)
 
