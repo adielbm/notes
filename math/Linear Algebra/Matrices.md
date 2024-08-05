@@ -16,7 +16,8 @@
 		- $0A=0$
 		- $A+0=A$
 		- and more...
-	- **matrix multiplication** operation between two matrices (it's analogous to the dot product of two vectors, and here it represents the composition of linear transformations)
+	- **Matrix Multiplication** operation between two matrices (represents a composition of linear transformations)
+		- Multiplication of two matrices $A_{m\times n}$ and $B_{n\times p}$ is defined if and only if the number of columns of $A$ is equal to the number of rows of $B$.
 		- $A_{m\times n}B_{n\times p}=C_{m \times p}=[c_{ij}]$, where $c_{ij}$ is the dot product of the $i$th row of $A$ and the $j$th column of $B$ 
 			- (3.4.3) $[A]^{r}_{i}B=[C]^{r}_{i}$ and $A[B]^{c}_{j}=[C]^{c}_{j}$
 			- (3.4.4) $[A]^{r}_{i}=0\implies [C]^{r}_{i}=0$ and $[B]^{c}_{j}=0\implies [C]^{c}_{j}=0$ 		
