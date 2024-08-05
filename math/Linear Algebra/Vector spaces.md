@@ -7,16 +7,16 @@ A **vector space** over a [[Field|field]] $F$ is a non-empty set $V$ together wi
 - The binary operation, called **vector addition** or simply **addition** assigns to any two vectors $v$ and $w$ in $V$ a third vector in $V$ which is commonly written as $v + w$, and called the sum of these two vectors.
 - The binary function, called **scalar multiplication**, assigns to any scalar $a$ in $F$ and any vector $v$ in $V$ another vector in $V$, which is denoted $av$
 
-|  | Vector space axioms |  |
-| ---- | ---- | ---- |
-| **Vector Addition** | Associativity | $u + (v + w) = (u + v) + w$ |
-|  | Commutativity | $u + v = v + u$ |
-|  | Identity element |  |
-|  | Inverse elements |  |
-| **Scalar Multiplication** | Distributivity (vector addition) | $a(u + v) = au + av$ |
-|  | Distributivity (field addition) | $(a + b)v = av + bv$ |
-|  | Compatibility with field multiplication | $a(bv) = (ab)v$ |
-|  | Identity element |  |
+|                           | Vector space axioms                     |                             |
+| ------------------------- | --------------------------------------- | --------------------------- |
+| **Vector Addition**       | Associativity                           | $u + (v + w) = (u + v) + w$ |
+|                           | Commutativity                           | $u + v = v + u$             |
+|                           | Identity element                        |                             |
+|                           | Inverse elements                        |                             |
+| **Scalar Multiplication** | Distributivity (vector addition)        | $a(u + v) = au + av$        |
+|                           | Distributivity (field addition)         | $(a + b)v = av + bv$        |
+|                           | Compatibility with field multiplication | $a(bv) = (ab)v$             |
+|                           | Identity element                        |                             |
 
 >it has to add closure property (for vector addition and scalar mul.) depending on definition of binary operation
 

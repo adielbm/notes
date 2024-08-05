@@ -12,16 +12,16 @@
 
 ## SI Derived Units
 
-| SI unit |                | in SI base units                                  | Dim.                             | Quantity(s)                       |
-| ------- | -------------- | ------------------------------------------------- | -------------------------------- | --------------------------------- |
-| newton  | $\mathsf{N}$   | $\mathsf{{kg\cdot m \cdot s}^{-2}}$               | ${\mathsf {MLT}}^{-2}$           | force $F$, weight $W$             |
-| radian  | $\mathsf{rad}$ | $\mathsf{m/m}$                                    | dimensionless                    | plane angle                       |
-| coulomb | $\mathsf{C}$   | $\mathsf{s\cdot A}$                               | $\mathsf{TI}$                    | electric charge $q$               |
-| watt    | $\mathsf{W}$   | $\mathsf{kg   \cdot m^2\cdot s^{−3}}$             | ${\mathsf {L^{2}MT^{-3}}}$       | power $P$                         |
-| volt    | $\mathsf{V}$   | $\mathsf{kg   \cdot m^2\cdot s^{−3}\cdot A^{-1}}$ | ${\mathsf {ML^{2}T^{-3}I^{-1}}}$ | electric potential, voltage $V,U$ |
-| ohm     | $\mathsf{Ω}$   | $\mathsf{kg   \cdot m^2\cdot s^{−3}\cdot A^{-2}}$ | ${\mathsf {ML^{2}T^{-3}I^{-2}}}$ | resistance $R$                    |
-| joule   | $\mathsf{J}$   | $\mathsf{kg   \cdot m^2\cdot s^{−2}}$             | ${\mathsf {ML^{2}T^{-2}}}$       | energy $E$, work $W$              |
-| hertz   | $\mathsf{Hz}$  | $\mathsf{s^{-1}}$                                 | ${\mathsf {T^{-1}}}$             | frequency $f$                     |
+| SI unit             |                | in SI base units                                  | Dim.                             | Quantity(s)                       |
+| ------------------- | -------------- | ------------------------------------------------- | -------------------------------- | --------------------------------- |
+| newton              | $\mathsf{N}$   | $\mathsf{{kg\cdot m \cdot s}^{-2}}$               | ${\mathsf {MLT}}^{-2}$           | force $F$, weight $W$             |
+| radian              | $\mathsf{rad}$ | $\mathsf{m/m}$                                    | dimensionless                    | plane angle                       |
+| coulomb `/ˈkuˌlɑm/` | $\mathsf{C}$   | $\mathsf{s\cdot A}$                               | $\mathsf{TI}$                    | electric charge $q$               |
+| watt `/wɑt/`        | $\mathsf{W}$   | $\mathsf{kg   \cdot m^2\cdot s^{−3}}$             | ${\mathsf {L^{2}MT^{-3}}}$       | power $P$                         |
+| volt `/voʊlt/`      | $\mathsf{V}$   | $\mathsf{kg   \cdot m^2\cdot s^{−3}\cdot A^{-1}}$ | ${\mathsf {ML^{2}T^{-3}I^{-1}}}$ | electric potential, voltage $V,U$ |
+| ohm `/oʊm/`         | $\mathsf{Ω}$   | $\mathsf{kg   \cdot m^2\cdot s^{−3}\cdot A^{-2}}$ | ${\mathsf {ML^{2}T^{-3}I^{-2}}}$ | resistance $R$                    |
+| joule `/dʒul/`      | $\mathsf{J}$   | $\mathsf{kg   \cdot m^2\cdot s^{−2}}$             | ${\mathsf {ML^{2}T^{-2}}}$       | energy $E$, work $W$              |
+| hertz `/hərts/`     | $\mathsf{Hz}$  | $\mathsf{s^{-1}}$                                 | ${\mathsf {T^{-1}}}$             | frequency $f$                     |
 
 
 

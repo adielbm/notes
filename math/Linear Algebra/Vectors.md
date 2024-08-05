@@ -8,9 +8,11 @@
 - (q12.1.8) Triangle inequality for vectors $\| \textbf{a} + \textbf{b} \| \leq \| \textbf{a} \| +{\| \textbf{b} \|}$
 - Parallelogram Equation for Vectors $\|\textbf{u}+\textbf{v} \|^2+\|\textbf{u}-\textbf{v} \|^2=2(\|\textbf{u}\|^2+\|\textbf{v}\|^2)$
 
-## Coordinate vector
+## Coordinates Vector
 
-- (8.4.4) Vectors set are *linearly independent*, if and only if, its coordinate vectors are *linearly independent*.
+- Suppose $\mathcal{B}=\{b_1,\ldots,b_n\}$ is a basis for a vector space $V$. 
+    - The **coordinate vector** of $v\in V$ with respect to $\mathcal{B}$ is the unique vector $[v]_{\mathcal{B}}\in \mathbb{F}^n$ such that $v=\lambda_1b_1+\ldots+\lambda_nb_n$ where $\lambda_i$ are the components of $[v]_{\mathcal{B}}$.
+    - (8.4.4) A set of vectors $\mathcal{K}=\{v_1,\ldots,v_n\}$ is linearly independent if and only the set of corresponding coordinate vectors $\{[v_1]_{\mathcal{B}},\ldots,[v_n]_{\mathcal{B}}\}$ is linearly independent
 - (10.2.1) coordinate vector of image - $[T(v)]_{C}=[T]^{B}_{C}[v]_{B}$
 
 # Orthogonality  

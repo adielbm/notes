@@ -1,33 +1,39 @@
 - The set of all $m\times n$ matrices is denoted by $\mathbf{M}_{m\times n}(\mathbb{F})$ (or $M_{m\times n}$ if the field is understood, or $M_{n}$ if $m=n$), or by $\mathbb{F}^{m\times n}$ is a [[Vector Spaces#Examples|vector space]] over $\mathbb{F}$ where $\dim(\mathbf{M}_{m\times n}(\mathbb{F}))=mn$
-## Arithmetic 
-
-### Matrix addition & multiplication 
-
-**Definitions:**
-- Matrix addition - $A+B=C$ where $a_{ij}+b_{ij}=c_{ij}$
-- Matrix multiplication - $A_{m\times n}B_{n\times p}=C_{m \times p}=[c_{ij}]$, where $c_{ij}$ is the dot product of the $i$th row of $A$ and the $j$th column of $B$ 
-	- (3.4.3) $[A]^{r}_{i}B=[C]^{r}_{i}$ and $A[B]^{c}_{j}=[C]^{c}_{j}$
-	- (3.4.4) $[A]^{r}_{i}=0\implies [C]^{r}_{i}=0$ and $[B]^{c}_{j}=0\implies [C]^{c}_{j}=0$ 
-
-**Properties:**
-- **Commutative (addition)** $A+B=B+A$
-- **Commutative (multiplication)** see [[#Commuting]]
-- **Associative (addition)** $A+(B+C)=(A+B)+C$
-- **Associative (multiplication)** $A(BC)=(AB)C$
-- **distributive (left)** $A(B+C)=AB+AC$
-- **distributive (right)** $(B+C)A=BA+CA$
-
-###  Matrix–Vector Product
-
-- $(A+B)\mathbf{v}=A\mathbf{v}+B\mathbf{v}$
-- $A(\mathbf{u}+\mathbf{v})=A\mathbf{u}+A\mathbf{v}$
-- $A(c\mathbf{u})=c(A\mathbf{u})$
-
-- $A\mathbf{u}=A\mathbf{v}\iff A(\mathbf{u}-\mathbf{v})=0$
+	- Vector space [[Vector Spaces#Vector Space|operations and axioms]] of $\mathbf{M}_{m\times n}(\mathbb{F})$
+		- **Addition:** $A+B=[a_{ij}+b_{ij}]=[c_{ij}]=C$ (matrix addition)
+			- Commutative: $A+B=B+A$
+			- Associative: $A+(B+C)=(A+B)+C$
+			- Identity: $A+0=A$
+			- Inverse: $A+(-A)=0$
+		- **Scalar Multiplication:** $cA=[ca_{ij}]=[c_{ij}]$ (scalar multiplication of a matrix)
+			- Distributive (vector (matrix) addition): $c(A+B)=cA+cB$
+			- Distributive (field addition): $(c+d)A=cA+dA$
+			- Compatible with field mul.: $a(bA)=(ab)A$
+			- Identity: $1A=A$
+	- Vector space [[Vector Spaces#Properties|properties]] of $\mathbf{M}_{m\times n}(\mathbb{F})$
+		- $A-B=0\implies A=B$
+		- $cA=0\implies c=0$ or $A=0$
+		- $0A=0$
+		- $A+0=A$
+		- and more...
+	- **matrix multiplication** operation between two matrices (it's analogous to the dot product of two vectors, and here it represents the composition of linear transformations)
+		- $A_{m\times n}B_{n\times p}=C_{m \times p}=[c_{ij}]$, where $c_{ij}$ is the dot product of the $i$th row of $A$ and the $j$th column of $B$ 
+			- (3.4.3) $[A]^{r}_{i}B=[C]^{r}_{i}$ and $A[B]^{c}_{j}=[C]^{c}_{j}$
+			- (3.4.4) $[A]^{r}_{i}=0\implies [C]^{r}_{i}=0$ and $[B]^{c}_{j}=0\implies [C]^{c}_{j}=0$ 		
+	- **Matrix–Vector Product:** (it's actually performing a linear transformation on a vector)
+		- $(A+B)\mathbf{v}=A\mathbf{v}+B\mathbf{v}$
+		- $A(\mathbf{u}+\mathbf{v})=A\mathbf{u}+A\mathbf{v}$
+		- $A(c\mathbf{u})=c(A\mathbf{u})$
+		- $A\mathbf{u}=A\mathbf{v}\iff A(\mathbf{u}-\mathbf{v})=0$
 
 # Matrix
 
-In this section $A$ is a $m\times n$ matrix
+In this section:
+
+- $V=\mathbb{F}^n$
+- $W=\mathbb{F}^m$
+- $A$ is a $m\times n$ matrix
+- $K=\{v_{1},\dots,v_{m}\}\subseteq V$ is a set of vectors which are the rows of $A$ (equally, the columns of $A^T$)
 
 ## Row Echelon form (REF)
 
@@ -80,9 +86,19 @@ In this section $A$ is a $m\times n$ matrix
 
 - $\text{column-space}(A)=\text{Sp}(\{ \text{column}_{1}(A),\dots,\text{column}_{n}(A) \})$
 
+The following statements are equivalent:
+
+- $\mathbf{b}\in\text{column-space}(A)$
+- $A\mathbf{x}=\mathbf{b}$ is [[Linear Systems#Consistency|consistent]]
+
 ### Null space
 
 - $\text{null}(A)=\{ v \mid Av=0 \}$. (in the book it's denoted by $P(A)$ (!!!))
+
+The following statements are equivalent:
+
+- $v\in\text{null}(A)$
+- $v$ is [[Orthogonality#Orthogonal Vector|orthogonal]] to $K$ (the rows of $A$)
 
 ### Left null space
 
@@ -102,6 +118,22 @@ In this section $A$ is a $m\times n$ matrix
 - (9.8.7c) $\text{column-spcae}(BA)=B(\text{column-spcae}(A))$
 - (9.8.7b) $\text{null}(A) \subseteq \text{null}(BA)$
 
+### Bases for the Fundamental Spaces
+
+- A basis of $\text{row-space}({A})=\text{Sp}(K)$
+	- The **non-zero** rows of $\text{REF}(A)$ (q8.5.2b)
+	- The $r$ columns in $A^t$, such that in $\text{RREF}(A^t)$ are contain a pivot.
+-  A basis of $\text{column-space}({A})$.
+	- The **non-zero** rows of $\text{REF}(A^t)$
+	- The $r$ columns in $A$, such that in $\text{RREF}(A)$ are contain a pivot.
+- A basis of the $\text{null}{(A)}$ 
+	- The $n-r$ vectors that span the solution space of $(\text{RREF}(A))\mathbf{x}=\mathbf{0}$. 
+- A basis of the $\text{null}{(A^t)}=\text{left-null}{(A^t)}$ 
+	- The $m-r$ vectors that span the solution space of $(\text{RREF}(A^t))\mathbf{x}=\mathbf{0}$. 
+
+
+- #todo  Let $K$ is linearly independent, then $K\cup\set{\mathbf{e}_{i}\mid {i}\text{th column is not a pivot column in REF}(A)}$ forms a basis for $V$.
+
 ## Rank
 
 - (d8.5.4) $\rho{(A)}=\dim(\text{row-space(A)})=\dim(\text{column-space(A)})$
@@ -117,15 +149,16 @@ In this section $A$ is a $m\times n$ matrix
 ### Theorems
 
 - (8.6.1) **Rank–nullity theorem**  $$\text{rank}(A)+\text{nullity}{(A)}=n$$
-
 - (q8.5.4) $\rho{(A)}=\rho{(A^t)}$
 - (q8.5.6) $\rho{(AB)}\leq\min{\{ \rho{(A)}, \rho{(B)} \}}$
-- if $A_{n}$ is invertible matrix, then 
-	- (q8.5.7a) $\rho(BA)=\rho(B)$ for any matrix $B_{m \times n}$
-	- (q8.5.7b) $\rho(AB)=\rho(B)$ for any matrix $B_{n \times m}$
-- Row equivalent matrices have the same rank #todo 
-- #todo  $\rho(A+B)\leq \rho(A)+\rho(B)$
+- $\rho{(A)}\leq\min{\{ m,n \}}$
+	- $m>n\implies \rho(A)\neq m$ (i.e. $A$ does **not** have [[#Full Row Rank|full row rank]])
+	- $n>m\implies \rho(A)\neq n$ (i.e. $A$ does **not** have [[#Full Column Rank|full column rank]])
+- see also [[#Square Matrices#Rank|rank of square matrix]] and of [[#Invertibility#Properties|invariable]]
+- Row equivalent matrices have the same rank
+-  $\rho(A+B)\leq \rho(A)+\rho(B)$ #todo
 - (8.3.4a+8.6.1) $\text{null}(AB) \subseteq \text{null}(B)\implies \rho(B)\leq \rho(AB)$
+- $0\in{K}\implies K\text{ is linearly {\bf dependent}}$
 
 ### Full Rank
 
@@ -148,31 +181,56 @@ In this section $A$ is a $m\times n$ matrix
 	- $\text{null}(A) = \{0\}$ 
 	- $\text{nullity}(A)=0$
 	- $\text{row-space}(A) = \mathbb{F}^n$
+	- $\text{Sp(K)} = \mathbb{F}^n$ (i.e. $K$ **spans** $\mathbb{F}^n$)
 	- The matrix $A^T A$ is invertible
 	- For every $\mathbf{b} \in \mathbb{F}^m$, the system $A\mathbf{x} = \mathbf{b}$ has at most one solution
 	- $A$ is **left-invertible** (There exists a matrix $B_{n\times m}$ such that $BA=I_{n}$)
 	- $A^T$ has [[#Full Row Rank|full row rank]]
+###### Theorems
+
+- $\text{Sp}(K)$ is a [[Vector Spaces|subspace]] of $V$
+- $\text{Sp}(L)=V\land L\subseteq{\text{Sp}{(K)}}\implies\text{Sp}(K)=V$
+- <small> (7.5.4) </small> $\text{Sp}{(K)}=\text{Sp}{(L)}\iff{K\subseteq\text{Sp}{(L)}\land{L\subseteq\text{Sp}{(K)}}}$
+- (7.5.1, q7.5.16b) $K\subseteq{\text{Sp}{(L)}}\implies{\text{Sp}{(K)}\subseteq\text{Sp}{(L)}}$
+- (q7.5.16a) $K \subseteq{L}\implies{\text{Sp}{(K)}\subseteq\text{Sp}{(L)}}$
+- (q7.5.17a) $\text{Sp}(K)\cup\text{Sp}(L)\subseteq\text{Sp}(K\cup L)$
+- (q7.5.17b) $\text{Sp}(K\cap L)\subseteq\text{Sp}(K)\cap\text{Sp}(L)$
 
 #### Full Row Rank
 
 - The following statements are equivalent:
 	- $A$ has **full row rank**
 	- $\text{rank}(A) = m$
-	- The rows of $A$ are linearly independent
+	- $K$ (that is, A's rows) is **linearly independent**
+	- $\lambda_1 v_1 + \dots + \lambda_m v_m = 0 \implies \lambda_1 = \dots = \lambda_m = 0$
 	- $T_A$ is [[Linear Transformations#Surjective (Onto)|surjective]] (onto)
 	- $A^T$ has [[#Full Column Rank|full column rank]]
 	- For every $\mathbf{b} \in \mathbb{F}^m$, the system $A\mathbf{x} = \mathbf{b}$ is consistent
 	- Every $\mathbf{b}$ in $\mathbb{F}^m$ is a linear combination of the columns of $A$
-	- $\text{column-space}(A) = \mathbb{F}^m$
+	- $\text{column-space}(A) = \mathbb{F}^m$ (i.e. $A$'s columns span $\mathbb{F}^m$)
 	- $A$ has a pivot position in every row
 	- The matrix $AA^T$ is invertible
 	- $A$ is **right-invertible** (There exists a matrix $B_{n\times m}$ such that $AB=I_{m}$)
+	- (8.4.4) $K'$ is linearly independent (where the vectors of $K$ are the [[Vectors#Coordinates Vector|coordinates vectors]] of any set of vectors $K'$)
+
+###### Theorems
+
+- If $L,K\subseteq V$, and $K\subseteq{\text{Sp}{(L)}}$, and $L$ is linearly dep., then $K$ is also linearly dep. (by 7.5.1, 8.3.4)
 
 #### Full Row-and-Column Rank
 
 - The following statements are equivalent:
-	- $A$ has both **full row rank** and **full column rank**
-	- $A$ is [[#Invertibility|invertible]]
+	- $A$ is [[#Invertibility|invertible]] square
+	- $K$ is a **basis** of $V$
+	- $K$ is a **maximal linearly independent set**
+	- $K$ is a **minimal spanning set** of $V$
+	- $K$ is linearly independent and spans $V$
+	- $A$ has both a [[#Full Row Rank|full row rank]] and a [[#Full Column Rank|full column rank]]
+	- $m=n$ and $A$ has a full row rank
+	- $m=n$ and $A$ has a full column rank
+	- (8.4.5) $m=n$ and the transition matrix from some basis $B$ to $K$ is invertible
+	- (8.2.5) $\forall w\in \mathbb{F}^m, \exists! v\in\mathbb{F}^n: Av=w$ (in other words, every element of $\mathbb{F}^m$ can be written in a unique way as a finite linear combination of elements of $K$)
+	- (8.4.5) $m=n$ and the transition matrix from some basis $B$ to $K$ is invertible
 
 ### Rank Deficient
 
@@ -279,7 +337,8 @@ Equivalent matrices represent the same linear transformation $T:V\to{W}$ under t
 	- The linear transformation mapping $\mathbf{x}$ to $A\mathbf{x}$ is **bijective**; that is, the equation $A\mathbf{x}=\mathbf{b}$ has exactly one solution for each $\mathbf{b}$ in $F^n$. ($A\mathbf{x}=\mathbf{b}\implies \mathbf{x}=A^{-1}\mathbf{b}$
 	- $A\mathbf{x}=\mathbf{0}\implies \mathbf{x}=\mathbf{0}$
 
-**Properties:** 
+#### Properties 
+
 - for $A_{n}$ invertible matrix 
 	- (3.8.3)
 		- (left-cancellable) $AB=AC\implies B=C$ 
@@ -291,7 +350,8 @@ Equivalent matrices represent the same linear transformation $T:V\to{W}$ under t
 	- $A$ and $B$ are row equivalent
 	- (3.8.4c) $AB$ is also invertible. and $(AB)^{-1}=B^{-1}A^{-1}$
 
-**Theorems:**
+### Theorems 
+
 - (4.5.2) $A,B$ are square matries, and $AB=I$, then:
 	- $A$ and $B$ are both invetible
 	- $A^{-1}=B$
@@ -317,6 +377,7 @@ Equivalent matrices represent the same linear transformation $T:V\to{W}$ under t
 	- (q10.5.3) Sylvester’s inequality $\rho(A)+\rho(B)\leq \rho(AB)+n$
 	- $\rho(B)-\dim(\text{null}(A))\leq \rho(AB)$. (from Sylvester’s inequality and  Rank–nullity theorem)
 	- $AB=0\implies \rho(A)+\rho(B)\leq n$
+	- for invetible see [[#Invertibility#Properties]]
 ## Elementary matrix
 
 - $A$ is called an **elementary matrix** if it can be obtained from an identity matrix by performing a single elementary row operation. 
@@ -408,6 +469,7 @@ Equivalent definitions of **eigenvalue**.
 - (11.2.6) $A$ has at most $n$ distinct eigenvalues 
 - (4.4.1+q11.3.1+left-multiple with A) if $A$ is invertible, then $\lambda$ is an **eigenvalue** of $A$, if and only if, $\lambda^{-1}$ is an **eigenvalue** of $A^{-1}$. (with the same eigenvectors)
 
+- (11.2.4) Eigenvectors corresponding to distinct eigenvalues are linearly independent
 ### Eigenvectors
 
 Definitions of **eigenvector**. The following statements are **equivalent**:
