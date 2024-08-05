@@ -178,7 +178,7 @@ The following statements are equivalent:
 	- $A$ has **full column rank**
 	- $\text{rank}(A) = n$
 	- The columns of $A$ are linearly independent
-	- $T_A$ is [[Linear Transformations#Injective (One-to-One)|injective]] (one-to-one)
+	- $T_A$ is [[Linear Transformations#Injective (One-to-One)|injective]] (one-to-one, monomorphism)
 	- $\text{null}(A) = \{0\}$ 
 	- $\text{nullity}(A)=0$
 	- $\text{row-space}(A) = \mathbb{F}^n$
@@ -186,7 +186,9 @@ The following statements are equivalent:
 	- The matrix $A^T A$ is invertible
 	- For every $\mathbf{b} \in \mathbb{F}^m$, the system $A\mathbf{x} = \mathbf{b}$ has at most one solution
 	- $A$ is **left-invertible** (There exists a matrix $B_{n\times m}$ such that $BA=I_{n}$)
+	- $A$ is **left-cancellable** (i.e. $AB=AC\implies B=C$)
 	- $A^T$ has [[#Full Row Rank|full row rank]]
+
 ###### Theorems
 
 - $\text{Sp}(K)$ is a [[Vector Spaces|subspace]] of $V$
@@ -204,7 +206,7 @@ The following statements are equivalent:
 	- $\text{rank}(A) = m$
 	- $K$ (that is, A's rows) is **linearly independent**
 	- $\lambda_1 v_1 + \dots + \lambda_m v_m = 0 \implies \lambda_1 = \dots = \lambda_m = 0$
-	- $T_A$ is [[Linear Transformations#Surjective (Onto)|surjective]] (onto)
+	- $T_A$ is [[Linear Transformations#Surjective (Onto)|surjective]] (onto, epimorphism)
 	- $A^T$ has [[#Full Column Rank|full column rank]]
 	- For every $\mathbf{b} \in \mathbb{F}^m$, the system $A\mathbf{x} = \mathbf{b}$ is consistent
 	- Every $\mathbf{b}$ in $\mathbb{F}^m$ is a linear combination of the columns of $A$
@@ -212,6 +214,7 @@ The following statements are equivalent:
 	- $A$ has a pivot position in every row
 	- The matrix $AA^T$ is invertible
 	- $A$ is **right-invertible** (There exists a matrix $B_{n\times m}$ such that $AB=I_{m}$)
+	- $A$ is **right-cancellable** (i.e. $BA=CA\implies B=C$)
 	- (8.4.4) $K'$ is linearly independent (where the vectors of $K$ are the [[Vectors#Coordinates Vector|coordinates vectors]] of any set of vectors $K'$)
 
 ###### Theorems
@@ -305,9 +308,11 @@ Equivalent matrices represent the same linear transformation $T:V\to{W}$ under t
 - Let $A$ be an $n \times n$ square matrix.
 - $A=[T]_{B}$ where $B$ is a basis of $V$  
 
-**theorems:**
+## Theorems
+
 - $A^2=0\implies\text{column-space}(A)\subseteq\text{null}(A)$
 - $\text{row-space}(A)=\text{column-space}(A)\implies \text{column-space}(A)\oplus\text{null}(A)=\mathbb{R}^n$ (by 9.3.7, 12.3.1, 12.3.2a, e2023a85q1a)
+
 
 ## Invertibility 
 
@@ -630,9 +635,22 @@ u_{1} &= a_{11}v_{1}+\dots+a_{n1}v_{n} \\ \vdots \notag \\ u_{n} &= a_{1n}v_{1}+
 ## Orthogonality
 
 #todo Orthogonal matrix - This is not taught in the course.
+
 ## Commuting
 
 - (d3.6.2) $A$ and $B$ are said to commute if $AB=BA$
 - (3.6.3) $(tI)A=A(tI)$
 - $A$ and $B$ share the same $n$ independent eigenvectors if and only if $AB=BA$.
+
+## Nilpotent matrix
+
+- $A$ is called a **nilpotent matrix** if $A^k=0$ for some natural $k$. The smallest such $k$ is called the **index of nilpotency** of $A$.
+
+## Scalar matrix
+
+- $A$ is called a **scalar matrix** if $A=cI$ for some scalar $c$.
+
+## Projection matrix
+
+- A square matrix $A$ is called a **projection matrix** if $A^2=A$ (see [Idempotent](https://en.wikipedia.org/wiki/Idempotent) and [Projection](https://en.wikipedia.org/wiki/Projection_(linear_algebra)))
 
