@@ -1,5 +1,3 @@
-# Vector Space
-
 ## Definition
 
 A **vector space** over a [[Field|field]] $F$ is a non-empty set $V$ together with a binary operation and a binary function that satisfy the eight axioms listed below. 
@@ -41,9 +39,10 @@ A **vector space** over a [[Field|field]] $F$ is a non-empty set $V$ together wi
 - $\mathbb{R}^n$ is a vector space over $\mathbb{R}$ 
 - $\mathbb{C}^n$ is a vector space over $\mathbb{C}$
 - $\mathbb{F}^{n}$ is a vector space over $\mathbb{F}$
-- $\mathbf{M}_{m\times n}(\mathbb{F})$ (the set of all $m\times n$ matrices with entries in $\mathbb{F}$) is a vector space over $\mathbb{F}$
-	- $\mathbf{M}_{m\times n}(\mathbb{F})$ is isomorphic to $\mathbb{F}^{mn}$
-	- $\dim(\mathbf{M}_{m\times n}(\mathbb{F}))=mn$
+- These are [[#Isomorphic Subspaces|isomorphic]] vector spaces: (Their dimension is $mn$)
+	- $\mathbb{M}_{m\times n}(\mathbb{F})$ ($m\times n$ [[Matrices|matrices]])
+	- $\mathbb{F}^{mn}$ ($mn$-tuples)
+	- $\text{Hom}(V,W)$ ([[Linear Transformations#Hom|linear transformations]] from $V$ to $W$, where $\dim V=n$, $\dim W=m$)
 - $\mathbb{P}_{n}(\mathbb{F})$ (the set of all polynomials of degree **less than** $n$ with coefficients in $\mathbb{F}$) is a vector space over $\mathbb{F}$
 	- $\dim(\mathbb{P}_{n}(\mathbb{F}))=n$
 	- (some define $\mathbb{P}_{n}(\mathbb{F})$ as the set of all polynomials of degree **less than or equal** to $n$, then $\dim(\mathbb{P}_{n}(\mathbb{F}))=n+1$)
@@ -75,13 +74,29 @@ A **vector space** over a [[Field|field]] $F$ is a non-empty set $V$ together wi
 ### Cross Product
 
 - $\displaystyle  \mathbf {a} \times \mathbf {b} =\|\mathbf {a} \|\|\mathbf {b} \|\sin(\theta )\,\mathbf {n}$ #not-in-course 
+
+# Spanning
+
+
+- Definition; Given a set of vectors $K=\{\mathbf{v}_{1},\dots,\mathbf{v}_{m}\}$ in a vector space $V$ over a field $\mathbb{F}$, and a matrix $A$ whose rows are the vectors in $K$, the following statements are equivalent:
+	- $\text{Sp}(K)=V$
+	- $\{c_{1}v_{1}+\dots+c_{m}v_{m}\mid c_{1},\dots,c_{m}\in\mathbb{F}\}=V$
+	- $K$ is a **spanning set** of $V$
+	- $A$ has a [[Matrices#Full Column Rank|full column rank]]
+- Theorems: (given $K$ and $L$ are sets of vectors in $V$)
+	- $\text{Sp}(K)$ is a [[Vector Spaces|subspace]] of $V$
+	- $\text{Sp}(L)=V\land L\subseteq{\text{Sp}{(K)}}\implies\text{Sp}(K)=V$
+	- <small> (7.5.4) </small> $\text{Sp}{(K)}=\text{Sp}{(L)}\iff{K\subseteq\text{Sp}{(L)}\land{L\subseteq\text{Sp}{(K)}}}$
+	- (7.5.1, q7.5.16b) $K\subseteq{\text{Sp}{(L)}}\implies{\text{Sp}{(K)}\subseteq\text{Sp}{(L)}}$
+	- (q7.5.16a) $K \subseteq{L}\implies{\text{Sp}{(K)}\subseteq\text{Sp}{(L)}}$
+	- (q7.5.17a) $\text{Sp}(K)\cup\text{Sp}(L)\subseteq\text{Sp}(K\cup L)$
+	- (q7.5.17b) $\text{Sp}(K\cap L)\subseteq\text{Sp}(K)\cap\text{Sp}(L)$
+
 # Subspaces
 
 - A subset $W$ of a vector space $V$ is called a subspace of $V$ if $W$ is itself a vector space under the addition and scalar multiplication defined on $V$
 - nonempty subset $W$ of $V$ is a subspace of $V$ if and only if it is closed under addition and scalar multiplication
 - 
-
-## Aritmetic
 
 $U$ and $W$ are subspaces of $V$.
 
@@ -114,20 +129,19 @@ Let $U+{W}=V$, then the following statements are **equivalent**:
 
 ## Isomorphic Subspaces
 
-Isomorphic is an *equivalence relation*
-
-(Assumption: the spaces are on the same filed $F$)
-
-**Definition**; The following statements are **equivalent**:
-- $V$ and $W$ are **isomorphic**: $V\cong{W}$ 
-- There exists **isomorphism** $T:V\to W$ 
-- (9.5.7, 9.5.9) $\dim{V}=\dim{W}$
-
-**Theorems:**
- - (9.5.8) $\dim{V}=n\implies V\cong{F^n}$
+- Assumption: the spaces are on the same filed $F$
+- The following statements are **equivalent**:
+	- $V$ and $W$ are **isomorphic**: $V\cong{W}$ 
+	- There exists **isomorphism** $T:V\to W$ 
+	- (9.5.7, 9.5.9) $\dim{V}=\dim{W}$
+- Theorems
+	 - (9.5.8) $\dim{V}=n\implies V\cong{F^n}$
+	- Isomorphic is an [[Binary Relation#Equivalence relation|equivalence relation]]
+- [[#Examples]]
 ## Dimension
 
 - (8.3.6) $\dim(U+W)=\dim{U}+\dim{W}-\dim(U \cap W)$
+- ${\displaystyle \max(\dim U,\dim W)\leq \dim(U+W)\leq \dim(U)+\dim(W) }$
 - (8.3.7) if $V=U+W$, then $V=U\oplus W \iff \dim V= \dim U+\dim W$ 
 - (9.5.9) $V \cong W \iff \text{dim}{V}=\text{dim}{W}$ (on the same field, and finite dim.)
 - (9.6.1) **Rank–nullity theorem** $\text{dim}{V}=\text{dim}{(\text{Ker}{T})}+\text{dim}{(\text{Im}{T})}$. ($T:V\to W$ is lin. trans.)

@@ -20,6 +20,11 @@ Arithmetic **Properties:**
 - (q9.7.3) $T+0=0+T=T$
 - #todo SEE CHPATER 9.7
 
+## Hom
+
+- $\text{Hom}(V,W)$ is the set of all linear transformations from $V$ to $W$
+- (9.7.6) $\text{Hom}(V,W)$ is a vector space
+- $\text{Hom}(V,W)$ and $M_{m\times n}$ are [[Vector Spaces#Isomorphic Subspaces|isomorphic]] vector spaces
 
 ## Equality
 

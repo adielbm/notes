@@ -47,16 +47,15 @@ In this section:
 
 ## Elementary Row Operations
 
-- $EA$ is the matrix obtained by applying the elementary row operation $E$ to the matrix $A$.
-- An elementary row operation is represented by a left-multiplication of $A$ by an [[#Elementary matrix|elementary matrix]] $E$ (of the order $m$)
+- $E$ is a $m$-ordered elementary matrix by which $A$ is multiplied from the left (left-multiplication is a row operation)
+- $EA$ is the matrix obtained by applying to $A$ one of the **elementary row operations** represented by $E$
 
 
-|               | Operation                           |
-| ------------- | ----------------------------------- |
-| Row Switching | $R_{i}\leftrightarrow R_{j}$        |
-| Row Scaling   | $R_{i}\to kR_{i}$ (where $k\neq 0$) |
-| Row Addition  | $R_{i}\to R_{i}+kR_{j}$             |
-
+|               | Row Operation                           | Elementary Matrix $E$                                                                                                                                                        | $EA$ |
+| ------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+| Row Switching | $R_{i}\leftrightarrow R_{j}$        | $\begin{array}{c} {\displaystyle  T_{i,j}=\tiny{\begin{bmatrix}1&&&&&&\\&\ddots &&&&&\\&&0&&1&&\\&&&\ddots &&&\\&&1&&0&&\\&&&&&\ddots &\\&&&&&&1\end{bmatrix}}} \end{array}$ | The matrix obtained by switching rows $i$ and $j$ of $A$ |
+| Row Scaling   | $R_{i}\to kR_{i}$ (where $k\neq 0$) | $\begin{array}{c} {\displaystyle D_{i}(k)=\tiny{\begin{bmatrix}1&&&&&&\\&\ddots &&&&&\\&&1&&&&\\&&&k&&&\\&&&&1&&\\&&&&&\ddots &\\&&&&&&1\end{bmatrix}}} \end{array}$         | The matrix obtained by multiplying row $i$ of $A$ by $k\neq 0$ |
+| Row Addition  | $R_{i}\to R_{i}+kR_{j}$             | $\begin{array}{c} {\displaystyle L_{ij}(k)=\tiny{\begin{bmatrix}1&&&&&&\\&\ddots &&&&&\\&&1&&&&\\&&&\ddots &&&\\&&k&&1&&\\&&&&&\ddots &\\&&&&&&1\end{bmatrix}}} \end{array}$ | The matrix obtained by adding $k$ times row $j$ to row $i$ of $A$ |
 
 ### Row equivalence
 
@@ -118,6 +117,10 @@ The following statements are equivalent:
 - (9.8.7a) $\text{column-spcae}(BA) \subseteq \text{column-spcae}(B)$
 - (9.8.7c) $\text{column-spcae}(BA)=B(\text{column-spcae}(A))$
 - (9.8.7b) $\text{null}(A) \subseteq \text{null}(BA)$
+- #todo
+	- $\text{null}(A)=\text{null}(A^\top A)$
+	- $\text{row-space}(A)=\text{row-space}(A^\top A)$
+	- $\text{column-space}(A)=\text{column-space}(A A^\top)$
 
 ### Bases for the Fundamental Spaces
 
@@ -189,16 +192,6 @@ The following statements are equivalent:
 	- $A$ is **left-cancellable** (i.e. $AB=AC\implies B=C$)
 	- $A^T$ has [[#Full Row Rank|full row rank]]
 
-###### Theorems
-
-- $\text{Sp}(K)$ is a [[Vector Spaces|subspace]] of $V$
-- $\text{Sp}(L)=V\land L\subseteq{\text{Sp}{(K)}}\implies\text{Sp}(K)=V$
-- <small> (7.5.4) </small> $\text{Sp}{(K)}=\text{Sp}{(L)}\iff{K\subseteq\text{Sp}{(L)}\land{L\subseteq\text{Sp}{(K)}}}$
-- (7.5.1, q7.5.16b) $K\subseteq{\text{Sp}{(L)}}\implies{\text{Sp}{(K)}\subseteq\text{Sp}{(L)}}$
-- (q7.5.16a) $K \subseteq{L}\implies{\text{Sp}{(K)}\subseteq\text{Sp}{(L)}}$
-- (q7.5.17a) $\text{Sp}(K)\cup\text{Sp}(L)\subseteq\text{Sp}(K\cup L)$
-- (q7.5.17b) $\text{Sp}(K\cap L)\subseteq\text{Sp}(K)\cap\text{Sp}(L)$
-
 #### Full Row Rank
 
 - The following statements are equivalent:
@@ -236,7 +229,7 @@ The following statements are equivalent:
 	- (8.2.5) $\forall w\in \mathbb{F}^m, \exists! v\in\mathbb{F}^n: Av=w$ (in other words, every element of $\mathbb{F}^m$ can be written in a unique way as a finite linear combination of elements of $K$)
 	- (8.4.5) $m=n$ and the transition matrix from some basis $B$ to $K$ is invertible
 
-### Rank Deficient
+### Rank Deficiency
 
 - The following statements are equivalent:
 	- $A$ is **rank deficient**
@@ -286,11 +279,20 @@ $$[T]_{C}^{B}=\left[\begin{array}{ccc} | & & | \\ [T({v_{1}})]_{C} & \cdots & [T
 
 ## Equivalence
 
->[!warning] This term is beyond the scope of the course. 
+#not-in-course 
+
+
+ - #todo from file:///C:/Users/Adiel/My%20Drive/Math/Linear%20algebra/books/book.pdf p280
+	- Same-sized matrices $A$ and $B$ are **matrix equivalent** if there are nonsingular matrices $P$ and $Q$ such that $B=PAQ$
+		- Matrix equivalent matrices represent the same map, with respect to appropriate pairs of bases.
+
+
+____
+
 
 Matrix equivalence is an equivalence relation on the space of rectangular matrices.
 
-Two $m\times n$ matrices $A$ and $A'$ are called **equivalent** if $$A'=P^{-1}AQ$$for some $n\times n$ matrix $Q$ and $m\times m$ matrix $P$.
+Two $m\times n$ matrices $A$ and $A'$ are **equivalent** if $$A'=P^{-1}AQ$$for some $n\times n$ matrix $Q$ and $m\times m$ matrix $P$.
 
 Equivalent matrices represent the same linear transformation $T:V\to{W}$ under two different choices of a pair of bases of $V$ and $W$, with $Q$ and $P$ being the change of basis matrices in $V$ and $W$ respectively.
 
@@ -305,12 +307,15 @@ Equivalent matrices represent the same linear transformation $T:V\to{W}$ under t
 
 # Square Matrices
 
-- Let $A$ be an $n \times n$ square matrix.
-- $A=[T]_{B}$ where $B$ is a basis of $V$  
+In this section:
+
+- $A=[T]_{B}$ is a square matrix of order $n$ over a field $\mathbb{F}$ 
+- $B$ is a basis of $V$
+- $T:V\to V$ is a linear transformation
 
 ## Theorems
 
-- $A^2=0\implies\text{column-space}(A)\subseteq\text{null}(A)$
+
 - $\text{row-space}(A)=\text{column-space}(A)\implies \text{column-space}(A)\oplus\text{null}(A)=\mathbb{R}^n$ (by 9.3.7, 12.3.1, 12.3.2a, e2023a85q1a)
 
 
@@ -375,7 +380,10 @@ Equivalent matrices represent the same linear transformation $T:V\to{W}$ under t
 
 > **WolframAlpha** `inverse [matrix]`
 
+### Elementary matrix
 
+- $A$ is called an **elementary matrix** if it can be obtained from an identity matrix by performing a single elementary row operation. 
+- Every elementary matrix is invertible, and the inverse is also an elementary matrix. 
 ## Rank
 
 - rank of **square matrix:** let $A,B$ are square matrices of order $n$, then:
@@ -384,10 +392,7 @@ Equivalent matrices represent the same linear transformation $T:V\to{W}$ under t
 	- $\rho(B)-\dim(\text{null}(A))\leq \rho(AB)$. (from Sylvester’s inequality and  Rank–nullity theorem)
 	- $AB=0\implies \rho(A)+\rho(B)\leq n$
 	- for invetible see [[#Invertibility#Properties]]
-## Elementary matrix
 
-- $A$ is called an **elementary matrix** if it can be obtained from an identity matrix by performing a single elementary row operation. 
-- Every elementary matrix is invertible, and the inverse is also an elementary matrix. 
 
 ## Determinant 
 
@@ -603,24 +608,29 @@ Diagonal equivalent definitions.
 - (q3.2.4) ${A}\text{ is diagonal} \implies {A}\text{ is symmetric}$
 - (q3.2.4) sum of symmetric matries is symmetric matrix
 - (q3.4.6) $A$ and $B$ are symmetric matries, then ${AB}\text{ is symmetric} \iff {AB=BA}$
-- (q4.3.10)  ${A}\text{ is anti-symmetric} \iff A^t=-A$
+
+## Antisymmetric matrix 
+
+- (q4.3.10) ${A}\text{ is anti-symmetric} \iff A^t=-A$
 	- if $A_{n}$ is anti-symmetric, and $n$ is odd, then $\det A=0$ 
 
-## Change of Basis matrix (Transition matrix) 
-also *change-of-coordinates matrix*
 
-- (d8.4.6) Let $B=(v_{1},\dots ,v_{n})$ and $C=(u_{1},\dots ,u_{n})$ bases of $V$. if $$\begin{align}
-u_{1} &= a_{11}v_{1}+\dots+a_{n1}v_{n} \\ \vdots \notag \\ u_{n} &= a_{1n}v_{1}+\dots+a_{nn}v_{n}  \\ \end{align}$$then $$P=\begin{bmatrix} a_{11}  & \dots & a_{1n} \\    \vdots &  \ddots & \vdots \\ a_{n1}  & \dots & a_{nn} \end{bmatrix}=\left[\begin{array}{ccc} | & & | \\ [{u_{1}}]_{B} & \cdots & [{u_{n}}]_{B} \\ | & & | \end{array} \right]$$ is the **transition matrix** from basis $B$ to basis $C$. 
-- the **transition matrix** from basis $B$ to basis $C$ is the matrix that its columns are the coordinate vectors of the $C$ vectors by $B$.
-- $\forall{v}\in{V} :P[v]_{C}=[v]_{B}, \quad [v]_{C}=P^{-1}[v]_{B}$
-- (8.4.9) $P^{-1}$ is the transition matrix from $C$ to $B$
-- Transition matrix is square matrix of $n$-order, where $n=\dim V$
-- (by 8.4.5) Transition matrix is invertible matrix 
 
-**Theorems:**
-- (8.4.8) if $A$ is square matrix, and $[v]_{B}=P[v]_{C}$ for each $v\in{V}$, then $P$ is the transition matrix from $B$ to $C$. 
-- (10.6.1) $T:V\to V$ and $B$ and $C$ are bases of $V$. if $P$ transition matrix from $B$ to $C$, then $[T]_{C}=P^{-1}[T]_{B}P$. (or symmetrically $[T]_{B}=P[T]_{C}P^{-1}$)
-	- transition matrix from $B$ to $C$ is $[I]^{C}_{B}$, therefore $[T]_{C}=[I]^{B}_{C}[T]_{B}[I]^{C}_{B}$
+
+## Transition Matrix 
+
+
+- (c8.4, 10.6.1) Let $\mathcal{B}=\{\mathbf{b}_1,\dots,\mathbf{b}_n\}$ and $\mathcal{C}=\{\mathbf{c}_1,\dots,\mathbf{c}_n\}$ be bases of a vector space $V$, and $T:V\to V$ be a linear transformation.
+	- The unique $n\times n$ matrix $P$ such that $$P[\mathbf{v}]_{\mathcal{C}}=[\mathbf{v}]_{\mathcal{B}}$$ is called the **transition matrix** from $\mathcal{B}$ to $\mathcal{C}$, and is equal to $$P=\left[\begin{array}{ccc} | & & | \\ [\mathbf{c}_1]_{\mathcal{B}} & \cdots & [\mathbf{c}_n]_{\mathcal{B}} \\ | & & | \end{array} \right]$$
+	- $P$ is invertible, and its inverse $P^{-1}$ is the transition matrix from $\mathcal{C}$ to $\mathcal{B}$.
+	-
+
+
+
+> Also known as **change-of-basis** matrix, or **change-of-coordinate** matrix
+
+> Some authors (as Lay and Anton) call $P$ as the transition matrix **from $\mathcal{C}$ to $\mathcal{B}$**, and vice versa for $P^{-1}$
+
 
 >[!example] Finding the transition matrix from an old basis to a new basis 
 >1. Form the partitioned matrix $[\text{new basis} | \text {old basis}]$ in which the basis vectors (or coordinate vectors) are in column form. 
@@ -628,23 +638,27 @@ u_{1} &= a_{11}v_{1}+\dots+a_{n1}v_{n} \\ \vdots \notag \\ u_{n} &= a_{1n}v_{1}+
 >3. The resulting matrix will be $[{I} | \text{transition matrix from old to new}]$ where $I$ is an identity matrix.
 >4. Extract the matrix on the right side of the matrix obtained in Step 3. 
 
+
+!!! todo check it 	- transition matrix from $B$ to $C$ is $[I]^{C}_{B}$, therefore $[T]_{C}=[I]^{B}_{C}[T]_{B}[I]^{C}_{B}$
+
 ### Transition matrix from a basis B to the standard basis
 
 - if $B=(v_{1}, v_{2},\dots,v_{n})$, then $[v_{1}|v_{2}|\dots|v_{n}]$ is the transition matrix from $B$ to the standard basis
 
 ## Orthogonality
 
-#todo Orthogonal matrix - This is not taught in the course.
+ - Orthogonal matrix #todo #not-in-course 
 
 ## Commuting
 
-- (d3.6.2) $A$ and $B$ are said to commute if $AB=BA$
+- (d3.6.2) $A$ and $B$ are said to **commute** if $AB=BA$
 - (3.6.3) $(tI)A=A(tI)$
 - $A$ and $B$ share the same $n$ independent eigenvectors if and only if $AB=BA$.
 
 ## Nilpotent matrix
 
 - $A$ is called a **nilpotent matrix** if $A^k=0$ for some natural $k$. The smallest such $k$ is called the **index of nilpotency** of $A$.
+- $A^2=0\implies\text{column-space}(A)\subseteq\text{null}(A)$
 
 ## Scalar matrix
 

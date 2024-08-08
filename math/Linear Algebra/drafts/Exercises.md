@@ -50,3 +50,9 @@ ___
 		- $W \neq (U_1 \cap W) \oplus (U_2 \cap W)$
 - 2020 a 2a q6
 	-  Given $T:V\to F$ ($V$ is a vector space over $F$) and $\exists v \in V: T(v)\neq 0$. Prove that $V=\text{Sp}(v)\oplus \text{Ker}(T)$
+
+
+- ($A$ is square) $\text{rank}(A)=\text{rank}(A^2)\implies \text{null}(A)=\text{null}(A^2)$
+	- ___Proof___: 
+	$\begin{aligned} (Ax = 0 \implies A^2x = 0) \implies \text{null}(A) \subseteq \text{null}(A^2) \\ (\text{rank}(A) = \text{rank}(A^2)) \underset{\text{ (by RNT)}}{\implies} (\text{nullity}(A) = \text{nullity}(A^2))  \end{aligned}\quad \overset{\text{ (by 8.3.4b)   }}{\implies} \text{null}(A) = \text{null}(A^2)$
+	
