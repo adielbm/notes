@@ -150,6 +150,10 @@ The following statements are equivalent:
 
 > $\text{rank}{(A)}=\rho{(A)}$
 
+### Nullity 
+
+- (8.6.1) $\mathrm{nullity}(A)=\dim{\mathrm{(null(A))}}$
+
 ### Theorems
 
 - (8.6.1) **Rank–nullity theorem**  $$\text{rank}(A)+\text{nullity}{(A)}=n$$
@@ -208,7 +212,7 @@ The following statements are equivalent:
 	- The matrix $AA^T$ is invertible
 	- $A$ is **right-invertible** (There exists a matrix $B_{n\times m}$ such that $AB=I_{m}$)
 	- $A$ is **right-cancellable** (i.e. $BA=CA\implies B=C$)
-	- (8.4.4) $K'$ is linearly independent (where the vectors of $K$ are the [[Vectors#Coordinates Vector|coordinates vectors]] of any set of vectors $K'$)
+	- (8.4.4) $K'$ is linearly independent (where the vectors of $K$ are the [[Vector Spaces#Basis|coordinates vectors]] of any set of vectors $K'$)
 
 ###### Theorems
 
@@ -259,9 +263,6 @@ The following statements are equivalent:
 	- $\text{column-space}(A) = \{0\}$
 	- $T_A: \mathbb{F}^n \to \mathbb{F}^m$ is the zero transformation
 
-## Nullity 
-
-- (8.6.1) $\mathrm{nullity}(A)=\dim{\mathrm{(null(A))}}=n-\rho({A})$
 
 ## Transformation matrix
 
@@ -279,30 +280,17 @@ $$[T]_{C}^{B}=\left[\begin{array}{ccc} | & & | \\ [T({v_{1}})]_{C} & \cdots & [T
 
 ## Equivalence
 
-#not-in-course 
+#not-in-course
 
+- Two $m\times n$ matrices $A$ and $B$ are **equivalent** if there exist invertible matrices $P_m$ and $Q_n$ such that $B=PAQ$
+- Two $m\times n$ matrices $A$ and $B$ are equivalent if and only if they have the same rank
+- _Matrix equivalence_ is an [[Binary Relation#Equivalence relation|equivalence relation]] on $M_{m\times n}(\mathbb{F})$
+- If $A$ and $B$ are row equivalent, then they are equivalent
+- #todo Matrix equivalent matrices represent the same map, with respect to appropriate pairs of bases.
 
- - #todo from file:///C:/Users/Adiel/My%20Drive/Math/Linear%20algebra/books/book.pdf p280
-	- Same-sized matrices $A$ and $B$ are **matrix equivalent** if there are nonsingular matrices $P$ and $Q$ such that $B=PAQ$
-		- Matrix equivalent matrices represent the same map, with respect to appropriate pairs of bases.
+## Theorems
 
-
-____
-
-
-Matrix equivalence is an equivalence relation on the space of rectangular matrices.
-
-Two $m\times n$ matrices $A$ and $A'$ are **equivalent** if $$A'=P^{-1}AQ$$for some $n\times n$ matrix $Q$ and $m\times m$ matrix $P$.
-
-Equivalent matrices represent the same linear transformation $T:V\to{W}$ under two different choices of a pair of bases of $V$ and $W$, with $Q$ and $P$ being the change of basis matrices in $V$ and $W$ respectively.
-
-- $B,C$ are **old bases** of $V,W$ (respectively)
-- $B',C'$ are **new bases** of $V,W$ (respectively)
-- $Q$ is change-of-basis $n\times n$ invertible matrix of $V$ from $B$ to $B'$
-- $P$ is change-of-basis $m\times m$ invertible matrix of $W$ from $C$ to $C'$
-- $A=[T]^{B}_{C}$ is the transformation matrix by the **old bases**
-- $A'=[T]^{B'}_{C'}$ is the transformation matrix by the **new bases**
-
+- #todo If $A$ is $m\times n$ matrix, then there exist invertible matrices $P$ and $Q$ such that $PAQ$ has the first $\text{rank}(A)$ diagonal entries equal to $1$ and the remaining entries equal to $0$ 
 - $AB=0\iff \text{column-space}(B)\subseteq{\text{null}(A)}$
 
 # Square Matrices

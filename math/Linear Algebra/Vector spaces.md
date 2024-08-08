@@ -47,87 +47,89 @@ A **vector space** over a [[Field|field]] $F$ is a non-empty set $V$ together wi
 	- $\dim(\mathbb{P}_{n}(\mathbb{F}))=n$
 	- (some define $\mathbb{P}_{n}(\mathbb{F})$ as the set of all polynomials of degree **less than or equal** to $n$, then $\dim(\mathbb{P}_{n}(\mathbb{F}))=n+1$)
 
-## Operations
+# Vector Space
 
-- [[#Definition|Scalar Multiplication]] ($\textit{scalar}\cdot\mathbf{vector}=\mathbf{vector}$)
-- [[#Definition|Vector Addition]] ($\mathbf{vector}+\mathbf{vector}=\mathbf{vector}$)
-- [[#Dot Product]] ($\mathbf{vector}\cdot\mathbf{vector}=\textit{saclar}$)
-- [[#Cross Product]] ($\mathbf{vector}\times\mathbf{vector}=\mathbf{vector}$)
+In this section:
 
+- $V$ is a [[Vector Spaces|vector space]] over $\mathbb{F}$
+- $\dim{V}=n$
 
-### Dot Product
+## Basis
 
-> also **scalar product** or **Euclidean inner product**
+- Given $V$ is a vector space over $\mathbb{F}$, $\dim{V}=n$, and a set $\mathcal{B}=\{b_{1},\dots,b_{m}\}\subseteq V$, the following statements are equivalent:
+	- $\mathcal{B}$ is a **basis** of $V$
+	- $\mathcal{B}$ is linearly independent and spans $V$
+	- The matrix $A$ whose rows are the vectors in $\mathcal{B}$ has a [[Matrices#Full Row-and-Column Rank|full row and column rank]]
+	- $\forall{v\in V},\exists{!}\lambda_{1},\dots,\lambda_{n}\in\mathbb{F}:v=\lambda_{1}b_{1}+\dots+\lambda_{n}b_{n}$ (the vector $[v]_{\mathcal{B}}=(\lambda_{1},\dots,\lambda_{n})$ is called the **coordinate vector** of $v$ with respect to $\mathcal{B}$)
 
-**Definition:**
-- **Coordinate definition:** $\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\sum _{i=1}^{n}a_{i}b_{i}=a_{1}b_{1}+a_{2}b_{2}+\cdots +a_{n}b_{n}}$
-- **Geometric definition:** $\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\left\|\mathbf {a} \right\|\left\|\mathbf {b} \right\|\cos \theta }$
+## Spanning
 
-**Properties:** (12.1.2)
-- Symmetry $\textbf{a}\cdot\textbf{b}=\textbf{b}\cdot\textbf{a}$
-- Distributive $(\textbf{a}+\textbf{b})\cdot{\textbf{c}}=\textbf{a}\cdot\textbf{c}+\textbf{b}\cdot\textbf{c}$
-- Homogeneity $(t\textbf{a})\cdot\textbf{b}=t(\textbf{a}\cdot\textbf{b})$
-- Positivity $\textbf{a}\cdot\textbf{a}\geq 0$
-	- $\textbf{a}\cdot\textbf{a}= 0 \iff \textbf{a}=\textbf{0}$
-- $\textbf{0}\cdot\textbf{a}=\textbf{a}\cdot\textbf{0}=0$
-
-### Cross Product
-
-- $\displaystyle  \mathbf {a} \times \mathbf {b} =\|\mathbf {a} \|\|\mathbf {b} \|\sin(\theta )\,\mathbf {n}$ #not-in-course 
-
-# Spanning
-
-
-- Definition; Given a set of vectors $K=\{\mathbf{v}_{1},\dots,\mathbf{v}_{m}\}$ in a vector space $V$ over a field $\mathbb{F}$, and a matrix $A$ whose rows are the vectors in $K$, the following statements are equivalent:
+- Given $K=\{v_{1},\dots,v_{m}\}\subseteq V$, and a matrix $A$ whose rows are the vectors in $K$, the following statements are equivalent:
+	- $K$ is a **spanning set** of $V$
 	- $\text{Sp}(K)=V$
 	- $\{c_{1}v_{1}+\dots+c_{m}v_{m}\mid c_{1},\dots,c_{m}\in\mathbb{F}\}=V$
-	- $K$ is a **spanning set** of $V$
 	- $A$ has a [[Matrices#Full Column Rank|full column rank]]
-- Theorems: (given $K$ and $L$ are sets of vectors in $V$)
+- Given $K$ and $L$ are subsets of $V$:
 	- $\text{Sp}(K)$ is a [[Vector Spaces|subspace]] of $V$
 	- $\text{Sp}(L)=V\land L\subseteq{\text{Sp}{(K)}}\implies\text{Sp}(K)=V$
-	- <small> (7.5.4) </small> $\text{Sp}{(K)}=\text{Sp}{(L)}\iff{K\subseteq\text{Sp}{(L)}\land{L\subseteq\text{Sp}{(K)}}}$
+	- (7.5.4) $\text{Sp}{(K)}=\text{Sp}{(L)}\iff{K\subseteq\text{Sp}{(L)}\land{L\subseteq\text{Sp}{(K)}}}$
 	- (7.5.1, q7.5.16b) $K\subseteq{\text{Sp}{(L)}}\implies{\text{Sp}{(K)}\subseteq\text{Sp}{(L)}}$
 	- (q7.5.16a) $K \subseteq{L}\implies{\text{Sp}{(K)}\subseteq\text{Sp}{(L)}}$
 	- (q7.5.17a) $\text{Sp}(K)\cup\text{Sp}(L)\subseteq\text{Sp}(K\cup L)$
 	- (q7.5.17b) $\text{Sp}(K\cap L)\subseteq\text{Sp}(K)\cap\text{Sp}(L)$
 
-# Subspaces
 
-- A subset $W$ of a vector space $V$ is called a subspace of $V$ if $W$ is itself a vector space under the addition and scalar multiplication defined on $V$
-- nonempty subset $W$ of $V$ is a subspace of $V$ if and only if it is closed under addition and scalar multiplication
-- 
+## Subspaces
 
-$U$ and $W$ are subspaces of $V$.
+- Given a nonempty subset $W\subseteq V$, the following statements are equivalent:
+	- $W$ is a **subspace** of $V$
+	- $W$ is a vector space under the addition and scalar multiplication defined on $V$
 
-- (q7.6.2) $U\cup W$ is subspace of $V$, if and only if, $U\subseteq W\lor W\subseteq U$ 
+- Given $U$ and $W$ are subspaces of $V$:
+	- (q7.6.2) $U\cup W$ is subspace of $V$, if and only if, $U\subseteq W\lor W\subseteq U$ 
+	- (q7.6.4) $U+W$ is also a subspace of $V$ (similar result for $U_1+ \dots + U_k$)
+	- (q7.6.5) $U+W=U\iff W\subseteq U$ 
+	- (q7.6.7) $U+W=U\cup W\iff U\subseteq W\lor W\subseteq U$
+	- (q7.6.8) if $U=\text{Sp}(S), W=\text{Sp}(T)$ (where $S$ and $T$ are non-empty subsets of $V$), then $U+W=\text{Sp}(S)+\text{Sp}(T)=\text{Sp}(S\cup T)$
+- Given $U_1,\dots,U_k$ are subspaces of $V$:
+	- (q7.6.4) $U_1+\dots+U_k$ is a subspace of $V$ (the smallest subspace of $V$ containing $U_1,\dots,U_k$)
+	- (q7.6.6a) $U_1\cup\dots\cup U_k\subseteq U_1+\dots+U_k$
+	- (q7.6.6b) $\text{Sp}(U_1\cup\dots\cup U_k)=U_1+\dots+U_k$
 
-### Sum
+## Sum
 
-$U + W := \{u+w \mid u\in U , w \in W \}$
-
-**Properties:**
-- (q7.6.3a) $U+W=W+U$
-- (q7.6.3b) $U_{1}+(U_{2}+U_{3})=(U_{1}+U_{2})+U_{3}$
-- (q7.6.5) $U+W=U\iff W\subseteq U$
-- (q7.6.6) $\text{Sp}(U_{1}\cup\dots \cup U_{k})=U_{1}+\dots+U_{k}$ 
-- (q7.6.7) $U+W=U\cup W$, if and only if, $U\subseteq W\lor W\subseteq U$ 
-- (q7.6.8) let $K,S\subseteq V$ non-empty sets, then $\text{Sp}(K)+\text{Sp}(S)=\text{Sp}(K\cup S)$
+- Given $S$ and $T$ are subsets of $V$, then the **sum** of $S$ and $T$ is the set $S+T \stackrel{\text{def}}{=} \{s+t\mid s\in S,t\in T\}$
+	- (q7.6.3a) $S+T=T+S$
+	- (q7.6.3b) $S+(T+K)=(S+T)+K$
 
 #### Direct sum
 
-Let $U+{W}=V$, then the following statements are **equivalent**:
-- $U\oplus{W}=V$ 
-- (7.7.1) every vector in $V$ can be expressed in exactly one way as $u+w=v$
-- (7.7.2) $U \cap W=\{ 0 \}$
-- (8.3.7) $\dim U+\dim W=\dim V$
-## Equality
+- The following statements are equivalent:
+	- $V=U\oplus W$
+	- $V$ is the **direct sum** of $U$ and $W$
+	- (7.7.2) $V=U+W$ and $U\cap W=\{0\}$
+	- (8.3.7) $V=U+W$ and $\dim{V}=\dim{U}+\dim{W}$
+	- (7.7.1) $\forall{v\in V},\exists{!u\in U,w\in W}:v=u+w$
 
-- (7.5.12) If $A$ and $B$ are row equivalent matrices, then $\text{row-space}(A)=\text{row-space}(B)$
-- (8.3.4a) $U\subseteq V\implies\dim U\leq\dim V$. 
+
+## Dimension
+
+- Given $U$ and $W$ are subspaces of $V$:
+	- (8.3.6) $\dim(U+W)=\dim{U}+\dim{W}-\dim(U \cap W)$
+	- ${\displaystyle \max(\dim U,\dim W)\leq \dim(U+W)\leq \dim(U)+\dim(W) }$
+	- (8.3.7) if $V=U+W$, then $V=U\oplus W \iff \dim V= \dim U+\dim W$ 
+	- (8.3.4a) $U\subseteq V\implies\dim U\leq\dim V$. 
+	- (8.3.4b) if $U\subseteq V$ then, $U=V \iff \dim V=\dim U$. 
+- (9.5.9) Given $V$ and $W$ are vector spaces over $\mathbb{F}$, then $V \cong W \iff \text{dim}{V}=\text{dim}{W}$
+- See Also: [[Matrices#Rank|Rank-Nullity Theorem]]
+
+
+# Equality
+
+- (q7.5.12) If $A$ and $B$ are row equivalent matrices, then $\text{row-space}(A)=\text{row-space}(B)$
 - (8.3.4b) if $U\subseteq V$ then, $U=V \iff \dim V=\dim U$. 
 
-## Isomorphic Subspaces
+# Isomorphic Spaces
 
 - Assumption: the spaces are on the same filed $F$
 - The following statements are **equivalent**:
@@ -138,16 +140,9 @@ Let $U+{W}=V$, then the following statements are **equivalent**:
 	 - (9.5.8) $\dim{V}=n\implies V\cong{F^n}$
 	- Isomorphic is an [[Binary Relation#Equivalence relation|equivalence relation]]
 - [[#Examples]]
-## Dimension
 
-- (8.3.6) $\dim(U+W)=\dim{U}+\dim{W}-\dim(U \cap W)$
-- ${\displaystyle \max(\dim U,\dim W)\leq \dim(U+W)\leq \dim(U)+\dim(W) }$
-- (8.3.7) if $V=U+W$, then $V=U\oplus W \iff \dim V= \dim U+\dim W$ 
-- (9.5.9) $V \cong W \iff \text{dim}{V}=\text{dim}{W}$ (on the same field, and finite dim.)
-- (9.6.1) **Rank–nullity theorem** $\text{dim}{V}=\text{dim}{(\text{Ker}{T})}+\text{dim}{(\text{Im}{T})}$. ($T:V\to W$ is lin. trans.)
-- (d8.5.4) $\rho{(A)}=\dim(\text{row-space(A)})=\dim(\text{column-space(A)})$
 
-## Orthogonality 
+# Orthogonality 
 
 - (d12.2.2) $\mathbf{v} \perp U$ if for all vectors $\mathbf{u} \in U$, $\mathbf{v} \cdot \mathbf{u} = 0$
 - (12.2.3) let $\text{Sp}(K)=U$, then $\mathbf{v} \perp U\iff\mathbf{v} \perp K$

@@ -145,6 +145,8 @@
 
 # Physics 🚀
 
+- [[electric guitar]] 🎸🎸
+
 ## Fundamentals of Physics
 
 ###### I: Mechanics, Relativity, and Thermodynamics

@@ -1,60 +1,79 @@
+In this section:
+
+- $V$ and $W$ are [[Vector Spaces|vector spaces]] over $\mathbb{F}$
+- $\dim{V}=n$ and $\dim{W}=m$
+- $\mathcal{B}=(v_{1},\dots,v_{n})$ and $\mathcal{C}=(w_{1},\dots,w_{m})$ are bases of $V$ and $W$. (resp.)
+
 ## Linearity
 
-- Definitions of linearity of transformation. The following statements are **equivalent**:
-	- $T$ is **linear** transformation
-	- $T$ is additive and homogeneous (9.1.1)
-		1. **Additivity:** $T(v_{1}+v_{2})=T(v_{1})+T(v_{2})$
-		2. **Homogeneity:** $\alpha T(v)=T(\alpha{v})$
-	- $T(\lambda_{1}v_{1}+\lambda_{2}v_{2})=\lambda_{1}T(v_{1})+\lambda_{2}T(v_{2})$ (9.1.3, equivalent to d9.1.1) 
-	- There exists $A$ such that $Tv=Av$ for each $v\in{V}$
+- Given a function $T:V\to W$. The following statements are equivalent:
+	- $T$ is a **linear transformation**
+	- (9.1.1) $T$ is _additive_ and _homogeneous_
+		- Additivity: $T(v_{1}+v_{2})=T(v_{1})+T(v_{2})$
+		- Homogeneity: $\alpha T(v)=T(\alpha{v})$
+	- (9.1.3) $T(\lambda_{1}v_{1}+\lambda_{2}v_{2})=\lambda_{1}T(v_{1})+\lambda_{2}T(v_{2})$  
+	- $\exists{A}\in{M_{m\times n}}(\mathbb{F}):\forall{v\in{V}},T(v)=Av$
 
-**Theorems:**
-- (9.1.2a) if $T(0_{V})\neq0_{W}$, then $T$ is not linear
-- (9.7.1) let $S$ and $T$ linear transformations, then $f(v)=S(v)+T(v)$ is also linear transformation
-- 
-
-Arithmetic **Properties:**
-- $T(v)=T(u)\iff T(v-u)=0$
-- (q9.7.2a) addition commutativity: $T+S=S+T$
-- (q9.7.2b) Addition Associativity $(T_{1}+T_{2})+T_{3}=T_{1}+(T_{2}+T_{3})$
-- (q9.7.3) $T+0=0+T=T$
-- #todo SEE CHPATER 9.7
+- Theorems
+	- (9.1.2a) If $T(0_{V})\neq0_{W}$, then $T$ is not linear
+	- (9.7.1) let $S$ and $T$ linear transformations, then $f(v)=S(v)+T(v)$ is also linear transformation
+	- 
+	- $T(v)=T(u)\iff T(v-u)=0$
 
 ## Hom
 
 - $\text{Hom}(V,W)$ is the set of all linear transformations from $V$ to $W$
 - (9.7.6) $\text{Hom}(V,W)$ is a vector space
-- $\text{Hom}(V,W)$ and $M_{m\times n}$ are [[Vector Spaces#Isomorphic Subspaces|isomorphic]] vector spaces
+	- $\text{Hom}(V,W)$ and $M_{m\times n}$ are [[Vector Spaces#Isomorphic Subspaces|isomorphic]] vector spaces
+	- $\dim{\text{Hom}(V,W)}=m\times n$
+	- Vector space operations: (see q9.7.2-3)
+		- Addition: $(T+S)(v)=T(v)+S(v)$
+			- Commutativity: $T+S=S+T$
+			- Associativity: $(T_{1}+T_{2})+T_{3}=T_{1}+(T_{2}+T_{3})$
+			- Identity: $T+0=T$
+			- Inverse: $T+(-T)=0$
+		- Scalar multiplication:
+			- Distributivity (vector (transformations) addition): $\alpha(T+S)=\alpha{T}+\alpha{S}$
+			- Distributivity (field addition): $(\alpha+\beta)T=\alpha{T}+\beta{T}$
+			- Compatibility: $\alpha(\beta{T})=(\alpha\beta)T$
+			- Identity: $1T=T$
+	- Vector space properties of $\text{Hom}(V,W)$
+		- $T-S=0\implies T=S$
+		- $T+T=T\implies T=0$
+		- $0 \cdot T=0$
+		- $\alpha T=0\implies \alpha=0$ or $T=0$
+
+
+## Composition
 
 ## Equality
 
 - (9.4.1) $T,S:V\to W$, and $B=\{ v_{1},\dots,v_{n} \}$ spans $V$. then $T=S \iff \forall{v\in B}:{T(v)=S(v)}$ 
 
+
 # Linear Transformation
 
-$$\large T:V\to W$$
-- $A=[T]^B_{C}$
-- $T(v)=Av$
-- $\dim{V}=n,  \quad\dim{W}=m$
-- $B=(v_{1},\dots,v_{n})$ and $C=(w_{1},\dots,w_{m})$ are bases of $V$ and $W$. (respectively) 
+In this section:
+
+- $T:V\to W$ is a linear transformation
+- $A=[T]^\mathcal{B}_\mathcal{C}$ is the transformation matrix of $T$ by the bases $\mathcal{B}$ and $\mathcal{C}$, thus $\forall{v\in{V}}:T(v)=Av$
 
 ## Transformation matrix
 
 (d10.1.1)  Matrix Representations of Linear Transformation
 $$A=[T]_{C}^{B}=\left[\begin{array}{ccc} | & & | \\ [T({v_{1}})]_{C} & \cdots & [T( {v_{n}})]_{C} \\ | & & | \end{array} \right]_{m\times n}$$
 
-
-> [!example] Compute $T(v)$ Indirectly 
+> [!example] (10.2.1) Compute $T(v)$ Indirectly 
 > 1. Compute the coordinate vector $[v]_{B}$
 > 2. Compute $[T(v)]_{C}=[T]_{C}^{B}[v]_{B}$
 > 3. Reconstruct $T(v)$ from its coordinate vector $[T(v)]_{C}$
+
 
 ## Fundamental Spaces
 
 ### Image
 
 - $\text{Im}(T) = \{\ T(v) \mid v \in V\,\}$ is [[Matrices#Column space|column-space]] of $A$
-
 
 - (9.3.6) let $T:V\to W$, and $\text{Sp}\{ v_{1},\dots ,v_{n} \}=V$, then, $\text{Im}{T}=\text{Sp}{(\{ T(v_{1}),\dots,T(v_{n}) \})}$
 - (9.5.6) if $T$ is injective, and $K\subseteq{V}$ linearly indep., then $T(K)\subseteq{W}$ is also linearly indep.
