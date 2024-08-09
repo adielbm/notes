@@ -50,9 +50,30 @@ ___
 		- $W \neq (U_1 \cap W) \oplus (U_2 \cap W)$
 - 2020 a 2a q6
 	-  Given $T:V\to F$ ($V$ is a vector space over $F$) and $\exists v \in V: T(v)\neq 0$. Prove that $V=\text{Sp}(v)\oplus \text{Ker}(T)$
+	- Proof:
+		- (1: $\text{Sp}(v)\cap \text{Ker}(T)=\{ 0 \}$)
+			- $w\in \text{Sp}(v)\cap \text{Ker}(T) \implies$
+			- $w=av$ for some $a\in F$ and $T(w)=0$
+			- $T(w)=T(av)=aT(v)=0\implies$
+			- $a=0\implies$
+			- $w=0\implies$
+			- $\text{Sp}(v)\cap \text{Ker}(T)=\{ 0 \}$
+		- (2: $V=\text{Sp}(v)+\text{Ker}(T)$)
+			- $\dim \text{Im} T\leq \dim F = 1$
+			- $T(v)\neq 0 \implies \dim \text{Im}\neq 0$
+			- $\implies \dim \text{Im}=1$ 
+			- #todo
+
+
+
+
+
 
 
 - ($A$ is square) $\text{rank}(A)=\text{rank}(A^2)\implies \text{null}(A)=\text{null}(A^2)$
 	- ___Proof___: 
 	$\begin{aligned} (Ax = 0 \implies A^2x = 0) \implies \text{null}(A) \subseteq \text{null}(A^2) \\ (\text{rank}(A) = \text{rank}(A^2)) \underset{\text{ (by RNT)}}{\implies} (\text{nullity}(A) = \text{nullity}(A^2))  \end{aligned}\quad \overset{\text{ (by 8.3.4b)   }}{\implies} \text{null}(A) = \text{null}(A^2)$
 	
+
+
+

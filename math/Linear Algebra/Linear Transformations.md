@@ -51,23 +51,18 @@ In this section:
 - (9.4.1) $T,S:V\to W$, and $B=\{ v_{1},\dots,v_{n} \}$ spans $V$. then $T=S \iff \forall{v\in B}:{T(v)=S(v)}$ 
 
 
+## Transformation matrix
+
+- (d10.1.1) The **transformation matrix** of the [[Linear Transformations|linear transformation]] $T:V\to W$, relative to the bases $\mathcal{B}$ and $\mathcal{C}$, is the $m\times n$ matrix (with entries in $\mathbb{F}$) defined by $$A=[T]_{C}^{B}=\left[\begin{array}{ccc} | & & | \\ [T({v_{1}})]_{C} & \cdots & [T( {v_{n}})]_{C} \\ | & & | \end{array} \right]_{m\times n}$$
+- $A$ is the transformation matrix of $T$ by the bases $\mathcal{B}$ and $\mathcal{C}$ if and only if $\forall{v\in{V}}:T(v)=Av$
+- $[T]_{C}^{B}[v]_{B}=[T(v)]_{C}$
+
 # Linear Transformation
 
 In this section:
 
-- $T:V\to W$ is a linear transformation
-- $A=[T]^\mathcal{B}_\mathcal{C}$ is the transformation matrix of $T$ by the bases $\mathcal{B}$ and $\mathcal{C}$, thus $\forall{v\in{V}}:T(v)=Av$
-
-## Transformation matrix
-
-(d10.1.1)  Matrix Representations of Linear Transformation
-$$A=[T]_{C}^{B}=\left[\begin{array}{ccc} | & & | \\ [T({v_{1}})]_{C} & \cdots & [T( {v_{n}})]_{C} \\ | & & | \end{array} \right]_{m\times n}$$
-
-> [!example] (10.2.1) Compute $T(v)$ Indirectly 
-> 1. Compute the coordinate vector $[v]_{B}$
-> 2. Compute $[T(v)]_{C}=[T]_{C}^{B}[v]_{B}$
-> 3. Reconstruct $T(v)$ from its coordinate vector $[T(v)]_{C}$
-
+- $T:V\to W$ is a [[Linear Transformations|linear transformation]]
+- $A$ is the [[#Transformation matrix|transformation matrix]] of $T$ by the bases $\mathcal{B}$ and $\mathcal{C}$
 
 ## Fundamental Spaces
 
