@@ -47,8 +47,9 @@ In this section:
 
 ## Elementary Row Operations
 
-- $E$ is a $m$-ordered elementary matrix by which $A$ is multiplied from the left (left-multiplication is a row operation)
+- $E$ is a $m$-ordered [[#Elementary matrix|elementary matrix]] by which $A$ is multiplied from the left (left-multiplication is a row operation)
 - $EA$ is the matrix obtained by applying to $A$ one of the **elementary row operations** represented by $E$
+- Every invertible matrix $P$ can be written as a product of elementary matrices
 
 
 |               | Row Operation                           | Elementary Matrix $E$                                                                                                                                                        | $EA$ |
@@ -59,17 +60,14 @@ In this section:
 
 ### Row equivalence
 
-> _Row equivalence_ is an [[Binary Relation#Equivalence relation|equivalence relation]] on the set $M_{m\times n}(\mathbb{F})$
-
 - The following statements are equivalent:
 	- $A$ and $B$ are **row equivalent**
+	- There exists an invertible matrix $P$ such that $A=PB$
 	- It is possible to transform $A$ into $B$ by a sequence of elementary row operations
 	- (q7.5.12) $\text{row-space}(A)=\text{row-space}(B)$
 	- $\text{null}(A)=\text{null}(B)$
-	- There exists an invertible matrix $P$ such that $A=PB$.
-
-**Properties:**
-
+	- $T_A$ and $T_B$ are the same linear transformation with respect to different bases of the codomain $\mathbb{F}^m$
+- _Row equivalence_ is an [[Binary Relation#Equivalence relation|equivalence relation]] on the set $M_{m\times n}(\mathbb{F})$
 - If $A$ and $B$ are row equivalent matrices, then: 
 	- A given set of column vectors of $A$ is linearly independent if and only if the corresponding column vectors of $B$ are linearly independent. 
 	- A given set of column vectors of $A$ forms a basis for the column space of $A$ if and only if the corresponding column vectors of $B$ form a basis for the column space of $B$. 
@@ -78,9 +76,11 @@ In this section:
  
 ## Fundamental Spaces
 
-### Row space
+ ### Row space
 
 - $\text{row-space}(A)=\text{Sp}(\{ \text{row}_{1}(A),\dots,\text{row}_{m}(A) \})$
+
+
 
 ### Column space
 
@@ -140,15 +140,18 @@ The following statements are equivalent:
 
 ## Rank
 
-- (d8.5.4) $\rho{(A)}=\dim(\text{row-space(A)})=\dim(\text{column-space(A)})$
-- $\rho(A)$ is the number of linearly independent **rows**
-- $\rho(A)$ is the number of linearly independent **columns**
-- $\rho(A)=\dim(\text{Im}(T_{A}))$
-- $\rho(A)=n-\dim(\text{null}{(A)})$
-- $\rho(A)$ is the number of the non-zero rows of $\text{REF}(A)$
-- $\rho(A)$ is the number of pivots in $\text{RREF}(A)$
-
-> $\text{rank}{(A)}=\rho{(A)}$
+- (d8.5.4) The following are equal:
+	- $\text{rank}(A)$ (or $\text{rk}(A)$)
+	- $\rho{(A)}$ (notation used in the course)
+	- The number of linearly independent rows
+	- The number of linearly independent columns
+	- $\dim(\text{row-space(A)})$
+	- $\dim(\text{column-space(A)})$
+	- $\dim(\text{Im}(T_{A}))$
+	- $n-\text{nullity}{(A)}$
+	- The number of the non-zero rows of $\text{REF}(A)$
+	- The number of pivots in $\text{RREF}(A)$
+	- (q8.5.4) $\text{rank}(A^t)$
 
 ### Nullity 
 
@@ -156,8 +159,7 @@ The following statements are equivalent:
 
 ### Theorems
 
-- (8.6.1) **Rank–nullity theorem**  $$\text{rank}(A)+\text{nullity}{(A)}=n$$
-- (q8.5.4) $\rho{(A)}=\rho{(A^t)}$
+- (8.6.1) **Rank–nullity theorem**  $$\large\text{rank}(A)+\text{nullity}{(A)}=n$$
 - (q8.5.6) $\rho{(AB)}\leq\min{\{ \rho{(A)}, \rho{(B)} \}}$
 - $\rho{(A)}\leq\min{\{ m,n \}}$
 	- $m>n\implies \rho(A)\neq m$ (i.e. $A$ does **not** have [[#Full Row Rank|full row rank]])
@@ -166,13 +168,13 @@ The following statements are equivalent:
 - Row equivalent matrices have the same rank
 -  $\rho(A+B)\leq \rho(A)+\rho(B)$ #todo
 - (8.3.4a+8.6.1) $\text{null}(AB) \subseteq \text{null}(B)\implies \rho(B)\leq \rho(AB)$
-- $0\in{K}\implies K\text{ is linearly {\bf dependent}}$
+- $0\in{K}\implies K$ is linearly dependent
 
 ### Full Rank
 
-> q8.5.5
+![[lin-alg.svg| center | 180]]
 
-- The following statements are equivalent:
+- (q8.5.5) The following statements are equivalent:
 	- $A$ has **full rank**
 	- $\text{rank}{(A)}=\min{\{ m,n \}}$
 	- $\text{rank}{(A)}=m$ or $\text{rank}{(A)}=n$
@@ -214,7 +216,7 @@ The following statements are equivalent:
 	- $A$ is **right-cancellable** (i.e. $BA=CA\implies B=C$)
 	- (8.4.4) $K'$ is linearly independent (where the vectors of $K$ are the [[Vector Spaces#Basis|coordinates vectors]] of any set of vectors $K'$)
 
-###### Theorems
+##### Theorems
 
 - If $L,K\subseteq V$, and $K\subseteq{\text{Sp}{(L)}}$, and $L$ is linearly dep., then $K$ is also linearly dep. (by 7.5.1, 8.3.4)
 
@@ -266,10 +268,7 @@ The following statements are equivalent:
 
 ## Transformation matrix
 
-Matrix Representations of Linear Transformation
-
-- (d10.1.1) $T:V\to W$, and $B=(v_{1},\dots,v_{n})$ and $C=(w_{1},\dots,w_{n})$ are bases of $V$ and $W$. (respectively) 
-$$[T]_{C}^{B}=\left[\begin{array}{ccc} | & & | \\ [T({v_{1}})]_{C} & \cdots & [T( {v_{n}})]_{C} \\ | & & | \end{array} \right]_{m\times n}$$
+See [[Linear Transformations#Transformation matrix]]
 ## Transpose
 
 - Notation: $A^t$, $A^\top$
@@ -309,8 +308,8 @@ In this section:
 
 ## Invertibility 
 
-- **Theorem 3.10.6**: Let $A$ be a $n$-ordered square matrix over a field $F$. The following statements are **equivalent**:
-	- $A$ is an **invertible matrix**
+- Theorem 3.10.6: Let $A$ be a $n$-ordered square matrix over a field $F$. The following statements are equivalent:
+	- $A$ is an **invertible** matrix
 	- $A$ can be expressed as a finite product of elementary matrices.
 	- There exists a $B$ such that $BA=I$
 	- There exists a $B$ such that $AB=I$
@@ -324,7 +323,7 @@ In this section:
 	- The rows of A span $F^n$
 	- The columns of A is a basis $F^n$
 	- The rows of A a basis $F^n$
-	- $A^t$ is an **invertible matrix** (in such case $(A^t)^{-1}=(A^{-1})^{t}$) (3.8.4b)
+	- $A^t$ is an invertible matrix 
 	- (4.4.1, q10.7.7 for l.t.) The determinant of A is non-zero: $\det{A}\neq0$
 	- (4.4.1, and q11.3.1) The number $0$ **is not an eigenvalue** of $A$. 
 	- (q8.5.8b) $A$ has a full rank: $\rho(A)=n$
@@ -342,12 +341,13 @@ In this section:
 	- (3.8.3)
 		- (left-cancellable) $AB=AC\implies B=C$ 
 		- (right-cancellable) $BA=CA\implies B=C$
+	- (3.8.4b) $(A^t)^{-1}=(A^{-1})^{t}$
 	- (3.8.4d) if $s\neq 0$, then $sA$ is also invertible. (in such case $(sA)^{-1}=\frac{1}{s}A^{-1}$)
 	- (q8.5.7a) $\rho(BA)=\rho(B)$ for any matrix $B_{m \times n}$
 	- (q8.5.7b) $\rho(AB)=\rho(B)$ for any matrix $B_{n \times m}$
 - if $A$ and $B$ are invertible, (in order $n$)
 	- $A$ and $B$ are row equivalent
-	- (3.8.4c) $AB$ is also invertible. and $(AB)^{-1}=B^{-1}A^{-1}$
+	- (3.8.4c) $AB$ is also invertible and $(AB)^{-1}=B^{-1}A^{-1}$
 
 ### Theorems 
 
@@ -380,7 +380,6 @@ In this section:
 	- $\rho(B)-\dim(\text{null}(A))\leq \rho(AB)$. (from Sylvester’s inequality and  Rank–nullity theorem)
 	- $AB=0\implies \rho(A)+\rho(B)\leq n$
 	- for invetible see [[#Invertibility#Properties]]
-
 
 ## Determinant 
 
@@ -434,7 +433,9 @@ In this section:
 - $\text{tr}(A)=\text{tr}(A^t)$ #todo 
 
 ## Characteristic polynomial 
+
 $$p(t)_{A}=\det \left( t I -A \right)$$
+
 **Properties:**
 - The characteristic polynomial is a monic polynomial of degree $n$
 - (q11.5.4) The **coefficient of** $t^{n}$ is $1$
@@ -601,9 +602,6 @@ Diagonal equivalent definitions.
 
 - (q4.3.10) ${A}\text{ is anti-symmetric} \iff A^t=-A$
 	- if $A_{n}$ is anti-symmetric, and $n$ is odd, then $\det A=0$ 
-
-
-
 
 ## Transition Matrix 
 

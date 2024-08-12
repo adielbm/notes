@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Amiri:ital@0;1&display=swap');
 
+/* Print CSS */
 @media print {
   body {
     --font-text-theme: "Amiri", serif;
@@ -8,4 +9,15 @@
     --heading-spacing: 0;
     --p-spacing: 0;
   }
+}
+
+/**
+  * Image centering
+  * @source https://www.reddit.com/r/ObsidianMD/comments/v1fs0f/centering_images_in_reading_mode/
+  * Example: ![[image.png | center | 256]] or ![Photo | center | 256](image.png)
+*/
+img[alt*="center"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

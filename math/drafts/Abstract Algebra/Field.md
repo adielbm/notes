@@ -12,17 +12,44 @@
 - Multiplication
 	- Associative $a · (b · c) = (a · b) · c$
 	- Commutative $a · b = b · a$
-	- Identity $∃ 1 \neq 0 : a · 1 = 1 · a = a$
+	- Identity $∃ 1 \neq 0 : a · 1 = 1 · a = a$ 
 	- Inverse $\forall a \in \mathbb{F} \setminus \{0\}, \exists b \in \mathbb{F} : a \cdot b = 1$
 - Distributive $a · (b + c) = a · b + a · c$
 
 > A field can define as a [[Ring|commutative ring]] with unity in which every nonzero element is a unit (i.e., has a multiplicative inverse).
+
+
+
 
 ### Examples
 
 - Rational numbers
 - [[Real Numbers]]
 - Complex numbers
+
+## Field Extension
+
+### Subfield
+
+- The following statements are equivalent for a subset $K$ of a field $F$:
+	- $K$ is a **subfield** of $F$
+	- $K$ is a field with respect to the field operations inherited from $F$
+	- The following conditions hold:
+		- $K$ is closed under addition and multiplication
+		- $K$ contains $0$ (the additive identity of $F$), and $1$ (the multiplicative identity of $F$)
+		- $\forall x \in K, -x \in K$
+		- $\forall x \in K \setminus \{0\}, x^{-1} \in K$
+
+- If $K$ is a subfield of $F$, then $F$ is an **extension field** (or simply **extension**) of $K$, and this pair of fields is a **field extension**
+- If $F$ is a field, then $F$ is a subfield of itself
+
+#### Examples
+
+- The field $\mathbb{Q}$ of rational numbers is a subfield of the field $\mathbb{R}$ of real numbers, which is itself a subfield of the field $\mathbb{C}$ of complex numbers
+- The field $\mathbb{Q}$ of rational numbers has no subfields other than itself
+- If $F$ is an extension field of $\mathbb{Q}$, and $K$ is a subfield of $F$, then $K$ is an extension field of $\mathbb{Q}$
+- The field $\mathbb{Q}(\sqrt{2})=\{a+b\sqrt{2} \mid a,b \in \mathbb{Q}\}$ is a subfield of $\mathbb{R}$
+- 
 
 ## Ordered Field
 

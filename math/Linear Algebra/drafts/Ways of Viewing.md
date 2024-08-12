@@ -38,10 +38,10 @@ ___
 
 - $A$ and $B$ are an $m\times n$ matrix that represent $T_{A},T_{B}:V\to W$
 
-| Matrix view                               | Transformation view                                             |
-| ----------------------------------------- | --------------------------------------------------------------- |
-| $A$ and $B$ are equivalent | $T_{A}$ and $T_{B}$ are the same transformation (in diff bases) |
-| $A$ and $B$ are row equivalent            |                                                                 |
+| Matrix view                    | Transformation view                                             |
+| ------------------------------ | --------------------------------------------------------------- |
+| $A$ and $B$ are equivalent     | $T_{A}$ and $T_{B}$ are the same transformation (in diff bases) |
+| $A$ and $B$ are row equivalent |                                                                 |
 
 ## Square matrix: $\dim{V}=\dim{W}=n$
 

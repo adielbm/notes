@@ -19,7 +19,7 @@
 - 2022
 - 2023
 - 2024
-	- [ ]  [[moed 84 - 2024a-20109.pdf]] - [[solution moed 84 - 2024a-20109.pdf]]
+	- [x]  [[moed 84 - 2024a-20109.pdf]] - [[solution moed 84 - 2024a-20109.pdf]]
 	- [ ]  [[moed 83 - 2024b-20109.pdf]] - [[solution moed 83 - 2024b-20109.pdf]]
 	- [ ] [[moed 81 - 2024b-20109.pdf]] - [[solution moed 81 - 2024b-20109.pdf]]
 	- [ ] [[moed 86 - 2024a-20109.pdf]] - [[solution moed 86 - 2024a-20109.pdf]]
@@ -95,12 +95,10 @@
 - [x] power series of $(1+x)^{\alpha}$ 📙(6.2.4)
 - [ ] end-of-chapter 6 exercises
 
-- [ ] **29/07/2024** - registration sent wait to response. (כג תמוז)
+- [x] **29/07/2024** - registration sent wait to response. (כג תמוז)
 - ~~05/09/2024~~
 - ~~26/09/24 - Elul כג~~
 - ~~25/11/24 - Cheshvan כד~~
-
-
 
 # Study 📚
 
