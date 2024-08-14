@@ -1,5 +1,5 @@
 - The set of all $m\times n$ matrices is denoted by $\mathbf{M}_{m\times n}(\mathbb{F})$ (or $M_{m\times n}$ if the field is understood, or $M_{n}$ if $m=n$), or by $\mathbb{F}^{m\times n}$ is a [[Vector Spaces#Examples|vector space]] over $\mathbb{F}$ where $\dim(\mathbf{M}_{m\times n}(\mathbb{F}))=mn$
-	- Vector space [[Vector Spaces#Vector Space|operations and axioms]] of $\mathbf{M}_{m\times n}(\mathbb{F})$
+	- Vector space [[Vector Spaces#Definition|operations and axioms]] of $\mathbf{M}_{m\times n}(\mathbb{F})$
 		- **Addition:** $A+B=[a_{ij}+b_{ij}]=[c_{ij}]=C$ (matrix addition)
 			- Commutative: $A+B=B+A$
 			- Associative: $A+(B+C)=(A+B)+C$
@@ -76,11 +76,9 @@ In this section:
  
 ## Fundamental Spaces
 
- ### Row space
+### Row space
 
 - $\text{row-space}(A)=\text{Sp}(\{ \text{row}_{1}(A),\dots,\text{row}_{m}(A) \})$
-
-
 
 ### Column space
 
@@ -106,16 +104,14 @@ The following statements are equivalent:
 
 ### Theorems
 
-- $\text{row-space}(A)\subseteq \mathbb{F}^n$
-- $\text{column-space}(A)\subseteq \mathbb{F}^m$
-- $\text{null}(A)\subseteq \mathbb{F}^n$
-- $\text{null}(A^t)\subseteq \mathbb{F}^m$
+- $\text{null}(A),\,\text{row-space}(A)\subseteq \mathbb{F}^n$
+- $\text{null}(A^t),\,\text{column-space}(A)\subseteq \mathbb{F}^m$
+
 - $\text{row-space}(A)=\text{column-space}(A^t)$
 - $\text{column-space}(A)=\text{row-space}(A^t)$
 - $\text{row-space}(A)=\text{row-space}(\text{REF}(A))$
 - $\text{row-space}(A+B)\subseteq\text{row-space}(A)+\text{row-space}(B)$
 - (9.8.7a) $\text{column-spcae}(BA) \subseteq \text{column-spcae}(B)$
-- (9.8.7c) $\text{column-spcae}(BA)=B(\text{column-spcae}(A))$
 - (9.8.7b) $\text{null}(A) \subseteq \text{null}(BA)$
 - #todo
 	- $\text{null}(A)=\text{null}(A^\top A)$
@@ -124,16 +120,14 @@ The following statements are equivalent:
 
 ### Bases for the Fundamental Spaces
 
-- A basis of $\text{row-space}({A})=\text{Sp}(K)$
-	- The **non-zero** rows of $\text{REF}(A)$ (q8.5.2b)
-	- The $r$ columns in $A^t$, such that in $\text{RREF}(A^t)$ are contain a pivot.
--  A basis of $\text{column-space}({A})$.
-	- The **non-zero** rows of $\text{REF}(A^t)$
-	- The $r$ columns in $A$, such that in $\text{RREF}(A)$ are contain a pivot.
-- A basis of the $\text{null}{(A)}$ 
-	- The $n-r$ vectors that span the solution space of $(\text{RREF}(A))\mathbf{x}=\mathbf{0}$. 
-- A basis of the $\text{null}{(A^t)}=\text{left-null}{(A^t)}$ 
-	- The $m-r$ vectors that span the solution space of $(\text{RREF}(A^t))\mathbf{x}=\mathbf{0}$. 
+
+| Subspace                   | Dimension        | Bases                                                                                                                      |
+| -------------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| $\text{row-space}({A})$    | $\text{rank}(A)$ | <li>The non-zero rows of $\text{REF}(A)$</li><li>The columns in $A^t$, s.t. in $\text{RREF}(A^t)$ are contain a pivot</li> |
+| $\text{column-space}({A})$ | $\text{rank}(A)$ | <li>The non-zero rows of $\text{REF}(A^t)$</li><li>The columns in $A$, s.t. in $\text{RREF}(A)$ are contain a pivot</li>   |
+| $\text{null}{(A)}$         | $n-\text{rank}(A)$ | <li>vectors that span the solution space of $(\text{RREF}(A))\mathbf{x}=\mathbf{0}$</li>                                 |
+| $\text{null}{(A^t)}$       | $m-\text{rank}(A)$ | <li>vectors that span the solution space of $(\text{RREF}(A^t))\mathbf{x}=\mathbf{0}$</li>                               |
+
 
 
 - #todo  Let $K$ is linearly independent, then $K\cup\set{\mathbf{e}_{i}\mid {i}\text{th column is not a pivot column in REF}(A)}$ forms a basis for $V$.
@@ -188,7 +182,8 @@ The following statements are equivalent:
 	- $\text{rank}(A) = n$
 	- The columns of $A$ are linearly independent
 	- $T_A$ is [[Linear Transformations#Injective (One-to-One)|injective]] (one-to-one, monomorphism)
-	- $\text{null}(A) = \{0\}$ 
+	- $\text{null}(A) = \{0\}$
+	- $Ax=0\implies x=0$
 	- $\text{nullity}(A)=0$
 	- $\text{row-space}(A) = \mathbb{F}^n$
 	- $\text{Sp(K)} = \mathbb{F}^n$ (i.e. $K$ **spans** $\mathbb{F}^n$)
@@ -360,13 +355,12 @@ In this section:
 - $A,B, C$ are square matries
 	- if $AB-AC$ is invertible and $AB$ is singular, then $B$ is singular
 
-
-> [!example] **Procedure:** determine whether a square matrix $A$ is invertible and, if so, find $A^{−1}$: 
->	- Form the augmented matrix $[A | I_{n}]$ and put it into RREF. 
->	- If the RREF has the form $[I_{n} | B]$, then $A$ is invertible and $B=A^{−1}$. 
->	- else, if the matrix in the left half of the RREF is not $I_{n}$, then $A$ is singular. 
-
-> **WolframAlpha** `inverse [matrix]`
+> [!procedure] Computing the Inverse of a Matrix (if it exists)
+> - **2x2 matrix:** $\begin{pmatrix} a & b \\ c & d \end{pmatrix}^{-1}=\frac{1}{ad-bc}\begin{pmatrix} d & -b \\ -c & a \end{pmatrix}$
+> - **n×n matrix:**
+>	- Form the augmented matrix $[A | I_{n}]$ and put it into RREF.
+>	- If the RREF has the form $[I_{n} | B]$, then $A$ is invertible and $B=A^{−1}$.
+>	- Otherwise, $A$ is singular.
 
 ### Elementary matrix
 
@@ -383,44 +377,52 @@ In this section:
 
 ## Determinant 
 
-- **Notation:** $\det A=|A|$ 
-
-- **Cofactor Expansion**: $\det(A)=\sum^{n}_{j=1}(-1)^{i+j}a_{ij}\det(A_{{ij}})$
-	- $a_{ij}$ is the entry of the $i$th row and jth column of $A$
-	- $A_{ij}$ is the submatrix obtained by removing the $i$th row and the $j$th column of $A$
-	- Here $j$ is variable and $i$ is some consonent, but the opposite is also possible.
-	- $M_{ij}=\det(A_{{ij}})$ is $i,j$ **minor** of $A$.
-	- $C_{ij}=(-1)^{i+j}M_{ij}$ is **cofactor** of entry $a_{ij}$
- 
-- **Theorems:**
-	- (4.3.1) $\det (A)=\det(A^t)$
+- Notation: $\det{A}$, $|A|$
+- (4.3.1) $\det (A)=\det(A^t)$
+- (4.5.1) (Multiplicativity) $\det (AB)=\det (A) \det (B)$
+- (q4.3.3b) (Homogeneity) $\det (tA)=t^n \det A$
+- (by 4.5.1) $\det (AB)=\det(BA)$
+- (4.5.3) $\det(A^k)=\det{(A)^k}$
+- (4.5.4) $\det(A^{-1})=\frac{1}{\det(A)}$
+- (4.3.8) If $A$ is triangular, then $\det A=a_{11}a_{22} \cdots a_{nn}$
+- Row Operations
+	- (4.3.6) If a multiple of one row of $A$ is **added** to another row to produce a matrix $B$, then $\det B=\det A$
+	- (4.3.2) If two rows of $A$ are **interchanged** to produce $B$, then $\det B=-\det A$
+	- (4.3.3) if one row of $A$ is **multiplied** by $k$ to produce $B$, then $\det B=k \cdot \det A$ 
+		- ($\det (kA)=k^n\det A$)
+- The following statements are equvivalent:
+	- $A$ is [[#Invertibility|invertible]]
+	- (4.4.1) $\det{A}\neq0$
+- The following statements are equvivalent:
+	- $A$ is singular
+	- (4.4.1) $\det{A}=0$
+	- (q11.3.1) $\lambda=0$ is an eigenvalue of $A$
+- Zero determinant cases:
 	- (4.2.2) if $A$ has zero row/column, then $\det{A}=0$
 	- (4.3.5) if $A$ has two equal rows (or colmuns), then $\det A=0$
-	- (4.5.1) Multiplicative Property: $\det (AB)=\det (A) \det (B)$
-	- (by 4.5.1) $\det (AB)=\det (BA)$
-	- (4.5.3) $\det(A^k)=\det{(A)^k}$
-	- (4.5.4) $\det(A^{-1})=\frac{1}{\det(A)}$
-	- (4.4.1) $\det{A}\neq0 \iff A\text{ is invertible}$
-	- (q4.4.4) if the sum of each of $A$s rows is zero, then $\det{A}=0$
-	- (4.3.8) if $A_{n}=[a_{ij}]$ is a triangular matrix, then $\det A=a_{11}a_{22} \cdots a_{nn}$
-	- (10.7.3) **similar matrices** have the same determinant
-	- (q11.3.1) $\det{A}=0$, if and only if, $\lambda=0$ is eigenvalue of $A$
-	- Row Operations
-		- (4.3.6) If a multiple of one row of $A$ is **added** to another row to produce a matrix $B$, then $\det B=\det A$
-		- (4.3.2) If two rows of $A$ are **interchanged** to produce $B$, then $\det B=-\det A$
-		- (4.3.3) if one row of $A$ is **multiplied** by $k$ to produce $B$, then $\det B=k \cdot \det A$ 
-			- ($\det (kA)=k^n\det A$)
-	- (q4.3.3b) **Homogeneity:** $\det (tA)=t^n \det A$
-	- $\det A$ is equal to the product of its eigenvalues (see q11.4.7)
+	- (q4.4.4) If the sum of each row of $A$ is $0$, then $\det A=0$
 	- (q4.3.10) determinant of an odd dimension anti-symmetric matrix is zero
-	- (4.3.4) Let A, B, and C be n x n matrices that differ only in a single row, say the rth, and assume that the rth row of C can be obtained by adding corresponding entries in the rth rows of A and B. Then $\det(C) = \det(A) + \det(B)$ The same result holds for columns.
+- (4.3.4) Let $A,B,C\in\mathbf{M}_{n}$, where $A,B,C$ differ only in the $i$th row, where the $i$th row of $C$ is the sum of $A$ and $B$'s $i$th row, then $\det C=\det A+\det B$ (similar result for columns)
+- (10.7.3) [[#Similarity|Similar matrices]] have the same determinant
 
-> [!example]  Procedure: computing the detrminant
-> 
-> 1. convert $A$ into an upper triangular matrix $B$ via row operations of **switching rows**, and **adding multiplication of another row**. (but **NOT** scaling of row by scalar)
- > 	- Note: if during the row operations we find zero-row, then $\det A=0$
-> 2. let $k$ be the number of times two rows are switched
-> 3. $\det{A}=(−1)^kb_{11} · · · b_{nn}$
+> [!procedure] Computing the Detrminant
+> - **2x2 matrix:** $\begin{vmatrix} a & b \\ c & d \end{vmatrix}=ad-bc$
+> - **3x3 matrix:** $\begin{vmatrix} a & b & c \\ d & e & f \\ g & h & i \end{vmatrix}=a\begin{vmatrix} e & f \\ h & i \end{vmatrix}-b\begin{vmatrix} d & f \\ g & i \end{vmatrix}+c\begin{vmatrix} d & e \\ g & h \end{vmatrix}=a(ei-fh)-b(di-fg)+c(dh-eg)$
+> 	- See also the [Sarrus rule](https://en.wikipedia.org/wiki/Rule_of_Sarrus)
+> - $n\times n$ **matrix:**
+>	- **(Laplace) Cofactor Expansion:** $\det A=\sum^{n}_{j=1}(-1)^{i+j}a_{ij}\det(A_{{ij}})$
+>		- $i$ here is a constant, and this is called **expansion along the $i$th row**, (similarly, we can expand along the $j$th column, like $\det A=\sum^{n}_{i=1}(-1)^{i+j}a_{ij}\det(A_{{ij}})$)
+>		- $a_{ij}$ is the entry of the $i$th row and $j$th column of $A$
+>		- $A_{ij}$ is the submatrix obtained by removing the $i$th row and the $j$th column of $A$
+>		- $M_{ij}=\det(A_{{ij}})$ is $i,j$ **minor** of $A$
+>		- $C_{ij}=(-1)^{i+j}M_{ij}$ is **cofactor** of entry $a_{ij}$
+> - **Triangular matrix:** $\det A=a_{11}a_{22} \cdots a_{nn}$
+> - **Gaussian elimination:**
+>	- Transform $A$ into an upper triangular matrix $U$ by a sequence of elementary row operations, where:
+>		- Each row swap changes the sign of the determinant
+>		- Each row multiplication by $k$ multiplies the determinant by $k$
+> - **Eigenvalues:** $\det A=\lambda_1\lambda_2\cdots\lambda_n$ (see q11.4.7)
+
 
 ## Trace
 
