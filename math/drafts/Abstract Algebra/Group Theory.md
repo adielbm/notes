@@ -8,6 +8,10 @@
 	- (ii) $e ∗ a = a$ for all a ∈ G; 
 	- (iii) for every a ∈ G, there is $a' ∈ G$ with $a' ∗ a = e$
 
+##### Examples
+
+- The [[Matrices#Invertibility|general linear group]] $\text{GL}_n(\mathbb{F})$
+
 ### Abelian Group (Commutative Group)
 
 - A group $G$ is called **abelian** if it satisfies the commutative law: $x ∗ y = y ∗ x$ holds for every $x, y ∈ G$

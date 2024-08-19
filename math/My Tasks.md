@@ -18,12 +18,20 @@
 	- [ ] [[2021c-95.pdf]] - [[2021c-95-solution.pdf]]
 - 2022
 - 2023
+	- a
+		- [x] 85
+		- [ ] 89
+		- [ ] 98
+	- b
+		- [ ] 82
+		- [ ] 89
+		- [ ] 97
 - 2024
 	- [x]  [[moed 84 - 2024a-20109.pdf]] - [[solution moed 84 - 2024a-20109.pdf]]
-	- [ ]  [[moed 83 - 2024b-20109.pdf]] - [[solution moed 83 - 2024b-20109.pdf]]
-	- [ ] [[moed 81 - 2024b-20109.pdf]] - [[solution moed 81 - 2024b-20109.pdf]]
-	- [ ] [[moed 86 - 2024a-20109.pdf]] - [[solution moed 86 - 2024a-20109.pdf]]
-	- [ ] [[moed 93 - 2024a-20109.pdf]] - [[solution moed 93 - 2024a-20109.pdf]]
+	- [x]  [[moed 83 - 2024b-20109.pdf]] - [[solution moed 83 - 2024b-20109.pdf]]
+	- [x] [[moed 81 - 2024b-20109.pdf]] - [[solution moed 81 - 2024b-20109.pdf]]
+	- [x] [[moed 86 - 2024a-20109.pdf]] - [[solution moed 86 - 2024a-20109.pdf]]
+	- [x] [[moed 93 - 2024a-20109.pdf]] - [[solution moed 93 - 2024a-20109.pdf]]
 
 ## CALC-2 (July 29)
 
@@ -49,7 +57,7 @@
 	- [x] [[2023a-b.pdf]] - [[solution-2023a-b.pdf]]
 	- [x] [[2023b-a1.pdf]] - [[solution-2023b-a1.pdf]]
 - 2024
-		- [ ] [[2024a-a2.pdf]] - [[solution-2024a-a2.pdf]]
+	- [ ] [[2024a-a2.pdf]] - [[solution-2024a-a2.pdf]]
 	- [x] [[2024b-a1.pdf]] - [[solution-2024b-a1.pdf]]
 
 
@@ -150,7 +158,7 @@
 ###### I: Mechanics, Relativity, and Thermodynamics
 
 - [x] 1. The Structure of Mechanics
-- [ ] 2. Motion in Higher Dimensions
+- [x] 2. Motion in Higher Dimensions
 - [ ] 3. Newton's Laws I
 - [ ] 4. Newton's Laws II
 - [ ] 5. Law of Conservation of Energy

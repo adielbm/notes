@@ -62,10 +62,11 @@ In this section:
 
 - The following statements are equivalent:
 	- $A$ and $B$ are **row equivalent**
+	- (1.11.3) $\text{RREF}(A)=\text{RREF}(B)$
 	- There exists an invertible matrix $P$ such that $A=PB$
 	- It is possible to transform $A$ into $B$ by a sequence of elementary row operations
-	- (q7.5.12) $\text{row-space}(A)=\text{row-space}(B)$
-	- $\text{null}(A)=\text{null}(B)$
+	- (q7.5.12) $\text{Row}(A)=\text{Row}(B)$
+	- $\text{Null}(A)=\text{Null}(B)$
 	- $T_A$ and $T_B$ are the same linear transformation with respect to different bases of the codomain $\mathbb{F}^m$
 - _Row equivalence_ is an [[Binary Relation#Equivalence relation|equivalence relation]] on the set $M_{m\times n}(\mathbb{F})$
 - If $A$ and $B$ are row equivalent matrices, then: 
@@ -78,55 +79,55 @@ In this section:
 
 ### Row space
 
-- $\text{row-space}(A)=\text{Sp}(\{ \text{row}_{1}(A),\dots,\text{row}_{m}(A) \})$
+- $\text{Row}(A)=\text{Sp}(\{ \text{row}_{1}(A),\dots,\text{row}_{m}(A) \})$
 
 ### Column space
 
-- $\text{column-space}(A)=\text{Sp}(\{ \text{column}_{1}(A),\dots,\text{column}_{n}(A) \})$
+- $\text{Col}(A)=\text{Sp}(\{ \text{column}_{1}(A),\dots,\text{column}_{n}(A) \})$
 
 The following statements are equivalent:
 
-- $\mathbf{b}\in\text{column-space}(A)$
+- $\mathbf{b}\in\text{Col}(A)$
 - $A\mathbf{x}=\mathbf{b}$ is [[Linear Systems#Consistency|consistent]]
 
 ### Null space
 
-- $\text{null}(A)=\{ v \mid Av=0 \}$. (in the book it's denoted by $P(A)$ (!!!))
+- $\text{Null}(A)=\{ v \mid Av=0 \}$. (in the book it's denoted by $P(A)$ (!!!))
 
 The following statements are equivalent:
 
-- $v\in\text{null}(A)$
+- $v\in\text{Null}(A)$
 - $v$ is [[Orthogonality#Orthogonal Vector|orthogonal]] to $K$ (the rows of $A$)
 
 ### Left null space
 
-- $\text{null}(A^t)$
+- $\text{Null}(A^t)$
 
 ### Theorems
 
-- $\text{null}(A),\,\text{row-space}(A)\subseteq \mathbb{F}^n$
-- $\text{null}(A^t),\,\text{column-space}(A)\subseteq \mathbb{F}^m$
+- $\text{Null}(A),\,\text{Row}(A)\subseteq \mathbb{F}^n$
+- $\text{Null}(A^t),\,\text{Col}(A)\subseteq \mathbb{F}^m$
 
-- $\text{row-space}(A)=\text{column-space}(A^t)$
-- $\text{column-space}(A)=\text{row-space}(A^t)$
-- $\text{row-space}(A)=\text{row-space}(\text{REF}(A))$
-- $\text{row-space}(A+B)\subseteq\text{row-space}(A)+\text{row-space}(B)$
-- (9.8.7a) $\text{column-spcae}(BA) \subseteq \text{column-spcae}(B)$
-- (9.8.7b) $\text{null}(A) \subseteq \text{null}(BA)$
+- $\text{Row}(A)=\text{Col}(A^t)$
+- $\text{Col}(A)=\text{Row}(A^t)$
+- $\text{Row}(A)=\text{Row}(\text{REF}(A))$
+- $\text{Row}(A+B)\subseteq\text{Row}(A)+\text{Row}(B)$
+- (9.8.7a) $\text{Col}(BA) \subseteq \text{Col}(B)$
+- (9.8.7b) $\text{Null}(A) \subseteq \text{Null}(BA)$
 - #todo
-	- $\text{null}(A)=\text{null}(A^\top A)$
-	- $\text{row-space}(A)=\text{row-space}(A^\top A)$
-	- $\text{column-space}(A)=\text{column-space}(A A^\top)$
+	- $\text{Null}(A)=\text{Null}(A^\top A)$
+	- $\text{Row}(A)=\text{Row}(A^\top A)$
+	- $\text{Col}(A)=\text{Col}(A A^\top)$
 
 ### Bases for the Fundamental Spaces
 
 
-| Subspace                   | Dimension        | Bases                                                                                                                      |
-| -------------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| $\text{row-space}({A})$    | $\text{rank}(A)$ | <li>The non-zero rows of $\text{REF}(A)$</li><li>The columns in $A^t$, s.t. in $\text{RREF}(A^t)$ are contain a pivot</li> |
-| $\text{column-space}({A})$ | $\text{rank}(A)$ | <li>The non-zero rows of $\text{REF}(A^t)$</li><li>The columns in $A$, s.t. in $\text{RREF}(A)$ are contain a pivot</li>   |
-| $\text{null}{(A)}$         | $n-\text{rank}(A)$ | <li>vectors that span the solution space of $(\text{RREF}(A))\mathbf{x}=\mathbf{0}$</li>                                 |
-| $\text{null}{(A^t)}$       | $m-\text{rank}(A)$ | <li>vectors that span the solution space of $(\text{RREF}(A^t))\mathbf{x}=\mathbf{0}$</li>                               |
+| Subspace           | Dimension          | Bases                                                                                                                      |
+| ------------------ | ------------------ | -------------------------------------------------------------------------------------------------------------------------- |
+| $\text{Row}({A})$  | $\text{rank}(A)$   | <li>The non-zero rows of $\text{REF}(A)$</li><li>The columns in $A^t$, s.t. in $\text{RREF}(A^t)$ are contain a pivot</li> |
+| $\text{Col}({A})$  | $\text{rank}(A)$   | <li>The non-zero rows of $\text{REF}(A^t)$</li><li>The columns in $A$, s.t. in $\text{RREF}(A)$ are contain a pivot</li>   |
+| $\text{Null}(A)$   | $n-\text{rank}(A)$ | <li>vectors that span the solution space of $(\text{RREF}(A))\mathbf{x}=\mathbf{0}$</li>                                   |
+| $\text{Null}(A^t)$ | $m-\text{rank}(A)$ | <li>vectors that span the solution space of $(\text{RREF}(A^t))\mathbf{x}=\mathbf{0}$</li>                                 |
 
 
 
@@ -139,8 +140,8 @@ The following statements are equivalent:
 	- $\rho{(A)}$ (notation used in the course)
 	- The number of linearly independent rows
 	- The number of linearly independent columns
-	- $\dim(\text{row-space(A)})$
-	- $\dim(\text{column-space(A)})$
+	- $\dim(\text{Row(A)})$
+	- $\dim(\text{Col}(A))$
 	- $\dim(\text{Im}(T_{A}))$
 	- $n-\text{nullity}{(A)}$
 	- The number of the non-zero rows of $\text{REF}(A)$
@@ -149,7 +150,7 @@ The following statements are equivalent:
 
 ### Nullity 
 
-- (8.6.1) $\mathrm{nullity}(A)=\dim{\mathrm{(null(A))}}$
+- (8.6.1) $\mathrm{nullity}(A)=\dim(\text{Null}(A))$
 
 ### Theorems
 
@@ -161,7 +162,7 @@ The following statements are equivalent:
 - see also [[#Square Matrices#Rank|rank of square matrix]] and of [[#Invertibility#Properties|invariable]]
 - Row equivalent matrices have the same rank
 -  $\rho(A+B)\leq \rho(A)+\rho(B)$ #todo
-- (8.3.4a+8.6.1) $\text{null}(AB) \subseteq \text{null}(B)\implies \rho(B)\leq \rho(AB)$
+- (8.3.4a+8.6.1) $\text{Null}(AB) \subseteq \text{Null}(B)\implies \rho(B)\leq \rho(AB)$
 - $0\in{K}\implies K$ is linearly dependent
 
 ### Full Rank
@@ -182,10 +183,10 @@ The following statements are equivalent:
 	- $\text{rank}(A) = n$
 	- The columns of $A$ are linearly independent
 	- $T_A$ is [[Linear Transformations#Injective (One-to-One)|injective]] (one-to-one, monomorphism)
-	- $\text{null}(A) = \{0\}$
+	- $\text{Null}(A) = \{0\}$
 	- $Ax=0\implies x=0$
 	- $\text{nullity}(A)=0$
-	- $\text{row-space}(A) = \mathbb{F}^n$
+	- $\text{Row}(A) = \mathbb{F}^n$
 	- $\text{Sp(K)} = \mathbb{F}^n$ (i.e. $K$ **spans** $\mathbb{F}^n$)
 	- The matrix $A^T A$ is invertible
 	- For every $\mathbf{b} \in \mathbb{F}^m$, the system $A\mathbf{x} = \mathbf{b}$ has at most one solution
@@ -204,7 +205,7 @@ The following statements are equivalent:
 	- $A^T$ has [[#Full Column Rank|full column rank]]
 	- For every $\mathbf{b} \in \mathbb{F}^m$, the system $A\mathbf{x} = \mathbf{b}$ is consistent
 	- Every $\mathbf{b}$ in $\mathbb{F}^m$ is a linear combination of the columns of $A$
-	- $\text{column-space}(A) = \mathbb{F}^m$ (i.e. $A$'s columns span $\mathbb{F}^m$)
+	- $\text{Col}(A) = \mathbb{F}^m$ (i.e. $A$'s columns span $\mathbb{F}^m$)
 	- $A$ has a pivot position in every row
 	- The matrix $AA^T$ is invertible
 	- $A$ is **right-invertible** (There exists a matrix $B_{n\times m}$ such that $AB=I_{m}$)
@@ -237,10 +238,10 @@ The following statements are equivalent:
 	- $\text{rank}(A) < \min{\{ m,n \}}$
 	- The columns and rows of $A$ are linearly dependent
 	- $T_A$ is neither [[Linear Transformations#Injective (One-to-One)|injective]] nor [[Linear Transformations#Surjective (Onto)|surjective]]
-	- $\text{null}(A) \neq \{0\}$
+	- $\text{Null}(A) \neq \{0\}$
 	- $\text{nullity}(A) \neq 0$
-	- $\text{row-space}(A) \neq \mathbb{F}^n$
-	- $\text{column-space}(A) \neq \mathbb{F}^m$
+	- $\text{Row}(A) \neq \mathbb{F}^n$
+	- $\text{Col}(A) \neq \mathbb{F}^m$
 	- $A^T A$ is not invertible
 	- There exists a $\mathbf{b} \in \mathbb{F}^m$ such that the system $A\mathbf{x} = \mathbf{b}$ has more than one solution
 	- $A$ is neither **left-invertible** nor **right-invertible**
@@ -254,10 +255,10 @@ The following statements are equivalent:
 	- $\text{rank}(A^T) = 0$
 	- $A$ is the zero (null) matrix (of order $m \times n$)
 	- $A = 0$
-	- $\text{null}(A) = \mathbb{F}^n$
+	- $\text{Null}(A) = \mathbb{F}^n$
 	- $\text{nullity}(A) = n$
-	- $\text{row-space}(A) = \{0\}$
-	- $\text{column-space}(A) = \{0\}$
+	- $\text{Row}(A) = \{0\}$
+	- $\text{Col}(A) = \{0\}$
 	- $T_A: \mathbb{F}^n \to \mathbb{F}^m$ is the zero transformation
 
 
@@ -285,7 +286,7 @@ See [[Linear Transformations#Transformation matrix]]
 ## Theorems
 
 - #todo If $A$ is $m\times n$ matrix, then there exist invertible matrices $P$ and $Q$ such that $PAQ$ has the first $\text{rank}(A)$ diagonal entries equal to $1$ and the remaining entries equal to $0$ 
-- $AB=0\iff \text{column-space}(B)\subseteq{\text{null}(A)}$
+- $AB=0\iff \text{Col}(B)\subseteq{\text{Null}(A)}$
 
 # Square Matrices
 
@@ -298,13 +299,18 @@ In this section:
 ## Theorems
 
 
-- $\text{row-space}(A)=\text{column-space}(A)\implies \text{column-space}(A)\oplus\text{null}(A)=\mathbb{R}^n$ (by 9.3.7, 12.3.1, 12.3.2a, e2023a85q1a)
+- $\text{Row}(A)=\text{Col}(A)\implies \text{Col}(A)\oplus\text{Null}(A)=\mathbb{R}^n$ (by 9.3.7, 12.3.1, 12.3.2a, e2023a85q1a)
+- $\text{Null}(A)=\text{Null}(A^3)\implies \text{Null}(A)=\text{Null}(A^2)$ (e2024a83q1)
+- $A^2=0\iff \text{Col}(A)\subseteq\text{Null}(A)$ (see [[#Nilpotent matrix]])
+- $\text{rank}(A)=\text{rank}(A^2)\implies \text{Null}(A)=\text{Null}(A^2)$ (see [[Exercises]])
+
 
 
 ## Invertibility 
 
-- Theorem 3.10.6: Let $A$ be a $n$-ordered square matrix over a field $F$. The following statements are equivalent:
+- (3.10.6) The following statements are equivalent:
 	- $A$ is an **invertible** matrix
+	- $A\in\text{GL}_n(\mathbb{F})$
 	- $A$ can be expressed as a finite product of elementary matrices.
 	- There exists a $B$ such that $BA=I$
 	- There exists a $B$ such that $AB=I$
@@ -322,13 +328,17 @@ In this section:
 	- (4.4.1, q10.7.7 for l.t.) The determinant of A is non-zero: $\det{A}\neq0$
 	- (4.4.1, and q11.3.1) The number $0$ **is not an eigenvalue** of $A$. 
 	- (q8.5.8b) $A$ has a full rank: $\rho(A)=n$
-	- (10.5.1, and 9.6.2) $\text{null}(A)=\{ 0 \}$
-	- $(\text{null}(A))^{\perp}=F^n$
-	- $\dim{(\text{null}(A))=0}$
+	- (10.5.1, and 9.6.2) $\text{Null}(A)=\{ 0 \}$
+	- $(\text{Null}(A))^{\perp}=F^n$
+	- $\dim{(\text{Null}(A))=0}$
 	- The linear transformation mapping $\mathbf{x}$ to $A\mathbf{x}$ is **surjective**; that is, the equation $A\mathbf{x}=\mathbf{b}$ has at least one solution for each $\mathbf{b}$ in $F^n$.
 	- The linear transformation mapping $\mathbf{x}$ to $A\mathbf{x}$ is **injective**; that is, the equation $A\mathbf{x}=\mathbf{b}$ has at most one solution for each $\mathbf{b}$ in $F^n$.
 	- The linear transformation mapping $\mathbf{x}$ to $A\mathbf{x}$ is **bijective**; that is, the equation $A\mathbf{x}=\mathbf{b}$ has exactly one solution for each $\mathbf{b}$ in $F^n$. ($A\mathbf{x}=\mathbf{b}\implies \mathbf{x}=A^{-1}\mathbf{b}$
 	- $A\mathbf{x}=\mathbf{0}\implies \mathbf{x}=\mathbf{0}$
+
+- The **general linear group** of order $n$ over $\mathbb{F}$, denoted by $\text{GL}_n(\mathbb{F})$, is the set of all invertible $n\times n$ matrices over a field $\mathbb{F}$, together with the operation of matrix multiplication.
+	- $\text{GL}_n(\mathbb{F})$ is a [[Group Theory#Group|group]] under matrix multiplication
+- The **special linear group** of order $n$ over $\mathbb{F}$, denoted by $\text{SL}_n(\mathbb{F})$, is the subset of $\text{GL}_n(\mathbb{F})$ consisting of all matrices with determinant $1$
 
 #### Properties 
 
@@ -371,7 +381,7 @@ In this section:
 - rank of **square matrix:** let $A,B$ are square matrices of order $n$, then:
 	- (q8.5.8a) $\rho(A)=n \iff \det(A)\neq 0$  
 	- (q10.5.3) Sylvester’s inequality $\rho(A)+\rho(B)\leq \rho(AB)+n$
-	- $\rho(B)-\dim(\text{null}(A))\leq \rho(AB)$. (from Sylvester’s inequality and  Rank–nullity theorem)
+	- $\rho(B)-\dim(\text{Null}(A))\leq \rho(AB)$. (from Sylvester’s inequality and  Rank–nullity theorem)
 	- $AB=0\implies \rho(A)+\rho(B)\leq n$
 	- for invetible see [[#Invertibility#Properties]]
 
@@ -453,7 +463,7 @@ Equivalent definitions of **eigenvalue**.
 	- (in such case, $v$ is called an **eigenvector** of $A$ that related to the eigenvalue $\lambda$) 
 - $(A-\lambda I)$ is singular
 - $\text{rank}(A-\lambda I)<n$
-- $(\lambda I-A)v=0$ has nontrivial solutions, i.e. $\text{null}(\lambda I-A)\neq \{ 0 \}$
+- $(\lambda I-A)v=0$ has nontrivial solutions, i.e. $\text{Null}(\lambda I-A)\neq \{ 0 \}$
 - (11.4.1) The **characteristic equation** $\det(\lambda I-A)=0$
 - $\lambda$ is a root of the characteristic equation $\det(xI-A)=0$
 -  $\lambda$ is an **eigenvalue** of $T_{A}$
@@ -489,7 +499,7 @@ Definitions of the **eigenspace of** $A$ **associated with its eigenvalue** $\la
 - $\{ \mathbf{v}\mid(A-\lambda I) \mathbf{v}= \mathbf{0} \}$
 - $\{ \mathbf{v}\mid A\mathbf{v}=\lambda \mathbf{v} \}$
 - $\{ \text{eigenvectors corresponding to } \lambda \}\cup \{ \mathbf{0} \}$
-- $\text{null}(\lambda I-A)$
+- $\text{Null}(\lambda I-A)$
 
 ### Algebraic & geometric multiplicity
 
@@ -499,7 +509,7 @@ Definitions of the **eigenspace of** $A$ **associated with its eigenvalue** $\la
 		- the highest power of $(x−λ)$ that divides the characteristic polynomial of $A$ 
 	- (q11.5.2) The **geometric multiplicity** of $\lambda$, is: 
 		- the dimension of the eigenspace corresponding to $\lambda$, 
-		- $\dim{(\text{null}(\lambda I-A))}=n-\text{rank}(\lambda I-A)$     
+		- $\dim{(\text{Null}(\lambda I-A))}=n-\text{rank}(\lambda I-A)$     
 	- #todo if $A$ is diagonalizable, then the geometric and algebraic multiplicity of $\lambda$ is the number that $\lambda$ appears in the diagonalization of $A$
 	- (11.5.3, q11.5.3)  $1\leq$ the **geometric multiplicity** $\leq$ the **algebraic multiplicity**
 
@@ -541,7 +551,7 @@ Definitions of **similarity**. The following statements are **equivalent**:
 	- (11.3.3) $A$ and $B$ have the same _eigenvalues_
 	- $A$ and $B$ have the same _algebraic multiplicities_ of eigenvalues #todo 
 	- (11.4.3) $A$ and $B$ have the same _characteristic polynomial_
-	- $\dim(\text{null}(A))=\dim(\text{null}(B))$
+	- $\dim(\text{Null}(A))=\dim(\text{Null}(B))$
 	- $\text{rank}(A)=\text{rank}(B)$
 
 ## Triangular matrix
@@ -646,7 +656,7 @@ Diagonal equivalent definitions.
 ## Nilpotent matrix
 
 - $A$ is called a **nilpotent matrix** if $A^k=0$ for some natural $k$. The smallest such $k$ is called the **index of nilpotency** of $A$.
-- $A^2=0\implies\text{column-space}(A)\subseteq\text{null}(A)$
+- $A^2=0\implies\text{Col}(A)\subseteq\text{Null}(A)$
 
 ## Scalar matrix
 
