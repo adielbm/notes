@@ -10,10 +10,12 @@ $$P = \frac{F}{A}$$
 
 > #todo https://physics.stackexchange.com/questions/429998/if-force-is-a-vector-then-why-is-pressure-a-scalar
 
-## Units of Pressure
+## Units
 
-- **Pascal** (Pa) is the SI unit of pressure, defined as $1 \, \text{Pa} = 1 \, \text{N/m}^2$
-- Other units include: Atmosphere (atm), Torr, Bar.
+- (**Pascal**) ${\displaystyle {\rm {1~Pa=1~{\frac {N}{m^{2}}}=1~{\frac {kg}{m{\cdot }s^{2}}}=1~{\frac {J}{m^{3}}}}}}$
+- (**Atmosphere**) $1 \, \text{atm} = 101325 \, \text{Pa}$ (roughly equivalent to the mean sea-level **atmospheric pressure** on Earth)
+- $1 \, \text{Torr} = 133.322 \, \text{Pa}$
+- $1 \, \text{Bar} = 10^5 \, \text{Pa}$
 
 # Pascal's Law
 

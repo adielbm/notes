@@ -118,6 +118,8 @@ The following statements are equivalent:
 	- $\text{Null}(A)=\text{Null}(A^\top A)$
 	- $\text{Row}(A)=\text{Row}(A^\top A)$
 	- $\text{Col}(A)=\text{Col}(A A^\top)$
+- $\text{null}(A)=\{ 0 \}\implies \text{null}(AB)\subseteq \text{null}(B)$
+
 
 ### Bases for the Fundamental Spaces
 
@@ -392,7 +394,7 @@ In this section:
 - (4.5.1) (Multiplicativity) $\det (AB)=\det (A) \det (B)$
 - (q4.3.3b) (Homogeneity) $\det (tA)=t^n \det A$
 - (by 4.5.1) $\det (AB)=\det(BA)$
-- (4.5.3) $\det(A^k)=\det{(A)^k}$
+- (4.5.3) $\det(A^k)=(\det{A})^k$
 - (4.5.4) $\det(A^{-1})=\frac{1}{\det(A)}$
 - (4.3.8) If $A$ is triangular, then $\det A=a_{11}a_{22} \cdots a_{nn}$
 - Row Operations
@@ -552,7 +554,7 @@ Definitions of **similarity**. The following statements are **equivalent**:
 	- $A$ and $B$ have the same _algebraic multiplicities_ of eigenvalues #todo 
 	- (11.4.3) $A$ and $B$ have the same _characteristic polynomial_
 	- $\dim(\text{Null}(A))=\dim(\text{Null}(B))$
-	- $\text{rank}(A)=\text{rank}(B)$
+	- (q10.7.2) $\text{rank}(A)=\text{rank}(B)$
 
 ## Triangular matrix
 

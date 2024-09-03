@@ -20,18 +20,17 @@
 - 2023
 	- a
 		- [x] 85
-		- [ ] 89
-		- [ ] 98
+		- [x] 89
 	- b
-		- [ ] 82
-		- [ ] 89
-		- [ ] 97
+		- [x] 82
+		- [x] 89
+		- [x] 97
 - 2024
-	- [x]  [[moed 84 - 2024a-20109.pdf]] - [[solution moed 84 - 2024a-20109.pdf]]
-	- [x]  [[moed 83 - 2024b-20109.pdf]] - [[solution moed 83 - 2024b-20109.pdf]]
-	- [x] [[moed 81 - 2024b-20109.pdf]] - [[solution moed 81 - 2024b-20109.pdf]]
-	- [x] [[moed 86 - 2024a-20109.pdf]] - [[solution moed 86 - 2024a-20109.pdf]]
-	- [x] [[moed 93 - 2024a-20109.pdf]] - [[solution moed 93 - 2024a-20109.pdf]]
+	- [x] [[moed 84 - 2024a-20109.pdf]] - [[solution moed 84 - 2024a-20109.pdf]]
+	- [x] [[moed 83 - 2024b-20109.pdf]] - [[solution moed 83 - 2024b-20109.pdf]]
+	- [ ] [[moed 81 - 2024b-20109.pdf]] - [[solution moed 81 - 2024b-20109.pdf]]
+	- [ ] [[moed 86 - 2024a-20109.pdf]] - [[solution moed 86 - 2024a-20109.pdf]]
+	- [ ] [[moed 93 - 2024a-20109.pdf]] - [[solution moed 93 - 2024a-20109.pdf]]
 
 ## CALC-2 (July 29)
 
@@ -159,7 +158,7 @@
 
 - [x] 1. The Structure of Mechanics
 - [x] 2. Motion in Higher Dimensions
-- [ ] 3. Newton's Laws I
+- [x] 3. Newton's Laws I
 - [ ] 4. Newton's Laws II
 - [ ] 5. Law of Conservation of Energy
 - [ ] 6. Conservation of Energy in d=2

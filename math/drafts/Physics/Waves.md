@@ -1,0 +1,4 @@
+- Wave length $\lambda = \frac{v}{f}$
+    - $v$ is the speed of the wave
+    - $f$ is the frequency of the wave
+    - $\lambda$ is the wave length

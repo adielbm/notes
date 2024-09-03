@@ -16,7 +16,8 @@ A **vector space** over a [[Field|field]] $F$ is a non-empty set $V$ together wi
 |                           | Compatibility with field multiplication | $a(bv) = (ab)v$             |
 |                           | Identity element                        |                             |
 
->it has to add closure property (for vector addition and scalar mul.) depending on definition of binary operation
+> It has to add closure property (for vector addition and scalar mul.) depending on definition of binary operation, 
+
 
 > An equivalent definition of a vector space can be given: the first four axioms (related to vector addition) say that a vector space is an [[Group Theory#Abelian Group (Commutative Group)|abelian group]] under addition, and the four remaining axioms (related to the scalar multiplication) say that this operation defines a ring homomorphism from the field F into the endomorphism ring of this group
 
@@ -111,7 +112,7 @@ In this section:
 	- (8.3.7) $V=U+W$ and $\dim{V}=\dim{U}+\dim{W}$
 	- (7.7.1) $\forall{v\in V},\exists{!u\in U,w\in W}:v=u+w$
 
-
+	
 ## Dimension
 
 - Given $U$ and $W$ are subspaces of $V$:

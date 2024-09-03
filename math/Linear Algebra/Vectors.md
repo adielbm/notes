@@ -1,3 +1,4 @@
+
 > [!TIP]
 > - Vector Space Operations:
 >	- _Scalar Multiplication_: ($\textit{scalar}\cdot\mathbf{vector}=\mathbf{vector}$)
@@ -11,7 +12,12 @@
 
 **Definition:**
 - **Coordinate definition:** $\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\sum _{i=1}^{n}a_{i}b_{i}=a_{1}b_{1}+a_{2}b_{2}+\cdots +a_{n}b_{n}}$
-- **Geometric definition:** $\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\left\|\mathbf {a} \right\|\left\|\mathbf {b} \right\|\cos \theta }$
+- **Geometric definition:** $\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\|\mathbf {a} \|\|\mathbf {b} \|\cos \theta }$
+- **Matrix definition:** $\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\mathbf {a} ^{T}\mathbf {b} }$
+- **Projection definition:** $\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\|\mathbf {a} \|\|\mathbf {b} \|\cos \theta }$
+	- Where the projection of $\textbf{a}$ onto $\textbf{b}$ is $\displaystyle  {\displaystyle \operatorname {proj} _{\mathbf {b} }(\mathbf {a} )={\frac {\mathbf {a} \cdot \mathbf {b} }{\|\mathbf {b} \|^{2}}}\mathbf {b} }$
+	- And the length of $\textbf{b}$ is $\displaystyle  {\displaystyle \|\mathbf {b} \|}$
+	- So, $\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\|\mathbf {a} \|\|\mathbf {b} \|\cos \theta }$
 
 **Properties:** (12.1.2)
 - Symmetry $\textbf{a}\cdot\textbf{b}=\textbf{b}\cdot\textbf{a}$
@@ -29,7 +35,7 @@
 
 ## Norm of a Vector
 
-- (d12.1.3) - $\| \textbf{a} \|:=\sqrt{\textbf{a} \cdot \textbf{a}}=\sqrt{ \sum_{i=1}^{n}a_{i}^2 }$
+- (d12.1.3) The **norm** (especially the **Euclidean norm**) of a vector $\textbf{x}= (x_1,x_2,...,x_n)$ is defined as $$\| \textbf{x} \|:=\sqrt{ \sum_{i=1}^{n}x_{i}^2 }=\sqrt{\textbf{x} \cdot \textbf{x}}$$
 - (q12.1.4) $\|\textbf{a} \|=0 \iff \textbf{a}=\textbf{0}$
 - Homogeneity (q12.1.5) $\|t \textbf{a} \|=|t|\cdot\| \textbf{a} \|$
 - Cauchy–Schwarz inequality (12.1.4) $|\textbf{a}\cdot\textbf{b}| \leq  \| \textbf{a} \| \cdot{\| \textbf{b} \|}$
@@ -37,6 +43,7 @@
 - (q12.1.8) Triangle inequality for vectors $\| \textbf{a} + \textbf{b} \| \leq \| \textbf{a} \| +{\| \textbf{b} \|}$
 - Parallelogram Equation for Vectors $\|\textbf{u}+\textbf{v} \|^2+\|\textbf{u}-\textbf{v} \|^2=2(\|\textbf{u}\|^2+\|\textbf{v}\|^2)$
 
+> Here, we defined the norm as the Euclidean norm (aka: 2-norm or L2-norm, denoted $\| \mathbf{x} \|_2$) but there are other norms like the 1-norm, $\infty$-norm, etc.
 
 # Orthogonality  
 

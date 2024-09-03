@@ -4,7 +4,8 @@ $$1, 1, 2, 5, 15, 52, 203, 877, 4140, ...$$
 
 >For the number of different equivalence relations with **precisely** $k$ equivalence classes, see [[Stirling numbers#Second kind (Stirling partition number)]]
 
-#### Bell numbers computed using recursive equation:
+
+#### Bell numbers computed using recursive formula
 $${B_{n + 1}} = \sum\limits_{k = 0}^n {\left( {\begin{array}{*{20}{c}}
 n\\
 k

@@ -9,11 +9,11 @@
 
 ## Atomic Particles
 
-| Subatomic particle | Symbol | Charge | Mass (u)                       | Location in atom |
-| ------------------ | ------ | ------ | ------------------------------ | ---------------- |
-| Proton             | $p^+$  | $+1$   | $1.007276466812$               | Nucleus          |
-| Neutron            | $n^0$  | $0$    | $1.00866491588$                | Nucleus          |
-| Electron           | $e^-$  | $-1$   | $5.48579909070 \times 10^{-4}$ | Electron cloud   |
+| Subatomic particle | Symbol | [[Electrical Circuits#Electric charge\|Charge]] | Mass (u)                       | Location in atom |
+| ------------------ | ------ | ----------------------------------------------- | ------------------------------ | ---------------- |
+| Proton             | $p^+$  | $+1$                                            | $1.007276466812$               | Nucleus          |
+| Neutron            | $n^0$  | $0$                                             | $1.00866491588$                | Nucleus          |
+| Electron           | $e^-$  | $-1$                                            | $5.48579909070 \times 10^{-4}$ | Electron cloud   |
 
 
 ## Isotopes
