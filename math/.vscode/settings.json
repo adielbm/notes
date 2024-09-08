@@ -1,4 +1,11 @@
 {
+    "terminal.integrated.suggest.enabled": false,
+    "editor.accessibilitySupport": "off",
+    "terminal.integrated.suggest.builtinCompletions": {
+        "pwshCode": true,
+        "pwshGit": true
+    },
+    "terminal.integrated.shellIntegration.enabled": true
     // "workbench.colorTheme": "",
 
 }

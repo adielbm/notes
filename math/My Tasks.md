@@ -1,38 +1,50 @@
 # Exams
 
-## Linear Algebra 1 (Sep. 2)
+## CALC-2 (September 29, כ"ג אלול)
 
-- Wrath of Math
-	- Linear Algebra
-		- https://www.youtube.com/playlist?list=PLztBpqftvzxWT5z53AxSqkSaWDhAeToDG
-	- Linear Algebra Exercises
-		- https://youtube.com/playlist?list=PLztBpqftvzxVmiiFW7KtPwBpnHNkTVeJc
+#### 2021
 
-- 2021
-	- [ ] [[2021a-75.pdf]] - [[2021a-75-solution.pdf]]
-	- [ ] [[2021a-89.pdf]] - [[2021a-89-solution.pdf]]
-	- [ ] [[2021b-52.pdf]] - [[2021b-52-solution.pdf]]
-	- [ ] [[2021b-62.pdf]] - [[2021b-62-solution.pdf]]
-	- [ ] [[2021b-92.pdf]] - [[2021b-92-solution.pdf]]
-	- [ ] [[2021c-84.pdf]] - [[2021c-84-solution.pdf]]
-	- [ ] [[2021c-95.pdf]] - [[2021c-95-solution.pdf]]
-- 2022
-- 2023
-	- a
-		- [x] 85
-		- [x] 89
-	- b
-		- [x] 82
-		- [x] 89
-		- [x] 97
-- 2024
-	- [x] [[moed 84 - 2024a-20109.pdf]] - [[solution moed 84 - 2024a-20109.pdf]]
-	- [x] [[moed 83 - 2024b-20109.pdf]] - [[solution moed 83 - 2024b-20109.pdf]]
-	- [ ] [[moed 81 - 2024b-20109.pdf]] - [[solution moed 81 - 2024b-20109.pdf]]
-	- [ ] [[moed 86 - 2024a-20109.pdf]] - [[solution moed 86 - 2024a-20109.pdf]]
-	- [ ] [[moed 93 - 2024a-20109.pdf]] - [[solution moed 93 - 2024a-20109.pdf]]
+- 2021a
+	- [ ] [[2021a-a1.pdf]] - [[2021a-a1-sol.pdf]]
+	- [ ] [[2021a-a2.pdf]] - [[2021a-a2-sol.pdf]]
+	- [ ] [[2021a-b.pdf]] - [[2021a-b-sol.pdf]]
+- 2021b
+	- [ ] [[2021b-a1.pdf]] - [[2021b-a1-sol.pdf]]
+	- [ ] [[2021b-a2.pdf]] - [[2021b-a2-sol.pdf]]
+	- [ ] [[2021b-b.pdf]] - [[2021b-b-sol.pdf]]
+#### 2022
 
-## CALC-2 (July 29)
+- 2022a
+	- [ ] [[2022a-a2.pdf]] - [[solution-2022a-a2.pdf]]
+	- [ ] [[2022a-a1.pdf]] - [[solution-2022a-a1.pdf]]
+	- [ ] [[2022a-b.pdf]] - [[solution-2022a-b.pdf]]
+- 2022b
+	- [ ] [[2022b-a1.pdf]] - [[solution-2022b-a1.pdf]]
+	- [ ] [[2022b-a2.pdf]] - [[solution-2022b-a2 (1).pdf]]
+	- [ ] [[2022b-b.pdf]] - [[solution-2022b-b.pdf]]
+
+#### 2023
+
+- 2023a
+	- [ ] [[2023a-a1.pdf]] - [[solution-2023a-a1.pdf]]
+	- [ ] [[2023a-a2.pdf]] - [[solution-2023a-a2.pdf]]
+	- [ ] [[2023a-b.pdf]] - [[solution-2023a-b.pdf]]
+- 2023b
+	- [ ] [[2023b-a1.pdf]] - [[solution-2023b-a1.pdf]]
+	- [ ] [[2023b-a2.pdf]] - [[solution-2023b-a2.pdf]]
+	- [ ] [[2023b-b.pdf]] - [[solution-2023b-a2.pdf]]
+
+#### 2024
+
+- 2024a
+	- [ ] [[2024a-a1.pdf]] - [[solution-2024a-a1.pdf]]
+	- [ ] [[FILES/Exams/CALC-2/2024/2024a/2024a-a2.pdf|2024a-a2]] - [[FILES/Exams/CALC-2/2024/2024a/solution-2024a-a2.pdf|solution-2024a-a2]]
+	- [ ] [[2024a-b.pdf]] - [[solution-2024a-b.pdf]]
+- 2024b
+	- [ ] [[FILES/Exams/CALC-2/2024/2024b/2024b-a1.pdf|2024b-a1]] - [[FILES/Exams/CALC-2/2024/2024b/solution-2024b-a1.pdf|solution-2024b-a1]]
+	- [ ] [[2024b-a2.pdf]] - [[solution-2024b-a2.pdf]]
+
+#### 2018
 
 - 2018a
 	- [ ] [[2018a-a1.pdf]] - [[sol-2018a-a1.pdf]]
@@ -42,25 +54,6 @@
 	- [ ] [[2018b-a1.pdf]] - [[sol-2018b-a1.pdf]]
 	- [ ] [[2018b-a2.pdf]] - [[sol-2018b-a2.pdf]]
 	- [ ] [[2018b-b.pdf]] - [[sol-2018b-b.pdf]]
-- 2022a
-	- [x] [[2022a-a2.pdf]] - [[solution-2022a-a2.pdf]]
-	- [x] [[2022a-a1.pdf]] - [[solution-2022a-a1.pdf]]
-	- [x] [[2022a-b.pdf]] - [[solution-2022a-b.pdf]]
-- 2022b
-	- [x] [[2022b-a1.pdf]] - [[solution-2022b-a1.pdf]]
-	- [x] [[2022b-a2.pdf]] - [[solution-2022b-a2 (1).pdf]]
-	- [x] [[2022b-b.pdf]] - [[solution-2022b-b.pdf]]
-- 2023
-	- [x] [[2023a-a1.pdf]] - [[solution-2023a-a1.pdf]]
-	- [x] [[2023a-a2.pdf]] - [[solution-2023a-a2.pdf]]
-	- [x] [[2023a-b.pdf]] - [[solution-2023a-b.pdf]]
-	- [x] [[2023b-a1.pdf]] - [[solution-2023b-a1.pdf]]
-- 2024
-	- [ ] [[2024a-a2.pdf]] - [[solution-2024a-a2.pdf]]
-	- [x] [[2024b-a1.pdf]] - [[solution-2024b-a1.pdf]]
-
-
-
 
 - [ ] alon l - infi 2 - https://www.youtube.com/watch?v=2KgGERhRZLc&list=PL7UMPWfWjqscR6cA6YKzZro5yS6RUhjCA&index=5
 
@@ -99,13 +92,43 @@
 	- [ ] 100
 
 
-- [x] power series of $(1+x)^{\alpha}$ 📙(6.2.4)
-- [ ] end-of-chapter 6 exercises
 
-- [x] **29/07/2024** - registration sent wait to response. (כג תמוז)
-- ~~05/09/2024~~
-- ~~26/09/24 - Elul כג~~
-- ~~25/11/24 - Cheshvan כד~~
+```
+
+## Linear Algebra 1 (Sep. 2)
+
+- Wrath of Math
+	- Linear Algebra
+		- https://www.youtube.com/playlist?list=PLztBpqftvzxWT5z53AxSqkSaWDhAeToDG
+	- Linear Algebra Exercises
+		- https://youtube.com/playlist?list=PLztBpqftvzxVmiiFW7KtPwBpnHNkTVeJc
+
+- 2021
+	- [ ] [[2021a-75.pdf]] - [[2021a-75-solution.pdf]]
+	- [ ] [[2021a-89.pdf]] - [[2021a-89-solution.pdf]]
+	- [ ] [[2021b-52.pdf]] - [[2021b-52-solution.pdf]]
+	- [ ] [[2021b-62.pdf]] - [[2021b-62-solution.pdf]]
+	- [ ] [[2021b-92.pdf]] - [[2021b-92-solution.pdf]]
+	- [ ] [[2021c-84.pdf]] - [[2021c-84-solution.pdf]]
+	- [ ] [[2021c-95.pdf]] - [[2021c-95-solution.pdf]]
+- 2022
+- 2023
+	- a
+		- [x] 85
+		- [x] 89
+	- b
+		- [x] 82
+		- [x] 89
+		- [x] 97
+- 2024
+	- [x] [[moed 84 - 2024a-20109.pdf]] - [[solution moed 84 - 2024a-20109.pdf]]
+	- [x] [[moed 83 - 2024b-20109.pdf]] - [[solution moed 83 - 2024b-20109.pdf]]
+	- [ ] [[moed 81 - 2024b-20109.pdf]] - [[solution moed 81 - 2024b-20109.pdf]]
+	- [ ] [[moed 86 - 2024a-20109.pdf]] - [[solution moed 86 - 2024a-20109.pdf]]
+	- [ ] [[moed 93 - 2024a-20109.pdf]] - [[solution moed 93 - 2024a-20109.pdf]]
+```
+
+
 
 # Study 📚
 

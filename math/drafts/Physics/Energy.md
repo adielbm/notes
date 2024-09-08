@@ -18,3 +18,21 @@ $$E_{p} = mgh$$
 - $h$ is the change in height ($\mathsf{m}$)
 
 > $\Delta \text{GPE}=m \cdot g \cdot \Delta h$
+
+___
+
+- $\Delta E = m \cdot c \cdot \Delta T$
+    - $\Delta E$ is the change in thermal energy ($\mathsf{J}$)
+    - $m$ is the mass ($\mathsf{kg}$)
+    - $c$ is the specific heat capacity ($\mathsf{J \cdot kg^{-1} \cdot K^{-1}}$)
+    - $\Delta T$ is the change in temperature ($\mathsf{K}$)
+
+
+
+___
+
+- #todo
+- $\frac{\text{electric potential energy}}{\text{charge}} = \text{electric potential}$
+- $\text{voltage}=\text{(electrical) potential difference} = \Delta (\text{electric potential})$
+- $\text{electric field} =$
+
