@@ -29,8 +29,15 @@
 
 ### Cross Product
 
-- $\displaystyle  \mathbf {a} \times \mathbf {b} =\|\mathbf {a} \|\|\mathbf {b} \|\sin(\theta )\,\mathbf {n}$ #not-in-course 
-
+- $\displaystyle  \mathbf {a} \times \mathbf {b} =\|\mathbf {a} \|\|\mathbf {b} \|\sin(\theta )\,\mathbf {n}$
+	- $\theta$ is the angle between $\textbf{a}$ and $\textbf{b}$
+	- $\|\mathbf {a} \|$ and $\|\mathbf {b} \|$ are the magnitudes of the vectors $\textbf{a}$ and $\textbf{b}$
+	- $\mathbf {n}$ is a unit vector perpendicular to the plane containing $\textbf{a}$ and $\textbf{b}$, with direction s.t. $(\textbf{a},\textbf{b},\textbf{n})$ is positively oriented
+- $\displaystyle  \mathbf {a} \times \mathbf {b} =\begin{vmatrix} \mathbf {i} & \mathbf {j} & \mathbf {k} \\ a_{1} & a_{2} & a_{3} \\ b_{1} & b_{2} & b_{3} \end{vmatrix}$
+- $\mathbf {a} \times \mathbf {b} =-\mathbf {b} \times \mathbf {a}$ (anti-commutative)
+- $\mathbf {a} \times \mathbf {a} =\mathbf {0}$
+- $\mathbf {a} \times (\mathbf {b} +\mathbf {c} )=\mathbf {a} \times \mathbf {b} +\mathbf {a} \times \mathbf {c}$
+- $\| \mathbf {a} \times \mathbf {b} \|= \|\mathbf {a} \|\|\mathbf {b} \|\sin(\theta )$, which is the area of the parallelogram spanned by $\textbf{a}$ and $\textbf{b}$
 
 
 ## Norm of a Vector
@@ -44,6 +51,10 @@
 - Parallelogram Equation for Vectors $\|\textbf{u}+\textbf{v} \|^2+\|\textbf{u}-\textbf{v} \|^2=2(\|\textbf{u}\|^2+\|\textbf{v}\|^2)$
 
 > Here, we defined the norm as the Euclidean norm (aka: 2-norm or L2-norm, denoted $\| \mathbf{x} \|_2$) but there are other norms like the 1-norm, $\infty$-norm, etc.
+
+> Here, we use the notation $\| \mathbf{x} \|$, but it is also common to use $|\mathbf{x}|$ for the Euclidean norm
+
+> #todo other terms like **magnitude** and **length** are also used
 
 # Orthogonality  
 

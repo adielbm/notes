@@ -26,21 +26,21 @@
     - An **ideal independent source** is an active element that provides a specified voltage or current that is completely independent of other circuit elements
 
 
-> [!NOTE]
-> Symbols for independent voltage sources: (A) used for constant or time-varying voltage, (B) used for constant voltage (DC).
+> [!NOTE] Notation
+> Symbols for independent voltage sources
 > 
 > ```tikz
 > \usepackage{color,graphicx,circuitikz}
 > \begin{document}
 > \begin{circuitikz}[american, voltage dir=RP]
 > % First circuit (A)
-> \draw (0.5,-1) node[above] {(A)};
+> \draw (0.5,-1) node[above] {\textsf{constant/time-varying voltage}};
 > \draw (0,2.5) to [short, -o] (1,2.5);
 > \draw (0,0) to [V, -, v={$v$}](0,2.5);
 > \draw (0,0) to [short, -o] (1,0);
-> % Second circuit (B), shifted to the right by 3.5 units
-> \begin{scope}[shift={(3.5,0)}]
-> \draw (0.5,-1) node[above] {(B)};
+> % Second circuit (B), shifted to the right by 5 units
+> \begin{scope}[shift={(5,0)}]
+> \draw (0.5,-1) node[above] {\textsf{constant voltage (DC)}};
 > \draw (0,2.5) to [short, -o] (1,2.5);
 > \draw (0,0) to [battery1, -, v={$V$}](0,2.5);
 > \draw (0,0) to [short, -o] (1,0);

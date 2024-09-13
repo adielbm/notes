@@ -91,7 +91,8 @@ Given $f$ is an function integrable on $[a,b]$
 	- (Even) $\forall x, f(-x)=f(x)\implies\forall a,\displaystyle\int ^a_{-a}f(x) \, dx=2\int ^a_{0}f(x) \, dx$
 - Periodic functions
 	- If $f(x)=f(x+P)$ for all $x$, then $\displaystyle\int ^{b+P}_{a+P}f(x) \, dx=\int ^{b}_{a}f(x) \, dx$ for all $a,b$.
-	
+- If $f(x)=\begin{cases} g_1(x) & x\geq x_0 \\ g_2(x) & x\leq x_0 \end{cases}$ then $F(x)=\begin{cases} G_1(x) & x\geq x_0 \\ G_2(x) & x\leq x_0 \end{cases}$ where $G_1$ and $G_2$ are antiderivatives of $g_1$ and $g_2$ (resp.), s.t. $G_1(x_0)=G_2(x_0)$. #todo
+
 ## Integrabletly Sufficient Conditions
 
 Sufficient conditions for integrabletly of $f$ on $[a,b]$:

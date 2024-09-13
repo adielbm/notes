@@ -5,9 +5,9 @@
 #### 2021
 
 - 2021a
-	- [ ] [[2021a-a1.pdf]] - [[2021a-a1-sol.pdf]]
-	- [ ] [[2021a-a2.pdf]] - [[2021a-a2-sol.pdf]]
-	- [ ] [[2021a-b.pdf]] - [[2021a-b-sol.pdf]]
+	- [x] [[2021a-a1.pdf]] - [[2021a-a1-sol.pdf]]
+	- [x] [[2021a-a2.pdf]] - [[2021a-a2-sol.pdf]]
+	- [x] [[2021a-b.pdf]] - [[2021a-b-sol.pdf]]
 - 2021b
 	- [ ] [[2021b-a1.pdf]] - [[2021b-a1-sol.pdf]]
 	- [ ] [[2021b-a2.pdf]] - [[2021b-a2-sol.pdf]]
