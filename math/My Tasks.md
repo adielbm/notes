@@ -9,14 +9,14 @@
 	- [x] [[2021a-a2.pdf]] - [[2021a-a2-sol.pdf]]
 	- [x] [[2021a-b.pdf]] - [[2021a-b-sol.pdf]]
 - 2021b
-	- [ ] [[2021b-a1.pdf]] - [[2021b-a1-sol.pdf]]
-	- [ ] [[2021b-a2.pdf]] - [[2021b-a2-sol.pdf]]
-	- [ ] [[2021b-b.pdf]] - [[2021b-b-sol.pdf]]
+	- [x] [[2021b-a1.pdf]] - [[2021b-a1-sol.pdf]]
+	- [x] [[2021b-a2.pdf]] - [[2021b-a2-sol.pdf]]
+	- [x] [[2021b-b.pdf]] - [[2021b-b-sol.pdf]]
 #### 2022
 
 - 2022a
-	- [ ] [[2022a-a2.pdf]] - [[solution-2022a-a2.pdf]]
 	- [ ] [[2022a-a1.pdf]] - [[solution-2022a-a1.pdf]]
+	- [x] [[2022a-a2.pdf]] - [[solution-2022a-a2.pdf]]
 	- [ ] [[2022a-b.pdf]] - [[solution-2022a-b.pdf]]
 - 2022b
 	- [ ] [[2022b-a1.pdf]] - [[solution-2022b-a1.pdf]]

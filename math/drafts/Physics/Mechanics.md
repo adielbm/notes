@@ -25,6 +25,91 @@
 
 #todo  Ballistic coefficient
 
+
+```tex
+% Author: Izaak Neutelings (April 2021)
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{etoolbox} %ifthen
+\usepackage[outline]{contour} % glow around text
+\tikzset{>=latex} % for LaTeX arrow head
+\usetikzlibrary{angles,quotes,arrows.meta} % for pic
+\contourlength{1.0pt}
+\colorlet{myblue}{blue!70!black}
+\colorlet{mydarkblue}{blue!40!black}
+\colorlet{mygreen}{green!50!black}
+\colorlet{myred}{red!65!black}
+\colorlet{xcol}{blue!85!black}
+\colorlet{vcol}{green!70!black}
+\colorlet{projcol}{vcol!90!black!60}
+\tikzstyle{wave}=[myblue,thick]
+\tikzstyle{xline}=[very thick,myblue]
+\tikzstyle{vline}=[very thick,mygreen]
+\tikzstyle{vector}=[->,very thick,vcol,line cap=round]
+\tikzstyle{mydashed}=[green!30!black!90,dash pattern=on 2pt off 2pt,very thin]
+\tikzstyle{mymeas}=[{Latex[length=3,width=2]}-{Latex[length=3,width=2]},thin]
+\def\tick#1#2{\draw[thick] (#1) ++ (#2:0.05*\ymax) --++ (#2-180:0.1*\ymax)}
+
+
+\begin{document}
+
+\def\xmax{3.8}
+\def\ymax{2.4}
+\def\v{1.0}
+\def\ang{30}
+\def\d{(0.9*\xmax)} % distance landing point
+\def\b{tan(30)} % slope at x=0
+\def\h{0.6*\ymax} % height h
+\def\a{-((\b*\d+\h)/\d^2)} % coefficient
+\def\nsamples{100}
+
+
+
+% TRAJECTORY - PARABOLA + breakdown
+\begin{tikzpicture}
+  \def\v{1.4}
+  \def\ang{35}
+  \def\h{0.5*\ymax} % height h
+  \def\vx{{\v*cos(\ang)}}
+  \def\vy{{\v*sin(\ang)}}
+  \coordinate (O) at (0,\h);
+  \coordinate (Vx) at ({\v*cos(\ang)},\h);
+  \coordinate (Vy) at (0,{\h+\v*sin(\ang)});
+  \coordinate (V) at ({\v*cos(\ang)},{\h+\v*sin(\ang)});
+  
+  % AXES & TRAJECTORY
+  \draw[->,thick]
+    (-0.1*\ymax,0) -- (1.06*\xmax,0) node[right=4,below=-1] {$x$};
+  \draw[->,thick]
+    (0,-0.1*\ymax) -- (0,\ymax) node[below=4,left=0] {$y$};
+  \draw[xline,variable=\t,samples=\nsamples,smooth,domain=0:\d+0.1]
+    plot(\t,{\a*\t^2+\b*\t+\h}); %node[right=7,above=-2] {$x=x(t)$};
+  
+  % VELOCITY VECTOR
+  \draw pic["\contour{white}{$\theta$}",draw=white,double=black,double distance=0.4,
+            angle radius=13,angle eccentricity=1.4] {angle = Vx--O--V};
+  \draw[mydashed]
+    (Vx) |- (Vy);
+  \draw[<->,projcol,thick]
+    (Vy) -- (O) node[scale=0.9,midway,left=-1] {$v_{0y}$}
+      -- (Vx) node[scale=0.9,midway,below=-1] {$v_{0x}$};
+  \draw[->,vcol,very thick,line cap=round]
+    (O) --++ ({\ang}:\v) node[above right=-4] {$\vec{v}_0$};
+  \tick{O}{0} node[left] {$y_0$};
+  \tick{{\d},0}{90} node[below] {$R$};
+  
+\end{tikzpicture}
+
+
+
+\end{document}
+
+
+```
+
 #### Projectile Motion 
 
 
@@ -130,13 +215,21 @@ $$\displaystyle  F=G{\displaystyle\frac {m_{1}m_{2}}{r^{2}}}$$
 # Momentum
 
 - $\vec{p} = m\vec{v}$
-- $\vec{p}$ is the **(linear) momentum** vector (in $\mathsf{kg\cdot m/s}$)
-- $m$ is the mass (in $\mathsf{kg}$)
-- $\vec{v}$ is the velocity vector (in $\mathsf{m/s}$)
+  - $\vec{p}$ is the **(linear) momentum** vector (in $\mathsf{kg\cdot m/s}$)
+  - $m$ is the mass (in $\mathsf{kg}$)
+  - $\vec{v}$ is the velocity vector (in $\mathsf{m/s}$)
+
+## Impulse 
+
+- If a constant force $\vec{\mathbf{F}}$ acts on an object, the **impulse** $\vec{\mathbf{J}}$ delivered to the object over a time interval $\Delta t$ is given by $$\vec{\mathbf{J}} = \vec{\mathbf{F}}\Delta t$$
+- (Impulse-Momentum Theorem) $$\vec{\mathbf{J}} = \Delta \vec{\mathbf{p}}$$ (the impulse is equal to the change in momentum)
 
 # Angular Momentum
 
 #todo
+
+https://www.youtube.com/watch?v=MULe4xv3lVk&list=PLllVwaZQkS2rxqMXTH-cdE0LIX9Zi_oS1&index=54
+https://www.youtube.com/watch?v=hgcudPr73LU
 
 # Center of mass
 
@@ -145,14 +238,106 @@ $$\displaystyle  F=G{\displaystyle\frac {m_{1}m_{2}}{r^{2}}}$$
 
 # Moment of inertia
 
+moment of inertia I = angular momentum L / angular velocity ω
+
 #todo
 
 # Torque (Moment of Force)
 
-- $\vec{\tau} = \vec{r} \times \vec{F}\implies \tau =rF_{\perp}= rF\sin(\theta)$
-- $\vec{\tau}$ is the **torque** vector (in $\mathsf{N\cdot m}$)
-- $\vec{r}$ is the position vector (from the pivot point to the point of application of the force) (in $\mathsf{m}$)
-- $\vec{F}$ is the force vector (in $\mathsf{N}$)
+```tex
+\usepackage{tikz}
+\usepackage[outline]{contour} % Glow around text
+\usetikzlibrary{calc,angles,quotes} % For pic and angle
+\tikzset{>=latex} % LaTeX arrow head
+\contourlength{1.1pt}
+
+\newcommand{\vb}[1]{\vec{\mathbf{#1}}}
+
+% Color definitions
+\colorlet{xcol}{blue!98!black}
+\colorlet{xcoldark}{blue!50!black}
+\colorlet{vcol}{green!70!black}
+\colorlet{myred}{red!80!black}
+\colorlet{mypurple}{blue!60!red!80}
+\colorlet{acol}{red!50!blue!80!black!80}
+
+% TikZ styles
+\tikzstyle{rvec}=[->,xcol,very thick]
+\tikzstyle{force}=[->,myred,very thick]
+\tikzstyle{mass}=[line width=0.6,red!30!black,fill=red!40!black!10,rounded corners=1,
+                  top color=red!40!black!20,bottom color=red!40!black!10]
+
+% TikZ pictures
+\tikzset{
+  pics/Tin/.style={
+    code={
+      \def\R{0.12}
+      \draw[pic actions,line width=0.6,#1,fill=white] (0,0) circle (\R) 
+        (-135:.75*\R) -- (45:.75*\R) (-45:.75*\R) -- (135:.75*\R);
+  }},
+  pics/Tout/.style={
+    code={
+      \def\R{0.12}
+      \draw[pic actions,line width=0.6,#1,fill=white] (0,0) circle (\R);
+      \fill[pic actions,#1] (0,0) circle (0.3*\R);
+  }},
+  pics/Tin/.default=mypurple,
+  pics/Tout/.default=mypurple,
+}
+
+\newcommand\rightAngle[4]{
+  \pgfmathanglebetweenpoints{\pgfpointanchor{#2}{center}}{\pgfpointanchor{#3}{center}}
+  \coordinate (tmpRA) at ($(#2)+(\pgfmathresult+45:#4)$);
+  \draw[white,line width=0.7] ($(#2)!(tmpRA)!(#1)$) -- (tmpRA) -- ($(#2)!(tmpRA)!(#3)$);
+  \draw[xcoldark] ($(#2)!(tmpRA)!(#1)$) -- (tmpRA) -- ($(#2)!(tmpRA)!(#3)$);
+}
+
+% BICYCLE WHEEL
+\def\r{0.16} % Axis radius
+\def\Ri{1.18} % Wheel rims inside
+\def\Rr{1.30} % Wheel rims outside
+\def\Rt{1.45} % Wheel tire
+
+% TORQUE perpendicular and angle
+\begin{document}
+\def\R{1.6} % Wheel rims inside
+
+\begin{tikzpicture}
+  \def\ang{43} % Angle position
+  \def\angF{8} % Angle force
+  \def\F{1.1}  % Force size
+  \coordinate (O) at (0,0);
+  \coordinate (R) at (\ang:\R);
+  \coordinate (RT) at (90+\angF:{\R*sin(\ang-\angF)});
+  \coordinate (R') at (2*\ang-180-\angF:\R);
+  \coordinate (F) at ($(R)+(\angF:\F)$);
+  \coordinate (FT) at ($(R)+(\ang-90:{\F*sin(\ang-\angF)})$);
+  \clip (-1.2*\Rr,-1.17*\Rr) rectangle (2.04*\Rr,1.54*\Rr);
+  
+  \rightAngle{R}{RT}{O}{0.40}
+  \rightAngle{R}{FT}{F}{0.35}
+  
+  \draw[line width=0.8,dashed,white] (R) -- (RT) (R) --++ (\ang:0.4*\R) coordinate (RE);
+  \draw[line width=0.5,dashed,xcol] (R) -- (RT) --++ (180+\angF:0.3) (R) --++ (\ang:0.5*\R);
+  \draw[force] (R) -- (F) node[right=-2] {$\vb{F}$};
+  \draw[force,myred!80!black!60] (R) -- (FT) node[below right=-3] {$\vb{F}_{\perp}$};
+  \pic[scale=1] at (R) {Tin};
+  \draw[dashed,red!20!black] (F) -- (FT);
+  \node[mypurple,above=2] at (R) {$\vb{\tau}$};
+  \draw[rvec,xcol!90!black!50] (O) -- (RT) node[midway,above=3,left=-2] {\contour{white}{$\vb{r}_{\perp}$}};
+  \draw[rvec] (O) -- (\ang:0.95*\R) node[midway,below=2,right=1] {\contour{white}{$\vb{r}$}};
+  \draw pic["$\theta$",xcoldark,draw=xcoldark,angle radius=14,angle eccentricity=1.4] {angle=F--R--RE};
+  \draw pic[thick,draw=white,angle radius=14,angle eccentricity=1.4] {angle=RT--R--O};
+  \draw pic["$\theta$",xcoldark,draw=xcoldark,angle radius=14,angle eccentricity=1.4] {angle=RT--R--O};
+\end{tikzpicture}
+\end{document}
+```
+- $\vec{\mathbf{\tau}} = \vec{\mathbf{r}} \times \vec{\mathbf{F}}$ is the **torque** or **moment of force** vector (in $\mathsf{N\cdot m}$) (cross product)
+- $\vec{\mathbf{r}}$ is the position vector (from the pivot point to the point of application of the force) (in $\mathsf{m}$)
+- $\vec{\mathbf{F}}$ is the force vector (in $\mathsf{N}$)
 - $\theta$ is the angle between the position vector and the force vector (in $\mathsf{rad}$)
 - $\tau,r,F$ are the magnitudes of the vectors
+- $\tau = rF\sin\theta=rF_{\perp}=r_{\perp}F$ is the magnitude of the torque
+  - $F_{\perp}=F\sin\theta$ is the component of the force perpendicular to the position vector
+  - $r_{\perp}=r\sin\theta$ is the component of the position vector perpendicular to the force
 

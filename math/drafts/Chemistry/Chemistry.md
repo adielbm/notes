@@ -420,3 +420,20 @@ $$Z_{\mathrm {eff} }=Z-S$$
 	- Follows a similar trend to electron affinity
 	- Increases from bottom left to top right of the periodic table
 
+
+# Organic Chemistry
+
+```tex
+\usepackage{chemfig}
+\begin{document}
+\chemfig{C(-[:0]H)(-[:90]H)(-[:180]H)(-[:270]H)} \\
+\end{document}
+```
+
+
+
+
+
+
+
+
