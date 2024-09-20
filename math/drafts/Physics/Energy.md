@@ -1,10 +1,15 @@
-# Kinetic Energy
 
-$$E_{k}=\frac{1}{2}mv^2$$
 
-- $E_{k}$ is the kinetic Energy ($\mathsf{J}$)
-- $m$ is the mass ($\mathsf{kg}$)
-- $v$ is the velocity ($\mathsf{m/s}$)
+## Mechanical Energy
+
+#### Kinetic Energy
+
+- $E_{k}=\frac{1}{2}mv^2$ is the **(translational) kinetic Energy** ($\mathsf{J}$)
+	- $m$ is the mass ($\mathsf{kg}$)
+	- $v$ is the velocity ($\mathsf{m/s}$)
+- $E_{k}=\frac{1}{2}I\omega^2$ is the **rotational/angular kinetic energy** ($\mathsf{J}$)
+    - $I$ is the moment of inertia ($\mathsf{kg \cdot m^2}$)
+    - $\omega$ is the angular velocity ($\mathsf{rad/s}$)
 
 
 ## Gravitational Potential Energy
