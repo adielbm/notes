@@ -1,11 +1,20 @@
 {
+   "window.title": "math (obsidian)", 
+    "workbench.colorCustomizations": {
+        "titleBar.activeBackground": "#503088",
+        "titleBar.inactiveBackground": "#58437b",
+    },
     "terminal.integrated.suggest.enabled": false,
     "editor.accessibilitySupport": "off",
     "terminal.integrated.suggest.builtinCompletions": {
         "pwshCode": true,
         "pwshGit": true
     },
-    "terminal.integrated.shellIntegration.enabled": true
+    "terminal.integrated.shellIntegration.enabled": true,
     // "workbench.colorTheme": "",
-
+    "[markdown]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": false,
+        "editor.detectIndentation": false
+    }
 }
