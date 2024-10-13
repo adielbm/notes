@@ -33,13 +33,29 @@
 
 
 
-- A **logic function**
+- A **logic function** (or **Boolean function**) is a function that takes one or more bits of input and produces a single bit of output.
 - A **logic gate** (or simply **gate**) is a device that implements a logic function.
 - Multiplexors
 	- selector (or control) value
 	- B.3 Combinational Logic B-11  -- Two-Level Logic and PLAs
-- combinational logic (מעגל צירופי)
-- sequential logic (מעגל סדרתי)
+- **logic circuits**
+	- a **combinational logic** (מעגל צירופי) is a device consisting of logic gates whose outputs at any time are determined by the current inputs
+	- a **sequential logic** (מעגל סדרתי) is a device consisting of logic gates whose outputs at any time are determined by the current inputs and the previous state of the device
+
+- packaged building-block logic families can be divided into categories:
+	- **resistor-transistor logic** (RTL) circuits are logic circuits built from resistors and transistors
+	- **diode-transistor logic** (DTL) 
+	- **transistor-transistor logic** (TTL)
+
+- An **integrated circuit** (IC) is a device that contains many logic gates on a single chip of silicon
+	- ICs have external electrical contact points called **pins**
+	- A **package** is a plastic or ceramic case that holds the IC and connects the pins to the outside world
+	- A **dual in-line package** (DIP) is a package with two parallel rows of pins
+- A **discrete** component is an electronic device containing only a single element, such as a transistor or a resistor
+
+
+
+
 
 # Boolean Algebra
 

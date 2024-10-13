@@ -5,10 +5,7 @@
 	- $E_{k}=\frac{1}{2}I\omega^2$ is the **rotational/angular kinetic energy**
 		- $I$ is the moment of inertia ($\mathsf{kg \cdot m^2}$)
 		- $\omega$ is the angular velocity ($\mathsf{rad/s}$)
-	- $\Delta E = m \cdot c \cdot \Delta T$ is the change in **thermal energy**
-		- $m$ is the mass ($\mathsf{kg}$)
-		- $c$ is the specific heat capacity ($\mathsf{J \cdot kg^{-1} \cdot K^{-1}}$)
-		- $\Delta T$ is the change in temperature ($\mathsf{K}$)
+
 - Potential Energy
 	- $E_{p} = mgh$ is the **gravitational (potential) energy**
 		- $E_{p}$ is change in GPE ($\mathsf{J}$)
@@ -31,7 +28,10 @@ ___
 
 - Mechanical Energy
 	- $E_{\text{total}} = E_{k} + E_{p}$
-
+- $\Delta E = m \cdot c \cdot \Delta T$ is the change in **thermal energy**
+	- $m$ is the mass ($\mathsf{kg}$)
+	- $c$ is the specific heat capacity ($\mathsf{J \cdot kg^{-1} \cdot K^{-1}}$)
+	- $\Delta T$ is the change in temperature ($\mathsf{K}$)
 
 
 

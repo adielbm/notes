@@ -1,8 +1,9 @@
 {
    "window.title": "math (obsidian)", 
+   "workbench.colorTheme": "Abyss",
     "workbench.colorCustomizations": {
-        "titleBar.activeBackground": "#503088",
-        "titleBar.inactiveBackground": "#58437b",
+        "titleBar.activeBackground": "#4a3988",
+        "titleBar.inactiveBackground": "#3F3859",
     },
     "terminal.integrated.suggest.enabled": false,
     "editor.accessibilitySupport": "off",
@@ -13,6 +14,7 @@
     "terminal.integrated.shellIntegration.enabled": true,
     // "workbench.colorTheme": "",
     "[markdown]": {
+        "editor.wordWrap": "on",
         "editor.tabSize": 4,
         "editor.insertSpaces": false,
         "editor.detectIndentation": false

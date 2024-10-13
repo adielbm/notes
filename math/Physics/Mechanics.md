@@ -391,7 +391,20 @@ For every action force $\vec{F}_{1 \to 2}$ exerted by object 1 on object 2, ther
 - Contact Forces
 	- Normal Force
 
+## Conservation
 
+- conservative forces
+	- gravitational force
+	- elastic force
+	- electrostatic force
+	- magnetic force
+- non-conservative forces
+	- friction
+	- air resistance
+	- tension
+	- normal force
+	- applied force
+	- spring force
 
 ## Mechanical Equilibrium
 
