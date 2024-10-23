@@ -129,7 +129,10 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
     - $P$ is power (in watts)
     - $V$ is voltage (in volts)
     - $I$ is current (in amperes)
-
+- Units of electrical energy
+	- $\mathsf{1\ J = 1\ C\cdot V}$ (joule)
+	- $\mathsf{1\ kWh = 3.6\times 10^6\ J}$ (kilowatt-hour) which is the energy consumed by a 1-kilowatt appliance in 1 hour
+	- $\mathsf{1\ eV = 1.6\times 10^{-19}\ J}$ (electronvolt) which is the energy acquired by a particle carrying a charge whose magnitude equals that on the electron as a result of moving through a potential difference of $1\ \mathsf{V}$
 
 # Electric Potential
 
@@ -175,7 +178,10 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
     - $V$ is voltage (in volts)
     - $I$ is current (in amperes)
     - $q$ is charge (in coulombs)
-
+- $P=I^2R=\frac{V^2}{R}$
+	- $P$ is the power dissipated by the resistor (in $\mathsf{W}$)
+	- $R$ is the resistance of the resistor (in $\mathsf{\Omega}$)
+	- $I$ is the current through the resistor (in $\mathsf{A}$)
 
 # Electric current
 
@@ -188,7 +194,33 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
 - A current is **positive** if it flows from the positive terminal of a voltage source to the negative terminal
 
 
+- #todo 
+	- **electric current** (aka: **conventional current**) is a flow of electric charge
+		- The direction of conventional current is that of positive charge flow.
+		- electric current from $+$ to $-$ is equivalent to a negative electron flow from $-$ to $+$
+		- conventional current combines the effects of electron, ion, proton, and hole flows all into one number.
+		- Positive conventional current always flows from a high potential to a low potential.
+		- conventional current is not the opposite of electron current
+		- Electron current is a subset of conventional current. 
+	- A 19th-century convention, still in use, treats any electric current as a flow of positive charge from a region of positive potential to one of negative potential.
+		- The real motion, however, in the case of electrons flowing through a metal conductor, is in the opposite direction, from negative to positive.
 
+### Alternating Current
+
+- $V=V_0\sin(\omega t)$ is the voltage of an alternating current (see [[Waves#Sine Wave|sine wave]])
+	- $V_0$ is the **peak voltage** (in $\mathsf{V}$) (the _amplitude_)
+	- $\omega=2\pi f$ is the angular frequency (in $\mathsf{rad/s}$) where $f$ is the frequency (in $\mathsf{Hz}$)
+	- $t$ is time (in $\mathsf{s}$)
+- $I=\frac{V}{R}=\frac{V_0}{R}\sin(\omega t)=I_0\sin(\omega t)$ is the current of an alternating current
+	- $I$ is the current (in $\mathsf{A}$)
+	- $R$ is the resistance (in $\mathsf{\Omega}$)
+	- $I_0$ is the peak current (in $\mathsf{A}$)
+- $P=I^2R=I_0^2R\sin^2(\omega t)$ is the power transformed in a resistance $R$ at time $t$
+	- Because the current is squared, the power is always positive
+	- The average power is $\overline{P}=\frac{1}{2}I_0^2R$
+- The [[Means#Root-Mean Square (RMS)|rms]] values of sinusoidally alternating currents and voltages are:
+	- $I_{\text{rms}}=\frac{I_0}{\sqrt{2}}$
+	- $V_{\text{rms}}=\frac{V_0}{\sqrt{2}}$
 
 
 # Resistance & Conductance
@@ -231,16 +263,75 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
 
 
 
+- The resistors could be simple resistors, or they could be lightbulbs, heating elements, or other resistive devices
 
+#### Series Resistors
 
-# Kirchhoff's Laws
+```tex
+\usepackage{circuitikz}
+\begin{document}
+\begin{circuitikz}[american, thick]
+    \draw (0,0) to [battery1, l_={$V$}] (6,0) to (6,1)
+    to [R, l_={$R_3$}] (4,1) 
+    to [R, l_={$R_2$}] (2,1) 
+    to [R, l_={$R_1$}] (0,1) 
+    -- (0,0);
+\end{circuitikz}
+\end{document}
+```
+
+- When $n$ resistors are connected end to end along a single path they are said to be connected in **series**
+	- $\displaystyle R_{\text{eq}}=R_1+R_2+\ldots+R_n$
+	- Any charge that passes through $R_1$ will pass through $R_2$ and so on, hence the same current flows through each resistor in series
+	- When we add resistors in series: 
+		- the current through the circuit decreases (more resistors to pass through)
+		- the net resistance increases (the total resistance is the sum of the individual resistances)
+	- If $V_1, V_2, \ldots, V_n$ are the voltages across $R_1, R_2, \ldots, R_n$ (resp.) then $V=V_1+V_2+\ldots+V_n=I R_{\text{eq}}$ is the total voltage across the series
+
+#### Parallel Resistors
+
+```tex
+\usepackage{circuitikz}
+\begin{document}
+\begin{circuitikz}[american, thick]
+	\draw (-1,0) -- (2,0) to (-1,0) to [battery1, l_={$V$}] (-1,-2) -- (2,-2);
+	\draw (0,0) to [R, l={$R_1$}, i={$I_1$}](0,-2);
+	\draw (1,0) to [R, l={$R_2$}, i={$I_2$}](1,-2);
+	\draw (2,0) to [R, l={$R_3$}, i={$I_3$}](2,-2);
+	\draw (-1,0) to [short, i={$I$}] (0,0);
+\end{circuitikz}
+\end{document}
+```
+
+- We say that $n$ resistors are connected in **parallel** when the current from the source splits into $n$ paths
+	- $\displaystyle I_1=\frac{V}{R_1}, \ldots, I_n=\frac{V}{R_n}$ are the currents through each resistor
+	- $I=I_1+I_2+\ldots+I_n$ is the total current in the circuit
+	- $\displaystyle I=\frac{V}{R_{\text{eq}}}$
+	- $\implies\displaystyle \boxed{\frac{1}{R_{\text{eq}}}=\frac{1}{R_1}+\frac{1}{R_2}+\ldots+\frac{1}{R_n}}$
+	- When we add resistors in parallel: 
+		- the current in the circuit increases (more paths for the current to flow) 
+		- the net (or _equivalent_) resistance decreases  
+		- (example: a parallel circuit with two resistors of $4\ \mathsf{\Omega}$ has a total resistance of $\frac{1}{R_{\text{eq}}}=\frac{1}{4}+\frac{1}{4}=\frac{1}{2}$, so $R_{\text{eq}}=2\ \mathsf{\Omega}$)
+
+> the _eq_ is short for _equivalent_, which means that the total resistance of the circuit is the same as the resistance of a single resistor that would replace the parallel resistors or series resistors
+
+# Kirchhoff's Circuit Laws
+
+- **Kirchhoff's (circuit) laws** (or **Kirchhoff's rules**) are two equalities that deal with the current and potential difference.
 
 ### Kirchhoff’s Current Law 
 
-- The sum of the currents flowing into any node is equal to the sum of the currents flowing out
+- aka: **first law**, **junction rule**	
+
+- For any node in an electrical circuit, the algebraic sum of the currents flowing into and out of the node is zero. Mathematically $$\displaystyle\sum\limits_{i=1}^{n} I_i=0$$
+	- $I_i$ is the current flowing through the $i$-th branch
+	- $n$ is the total number of branches with currents flowing towards or away from the node
+	- Currents flowing into the node are considered positive, and currents flowing out of the node are considered negative (or vice versa, depending on the convention chosen)
+- This law is based on the [[#Electric charge|conservation of electric charge]]
 
 ### Kirchhoff’s Voltage Law
 
+- aka: **second law**, **loop rule**
 - The **voltage drop** is the decrease in electric potential along the path of a current flowing in a circuit
 - In one traversal of any closed loop, the sum of the voltage rises equals the sum of the voltage drops.
 
@@ -252,12 +343,28 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
 		- $V_0=V$
 		- $V_n=0$
 
+- This law is based on the conservation of energy
+
+# Electromotive force
+
+- A **source** (or **electromotive force** or **emf**) is a device that	transforms some other form of energy into electrical energy
+- The potential difference (voltage) between the terminals of a source when no current is flowing is called the **emf** of the source 
+	- The emf of a source is determined by the chemical reactions that occur within the source
+- The **terminal voltage (difference)** is the potential difference between the terminals of a source
+- The **internal resistance** of a source is the resistance that the source itself has to the flow of current
+	- Unless stated otherwise, we assume the battery’s internal resistance is negligible, and the battery voltage given is its terminal voltage
+- $V=\mathcal{E}-Ir$ is the terminal voltage of a source
+	- $\mathcal{E}$ is the emf of the source (in $\mathsf{V}$)
+	- $I$ is the current that flows through the source (in $\mathsf{A}$)
+	- $r$ is the internal resistance of the source (in $\mathsf{\Omega}$)
+	- When $I=0$ (no current is flowing), $V=\mathcal{E}$ (the terminal voltage equals the emf)
+
 
 # Electrical Circuits
 
 - elements of an electric circuit:
     - A **branch** represents a single two-terminal element (such as a voltage source or a resistor)
-    - A **node** is the point of connection between two or more branches
+    - A **node** (or **junction**) is the point of connection between two or more branches
         - Nodes that are connected by perfectly conducting wires are considered to be the same node
 - classification of elements:
     - terminals number:
@@ -288,14 +395,7 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
 
 
 
-- #todo 
-	- **electric current** (aka: **conventional current**) is a flow of electric charge
-		- electric current from $+$ to $-$ is equivalent to a negative electron flow from $-$ to $+$
-		- conventional current combines the effects of electron, ion, proton, and hole flows all into one number.
-		- conventional current is not the opposite of electron current
-		- Electron current is a subset of conventional current. 
-	- A 19th-century convention, still in use, treats any electric current as a flow of positive charge from a region of positive potential to one of negative potential.
-		- The real motion, however, in the case of electrons flowing through a metal conductor, is in the opposite direction, from negative to positive.
+
 
 - #todo
     - Components of an electrical circuit
@@ -339,6 +439,15 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
 
 
 ## Capacitance
+
+```tex
+\usepackage{color,graphicx,circuitikz}
+\begin{document}
+\begin{circuitikz}[american, thick]
+\draw (0,0) to [C, l={$C$}](2,0);
+\end{circuitikz}
+\end{document}
+```
 
 - A **capacitor** is a device that can store electric charge, and normally consists of two condaucting objects (usually plates or sheets) placed near each other but not touching
 	- The capacitor was originally known as the **condenser**
@@ -516,6 +625,7 @@ or shoter version
 
 
 
+
 ## Digital signal processing
 
 - The difference between the original continuous analog signal and its digital approximation is called the **quantization error**
@@ -524,3 +634,9 @@ or shoter version
 - **ADC** (analog-to-digital converter) is a device that converts a continuous analog signal to a discrete digital signal
 - **DAC** (digital-to-analog converter) is a device that converts a digital signal to an analog signal
 - bandwidth, Spectral band, frequency band #todo
+
+
+# Semiconductor
+
+- #todo https://www.youtube.com/watch?v=33vbFFFn04k
+

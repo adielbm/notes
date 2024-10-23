@@ -54,7 +54,51 @@
 - A **discrete** component is an electronic device containing only a single element, such as a transistor or a resistor
 
 
+# Arithmetic logic circuits
 
+## Binary adders
+
+### Half Adder
+
+- A **half adder** addes two single binary digits $A$ and $B$, and outputs a sum bit $S$ and a carry out bit $C_{\text{out}}$
+	- The sum bit ($S$) is a XOR of $A$ and $B$
+	- The carry out bit ($C_{\text{out}}$) is an AND of $A$ and $B$
+	- The carry out bit represents an overflow into the next digit of a multi-digit addition
+
+
+| $A$ | $B$ | $S$ | $C_{\text{out}}$ |
+| --- | --- | --- | --------------- |
+| 0   | 0   | 0   | 0               |
+| 0   | 1   | 1   | 0               |
+| 1   | 0   | 1   | 0               |
+| 1   | 1   | 0   | 1               |
+
+
+### Full Adder
+
+- A **full adder** adds two bits $A$ and $B$ and accounts for values carried in as well as out, and outputs a sum bit $S$ and a carry out bit $C_{\text{out}}$
+	- $S=A\oplus B\oplus C_{\text{in}}$
+	- $C_{\text{out}}=(A\cdot B)+(C_{\text{in}}\cdot(A\oplus B))$
+
+
+
+| $A$ | $B$ | $C_{\text{in}}$ | $S$ | $C_{\text{out}}$ |
+| --- | --- | --------------- | --- | --------------- |
+| 0   | 0   | 0               | 0   | 0               |
+| 0   | 0   | 1               | 1   | 0               |
+| 0   | 1   | 0               | 1   | 0               |
+| 0   | 1   | 1               | 0   | 1               |
+| 1   | 0   | 0               | 1   | 0               |
+| 1   | 0   | 1               | 0   | 1               |
+| 1   | 1   | 0               | 0   | 1               |
+| 1   | 1   | 1               | 1   | 1               |
+
+
+# Sequential Logic
+
+- **SR latch** (Set-Reset latch) is a simple form of sequential logic that can store one bit of information
+- **flip-flop** 
+	- **JK flip-flop**
 
 
 # Boolean Algebra
