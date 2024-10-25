@@ -2,7 +2,7 @@
 title: Welcome
 ---
 
-This is my math (and some CS) notebook, which I started writing in the fall of 2022.
+This is my notebook, which I started writing in the fall of 2022.
 
 - Discrete Mathematics: [20476](https://www.openu.ac.il/courses/20476.htm)
 - Linear Algebra 1: [20109](https://www.openu.ac.il/courses/20109.htm)
@@ -15,7 +15,7 @@ I'd welcome any suggestions for improvement.
 ### Tools 
 
 - Written using [obsidian.md](https://obsidian.md/) a note taking app using markdown files
-	- obsidian's configuration (hotkeys, plugins, css): https://github.com/adielBm/math/tree/main/math/.obsidian 
+	- obsidian's configuration (hotkeys, plugins, css): https://github.com/adielBm/notes/tree/main/notes/.obsidian 
 - https://www.wolframalpha.com/ 
 - https://www.mathcha.io/ Math Editor (WYSIWYG)
 - https://detexify.kirelabs.org/classify.html LaTeX handwritten symbol recognition

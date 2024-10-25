@@ -51,6 +51,7 @@ const config: QuartzConfig = {
   },
   plugins: {
     transformers: [
+      Plugin.getStaticResourcesFromPlugins(),
       Plugin.FrontMatter(),
       Plugin.CreatedModifiedDate({
         priority: ["frontmatter", "filesystem"],

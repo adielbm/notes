@@ -512,7 +512,6 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> 
           }
         })
       }
-
       return plugins
     },
     htmlPlugins() {
