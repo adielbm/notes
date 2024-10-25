@@ -12,7 +12,7 @@ export default ((opts?: Options) => {
     return (
       <div>
         <hr />
-        <a href="https://github.com/adielbm/math/">GitHub</a>{" • "}
+        <a href="https://github.com/adielbm/notes/">GitHub</a>{" • "}
         {"Created with "}
         <a href="https://github.com/jackyzha0/quartz/">Quartz</a>
       </div>
