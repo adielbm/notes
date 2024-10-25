@@ -1,9 +1,9 @@
 {
-   "window.title": "math (obsidian)", 
+   "window.title": "notes (obsidian)", 
    "workbench.colorTheme": "Abyss",
     "workbench.colorCustomizations": {
-        "titleBar.activeBackground": "#4a3988",
-        "titleBar.inactiveBackground": "#3F3859",
+        "titleBar.activeBackground": "#604ba8",
+        "titleBar.inactiveBackground": "#2b2640",
     },
     "terminal.integrated.suggest.enabled": false,
     "editor.accessibilitySupport": "off",

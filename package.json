@@ -13,8 +13,8 @@
   },
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
-    "build-serve": "npx quartz build --serve -d math",
-    "build": "npx quartz build -d math",
+    "build-serve": "npx quartz build --serve -d notes",
+    "build": "npx quartz build -d notes",
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",
     "test": "tsx ./quartz/util/path.test.ts && tsx ./quartz/depgraph.test.ts",
