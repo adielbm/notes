@@ -8,5 +8,6 @@
   "chem",
   "obsidian-graphviz",
   "obsidian-tikzjax",
-  "obsidian-tex-plugin"
+  "obsidian-tex-plugin",
+  "obsidian-hl"
 ]
