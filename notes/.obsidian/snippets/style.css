@@ -11,13 +11,3 @@
   }
 }
 
-/**
-  * Image centering
-  * @source https://www.reddit.com/r/ObsidianMD/comments/v1fs0f/centering_images_in_reading_mode/
-  * Example: ![[image.png | center | 256]] or ![Photo | center | 256](image.png)
-*/
-img[alt*="center"] {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}

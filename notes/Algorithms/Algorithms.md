@@ -95,4 +95,13 @@ Return the set of engaged pairs
 
 # Competitive Facility Location
 
+- The geographic region is divided into $n$ zones $1,\ldots,n$.
+- Each zone $i$ has a value $b_i$, which is the revenue obtained by either of the compenies if it opens a franchise there.
+- Certain pairs of zones $(i,j)$ are **adjacent**, and local zoning laws prevent two adjacent zones from each containing a franchise, regardless of which company owns them.
+- We model this problem as a graph $G=(V,E)$, where $V=\{1,\ldots,n\}$ (zones) and $E=\{(i,j):i,j\in V\}$ (adjacent zones).
+- Our game consists of two players, $P_1$ and $P_2$, alternately selecting nodes in $G$, with $P_1$ going first.
 - #todo
+
+
+____
+

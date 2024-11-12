@@ -18,6 +18,6 @@
 
 ### Theorems
 - **Theorem** (5.7) - A graph $G$ is planar, if and only if, every subdivision of $G$ is planar.
-- **Kuratowski's theorem** (5.8) - A graph is planar, if and only if, it does not contain a [[Discrete Math/Graph Theory/Basic#Subgraphs|subgraph]] that is a subdivision of $K_5$ or $K_{3,3}$.
+- **Kuratowski's theorem** (5.8) - A graph is planar, if and only if, it does not contain a [[Discrete Math/Graph Theory/Graphs#Subgraphs|subgraph]] that is a subdivision of $K_5$ or $K_{3,3}$.
 
 

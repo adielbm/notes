@@ -1,23 +1,26 @@
-## Definitions
-A tree is undirected graph $G=(V,E)$ that satisfies any of the following equivalent conditions:
-- $G$ is connected, acyclic (contain no cycles)
-- $G$ is connected, and $|E|=|V|-1$
-- $G$ has no simple cycles, and $|E|=|V|-1$
+- A **tree** is an undirected graph $G=(V,E)$ that satisfies any of the following equivalent conditions:
+	- $G$ is connected, acyclic (contain no cycles)
+- Let $G=(V,E)$ be an undirected graph with finite number of vertices.
+	- Any two of the following statements imply the third:
+		- $G$ is connected
+		- $G$ is acyclic
+		- $|E|=|V|-1$
+	- The following statements are equivalent:
+		- $G$ is **tree**
+		- $G$ has no simple cycles, and $|E|=|V|-1$
+		- $G$ is connected, and $|E|=|V|-1$
+- A **rooted tree** is a tree in which one vertex has been designated as the **root**
+	- A vertex $v$ is the **parent** of a vertex $u$ if the edge $(v,u)$ is in the path from the root to $u$, In this case $u$ is a **child** of $v$.
+	- A vertex $w$ is a **descendant** of a vertex $v$ if $v$ is in the path from the root to $w$. In this case, $v$ is an **ancestor** of $w$.
+	- A **leaf** is a vertex of degree 1 that is not the root. Equivalently, a leaf is a vertex that has no descendants.
 
-### Leaf
-- A leaf of an (unrooted) tree is a vertex degree 1
-
-## Theorems
-- Tree with at least 2 vertices has **at least 2 leaves**. (question 2.3)
+- (q2.3) A tree with at least 2 vertices has at least 2 leaves
 - Every tree is bipartite
 
 # Forest
 
-## Definitions
 - **forest** is an acyclic graph
 - **forest** is an graph in which any two vertices are connected by at most one path
-
-## Properties of Forest
 - every of component in forest is tree
 - $k$ is number of components (trees) in forest
 $$k=|V|-|E| \text{ or } |E|=|V|-k$$

@@ -165,6 +165,12 @@ For every action force $\vec{F}_{1 \to 2}$ exerted by object 1 on object 2, ther
 
 
 
+### Power
+
+- $\displaystyle P = \vec{F} \cdot \vec{v}=\frac{dW}{dt}$ is the **power** (in $\mathsf{W}$)
+	- $\vec{F}$ is the force vector (in $\mathsf{N}$)
+	- $\vec{v}$ is the velocity vector (in $\mathsf{m/s}$)
+
 ## Angular/Rotational quantities
 
 > clockwise is negative by convention 
@@ -347,6 +353,13 @@ For every action force $\vec{F}_{1 \to 2}$ exerted by object 1 on object 2, ther
 
 - #todo  https://youtu.be/5Zrphnd_0VI?list=PLllVwaZQkS2rxqMXTH-cdE0LIX9Zi_oS1
 	- 
+
+### Power
+
+
+- $\displaystyle P = \tau \times \omega$ is the **power** (in $\mathsf{W}$)
+	- $\tau$ is the torque (in $\mathsf{N\cdot m}$)
+	- $\omega$ is the angular velocity (in $\mathsf{rad/s}$) 
 
 ### Simple Harmonic Motion
 

@@ -68,7 +68,6 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
 
 
 ```tex
-\documentclass{standalone}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta}
 \definecolor{_red}{HTML}{D63146}
@@ -558,7 +557,8 @@ or shoter version
 		- the part of each electrode outside the solution is called the **terminal** which is used to connect the cell to a circuit
 	- An **electrolyte** is a substance that conducts electricity by allowing ions to move and can exist either as a liquid (**wet cell**) or a paste (**dry cell**)
 - A **battery** is a collection of electric cells connected together
-- The total voltage of a **series** (connected end-to-end positive to negative) connection is the sum of the voltages of the individual cells
+- The total voltage of a **series** (connected end-to-end positive to negative) connection is the sum of the voltages of the individual cells $V_{\text{total}}=V_1+V_2+\ldots+V_n$
+- The total voltage of an opposite series connection
 
 
 
