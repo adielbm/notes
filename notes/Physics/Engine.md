@@ -1,0 +1,3 @@
+- An **engine** (or **motor**) is a machine designed to convert one or more forms of energy into mechanical energy
+	- A **heat engine** is a type of engine that converts heat energy into mechanical energy
+		- An **internal combustion engine** (**ICE** or **IC engine**) is a heat engine in which the combustion of a fuel occurs with an oxidizer (usually air) in a combustion chamber that is an integral part of the working fluid flow circuit

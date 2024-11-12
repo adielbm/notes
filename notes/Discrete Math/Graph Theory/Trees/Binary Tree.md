@@ -1,9 +1,9 @@
 
-| Common terminology       | CLRS                            | Diagram                     |
-| ------------------------ | ------------------------------- | --------------------------- |
-| **Full** Binary Tree     |                                 | ![cBt\|110](fullBT.svg)     |
-| **Complete** Binary Tree | **Nearly Complete** Binary Tree | ![cBt\|110](completeBT.svg) |
-| **Perfect** Binary Tree  | **Complete** Binary Tree        | ![pBt\|110](perfectBT.svg)  |
+| Common terminology       | CLRS                            | Diagram                   |
+| ------------------------ | ------------------------------- | ------------------------- |
+| **Full** Binary Tree     |                                 | ![ \|110](fullBT.svg)     |
+| **Complete** Binary Tree | **Nearly Complete** Binary Tree | ![ \|110](completeBT.svg) |
+| **Perfect** Binary Tree  | **Complete** Binary Tree        | ![ \|110](perfectBT.svg)  |
 
 >[!warning] **Common terminology** will be used below
 
@@ -28,3 +28,9 @@
 - $l=2^h=\lceil{n/2}\rceil$
 - $h={\lfloor{\lg{n}\rfloor}}$
 
+
+# Traversal
+
+- **Preorder**: **Root**, Left, Right
+- **Inorder**: Left, **Root**, Right
+- **Postorder**: Left, Right, **Root**

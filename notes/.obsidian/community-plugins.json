@@ -1,13 +1,13 @@
 [
   "obsidian-git",
   "obsidian-hide-sidebars-when-narrow",
-  "obsidian-minimal-settings",
   "obsidian-latex-suite",
   "quick-latex",
   "darlal-switcher-plus",
   "chem",
-  "obsidian-graphviz",
   "obsidian-tikzjax",
   "obsidian-tex-plugin",
-  "obsidian-hl"
+  "obsidian-hl",
+  "github-copilot",
+  "img-caption"
 ]

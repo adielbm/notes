@@ -169,7 +169,7 @@ The following statements are equivalent:
 
 ### Full Rank
 
-![[lin-alg.svg| center | 180]]
+![[Rank.svg]]
 
 - (q8.5.5) The following statements are equivalent:
 	- $A$ has **full rank**
