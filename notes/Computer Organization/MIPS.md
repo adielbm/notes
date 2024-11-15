@@ -1,107 +1,7 @@
-# Integrated Circuits & Transistors
-
-- **Very-large-scale integration (VLSI)** is the process of creating an integrated circuit (IC) by combining millions or billions of MOS transistors onto a single chip.
-- **metal–oxide–semiconductor** field-effect transistor (MOS transistor) is a type of field-effect transistor (FET), most commonly fabricated by the controlled oxidation of silicon
-- **Field-effect transistor (FET)**
-
-# Architecture
-
-- components:
-	- input
-	- output
-	- memory
-	- control
-	- datapath
-
-- concepts:
-	- Design Principles:
-		1. **Simplicity favors regularity**
-		2. **Smaller is faster**
-		3. **Good design demands good compromises**
-	- **stored-program** concept is the idea that instructions and data of many types can be stored in memory as numbers, leading to the stored-program computer
-
-- #todo
-	- **memory hierarchy** 
-	- cache memory
-	- virtual memory
-	- I/O devices
-	- system-on-chip (SoC)
-	- control unit
-	- operands
-	- program counter (PC) (aka instruction pointer (IP) in x86)
-	- instruction register (IR)
-	- pipelining
-	- physical address space
-	- address space
-	- memory-mapped I/O (MMIO)
-	- port-mapped I/O (PMIO)
-	- bus
-		- address bus
-		- data bus
-		- control bus
-
-- **arithmetic logic unit (ALU)**
-- **general-purpose register** (GPR)
-- **instruction set architecture (ISA)** (or **architecture**) is an abstract interface between the hardware and the lowest-level software that encompasses all the information necessary to write a machine language program that will run correctly, including instructions, registers, memory access, I/O, and so on
-	- **RISC** (reduced instruction set computer)
-		- **RISC-V** is an open-source ISA based on established RISC principles
-		- Examples: 
-			- MIPS
-			- ARM
-	- **CISC** (complex instruction set computer)
-		- Examples: 
-		 	- x86
-			- PowerPC
-
-- a **word** The natural unit of access in a computer; the **word size** (or **word length**) is the number of bits in a word 
-	- word size may be used for:
-		- registers: the number of bits in a general-purpose register
-		- memory addresses: the number of bits in a memory address
-		- instructions
-		- data types (e.g., integer, floating-point, character)
-		- address bus
-		- data bus
-	- e.g., 32 bits in MIPS, 64 bits in x86-64, or 16 bits in the 8086
 
 
-- **register** is a small, fast storage location within the CPU used to store data temporarily
-	- **register file**
-	- The process of putting less commonly used variables (or those needed later) into memory is called **spilling** registers 
-	
-- **endianess** is the order in which bytes are stored in memory
-	- **big-endian**: the most significant byte is stored at the smallest memory address
-		- Example: `0x12345678` is stored as `0x12 0x34 0x56 0x78`
-	- **little-endian**: the least significant byte is stored at the smallest memory address
-		- Example: `0x12345678` is stored as `0x78 0x56 0x34 0x12`
 
-## Memory
 
-- **main memory** (or **(primary) memory** or **RAM (random access memory)**) 
-	- volatile (loses data when power is off)
-	- **DRAM** (dynamic random access memory)
-		- 
-	- **SRAM** (static random access memory)
-- **secondary storage** (or **secondary memory** or **storage**) 
-	- nonvolatile (retains data even when power is off)
-	- types:
-		- magnetic storage
-			- magnetic tape
-			- hard disk drive (HDD)
-			- floppy disk drive (FDD)
-		- optical storage
-			- compact disc (CD)
-			- digital versatile disc (DVD)
-			- Blu-ray disc
-		- Solid-state storage (SSS)
-			- flash memory - nonvolatile semiconductor memory
-				- solid-state drive (SSD)
-				- USB flash drive
-				- memory card
-			- memory card
-				- SD card
-				- microSD card
-
-# MIPS
 
 - **address** is a value used to specify the location of a specific data element within a memory array
 
@@ -110,7 +10,6 @@
 - the endianness of MIPS is big-endian
 - A **word** is 32 bits (4 bytes) long
 
-
 - To access an element at a given index, the index is multiplied by the size of each element (often 4 bytes for integers) to calculate the offset. 
 	- This offset is added to the base address of the array to locate the specific element.
 	- The **base address** is the memory location of the first element of the array, typically stored in a register. All elements are accessed relative to this address by calculating their offsets.
@@ -118,27 +17,24 @@
 - **MIPS assembly language** 
 - **alignment restriction** is a requirement that data be aligned in memory on natural boundaries
 
-
 ## Registers
-
 
 - MIPS has 32 general-purpose registers, each 32 bits wide
 
-| Register (32) | Assembly Name | Usage                                                          |
-| ------------- | ------------- | -------------------------------------------------------------- |
-| `r0`          | `$zero`       | constant value 0                                               |
-| `r1`          | `$at`         | reserved for assembler                                         |
-| `r2–r3`       | `$v0–$v1`     | 2 value registers in which to return values from procedures    |
-| `r4–r7`       | `$a0–$a3`     | 4 argument registers in which to pass parameters to procedures |
-| `r8–r15`      | `$t0–$t7`     | temporary registers                                            |
-| `r16–r23`     | `$s0–$s7`     | saved registers                                                |
-| `r24–$25`     | `$t8–$t9`     | temporary registers                                            |
-| `r26-r27`     | `$k0–$k1`     | reserved for OS                                                |
-| `r28`         | `$gp`         | global pointer                                                 |
-| `r29`         | `$sp`         | stack pointer                                                  |
-| `r30`         | `$fp`         | frame pointer                                                  |
-| `r31`         | `$ra`         | return address register to return to the point of origin       |
-
+| Register (32) | Assembly Name | Use                    | Preserved on call? |
+| ------------- | ------------- | ---------------------- | ------------------ |
+| 0             | `$zero`       | constant value 0       | N.A.               |
+| 1             | `$at`         | Assembler Temporary    | No                 |
+| 2-3           | `$v0–$v1`     | Values (2)             | No                 |
+| 4-7           | `$a0–$a3`     | Arguments (4)          | No                 |
+| 8-15          | `$t0–$t7`     | Temporaries            | No                 |
+| 16-23         | `$s0–$s7`     | Saved Temporaries      | Yes                |
+| 24-25         | `$t8–$t9`     | Temporaries            | No                 |
+| 26-27         | `$k0–$k1`     | Reserved for OS Kernel | No                 |
+| 28            | `$gp`         | Global Pointer         | Yes                |
+| 29            | `$sp`         | Stack Pointer          | Yes                |
+| 30            | `$fp`         | Frame Pointer          | Yes                |
+| 31            | `$ra`         | Return Address         | Yes                |
 
 ## Memory
 
@@ -146,15 +42,9 @@
 - The memory is organized as a sequence of 32-bit words
 - The memory is big-endian
 - The memory is accessed only by data transfer instructions 
-- The size of the memory #todo
+- The size of the memory is $2^{32}$ bytes (4GB)
 - Memory holds data structures, arrays, and spilled registers
 
-
-> [!NOTE] C Storage Classes
-> - **automatic** variables are local to a procedure and discarded when the procedure exits
-> - **static** variables (declared with `static` or outside of any procedure) exist for the entire duration of the program.
-> MIPS software reserves another register, `$gp` (global pointer), to point to the static area of memory.
-'
 
 ![[Memory Segments.jpg]]
 
@@ -169,6 +59,11 @@
 			- _global variables_ (declared outside of any procedure in C)
 		- fixed size data structures like arrays
 		- Allocated at compile time and deallocated when the program exits
+		- The **global pointer** `$gp` points to the midpoint of the static data segment, the access is using a 16-bit signed offset, in the following range:
+			- (negative offset) `$gp - 32768 = 0x10000000`
+			- (zero offset) `$gp = 0x10008000`
+			- (positive offset) `$gp + 32767 = 0x1000FFFF`
+			- The total length of the static data segment is `0x1000FFFF - 0x10000000 = 65535 = 2^16` bytes (64KB, where KB = 1024 bytes)
 	- The **heap** (_dynamic data_ in the diagram)
 		- Grows upward (toward the stack, from lower to higher addresses)
 		- Used for: 
@@ -184,9 +79,22 @@
 		- The **stack pointer** `$sp` always points to the top of the stack (lowest address in the stack)
 		- Stack memory is allocated at runtime and is automatically deallocated when the function exits
 		- Used for: 
-			- _local variables_ (automatic, declared inside a procedure, and discarded when the procedure exits)  
+			- _local variables_ (_automatic_) declared inside a procedure, and discarded when the procedure exits
 			- _procedure call information_ (e.g., return address, saved registers)
 	- The remaining memory (doesn't appear in the diagram) is reserved for input/output devices 
+
+
+### Text Representation
+
+- ascii
+- strings:
+	1. the first byte is reserved for the length of the string (Java uses this convention)
+	2. an accommpanying variable holds the length of the string 
+	3. the string is null-terminated, i.e. ends with a `NUL` byte, `0x00` in ASCII, (C uses this convention)
+)
+- load and store byte instructions
+- halfword
+
 
 ## Instructions
 
@@ -200,10 +108,7 @@
 
 #### Instruction Format
 
-- **R-type** (register type) 
-	- used for arithmetic and logical operations
-	- format: `op rs rt rd shamt funct`
-	- it has a fixed opcode of `000000`. The actual operation is specified by the `funct`
+
 
 ```tex
 \documentclass[varwidth]{standalone}
@@ -227,10 +132,18 @@
 \end{document}
 ```
 
+
+- **R-type** (register type) 
+	- used for arithmetic and logical operations
+	- format: `op rs rt rd shamt funct`
+	- it has a fixed opcode of `000000`. The actual operation is specified by the `funct`
+	- MIPS assembly syntax: `op rd, rs, rt` 
+- 
+
 - instructions are divided into **fields**, each serving a specific purpose
 	- _op_: basic operation of the instruction (**opcode**)
-	- _rs_: first register source operand
-	- _rt_: second register source operand
+	- _rs_: 1st register source operand
+	- _rt_: 2nd register source operand
 	- _rd_: register destination operand
 	- _shamt_: shift amount
 	- _funct_: (function code) selects the specific variant of the operation in the _op_ field
@@ -243,6 +156,26 @@
 | `addi`      | `addi $s1, $s2, 100` | `$s1 = $s2 + 100`         | Used to add constant         |
 | `lw`        | `lw $s1, 100($s2)`   | `$s1 = Memory[$s2 + 100]` | Word from memory to register |
 | `sw`        | `sw $s1, 100($s2)`   | `Memory[$s2 + 100] = $s1` | Word from register to memory |
+
+
+
+
+
+| Instruction                | Meaning                           | Funct (hex) |
+| -------------------------- | --------------------------------- | ----------- |
+| `add R[rd], R[rs], R[rt]`  | `R[rd] = R[rs] + R[rt]`           | 20          |
+| `sub R[rd], R[rs], R[rt]`  | `R[rd] = R[rs] - R[rt]`           | 22          |
+| `sll R[rd], R[rt], shamt`  | `R[rd] = R[rt] << shamt`          | 00          |
+| `addu R[rd], R[rs], R[rt]` | `R[rd] = R[rs] + R[rt]`           | 21          |
+| `and R[rd], R[rs], R[rt]`  | `R[rd] = R[rs] & R[rt]`           | 24          |
+| `jr R[rs]`                 | `PC = R[rs]`                      | 08          |
+| `nor R[rd], R[rs], R[rt]`  | `R[rd] = ~(R[rs] \| R[rt])`       | 27          |
+| `or R[rd], R[rs], R[rt]`   | `R[rd] = R[rs] \| R[rt]`          | 25          |
+| `slt R[rd], R[rs], R[rt]`  | `R[rd] = (R[rs] < R[rt]) ? 1 : 0` | 2A          |
+| `sltu R[rd], R[rs], R[rt]` | `R[rd] = (R[rs] < R[rt]) ? 1 : 0` | 2B          |
+| `slr R[rd], R[rt], shamt`  | `R[rd] = R[rt] >>> shamt`         | 02          |
+| `subu R[rd], R[rs], R[rt]` | `R[rd] = R[rs] - R[rt]`           | 23          |
+
 
 
 
@@ -298,6 +231,7 @@
 > 
 
 > [!WARNING] Cannot Add Two Registers for Address Calculation Directly
+> 
 > ```mips
 > lw $t0, $s2($s3) # ERROR
 > ```
@@ -483,18 +417,3 @@
 > ```
 
 
-# Performance
-
-- processor performance:
-	- **clock cycle (time)** is the time for one clock period (usually of the processor clock, which runs at a constant rate, usually published as part of the documentation for a computer)
-		- note: Although clock cycle time has traditionally been fixed, to save energy or temporarily boost performance, today’s processors can vary their clock rates, so we would need to use the average clock rate for a program.
-	- **clock rate** is the inverse of the clock cycle time (usually measured in $\mathsf{Hz}$ or its multiples)
-	- **response time** (or **execution time**) is the total time required for the computer to complete a task (including disk accesses, memory accesses, I/O activities, operating system overhead, CPU execution time, etc.)
-	- **performance** is the reciprocal of response time $$\text{Performance}_X = \frac{1}{\text{Response time}_X}$$
-	- **CPU (execution) time** (of task) is the actual time the CPU spends computing for a specific task (excluding other activities) 
-	- **throughput** (or **bandwidth**) is the number of tasks completed per unit time
-- program performance:
-	- **instruction count** is the number of instructions executed by the program
-	- **CPI (cycles per instruction)** is the average number of clock cycles per instruction for a program or program fragment
-	- **CPU clock cycles** is the total number of clock cycles consumed by the program $$\text{CPU clock cycles} = \text{Instruction count} \times \text{CPI}$$
-	- **CPU (execution) time** (of program) is $$\text{CPU time for program} = \text{CPU clock cycles} \times \text{Clock cycle time}=\frac{\text{CPU clock cycles}}{\text{Clock rate}}$$

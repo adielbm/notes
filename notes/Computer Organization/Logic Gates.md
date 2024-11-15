@@ -1,5 +1,3 @@
-# Logic Gates
-
 
 ```tex
 \documentclass{standalone}
@@ -29,8 +27,6 @@
 \end{circuitikz}
 \end{document}
 ```
-
-
 
 
 - A **logic function** (or **Boolean function**) is a function that takes one or more bits of input and produces a single bit of output.
