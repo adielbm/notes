@@ -603,7 +603,7 @@ or shoter version
 				- **NPN** (negative-positive-negative)
 				- **PNP** (positive-negative-positive)
 		- **FET** (field-effect transistor) 
-- a [[logic gate]] is a device that implements a logic function
+- a [[Logic Gates]] is a device that implements a logic function
 
 
 ##### Figure: An NPN transistor as a switch

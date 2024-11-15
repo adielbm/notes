@@ -17,7 +17,9 @@
         "editor.wordWrap": "on",
         "editor.tabSize": 4,
         "editor.insertSpaces": false,
-        "editor.detectIndentation": false
+        "editor.detectIndentation": false,
+        // line numbers
+        // "editor.lineNumbers": "off",
     },
     "search.useIgnoreFiles": false
 }
