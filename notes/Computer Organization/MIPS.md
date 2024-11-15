@@ -1,10 +1,4 @@
-
-
-
-
-
 - **address** is a value used to specify the location of a specific data element within a memory array
-
 - **mips** is a reduced instruction set computer (RISC) instruction set architecture (ISA) developed by MIPS Computer Systems, now MIPS Technologies, based in the United States
 - MIPS has a load-store architecture, meaning it only performs arithmetic and logic operations between registers, and memory access is done through load/store instructions
 - the endianness of MIPS is big-endian
@@ -91,24 +85,18 @@
 	1. the first byte is reserved for the length of the string (Java uses this convention)
 	2. an accommpanying variable holds the length of the string 
 	3. the string is null-terminated, i.e. ends with a `NUL` byte, `0x00` in ASCII, (C uses this convention)
-)
 - load and store byte instructions
 - halfword
-
 
 ## Instructions
 
 - **instruction** is a command given to a computer to perform a specific operation
 	- instructions are 32 bits long (4 bytes, 8 hex digits)
-
 - **data transfer instruction** is an instruction that transfer data between memory and registers
-
 - **immediate** is a constant value that is part of the instruction itself
 - **immediate instruction** is an instruction that has an immediate operand
 
-#### Instruction Format
-
-
+### Format
 
 ```tex
 \documentclass[varwidth]{standalone}
@@ -133,67 +121,74 @@
 ```
 
 
+### Types
+
 - **R-type** (register type) 
 	- used for arithmetic and logical operations
 	- format: `op rs rt rd shamt funct`
 	- it has a fixed opcode of `000000`. The actual operation is specified by the `funct`
-	- MIPS assembly syntax: `op rd, rs, rt` 
-- 
 
-- instructions are divided into **fields**, each serving a specific purpose
-	- _op_: basic operation of the instruction (**opcode**)
-	- _rs_: 1st register source operand
-	- _rt_: 2nd register source operand
-	- _rd_: register destination operand
-	- _shamt_: shift amount
-	- _funct_: (function code) selects the specific variant of the operation in the _op_ field
+### Fields
+
+| Field | Description | Size (bits) |
+| ----- | ----------- | ----------- |
+| opcode | basic operation of the instruction | 6 |
+| rs | 1st register source operand | 5 |
+| rt | 2nd register source operand | 5 |
+| rd | register destination operand | 5 |
+| shamt | shift amount | 5 |
+| funct | function code, selects the specific variant of the operation in the _op_ field | 6 |
+| immediate | immediate operand | 16 |
+| address | jump address | 26 |
+
+### R Type Instructions
+
+| Name                   | Instruction         | Meaning                           | Funct (hex) |
+| ---------------------- | ------------------- | --------------------------------- | ----------- |
+| Jump Register          | `jr rs`             | `PC = R[rs]`                      | 08          |
+| Add                    | `add rd, rs, rt`    | `R[rd] = R[rs] + R[rt]`           | 20          |
+| Add Unsigned           | `addu rd, rs, rt`   | `R[rd] = R[rs] + R[rt]`           | 21          |
+| Subtract               | `sub rd, rs, rt`    | `R[rd] = R[rs] - R[rt]`           | 22          |
+| Subtract Unsigned      | `subu rd, rs, rt`   | `R[rd] = R[rs] - R[rt]`           | 23          |
+| And                    | `and rd, rs, rt`    | `R[rd] = R[rs] & R[rt]`           | 24          |
+| Or                     | `or rd, rs, rt`     | `R[rd] = R[rs] OR R[rt]`          | 25          |
+| Nor                    | `nor rd, rs, rt`    | `R[rd] = ~(R[rs] OR R[rt])`       | 27          |
+| Shift Left Logical     | `sll rd, rt, shamt` | `R[rd] = R[rt] << shamt`          | 00          |
+| Shift Right Logical    | `srl rd, rt, shamt` | `R[rd] = R[rt] >>> shamt`         | 02          |
+| Set Less Than          | `slt rd, rs, rt`    | `R[rd] = (R[rs] < R[rt]) ? 1 : 0` | 2A          |
+| Set Less Than Unsigned | `sltu rd, rs, rt`   | `R[rd] = (R[rs] < R[rt]) ? 1 : 0` | 2B          |
+
+### I Type Instructions
+
+| Name                        | Instruction                | Meaning                                          | Opcode (hex) |
+| --------------------------- | -------------------------- | ------------------------------------------------ | ------------ |
+| Add Imm.                    | `addi rt, rs, SignExtImm`  | `R[rt] = R[rs] + SignExtImm`                     | 8            |
+| Add Imm. Unsigned           | `addiu rt, rs, SignExtImm` | `R[rt] = R[rs] + SignExtImm`                     | 9            |
+| And Imm.                    | `andi rt, rs, ZeroExtImm`  | `R[rt] = R[rs] & ZeroExtImm`                     | C            |
+| Branch on Equal             | `beq rs, rt, offset`       | `if (R[rs] == R[rt]) PC = PC + 4 + (4 * offset)` | 4            |
+| Branch on Not Equal         | `bne rs, rt, offset`       | `if (R[rs] != R[rt]) PC = PC + 4 + (4 * offset)` | 5            |
+| Load Byte Unsigned          | `lbu rt, imm(rs)`          | `R[rt] = Mem[R[rs] + imm]`                       | 24           |
+| Load Halfword Unsigned      | `lhu rt, imm(rs)`          | `R[rt] = Mem[R[rs] + imm]`                       | 25           |
+| Load Linked                 | `ll TODO`                  |                                                  |              |
+| Load Upper Imm.             | `lui TODO`                 |                                                  |              |
+| Load Word                   | `lw rt, imm(rs)`           | `R[rt] = Memory[R[rs] + imm]`                    | 23           |
+| Store Word                  | `sw rt, imm(rs)`           | `Memory[R[rs] + imm] = R[rt]`                    | 2B           |
+| Or Imm.                     | `ori rt, rs, imm`          | `R[rt] = R[rs] OR imm`                           | D            |
+| Set Less Than Imm.          | `slti rt, rs, imm`         | `R[rt] = (R[rs] < imm) ? 1 : 0`                  | A            |
+| Set Less Than Imm. Unsigned | `sltiu rt, rs, imm`        | `R[rt] = (R[rs] < imm) ? 1 : 0`                  | B            |
+| Store Byte                  | `sb rt, imm(rs)`           | `Memory[R[rs] + imm] = R[rt]`                    | 28           |
+| Store Halfword              | `sh rt, imm(rs)`           | `Memory[R[rs] + imm] = R[rt]`                    | 29           |
+| Store Word                  | `sw rt, imm(rs)`           | `Memory[R[rs] + imm] = R[rt]`                    | 2B           |
 
 
-| Instruction | Example              | Meaning                   | Comments                     |
-| ----------- | -------------------- | ------------------------- | ---------------------------- |
-| `add`       | `add $s1, $s2, $s3`  | `$s1 = $s2 + $s3`         | Three register operands      |
-| `sub`       | `sub $s1, $s2, $s3`  | `$s1 = $s2 - $s3`         | Three register operands      |
-| `addi`      | `addi $s1, $s2, 100` | `$s1 = $s2 + 100`         | Used to add constant         |
-| `lw`        | `lw $s1, 100($s2)`   | `$s1 = Memory[$s2 + 100]` | Word from memory to register |
-| `sw`        | `sw $s1, 100($s2)`   | `Memory[$s2 + 100] = $s1` | Word from register to memory |
+### J Type Instructions
 
+| Name | Instruction | Meaning | Opcode (hex) |
+| ---- | ----------- | ------- | ------------ |
+| Jump | `j address` | `PC = address` | 2            |
+| Jump and Link | `jal address` | `R[31] = PC + 8; PC = address` | 3            |
 
-
-
-
-| Instruction                | Meaning                           | Funct (hex) |
-| -------------------------- | --------------------------------- | ----------- |
-| `add R[rd], R[rs], R[rt]`  | `R[rd] = R[rs] + R[rt]`           | 20          |
-| `sub R[rd], R[rs], R[rt]`  | `R[rd] = R[rs] - R[rt]`           | 22          |
-| `sll R[rd], R[rt], shamt`  | `R[rd] = R[rt] << shamt`          | 00          |
-| `addu R[rd], R[rs], R[rt]` | `R[rd] = R[rs] + R[rt]`           | 21          |
-| `and R[rd], R[rs], R[rt]`  | `R[rd] = R[rs] & R[rt]`           | 24          |
-| `jr R[rs]`                 | `PC = R[rs]`                      | 08          |
-| `nor R[rd], R[rs], R[rt]`  | `R[rd] = ~(R[rs] \| R[rt])`       | 27          |
-| `or R[rd], R[rs], R[rt]`   | `R[rd] = R[rs] \| R[rt]`          | 25          |
-| `slt R[rd], R[rs], R[rt]`  | `R[rd] = (R[rs] < R[rt]) ? 1 : 0` | 2A          |
-| `sltu R[rd], R[rs], R[rt]` | `R[rd] = (R[rs] < R[rt]) ? 1 : 0` | 2B          |
-| `slr R[rd], R[rt], shamt`  | `R[rd] = R[rt] >>> shamt`         | 02          |
-| `subu R[rd], R[rs], R[rt]` | `R[rd] = R[rs] - R[rt]`           | 23          |
-
-
-
-
-
-| Name                |         | For. | Operation (verilog)                        |       | Opcode/Func (hex) |     |
-| ------------------- | ------- | ---- | ------------------------------------------ | ----- | ----------------- | --- |
-| Add                 | `add`   | R    | `R[rd] = R[rs] + R[rt]`                    | (1)   | 0 / 20            |     |
-| Add Immediate       | `addi`  | I    | `R[rt] = R[rs] + SignExtImm`               | (1,2) | 8                 |     |
-| Add Imm. Unsigned   | `addiu` | I    | `R[rt] = R[rs] + SignExtImm`               | (2)   | 9                 |     |
-| Add Unsigned        | `addu`  | R    | `R[rd] = R[rs] + R[rt]`                    |       | 0 / 21            |     |
-| And                 | `and`   | R    | `R[rd] = R[rs] & R[rt]`                    |       | 0 / 24            |     |
-| And Immediate       | `andi`  | I    | `R[rt] = R[rs] & ZeroExtImm`               | (3)   | c                 |     |
-| Branch on Equal     | `beq`   | I    | `if (R[rs] == R[rt]) PC = PC+4+BranchAddr` | (4)   | 4                 |     |
-| Branch on Not Equal | `bne`   | I    | `if (R[rs] != R[rt]) PC = PC+4+BranchAddr` | (4)   | 5                 |     |
-| Jump                | `j`     | J    | `PC = JumpAddr`                            | (5)   | 2                 |     |
-| Jump and Link       | `jal`   | J    | `R[31] = PC+8; PC = JumpAddr`              | (5)   | 3                 |     |
-| todo                |         |      |                                            |       |                   |     |
-
+### notes
 
 1. May cause overflow exception
 2. `SignExtImm = { 16{immediate[15]}, immediate }`
