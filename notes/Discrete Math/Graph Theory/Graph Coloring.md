@@ -4,18 +4,22 @@
 - A graph is said to be **$k$-colorable** if $\chi(G) \leq k$.
 
 ### Examples
+
 - $\chi(K_n)=n$
 - $\chi(K_{n,m})=2$ . that is $\chi(K_{G})=2$ if and only if $G$ is bipartite graph that contain at least one edge.
 - Let $C_n$ cycle with $n$ vertices. then $\chi(C_{n})=2$ if $n$ is even, and $\chi(C_{n})=3$ if $n$ is odd.
 
 ### Maximum Vertex Degree
+
 The maximum degree, sometimes simply called the maximum degree, of a graph G is the largest vertex degree of G, denoted $\Delta$.
 
 ## Theorems 
+
 - Question 1 - Every simple graph has a **proper vertex coloring** in $\Delta(G)+1$ colors. i.e.  $\chi(G) \leq \Delta(G)+1$
 - **Brooks' theorem** (6.2) - For any connected undirected graph $\chi(G)\leq \Delta(G)$, unless $G$ is a complete graph or an odd cycle, in which case the chromatic number is $\chi(G)=\Delta(G)+1$.
 
 ### k-degenerate
+
 A graph is **$k$-degenerate** if every subgraph has a vertex of degree at most $k$.
 
 - Any graph $G$ is $\Delta(G)$-degenerate

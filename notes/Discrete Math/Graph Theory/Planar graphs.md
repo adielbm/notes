@@ -2,7 +2,7 @@
 - **Euler's Formula** (5.3) - For any connected planar graph with $v$ vertices, $e$ edges and $f$ faces, we have $$v-e+f=2$$
 - **Corollary** (5.4) - If $G$ is a planar simple graph, with $v$ vertices, and $e$ edges, then $$v\geq 3\Longrightarrow e\leq 3v-6$$
 - **Corollary** (5.5) - If $G$ is a planar simple graph, then $G$ has a vertex of degree not greater than 5.
-- (question 3) - in planar and [[Bipartite graph|bipartite]] and connected graph with $v\geq{3}$, then $e\leq{2v-4}$ 
+- (question 3) - in planar and [[Graphs#Bipartite graph|bipartite]] and connected graph with $v\geq{3}$, then $e\leq{2v-4}$ 
 
 #### examples
 - $K_4$ is planar. 

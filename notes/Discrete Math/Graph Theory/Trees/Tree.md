@@ -23,11 +23,13 @@
 - **forest** is an graph in which any two vertices are connected by at most one path
 - every of component in forest is tree
 - $k$ is number of components (trees) in forest
+
 $$k=|V|-|E| \text{ or } |E|=|V|-k$$
 
-# Cayley's formula
+# Labeled Tree
 
-- **Cayley's formula** (2.9) - The number of labeled trees with $n$ vertices is $n^{n−2}$
+- A **labeled tree** is a tree in which each vertex is given a unique label. (typicallyintegers from 1 to $n$, where $n=|V|$)
+- (2.9, **Cayley's formula**) the number of labeled trees with $n$ vertices is $n^{n−2}$
 
 ## Prüfer sequence
 
@@ -37,6 +39,7 @@ $$k=|V|-|E| \text{ or } |E|=|V|-k$$
 - The labels that **not appear** in the sequence are **leaves**, that is their deggree is 1.
 
 ## Prüfer Sequence to Labeled Tree 
+
 Given a Prüfer sequence, it is possible to generate a finite labeled tree corresponding to that sequence.
 
 Let $P=(a_1,a_2,\ldots,a_{n−2})$ be a Prüfer sequence. This will be called **the sequence**.
@@ -50,6 +53,7 @@ It is assumed the sequence is not empty.
 5. Delete the first of those numbers from **the list** and the second from **the sequence**. This leaves a smaller **list** and a shorter **sequence**. Then return to **step 3**.
 
 ## Labeled Tree to Prüfer Sequence
+
 Given a finite labeled tree, it is possible to generate a Prüfer sequence corresponding to that tree.
 
 Let $T$ be a labeled tree of order $n$, where the labels are assigned the values $1$ to $n$.

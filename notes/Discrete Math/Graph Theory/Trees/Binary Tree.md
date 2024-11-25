@@ -15,6 +15,8 @@
 
 ## Complete Binary Tree
 
+- A **complete binary tree** is a binary tree in which every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible
+
 - $2^h\leq{n\leq{2^{h+1}-1}}$
 	- $n_{k}=2^k$ (where $k<h$)
 	- $1\leq{n_{h}\leq{2^h}}$

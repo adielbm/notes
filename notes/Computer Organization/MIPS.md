@@ -180,6 +180,16 @@
 | Store Halfword              | `sh rt, imm(rs)`           | `Memory[R[rs] + imm] = R[rt]`                    | 29           |
 | Store Word                  | `sw rt, imm(rs)`           | `Memory[R[rs] + imm] = R[rt]`                    | 2B           |
 
+#### Immediate Operand
+
+- **immediate operand** is a constant value that is part of the instruction itself
+
+> [!NOTE] 32-Bit costant
+> Suppose we want to load a 32-bit constant (e.g. `0x12345678`) into a register (e.g. `$s0`). We can use the following sequence of instructions:
+> ```mips
+> lui $s0, 0x1234 # load the upper 16 bits into $s0 (now, its value is 0x12340000)
+> ori $s0, $s0, 0x5678	# bitwise OR the lower 16 bits with $s0 (now the value of $s0 is 0x12345678)
+> ```
 
 ### J Type Instructions
 
@@ -188,7 +198,7 @@
 | Jump | `j address` | `PC = address` | 2            |
 | Jump and Link | `jal address` | `R[31] = PC + 8; PC = address` | 3            |
 
-### notes
+### Notes
 
 1. May cause overflow exception
 2. `SignExtImm = { 16{immediate[15]}, immediate }`
@@ -197,6 +207,30 @@
 5. `JumpAddr = { PC+4[31:28], address, 2'b0 }`
 6. Operands considered unsigned numbers (vs. 2's comp.)
 7. Atomic test&set pair; `R[rt] = 1` if pair atomic, `0` if not atomic
+
+
+#### Sign Extension
+
+- **sign extension** is the process of expanding the most significant bit of a number to fill the remaining bits
+	- Exmaples:
+		- `00 1010` (decimal positive 10) sign-extended to 16 bits is `0000 0000 0000 1010`  (decimal positive 10)
+		- `11 1111 0001` (decimal negative -15, in 2's complement) sign-extended to 16 bits is `1111 1111 1111 0001` (decimal negative -15)
+	- Sign extension is used to convert a number from a smaller bit-width to a larger bit-width while preserving the number's sign and value
+	- Sign extension is used in MIPS to convert 16-bit immediate values to 32-bit values
+	- `SignExtImm = { 16{immediate[15]}, immediate }` is the formula (in Verilog) for sign-extending a 16-bit immediate value to 32 bits
+		- `immediate[15]` is the MSB of the immediate value (the 16th bit), it is `1` for negative numbers (2's complement) and `0` for positive numbers
+		- `16{immediate[15]}` is the MSB repeated 16 times (to fill the remaining 16 bits)
+		- `{ 16{immediate[15]}, immediate }` concatenates the MSB 16 times with the original 16-bit immediate value
+
+
+#### Overflow Handling
+
+- **overflow** is a condition that occurs when the result of an arithmetic operation exceeds the range of the data type
+- The term _unsigned_ in instructions like `addu` and `subu` is indeed a misnomer. These instructions are **not restricted** to unsigned numbers, and the operation **does not** treat the numbers based on their sign, but instead specify how the CPU handles _overflow_ during arithmetic operations.
+	- _Unsigned_ instructions (e.g., `addu`, `subu`) ignore overflow - the result wraps around to 0
+	- _Signed_ instructions (e.g., `add`, `sub`) detects overflow - if the result of an operation is too large to be represented in 32 bits, an exception is raised. (also known as _trap on overflow_)
+
+> Regardless of the instruction (signed or unsigned), [[#I Type Instructions|immediate operands]] are always **sign-extended**. This means the constant is treated as a signed number when expanded to 32 bits, even in instructions labeled "unsigned."
 
 ### Load and Store
 
@@ -411,4 +445,18 @@
 > jr $ra				# return to the caller
 > ```
 
+
+# Psuedo Instructions
+
+| Syntax                | Meaning                       | Equivalent                                                                    |
+| --------------------- | ----------------------------- | ----------------------------------------------------------------------------- |
+| `move $rt, $rs`       | `$rt = $rs`                   | `add $rt, $rs, $zero`                                                         |
+| `li $rt, imm16`       | `$rt = SE(imm0-15)`           | `addiu $rt, $zero, imm16`                                                     |
+| `li $rt, imm32`       | `$rt = imm32`                 | `lui $1, imm[31-16]` <br> `ori $rt, $1, imm[15-0]`                            |
+| `la $rt, label`       | `$rt = address(label)`        | `lui $rt, address(label)[31-16]` <br> `ori $rt, $rt, address(label)[15-0]`    |
+| `lw $rt, label($rs)`  | `$rt = Mem[$rs + label]`      | `lui $1, label[31-16]` <br> `addu $1, $1, $rs` <br> `lw $rt, label[15-0]($1)` |
+| `sw $rt, label($rs)`  | `Mem[$rs + label] = $rt`      | `lui $1, label[31-16]` <br> `addu $1, $1, $rs` <br> `sw $rt, label[15-0]($1)` |
+| `blt $rs, $rt, label` | `if $rs < $rt: PC=PC+4+imm*4` | `slt $1, $rs, $rt` <br> `bne $1, $zero, imm`                                  |
+| `not rdest, rsrc`     | `rdest = ~rsrc`               | `nor rdest, rsrc, $zero`                                                      |
+| `abs rdest, rsrc`     | `rdest = abs(rsrc)`           |                                                                               |
 

@@ -81,9 +81,9 @@ Return the set of engaged pairs
 
 # Bipartite Matching Problem
 
-- Given a [[bipartite graph]] $G=(X\cup Y,E)$, the **bipartite matching problem** is to find a [[Edge Covering & Matching#Maximum matching|maximum matching]] in the graph.
+- Given a [[Graphs#Bipartite graph|bipartite graph]] $G=(X\cup Y,E)$, the **bipartite matching problem** is to find a [[Edge Covering & Matching#Maximum matching|maximum matching]] in the graph.
 - If $|X|=|Y|=n$, then there is a [[Edge Covering & Matching#Perfect matching|perfect matching]] if and only if the maximum matching has size $n$
-- (see also [[Bipartite graph#Matching in Bipartite graph|Matching in Bipartite graph]])
+- (see also [[Graphs#Matching in Bipartite graph|Matching in Bipartite graph]])
 
 # Independent Set Problem
 
