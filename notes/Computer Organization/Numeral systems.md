@@ -2,7 +2,7 @@
 
 The value of the number $\pm(a_{k+1}\dots a_{2}a_{1}a_{0}.a_{-1}a_{-2}\dots a_{-l})_{b}$ (Note that represents a sequence of digits, not multiplication) is 
  
-$$n=\pm \Big(a_{k+1}\times b^{k+1}+\dots+a_{1}\times b^{1}+a_{0}\times b^{0}\Big)+\Big(a_{-1}\times b^{-1}+a_{-2}\times b^{-2}+\dots+a_{-l}\times b^{-l} \Big)$$
+$$n=\pm \Big(a_{k+1}\times b^{k+1}+\dots+a_{0}\times b^{0}\Big)+\Big(a_{-1}\times b^{-1}+a_{-2}\times b^{-2}+\dots+a_{-l}\times b^{-l} \Big)$$
 
 - $b$ **basis** (or **radix**)
 - $D=\set{d_{1},d_{2},\dots,d_{b}}$ set of symbols ($\displaystyle  \forall i\colon a_{i}\in D$)
@@ -41,41 +41,40 @@ $$n=\pm \Big(a_{k+1}\times b^{k+1}+\dots+a_{1}\times b^{1}+a_{0}\times b^{0}\Big
 
 ### 4-bit signed binary numbers
 
-| Binary | Unsigned | Sign–magnitude | Two's complement |
-| ------ | -------- | -------------- | ---------------- |
-| 0000   | 0        | 0              | 0                |
-| 0001   | 1        | 1              | 1                |
-| 0010   | 2        | 2              | 2                |
-| 0011   | 3        | 3              | 3                |
-| 0100   | 4        | 4              | 4                |
-| 0101   | 5        | 5              | 5                |
-| 0110   | 6        | 6              | 6                |
-| 0111   | 7        | 7              | 7                |
-| 1000   | 8        | -0             | -8               |
-| 1001   | 9        | -1             | -7               |
-| 1010   | 10       | -2             | -6               |
-| 1011   | 11       | -3             | -5               |
-| 1100   | 12       | -4             | -4               |
-| 1101   | 13       | -5             | -3               |
-| 1110   | 14       | -6             | -2               |
-| 1111   | 15       | -7             | -1               |
+| Binary | Unsigned | Two's complement | Sign–magnitude |
+| ------ | -------- | ---------------- | -------------- |
+| 0000   | 0        | 0                | 0              |
+| 0001   | 1        | 1                | 1              |
+| 0010   | 2        | 2                | 2              |
+| 0011   | 3        | 3                | 3              |
+| 0100   | 4        | 4                | 4              |
+| 0101   | 5        | 5                | 5              |
+| 0110   | 6        | 6                | 6              |
+| 0111   | 7        | 7                | 7              |
+| 1000   | 8        | -8               | -0             |
+| 1001   | 9        | -7               | -1             |
+| 1010   | 10       | -6               | -2             |
+| 1011   | 11       | -5               | -3             |
+| 1100   | 12       | -4               | -4             |
+| 1101   | 13       | -3               | -5             |
+| 1110   | 14       | -2               | -6             |
+| 1111   | 15       | -1               | -7             |
 
 
 ### 8-bit Two's complement
 
-| Binary | Unsigned | Two's complement |
-| ------ | -------- | ---------------- |
-| 00000000 | 0        | 0                |
-| 00000001 | 1        | 1                |
-| $\vdots$ | $\vdots$ | $\vdots$         |
-| 01111110 | 126      | 126              |
-| 01111111 | 127      | 127              |
-| 10000000 | 128      | -128             |
-| 10000001 | 129      | -127             |
-| $\vdots$ | $\vdots$ | $\vdots$         |
-| 11111110 | 254      | -2               |
-| 11111111 | 255      | -1               |
-
+| Binary | Unsigned | Two's complement | Sign–magnitude |
+| ------ | -------- | ---------------- | -------------- |
+| 00000000 | 0        | 0                | 0                |
+| 00000001 | 1        | 1                | 1                |
+| $\vdots$ | $\vdots$ | $\vdots$         | $\vdots$         |
+| 01111110 | 126      | 126              | 126              |
+| 01111111 | 127      | 127              | 127              |
+| 10000000 | 128      | -128             | -0               |
+| 10000001 | 129      | -127             | -1               |
+| $\vdots$ | $\vdots$ | $\vdots$         | $\vdots$         |
+| 11111110 | 254      | -2               | -126             |
+| 11111111 | 255      | -1               | -127             |
 
 
 
@@ -105,10 +104,6 @@ while n>0
 
 // note: the fractional part may never become zero, stop when the desired precision is reached
 ```
-
-#### Any base to decimal conversion 
-
-
 
 
 #### Binary–hexadecimal conversion

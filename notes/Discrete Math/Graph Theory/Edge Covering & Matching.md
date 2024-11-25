@@ -32,4 +32,4 @@
 
 #### Matching in Bipartite graph
 
-- See [[Bipartite graph#Matching in Bipartite graph|Matching in Bipartite graph]]
+- See [[Graphs#Matching in Bipartite graph|Matching in Bipartite graph]]

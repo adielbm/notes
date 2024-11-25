@@ -99,12 +99,15 @@
 
 # Boolean Algebra
 
-| Logic Gate |                |                 |
-| ---------- | -------------- | --------------- |
-| OR         | $A+B$          | logical sum     |
-| AND        | $A\cdot B$     | logical product |
-| NOT        | $\overline{A}$ |                 |
-
+|                 | Logic Gate |                       | eq. form                                                                                |
+| --------------- | ---------- | --------------------- | --------------------------------------------------------------------------------------- |
+|                 | NOT        | $\overline{A}$        |                                                                                         |
+| logical sum     | OR         | $A+B$                 |                                                                                         |
+| logical product | AND        | $A\cdot B$            |                                                                                         |
+|                 | NAND       | $\overline{A\cdot B}$ |                                                                                         |
+|                 | NOR        | $\overline{A+B}$      |                                                                                         |
+|                 | XOR        | $A\oplus B$           | $A\overline{B}+\overline{A}B=(A+B)\cdot (\overline{A}+\overline{B})$                    |
+|                 | XNOR       | $A \odot B$           | $(A + \overline{B}) \cdot (\overline{A} + B)=A \cdot B + \overline A \cdot \overline B$ |
 ## Laws
 
 - Identity law: $A+0=A$, $A\cdot 1=A$
@@ -113,3 +116,5 @@
 - Commutative law: $A+B=B+A$, $A\cdot B=B\cdot A$
 - Associative law: $(A+B)+C=A+(B+C)$, $(A\cdot B)\cdot C=A\cdot(B\cdot C)$
 - Distributive law: $A\cdot(B+C)=A\cdot B+A\cdot C$, $A+(B\cdot C)=(A+B)\cdot(A+C)$
+
+
