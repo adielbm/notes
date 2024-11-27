@@ -130,16 +130,21 @@
 
 ### Fields
 
-| Field | Description | Size (bits) |
-| ----- | ----------- | ----------- |
-| opcode | basic operation of the instruction | 6 |
-| rs | 1st register source operand | 5 |
-| rt | 2nd register source operand | 5 |
-| rd | register destination operand | 5 |
-| shamt | shift amount | 5 |
-| funct | function code, selects the specific variant of the operation in the _op_ field | 6 |
-| immediate | immediate operand | 16 |
-| address | jump address | 26 |
+| Field     | Description                                                                    | Size (bits) |
+| --------- | ------------------------------------------------------------------------------ | ----------- |
+| opcode    | basic operation of the instruction                                             | 6           |
+| rs        | 1st register source operand                                                    | 5           |
+| rt        | 2nd register source operand                                                    | 5           |
+| rd        | register destination operand                                                   | 5           |
+| shamt     | shift amount                                                                   | 5           |
+| funct     | function code, selects the specific variant of the operation in the _op_ field | 6           |
+| immediate | immediate operand                                                              | 16          |
+| address   | jump address                                                                   | 26          |
+
+
+- `address` is the target address of the jump instruction (26 bits)
+	- The address is shifted left by 2 bits (multiplied by 4) and concatenated with the upper 4 bits of the current PC to form a 32-bit address
+	- effectively represents a 28-bit address, so 
 
 ### R Type Instructions
 
@@ -193,10 +198,32 @@
 
 ### J Type Instructions
 
-| Name | Instruction | Meaning | Opcode (hex) |
-| ---- | ----------- | ------- | ------------ |
-| Jump | `j address` | `PC = address` | 2            |
+| Name          | Instruction   | Meaning                        | Opcode (hex) |
+| ------------- | ------------- | ------------------------------ | ------------ |
+| Jump          | `j address`   | `PC = address`                 | 2            |
 | Jump and Link | `jal address` | `R[31] = PC + 8; PC = address` | 3            |
+
+- `JumpAddr = { PC+4[31:28], address, 2'b0 }` is the formula for the actual address to which the jump instruction will jump
+	- `PC+4[31:28]` is the upper 4 bits of the current PC incremented by 4
+	- `address` is the 26-bit address of the jump target
+	- `2'b0` is two zeros to pad the address to 32 bits
+
+
+>[!EXAMPLE] Encoding a Jump Instruction
+>
+>- `j Loop` jumps to the label `Loop` in the code, and given `Loop` is at address `0x0100101C`
+>- `0x0100101C = 0000 0001 0000 0000 0001 0000 0001 1100`
+>- `---- 0001 0000 0000 0001 0000 0001 11--` (remove the last 2 and the upper 4 bits)
+>- `000010 00010000000000010000000111` (add the opcode `000010` to the 26-bit address)
+>- `0x08400407 = 0000 1000 0100 0000 0000 0100 0000 0111` is the encoded instruction
+
+
+>Since the two LSBs of the address are always `00`, the address can represent a 28-bit address by shifting left by 2 bits (multiplying by 4).This allows the jump instruction to access a $2^{28}$ byte address space (256MB).
+
+
+> Since the PC is 32 bits, 4 bits must come from somewhere else for jumps. The MIPS jump instruction replaces only the lower 28 bits of the PC, leaving the upper 4 bits of the PC unchanged. 
+
+>The loader and linker must be careful to avoid placing a program across an address boundary of 256 MB (64 million instructions); otherwise, a jump must be replaced by a jump register instruction preceded by other instructions to load the full 32-bit address into a register.
 
 ### Notes
 
@@ -361,7 +388,7 @@
 
 - An **argument** is a value passed to a procedure by the caller
 	- Arguments are passed either in registers (four arguments in `$a0-$a3`) or on the stack (if more than four arguments)
-- The **return values** are two values that can be returned by a procedure in registers `$v0-$v1`
+- The **return values** are two values that can be returned by a procedure in registers `$v0-$v1=`
 
 - **stack** is a data structure
 	- The **stack pointer** is adjusted by one word for each register that is saved or restored

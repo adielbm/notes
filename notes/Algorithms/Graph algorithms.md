@@ -87,6 +87,13 @@ Print(T, s):
 
 ## Depth-First Search (DFS)
 
+### DFS (Undirected)
+
+- An edge $(v,u)$ is a **tree edge** if $u$ is visited for the first time when $(v,u)$ is explored. (i.e. `visited(u) = false`)
+- An edge $(v,u)$ is a **back edge** if $u$ is already visited when $(v,u)$ is explored. (i.e. `visited(u) = true`)
+- The tree that DFS constructs is called a **DFS tree**.
+
+
 ```
 Algorithm 2.2 DFS(G)
 Input: G = (V, E) connected undirected graph on n vertices
@@ -107,13 +114,7 @@ for all (v, u) ∈ E do
 		DFS-Explore(G, u)
 ```
 
-- An edge $(v,u)$ is a **tree edge** if $u$ is visited for the first time when $(v,u)$ is explored. (i.e. `visited(u) = false`)
-- An edge $(v,u)$ is a **back edge** if $u$ is already visited when $(v,u)$ is explored. (i.e. `visited(u) = true`)
-- The tree that DFS constructs is called a **DFS tree**.
-
-
-
-### Stack-based DFS Algorithm
+#### Stack-based DFS Algorithm
 
 ```
 DFS Algorithm: (Stack-based)
@@ -129,12 +130,36 @@ DFS(s):
 			    Push v onto S
 ```
 
-### binary tree traversal and DFS
+#### binary tree traversal and DFS
 
 #todo which one of the bianry tree traversal algorithms (inorder, preorder, postorder) is a DFS algorithm on a binary tree?
 
 
-___
+### DFS (Directed)
+
+
+
+- A **tree edge** is an edge $(u,v)$ such that $v$ was first discovered by exploring $(u,v)$.
+- **Back edges** are those edges $(u,v)$ connecting a vertex $u$ to an ancestor $v$ in a depth-first tree. We consider self-loops, which may occur in directed graphs, as back edges.
+- **Forward edges** are those nontree edges $(u,v)$ connecting a vertex $u$ to a proper descendant $v$ in a depth-first tree.
+- **Cross edges** are all other edges. They can go between vertices in the same depth-first tree, as long as one vertex is not an ancestor of the other, or they can go between vertices in different depth-first trees.
+
+```
+DFS_visits_explore(G,v):
+
+visited[v] = true
+clock++
+pre[v] = clock
+for each edge (v,u) in E do 
+	if not visited[u] then
+	    DFS_visits_explore(G,u) 
+clock++
+post[v] = clock
+```
+
+
+
+
 
 # Finding the Set of All Connected Components
 
@@ -241,93 +266,63 @@ ___
 	- Assumptions: 
 		- the graph is connected 
 		- non-negative weights
-
-- the output of Dijkstra's algorithm is a tree called the **shortest path tree** rooted at the start node.
-
+- The output of Dijkstra's algorithm is a tree called the **shortest path tree** rooted at the start node.
 - Dijkstra's algorithm is using a [[Abstract Data Types#Priority Queue|priority queue]] which can be implemented using:
 	- (unsorted) Doubly linked list - $\Theta(|V|^2)$
 	- Binary heap $\Theta(|E|\cdot \log|V|)$
 	- Fibonacci heap $\Theta(|E| + |V|\log|V|)$
 
-- Dijkstra's algorithm $(G,\ell)$: 
-	- Let $S$ be the set of explored nodes 
-		- For each $u\in S$, we store a distance $d(u)$ (the shortest path from $s$ to $u$ that we have found so far)
-	- Initially, $S=\{s\}$ and $d(s)=0$ 
-	- While $S\neq V$:
-		- Select a node $v\notin S$ with at least one edge from $S$ for which $d'(v)=\min_{e=(u,v):u\in S}d(u)+\ell_e$ is as small as possible.
-		- Add $v$ to $S$ and set $d(v)=d'(v)$.
-
-
 
 ```
-Algorithm Dijkstra(Graph, Source):
+# Dijkstra's Algorithm using Priority Queue
+Dijkstra(G, s, w):
+input: 
+	G = (V, E) directed graph
+	non-negative weights w
+	s = source node
+output: for each u ∈ V:
+	d[u] = the shortest path estimate from s to u
+	π[u] = the predecessor of u in the shortest path tree
+----
+InitPriorityQueue(Q)
+d[s] = 0
+Q.Insert(s, 0)
 
----
-1. Initialize:
-    - DistEst[v] ← ∞ for all vertices v in Graph
-    - DistEst[Source] ← 0
-    - T ← {} (empty set for the minimal path tree)
-    - PriorityQueue ← {Source with priority 0}
+For each u ∈ G.V: 
+	if u ≠ s:
+		d[u] = ∞
+		π[u] = null  
+		Q.Insert(u, ∞)
 
-2. While PriorityQueue is not empty:
-    a) u ← ExtractMin(PriorityQueue) (Get vertex with the smallest DistEst)
-       Add u to T (Include u in the minimal path tree)
-
-    b) For each neighbor v of u (where v ∉ T):
-        - If DistEst[u] + w(u→v) < DistEst[v]:
-            Update DistEst[v] ← DistEst[u] + w(u→v)
-            Update PriorityQueue with the new DistEst[v]
-
-3. Return DistEst (Contains the shortest path estimates from Source to all vertices)
-```
-
-
-
-```
-Input: Graph G = (V, E) with edge weights w(u, v) >= 0
-       Source node s ∈ V
-
-Output: Shortest distance from s to all other nodes (DistEst)
-
-1. Initialize:
-    SPT = {}                        # Shortest Path Tree (initially empty)
-    DistEst(v) = ∞ for all v ∈ V    # Distance estimates (infinity for all nodes)
-    DistEst(s) = 0                  # Distance from source to itself is 0
-
-2. Create a priority queue PQ:
-    For all v ∈ V:
-        Insert v into PQ with key = DistEst(v)
-
-3. While PQ is not empty:
-    a. Extract the node v with the smallest DistEst(v) from PQ
-    b. Add v to SPT
-    c. For each edge (v, z) where z ∈ V \ SPT:
-        i. If DistEst(v) + w(v, z) < DistEst(z):
-            Update DistEst(z) = DistEst(v) + w(v, z)
-            Update PQ with the new key for z
-
-4. Return DistEst for all nodes
-
-
+While Q ≠ ∅:
+    u ← Q.ExtractMin()   # Remove & return the node with the smallest d[u]
+    S ← S ∪ {u}                      # Mark u as processed
+    For each neighbor v ∈ G.Adj[u]:
+        If d[u] + w(u, v) < d[v]:    # Relax the edge (u, v)
+            d[v] = d[u] + w(u, v)
+            π[v] = u                 # Update the predecessor (optional)
+            DECREASE-KEY(Q, v, d[v]) # Update v's priority in Q
 ```
 
 
-```
-SPT = {s}
-	create priority-queue PQ with V \ SPT
-	key(v) = DistEst (v)
-repeat until SPT spans V(s)
-	extract-minimum v from PQ
-	SPT = SPT ∪ {e}
-	scan edges (v,z) with z ∈ V \ SPT
-		if DistEst(v) + w(v,z) < DistEst(z)
-			DistEst(z) = DistEst(v) + w(v,z)
-```
+
+> [!Exercise] Flight Times and Layovers (lecture 4 exercise)
+> You are given:
+> 1. **A list of cities** and their unique identifiers.
+>2. **Flight times** between pairs of cities, represented as a weighted directed graph:
+>    - Each edge represents a flight with a time cost (in hours).
+>3. **Waiting times** at each city (in hours), which must be added to the travel time whenever a flight lands there.
+>
+>**Goal**: Write a program to calculate:
+>
+>1. The **shortest total travel time** from a given starting city to every other city.
+>2. The **path** taken for the shortest travel time to each city.
 
 
-# lecture 4 notes 
 
+## Bellman–Ford algorithm
 
-- exersise: given flights times between cities. 
-	- it has to have to wait in every airport a certain amount of time (depended on the airport)
-	- we want to calculate the time of the flight (and the path) from a given city to every other city. 
+- The **Bellman–Ford algorithm** is an algorithm for finding the shortest path from a single source node to all other nodes in a directed weighted graph.
+	- It is slower than Dijkstra's algorithm for the same problem, but more versatile, as it is capable of handling graphs in which some of the edge weights are negative numbers
+- If there is a negative cycle reachable from $s$, then there is no shortest path from $s$ to any node, and $\text{dist}(v)=-\infty$
+
