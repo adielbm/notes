@@ -15,8 +15,13 @@
     filter: invert(1) hue-rotate(180deg);
 }
 
-markdown-source-view.mod-cm6 .internal-embed {
+.internal-embed {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+
+.markdown-rendered table {
+  margin: auto;
 }
