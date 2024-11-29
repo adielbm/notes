@@ -11,3 +11,12 @@
   }
 }
 
+.theme-dark .internal-embed.image-embed img {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+markdown-source-view.mod-cm6 .internal-embed {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
