@@ -40,7 +40,7 @@
 - Memory holds data structures, arrays, and spilled registers
 
 
-![[Memory Segments.jpg]]
+![[Memory Segments.png]]
 
 
 - Memory Segments: (from low to high addresses, `0x00000000` to `0xFFFFFFFF`)`
