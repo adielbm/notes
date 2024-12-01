@@ -334,44 +334,39 @@ Rather than drawing all the gates, designers often show just the position of AND
  ![[32-bit mux.png]]
 
 
+## Arithmetic logic circuits
 
-# Sequential Logic
+### Binary adders
 
-- **SR latch** (Set-Reset latch) is a simple form of sequential logic that can store one bit of information
-- **flip-flop** 
-	- **JK flip-flop**
+#### Half Adder
 
-
-# Arithmetic logic circuits
-
-## Binary adders
-
-### Half Adder
+![[Half Adder.svg|180]]
 
 - A **half adder** addes two single binary digits $A$ and $B$, and outputs a sum bit $S$ and a carry out bit $C_{\text{out}}$
-	- The sum bit ($S$) is a XOR of $A$ and $B$
-	- The carry out bit ($C_{\text{out}}$) is an AND of $A$ and $B$
-	- The carry out bit represents an overflow into the next digit of a multi-digit addition
+	- (sum) $S=A\oplus B=A\cdot \overline{B}+\overline{A}\cdot B$
+	- (carry out) $C_{\text{out}}=A\cdot B$ (represents an overflow into the next digit of a multi-digit addition)
 
+| In  |     | Out           |                            |
+| --- | --- | ------------- | -------------------------- |
+| $A$ | $B$ | $S$ <br>(XOR) | $C_{\text{out}}$ <br>(AND) |
+| 0   | 0   | 0             | 0                          |
+| 0   | 1   | 1             | 0                          |
+| 1   | 0   | 1             | 0                          |
+| 1   | 1   | 0             | 1                          |
 
-| $A$ | $B$ | $S$ | $C_{\text{out}}$ |
-| --- | --- | --- | ---------------- |
-| 0   | 0   | 0   | 0                |
-| 0   | 1   | 1   | 0                |
-| 1   | 0   | 1   | 0                |
-| 1   | 1   | 0   | 1                |
+#### Full Adder
+![[Full Adder.png|180]]
 
-
-### Full Adder
 
 - A **full adder** adds two bits $A$ and $B$ and accounts for values carried in as well as out, and outputs a sum bit $S$ and a carry out bit $C_{\text{out}}$
-	- $S=A\oplus B\oplus C_{\text{in}}$
+	- $S=A\oplus B\oplus C_{\text{in}}=(A\cdot \overline{B}\cdot \overline{C_{\text{in}}})+(\overline{A}\cdot B\cdot \overline{C_{\text{in}}})+(\overline{A}\cdot \overline{B}\cdot C_{\text{in}})+(A\cdot B\cdot C_{\text{in}})$
 	- $C_{\text{out}}=(A\cdot B)+(C_{\text{in}}\cdot(A\oplus B))$
 
+![[full adder using two half adders.svg|310]]
 
-
-| $A$ | $B$ | $C_{\text{in}}$ | $S$ | $C_{\text{out}}$ |
+| In  |     |                 | Out |                  |
 | --- | --- | --------------- | --- | ---------------- |
+| $A$ | $B$ | $C_{\text{in}}$ | $S$ | $C_{\text{out}}$ |
 | 0   | 0   | 0               | 0   | 0                |
 | 0   | 0   | 1               | 1   | 0                |
 | 0   | 1   | 0               | 1   | 0                |
@@ -382,6 +377,37 @@ Rather than drawing all the gates, designers often show just the position of AND
 | 1   | 1   | 1               | 1   | 1                |
 
 
-
-
 # ALU 
+
+## 1-bit ALU
+
+Here is a simple 1-bit ALU 1-bit ALU that can perform AND (operation 0), OR (operation 1)
+
+![[1-bit ALU (AND-OR).png|200]]
+
+ 
+ We can add Addition (operation 2 (10)) to this ALU as follows:
+
+![[1-bit ALU (AND-OR-ADD).png]]
+
+## 32-bit ALU
+
+A 32-bit ALU can be constructed by arraying 32 1-bit ALUs. (this organization is called _ripple-carry_)
+![[32-bit ALU.png]]
+
+
+> [!INFO] Subtraction using 2's complement
+> 
+> Notice that the LSB still has a carry-in signal, even though it's unnecessary for addition. However, if we set this carry-in to 1 instead of 0, the adder will then calculate $a+b+1$. By selecting the inverted of $b$, we get $a+\overline{b}+1=a+(\overline{b}+1)=a+(-b)=a-b$.  
+> 
+> ![[1-bit ALU (AND-OR-ADD) with Binvert.png]]
+
+>[!INFO] NOR operation using AND and invert
+>Instead of adding a separate NOR gate, we can add _Ainvert_ to each 1-bit ALU and make use of the AND gate to perform NOR according to De Morgan's law $\overline{A+B}=\overline{A}\cdot\overline{B}$.
+>
+![[1-bit ALU (AND-OR-ADD) with ABinvert.png]]
+# Sequential Logic
+
+- **SR latch** (Set-Reset latch) is a simple form of sequential logic that can store one bit of information
+- **flip-flop** 
+	- **JK flip-flop**
