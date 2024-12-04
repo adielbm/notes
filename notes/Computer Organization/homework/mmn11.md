@@ -16,7 +16,7 @@ subu $t0, $zero, $s3
 # op=0 rs=0 rt=19 rd=8 shamt=0 funct=35
 # op=000000 rs=00000 rt=10011 rd=01000 shamt=00000 funct=100011
 
-
+"asdasd"
 bgtz $a3, Zelensky 
 # 000111 00111 00000 1111111111111110
 # 00011100111000001111111111111110
@@ -24,7 +24,7 @@ bgtz $a3, Zelensky
 # 4-base: 01303200 33333332
 # op=000111 rs=00111 rt=00000 imm=1111111111111110
 # op=0x07 rs=0x07 rt=0x00 imm=0xFFFE
-# op=0 rs=7 rt=0 imm=-2
+# op=07 rs=7 rt=0 imm=-2
 
 
 mfhi $t3 

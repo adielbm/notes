@@ -383,6 +383,82 @@ Rather than drawing all the gates, designers often show just the position of AND
 
 # Sequential Logic
 
+## Clock
+
+- A **clock signal** is  
+	- The **clock period** is the time for one full cycle of the clock signal
+- The **clocking methodology** is the approach used to determine 
+	- **Edge-triggered clocking**: all state changes occur on a clock edge, either **rising edge** or **falling edge**. (note: our default is _rising edge_, but sometimes we'll use _falling edge_)
+- A **clock generator** is an electronic oscillator producing a periodic clock signal
+
+- A **sequential logic** is
+	- The **state** of a sequential logic is the current value of the memory elements
+	- A **state element** 
+
+- A **synchronous circuit** (or **synchronous logic**)
+- An **asynchronous circuit** (or **asynchronous logic**)
+
 - **SR latch** (Set-Reset latch) is a simple form of sequential logic that can store one bit of information
 - **flip-flop** 
 	- **JK flip-flop**
+
+## Memory Elements
+
+- **Memory elements**
+- Memory elements are **unclocked** when they do not have any clock input (e.g. SR latch)
+
+### SR Latch
+
+
+![[SR latch (NOR).png|200]]
+
+| $S$ | $R$ | Action             | $Q$ | $\overline{Q}$ |
+| --- | --- | ------------------ | --- | -------------- |
+| 0   | 0   | hold state (latch) | $Q$ | $\overline{Q}$ |
+| 0   | 1   | reset              | 0   | 1              |
+| 1   | 0   | set                | 1   | 0              |
+| 1   | 1   | invalid            | 0   | 0              |
+
+
+### D Latch
+
+- inputs
+	- **D** data value
+	- **C** clock signal - indicates when the latch should read the value of D and store it
+		- when $C$ is asserted, the latch is said to be **open**, and the value of $Q$ is updated to the value of $D$
+		- when $C$ is deasserted, the latch is said to be **closed**, and the value of $Q$ is whatever value was last stored in the latch
+- outputs
+	- **Q** the value of the internal state
+	- **$\overline{Q}$** the complement of $Q$
+
+![[D latch (NOR).png|200]]
+
+
+- this sturcture is called a **transparent latch** 
+
+### Flip-Flop
+
+- Flip-flops are not transparent: their outputs change only on the clock edge
+- The **setup time** $t_{\text{setup}}$ is the minimum time that the input signal must be valid before the clock edge
+- The **hold time** $t_{\text{hold}}$ is the minimum time during which the input signal must be valid after the clock edge. (hold times are usually zero or very small)
+- An input is **valid** (or **stable**)
+#### D Flip-Flop
+
+A **D flip-flop** (**data** or **delay** flip-flop)
+
+![[D flip-flop.png|350]]
+
+- $D$ is the data input to be stored
+- $Q$ is the current data stored in the flip-flop
+
+### Register File
+
+- A **register** is a memory element that can hold a multibit datum (such as a byte or a word)  
+- A register file consists of a set of registers that can be read and written by supplying a register number to be accessed. it can be implemented with a decoder for each read and write port, and an array of registers built from D flip-flops
+- _read port_: the _read register number_ input connected as the selector of $n$-to-1 multiplexor with $n$ registers as data inputs of the multiplexor that outputs the _read data_
+
+
+![[Register File (read).png|300]]
+- _write port_: the _register number_ input is implemented using a using a $n$-to-$2^n$ decoder that each one of its $n$ outputs is connected with the _write enable_ signal using an AND gate to the clock input of the corresponding register flip-flop. and the _register data_ input is connected to the data input of the corresponding register flip-flop.
+
+![[Register File (write).png]]

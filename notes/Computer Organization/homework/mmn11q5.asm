@@ -6,6 +6,12 @@ sep: .asciiz " "
 newline: .asciiz "\n"
 minus: .asciiz "-"
 
+# msg
+msg_sign: .asciiz "print_array_sign: "
+msg_unsign: .asciiz "print_array_unsign: "
+msg_sign_sum: .asciiz "sign_sum: "
+msg_unsign_sum: .asciiz "unsign_sum: "
+
 .text
 .globl main
 
@@ -26,39 +32,49 @@ main:
     bgt $t0, $t2, main # If input > 10, retry
 
     move $s0, $t0        # Store base
-
-    # Print array unsigned
-    la $s1, array        # Load address of the array
-    li $s2, 10           # Set the number of elements in the array
-    jal print_array_unsign # Print array in the specified base
-
-    # Print newline
-    li $v0, 4
-    la $a0, newline
-    syscall
-
+    
     # Print array signed
+    li $v0, 4
+    la $a0, msg_sign
+    syscall
     la $s1, array        # Load address of the array
     li $s2, 10           # Set the number of elements in the array
     jal print_array_sign # Print array in the specified base
-
-    # Print newline
     li $v0, 4
     la $a0, newline
     syscall
 
+    # Print array unsigned
+    li $v0, 4
+    la $a0, msg_unsign
+    syscall
+    la $s1, array        # Load address of the array
+    li $s2, 10           # Set the number of elements in the array
+    jal print_array_unsign # Print array in the specified base
+    li $v0, 4
+    la $a0, newline
+    syscall
+
+
     # Print sum of array (signed)
+    li $v0, 4
+    la $a0, msg_sign_sum
+    syscall
     la $s1, array        # Load address of the array
     jal sign_sum # Print sum of array
-
-    # Print newline
     li $v0, 4
     la $a0, newline
     syscall
 
     # Print sum of array (unsigned)
+    li $v0, 4
+    la $a0, msg_unsign_sum
+    syscall
     la $s1, array        # Load address of the array
     jal unsign_sum # Print sum of array
+    li $v0, 4
+    la $a0, newline
+    syscall
 
     # Exit
     li $v0, 10           # Exit syscall
@@ -166,32 +182,33 @@ unsign_sum:
 # $t0 = sum, $t1 = loop counter, $t2 = loop condition, $t3 = array element address, $t4 = array element
 sign_sum:
     li $t0, 0           # Initialize sum
-    li $t1, 0          # Initialize loop counter
+    li $t1, 0           # Initialize loop counter
 sign_sum_LOOP:
-    slti $t2, $t1, 10     # Check if $t1 < 10
+    slti $t2, $t1, 10   # Check if $t1 < 10
     beq $t2, $zero, sign_sum_ENDLOOP # Exit loop if $t1 >= 10
-    add $t3, $s1, $t1       # Calculate address of array element (1-byte step)
-    lb $t4, 0($t3)        # Load array element into $t4
-    add $t0, $t0, $t4     # Add array element to sum
-    addi $t1, $t1, 1      # Increment loop counter
-    j sign_sum_LOOP       # Continue loop
+    add $t3, $s1, $t1   # Calculate address of array element
+    beqz $a2, SIGNED_MODE # If $a2 == 0, use signed mode
+    lbu $t4, 0($t3)     # Load unsigned byte into $t4
+    j ADD_TO_SUM
+SIGNED_MODE:
+    lb $t4, 0($t3)      # Load signed byte into $t4
+ADD_TO_SUM:
+    addu $t0, $t0, $t4  # Add element to sum
+    addi $t1, $t1, 1    # Increment loop counter
+    j sign_sum_LOOP     # Continue loop
 sign_sum_ENDLOOP:
-    addi $sp, $sp, -4     # Allocate stack space
-    sw $ra, 0($sp)        # Save return address
-    move $a3, $t0         # Move sum to $a3
-    move $a1, $s0         # Move base to $a1
-    bgez $a3, sign_sum_POS # if the sum is positive or zero, jump to sign_sum_POS
-    bnez $a2, sign_sum_POS # If unsigned, jump to sign_sum_POS
-    # Print "-" sign syscall
-    li $v0, 4             
+    addi $sp, $sp, -4   # Allocate stack space
+    sw $ra, 0($sp)      # Save return address
+    move $a3, $t0       # Move sum to $a3
+    move $a1, $s0       # Move base to $a1
+    bgez $a3, sign_sum_POS # If sum is positive, jump
+    bnez $a2, sign_sum_POS # If unsigned, jump
+    li $v0, 4           # Print "-" sign syscall
     la $a0, minus
     syscall
-    neg $a3, $a3          # Convert to positive value
+    neg $a3, $a3        # Convert sum to positive
 sign_sum_POS:
-    jal print_base        # Print absolute value in base
-    # restore return address and stack pointer
-    lw $ra, 0($sp)      
-    addi $sp, $sp, 4
-    # return to caller
-    jr $ra
-
+    jal print_base      # Print sum in the specified base
+    lw $ra, 0($sp)      # Restore return address
+    addi $sp, $sp, 4    # Deallocate stack space
+    jr $ra              # Return to caller
