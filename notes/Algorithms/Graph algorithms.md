@@ -326,3 +326,65 @@ While Q ≠ ∅:
 	- It is slower than Dijkstra's algorithm for the same problem, but more versatile, as it is capable of handling graphs in which some of the edge weights are negative numbers
 - If there is a negative cycle reachable from $s$, then there is no shortest path from $s$ to any node, and $\text{dist}(v)=-\infty$
 
+
+https://en.wikipedia.org/wiki/Topological_sorting
+
+```
+# Bellman-Ford Algorithm
+Input: G = (V, E) weighted directed graph without negative cycles, source node s
+Output: shortest-paths T = (V, E_T) tree rooted at s
+Runnning time: O(|V|*|E|)
+---
+d(u) = ∞ for each u ∈ V
+d(s) = 0
+π(u) = null for each u ∈ V
+for i = 1 to |V| - 1:
+    for each edge (v, z) ∈ E:
+        if d(v) + w(v, z) < d(z):
+            d(z) = d(v) + w(v, z)
+            π(z) = v
+            
+```
+
+- Theorem: Let $G=(V,E)$ be a weighted directed graph without negative cycles, and let $s$ be a source node. Bellman-Ford algorithm correctly computes the shortest path from $s$ to all other nodes in $G$.
+	- Lemma: After $\ell$ iterations of the outer loop of the Bellman-Ford algorithm, for each node $v\in{V}$, $\text{dist}(v)$ is the length of the shortest path from $s$ to $v$ that has at most $\ell$ edges.
+		- Proof: By induction on $\ell$.
+- Proof: By the lemma, after $|V|-1$ iterations, $\text{dist}(v)$ is the length of the shortest path from $s$ to $v$ that has at most $|V|-1$ edges. Since the shortest path has at most $|V|-1$ edges, it has at most $|V|$ vertices, and so the shortest path has no cycles. Therefore, the shortest path is a simple path, and so the Bellman-Ford algorithm computes the correct shortest path from $s$ to all other nodes in $G$.
+
+# Minimum Spanning Tree Problem
+
+- Th problem is to find a [[Graphs#Minimum Spanning Tree|minimum spanning tree]] $T$ for a connected undirected graph $G=(V,E)$ with weights on the edges. (the weights are non-negative)
+## Prim's Algorithm
+
+```
+for each v ∈ V:
+  C[v] = ∞ # the cheapest cost of a connection to v
+  E[v] = null # the edge that connects v to the tree
+
+initialize an empty forest F
+initialize a set Q = V # vertices not yet in F
+
+while Q ≠ ∅:
+  u = the vertex in Q with the smallest C[u]
+  remove u from Q
+  add u to F
+  for each neighbor v of u:
+    if v ∈ Q and w(u, v) < C[v]:
+      C[v] = w(u, v)
+      E[v] = (u, v)
+
+return F, which specifically includes the corresponding edges in E
+```
+
+
+- A **cut** $(S, V-S)$ of a graph $G=(V,E)$ is a partition of $V$ into two sets $S$ and $V-S$.
+	- An edge $(u,v)\in E$ **crosses** the cut $(S,V-S)$ if $u\in S$ and $v\in V-S$.
+	- A cut **respects** a set of edges $A$ if no edge in $A$ crosses the cut.
+	- An edge $(u,v)$ is a **light edge** crossing a cut if its weight is the minimum of all the weights of the edges crossing the cut. 
+		- (More generally, an edge is a **light edge** satisfying a given property if its weight is the minimum of all the weights of the edges satisfying that property.)
+- An edge $(u,v)$ is **safe** for a set of edges $A$ that is a subset of some MST if $A\cup\{(u,v)\}$ is also a subset of some MST.
+- Theorem: Let $A$ be a subset of $E$ that is included in some MST for $G$, and let $(S,V-S)$ be any cut of $G$ that respects $A$. 
+	- Let $e=(u,v)$ be a light edge crossing $(S,V-S)$. Then $e$ is safe for $A$. 
+		- If $e$ is an unique light edge, then $e$ is in every MST of $G$.
+ 
+

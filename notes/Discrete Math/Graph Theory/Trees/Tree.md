@@ -1,4 +1,4 @@
-- A **tree** is an undirected graph $G=(V,E)$ that satisfies any of the following equivalent conditions:
+- A **tree** (or **free tree**) is an undirected graph $G=(V,E)$ that satisfies any of the following equivalent conditions:
 	- $G$ is connected, acyclic (contain no cycles)
 - Let $G=(V,E)$ be an undirected graph with finite number of vertices.
 	- Any two of the following statements imply the third:

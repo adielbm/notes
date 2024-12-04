@@ -107,6 +107,7 @@ A **complete graph** is a simple undirected graph in which every pair of distinc
 	- The edge $(u,v)$ is called the **inverted edge** of $(v,u)$.
 - All the definitions of _walk_, _trail_, and _path_ carry over to directed graphs (and said to be **directed**) with the additional requirement that the edges must be traversed in the correct direction.
 	- If $w$ is a directed walk with vertex sequence $v_0,\ldots,v_k$, then $w$ is said to be a _walk from $v_0$ to $v_k$_. (The same for _trail_ and _path_.)
+- A **dag** is a directed acyclic graph.
 
 ### Connectivity
 
@@ -114,6 +115,7 @@ A **complete graph** is a simple undirected graph in which every pair of distinc
 - A directed graph is **strongly connected** if every pair of distinct nodes is mutually reachable.
 - If $u$ and $v$ are are mutually reachable, and $v$ and $w$ are mutually reachable, then $u$ and $w$ are mutually reachable.
 - The **strong component** containing a node $s$ in a directed graph is the set of all nodes in which each node is mutually reachable with $s$.
+
 
 # Weighted Graph
 
@@ -125,13 +127,16 @@ A **complete graph** is a simple undirected graph in which every pair of distinc
 
 # Spanning tree
 
-- A **spanning tree** $T$ of an undirected graph $G=(V,E)$ is a subgraph that is a tree which includes all of the vertices of $G$.
+- A **spanning tree** $T$ (of an undirected graph $G=(V,E)$) is a subgraph that is a tree which includes all of the vertices of $G$.
 - A non-connected graph has no spanning tree
 - A tree has a unique spanning tree and it is itself.
+
+## Minimum Spanning Tree
+
 - A **minimum spanning tree** (**MST**) or **minimum weight spanning tree** $T$ is a spanning tree of a weighted graph such that the sum of the weights of the sum of the weights of the edges in the tree is minimized
 
 
-# Shortest-path tree
+# Shortest path tree
 
-- A **shortest-path tree** rooted at $v$ of a weighted undirected graph $G$ is a spanning tree $T$ of $G$ such that the path weight from $v$ to every other vertex in $T$ is the shortest path weight from $v$ to that vertex in $G$.
+- A **shortest path tree** rooted at $v$ of a weighted undirected graph $G$ is a spanning tree $T$ of $G$ such that the path weight from $v$ to every other vertex in $T$ is the shortest path weight from $v$ to that vertex in $G$.
 
