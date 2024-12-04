@@ -1,8 +1,8 @@
 .data
-array: .byte -5, -4, -3, -2, -1, 0, 1, 2, 3, 4
+array: .byte -128, 127, -127, -128, 0, -0, 100, -100, 32, -32
 prompt: .asciiz "In what base to print (2-10)?"
 buffer: .space 32
-sep: .asciiz ", "
+sep: .asciiz " "
 newline: .asciiz "\n"
 minus: .asciiz "-"
 
@@ -42,10 +42,30 @@ main:
     li $s2, 10           # Set the number of elements in the array
     jal print_array_sign # Print array in the specified base
 
+    # Print newline
+    li $v0, 4
+    la $a0, newline
+    syscall
+
+    # Print sum of array (signed)
+    la $s1, array        # Load address of the array
+    jal sign_sum # Print sum of array
+
+    # Print newline
+    li $v0, 4
+    la $a0, newline
+    syscall
+
+    # Print sum of array (unsigned)
+    la $s1, array        # Load address of the array
+    jal unsign_sum # Print sum of array
+
+    # Exit
     li $v0, 10           # Exit syscall
     syscall
 
 # Print a number in the given base
+# args: $a1 = base, $a3 = number
 print_base:
     addi $sp, $sp, -16   # Allocate stack space
     sw $ra, 12($sp)      # Save return address
@@ -84,7 +104,7 @@ print_array_unsign:
     addi $sp, $sp, -4     # Allocate stack space
     sw $ra, 0($sp)        # Save return address
 
-print_array_unsign_loop:
+print_array_unsign_LOOP:
     lbu $a3, 0($s1)       # Load number from array
     move $a1, $s0         # Move base to $a1
     jal print_base        # Print number in base
@@ -94,28 +114,26 @@ print_array_unsign_loop:
     syscall
     addi $s1, $s1, 1      # Move to next element in array
     subi $s2, $s2, 1      # Decrement counter
-    bnez $s2, print_array_unsign_loop # Continue until all elements are printed 
+    bnez $s2, print_array_unsign_LOOP # Continue until all elements are printed 
     lw $ra, 0($sp)        # Restore return address
     jr $ra
 
+# print_array_sign: Print the array with a sign
 print_array_sign:
-    addi $sp, $sp, -4     # Allocate stack space
-    sw $ra, 0($sp)        # Save return address
-
-print_array_sign_loop:
+    # allocate stack space and save return address
+    addi $sp, $sp, -4     
+    sw $ra, 0($sp)        
+print_array_sign_LOOP:
     lb $a3, 0($s1)        # Load number from array
     move $a1, $s0         # Move base to $a1
-    bltz $a3, print_negative # Check if the number is negative
-    jal print_base        # Print number in base (positive case)
-    j print_sign_next     # Skip printing the '-' sign
-
-print_negative:
-    li $v0, 4             # Print "-" sign syscall
+    bgez $a3, print_POS # Check if the number is positive, if not:
+    # Print "-" sign syscall
+    li $v0, 4             
     la $a0, minus
     syscall
     neg $a3, $a3          # Convert to positive value
+print_POS:
     jal print_base        # Print absolute value in base
-
 print_sign_next:
     # Print separator
     li $v0, 4            
@@ -123,8 +141,57 @@ print_sign_next:
     syscall
     addi $s1, $s1, 1      # Move to next element in array
     subi $s2, $s2, 1      # Decrement counter
-    bnez $s2, print_array_sign_loop # Continue until all elements are printed 
-
+    bnez $s2, print_array_sign_LOOP # Continue until all elements are printed 
     lw $ra, 0($sp)        # Restore return address
     addi $sp, $sp, 4      # Restore stack
     jr $ra
+
+unsign_sum:
+    li $a2, 1 # flag for unsigned
+    # stack space allocation
+    addi $sp, $sp, -4
+    sw $ra, 0($sp)
+    # call sign_sum
+    jal sign_sum
+    # restore return address and stack pointer
+    lw $ra, 0($sp)
+    addi $sp, $sp, 4
+    # return to caller
+    jr $ra
+
+# sign_sum: Print the sum of the array
+# args: 
+#    $s1 = array address
+#    $a2 = is_unsigned ? 1 : 0  
+# $t0 = sum, $t1 = loop counter, $t2 = loop condition, $t3 = array element address, $t4 = array element
+sign_sum:
+    li $t0, 0           # Initialize sum
+    li $t1, 0          # Initialize loop counter
+sign_sum_LOOP:
+    slti $t2, $t1, 10     # Check if $t1 < 10
+    beq $t2, $zero, sign_sum_ENDLOOP # Exit loop if $t1 >= 10
+    add $t3, $s1, $t1       # Calculate address of array element (1-byte step)
+    lb $t4, 0($t3)        # Load array element into $t4
+    add $t0, $t0, $t4     # Add array element to sum
+    addi $t1, $t1, 1      # Increment loop counter
+    j sign_sum_LOOP       # Continue loop
+sign_sum_ENDLOOP:
+    addi $sp, $sp, -4     # Allocate stack space
+    sw $ra, 0($sp)        # Save return address
+    move $a3, $t0         # Move sum to $a3
+    move $a1, $s0         # Move base to $a1
+    bgez $a3, sign_sum_POS # if the sum is positive or zero, jump to sign_sum_POS
+    bnez $a2, sign_sum_POS # If unsigned, jump to sign_sum_POS
+    # Print "-" sign syscall
+    li $v0, 4             
+    la $a0, minus
+    syscall
+    neg $a3, $a3          # Convert to positive value
+sign_sum_POS:
+    jal print_base        # Print absolute value in base
+    # restore return address and stack pointer
+    lw $ra, 0($sp)      
+    addi $sp, $sp, 4
+    # return to caller
+    jr $ra
+
