@@ -125,6 +125,7 @@
 	- A **dual in-line package** (DIP) is a package with two parallel rows of pins
 - A **discrete** component is an electronic device containing only a single element, such as a transistor or a resistor
 
+
 # Combinational Logic
 
 ## Decoder
@@ -174,7 +175,7 @@
 > [!EXERCISE] Exercise
 > Implement a 3-to-8 decoder using two 2-to-4 decoders that have an _enable_ input. (how can we implement an enable over the 2-to-4 decoder?)
 
-## Multiplexors
+## Multiplexor
 
 - A $n$-to-$1$ **multiplexor** (or **multiplexer**, **mux**, **data selector**) is a logic block consisting of: 
 	- $n$ **data inputs** lines labeled $I_0, I_1, \ldots, I_{n-1}$
@@ -191,6 +192,14 @@
 > ![[2-to-1 mux.png|400]]
 > - (left) A 2-to-1 multiplexor with two data inputs ($A$ and $B$, labeled $0$ and $1$), a select line $S$, and an output $C$. 
 > - (right) Its implementation using logic gates, which can be represented by $C=(A\cdot \overline{S})+(B\cdot S)$
+>  
+> The truth table of the 2-to-1 multiplexor is:
+> 
+> | $S$ | $C$ |
+> | --- | --- |
+> | 0   | $A$ |
+> | 1   | $B$ |
+
 
 > [!EXERCISE] Exercise: 4-to-1 multiplexor
 > Draw an implementation using logic gates of 4-to-1 multiplexor with four data inputs ($I_0, I_1, I_2, I_3$), two select lines ($S_0, S_1$), and an output $O$.
@@ -376,7 +385,12 @@ Rather than drawing all the gates, designers often show just the position of AND
 | 1   | 1   | 0               | 0   | 1                |
 | 1   | 1   | 1               | 1   | 1                |
 
+#### Ripple-carry adder
 
+#todo 
+#### Carry-lookahead adder
+
+#todo 
 # ALU 
 
 ![[ALU#ALU Summary]]
@@ -390,6 +404,12 @@ Rather than drawing all the gates, designers often show just the position of AND
 - The **clocking methodology** is the approach used to determine 
 	- **Edge-triggered clocking**: all state changes occur on a clock edge, either **rising edge** or **falling edge**. (note: our default is _rising edge_, but sometimes we'll use _falling edge_)
 - A **clock generator** is an electronic oscillator producing a periodic clock signal
+
+- A **signal edge** is the transition of a signal from one level to another
+	- A **rising edge** (or **positive edge**) is the transition from low to high
+	- A **falling edge** (or **negative edge**) is the transition from high to low
+
+
 
 - A **sequential logic** is
 	- The **state** of a sequential logic is the current value of the memory elements
@@ -423,18 +443,25 @@ Rather than drawing all the gates, designers often show just the position of AND
 ### D Latch
 
 - inputs
-	- **D** data value
-	- **C** clock signal - indicates when the latch should read the value of D and store it
-		- when $C$ is asserted, the latch is said to be **open**, and the value of $Q$ is updated to the value of $D$
-		- when $C$ is deasserted, the latch is said to be **closed**, and the value of $Q$ is whatever value was last stored in the latch
+	- $D$ data value
+	- $C$ is the clock signal - indicates when the latch should read the value of D and store it
+		- when $C=1$ (asserted), the latch is said to be **open** (or **transparent**), and the value of $Q$ is updated to the value of $D$
+		- when $C=0$ (deasserted), the latch is said to be **closed** (or **opaque**), and the value of $Q$ is whatever value was last stored in the latch
 - outputs
 	- **Q** the value of the internal state
 	- **$\overline{Q}$** the complement of $Q$
+- this sturcture is called a **transparent latch** (or **level-sensitive latch**)
+
 
 ![[D latch (NOR).png|200]]
 
+| $C$ | $D$ | $Q$ | $\overline{Q}$ |
+| --- | --- | --- | -------------- |
+| 0   | $x$ | $Q$ | $\overline{Q}$ |
+| 1   | 0   | 0   | 1              |
+| 1   | 1   | 1   | 0              |
 
-- this sturcture is called a **transparent latch** 
+
 
 ### Flip-Flop
 
@@ -444,21 +471,48 @@ Rather than drawing all the gates, designers often show just the position of AND
 - An input is **valid** (or **stable**)
 #### D Flip-Flop
 
-A **D flip-flop** (**data** or **delay** flip-flop)
+- A **D flip-flop** (**data** or **delay** flip-flop) 
+- consists of two D latches (master and slave) connected in series, with the $Q$ output of the master connected to the $D$ input of the slave. and a clock signal connected to both latches, but inverted in the slave latch.
 
-![[D flip-flop.png|350]]
+ ![[D flip-flop (falling-edge).png|350]]
 
 - $D$ is the data input to be stored
 - $Q$ is the current data stored in the flip-flop
+- $C$ (or $CLK$) is the clock signal
+
+>there is also d flip-flop with enable 
 
 ### Register File
 
-- A **register** is a memory element that can hold a multibit datum (such as a byte or a word)  
-- A register file consists of a set of registers that can be read and written by supplying a register number to be accessed. it can be implemented with a decoder for each read and write port, and an array of registers built from D flip-flops
+- A **register** is a memory element that can hold a multibit datum of $n$ bits (such as a byte or a word), and it can be read and written. It can be implemented using $n$ D flip-flops, each storing one bit.
+- A register file consists of a set of registers that can be read and written by supplying a register number to be accessed. it can be implemented with a decoder for each read and write port, and an array of registers
+- In MIPS, a register file has $32$ registers, each storing a $32$-bit value, that is $32^2=1024$ bits in total implemented $1024$ D flip-flops where all connected to the same clock signal.
+- In MIPS, we define a special register called **zero** that always contains the value zero, and it cannot be written to. (we do not present its implementation here)
+
+#### Register Read
+
 - _read port_: the _read register number_ input connected as the selector of $n$-to-1 multiplexor with $n$ registers as data inputs of the multiplexor that outputs the _read data_
+- for $n$ registers of $m$ bits, a $\lfloor\log n\rfloor$-bit _Read Register Number_ input is used as the selector for $n$-to-1 multiplexor that outputs $m$-bit _Read Data_
+
 
 
 ![[Register File (read).png|300]]
-- _write port_: the _register number_ input is implemented using a using a $n$-to-$2^n$ decoder that each one of its $n$ outputs is connected with the _write enable_ signal using an AND gate to the clock input of the corresponding register flip-flop. and the _register data_ input is connected to the data input of the corresponding register flip-flop.
+
+- In MIPS, Two 5-bit lines (`read register 1` and `read register 2`) specify which registers to read (values between 0 and 31), using two 32-to-1 multiplexors.
+- If `read register 1` and `read register 2` are the same, both outputs will contain the same value.
+
+#### Register Write
+
+- _write port_
+- A _Clock_ signal is connected to the clock input of all flip-flops
+	- TODO: does not appear in this diagram, but it is connected to the clock input of all flip-flops instead of the AND output, which will be connected to E in the actual implementation.
+- A _Write Enable_ signal (will be called later _RegWrite_)
+- A _Register Number_ input ($\lfloor\log n\rfloor=5$ bits) is implemented using a using a $\lfloor\log n\rfloor$-to-$n$ decoder (5-to-32) that each one of its $n=32$ outputs is connected with the _Write Enable_ signal using an AND gate to the clock input of the corresponding register flip-flop. 
+- A _Register Data_ input (32 bits) is connected to the data input of the corresponding register flip-flop.
+
 
 ![[Register File (write).png]]
+
+
+
+

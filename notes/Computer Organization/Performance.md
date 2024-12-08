@@ -1,36 +1,21 @@
 # CPU Performance
 
-- **clock cycle (time)** is the time for one clock period (usually of the processor clock, which runs at a constant rate, usually published as part of the documentation for a computer)
+- The **clock cycle** time (CCT) is the time for one clock period (usually of the processor clock, which runs at a constant rate, usually published as part of the documentation for a computer)
 	- note: Although clock cycle time has traditionally been fixed, to save energy or temporarily boost performance, today’s processors can vary their clock rates, so we would need to use the average clock rate for a program.
-- **clock rate** (CR) is the inverse of the clock cycle time (usually measured in $\mathsf{Hz}$ or its multiples)
+- The **clock rate** (CR) is the inverse of the clock cycle time (usually measured in $\mathsf{Hz}$ or its multiples)
+- The **response time** (or **execution time**) is the total time required for the computer to complete a task (including disk accesses, memory accesses, I/O activities, operating system overhead, CPU execution time, etc.)
+- The **performance** is the reciprocal of response time $$\text{Performance}_X = \frac{1}{\text{Response time}_X}$$
+- The **CPU (execution) time** (of task) is the actual time the CPU spends computing for a specific task (excluding other activities) 
+- The **throughput** (or **bandwidth**) is the number of tasks completed per unit time
+- Given some program in the CPU: $$\text{CPU clock cycles} = \text{IC} \times \text{CPI}$$
+	- **instruction count** (IC) is the number of instructions executed by the program
+	- The **clock cycles per instruction** (CPI) is the average number of clock cycles per instruction for a program or program fragment
+	- The **CPU clock cycles** (or **total clock cycles**) is the total number of clock cycles consumed by the program 
+	- The **CPU (execution) time** (of program) is $$\text{CPU execution time} = \text{CPU clock cycles} \times \text{Clock cycle time}=\frac{\text{CPU clock cycles}}{\text{Clock rate}}$$
 
 
-- **response time** (or **execution time**) is the total time required for the computer to complete a task (including disk accesses, memory accesses, I/O activities, operating system overhead, CPU execution time, etc.)
-- **performance** is the reciprocal of response time $$\text{Performance}_X = \frac{1}{\text{Response time}_X}$$
-
-- **CPU (execution) time** (of task) is the actual time the CPU spends computing for a specific task (excluding other activities) 
-- **throughput** (or **bandwidth**) is the number of tasks completed per unit time
-
-#### Program Performance
-
-In this subsection, we refer to the performance of some program in a the CPU.
-$$\text{CPU clock cycles} = \text{IC} \times \text{CPI}$$
-
-- **instruction count** (IC) is the number of instructions executed by the program
-- **cycles per instruction** (CPI) is the average number of clock cycles per instruction for a program or program fragment
-- **CPU clock cycles** is the total number of clock cycles consumed by the program 
-
-
-- **CPU (execution) time** (of program) is $$\text{CPU time for program} = \text{CPU clock cycles} \times \text{Clock cycle time}=\frac{\text{CPU clock cycles}}{\text{Clock rate}}$$
-
-
-# CPU Time
-
-
-
-
-
-
+> The number of instructions in the program (IC) is determined by the efficiency of the algorithm implementation, the compiler, and the processor's instruction set architecture (ISA). 
+> The implementation of the processor determines both the clock cycle time and the CPI.
 
 
 # Problem Solving

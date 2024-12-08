@@ -9,7 +9,7 @@
 
 ## Atomic Particles
 
-| Subatomic particle | Symbol | [[Electricity#Electric charge\|Charge]] | Mass (u)                       | Location in atom |
+| Subatomic particle | Symbol | [[Circuits#Electric charge\|Charge]] | Mass (u)                       | Location in atom |
 | ------------------ | ------ | ----------------------------------------------- | ------------------------------ | ---------------- |
 | Proton             | $p^+$  | $+1$                                            | $1.007276466812$               | Nucleus          |
 | Neutron            | $n^0$  | $0$                                             | $1.00866491588$                | Nucleus          |

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Amiri:ital@0;1&display=swap');
 
 /* Print CSS */
-@media print {
+/*@media print {
   body {
     --font-text-theme: "Amiri", serif;
     --font-text-size: 21px !important;
@@ -9,7 +9,7 @@
     --heading-spacing: 0;
     --p-spacing: 0;
   }
-}
+}*/
 
 .theme-dark .internal-embed.image-embed img {
     filter: invert(1) hue-rotate(180deg);
