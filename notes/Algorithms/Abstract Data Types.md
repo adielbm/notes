@@ -86,7 +86,13 @@
 		- Adjacency lists require $O(n+m)$ space
 
 
-| | Adjacency Matrix | Adjacency List |
-| -- |------------------|----------------|
-| Space | $\Theta(n^2)$ | $O(n+m)$ |
-| Check if $(u,v)\in{E}$ | $O(1)$ | $O(n_v)$ |
+|                        | Adjacency Matrix | Adjacency List |
+| ---------------------- | ---------------- | -------------- |
+| Space                  | $\Theta(n^2)$    | $O(n+m)$       |
+| Check if $(u,v)\in{E}$ | $O(1)$           | $O(n_v)$       |
+##### Directed Graph Representation
+
+- We can use a version of _adjacency list_ representation for directed graphs, which is, instead of each node having a single list of neighbors, each node has two lists associated with it:  
+	- `AdjOut[v]` contains all the vertices $u$ such that $(v,u)\in{E}$ (outgoing edges)
+	- `AdjIn[v]` contains all the vertices $u$ such that $(u,v)\in{E}$ (incoming edges)
+
