@@ -1,58 +1,44 @@
 # Electrical Circuits
 
-- elements of an electric circuit:
-    - A **branch** represents a single two-terminal element (such as a voltage source or a resistor)
-    - A **node** (or **junction**) is the point of connection between two or more branches
-        - Nodes that are connected by perfectly conducting wires are considered to be the same node
-- classification of elements:
-    - terminals number:
-        - One-port elements (two terminals)
-                - dioes, resistors, capacitors, inductors
-        - Two-port elements (four terminals)
-        - Multiport elements
-    - energy source:
-        - **passive elements** do not have a source of energy
-                - dioes, resistors, capacitors, inductors
-        - **active elements** (or **sources**) have a source of energy
-                - voltage sources, current sources
-                - dependent sources
-    - linearity:
-        - **linear elements** have a linear relationship between voltage and current
-            - resistors, capacitors, inductors
-        - **nonlinear elements** are elements in which the relation between voltage and current is a nonlinear function
-            - dioes
-
-
+- An **electrical component** is a 
+- An **electrical element** is a 
+- An **electrical network** is an interconnection of electrical components or a model of such an interconnection, consisting of electrical elements
+- An **electrical circuit** is a network consisting of a closed loop, giving a return path for the current. 
+- A **branch** represents a single two-terminal element (such as a voltage source or a resistor)
+- A **node** (or **junction**) represents a connection between two or more branches
+	- Nodes that are connected by perfectly conducting wires are considered to be the same node
+- A **reference node**
+- A **mesh**
+- A **loop**
 - A **short circuit** is a circuit element with resistance approaching zero, so $\displaystyle I=\lim_{R\to 0}\frac{V}{R}=\infty$
 - An **open circuit** is a circuit element with resistance approaching infinity, so $\displaystyle I=\lim_{R\to \infty}\frac{V}{R}=0$
 
-- #todo
-    - Components of an electrical circuit
-        - Voltage source
-            - Terminals:
-                - Positive voltage terminal (higher voltage)
-                - Negative voltage terminal (lower voltage)
-    - Passive sign convention (PSC)
-        - electric power is positive if it flows out of the circuit into an electrical component
-        - electric power negative if it flows into the circuit out of a component
-        - Passive components (loads) will have positive power dissipation ($p>0$) and positive resistance ($r>0$)
-        - Active components (sources) will have negative power dissipation ($p<0$) and negative resistance ($r<0$)
-        - The **conventional current** variable $i$:
-            - If $i$ is defined such that positive current enters the device through the positive voltage terminal:
-                - $p=vi$ and $r=\frac{v}{i}$
-            - If $i$ is defined such that positive current enters the device through the negative voltage terminal:
-                - $p=-vi$ and $r=-\frac{v}{i}$
 
 
-```
-\usepackage{color,graphicx,circuitikz}
-\begin{document}
-\begin{circuitikz}[american]
-\draw (0,0) to [V, l={$v$}](2,0) to[short, =>, i=$i$](3,0);
-\end{circuitikz}
-\end{document}
-```
+> [!Terminology] 
+> In some texts, a _node_ is defined to be the junction between 3 or more elements. Another term for that is an _essential node_
+> In this text, a _node_ is defined to be the junction between 2 or more elements, by thisdefinition, some nodes may be redundant (i.e. not independent)
 
+##### Electrical Elements
+
+classification of elements:
+
+- terminals number:
+	- One-port elements (two terminals)
+			- dioes, resistors, capacitors, inductors
+	- Two-port elements (four terminals)
+	- Multiport elements
+- energy source:
+	- **passive elements** do not have a source of energy
+			- dioes, resistors, capacitors, inductors
+	- **active elements** (or **sources**) have a source of energy
+			- voltage sources, current sources
+			- dependent sources
+- linearity:
+	- **linear elements** have a linear relationship between voltage and current
+		- resistors, capacitors, inductors
+	- **nonlinear elements** are elements in which the relation between voltage and current is a nonlinear function
+		- dioes
 # Kirchhoff's Circuit Laws
 
 - **Kirchhoff's (circuit) laws** (or **Kirchhoff's rules**) are two equalities that deal with the current and potential difference.

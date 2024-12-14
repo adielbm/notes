@@ -8,19 +8,19 @@
 - The SI unit of current is the **ampere** (abbreviated $\mathsf{amp}$ or $\mathsf{A}$), defined as $\mathsf{1\ A = 1\ C/s}$
 - A current is **positive** if it flows from the positive terminal of a voltage source to the negative terminal
 
+## Conventional current
 
-- #todo 
-	- **electric current** (aka: **conventional current**) is a flow of electric charge
-		- The direction of conventional current is that of positive charge flow.
-		- electric current from $+$ to $-$ is equivalent to a negative electron flow from $-$ to $+$
-		- conventional current combines the effects of electron, ion, proton, and hole flows all into one number.
-		- Positive conventional current always flows from a high potential to a low potential.
-		- conventional current is not the opposite of electron current
-		- Electron current is a subset of conventional current. 
-	- A 19th-century convention, still in use, treats any electric current as a flow of positive charge from a region of positive potential to one of negative potential.
-		- The real motion, however, in the case of electrons flowing through a metal conductor, is in the opposite direction, from negative to positive.
+- The conventional direction of current, also known as **conventional current**, is arbitrarily defined as the direction in which positive charges flow
 
-### Alternating Current
+	- electric current from $+$ to $-$ is equivalent to a negative electron flow from $-$ to $+$
+	- conventional current combines the effects of electron, ion, proton, and hole flows all into one number.
+	- Positive conventional current always flows from a high potential to a low potential.
+	- conventional current is not the opposite of electron current
+	- Electron current is a subset of conventional current. 
+- A 19th-century convention, still in use, treats any electric current as a flow of positive charge from a region of positive potential to one of negative potential.
+	- The real motion, however, in the case of electrons flowing through a metal conductor, is in the opposite direction, from negative to positive.
+
+## Alternating Current (AC)
 
 - $V=V_0\sin(\omega t)$ is the voltage of an alternating current (see [[Waves#Sine Wave|sine wave]])
 	- $V_0$ is the **peak voltage** (in $\mathsf{V}$) (the _amplitude_)

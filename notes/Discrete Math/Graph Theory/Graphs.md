@@ -55,11 +55,10 @@
 - A **trail** (מסלול) is a walk in which all edges are distinct.
 	- A **path** (מסלול פשוט) is a trail in which all vertices (and therefore also all edges) are distinct. 
 	- A **circuit** (מעגל, מסלול סגור) is a non-empty trail in which the first and last vertices are equal.
-	- A **cycle** (מעגל פשוט) is a non-empty trail in which only the first and last vertices are equal.
+	- A **cycle** (מעגל פשוט) is a non-empty trail in which _only_ the first and last vertices are equal.
 		- An **even cycle** is a cycle with an even number of vertices 
 		- An **odd cycle** is a cycle with an odd number of vertices
 - A **cycle graph** is a graph that consists of a single cycle.
-
 
 
 ## Connected Graph
