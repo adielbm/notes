@@ -1,6 +1,4 @@
-
-MMN 11
-ארגון המחשב 25א
+MMN 11 - ארגון המחשב 25א
 
 ___
 # Q1
@@ -26,7 +24,6 @@ bgtz $a3, Zelensky
 # op=0x07 rs=0x07 rt=0x00 imm=0xFFFE
 # op=07 rs=7 rt=0 imm=-2
 
-
 mfhi $t3 
 # 000000 00000 00000 01011 00000 010000 
 # 00000000000000000101100000010000
@@ -37,7 +34,6 @@ mfhi $t3
 # op=0 rs=0 rt=0 rd=11 shamt=0 funct=16
 
 lhu $t2, -12($s6) 
-
 # 100101 10110 01010 1111111111110100
 # 10010110110010101111111111110100
 # 0x96CAFFF4
@@ -56,12 +52,12 @@ jal Zelensky
 # op=3 address=-10
 ```
 
+<div style="page-break-after: always;"></div>
+
+
 # Q2
 
-- for each of of the following pseudoinstructions, find a minimal sequence of native instructions that will perform the same operation.
-- it's likely that you will need to use `$at` register in some of the pseudoinstructions.
-- in the next table, `big` is some number that requires 32 bits to represent, and `small` is some number that requires 16 bits to represent.
-
+.
 
 |                            | Psuedoinstruction    |
 | -------------------------- | -------------------- |
@@ -76,7 +72,6 @@ jal Zelensky
 | `if ($t5 >= $t3) go to L`  | `bge $t5, $t3, L`    |
 | `$t0 = $t2 + big`          | `addi $t0, $t2, big` |
 | `$t5 = memory[$t2 + big]`  | `lw $t5, big($t2)`   |
-
 
 ```mips
 # pseudo
@@ -146,6 +141,7 @@ addu $at, $at, $t2
 lw $t5, [big_lower]($at)
 ``` 
 
+<div style="page-break-after: always;"></div>
 
 # Q3
 
@@ -184,13 +180,3 @@ lw $t5, [big_lower]($at)
 	- `0x00400094 + 4 + (-9 * 4)`
 	- `0x00400094 + 4 - 0x24 = 0x00400074` is the address of `reverse`
 
-# Programming
-
-## Q4
-
-- the two programming exercises are supposed to be written separately: each one in separate `.asm/.s` file.
-- the three files (thisone and the two `.asm/.s` files) are supposed to be zipped zipped and submitted.
-
-#todo 
-
-## Q5
