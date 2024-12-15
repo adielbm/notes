@@ -181,34 +181,34 @@ unsign_sum:
 #    $a2 = is_unsigned ? 1 : 0  
 # $t0 = sum, $t1 = loop counter, $t2 = loop condition, $t3 = array element address, $t4 = array element
 sign_sum:
-    li $t0, 0           # Initialize sum
-    li $t1, 0           # Initialize loop counter
+    li $t0, 0           # init sum
+    li $t1, 0           # init loop counter
 sign_sum_LOOP:
-    slti $t2, $t1, 10   # Check if $t1 < 10
+    slti $t2, $t1, 10   # check if $t1 < 10
     beq $t2, $zero, sign_sum_ENDLOOP # Exit loop if $t1 >= 10
-    add $t3, $s1, $t1   # Calculate address of array element
+    add $t3, $s1, $t1   # calc address of array element
     beqz $a2, SIGNED_MODE # If $a2 == 0, use signed mode
-    lbu $t4, 0($t3)     # Load unsigned byte into $t4
+    lbu $t4, 0($t3)     # load unsigned byte into $t4
     j ADD_TO_SUM
 SIGNED_MODE:
-    lb $t4, 0($t3)      # Load signed byte into $t4
+    lb $t4, 0($t3)      # load signed byte into $t4
 ADD_TO_SUM:
-    addu $t0, $t0, $t4  # Add element to sum
-    addi $t1, $t1, 1    # Increment loop counter
-    j sign_sum_LOOP     # Continue loop
+    addu $t0, $t0, $t4  # add element to sum
+    addi $t1, $t1, 1    # inc loop counter
+    j sign_sum_LOOP     # continue loop
 sign_sum_ENDLOOP:
-    addi $sp, $sp, -4   # Allocate stack space
-    sw $ra, 0($sp)      # Save return address
-    move $a3, $t0       # Move sum to $a3
-    move $a1, $s0       # Move base to $a1
-    bgez $a3, sign_sum_POS # If sum is positive, jump
-    bnez $a2, sign_sum_POS # If unsigned, jump
-    li $v0, 4           # Print "-" sign syscall
+    addi $sp, $sp, -4   # allocate stack space
+    sw $ra, 0($sp)      # save return address
+    move $a3, $t0       # move sum to $a3
+    move $a1, $s0       # move base to $a1
+    bgez $a3, sign_sum_POS # if sum is positive, jump
+    bnez $a2, sign_sum_POS # if unsigned, jump
+    li $v0, 4           # print "-" sign syscall
     la $a0, minus
     syscall
-    neg $a3, $a3        # Convert sum to positive
+    neg $a3, $a3        # convert sum to positive
 sign_sum_POS:
-    jal print_base      # Print sum in the specified base
-    lw $ra, 0($sp)      # Restore return address
-    addi $sp, $sp, 4    # Deallocate stack space
-    jr $ra              # Return to caller
+    jal print_base      # print sum in the specified base
+    lw $ra, 0($sp)      # restore return address
+    addi $sp, $sp, 4    # deallocate stack space
+    jr $ra              # return to caller
