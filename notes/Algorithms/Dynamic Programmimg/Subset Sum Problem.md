@@ -2,9 +2,14 @@
 # Subset Sum Problem
 
 
-- Given $n$ non-negative integers $w_{1}, w_{2},...,w_{n}$ (`arr`) and a target sum $W$ (`target`)
-- The **subset sum problem** is to determine whether there exists a subset $S \subseteq \{1,2,...,n\}$ such that $\displaystyle\sum_{i \in S}w_{i} = W$. 
-	- The subset sum problem is a special case of the knapsack problem, where the weights of the items are equal to their values.
+- Given $n$ objects, where:
+	- $w_i$ is it _weight_ of the $i$ object (non-negative integers) (`arr`)
+- $W$ is the _target weight_ (`target`)
+- $x_i$ is the number of copies of the $i$ object in the backpack
+- (_decision variables_) The goal is to find a sequence $x_1,...,x_n$ (where $x_i$ is the number of copies of the $i$ object) such that:
+	- $x_i \in \{0,1\}$
+	- $\displaystyle\sum_{i=1}^n w_ix_i = W$
+
 - We define a matrix `dp` (`n+1` x `target+1`) where `dp[i][j]` is `True` if there exists there exists a subset of the first `i` elements that sums to `j`, and `False` otherwise.
 
 |       | `0` | `1` | `...` | `j - arr[i-1]`       | `...` | `j`         | `...` | `target` |
@@ -103,51 +108,3 @@ if __name__ == "__main__":
 <iframe src="https://adielbm.github.io/subset-sum-problem-visualization/" width="100%" height="900px"></iframe>
 
 
-# Cassette Problem
-
-Given $n$ non-negative integers $d_{1}, d_{2},...,d_{n}$ (`durations`) and a number `side_capacity`, the **cassette problem** is to determine if there exists a way to divide the songs into two sides such that the total duration of each side does not exceed `side_capacity`.
-
-
-```python
-def cassette_problem(durations, side_capacity):
-    """
-    Solves the cassette problem using the DP table from the subset sum problem. (subset_sum_dp)
-
-	:param durations: List of song durations.
-    :param side_capacity: Maximum duration that can be stored on one side of the cassette.
-	
-	:return: True if the songs can be divided between the two sides, False otherwise.
-    """
-    # Compute total duration
-    total_duration = sum(durations)
-    
-    # Number of Songs
-    n = len(durations)
-
-    # Check trivial cases
-    if side_capacity >= total_duration:
-        return True  # All songs fit on one side
-    if total_duration > 2 * side_capacity:
-        return False  # Total duration exceeds both sides
-
-    # Build the DP table
-    _, dp_table = subset_sum_dp(durations, side_capacity)
-
-    
-    for t in range((total_duration + 1) // 2, side_capacity + 1):
-      if dp_table[n][t]:
-            side1 = subset_sum_dp(durations, t)[0]  # Reconstruct subset for the current 's'
-            side2 = [d for d in durations if d not in side1]
-            return True, side1, side2
-
-    return False, [], []
-
-# Example usage
-if __name__ == "__main__":
-    # Example input: 5 songs with durations [25, 10, 15, 18, 19] and side capacity 45
-    song_durations = [25, 10, 15, 18, 19]
-    side_capacity = 45
-
-    result = cassette_problem(song_durations, side_capacity)
-    print(result)
-```

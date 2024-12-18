@@ -2,7 +2,7 @@
 
 A **vector space** over a [[Field|field]] $F$ is a non-empty set $V$ together with a binary operation and a binary function that satisfy the eight axioms listed below. 
 - In this context, the elements of $V$ are commonly called **vectors**, and the elements of $F$ are called **scalars**.
-- The binary operation, called **vector addition** or simply **addition** assigns to any two vectors $v$ and $w$ in $V$ a third vector in $V$ which is commonly written as $v + w$, and called the sum of these two vectors.
+- The binary operation, called **vector addition** (or simply **addition**) assigns to any two vectors $v$ and $w$ in $V$ a third vector in $V$ which is commonly written as $v + w$ and called the **sum** (or **resultant vector**) of $v$ and $w$.
 - The binary function, called **scalar multiplication**, assigns to any scalar $a$ in $F$ and any vector $v$ in $V$ another vector in $V$, which is denoted $av$
 
 |                           | Vector space axioms                     |                             |

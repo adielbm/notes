@@ -33,7 +33,7 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
 	- $q_1$ and $q_2$ are the magnitudes of the charges (in $\mathsf{C}$)
 	- $r$ is the distance between the charges (in $\mathsf{m}$)
 	- $\displaystyle k=\frac{1}{4\pi\epsilon_{0}}=8.99\times 10^9\ \mathsf{N\cdot m^2/C^2}$ is **Coulomb's constant**
-	- $\epsilon_{0}=\frac{1}{4\pi k}=8.85\times 10^{-12}\ \mathsf{C^2/N\cdot m^2}$ is the **permittivity of free space**
+	- $\displaystyle\epsilon_{0}=\frac{1}{4\pi k}=8.85\times 10^{-12}\ \mathsf{C^2/N\cdot m^2}$ is the **permittivity of free space**
 
 - limitations and assumptions of Coulomb's Law #todo
 	- point charges
@@ -41,31 +41,23 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
 	- electric force
 
 
-
-
 ## Electric field
 
 - The **electric field** of is defined as a vector field that associates to each point in space the force per unit of charge exerted on an infinitesimal test charge at rest at that point
 - SI unit of electric field is $\mathsf{N/C}=\mathsf{V/m}$
 - $k$ is Coulomb's constant
-- $\displaystyle E=\frac{F}{q}$ (vector form: $\displaystyle \vec{\mathbf{E}}=\frac{\vec{\mathbf{F}}}{q}$)
+- $\displaystyle E=\frac{F}{q}$ (vector form: $\displaystyle \vec{\mathbf{E}}=\frac{\vec{\mathbf{F}}}{q}$) or $\displaystyle \vec{\mathbf{E}}=\lim_{ q \to 0}\frac{\vec{\mathbf{F}}}{q}$
 	- $E$ is the electric field that a charge $q$ experiences (in $\mathsf{N/C}$)
 	- $F$ is the force on a charge (in $\mathsf{N}$)
-	- $q$ is the test charge (in $\mathsf{C}$)
-- $E=-\frac{V_{ba}}{d}$ is the electric field (uniform $\vec{\mathbf{E}}$)
-	- $V_{ba}$ is the potential difference between points $a$ and $b$ (in $\mathsf{V}$)
-	- $d$ is the distance between the points (in $\mathsf{m}$)
+	- $q$ is the **test charge** (in $\mathsf{C}$)
 
-### Electric field of a single point charge
+### Electric Field due to a Point Charge 
 
-- $\displaystyle E =k\frac{Q}{r^2}$ (vector form: $\displaystyle \vec{\mathbf{E}}=k\frac{Q}{r^2}\hat{\mathbf{r}}$)
+- $\displaystyle E =k\frac{Q}{r^2}{\color{gray}\impliedby E =\frac{F}{q}=\frac{kQq/r^2}{q}}$ 
 	- $P$ is the point in space where the electric field is being calculated
 	- $Q$ is the point charge creating the electric field (in $\mathsf{C}$)
-	- $E$ is the electric field created by a point charge $Q$ (in $\mathsf{N/C}$)
-	- $r$ is the distance between the charge and the point in space (in $\mathsf{m}$)
-	- $\hat{\mathbf{r}}$ is the unit vector pointing from the charge to the point in space
-
-
+	- $r$ is the distance between the point $P$ and the charge $Q$ (in $\mathsf{m}$)
+	- $E$ is the electric field (at $P$) due to the source charge $Q$ (in $\mathsf{N/C}$)
 
 ```tex
 \usepackage{tikz}
@@ -93,11 +85,22 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
 \end{document}
 ```
 
-> There is no electric charge at point $P$. But there is an electric field there. The only real charge is $Q$.
+> [!Notes]
+> - There is no electric charge at point $P$. But there is an electric field there. The only real charge is $Q$.
+> - Notice that $E$ depends only on the charge $Q$ which produces the electric field, and not on the value of the test charge $q$.
+> - In the figure, the electric field is positive, so it points towards a negative charge and away from a positive charge. But if the electric field is negative, it is the opposite.
+
+
+### Relationship between electric field and potential difference
+
+- $\displaystyle E=-\frac{V_{ba}}{d}$ is the electric field (uniform $\vec{\mathbf{E}}$)
+	- $V_{ba}$ is the potential difference between points $a$ and $b$ (in $\mathsf{V}$)
+	- $d$ is the distance between the points (in $\mathsf{m}$)
 
 ### Superposition principle
 
 - the total force on a charge is the vector sum of the forces exerted by the other charges
+- $\displaystyle \vec{\mathbf{E}}_{\text{total}}=\vec{\mathbf{E}}_1+\vec{\mathbf{E}}_2+\vec{\mathbf{E}}_3+...$
 
 ### todo
 
