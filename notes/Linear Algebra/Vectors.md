@@ -61,3 +61,14 @@
 - (d12.2.1) orthogonality of two vectors - $\textbf{a}$ and $\textbf{b}$ are called orthogonal if $\textbf{a}\cdot\textbf{b}=0$ (This relationship is denoted $\textbf{a}\perp\textbf{b}$)
 - (q12.2.3) Generalized Theorem of Pythagoras: $\textbf{a}\perp\textbf{b}\implies\| \textbf{a} + \textbf{b} \|^2 = \| \textbf{a} \|^2 +{\| \textbf{b} \|}^2$
 - (d12.2.2) $\mathbf{v} \perp U$ if for all vectors $\mathbf{u} \in U$, $\mathbf{v} \cdot \mathbf{u} = 0$
+
+# 2D Vectors
+
+![[2D Vector Components.svg|250]]
+
+- if $\vec{\textbf{v}} = (v_x,v_y)$ and $\theta$ is the angle between $\vec{\textbf{v}}$ and the x-axis and $v=\sqrt{v_x^2+v_y^2}$ (the magnitude of $\vec{\textbf{v}}$) then:
+	- $v_x = v\cos(\theta)$
+	- $v_y = v\sin(\theta)$
+	- $\displaystyle\tan(\theta) = \frac{v_y}{v_x}$
+
+

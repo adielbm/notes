@@ -12,12 +12,12 @@
 
 ## Directed Graph Traversal
 
-- Given a [[Graphs#Directed Graph|directed graph]] $G=(V,E)$:
+- Given a [[Graph#Directed Graph|directed graph]] $G=(V,E)$:
 	- $G^\text{rev}$ is the **reverse graph** of $G$, where $G^\text{rev} = (V, E^\text{rev})$ and $E^\text{rev} = \{(u, v) \mid (v, u) \in E\}$.
 	- A node $v$ has a path to $s$ in $G$ if and only if $s$ has a path to $v$ in $G^\text{rev}$.
 	- By running `BFS(s)` (or `DFS(s)`) on $G$, we can find the set of all nodes reachable from $s$ in $G$.
 	- By running `BFS(s)` (or `DFS(s)`) on $G^\text{rev}$, we can find the set of all nodes that can reach a given node $s$ in $G$.
-	- There is a simple linear-time algorithm to test if a directed graph is [[Graphs#Connectivity|strongly connected]] 
+	- There is a simple linear-time algorithm to test if a directed graph is [[Graph#Connectivity|strongly connected]] 
 		- Run `BFS(s)` on $G$ for some node $s$.
 		- Run `BFS(s)` on $G^\text{rev}$ for the node $s$
 		- If all nodes are reachable from $s$ in both runs, then the graph is strongly connected.

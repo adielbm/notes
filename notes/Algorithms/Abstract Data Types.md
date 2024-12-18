@@ -68,7 +68,7 @@
 
 # Graph
 
-- A **graph** is an ADT that is meant to implement the undirected and directed [[graphs]] concepts from graph theory
+- A **graph** is an ADT that is meant to implement the undirected and directed [[Graph]] concepts from graph theory
 
 ### Graph Representation
 
