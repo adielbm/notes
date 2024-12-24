@@ -20,16 +20,16 @@
 | [20471](https://www.openu.ac.il/courses/20471.htm)          | Computer Organization                   | 4         | 🔄️     |
 | [20466](https://www.openu.ac.il/courses/20466.htm)          | Logic                                   | 4         | ✅       |
 | [20594](https://www.openu.ac.il/courses/20594.htm)          | Operating Systems                       | 4         |         |
-| [20905](https://www.openu.ac.il/courses/20905.htm)          | Programming Languages                   | 4         |         |
+| [20905](https://www.openu.ac.il/courses/20905.htm)          | Programming Languages                   | 4         |         |
 | **Electives**                                               |                                         |           |         |
-| [20277](https://www.openu.ac.il/courses/20277.htm)          | Database Systems                        | 4         |         |
-| [20946](https://www.openu.ac.il/courses/20946.htm)          | Software Testing                        | 4         |         |
-| [20574](https://www.openu.ac.il/courses/20574.htm)          | Data Systems                            | 4         |         |
-| [20580](https://www.openu.ac.il/courses/20580.htm)          | Cryptography                            | 4         |         |
-| [20944](https://www.openu.ac.il/courses/20944.htm)          | Algorithmic Robotics                    | 4         |         |
-| [20940](https://www.openu.ac.il/courses/20940.htm)          | Cybersecurity                           | 4         |         |
-| **Seminars**                                                |                                         |           |         |
-| [20954](https://www.openu.ac.il/courses/20954.htm)          | Seminar in Computer Science (English)   | 3         |         |
+| [20277](https://www.openu.ac.il/courses/20277.htm)          | Database Systems                        | 4         |         |
+| [20946](https://www.openu.ac.il/courses/20946.htm)          | Software Testing                        | 4         |         |
+| [20574](https://www.openu.ac.il/courses/20574.htm)          | Data Systems                            | 4         |         |
+| [20580](https://www.openu.ac.il/courses/20580.htm)          | Cryptography                            | 4         |         |
+| [20944](https://www.openu.ac.il/courses/20944.htm)          | Algorithmic Robotics                    | 4         |         |
+| [20940](https://www.openu.ac.il/courses/20940.htm)          | Cybersecurity                           | 4         |         |
+| **Seminars**                                                |                                         |           |         |
+| [20954](https://www.openu.ac.il/courses/20954.htm)          | Seminar in Computer Science (English)   | 3         |         |
 | ?                                                           | Seminar ??                              | 3         |         |
 | **Workshop**                                                |                                         |           |         |
 | [20973](https://www.openu.ac.il/courses/20973.htm)          | Simulation of Autonomous Systems        | 3         |         |
@@ -39,6 +39,4 @@
 
 
 
-
-
-
+![](https://raw.githubusercontent.com/adielBm/cs-course-dependencies/refs/heads/main/diagram.svg)
