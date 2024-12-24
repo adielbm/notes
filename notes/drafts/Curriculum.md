@@ -1,8 +1,11 @@
+# Computer Science Curriculum
 
-|                                                             | Course                                  | Credits   | Status  |
+![](https://progress-bar.xyz/44/?scale=120&width=200&progress_color=00D26A)  (44 / 120 Credits)
+
+|                                                             | Course                                  | Credits   | Status  |
 | ----------------------------------------------------------- | --------------------------------------- | --------- | ------- |
 | **Math**                                                    |                                         |           |         |
-| [20476](https://www.openu.ac.il/courses/20476.htm)          | Discrete Math                           | 4         | ✅       |
+| [20476](https://www.openu.ac.il/courses/20476.htm)          | Discrete Math                           | 4         | ✅       |
 | [20109](https://www.openu.ac.il/courses/20109.htm)          | Linear Algebra 1                        | 7         | ✅       |
 | [20229](https://www.openu.ac.il/courses/20229.htm)          | Linear Algebra 2                        | 5         |         |
 | [20474](https://www.openu.ac.il/courses/20474.htm)          | Calculus 1                              | 7         | ✅       |
@@ -12,7 +15,7 @@
 | [20441](https://www.openu.ac.il/courses/20441.htm)          | Intro to CS (Java)                      | 6         | ✅       |
 | [20407](https://www.openu.ac.il/courses/20407.htm)          | Intro to Algorithms                     | 6         | ✅       |
 | [20417](https://www.openu.ac.il/courses/20417.htm)          | Algorithms                              | 5         | 🔄️     |
-| [20465](https://www.openu.ac.il/courses/20465.htm)          | Systems Programming (C)                 | 4         | ✅       |
+| [20465](https://www.openu.ac.il/courses/20465.htm)          | Systems Programming (C)                 | 4         | ✅       |
 | [20604](https://www.openu.ac.il/courses/20604.htm)          | Computational Models                    | 5         | 🔄️     |
 | [20471](https://www.openu.ac.il/courses/20471.htm)          | Computer Organization                   | 4         | 🔄️     |
 | [20466](https://www.openu.ac.il/courses/20466.htm)          | Logic                                   | 4         | ✅       |
