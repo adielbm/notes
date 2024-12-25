@@ -2,7 +2,7 @@
 # Problems
 
 - GIven a graph:
-	- **maximal** independent set (i.e. no other vertex can be added to the set)
+	- **maximal** [[Graph#Independent Set|independent set]] (i.e. no other vertex can be added to the set)
 		- find a single _maximal independent set_
 			- Sequential algorithm
 			- Random-selection parallel algorithm (Luby's Algorithm)
@@ -26,6 +26,9 @@
 		- Does _G_ admit a proper vertex coloring with _k_ colors?
 
 # Maximal Independent Set
+
+- Greedy algorithm to find a maximal independent set in a graph (but not necessarily a maximum independent set).
+	- In tree, the algorithm finds a maximum independent set.
 
 ```python 
 def find_a_maximal_IS(graph):
@@ -66,3 +69,7 @@ print("Maximal Independent Set:", result)
 
 ```
 
+
+# Maximum Weighted Independent Set Problem
+
+Find an independent set where the sum of **vertex weights** is maximized.

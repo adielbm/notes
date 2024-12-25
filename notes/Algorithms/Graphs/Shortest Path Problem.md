@@ -107,6 +107,58 @@ for i = 1 to |V| - 1:
 - Proof: By the lemma, after $|V|-1$ iterations, $\text{dist}(v)$ is the length of the shortest path from $s$ to $v$ that has at most $|V|-1$ edges. Since the shortest path has at most $|V|-1$ edges, it has at most $|V|$ vertices, and so the shortest path has no cycles. Therefore, the shortest path is a simple path, and so the Bellman-Ford algorithm computes the correct shortest path from $s$ to all other nodes in $G$.
 
 
+```python
+def bellman_ford(graph, vertices, start):
+    """
+    Calculate the shortest paths from the start node to all other nodes
+    in a graph with potentially negative weights.
+
+    :param graph: List of edges in the format (u, v, weight)
+    :param start: The starting node
+    :return: Tuple (distances, negative_cycle)
+    """
+
+    n = len(vertices)
+
+    # Initialize distances to infinity, except for the start node
+    d = {v: float('inf') for v in vertices}
+    d[start] = 0
+
+    # Relax edges up to (n-1) times
+    for i in range(n - 1):
+        for u, v, weight in graph:
+            if d[u] != float('inf') and d[u] + weight < d[v]:
+
+                if i == n - 1:
+                    return d, True  # Negative cycle detected
+
+                d[v] = d[u] + weight
+    return d, False  # No negative cycle
+
+
+# Example usage
+graph = [
+    ('s', 'a', 4),
+    ('s', 'b', -5),
+    ('b', 'a', 6),
+    ('a', 'v', 3),
+    ('b', 'v', 2)
+]
+# Extract number of vertices and edges
+vertices = set()
+for u, v, weight in graph:
+    vertices.add(u)
+    vertices.add(v)
+start_node = 's'
+
+distances, negative_cycle = bellman_ford(graph, vertices, start_node)
+if negative_cycle:
+    print("Graph contains a negative weight cycle.")
+else:
+    print("Shortest distances from start node:", distances)
+
+```
+
 # Floyd–Warshall algorithm
 
 ```

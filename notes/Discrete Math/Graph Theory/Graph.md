@@ -1,4 +1,4 @@
-In this section, $G=(V,E)$ is usually an undirected graph, unless stated otherwise.
+In this page, $G=(V,E)$ is an undirected graph, unless stated otherwise.
 
 # Subgraphs
 
@@ -84,44 +84,42 @@ In this section, $G=(V,E)$ is usually an undirected graph, unless stated otherwi
 - **Eulerian path** is a path in a finite graph that visits every edge exactly once. 
 - Similarly, an **Eulerian circuit** or **Eulerian cycle** is an Eulerian path that starts and ends on the same vertex.
 - A graph that contains a Eulerian cycle is called a **Eulerian graph**.
-- A connected graph is eulerian if and only if it is **even**^[every vertex of G has positive **even degree**].
+- A connected graph is eulerian if and only if it is **even** (every vertex of G has positive **even degree**).
 - (q1) Let $G$ be a graph, and let $v$ and $u$ be two distinct vertices of G. There is an **Eulerian path** from $v$ to $u$ if, and only if, $G$ is connected, $v$ and $u$ have odd degree, and all other vertices of $G$ have positive even degree
 - *Proposition*: in graph that has a **Eulerian cycle** that is also **Hamiltonian cycle**, is 2-regular.  
-  *Proof:* $e_1=(v_0v_1),e_2=(v_1v_2),e_n=(v_{n-1}v_n), e_{n+1}=(v_{n}v_0)$. is Eulerian and Hamiltonian cycle, and $e_1,\ldots,{e_{n+1}}$ are all the graph edges, and each one appear once time, therefore $|E|=|V|=n+1$. now because Eulerian cycle all degere are even, and because hamiltonian cycle, there's no vertex with 0 degree, therefore, $2|E|=2|V|\le{\sum_{v\in{V}}\text{deg}_G{(v)}=2|E|}\Longrightarrow{2|V|=\sum_{v\in{V}}\text{deg}_G{(v)}}$, therefore  is 2-regular.
+	-  *Proof:* $e_1=(v_0v_1),e_2=(v_1v_2),e_n=(v_{n-1}v_n), e_{n+1}=(v_{n}v_0)$. is Eulerian and Hamiltonian cycle, and $e_1,\ldots,{e_{n+1}}$ are all the graph edges, and each one appear once time, therefore $|E|=|V|=n+1$. now because Eulerian cycle all degere are even, and because hamiltonian cycle, there's no vertex with 0 degree, therefore, $2|E|=2|V|\le{\sum_{v\in{V}}\text{deg}_G{(v)}=2|E|}\Longrightarrow{2|V|=\sum_{v\in{V}}\text{deg}_G{(v)}}$, therefore  is 2-regular.
 - *Proposition*: in graph that has a **Eulerian cycle** that is also **Hamiltonian cycle**, is cycle graph.
-  *Proof:* there is hamiltonian cycle, thus is connected, therefore, according to the previous proposition and question 1.2, it follows that is cycle graph.
+	  *Proof:* there is hamiltonian cycle, thus is connected, therefore, according to the previous proposition and question 1.2, it follows that is cycle graph.
 
 # Vertex Cover 
 
-$V'\subseteq V$ is **vertex cover** of an undirected graph $G=(V,E)$, s.t 
-$$uv \in E \Rightarrow u \in V' \lor v \in V'$$
-#### Minimum size of a vertex Cover
+A set $V'\subseteq V$ is called a **vertex cover** of $G$ if $\forall(u,v) \in E, u \in V' \lor v \in V'$
+#### Minimum Vertex Cover
+
 - $\beta(G)=|V'|$ is number of vertices of minimum vertex cover.
 
 # Independent Set
 
 - An **independent set** (קבוצה בלתי תלויה) $S \subseteq V$ is a set of vertices such that no two vertices in the set are adjacent: $\forall v,u \in S : vu \notin E$
-- A set $S\subseteq V$ is an independent set in $G=(V,E)$ if and only if $S$ is a clique in the complement of $G$.
+- A set $S\subseteq V$ is an independent set in $G=(V,E)$ if and only if $S$ is a clique of $\overline{G}=(V,\overline{E})$
+## Maximal independent set
 
+- A **maximal independent set** $S$ (להכלה) is an independent set that is not a subset of any other independent set. 
+	- In other words, there is no vertex outside the independent set that may join it because it is maximal with respect to the independent set property.
+- (q6a) A maximal independent set is also a dominating set in the graph.
 
 ## Maximum independent set
 
 - A **maximum independent set** $S$ is an independent set of largest size in a given graph.
-- $\alpha(G)=|S|$ is number of vertices of maximum independent set.
-
-## Maximal independent set
-
-- A **maximal independent set** $S$ (בלתי תלויה מקסימלית להכלה) is an independent set that is not a subset of any other independent set. 
-	- In other words, there is no vertex outside the independent set that may join it because it is maximal with respect to the independent set property.
-- (q6a) A maximal independent set is also a dominating set in the graph.
+- The size of a maximum independent set is called the **independence number** of the graph, denoted $\alpha(G)=|S|$.
+- Every maximum independent set is maximal, but the converse is not necessarily true. 
 
 # Dominating set
 
-- A **dominating set** (קבוצה שלטת) $D \subseteq V$ of a graph $G$ is a set such that any vertex of $G$ is either in $D$ or has a neighbor in $D$.
+- A **dominating set** (קבוצה שלטת) $D \subseteq V$ (of $G$) is a set such that any vertex of $G$ is either in $D$ or has a neighbor in $D$.
 - (4.13) $S\subseteq V$ is independent set in $G=(V,E)$ if and only if $V \setminus S$ is vertex-cover of $G$.
 - (4.14) $\alpha(G)+\beta(G)=|V|$ for every graph $G=(V,E)$. i.e. a set is independent if and only if its complement is a vertex cover.
 - (4.15) for any graph, the size of every vertex cover is greater than or equal to size of every matching in $G$, in particular $\beta(G)\geq \nu(G)$.
-
 
 # Edge Cover
 
@@ -157,7 +155,7 @@ $$uv \in E \Rightarrow u \in V' \lor v \in V'$$
 
 #### Matching in Bipartite graph
 
-- See [[Graph#Matching in Bipartite graph|Matching in Bipartite graph]]
+- See [[Properties#Matching in Bipartite graph|Matching in Bipartite graph]]
 
 # Coloring
 
@@ -188,7 +186,7 @@ A graph is **$k$-degenerate** if every subgraph has a vertex of degree at most $
 
 - Any graph $G$ is $\Delta(G)$-degenerate
 - Any **$k$-degenerate** graph is **$(k+1)$-colorable** (question 2)
-- If $G$ graph is **$k$-colorable**, then exist [[Vertex Cover & Independent Set#Independent Set|indepndent set]] in $G$ of size $\lceil {|V(G)|} /{k} \rceil$. ^[question 3]
+- If $G$ graph is **$k$-colorable**, then exist [[#Independent Set|indepndent set]] in $G$ of size $\lceil {|V(G)|} /{k} \rceil$. ^[question 3]
 - Any planar graph is 5-degenerate
 
 ## Planar Graphs Coloring

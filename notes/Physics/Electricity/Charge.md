@@ -39,7 +39,8 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
 	- point charges
 	- objects are at rest (electrostatics force)
 	- electric force
-
+- (_Superposition principle_) The total force on a charge is the vector sum of the forces exerted by the other charges
+- $\displaystyle |\vec{F}_E| = \frac{1}{4\pi\epsilon_0} \frac{|q_1q_2|}{r^2} = k \frac{|q_1q_2|}{r^2}$ #todo
 
 ## Electric field
 
@@ -58,6 +59,13 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
 	- $Q$ is the point charge creating the electric field (in $\mathsf{C}$)
 	- $r$ is the distance between the point $P$ and the charge $Q$ (in $\mathsf{m}$)
 	- $E$ is the electric field (at $P$) due to the source charge $Q$ (in $\mathsf{N/C}$)
+	- $\vec{\mathbf{E}}=k\frac{Q}{r^2}\hat{\mathbf{r}}$ where $\hat{\mathbf{r}}$ is the unit vector pointing from $Q$ to $P$
+- (_Superposition Principle_) The total electric field at a point in space is the vector sum of the electric fields due to the individual charges
+	-  $\vec{\mathbf{E}}_{\text{total}}=\vec{\mathbf{E}}_1+\vec{\mathbf{E}}_2+\vec{\mathbf{E}}_3+...$ 
+
+- $\displaystyle\vec{E}=\frac{1}{4\pi\epsilon_0} \int \frac{dq}{r^2} \hat{r}$ #todo 
+
+
 
 ```tex
 \usepackage{tikz}
@@ -97,10 +105,19 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
 	- $V_{ba}$ is the potential difference between points $a$ and $b$ (in $\mathsf{V}$)
 	- $d$ is the distance between the points (in $\mathsf{m}$)
 
-### Superposition principle
+## Electric Field Lines
 
-- the total force on a charge is the vector sum of the forces exerted by the other charges
-- $\displaystyle \vec{\mathbf{E}}_{\text{total}}=\vec{\mathbf{E}}_1+\vec{\mathbf{E}}_2+\vec{\mathbf{E}}_3+...$
+- $E=\frac{Q}{\epsilon_{0}A}$ is  
+	- where $A$ is the area of the Gaussian surface
+- Electric field lines indicate the direction of the electric field; the field points in the direction tangent to the field line at any point (note that the field lines never cross)
+- The lines are drawn such that the magnitude of the electric field, $E$, is proportional to the number of lines crossing unit area perpendicular to the lines. The closer the lines, the stronger the field
+- The lines start on positive charges and end on negative charges
+
+
+- $\displaystyle \Phi_E = \int \vec{E} \cdot d\vec{A}$
+- $\displaystyle \oint \vec{E} \cdot d\vec{A} = \frac{q_{enc}}{\epsilon_0}$
+- $\displaystyle Q_{\text{total}} = \int \rho(r) dV$
+
 
 ### todo
 
@@ -108,3 +125,4 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
 - electric dipole
 - static electric field
 - equipotential surfaces, equipotential lines
+
