@@ -330,8 +330,7 @@ Rather than drawing all the gates, designers often show just the position of AND
 > [!INFO] 
 > Logic minimization is critical to achieving efficient implementations. One tool useful for hand minimization of random logic is the _Karnaugh map_. Nevertheless, hand optimization of significant logic functions using K-maps can be challenging, both because of the size of the maps and their complexity, for this reason, design tools are used to automate the process.
 
-
-## Arrays of Logic Elements
+## Bus
 
 - A **bus** is a collection of data lines that is treated together as a single logical signal. 
 	- (The term _bus_ is also used to indicate a shared collection of lines with multiple sources and uses.)

@@ -2,9 +2,9 @@
 
 - A graph can be defined with either **directed** or **undirected** edges.
 	- Every undirected graph can be considered as a directed graph with edges in both directions.
-- A graph can be defined with **weighted** edges. (A network)
+- A graph can be defined with **weighted** edges. (_network_)
 	- Every unwighted graph can be considered as a weighted graph with all weights equal to 1.
-- A graph can be defined with **multiple edges**. (A multigraph)
+- A graph can be defined with **multiple edges**. (_multigraph_)
 
 ## Directness
 ### Undirected Graph
