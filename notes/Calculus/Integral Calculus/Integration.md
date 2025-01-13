@@ -163,7 +163,7 @@ $\int f(x) \, dx=\int f(g(t))g'(t) \, dt\Big\vert_{t=g'(x)}$
 
 ### Partial Fraction Decomposition
 
-Decomposition of a [[rational function]] $N(x)/D(x)$ into partial fractions 
+Decomposition of a [[Rational function]] $N(x)/D(x)$ into partial fractions 
 
 1. Divide when improper: When $N(x)/D(x)$ is [[Rational function|improper]] (i.e. $\deg N \geq \deg D$), [[Polynomial Long Division|divide]] the denominator into the numerator to obtain $\displaystyle\frac{N(x)}{D(x)}=Q(x)+\frac{N_{1}(x)}{D(x)}$   where $\deg N_{1}(x)< \deg D(x)$. Then apply Steps 2, 3, and 4 to the proper rational expression $N_{1}(x)/D(x)$
 2. Factor denominator: Completely factor the denominator into factors of the form $(px+q)^m$ and $(ax^2+bx+c)^n$ where $ax^2+bx+c$ is irreducible

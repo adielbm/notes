@@ -1,16 +1,9 @@
-
 # Electric potential energy
 
+$$\displaystyle U_E=k\frac{q_1q_2}{r}$$
+
 - **Electric potential energy** is the energy stored in a system of charges due to their positions relative to each other
-- $\vec{\mathbf{E}}$ is an uniform electric field, 
-- $q$ is a tiny positive charge first placed at point $a$ near the positive plate and then released from rest and accelerates toward the negative plate. 
-	- $W = Fd = qEd$ is the work done by the electric field $E$ to move a charge $q$ a distance $d$
-	- $\Delta \mathrm{PE}=\mathrm{PE}_b-\mathrm{PE}_a=-W$ is the change in electric potential energy when a charge $q$ moves from point $a$ to point $b$
-- $W_{\text{ext}}=Q_2 V=k\frac{Q_1Q_2}{r}$ is the work done by an external force to move a charge $Q_2$ from infinity to a distance $r$ from a charge $Q_1$
-	- $W_{\text{ext}}$ is the work done by an external force (in $\mathsf{J}$)
-	- $Q_1$ is the charge creating the electric field (in $\mathsf{C}$)
-	- $Q_2$ is the charge being moved (in $\mathsf{C}$)
-	- $r$ is the distance between the charges (in $\mathsf{m}$)
+- The work done in bringing a charge from infinity to that point
 
 ## Electric energy
 

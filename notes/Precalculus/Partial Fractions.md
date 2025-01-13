@@ -1,6 +1,6 @@
 
 
-- Every proper [[rational function]] can be expressed as a sum $\frac{P(x)}{Q(x)}=F_{1}(x)+F_{2}(x)+\dots+F_{n}(x)$ where $F_{1}(x),F_{2}(x),\dots,F_{n}(x)$ are rational functions of the form $\frac{A}{(ax+b)^k}$ or $\frac{Ax+B}{(ax^2+bx+c)^k}$ in which the denominators are factors of $Q(x)$. 
+- Every proper [[Rational function]] can be expressed as a sum $\frac{P(x)}{Q(x)}=F_{1}(x)+F_{2}(x)+\dots+F_{n}(x)$ where $F_{1}(x),F_{2}(x),\dots,F_{n}(x)$ are rational functions of the form $\frac{A}{(ax+b)^k}$ or $\frac{Ax+B}{(ax^2+bx+c)^k}$ in which the denominators are factors of $Q(x)$. 
 	- The sum is called the **partial fraction decomposition** of $P(x)/Q(x)$, and the terms are called **partial fractions**
 
 

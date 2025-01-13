@@ -8,7 +8,8 @@
 	- rubbing (friction)
 	- conduction (transfer of charge from one charged object to another by touching)
 	- induction
-
+- $m_{\rm {e}}=9.11\times 10^{-31}\,\mathsf{kg}$ is the mass of an electron
+- $\displaystyle n=\frac{Q}{e}$ is the number of electrons transferred
 
 ## Coulomb's Law
 
@@ -42,6 +43,13 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
 - (_Superposition principle_) The total force on a charge is the vector sum of the forces exerted by the other charges
 - $\displaystyle |\vec{F}_E| = \frac{1}{4\pi\epsilon_0} \frac{|q_1q_2|}{r^2} = k \frac{|q_1q_2|}{r^2}$ #todo
 
+
+## Charge Density
+
+- $\displaystyle \lambda = \frac{Q}{L}$ is the **linear charge density** (in $\mathsf{C/m}$)
+- $\displaystyle \sigma = \frac{Q}{A}$ is the **surface charge density** (in $\mathsf{C/m^2}$)
+- $\displaystyle \rho = \frac{Q}{V}$ is the **volume charge density** (in $\mathsf{C/m^3}$)
+
 ## Electric field
 
 - The **electric field** of is defined as a vector field that associates to each point in space the force per unit of charge exerted on an infinitesimal test charge at rest at that point
@@ -63,7 +71,7 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
 - (_Superposition Principle_) The total electric field at a point in space is the vector sum of the electric fields due to the individual charges
 	-  $\vec{\mathbf{E}}_{\text{total}}=\vec{\mathbf{E}}_1+\vec{\mathbf{E}}_2+\vec{\mathbf{E}}_3+...$ 
 
-- $\displaystyle\vec{E}=\frac{1}{4\pi\epsilon_0} \int \frac{dq}{r^2} \hat{r}$ #todo 
+- $\displaystyle\vec{E}=k \int \frac{dq}{r^2} \hat{r}$ #todo 
 
 
 
@@ -99,16 +107,23 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
 > - In the figure, the electric field is positive, so it points towards a negative charge and away from a positive charge. But if the electric field is negative, it is the opposite.
 
 
-### Relationship between electric field and potential difference
+### Electric Field and Potential Eifference
 
-- $\displaystyle E=-\frac{V_{ba}}{d}$ is the electric field (uniform $\vec{\mathbf{E}}$)
+- $\displaystyle E=-\frac{V_{ba}}{x}$ is the electric field (uniform $\vec{\mathbf{E}}$)
 	- $V_{ba}$ is the potential difference between points $a$ and $b$ (in $\mathsf{V}$)
-	- $d$ is the distance between the points (in $\mathsf{m}$)
+	- $x$ is the distance between the points (in $\mathsf{m}$)
+- $\displaystyle E_{x}=-\frac{dV}{dx}$ is the electric field (non-uniform $\vec{\mathbf{E}}$)
 
-## Electric Field Lines
+### Electric Field between Two Parallel Plates
 
-- $E=\frac{Q}{\epsilon_{0}A}$ is  
-	- where $A$ is the area of the Gaussian surface
+- $\displaystyle E=\frac{Q}{\varepsilon_{0}A}$ is the magnitude of the electric field between two parallel plates, oppositely charged
+	- $Q$ is the charge on each plate
+	- $A$ is the area of one plate (Gaussian surface)
+	- Given the plate separation is much smaller than the dimensions of the plates
+	- This equation is derived from Gauss's Law and the principle of superposition:
+
+### Electric Field Lines
+
 - Electric field lines indicate the direction of the electric field; the field points in the direction tangent to the field line at any point (note that the field lines never cross)
 - The lines are drawn such that the magnitude of the electric field, $E$, is proportional to the number of lines crossing unit area perpendicular to the lines. The closer the lines, the stronger the field
 - The lines start on positive charges and end on negative charges
@@ -119,6 +134,7 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
 - $\displaystyle Q_{\text{total}} = \int \rho(r) dV$
 
 
+
 ### todo
 
 - electric field lines
@@ -126,3 +142,18 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
 - static electric field
 - equipotential surfaces, equipotential lines
 
+
+# Electric Flux
+
+- $\displaystyle \Phi_E = EA\cos\theta=EA_{\perp}=E_{\perp}A$ is the **electric flux** through a surface
+	- $E$ is the magnitude of the electric field $\vec{\mathbf{E}}$ (in $\mathsf{N/C}$)
+	- $A$ is the area of the surface (in $\mathsf{m^2}$)
+	- $E_{\perp}=E\cos\theta$ is the component of the electric field perpendicular to the surface
+	- $A_{\perp}=A\cos\theta$ is the projection of the area perpendicular to the field
+	- $\theta$ is the angle between $\vec{\mathbf{E}}$ and $E_{\perp}$
+	- $N \propto \Phi_E$ - the number of field lines crossing the surface is proportional to the electric flux
+- $\displaystyle \Phi_E =\sum E \Delta A \cos\theta$, where the sum is over all the patches of the surface
+- (**Gauss's Law**) 
+	- $\displaystyle\oint \mathbf{E} \cdot d\mathbf{A} = \frac{Q_{\text{enc}}}{\varepsilon_0}$ is the electric flux through a closed surface
+		- $q_{\text{enc}}$ is the charge enclosed by the surface (in $\mathsf{C}$)
+		- $\epsilon_0$ is the permittivity of free space (in $\mathsf{C^2/N\cdot m^2}$)

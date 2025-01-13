@@ -1,18 +1,23 @@
 # Electric Potential
 
-- **Electric potential** (or simply **potential**) is the electric potential energy per unit charge.
-- $\displaystyle V=\frac{\mathrm{PE}_a}{q}$
-	- $V$ is the electric potential (in $\mathsf{V}$, volts)
-	- $\mathrm{PE}_a$ is the electric potential energy at point $a$ (in $\mathsf{J}$, joules)
-	- $q$ is the charge (in $\mathsf{C}$, coulombs)
-
-- $\displaystyle V=k\frac{Q}{r}$ (**Coulomb potential**) #todo
-	- $V$ is the electric potential due to a point charge $Q$ (in $\mathsf{V}$)
+- The **electric potential** (or **potential**) at a point is the amount of electric potential energy per unit charge at that point. $$V=\frac{U}{q}$$
+- The electric potential at a point is the work done in moving a unit positive charge from infinity to that point.
+- The SI unit of electric potential is the **volt** (V), defined as $\mathsf{1\ V = 1\ J/C}$
+- (**Coulomb potential**) $\displaystyle V=k\frac{Q}{r}$
+	- $V$ is the electric potential at a point in space due to a point charge $Q$ (in $\mathsf{V}$)
 	- $Q$ is the point charge creating the electric potential (in $\mathsf{C}$)
 	- $r$ is the distance between the charge and the point in space (in $\mathsf{m}$)
 	- $k$ is Coulomb's constant
+- The electric potential at a point due to multiple charges is the sum of the potentials due to each charge. $V_{\text{total}}=V_1+V_2+V_3+...$
 
-# Voltage
+
+- todo
+	- $\displaystyle V=-\int \vec{\mathbf{E}}\cdot d\vec{\mathbf{r}}$
+	- $\displaystyle\Delta V = V_b - V_a = -\int_a^b \vec{\mathbf{E}}\cdot d\vec{\mathbf{r}}$
+	- $\displaystyle V=k\int \frac{dq}{r}$
+
+
+  # Voltage
 
 - **Voltage** (or **(electrical) potential difference**) is the difference in electric potential between two points in a circuit.
 	- $\displaystyle V = V_a - V_b = \frac{\mathrm{PE}_a-\mathrm{PE}_b}{q}$ is the **voltage** between points $a$ and $b$.
@@ -27,10 +32,10 @@
 			- $\mathrm{PE}_a > \mathrm{PE}_b \implies \Delta \mathrm{PE} > 0$
 		- In both cases, $\Delta V = V_a - V_b > 0$.
 
-- $V_{ba}=-dE$ is the electric field (uniform $\vec{\mathbf{E}}$)
+- $V_{ba}=-dE$ 
 	- $V_{ba}$ is the potential difference between points $a$ and $b$ (in $\mathsf{V}$)
 	- $d$ is the distance between the points (in $\mathsf{m}$)
-	- $E$ is the electric field (in $\mathsf{N/C}$)
+	- $E$ is the electric field (in $\mathsf{N/C}$) (uniform $\vec{\mathbf{E}}$)
 
 
 # Electromotive Force
