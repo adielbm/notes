@@ -44,3 +44,7 @@
 - A quadratic polynomial with no real roots is called **irreducible** over the real numbers. Such a polynomial cannot be factored without using complex numbers.
 - Every polynomial with real coefficients can be factored into a product of linear and irreducible quadratic factors with real coefficients
 - A polynomial $Q$ can be factored as a product of linear factors (of the form ax + b) and irreducible quadratic factors (of the form $ax^2 + bx + c$, where $b^2 - 4ac <0$)
+
+- Given two polynomials $p(x)=\displaystyle \sum _{i=0}^{n}a_{i}x^{i}$ and $q(x)=\displaystyle \sum _{i=0}^{m}b_{i}x^{i}$
+	- Product of polynomials: $\displaystyle p(x)q(x)=\sum _{k=0}^{n+m}\left(\sum _{i=0}^{k}a_{i}b_{k-i}\right)x^{k}$
+		- See also [[Polynomial Multiplication|algorithms for polynomial multiplication]]  

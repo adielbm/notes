@@ -72,3 +72,14 @@
 	- $\displaystyle\tan(\theta) = \frac{v_y}{v_x}$
 
 
+# Projection
+
+- The **vector projection** of $\textbf{a}$ onto $\textbf{b}$ is $\displaystyle  {\displaystyle \operatorname {proj} _{\mathbf {b} }(\mathbf {a} )={\frac {\mathbf {a} \cdot \mathbf {b} }{\|\mathbf {b} \|^{2}}}\mathbf {b} }$ (sometimes denoted $\textbf{a}_{\parallel \textbf{b}}$)
+- The **vector rejection** of $\textbf{a}$ from $\textbf{b}$ is $\displaystyle  {\displaystyle \operatorname {reg} _{\mathbf {b} }(\mathbf {a} )=\mathbf {a} -\operatorname {proj} _{\mathbf {b} }(\mathbf {a} )}$ (sometimes denoted $\textbf{a}_{\perp \textbf{b}}$)
+
+- The angle between $\textbf{a}$ and $\textbf{b}$ is $\displaystyle\theta = \arccos\left(\frac{\textbf{a}\cdot\textbf{b}}{\|\textbf{a}\|\|\textbf{b}\|}\right)$
+- The **scalar projection** of $\textbf{a}$ onto $\textbf{b}$ is given by $\displaystyle s = \|\textbf{a}\|\cos(\theta)$
+- A **surface normal** (or simply **normal**) to a surface at point $P$ is a vector $\textbf{n}$ perpendicular to the tangent plane of the surface at $P$
+
+
+

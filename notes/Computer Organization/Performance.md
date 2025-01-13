@@ -1,27 +1,31 @@
-# CPU Performance
-
 - The **clock cycle** time (CCT) is the time for one clock period (usually of the processor clock, which runs at a constant rate, usually published as part of the documentation for a computer)
 	- note: Although clock cycle time has traditionally been fixed, to save energy or temporarily boost performance, today’s processors can vary their clock rates, so we would need to use the average clock rate for a program.
-- The **clock rate** (CR) is the inverse of the clock cycle time (usually measured in $\mathsf{Hz}$ or its multiples)
+- The **clock rate** (CR) is the inverse of the clock cycle time 
+	- $\displaystyle\text{CR}=\frac{1}{\text{CCT}}$
+	- (usually measured in $\mathsf{Hz}$ or its multiples)
+# Single-Cycle
+
+
 - The **response time** (or **execution time**) is the total time required for the computer to complete a task (including disk accesses, memory accesses, I/O activities, operating system overhead, CPU execution time, etc.)
-- The **performance** is the reciprocal of response time $$\text{Performance}_X = \frac{1}{\text{Response time}_X}$$
+	- The **latency** is the time it takes to complete an individual instruction
+		- (note: the latency can refer to (i) the number of stages in a pipeline. or (ii) The number of stages between two instructions during execution)
+		- #todo latency = execution time ?
+		- $\mathrm{Latency}=\mathrm{CPI} \times \mathrm{CCT}$
+- The **performance** is the reciprocal of response time: $\displaystyle\text{Performance}_X = \frac{1}{\text{Response time}_X}$
 - The **CPU (execution) time** (of task) is the actual time the CPU spends computing for a specific task (excluding other activities) 
-- The **throughput** (or **bandwidth**) is the number of tasks completed per unit time
-- Given some program in the CPU: $$\text{CPU clock cycles} = \text{IC} \times \text{CPI}$$
-	- **instruction count** (IC) is the number of instructions executed by the program
+- The **throughput** (or **bandwidth**) is the number of tasks (instructions) completed per unit time
+- $\text{CPU Clock Cycles} = \text{IC} \times \text{CPI}$
+	- The **instruction count** (IC) is the number of instructions executed by the program
 	- The **clock cycles per instruction** (CPI) is the average number of clock cycles per instruction for a program or program fragment
 	- The **CPU clock cycles** (or **total clock cycles**) is the total number of clock cycles consumed by the program 
-	- The **CPU (execution) time** (of program) is $$\text{CPU execution time} = \text{CPU clock cycles} \times \text{Clock cycle time}=\frac{\text{CPU clock cycles}}{\text{Clock rate}}$$
-
+- The **CPU (execution) time** (of program) is $\text{CPU execution time} = \text{CPU clock cycles} \times \text{Clock cycle time}=\frac{\text{CPU clock cycles}}{\text{Clock rate}}$
 
 > The number of instructions in the program (IC) is determined by the efficiency of the algorithm implementation, the compiler, and the processor's instruction set architecture (ISA). 
 > The implementation of the processor determines both the clock cycle time and the CPI.
 
 
-# Problem Solving
 
 ### Instruction Replacement
-
 
 > [!EXAMPLE]
 > Given  
@@ -66,11 +70,65 @@ $$\displaystyle\mathrm{N}_{A}={\frac{a \cdot \Delta T \cdot \text{CR}}{a \cdot \
 
 $$\displaystyle\text{ET}_{A}=\text{ET}_{B} \implies \frac{\text{IC}_{A} \times \text{CPI}_{A}}{\text{CR}_{A}} = \frac{\text{IC}_{B} \times \text{CPI}_{B}}{\text{CR}_{B}}\implies \boxed{\text{IC}_{B} = \frac{\text{IC}_{A} \times \text{CPI}_{A} \times \text{CR}_{B}}{\text{CPI}_{B} \times \text{CR}_{A}}}$$
 
+# Pipelining 
+
+> In this section, $\mathrm{CPI}=1$, therefore, $\mathrm{Latency}=\mathrm{CCT}$
+
+- Although the _latency_ is worse in the pipelined processor, the _throughput_ is significantly improved
+- The **pipeline depth** is the number of stages ($=5$) in the pipeline
+- $\{\mathrm{IF},\mathrm{ID},\mathrm{EX},\mathrm{MEM},\mathrm{WB}\}$ are the **stage delay** in the pipeline
+- $\mathrm{CCT_{single}}=\mathrm{IF}+\mathrm{ID}+\mathrm{EX}+\mathrm{MEM}+\mathrm{WB}=\mathrm{Latency_{single}}$
+- $\mathrm{CCT_{pipelined}}=\max(\mathrm{IF},\mathrm{ID},\mathrm{EX},\mathrm{MEM},\mathrm{WB})$
+- $\mathrm{Latency_{pipelined}}=\mathrm{CCT_{pipelined}} \times \text{pipeline-depth}$
+	- $\displaystyle\mathrm{Latency_{pipelined}}=\frac{\text{Execution-time}} {\text{Number-of-instructions}}$  #todo is it correct
+- $\displaystyle\text{Throughput}=\frac{1}{\text{CCT}}$
+- $\displaystyle{\text{ET}}(n)={\text{CCT}}\times (n+\text{depth}-1)$
+
+
+
+- $\displaystyle\mathrm{Speedup}=\frac{\mathrm{Latency_{single}}}{\mathrm{CCT_{pipelined}}}$ (given that there is no stalls)
+	- $\displaystyle\lim_{N\to \infty} \frac{(N\cdot \mathrm{Latency_{single}})+\mathrm{Overhead_{single}}}{(N\cdot \mathrm{Latency_{pipelined}})+\mathrm{Overhead_{pipelined}}}$ is the speedup of the pipelined processor over the single-cycle processor, where:
+		- $\mathrm{Overhead_{single}}$ and $\mathrm{Overhead_{pipelined}}$ are the time taken to execute some given nubmer of instructions, for the single-cycle and pipelined processors, respectively.
+- When the stages are perfectly balanced, then:
+	- $\displaystyle\mathrm{CCT_{pipelined}}=\frac{\mathrm{CCT_{single}}}{\mathrm{depth}}$, thus, $\displaystyle\mathrm{Speedup}=\mathrm{depth}$ (Under ideal conditions and with a large number of instructions)
 
 
 
 
-# Amdahl's Law
+> [!Exercise]
+> - Given the following times for each one of 5 stages of the pipeline: (assume $\mathrm{CPI}=1$)
+> 	- $\mathrm{IF}=300\,\mathsf{ps}$
+> 	- $\mathrm{ID}=400\,\mathsf{ps}$
+> 	- $\mathrm{EX}=350\,\mathsf{ps}$
+> 	- $\mathrm{MEM}=500\,\mathsf{ps}$
+> 	- $\mathrm{WB}=100\,\mathsf{ps}$
+> - A. What is the clock cycle time (single-cycle / pipelined)?
+> - B. What is the latency of `lw` instruction (single-cycle / pipelined)?
+> - C. For a large number of instructions, what is the speedup of the pipelined processor over the single-cycle processor?
+> - D. If it is possible to split one stage into two stages, each taking half the time of the original stage. 
+> 	- What is the best choice of stage to split? 
+> 	- What would be the new clock cycle time of the pipelined processor? 
+> 	- What would be the new latency of the `lw` instruction?
+> 	- How does the change affect the throughput?
+>  
+>  #### **Answer**
+> - $\mathrm{CCT_{single}}=\mathrm{IF}+\mathrm{ID}+\mathrm{EX}+\mathrm{MEM}+\mathrm{WB}=1650\,\mathsf{ps}$  
+> - $\mathrm{CCT_{pipelined}}=\max(\mathrm{IF},\mathrm{ID},\mathrm{EX},\mathrm{MEM},\mathrm{WB})=500\,\mathsf{ps}$
+> - $\mathrm{Latency_{single}}=\mathrm{CCT_{single}}=1650\,\mathsf{ps}$  
+> - $\mathrm{Latency_{pipelined}}=\mathrm{CCT_{pipelined}} \times \mathrm{depth}=500\,\mathsf{ps} \times 5=2500\,\mathsf{ps}$
+> - $\mathrm{Speedup}=\frac{\mathrm{Latency_{single}}}{\mathrm{CCT_{pipelined}}}=3.3$ (given that there is no stalls)
+> - The best choice to split is the longest stage, which is the `MEM` stage with $500\,\mathsf{ps}$, that will be split into two stages each taking $250\,\mathsf{ps}$, thus the new longest stage will be the `ID` stage with $400\,\mathsf{ps}$, and the new clock cycle time will be $400\,\mathsf{ps}$, the new latency will be $400\,\mathsf{ps} \times 6=2400\,\mathsf{ps}$, the throughput will be improved as the clock cycle time is reduced.
+> - The speedup of the pipelined processor (with the split stage) over the single-cycle processor is $\frac{1650\,\mathsf{ps}}{400\,\mathsf{ps}}=4.125$, and over the pipelined processor (without the split stage) is $\frac{500\,\mathsf{ps}}{400\,\mathsf{ps}}=1.25$
+
+# Speedup
+
+- The **speedup** is it is the improvement in speed of execution of a task executed on two similar architectures with different resources
+- Speedup can be defined for two different types of quantities: latency and throughput
+	- $\displaystyle S_{\text{L}} = \frac{\text{Latency}_{\text{old}}}{\text{Latency}_{\text{new}}}$ 
+	- $\displaystyle S_{\text{T}} = \frac{\text{Throughput}_{\text{new}}}{\text{Throughput}_{\text{old}}}$
+
+
+### Amdahl's Law
 
 $$\displaystyle\text{Speedup}(N)=\frac{1}{(1-P)+\frac{P}{N}}=\frac{\mathrm{ET}_{\text{old}}}{\mathrm{ET}_{\text{new}}}$$
 
@@ -80,6 +138,9 @@ $$\displaystyle\text{Speedup}(N)=\frac{1}{(1-P)+\frac{P}{N}}=\frac{\mathrm{ET}_{
 - $1-P$ is the fraction of the program that must be executed sequentially
 - $\text{Speedup}(N)$ is the speedup of the program when executed on $N$ processors
 - $\text{ET}_{\text{old}}$ and $\text{ET}_{\text{new}}$ are the execution times of the program before and after the improvement (resp.)
+
+
+
 
 
 
