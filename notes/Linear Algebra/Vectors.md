@@ -1,25 +1,57 @@
+# Vector Representation
 
-> [!TIP]
-> - Vector Space Operations:
->	- _Scalar Multiplication_: ($\textit{scalar}\cdot\mathbf{vector}=\mathbf{vector}$)
->	- _Vector Addition_: ($\mathbf{vector}+\mathbf{vector}=\mathbf{vector}$)
->- _Dot Product_: ($\mathbf{vector}\cdot\mathbf{vector}=\textit{saclar}$)
->- _Cross Product_: ($\mathbf{vector}\times\mathbf{vector}=\mathbf{vector}$)
+- Given $\vec{\mathbf{v}}$ is a vector
+	- 2D Plane: 
+		- Cartesian: $\vec{\mathbf{v}} = (v_x,v_y)$
+		- Polar: $\vec{\mathbf{v}} = (v,\theta)$
+	- 3D Space:
+	    - Cartesian: $\vec{\mathbf{v}} = (v_x,v_y,v_z)$
+	    - Spherical:
+## 2D Plane
 
-### Dot Product
+![[2D Vector Components.svg|250]]
 
-> also **scalar product** or **Euclidean inner product**
 
-**Definition:**
-- **Coordinate definition:** $\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\sum _{i=1}^{n}a_{i}b_{i}=a_{1}b_{1}+a_{2}b_{2}+\cdots +a_{n}b_{n}}$
-- **Geometric definition:** $\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\|\mathbf {a} \|\|\mathbf {b} \|\cos \theta }$
-- **Matrix definition:** $\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\mathbf {a} ^{T}\mathbf {b} }$
-- **Projection definition:** $\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\|\mathbf {a} \|\|\mathbf {b} \|\cos \theta }$
-	- Where the projection of $\textbf{a}$ onto $\textbf{b}$ is $\displaystyle  {\displaystyle \operatorname {proj} _{\mathbf {b} }(\mathbf {a} )={\frac {\mathbf {a} \cdot \mathbf {b} }{\|\mathbf {b} \|^{2}}}\mathbf {b} }$
-	- And the length of $\textbf{b}$ is $\displaystyle  {\displaystyle \|\mathbf {b} \|}$
-	- So, $\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\|\mathbf {a} \|\|\mathbf {b} \|\cos \theta }$
+###### Polar $\to$ Cartesian
+$$\begin{array}{c} \vec{\mathbf{v}} = (v,\theta)  \\   \end{array}  \implies \left\{ \begin{array}{c} v_x = v\cos\theta \\ v_y = v\sin\theta  \end{array} \right.$$
+###### Cartesian $\to$ Polar
 
-**Properties:** (12.1.2)
+$$\begin{array}{c} \vec{\mathbf{v}} = (v_x,v_y)  \\   \end{array}  \implies \left\{ \begin{array}{c} \| \vec{\mathbf{v}} \|=v = \sqrt{v_x^2+v_y^2} \\ \theta = \arctan\left(\displaystyle \frac{v_y}{v_x}\right)  \end{array} \right.$$
+## 3D Space
+
+```todo
+## Cartesian $\to$ Spherical
+$$\begin{array}{c} \vec{\mathbf{v}} = (v_x,v_y,v_z)  \\   \end{array}  \implies \left\{ \begin{array}{c} \| \vec{\mathbf{v}} \|=v = \sqrt{v_x^2+v_y^2+v_z^2} \\ \theta = \arctan\left(\displaystyle \frac{v_y}{v_x}\right) \\ \phi = \arccos\left(\displaystyle \frac{v_z}{v}\right)  \end{array} \right.$$
+## Spherical $\to$ Cartesian
+$$\begin{array}{c} \vec{\mathbf{v}} = (v,\theta,\phi)  \\   \end{array}  \implies \left\{ \begin{array}{c} v_x = v\sin\phi\cos\theta \\ v_y = v\sin\phi\sin\theta \\ v_z = v\cos\phi  \end{array} \right.$$
+```
+
+# Sum of Vectors
+
+- Vector $\mathbf{a}$ has magnitude $a$ and is on the $x$-axis.
+- Vector $\mathbf{b}$ has magnitude $b$ and forms an angle $\theta$ with $\mathbf{a}$.
+- $\mathbf{a} + \mathbf{b} = (a + b \cos(\theta), b \sin(\theta))$
+- $\|\mathbf{a} + \mathbf{b}\| = \sqrt{a^2 + 2ab \cos(\theta) + b^2}$ (Law of Cosines)
+
+# Dot Product (Scalar Product)
+
+#### Coordinate definition
+
+Given two vectors $\textbf{a} = (a_1,a_2,...,a_n)$ and $\textbf{b} = (b_1,b_2,...,b_n)$, the **dot product** of $\textbf{a}$ and $\textbf{b}$ is defined as:
+$$\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\sum _{i=1}^{n}a_{i}b_{i}=a_{1}b_{1}+a_{2}b_{2}+\cdots +a_{n}b_{n}}$$
+#### Geometric definition
+
+Given two vectors $\textbf{a}$ and $\textbf{b}$, and the angle between them is $\theta$, the **dot product** is defined as:
+$$\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\|\mathbf {a} \|\|\mathbf {b} \|\cos \theta }$$
+
+
+#### Matrix Product definition
+
+If $\textbf{a}$ and $\textbf{b}$ are identified as column vectors, the dot product can also be written as a matrix product
+$$\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\mathbf {a} ^{T}\mathbf {b} }$$
+
+#### Properties
+
 - Symmetry $\textbf{a}\cdot\textbf{b}=\textbf{b}\cdot\textbf{a}$
 - Distributive $(\textbf{a}+\textbf{b})\cdot{\textbf{c}}=\textbf{a}\cdot\textbf{c}+\textbf{b}\cdot\textbf{c}$
 - Homogeneity $(t\textbf{a})\cdot\textbf{b}=t(\textbf{a}\cdot\textbf{b})$
@@ -27,7 +59,7 @@
 	- $\textbf{a}\cdot\textbf{a}= 0 \iff \textbf{a}=\textbf{0}$
 - $\textbf{0}\cdot\textbf{a}=\textbf{a}\cdot\textbf{0}=0$
 
-### Cross Product
+# Cross Product
 
 - $\displaystyle  \mathbf {a} \times \mathbf {b} =\|\mathbf {a} \|\|\mathbf {b} \|\sin(\theta )\,\mathbf {n}$
 	- $\theta$ is the angle between $\textbf{a}$ and $\textbf{b}$
@@ -62,19 +94,15 @@
 - (q12.2.3) Generalized Theorem of Pythagoras: $\textbf{a}\perp\textbf{b}\implies\| \textbf{a} + \textbf{b} \|^2 = \| \textbf{a} \|^2 +{\| \textbf{b} \|}^2$
 - (d12.2.2) $\mathbf{v} \perp U$ if for all vectors $\mathbf{u} \in U$, $\mathbf{v} \cdot \mathbf{u} = 0$
 
-# 2D Vectors
 
-![[2D Vector Components.svg|250]]
 
-- if $\vec{\textbf{v}} = (v_x,v_y)$ and $\theta$ is the angle between $\vec{\textbf{v}}$ and the x-axis and $v=\sqrt{v_x^2+v_y^2}$ (the magnitude of $\vec{\textbf{v}}$) then:
-	- $v_x = v\cos(\theta)$
-	- $v_y = v\sin(\theta)$
-	- $\displaystyle\tan(\theta) = \frac{v_y}{v_x}$
 
 
 # Projection
 
 - The **vector projection** of $\textbf{a}$ onto $\textbf{b}$ is $\displaystyle  {\displaystyle \operatorname {proj} _{\mathbf {b} }(\mathbf {a} )={\frac {\mathbf {a} \cdot \mathbf {b} }{\|\mathbf {b} \|^{2}}}\mathbf {b} }$ (sometimes denoted $\textbf{a}_{\parallel \textbf{b}}$)
+- The **scalar projection** of $\textbf{a}$ onto $\textbf{b}$ is given by $\displaystyle s = \|\textbf{a}\|\cos(\theta)$
+
 - The **vector rejection** of $\textbf{a}$ from $\textbf{b}$ is $\displaystyle  {\displaystyle \operatorname {reg} _{\mathbf {b} }(\mathbf {a} )=\mathbf {a} -\operatorname {proj} _{\mathbf {b} }(\mathbf {a} )}$ (sometimes denoted $\textbf{a}_{\perp \textbf{b}}$)
 
 - The angle between $\textbf{a}$ and $\textbf{b}$ is $\displaystyle\theta = \arccos\left(\frac{\textbf{a}\cdot\textbf{b}}{\|\textbf{a}\|\|\textbf{b}\|}\right)$
@@ -83,3 +111,12 @@
 
 
 
+___
+
+
+> [!TIP]
+> - Vector Space Operations:
+>	- _Scalar Multiplication_: ($\textit{scalar}\cdot\mathbf{vector}=\mathbf{vector}$)
+>	- _Vector Addition_: ($\mathbf{vector}+\mathbf{vector}=\mathbf{vector}$)
+>- _Dot Product_: ($\mathbf{vector}\cdot\mathbf{vector}=\textit{saclar}$)
+>- _Cross Product_: ($\mathbf{vector}\times\mathbf{vector}=\mathbf{vector}$)

@@ -1,79 +1,56 @@
-3. **6.2 Ford-Fulkerson Algorithm (Definition, Correctness)**
-    - 6.2.1 Flow Augmentation in a Directed Path
-    - 6.2.2 Flow Augmentation in a Residual Network (Temporary Definitions)
-    - 6.2.3 Example Run and the Residual Network
-    - 6.2.4 Legal Flow, Residual Capacity, and the Ford-Fulkerson Algorithm
-    - 6.2.5 Correctness of the Ford-Fulkerson Algorithm
-    - 6.2.6 Continued: Correctness of the Ford-Fulkerson Algorithm
-    - 6.2.7 Summary Questions for Lesson 6.2
-4. **6.3 Efficient Implementations of the Ford-Fulkerson Algorithm**
-    - 6.3.1 Algorithm Complexity
-    - 6.3.2 Augmenting Paths (Wide Paths)
-    - 6.3.3 Augmenting Paths (Short Paths)
-    - 6.3.4 Summary Questions for Lesson 6.3
-5. **6.4 Flow Paths in Graphs**
-    - 6.4.1 Max-Flow Min-Cut Theorem
-    - 6.4.2 Menger's Theorem
-    - 6.4.3 Menger's Theorem for Unweighted Graphs
-    - 6.4.4 Summary Questions for Lesson 6.4
-6. **6.5 Matchings in Bipartite Graphs**
-    - 6.5.1 The Maximum Matching Problem
-    - 6.5.2 Hall's Marriage Theorem
-    - 6.5.3 König's Theorem
-    - 6.5.4 Summary Questions for Lesson 6.5
-7. **6.6 Extensions and Applications of Flow Problems**
-    - 6.6.1 Project Selection Problem
-    - 6.6.2 Distribution Problem
-    - 6.6.3 Distribution Problems with Lower Bounds
-    - 6.6.4 Flight Scheduling Problem
-    - 6.6.5 Summary Questions for Lesson 6.6
-8. **6.7 Summary of Chapter 6**
-    - Summary of Chapter 6
+>[!Warning] More Common Definitions 
+> The Residual Capacity is more commonly defined as:
+>
+> - $c_f(u, v) = \begin{cases} c(u, v) - f(u, v) & \text{if } (u, v) \in E, \\ f(v, u) & \text{if } (v, u) \in E, \\ 0 & \text{otherwise}. \end{cases}$
+>   or 
+> - $c_f(e) = \begin{cases} c(e) - f(e) & \text{if \( e \) is a forward edge,} \\ f(e) &  \text{if \( e \) is a backward edge.} \end{cases}$
+>  
+> Also here we require that the flow network is bidirectional, which is not a common requirement.   
 
------
+___
+
+# Flow Network
 
 - A **network** is a directed graph $G = (V, E)$ with a non-negative **capacity** function $c: E \to \mathbb{N}$
 - A **flow network** is a network with a **source** vertex $s$ and a **sink** vertex $t$, and it is denoted by $(G, s, t, c)$.
 - A **flow** in a flow network $(G, s, t, c)$ is a function $f: V \times V \to \mathbb{N}$ that satisfies the following properties:
-	1. **Capacity constraint**: $\forall u, v \in V, 0 \le f(u, v) \le c(u, v)$.
-	2. **Flow conservation**: $\displaystyle\forall u \in V - \{s, t\}, f_{\text{in}}(u) = f_{\text{out}}(u)$, where:
+	- **Capacity constraint**: $\forall e \in E, 0 \leq f(e) \leq c(e)$.
+	- **Bidirectional Network**: $\forall u, v \in V, (u, v) \in E \iff (v, u) \in E$.
+		- (If $e\in E$, but $-e\not\in E$, then we add the edge $-e$ with capacity $0$) 
+	- **Flow conservation**: $\displaystyle\forall u \in V - \{s, t\}, f_{\text{in}}(u) = f_{\text{out}}(u)$, where:
 		- $\displaystyle f_{\text{in}}(u) = \sum_{v \in V} f(v, u)$
 		- $\displaystyle f_{\text{out}}(u) = \sum_{v \in V} f(u, v)$.
-	3. **Skew Symmetry**: $\forall u,v \in  V, f(u,v)=-f(v,u)$
-	4. $(u,v),(v,u)\notin E\implies f(u,v)=f(v,u)=0$
+	- **Opposite Flow Offset**: For each edge $e$, At most one of $f(e)$ and $f(-e)$ is positive.
+		- (If $0<f(e)\leq f(-e)$, then we adjust a new flow as follows: $f'(e) = 0$, $f(-e)' = f(-e) - f(e)$)
 - The **value** of a flow $f$ is $\displaystyle |f| = \sum_{v \in V} f(s, v) - \sum_{v \in V} f(v, s)$ (Usually, $\displaystyle\sum_{v \in V} f(v, s) =0$)
-- Given a flow network $(G, s, t, c)$, with a flow $f$:
-	- The **residual capacity** of an edge $e$ is the difference between the original capacity and the flow on that edge: $c_f(e) = c(e) - f(e)$.
-	- The **residual network** (of the flow network with $f$) is denoted by $G_f=(V,E_{f})$, where: $E_{f} = \{ (u, v) \in V \times V \mid c_f(u, v) > 0 \}$. 
-		- An **augmenting path** is a path $(s=u_1, u_2, \ldots, u_k=t)$ in $G_f$ such that $\forall i \in [1, k-1], c_f(u_i, u_{i+1}) > 0$.
+
+### Residual Network
+
+- The **residual network** (of a flow network $(G, s, t, c)$ with a flow $f$) is defined as $(G, s, t, c_f)$, where, $c_f: E \to \mathbb{N}$ is the **residual capacity** function defined as $c_f(e) = c(e) - f(e) + f(-e)$.
+
+
+- An **augmenting path** is a path $(s=u_1, u_2, \ldots, u_k=t)$ in $G_f$ such that $\forall i \in [1, k-1], c_f(u_i, u_{i+1}) > 0$.
 		- The **bottleneck** of an augmenting path is the minimum residual capacity of the edges in the path: $\min\{c_f(e) \mid e \in E(P)\}$.
-	- A **cut** of the flow network is a partition $(S, T)$ of $V$ such that $s \in S$ and $t \in T$.
-		- The **net flow** $f(S, T)$ across the cut $(S, T)$ is defined to be $\displaystyle f(S, T) = \sum_{u \in S} \sum_{v \in T} f(u, v)-\sum_{u \in S} \sum_{v \in T} f(v, u)$.
-		- The **capacity** of a cut $(S, T)$ is $\displaystyle c(S, T) = \sum_{u \in S} \sum_{v \in T} c(u, v)$.
-	- A **minimum cut** of the flow network is a cut $(S, T)$ such that $c(S, T)$ is minimized.
 
-	
-	
+### Cut
 
-### Max-Flow Min-Cut Theorem
-[C:/Users/adiel/iCloudDrive/Books/Computer%20Science/Algorithms/Introduction%20to%20Algorithms%20-%204th.pdf](file:///C:/Users/adiel/iCloudDrive/Books/Computer%20Science/Algorithms/Introduction%20to%20Algorithms%20-%204th.pdf)
-
-- (Lemma) Let $G=(V,E)$ be a flow network, $f$ be a flow in $G$, 
-	- (A) Let $P$ be an augmenting path in $G$, the function $f':V\times V\to \mathbb{R}$ defined as: $$\displaystyle f'(u,v)=\begin{cases} c_f(P) & \text{if } (u,v)\in P \\ -c_f(P) & \text{if } (v,u)\in P \\ 0 & \text{otherwise} \end{cases}$$ is a flow in $G$ with value $|f'|=c_f(P)>0$.
-	- (B) Let $G_f$ be the residual network of $G$ induced by $f$, and $f'$ be a flow in $G_f$, then $f+f'$ is a flow in $G$ with value $|f+f'|=|f|+|f'|>|f|$.
-- (Lemma) Let $f$ be a flow in a flow network $(G, s, t, c)$, and $(S,T)$ be a cut of $G$, then $f(S,T)=|f|$
-- (Lemma) The value of a flow in a flow network is equal to the flow into the sink
-- (Lemma) The value of a a flow $f$ in a flow network $(G, s, t, c)$ is bounded from above by the capacity of a minimum cut $(S,T)$: $|f|\le c(S,T)$
-- (**Max-Flow Min-Cut Theorem**) If $f$ is a flow in a flow network $(G, s, t, c)$, then the following are equivalent:
-	1. $f$ is a maximum flow in the flow network
-	2. The residual network $G_f$ contains no augmenting path
-	3. There exists a cut $(S,T)$ such that $|f|=c(S,T)$
-
+- A **cut** in a flow network is a set $R\subseteq V$ such that $s\in R$ and $t\not\in R$.
+	- The set $\mathrm{out}(R)=\{(u,v)\in E\mid  u\in R,v\not\in R\}$ is the set of edges from $R$ to $V-R$.
+	- The set $\mathrm{in}(R)=\{(u,v)\in E\mid  u\not\in R,v\in R\}$ is the set of edges from $V-R$ to $R$.
+- A **minimum cut** is a cut $R$ such that $c(\mathrm{out}(R))$ is minimized.
+- $|f|=f(\mathrm{out}(R))-f(\mathrm{in}(R))$, for any cut $R$ and flow $f$.
+- $|f|\leq c(\mathrm{out}(R))$, for any cut $R$ and flow $f$.
+- If $|f|=c(\mathrm{out}(R))$, then $f$ is a maximum flow and $R$ is a minimum cut.
+- (**Max-Flow Min-Cut Theorem**) For any flow $f$, the following are equivalent:
+	- $f$ is a maximum flow
+	- There is no augmenting path in the residual network of $f$
+	- There is a cut $R$ such that $|f|=c(\mathrm{out}(R))$
+- When the Ford-Fulkerson algorithm terminates, the current flow is the maximum flow.
+- If $A$ and $B$ are minimum cuts, then both $A\cap B$ and $A\cup B$ are minimum cuts.
 ## Maximal Flow Problem
 
 - Input: A flow network $(G, s, t, c)$.
 - Output: A flow $f$ of maximum value.
-
 
 ### Ford-Fulkerson Algorithm
 
@@ -130,7 +107,6 @@ Scaling_Max_Flow(G=(V,E), c, s, t):
 - stronger polynomial time complexity
 - $O(VE^2)$
 - Uses BFS to find the shortest augmenting path
-
 
 ```Algorithm
 Edmonds_Karp(G=(V,E), c, s, t):
