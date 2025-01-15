@@ -40,7 +40,8 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
 	- point charges
 	- objects are at rest (electrostatics force)
 	- electric force
-- (_Superposition principle_) The total force on a charge is the vector sum of the forces exerted by the other charges
+- (_Superposition principle_) The total force on a charge $Q$ is the sum of the forces exerted by the other charges $q_1, q_2, q_3, ...$ on $Q$
+	- $\displaystyle F = F_1 + F_2 + F_3 + ...$
 - $\displaystyle |\vec{F}_E| = \frac{1}{4\pi\epsilon_0} \frac{|q_1q_2|}{r^2} = k \frac{|q_1q_2|}{r^2}$ #todo
 
 

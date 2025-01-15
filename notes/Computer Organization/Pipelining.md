@@ -191,6 +191,8 @@ else if (MEM/WB.Rd == ID/EX.Rt) &&
 - **Hazard Detection Unit** (HDU) detects the `lw` instruction in the EX stage, and inserts a _NOP_ (no operation) before the following instruction
 	- Inputs:
 		- `ID/EX.RegisterRt` (destination register of the `lw` instruction)
+		- `ID/EX.MemRead`
+		- `Instruction` 
 	- Outputs:
 		- `IF/IDwrite` (write to the IF/ID register)
 			- 1 =  write the instruction in the IF/ID register
@@ -200,6 +202,8 @@ else if (MEM/WB.Rd == ID/EX.Rt) &&
 			- 0 = stall the pipeline
 		- selector signal to mux .. #todo
 
+- hazard: 
+	- `if (ID/EX.MemRead == 1) && (ID/EX.RegisterRt == IF/ID.RegisterRs || ID/EX.RegisterRt == IF/ID.RegisterRt)`
 
 
 ```
@@ -209,17 +213,7 @@ if (ID/EX.MemRead and
 	    Stall the pipeline
 ```
 
-
-
-
-
-
-
-
-- stalling (inserting NOPs)
-- (sometimes by both)
-- reordering instructions
-
+### Reordering Instructions
 
 > [!Example] Reordering Instructions
 > 
@@ -239,11 +233,60 @@ if (ID/EX.MemRead and
 > ```
 > 
 
+## Control Hazards
+
+- A **control hazard** (or **branch hazard**), occurs when the pipeline must decide whether to branch or not. The decision to branch is made late in the pipeline (during the MEM stage), meanwhile, the pipeline has already fetched the next instructions, which may be executed incorrectly if the branch is taken.
+
+#### Branch Prediction
+
+- **Branch prediction**: The processor predicts that the branch will not be taken and continue fetching and executing instructions sequentially.
+	- (Branch is not taken) The pipeline continues fetching and executing instructions sequentially
+	- (Branch is taken) The instructions already in the pipeline are discarded, means we must be able to flush instructions in the IF, ID, and EX stages. This done by setting the control values of these stages to zero.
+- Drawback: If the branch is frequently taken, this approach becomes inefficient because many instructions are discarded
+#### Moving the Branch Decision Earlier
+
+- One way to improve branch performance (in the previous solution) is to reduce the cost of the taken branch: 
+	- Thus far, we have assumed the next PC for a branch is selected in the MEM stage, but if we move the branch execution earlier in the pipeline, then fewer instructions need be flushed. 
+- Moving the branch decision up requires two actions to occur earlier: 
+	- **computing the branch target address**:
+		- The is the easy part
+		- We already have the PC value and the immediate field in the IF/ID pipeline register, so we just move the branch adder from the EX stage to the ID stage;
+			- of course, the branch target address calculation will be performed for all instructions, but only used when needed
+	- **evaluating the branch decision**: 
+		- This is the harder part 
+		- For branch equal, we would compare the two registers read during the ID stage to see if they are equal. 
+		- Equality can be tested by first exclusive ORing their respective bits and then ORing all the results. (A zero output of the OR gate means the two registers are equal.) 
+
+##### Difficulties
+###### Forwarding
+
+- During ID, we must: 
+	 - decode the instruction, 
+	 - decide whether a bypass to the equality unit is needed, and 
+	 - complete the equality comparison so that if the instruction is a branch, we can set the PC to the branch target address. 
+ - Forwarding for the operands of branches was formerly handled by the ALU forwarding logic, but the introduction of the equality test unit in ID will require new forwarding logic. 
+ - Note: the bypassed source operands of a branch can come from either the ALU/MEM or MEM/WB pipeline latches.
+
+###### Hazards
+
+- Moving the branch test to the ID stage implies additional forwarding and hazard detection hardware, since a branch dependent on a result still in the pipeline must still work properly with this optimization. 
+	- For example, to implement branch on equal (and its inverse), we will need to forward results to the equality test logic that operates during ID. 
+- Because the values in a branch comparison are needed during ID but may be produced later in time, it is possible that a data hazard can occur and a stall will be needed. 
+	- For example, if an ALU instruction immediately preceding a branch produces one of the operands for the comparison in the branch, a stall will be required, since the EX stage for the ALU instruction will occur after the ID cycle of the branch. 
+	- By extension, if a load is immediately followed by a conditional branch that is on the load result, two stall cycles will be needed, as the result from the load appears at the end of the MEM cycle but is needed at the beginning of ID for the branch.
+
+##### Summary
+
+- Despite these difficulties, moving the branch execution to the ID stage is an improvement, because it reduces the penalty of a branch to only one instruction if the branch is taken, namely, the one currently being fetched. 
+	- The exercises explore the details of implementing the forwarding path and detecting the hazard.
+- To flush instructions in the IF stage, we add a control line, called `IF.Flush`, that zeros the instruction field of the IF/ID pipeline register. 
+	- Clearing the register transforms the fetched instruction into a nop, an instruction that has no action and changes no state.
+
+#### Dynamic Branch Prediction
 
 
-____
-
-- structual hazard
 
 
-- control hazard
+
+
+
