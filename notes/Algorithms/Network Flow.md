@@ -117,5 +117,60 @@ Edmonds_Karp(G=(V,E), c, s, t):
 ```
 
 
+# Edge-disjoint paths
+
+- **Edge-disjoint paths** are paths that do not share any edges.
+- **Internally node-disjoint paths** are paths that do not share any internal nodes.
+- An **integral flow** is a flow where all flow values are integers.
+- An **unit capacity flow network** is a flow network where all edge capacities are 1.
+
+> Observation: If capacities are integers, the Ford-Fulkerson algorithm computes an integral flow, ensuring the existence of a maximum integral flow.
+
+- (**Flow Decomposition Theorem**) For a unit capacity flow network with a maximum integral flow $f$ of value $k$, the saturated edges form a union of $k$ edge-disjoint paths and some cycles. 
+	- (This is based on the principle that in a directed graph where in-degree equals out-degree for all nodes, there exists a collection of cycles covering all edges.)
+	- The maximum number of edge-disjoint paths from the source to the sink equals the value of the maximum flow.
+- There exists an algorithm with $O(|E|^2)$ time complexity for the following problems:
+	- Decomposing a directed graph into edge-disjoint cycles.
+	- Decomposing an integral flow into edge-disjoint paths.
+	- Finding the maximum number of edge-disjoint paths.
+
+- A **seperating set (of edges)** of $s,t\in V$ is a set $S\subset E$ such that the removal of $S$ disconnects $s$ from $t$.
+- A **seperating set** (or **vertex separator**) of $s,t\in V$ is a set $S\subset V$ such that the removal of $S$ disconnects $s$ from $t$.
+- In flow networks with unit capacities, the following quantities are equal:
+	- The minimum size of a seperating set of $s$ and $t$.
+	- The minimum size of edges in a cut.
+	- The maximum flow value.
+	- The maximum number of edge-disjoint paths.
+### Menger's Theorem
+
+Menger's theorem has four main formulations:
+
+1. **Directed Graph, Edge Version**:  
+   In a directed graph, the maximum number of edge-disjoint paths from $s$ to $t$ equals the minimum size of an edge set that separates $s$ from $t$.
+
+2. **Undirected Graph, Edge Version**:  
+   In an undirected graph, the maximum number of edge-disjoint paths from $s$ to $t$ equals the minimum size of an edge set that separates $s$ from $t$.
+
+3. **Directed Graph, Vertex Version**:  
+   In a directed graph without a direct edge from $s$ to $t$, the maximum number of internally vertex-disjoint paths from $s$ to $t$ equals the minimum size of a vertex set (excluding $s$ and $t$) that separates $s$ from $t$.
+
+4. **Undirected Graph, Vertex Version**:  
+   In an undirected graph without a direct edge from $s$ to $t$, the maximum number of internally vertex-disjoint paths from $s$ to $t$ equals the minimum size of a vertex set (excluding $s$ and $t$) that separates $s$ from $t$.
+
+### Mathematical Notation
+- $\lambda_G^Q(s, t)$: Maximum number of paths from $s$ to $t$ in $G$, where no two paths share an edge or vertex in $Q \setminus \{s, t\}$.
+- $\tau_G^Q(s, t)$: Minimum size of a set $C \subseteq Q$ such that removing $C$ disconnects all paths from $s$ to $t$.
+
+### Simplified Formulation
+For vertices $s, t$ in a graph $G$:
+- $\lambda_G^E(s, t) = \tau_G^E(s, t)$: Involving edge-disjoint paths and edge separators.
+- If there is no edge $s \to t$: $\lambda_G^V(s, t) = \tau_G^V(s, t)$: Involving internally vertex-disjoint paths and vertex separators.
+
+### Notes
+- The symbol $\lambda$ is used here instead of $\nu$ to avoid confusion with the letter $v$.
+- When $G$ is the focus, $\lambda(G)$ or $\tau(G)$ may be used for brevity, assuming $Q, s, t$ are clear from context.
+
+
+
 
 
