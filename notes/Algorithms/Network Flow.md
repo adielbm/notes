@@ -37,6 +37,7 @@ ___
 - A **cut** in a flow network is a set $R\subseteq V$ such that $s\in R$ and $t\not\in R$.
 	- The set $\mathrm{out}(R)=\{(u,v)\in E\mid  u\in R,v\not\in R\}$ is the set of edges from $R$ to $V-R$.
 	- The set $\mathrm{in}(R)=\{(u,v)\in E\mid  u\not\in R,v\in R\}$ is the set of edges from $V-R$ to $R$.
+	- $c(\mathrm{out}(R)) = \displaystyle\sum_{(u,v)\in \mathrm{out}(R)}c(u,v)$ is the capacity of the cut.
 - A **minimum cut** is a cut $R$ such that $c(\mathrm{out}(R))$ is minimized.
 - $|f|=f(\mathrm{out}(R))-f(\mathrm{in}(R))$, for any cut $R$ and flow $f$.
 - $|f|\leq c(\mathrm{out}(R))$, for any cut $R$ and flow $f$.
