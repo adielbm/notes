@@ -1,3 +1,4 @@
+
 - The **clock cycle** time (CCT) is the time for one clock period (usually of the processor clock, which runs at a constant rate, usually published as part of the documentation for a computer)
 	- note: Although clock cycle time has traditionally been fixed, to save energy or temporarily boost performance, today’s processors can vary their clock rates, so we would need to use the average clock rate for a program.
 - The **clock rate** (CR) is the inverse of the clock cycle time 
@@ -88,7 +89,7 @@ $$\displaystyle\text{ET}_{A}=\text{ET}_{B} \implies \frac{\text{IC}_{A} \times \
 
 - $\displaystyle\mathrm{Speedup}=\frac{\mathrm{Latency_{single}}}{\mathrm{CCT_{pipelined}}}$ (given that there is no stalls)
 	- $\displaystyle\lim_{N\to \infty} \frac{(N\cdot \mathrm{Latency_{single}})+\mathrm{Overhead_{single}}}{(N\cdot \mathrm{Latency_{pipelined}})+\mathrm{Overhead_{pipelined}}}$ is the speedup of the pipelined processor over the single-cycle processor, where:
-		- $\mathrm{Overhead_{single}}$ and $\mathrm{Overhead_{pipelined}}$ are the time taken to execute some given nubmer of instructions, for the single-cycle and pipelined processors, respectively.
+		- $\mathrm{Overhead_{single}}$ and $\mathrm{Overhead_{pipelined}}$ are the time taken to execute some given number of instructions, for the single-cycle and pipelined processors, respectively.
 - When the stages are perfectly balanced, then:
 	- $\displaystyle\mathrm{CCT_{pipelined}}=\frac{\mathrm{CCT_{single}}}{\mathrm{depth}}$, thus, $\displaystyle\mathrm{Speedup}=\mathrm{depth}$ (Under ideal conditions and with a large number of instructions)
 
