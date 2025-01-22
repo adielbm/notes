@@ -12,7 +12,7 @@
 
 - Data are transferred between memory and cache in blocks of fixed size, called **cache lines** or **cache blocks**
 - The **Cache Memory** consists of $2^n$ entries (lines)
-	- **Cahce block** contains $2^{m}\text{ words}=2^{m+2}\text{ bytes}=2^{m+5}\text{ bits}$ of data (Block size)
+	- **Cache block** contains $2^{m}\text{ words}=2^{m+2}\text{ bytes}=2^{m+5}\text{ bits}$ of data (Block size)
 	- Tag Directory:
 		- A tag field ($32-(n+m+2)$ bits)
 		- A valid bit (1 bit)

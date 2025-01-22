@@ -69,6 +69,8 @@
    - Up to 5 instructions in pipeline simultaneously
 
 
+
+
 # Pipeline Control
 
 ![[Pipeline Control.png]]
@@ -283,6 +285,33 @@ if (ID/EX.MemRead and
 	- Clearing the register transforms the fetched instruction into a nop, an instruction that has no action and changes no state.
 
 #### Dynamic Branch Prediction
+
+
+- $\text{Total Stalls} = \text{IC} \times B \times M \times S$
+	- $B$ is the fraction of branches
+	- $M$ is the fraction of mispredictions of the BPU ($=1-\text{Accuracy}$)
+	- $S$ is the stall cost (penalty)
+	- $\text{IC}$ is the number of instructions
+	- $\text{Total Stalls}$ is the total number of stalls in the pipeline
+- $\text{Fraction of Stalls} = \frac{\text{Total Stalls}}{\text{IC} + \text{Total Stalls}}$
+- $\text{Percentage of Stalls} = \text{Fraction of Stalls} \times 100$
+
+> [!Example] Example
+> Given:
+> - $B = 1/5$ of the instructions are branches
+> - $A = 95\%$ accuracy of the BPU
+> - $M = 1 - A = 5\%$ mispredictions
+> - $S = 12$ stall cost
+> - $\text{IC}$ is the number of instructions
+> 
+> What is the percentage of stalls in the pipeline?
+> 
+> Answer:
+> - $\text{Total Stalls} = \text{IC} \times B \times M \times S = 0.12 \times \text{IC}$
+> - $\text{Fraction of Stalls} = \frac{0.12 \times \text{IC}}{  (1 + 0.12)\times\text{IC}} = 0.1071$
+> - $\text{Percentage of Stalls} = 10.71\%$
+
+
 
 
 
