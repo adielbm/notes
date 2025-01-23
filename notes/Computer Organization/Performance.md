@@ -19,7 +19,16 @@
 	- The **instruction count** (IC) is the number of instructions executed by the program
 	- The **clock cycles per instruction** (CPI) is the average number of clock cycles per instruction for a program or program fragment
 	- The **CPU clock cycles** (or **total clock cycles**) is the total number of clock cycles consumed by the program 
-- The **CPU (execution) time** (of program) is $\text{CPU execution time} = \text{CPU clock cycles} \times \text{Clock cycle time}=\frac{\text{CPU clock cycles}}{\text{Clock rate}}$
+- The **CPU (execution) time** (of program) is 
+	- $\text{Execution Time} = \text{IC}\times \text{CPI} \times \text{CCT}=\frac{\text{CPU clock cycles}}{\text{Clock rate}}$
+
+
+- $\displaystyle\text{CPU Clock Cycles}=\sum_{i=1}^{n} \text{IC}_i \times \text{CPI}_i$
+	- $\text{IC}_i$ is the number of instructions of type $i$
+	- $\text{CPI}_i$ is the average number of clock cycles per instruction of type $i$
+
+
+
 
 > The number of instructions in the program (IC) is determined by the efficiency of the algorithm implementation, the compiler, and the processor's instruction set architecture (ISA). 
 > The implementation of the processor determines both the clock cycle time and the CPI.
@@ -75,19 +84,34 @@ $$\displaystyle\text{ET}_{A}=\text{ET}_{B} \implies \frac{\text{IC}_{A} \times \
 
 > In this section, $\mathrm{CPI}=1$, therefore, $\mathrm{Latency}=\mathrm{CCT}$
 
-- Although the _latency_ is worse in the pipelined processor, the _throughput_ is significantly improved
+
 - The **pipeline depth** is the number of stages ($=5$) in the pipeline
 - $\{\mathrm{IF},\mathrm{ID},\mathrm{EX},\mathrm{MEM},\mathrm{WB}\}$ are the **stage delay** in the pipeline
-- $\mathrm{CCT_{single}}=\mathrm{IF}+\mathrm{ID}+\mathrm{EX}+\mathrm{MEM}+\mathrm{WB}=\mathrm{Latency_{single}}$
-- $\mathrm{CCT_{pipelined}}=\max(\mathrm{IF},\mathrm{ID},\mathrm{EX},\mathrm{MEM},\mathrm{WB})$
-- $\mathrm{Latency_{pipelined}}=\mathrm{CCT_{pipelined}} \times \text{pipeline-depth}$
+
+$\mathrm{Latency_{pipelined}}=\mathrm{CCT_{pipelined}} \times \text{pipeline-depth}$
+
+
+
 	- $\displaystyle\mathrm{Latency_{pipelined}}=\frac{\text{Execution-time}} {\text{Number-of-instructions}}$  #todo is it correct
+
+
+- $\mathrm{CCT_{single}}=\mathrm{IF}+\mathrm{ID}+\mathrm{EX}+\mathrm{MEM}+\mathrm{WB}$
+- $\mathrm{CCT_{pipelined}}=\max(\mathrm{IF},\mathrm{ID},\mathrm{EX},\mathrm{MEM},\mathrm{WB})$
+
 - $\displaystyle\text{Throughput}=\frac{1}{\text{CCT}}$
 - $\displaystyle{\text{ET}}(n)={\text{CCT}}\times (n+\text{depth}-1)$
 
+> Although the _latency_ is worse in the pipelined processor, the _throughput_ is significantly improved
 
 
-- $\displaystyle\mathrm{Speedup}=\frac{\mathrm{Latency_{single}}}{\mathrm{CCT_{pipelined}}}$ (given that there is no stalls)
+- $\displaystyle\mathrm{Speedup}=\frac{\mathrm{Latency_{single}}}{\mathrm{Latency_{pipelined}}}=\frac{\mathrm{CPI_{single}}\times \mathrm{CCT_{single}}}{\mathrm{CPI_{pipelined}}\times \mathrm{CCT_{pipelined}}}$
+
+- $\displaystyle\text{Speedup}=\frac{\text{Pipeline-depth}}{1+\text{Pipeline stall CPI}}\times \frac{\text{CCT}_{\text{single}}}{\text{CCT}_{\text{pipelined}}}$
+
+
+	
+	
+	
 	- $\displaystyle\lim_{N\to \infty} \frac{(N\cdot \mathrm{Latency_{single}})+\mathrm{Overhead_{single}}}{(N\cdot \mathrm{Latency_{pipelined}})+\mathrm{Overhead_{pipelined}}}$ is the speedup of the pipelined processor over the single-cycle processor, where:
 		- $\mathrm{Overhead_{single}}$ and $\mathrm{Overhead_{pipelined}}$ are the time taken to execute some given number of instructions, for the single-cycle and pipelined processors, respectively.
 - When the stages are perfectly balanced, then:
