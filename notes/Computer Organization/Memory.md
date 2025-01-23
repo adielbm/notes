@@ -11,7 +11,7 @@
 # Cache Memory
 
 - Data are transferred between memory and cache in blocks of fixed size, called **cache lines** or **cache blocks**
-- The **Cache Memory** consists of $2^n$ entries (lines)
+- The **Cache Memory** consists of $2^n$ entries called **blocks** (or **lines**)
 	- **Cache block** contains $2^{m}\text{ words}=2^{m+2}\text{ bytes}=2^{m+5}\text{ bits}$ of data (Block size)
 	- Tag Directory:
 		- A tag field ($32-(n+m+2)$ bits)
@@ -42,3 +42,13 @@
 - The size of the tag field is $32-(n+m+2)$ bits.
 - Total number of bits in a direct-mapped cache is $2^n\times (\text{block size}+\text{tag size}+\text{valid field size})$
 
+
+
+```
+Computer Architecture: A Quantitative
+
+
+10. Average memory-access time = Hit time + Miss rate Miss penalty 
+11. Misses per instruction = Miss rate Memory access per instruction 
+12. Cache index size: 2index = Cache size /(Block size Set associativity)
+```
