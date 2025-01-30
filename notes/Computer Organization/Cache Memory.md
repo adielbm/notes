@@ -10,9 +10,10 @@
 	- $\text{Byte-offset-bits}=2$ (used for the byte part of the address)
 - Cache
 	- Cache size:
-		- (DATA only) $\text{Cache-Size}=K\times 2^{n+m+2} \text{ bytes}$
-		- (DATA + Metadata(tag-bits,valid-bit))
-			- (in bits) $\text{Cache size} = K \times 2^{n} \times (1+\text{tag-bits}+2^{m+5})\text{ bits}$
+		- $\underset{\text{data}}{\text{Cache-Size}}=K\times 2^{n+m+2} \text{ bytes}=K\times 2^{n+m+5}\text{ bits}$
+		- $\underset{\text{data + metadata}}{\text{Cache-Size}}=K\times 2^{n}\times (1+\text{tag-bits}+2^{m+5})\text{ bits}$
+		- $\displaystyle\text{Compression Ratio}=\frac{\underset{\text{data + metadata}}{\text{Cache-Size}}}{\underset{\text{data}}{\text{Cache-Size}}}=\frac{1+\text{tag-bits}+2^{m+5}}{2^{m+5}}$
+
 	- $\text{Block-Size}=2^m \text{ words}=2^{m+2}\text{ bytes}=2^{m+5}\text{ bits}$
 	- $\text{Total-Blocks-in-Cache}=2^n\times K$
 	- $\text{Total-Sets-in-Cache}=2^n$
@@ -22,6 +23,9 @@
 	- $K=2$ is a 2-way set-associative cache
 	- $K=2^n$ is a fully associative cache
 - For given cache size, when $K$ increases, $n$ (index-bits) decreases and the tag-bits increases
+
+
+- The ratio between the main memory size and the cache size (data) is $\displaystyle\frac{2^{\text{tag-bits}}}{K}$
 
 #### Mapping Process
 
@@ -102,20 +106,31 @@ Cache CPI Misses per instruction Miss penalty
 		- $\text{CPI}=1+(0.02 \times 20)+(0.005\times 400)=3.4$
 		- speedup: $9/3.4=2.6$
 
-
-
-
 - Given:
-	- $\underset{\text{data cache}}{\text{miss rate}}=4\%$
-	- $\underset{\text{ins. cache}}{\text{miss rate}}=2\%$
-	- $\text{miss penalty}=100\text{ cycles}$
-	- $\text{load/store frequency}=36\%$
+	- $\text{miss-rate}=\begin{cases} 4\% & \text{data} \\ 2\% & \text{instructions} \end{cases}$
+	- $\text{miss-penalty}=\begin{cases} 100\text{ cycles} & \text{data} \\ 200\text{ cycles} & \text{instructions} \end{cases}$
+	- $\text{load/store frequency}=36\%$ (instructions that access data memory)
 	- base CPI = 2
 - miss cycles per instruction
 	- data: $0.04\times 0.36\times 100=1.44$
-	- ins.: $0.02\times 100=2$
-- total number of memory-stalls cycles per ins.: $1.44+2=3.44$
-- new CPI (with memory stalls): $2+3.44=5.44$
-- speedup: $5.44/2=2.72$
+	- ins.: $0.02\times 200=4$
+- total number of memory-stalls cycles per ins.: $1.44+4=5.44$
+- new CPI (with memory stalls): $2+5.44=7.44$
+- speedup: $\frac{2}{7.44}=0.2688$
 
- 
+
+ - given:
+	- $\text{CR}=4\,\mathsf{GHz}$
+	- $\text{miss-rate}=\begin{cases} 4\% & \text{data} \\ 2\% & \text{instructions} \end{cases}$
+	- $\text{miss-penalty}=\begin{cases} 800\text{ cycles} & \text{data} \\ 600\text{ cycles} & \text{instructions} \end{cases}$
+	- $\text{load/store frequency}=40\%$ (instructions that access data memory)
+	- $\text{Base-CPI} = 2.5\,\mathsf{cc/ins}$
+- find the CPU time of a program with $\text{IC}=2\times 10^9$ instructions
+	- miss cycles per instruction:
+		- data: $0.04\times 0.4\times 800=12.8$
+		- ins.: $0.02\times 600=12$
+		- total: $12.8+12=24.8$
+	- new CPI: $2.5+24.8=27.3$
+	- $\text{CPU-Time}=\frac{2\times 10^9}{4\times 10^9}\times 27.3=13.65\,\mathsf{sec}$
+- in general:
+	- $\displaystyle\text{CPU Time} = \frac{\text{IC} }{\text{CR}}\times \left(\text{CPI}_{\text{base}} + \left(\text{MR}_{\text{data}} \times f_{\text{LS}} \times \text{MP}_{\text{data}}\right) + \left(\text{MR}_{\text{ins}} \times \text{MP}_{\text{ins}}\right)\right)$
