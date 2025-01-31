@@ -24,8 +24,7 @@
 	- $K=2^n$ is a fully associative cache
 - For given cache size, when $K$ increases, $n$ (index-bits) decreases and the tag-bits increases
 
-
-- The ratio between the main memory size and the cache size (data) is $\displaystyle\frac{2^{\text{tag-bits}}}{K}$
+- The ratio between the main memory size and the cache size (data) is $\displaystyle\frac{2^{\text{tag-bits}}}{~~K~~}$
 
 #### Mapping Process
 
@@ -33,12 +32,28 @@
 >  - by taking modulo of a number with $2^p$ we get its $p$ LSB bits
 >  - by dividing a number with $2^p$ we get the number without its $p$ LSB bits (i.e. shifting right by $p$ bits)
 
-Given we have an address $x$ in main memory
+____
 
-- $x \div 2^{m+2}$ is the memory block number of $x$ 
-- $(x \div 2^{m+2}) \mod 2^n$ is the index (set number) to which $x$ will be mapped in the cache
-- $(x \div 2^{m+2}) \div 2^n$ is the tag of $x$
-- or in another approache we can get the index by $(x \mod 2^{n+m+2}) \div 2^{m+2}$ 
+
+Given we have an _word address_ (?) $x$ in main memory
+
+- The range of addresses in a block in main memory that contains $x$ is:
+	- $\text{base address}=\displaystyle\left\lfloor \frac{x}{2^{m}} \right\rfloor \times 2^{m}$
+	- $\text{ending address}=\displaystyle\text{base address}+2^{m}-1$
+
+
+- $\displaystyle\left\lfloor \frac{x}{2^{m}} \right\rfloor$ is the memory block number of $x$
+
+
+- $\displaystyle \left\lfloor \frac{x}{2^{m}} \right\rfloor  \mod 2^n$ is the index (set number) to which $x$ will be mapped in the cache
+- $\displaystyle\left\lfloor\frac{\displaystyle\left\lfloor \frac{x}{2^{m}} \right\rfloor}{2^n}\right\rfloor$ is the tag of $x$
+
+
+
+- Alternatively, we can calculate the index as $\displaystyle\left\lfloor \frac{x \mod 2^{n+m+2}}{2^{m+2}} \right\rfloor$
+
+
+
 
 
 > [!EXAMPLE]
