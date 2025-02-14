@@ -6,5 +6,8 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
-public
 notes/TODO List.md
+plugins
+public
+themes
+.obsidian
