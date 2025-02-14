@@ -1,7 +1,6 @@
 ---
 title: Welcome
 ---
-
 This is my notebook, which I started writing in the fall of 2022.
 
 I'd welcome any suggestions for improvement.
