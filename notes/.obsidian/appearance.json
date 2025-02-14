@@ -1,4 +1,9 @@
 {
   "theme": "obsidian",
-  "translucency": false
+  "translucency": false,
+  "enabledCssSnippets": [
+    "style"
+  ],
+  "showRibbon": false,
+  "baseFontSize": 16
 }

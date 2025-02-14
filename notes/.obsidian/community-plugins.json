@@ -1,5 +1,4 @@
 [
-  "obsidian-git",
   "obsidian-hide-sidebars-when-narrow",
   "obsidian-latex-suite",
   "quick-latex",
@@ -8,5 +7,6 @@
   "obsidian-tex-plugin",
   "obsidian-hl",
   "img-caption",
+  "obsidian-git",
   "github-copilot"
 ]

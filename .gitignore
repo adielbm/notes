@@ -5,9 +5,7 @@ tsconfig.tsbuildinfo
 .quartz-cache
 private/
 .replit
-replit.nix
-notes/TODO List.md
-plugins
-public
-themes
 .obsidian
+!notes/.obsidian/community-plugins.json
+!notes/.obsidian/core-plugins.json
+!notes/.obsidian/snippets/style.css

@@ -47,7 +47,7 @@ A **complete graph** is a simple undirected graph in which every pair of distinc
 ### Matching in Bipartite graph
 
 - Given a bipartite graph $G=(A \cup B,E)$,
-	- (4.7) **Hall's marriage theorem**: There exists a [[Graph#Matching|matching]] that covers every vertex in $A$ if and only if $|\Gamma(X)| \geq |X|$ for all subsets $X$ of $A$.
+	- (4.7, **Hall's marriage theorem**) There exists a [[Graph#Matching|matching]] that covers every vertex in $A$ if and only if $|\Gamma(X)| \geq |X|$ for all subsets $X$ of $A$.
 	- (4.8, Corollary from HMT) Then there exists a [[Graph#Perfect matching|perfect matching]] if and only if $|\Gamma(X)| \geq |X|$ for all subsets $X$ of $A$, and **also** $|A|=|B|$.
 	- (4.16) **Kőnig's theorem**: The size of **minimum vertex cover** is equal to the size of the maximum matching. $\beta(G)=\nu(G)$.
 
