@@ -72,17 +72,14 @@
 	- $\sum_{n=1}^{N}(b_{n+1}-b_n)=b_{N+1}-b_1$.
 
 
+## Geometric Series
 
-
-## Geometric series
-
-- A **geomorphic series** is a series of the form $\sum_{n=0}^{\infty}ar^n$ where $a\neq0$ and the **common ratio** $r$ are constants.
-	- Finite series
-		- ${\displaystyle\sum _{k=1}^{n}ar^{k-1}={\begin{cases}a\left({\frac {1-r^{n}}{1-r}}\right)&r\neq 1\\an&{\text{otherwise}}\end{cases}}}$
-	- Infinite series
-		- if $|r|<1$, $\sum_{n=0}^{\infty}ar^n=\frac{a}{1-r}$.
-		- if $|r|\geq1$, $\sum_{n=0}^{\infty}ar^n$ diverges.
-			- if $r=1$, $\sum_{n=0}^{\infty}ar^n$ diverges to $\infty$ if $a>0$ (or $-\infty$ if $a<0$).
+- A **geometric series** is a series of the form $\displaystyle\sum_{n=0}^{\infty}ar^n$ where $a\neq0$ and the **common ratio** $r$ are constants.
+	- if $|r|<1$, $\sum_{n=0}^{\infty}ar^n=\frac{a}{1-r}$.
+	- if $|r|\geq1$, $\sum_{n=0}^{\infty}ar^n$ diverges.
+		- if $r=1$, $\sum_{n=0}^{\infty}ar^n$ diverges to $\infty$ if $a>0$ (or $-\infty$ if $a<0$).
+- The sum of a finite initial segment of an infinite geometric series is called a **finite geometric series**, that is
+	- $\displaystyle\sum _{k=1}^{n}ar^{k-1}={\begin{cases}a\left(\displaystyle\frac {1-r^{n}}{1-r}\right)&r\neq 1\\an&{r=1}\end{cases}}$
 
 ## p-series & harmonic series
 

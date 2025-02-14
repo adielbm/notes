@@ -1,24 +1,31 @@
-- Wave length $\lambda = \frac{v}{f}$
-    - $v$ is the speed of the wave
-    - $f$ is the frequency of the wave
-    - $\lambda$ is the wave length
+$$\displaystyle f=\frac{1}{T}=\frac{\omega}{2\pi}= \frac{v}{\lambda}$$
+- $f$ the **frequency** of the wave (in $\mathsf{Hz}$)
+- $\omega$ is the **angular frequency** of the wave (in $\mathsf{rad/s}$)
+- $T$ is the **period** of the wave (in $\mathsf{s}$)
+- $v$ is the **wave speed** of the wave (in $\mathsf{m/s}$)
+- $\lambda$ is the **wavelength** of the wave (in $\mathsf{m}$)
 
 
-- A **wave form** is #todo
-- A **wave function** is #todo
+### Transverse Wave 
 
-### Sine Wave & Cosine Wave
+- $v=\sqrt{\frac{T}{\mu}}$ is the wave speed of a transverse wave traveling along a stretched string of tension $T$ (in $\mathsf{N}$) and linear mass density $\mu$ (in $\mathsf{kg/m}$)
+
+### Longitudinal Wave
+
+- $v=\sqrt{\frac{E}{\rho}}$ 
+- $v=\sqrt{\frac{B}{\rho}}$
+
+
+
+
+
+### Sine Wave
 
 - A **sine wave** (or **sinusoid**, symbol: ∿) is any function of the form $$y=A\sin(\omega t + \phi)$$
-- A **cosine wave** is any function of the form $$y=A\cos(\omega t + \phi)$$
 - $A$ is the amplitude
 - $\omega$ is the [[Periodic Functions|angular frequency]] (in $\mathsf{rad/s}$)
 - $\phi$ is the phase shift (which moves the wave left or right on the time axis)
-- $t$ is the time
-- $\sin$ and $\cos$ are the sine and cosine functions
-- The **period** of the wave is $T=\frac{2\pi}{\omega}$
-- The **frequency** of the wave is $f=\frac{1}{T}=\frac{\omega}{2\pi}$ (in $\mathsf{Hz}$)
-- Sine and cosine waves are periodic functions with period $T$ and frequency $f$
+
 
 
 

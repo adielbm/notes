@@ -3,7 +3,7 @@
 - Th problem is to find a [[Graph#Minimum Spanning Tree|minimum spanning tree]] $T$ for a connected undirected graph $G=(V,E)$ with weights on the edges. (the weights are non-negative)
 ## Prim's Algorithm
 
-```
+```Algorithm
 for each v ∈ V:
   C[v] = ∞ # the cheapest cost of a connection to v
   E[v] = null # the edge that connects v to the tree

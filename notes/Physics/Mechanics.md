@@ -380,7 +380,7 @@ For every action force $\vec{F}_{1 \to 2}$ exerted by object 1 on object 2, ther
 
 #### Mass-Spring System
 
-- $T=2\pi \sqrt{ \frac{m}{k}}$
+- $\displaystyle f_0=\frac{1}{2\pi}\sqrt{\frac{k}{m}}=\frac{1}{T}$ is the natural frequency of the system
 - $v_{\text{max}} = A \sqrt{\frac{k}{m}}$
 - $\displaystyle v_{\text{max}} = \pm A\sqrt{\frac{k}{m}}$ is the maximum velocity
 

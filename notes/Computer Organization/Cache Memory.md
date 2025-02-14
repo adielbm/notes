@@ -15,14 +15,17 @@
 		- $\displaystyle\text{Compression Ratio}=\frac{\underset{\text{data + metadata}}{\text{Cache-Size}}}{\underset{\text{data}}{\text{Cache-Size}}}=\frac{1+\text{tag-bits}+2^{m+5}}{2^{m+5}}$
 
 	- $\text{Block-Size}=2^m \text{ words}=2^{m+2}\text{ bytes}=2^{m+5}\text{ bits}$
-	- $\text{Total-Blocks-in-Cache}=2^n\times K$
+	- $\displaystyle\text{Total-Blocks-in-Cache}=2^n\times K=\frac{\underset{\text{data}}{\text{Cache-Size}}}{\text{Block-Size}}$  
+		- (this is also the number of valid-bits in the cache)
 	- $\text{Total-Sets-in-Cache}=2^n$
 	- $\text{Valid-bit}=1$
 - $K$ is the number of **ways** (for blocks) per set
+	- $\displaystyle K=\frac{\underset{\text{data}}{\text{Cache-Size}}}{2^{n+m+2}}$ (where cache size is in bytes)
 	- $K=1$ is a direct-mapped cache
 	- $K=2$ is a 2-way set-associative cache
-	- $K=2^n$ is a fully associative cache
+- When $n=0$ is the cache is **fully associative**, and the number of sets is $2^0=1$
 - For given cache size, when $K$ increases, $n$ (index-bits) decreases and the tag-bits increases
+
 
 - The ratio between the main memory size and the cache size (data) is $\displaystyle\frac{2^{\text{tag-bits}}}{~~K~~}$
 
@@ -34,19 +37,20 @@
 
 ____
 
+> [!NOTE]
+> When $x$ is a _word address_ then we use in $m$, but when $x$ is a _byte address_ then we use $m+2$
 
-Given we have an _word address_ (?) $x$ in main memory
+Given we have a _word address_ $x$ in main memory
 
 - The range of addresses in a block in main memory that contains $x$ is:
 	- $\text{base address}=\displaystyle\left\lfloor \frac{x}{2^{m}} \right\rfloor \times 2^{m}$
 	- $\text{ending address}=\displaystyle\text{base address}+2^{m}-1$
 
-
 - $\displaystyle\left\lfloor \frac{x}{2^{m}} \right\rfloor$ is the memory block number of $x$
-
-
 - $\displaystyle \left\lfloor \frac{x}{2^{m}} \right\rfloor  \mod 2^n$ is the index (set number) to which $x$ will be mapped in the cache
-- $\displaystyle\left\lfloor\frac{\displaystyle\left\lfloor \frac{x}{2^{m}} \right\rfloor}{2^n}\right\rfloor$ is the tag of $x$
+- $\displaystyle\left\lfloor \frac{x}{2^{n+m}} \right\rfloor$ is the tag of $x$
+
+
 
 
 

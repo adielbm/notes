@@ -60,20 +60,20 @@
       "key": "P"
     }
   ],
-  "app:go-back": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "ArrowLeft"
-    }
-  ],
   "app:go-forward": [
     {
       "modifiers": [
-        "Alt"
+        "Mod"
       ],
       "key": "ArrowRight"
+    }
+  ],
+  "app:go-back": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "ArrowLeft"
     }
   ]
 }
