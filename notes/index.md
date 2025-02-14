@@ -20,7 +20,7 @@ I'd welcome any suggestions for improvement.
 
 # Curriculum
 
-![](https://progress-bar.xyz/44/?scale=120&width=200&progress_color=00D26A)  (44 / 120 Credits)
+![](https://progress-bar.xyz/48/?scale=120&width=140&progress_color=00D26A&suffix=%20out%20of%20120)
 
 |                                                             | Course                                  | Credits   | Status  |
 | ----------------------------------------------------------- | --------------------------------------- | --------- | ------- |
@@ -37,8 +37,8 @@ I'd welcome any suggestions for improvement.
 | [20417](https://www.openu.ac.il/courses/20417.htm)          | Algorithms                              | 5         | 🔄️     |
 | [20465](https://www.openu.ac.il/courses/20465.htm)          | Systems Programming (C)                 | 4         | ✅       |
 | [20604](https://www.openu.ac.il/courses/20604.htm)          | Computational Models                    | 5         | 🔄️     |
-| [20471](https://www.openu.ac.il/courses/20471.htm)          | Computer Organization                   | 4         | 🔄️     |
-| [20466](https://www.openu.ac.il/courses/20466.htm)          | Logic                                   | 4         | ✅       |
+| [20471](https://www.openu.ac.il/courses/20471.htm)          | Computer Organization                   | 4         | ✅       |
+| [20466](https://www.openu.ac.il/courses/20466.htm)          | Logic                                   | 4         | ✅       |
 | [20594](https://www.openu.ac.il/courses/20594.htm)          | Operating Systems                       | 4         |         |
 | [20905](https://www.openu.ac.il/courses/20905.htm)          | Programming Languages                   | 4         |         |
 | **Electives**                                               |                                         |           |         |
