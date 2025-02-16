@@ -9,7 +9,8 @@ $$\eqalign{
 >https://en.wikipedia.org/wiki/Triangle_of_partition_numbers
 
 # Partition 
-**Partition** ^[question 7.19] of a positive integer $n$, also called an **integer partition**, is a way of writing $n$ as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition. 
+
+- A **partition** of a positive integer $n$, (also called an **integer partition**), is a way of writing $n$ as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition. 
 
 The partition function $p(n)$ equals the number of possible partitions of a non-negative integer $n$.
 
@@ -20,7 +21,8 @@ $${\displaystyle p(n)=\sum _{k=0}^{n}p_{k}(n)}$$
 >https://en.wikipedia.org/wiki/Partition_(number_theory)
 
 # Partition with distinct parts
-$Q(n)$, also denoted $q(n)$, ^[question 7.20] gives the number of ways of writing the integer $n$ as a sum of positive integers without regard to order with the constraint that **all integers in a given partition are distinct**. (A000009)
+
+$Q(n)$, also denoted $q(n)$, gives the number of ways of writing the integer $n$ as a sum of positive integers without regard to order with the constraint that **all integers in a given partition are distinct**. (A000009)
 $$1, 1, 2, 2, 3, 4, 5, 6, 8, 10,\ldots$$
 
 >https://en.wikipedia.org/wiki/Partition_(number_theory)#Odd_parts_and_distinct_parts
