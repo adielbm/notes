@@ -5,6 +5,26 @@ $$\displaystyle f=\frac{1}{T}=\frac{\omega}{2\pi}= \frac{v}{\lambda}$$
 - $v$ is the **wave speed** of the wave (in $\mathsf{m/s}$)
 - $\lambda$ is the **wavelength** of the wave (in $\mathsf{m}$)
 
+### Sine Wave
+
+- A **sine wave** (or **sinusoid**, symbol: ∿)
+- $y(t)=A\sin(\omega t + \phi)$
+- $A$ is the amplitude
+- $\omega$ is the [[Periodic Functions|angular frequency]] (in $\mathsf{rad/s}$)
+- $\phi$ is the phase shift (which moves the wave left or right on the time axis)
+
+- $\displaystyle y(x,t)=A\sin\left(\frac{2\pi}{\lambda}x-\omega t+\phi\right)=A\sin\left(\frac{2\pi}{\lambda}(x-vt)+\phi\right)$
+- is the equation of a traveling wave (to the right. if it is to the left, the minus sign is replaced by a plus sign)
+	- $x$ is the position of the wave we are considering
+	- $vt$ is the distance the wave has traveled from the origin at time $t$
+
+
+
+
+
+
+
+
 
 ### Transverse Wave 
 
@@ -16,19 +36,23 @@ $$\displaystyle f=\frac{1}{T}=\frac{\omega}{2\pi}= \frac{v}{\lambda}$$
 - $v=\sqrt{\frac{B}{\rho}}$
 
 
+## Standing Waves
+
+- $\displaystyle v=\sqrt{\frac{F_\text{T}}{\mu}}$
+- $\displaystyle\mu=\frac{m}{\ell}$ 
+- $\displaystyle f_n=n\frac{v}{2\ell}=\frac{v}{\lambda_n}=nf_1$ is the frequency of the $n$th harmonic
+	- $n$ is the harmonic number
+	- $\ell$ is the length of the string
+	- $v$ is the wave speed
+	- $\lambda_n$ is the wavelength of the $n$th harmonic
+- Antinodes: $x=(i+\frac{1}{2})\frac{\lambda}{2}$ for $i=0,1,2,\ldots,n$
+	- $y(x,t)=A\sin(\omega t+\phi)$ at each antinode $x$
+- Nodes: $x=i\frac{\lambda}{2}$ for $i=0,1,2,\ldots,n$
+	- $y(x,t)=0$ at each node $x$ and every time $t$
 
 
+### Energy Transport
 
-### Sine Wave
-
-- A **sine wave** (or **sinusoid**, symbol: ∿) is any function of the form $$y=A\sin(\omega t + \phi)$$
-- $A$ is the amplitude
-- $\omega$ is the [[Periodic Functions|angular frequency]] (in $\mathsf{rad/s}$)
-- $\phi$ is the phase shift (which moves the wave left or right on the time axis)
-
-
-
-
-
-
-
+- **Intensity** $I$ of a wave is defined as the power transported across unit area perpendicular to the direction of energy flow. 
+- $I\propto A^2$
+- $\displaystyle I\propto \frac{1}{r^2}$
