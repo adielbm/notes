@@ -21,19 +21,16 @@ In this section, $G=(V,E)$ is usually an undirected graph, unless stated otherwi
 - A graph is **acyclic** if it contains no cycles.
 ### Directed Graphs
 
-- A directed graph is **acyclic** (or **directed acyclic graph**, **DAG**) if it contains no directed cycles.
+- A directed graph is **acyclic** (or **directed acyclic graph** (**DAG**)) if it contains no directed cycles.
+	- Every DAG has a node with no incoming edges (a _source_)
 
 ## Completeness
 
-
-A **complete graph** is a simple undirected graph in which every pair of distinct vertices is connected by a unique edge. the complete graph on $n$ vertices is denoted by $K_n$
-
-- Number of **Edges** in complete graph $K_n$ is $\frac{n(n-1)}{2}=\binom{n}{2}$. ^[Triangle number]
-- Number of [[Graph#Perfect matching|perfect matchings]] in complete graph $K_n$ is double-factorial $(n-1)!!$.
-- TODO: https://oeis.org/A031878 is maybe the longest path in complete graph 
-
+- A **complete graph** is a simple undirected graph in which every pair of distinct vertices is connected by a unique edge. the complete graph on $n$ vertices is denoted by $K_n$
+	- The number of edges in a complete graph $K_n$ is $\displaystyle \frac{n(n-1)}{2}=\binom{n}{2}$ (which is the $(n-1)$th _triangular number_).
+	- The number of [[Graph#Perfect matching|perfect matchings]] in complete graph $K_n$ is double-factorial $(n-1)!!$.
+	- TODO: https://oeis.org/A031878 is maybe the longest path in complete graph 
 ## Bipartiteness
-
 
 - The following statements are equivalent for an undirected graph $G=(V,E)$:
 	- $G$ is **bipartite** 

@@ -1,15 +1,4 @@
 
-# Alphabet
-
-- An **alphabet** $\Sigma$ is a finite, nonempty set of elements called **symbols** (or **letters**)
-
-- A **string** over an alphabet is a finite sequence of symbols from that alphabet, usually written next to one another and not separated by commas
-	- The **empty string** is denoted by $\varepsilon$ or $\lambda$
-- The set of all possible strings over an alphabet $\Sigma$ is denoted by $\Sigma^*$
-- The **length** of a string $w$, written $|w|$, is the number of symbols that it contains.
-
-> notation: $a, b, c, ...$ for symbols, and $u, v, w,$ ... for string names
-
 # Grammar
 
 - We say that $w$ **derives** $z$ (or that $z$ is **derived** from $w$), and denote $w\Rightarrow{z}$.
@@ -43,8 +32,6 @@
 
 - A **formal language** over an alphabet $\Sigma$ is a set of strings over $\Sigma$. 
 - A **formal language** over $\Sigma$ is a subset of $\Sigma^*$
-
-> The adjective *formal* is often omitted as redundant
 
 
 
