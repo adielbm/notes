@@ -96,7 +96,7 @@ In this page, $G=(V,E)$ is an undirected graph, unless stated otherwise.
 A set $V'\subseteq V$ is called a **vertex cover** of $G$ if $\forall(u,v) \in E, u \in V' \lor v \in V'$
 #### Minimum Vertex Cover
 
-- $\beta(G)=|V'|$ is number of vertices of minimum vertex cover.
+- $\beta(G)=|V'|$ is number of vertices of a minimum vertex cover.
 
 # Independent Set
 

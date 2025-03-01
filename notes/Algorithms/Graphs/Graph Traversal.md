@@ -93,7 +93,7 @@ BFS(G, s):
 - The tree that DFS constructs is called a **DFS tree**.
 
 
-```
+```Algorithm
 Algorithm 2.2 DFS(G)
 Input: G = (V, E) connected undirected graph on n vertices
 ---
@@ -104,7 +104,7 @@ for all v ∈ V do
 		DFS-Explore(G, v)
 ```
 
-```
+```Algorithm
 Algorithm 2.3 DFS-Explore(G, v)
 ---
 visited(v) ← true

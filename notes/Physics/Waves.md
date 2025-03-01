@@ -56,3 +56,5 @@ $$\displaystyle f=\frac{1}{T}=\frac{\omega}{2\pi}= \frac{v}{\lambda}$$
 - **Intensity** $I$ of a wave is defined as the power transported across unit area perpendicular to the direction of energy flow. 
 - $I\propto A^2$
 - $\displaystyle I\propto \frac{1}{r^2}$
+
+ 
