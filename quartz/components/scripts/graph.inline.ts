@@ -141,7 +141,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     .data(graphData.links)
     .join("line")
     .attr("class", "link")
-    .attr("stroke", "var(--lightgray)")
+    .attr("stroke", "var(--bg)")
     .attr("stroke-width", 1)
 
   // svg groups
@@ -151,7 +151,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
   const color = (d: NodeData) => {
     const isCurrent = d.id === slug
     if (isCurrent) {
-      return "var(--secondary)"
+      return "green"
     } else if (visited.has(d.id) || d.id.startsWith("tags/")) {
       return "var(--tertiary)"
     } else {
@@ -251,7 +251,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
         .selectAll(".link")
         .filter((d: any) => d.source.id === currentId || d.target.id === currentId)
 
-      linkNodes.transition().duration(200).attr("stroke", "var(--lightgray)")
+      linkNodes.transition().duration(200).attr("stroke", "var(--bg)")
 
       const parent = this.parentNode as HTMLElement
       d3.select<HTMLElement, NodeData>(parent)

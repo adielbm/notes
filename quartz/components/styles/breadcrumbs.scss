@@ -9,6 +9,9 @@
 }
 
 .breadcrumb-element {
+  a { 
+    text-decoration: none;
+  }
   p {
     margin: 0;
     margin-left: 0.5rem;
