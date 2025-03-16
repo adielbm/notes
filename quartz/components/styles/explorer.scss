@@ -1,5 +1,9 @@
 @use "../../styles/variables.scss" as *;
 
+button > * {
+  font-size: 1rem;
+}
+
 button#explorer {
   all: unset;
   background-color: transparent;
@@ -7,7 +11,7 @@ button#explorer {
   text-align: left;
   cursor: pointer;
   padding: 0;
-  color: var(--dark);
+  color: var(--tx);
   display: flex;
   align-items: center;
 
@@ -62,8 +66,6 @@ button#explorer {
       transform 0.35s ease,
       opacity 0.2s ease;
     & li > a {
-      color: var(--dark);
-      opacity: 0.75;
       pointer-events: all;
     }
   }
@@ -84,20 +86,12 @@ svg {
   user-select: none;
 
   & div > a {
-    color: var(--secondary);
-    font-family: var(--headerFont);
-    font-size: 1.1rem;
-    font-weight: $semiBoldWeight;
     line-height: 1.5rem;
     display: inline-block;
   }
 
-  & div > a:hover {
-    color: var(--tertiary);
-  }
-
   & div > button {
-    color: var(--dark);
+    color: var(--tx);
     background-color: transparent;
     border: none;
     text-align: left;
@@ -106,13 +100,9 @@ svg {
     padding-right: 0;
     display: flex;
     align-items: center;
-    font-family: var(--headerFont);
 
     & span {
-      font-size: 1.1rem;
       display: inline-block;
-      color: var(--secondary);
-      font-weight: $semiBoldWeight;
       margin: 0;
       line-height: 1.5rem;
       pointer-events: none;
@@ -122,9 +112,7 @@ svg {
 
 .folder-icon {
   margin-right: 5px;
-  color: var(--secondary);
   cursor: pointer;
-  transition: transform 0.3s ease;
   backface-visibility: visible;
 }
 
@@ -132,9 +120,6 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
   transform: rotate(-90deg);
 }
 
-.folder-icon:hover {
-  color: var(--tertiary);
-}
 
 .no-background::after {
   background: none !important;

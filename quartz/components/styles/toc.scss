@@ -4,7 +4,7 @@ button#toc {
   text-align: left;
   cursor: pointer;
   padding: 0;
-  color: var(--dark);
+  color: var(--tx);
   display: flex;
   align-items: center;
 
@@ -41,7 +41,7 @@ button#toc {
     margin: 0.5rem 0;
     padding: 0;
     & > li > a {
-      color: var(--dark);
+      color: var(--tx);
       opacity: 0.35;
       transition:
         0.5s ease opacity,
