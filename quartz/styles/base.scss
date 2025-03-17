@@ -19,6 +19,10 @@
   --broader: #586c66;
 }
 
+body, input, textarea, button {
+  font-size: 1rem !important;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -37,7 +41,7 @@ section {
   margin: 0;
   max-width: 100%;
   box-sizing: border-box;
-  background-color: var(--bg);
+  background-color: var(--bg2);
   color: var(--tx);
 }
 
@@ -286,7 +290,6 @@ blockquote {
   border-left: 4px solid green;
   margin: 1rem 0;
   background: var(--bg);
-  transition: border-color .2s;
   padding: 3px 30px !important;
 }
 
@@ -316,7 +319,6 @@ h6 {
   &[id]>a[href^="#"] {
     margin: 0 0.5rem;
     opacity: 0;
-    transition: opacity 0.2s ease;
     transform: translateY(-0.1rem);
     font-family: var(--codeFont);
     user-select: none;
@@ -349,7 +351,6 @@ h3 {
 h4,
 h5,
 h6 {
-  font-size: 1rem;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -537,7 +538,6 @@ ol.overflow {
     left: 0;
     bottom: 0;
     opacity: 1;
-    transition: opacity 0.3s ease;
     background: linear-gradient(transparent 0px, var(--bg));
   }
 }

@@ -7,7 +7,6 @@
   // border-radius: 5px;
   padding: 0 1rem;
   overflow-y: hidden;
-  transition: max-height 0.3s ease;
   box-sizing: border-box;
 
   & > *:nth-child(2) {
@@ -128,7 +127,6 @@
   --icon-size: 18px;
 
   & .fold-callout-icon {
-    transition: transform 0.15s ease;
     opacity: 0.8;
     cursor: pointer;
     --callout-icon: var(--callout-icon-fold);
