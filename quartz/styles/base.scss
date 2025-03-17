@@ -208,31 +208,10 @@ article {
 
       @media all and (max-width: $fullPageWidth) {
         gap: 0;
-        // align-items: center;
       }
     }
-
-    /*     & .sidebar.right {
-      right: calc(calc(100vw - $pageWidth) / 2 - $sidePanelWidth);
-      flex-wrap: wrap;
-      & > * {
-        @media all and (max-width: $fullPageWidth) {
-          flex: 1;
-          min-width: 140px;
-        }
-      }
-    } */
   }
 
-  & .page-header {
-    width: $pageWidth;
-    margin: $topSpacing auto 0 auto;
-
-    @media all and (max-width: $fullPageWidth) {
-      width: initial;
-      margin-top: 2rem;
-    }
-  }
 
   & .center,
   & footer {

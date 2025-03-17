@@ -1,19 +1,8 @@
 @use "./base.scss";
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
-
-.page .page-header {
-  margin: 0;
-  padding-left: 20px;
-}
-
-.center article {
-  padding: 2vw;
-}
-
 .article-title {
-  font-size: 2.75rem;
+  margin: 1rem 0 0;
 }
 
 #explorer-ul,
@@ -38,6 +27,7 @@ button#explorer {
   }
 
   & .center {
+    padding: 2vw;
     background-color: var(--bg);
     grid-column: 2 / 4;
     overflow-y: overlay;
@@ -45,7 +35,6 @@ button#explorer {
     max-height: 100vh;
     margin: initial !important;
     width: initial !important;
-    padding: 0 !important;
     position: relative !important;
   }
 
