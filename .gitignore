@@ -10,5 +10,5 @@ private/
 !notes/.obsidian/core-plugins.json
 !notes/.obsidian/snippets/style.css
 notes/Discrete Math/Graph Theory/EN-HE.md
-notes/Probability/A First Course in Probability.pdf
-notes/Computability/Introduction to the theory of computation_third edition - Michael Sipser.pdf
+*.pdf
+public

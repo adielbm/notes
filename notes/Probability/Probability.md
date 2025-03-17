@@ -1,10 +1,14 @@
-
+ 
 - The **sample space** of an experiment is a set $S$ of all possible **outcomes** of the experiment.
 - An **event** is a subset $E$ of the sample space $S$.
 	- An event $E$ is **simple** if it consists of exactly one outcome.
 	- An event $E$ is **compound** if it consists of more than one outcome.
 	- The empty set $\emptyset$ is an event (impossible event).
 	- The sample space $S$ is an event (certain event).
+	- Two events $E$ and $F$ are said to be **mutually exclusive** if $P(E\cap F)=0$ (or equivalently, if $E\cap F=\emptyset$). 
+		- More generally, a sequence of events $E_1,E_2,\ldots$ are said to be mutually exclusive if $P(E_i\cap E_j)=0$ (or equivalently, if $E_i\cap E_j=\emptyset$) for all $i\neq j$.
+	- Two events $E$ and $F$ are said to be **exhaustive** if $P(E\cup F)=1$ (or equivalently, if $E\cup F=S$). 
+		- More generally, a sequence of events $E_1,E_2,\ldots$ are said to be exhaustive if $\displaystyle\bigcup_{i=1}^{\infty}E_i=S$.
 - An **experiment** is a procedure that yields one of a given set of outcomes (i.e. a given subset of the sample space).
 - A **subexperiment** is a step in an experiment. 
 	- (Example: If an experiment consists of rolling two dice, then each die roll is a subexperiment.)
@@ -58,7 +62,7 @@ $$\displaystyle P\left(\bigcup_{i=1}^{n}E_i\right) \leq \sum_{i=1}^{n}P(E_i)$$
 $$\displaystyle \text{Posterior} = \frac{\text{Likelihood}\times\text{Prior}}{\text{Evidence}}$$
 
 - (Simple Form) $\displaystyle P(F\mid E)=\frac{P(E\mid F)P(F)}{P(E)}$
-- (Extended Form) $\displaystyle P(F_j\mid E)=\frac{P(E\mid F_j)P(F_j)}{P(E)}$ for $j=1,\ldots,n$
+- (Extended Form) $\displaystyle P(F_j\mid E)=\frac{P(E\mid F_j)P(F_j)}{\sum_{i=1}^{n}P(E\mid F_i)P(F_i)}$ for $j=1,\ldots,n$
 	- Where $F_1,\ldots,F_n$ form a partition of $S$ (i.e., $F_i\cap F_j=\emptyset$ for $i\neq j$ and $\displaystyle\bigcup_{i=1}^{n}F_i=S$)
 # Law of Total Probability
 $$\begin{align*} P(E) &= P(EF) + P(EF^\complement) \\ &= P(E\mid F)P(F) + P(E\mid F^\complement)P(F^\complement) \\ &= P(E\mid F)P(F) + P(E\mid F^\complement)[1-P(F)]\end{align*}$$
@@ -100,3 +104,10 @@ $$P(E\mid F)=P(E\mid GF)P(G\mid F)+P(E\mid G^\complement F)P(G^\complement\mid F
 - (**Bayes' Rule in Odds Form**) $O(A_1:A_{2}\mid B)=\displaystyle\frac{P(A_1\mid B)}{P(A_2\mid B)}=O(A_1:A_2)\cdot\displaystyle\frac{P(B\mid A_1)}{P(B\mid A_2)}$
 - $\displaystyle \frac{P(B\mid A)}{P(B^\complement\mid A)}=\frac{P(B)}{P(B^\complement)}\frac{P(A\mid B)}{P(A\mid B^\complement)}$
 - $\Lambda(A_1:A_2\mid B)=\displaystyle\frac{P(B\mid A_1)}{P(B\mid A_2)}$
+
+
+
+____
+
+
+- $P(E\mid F) \leq P(E)\implies P(F\mid E) \leq P(F)$
