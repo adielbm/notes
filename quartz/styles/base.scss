@@ -452,16 +452,13 @@ p {
 
 .table-container {
   overflow-x: auto;
+  width: 100%;
 
   &>table {
-    margin: 1rem;
-    padding: 1.5rem;
     border-collapse: collapse;
-
-    th,
-    td {
-      min-width: 75px;
-    }
+    border-spacing: 0;
+    overflow-x: auto;
+    table-layout: auto;
 
     &>* {
       line-height: 2rem;
@@ -471,12 +468,12 @@ p {
 
 th {
   text-align: left;
-  padding: 0.4rem 0.7rem;
   border-bottom: 2px solid var(--broader);
 }
 
-td {
-  padding: 0.2rem 0.7rem;
+td, th {
+  white-space: nowrap;
+  padding: .5vw;
 }
 
 tr {
