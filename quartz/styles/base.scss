@@ -23,6 +23,10 @@ body, input, textarea, button {
   font-size: 1rem !important;
 }
 
+ul {
+  padding-inline-start: 1rem;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
