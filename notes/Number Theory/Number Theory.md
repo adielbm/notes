@@ -8,7 +8,7 @@
 - **Basis representation theorem** - Let $b$ be a positive integer with $b > 1$. Then every positive integer $n$ can be written uniquely in the form $n = a_kb^k + a_{k-1}b^{k-1} + \dots + a_1b + a_0$ where $k$ is a nonnegative integer, $a_j$ is an integer with $0 \leq a_j \leq b - 1$ for $j = 0, 1, \dots, k$, and the initial coefficient $a_k \neq 0$.
 - **Fundamental theorem of arithmetic**
 	- Every integer $n>1$ can be represented **uniquely** as a product of prime numbers (the **prime factorization** of $n$), up to the order of the factors. 
-
+- **The Well-Ordering Principle** - Every nonempty subset of $\mathbb{N}$ has a smallest element
 # Primes 
 
 - An integer $p>1$ is a **prime** if its positive divisors are $1$ and $p$ itself. 
