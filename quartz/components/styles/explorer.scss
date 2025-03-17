@@ -23,7 +23,6 @@ button#explorer {
 
   & .fold {
     margin-left: 0.5rem;
-    transition: transform 0.3s ease;
     opacity: 0.8;
   }
 
@@ -35,7 +34,6 @@ button#explorer {
 .folder-outer {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.3s ease-in-out;
 }
 
 .folder-outer.open {
@@ -50,7 +48,6 @@ button#explorer {
   list-style: none;
   overflow: hidden;
   max-height: none;
-  transition: max-height 0.35s ease;
   margin-top: 0.5rem;
 
   &.collapsed > .overflow::after {
@@ -61,10 +58,6 @@ button#explorer {
     list-style: none;
     margin: 0.08rem 0;
     padding: 0;
-    transition:
-      max-height 0.35s ease,
-      transform 0.35s ease,
-      opacity 0.2s ease;
     & li > a {
       pointer-events: all;
     }

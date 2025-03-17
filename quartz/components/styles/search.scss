@@ -31,8 +31,7 @@
 
       .search-path {
         stroke: var(--tx);
-        stroke-width: 2px;
-        transition: stroke 0.5s ease;
+        stroke-width: 1px;
       }
     }
   }
@@ -47,7 +46,7 @@
     height: 100vh;
     overflow-y: auto;
     display: none;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px) brightness(0.3);
 
     &.active {
       display: inline-block;
@@ -66,7 +65,7 @@
       & > * {
         width: 100%;
         border-radius: 7px;
-        background: var(--bg);
+        background: var(--bg2);
         box-shadow:
           0 14px 50px rgba(27, 33, 48, 0.12),
           0 10px 30px rgba(27, 33, 48, 0.16);
@@ -77,8 +76,7 @@
         box-sizing: border-box;
         padding: 0.5em 1em;
         color: var(--tx);
-        font-size: 1.1em;
-        border: 1px solid var(--bg);
+        border: 2px solid var(--broader);
 
         &:focus {
           outline: none;
@@ -139,8 +137,7 @@
         }
 
         & .highlight {
-          background: color-mix(in srgb, var(--tertiary) 60%, rgba(255, 255, 255, 0));
-          border-radius: 5px;
+          font-weight: bold;
           scroll-margin-top: 2rem;
         }
 
@@ -171,8 +168,7 @@
             overflow: hidden;
             padding: 1em;
             cursor: pointer;
-            transition: background 0.2s ease;
-            border-bottom: 1px solid var(--bg);
+            border-bottom: 2px solid var(--broader);
             width: 100%;
             display: block;
             box-sizing: border-box;
@@ -195,6 +191,8 @@
 
             & > h3 {
               margin: 0;
+              font-weight: normal;
+              font-size: 1rem !important;
             }
 
             & > ul.tags {
