@@ -26,25 +26,6 @@ button#explorer {
   & .footer {
     background-color: none !important;
   }
-
-  & .center {
-    padding: 2vw;
-    background-color: var(--bg);
-    grid-column: 2 / 4;
-    overflow-y: overlay;
-    overflow-x: hidden;
-    max-height: 100vh;
-    margin: initial !important;
-    width: initial !important;
-    position: relative !important;
-  }
-
-  & .sidebar {
-    position: initial !important;
-    margin: initial !important;
-    width: initial !important;
-    max-height: 100vh;
-  }
 }
 
 @media (max-width: 1450px) {
@@ -70,23 +51,10 @@ footer {
   grid-column: 2 / 4;
 }
 
-.sidebar {
-  position: initial !important;
-  margin: initial !important;
-  width: initial !important;
-}
+
 div#quartz-body {
   display: grid !important;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.left.sidebar {
-  gap: 2vw !important;
-  padding: 2vw 0 0 2vw !important;
-}
-
-.right.sidebar {
-  padding: 2vw !important;
 }
 
 .search {
@@ -94,7 +62,7 @@ div#quartz-body {
 }
 div#search-icon {
   padding: 5px 0px;
-  margin-right: 2vw;
+  margin-right: var(--pX);
 }
 
 @media all and (max-width: $fullPageWidth) {
@@ -147,19 +115,21 @@ button#toc {
 }
 
 /* pagelist */
-
+.page-listing {
+  margin-top: 1rem;
+}
 .pagelist {
+  gap: .5em;
   display: grid;
-  gap: 1em;
-  padding: 1em;
   a {
-    padding: 1em;
+    padding: 0.8em;
+    text-decoration: none;
+    border-radius: var(--borderRadius);
   }
 }
-.pagelist--file {
-  background-color: var(--white) !important;
+.pagelist--folder {
+  background: var(--bg2);
 }
-
 /**
   * style for parentheses for theorem/deffinitions numbering
   * @see static/script.js 

@@ -12,8 +12,8 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
   const title = cfg?.pageTitle ?? i18n(cfg.locale).propertyDefaults.title
   const baseDir = pathToRoot(fileData.slug!)
   return (
-    <div style="display: flex ; align-items: center; justify-content: space-between; margin-right: 2vw;">
-      <a class={classNames(displayClass, "page-title")} href={baseDir}>{title}</a>
+    <div class={classNames(displayClass, "page-title")}>
+      <a  href={baseDir}>{title}</a>
       <div class="dm-gh">
         <div class={classNames(displayClass, "darkmode")}>
           <input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex={-1} />

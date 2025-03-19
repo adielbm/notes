@@ -11,7 +11,7 @@ const config: QuartzConfig = {
   configuration: {
     pageTitle: "Adiel's Notes",
     enableSPA: true,
-    enablePopovers: true,
+    enablePopovers: false,
     analytics: null,
     locale: "en-US",
     baseUrl: "adiel.netlify.app",
