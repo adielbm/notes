@@ -23,6 +23,10 @@
   --broader: #36554d;
 }
 
+:root[saved-theme=dark] img {
+  filter: invert(1) hue-rotate(180deg);
+}
+
 .page-title {
   display: flex;
   align-items: center;
@@ -562,8 +566,8 @@ ol.overflow {
   top: 0;
   left: 0;
   width: 0;
-  height: .2rem;
-  background: var(--tx3);
-  transition: width 0.2s ease;
+  height: 4px;
+  background: var(--broader);
+  transition: width 1s ease;
   z-index: 9999;
 }
