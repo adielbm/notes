@@ -556,3 +556,14 @@ ol.overflow {
   overflow-x: auto;
   overflow-y: hidden;
 }
+
+.navigation-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: .2rem;
+  background: var(--tx3);
+  transition: width 0.2s ease;
+  z-index: 9999;
+}

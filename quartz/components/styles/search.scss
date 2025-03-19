@@ -46,7 +46,7 @@
     height: 100vh;
     overflow-y: auto;
     display: none;
-    backdrop-filter: blur(4px) brightness(0.3);
+    backdrop-filter: blur(4px) brightness(0.6);
 
     &.active {
       display: inline-block;
@@ -74,9 +74,9 @@
 
       & > input {
         box-sizing: border-box;
-        padding: 0.5em 1em;
+        padding: 1rem;
         color: var(--tx);
-        border: 1px solid var(--broader);
+        border: 1px solid var(--tx);
 
         &:focus {
           outline: none;
