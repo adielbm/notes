@@ -50,7 +50,7 @@ function startLoading() {
     document.body.appendChild(loadingBar)
   }
   setTimeout(() => {
-    loadingBar.style.width = "80%"
+    loadingBar.style.width = "100%"
   }, 100)
 }
 
