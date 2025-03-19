@@ -202,12 +202,14 @@ export function renderPage(
     </div>
   )
 
-  const RightComponent = (
+  const RightComponent = (right.length > 0) ? (
     <div class="right sidebar">
       {right.map((BodyComponent) => (
         <BodyComponent {...componentData} />
       ))}
     </div>
+  ) : (
+    <div></div>
   )
 
   const lang = componentData.fileData.frontmatter?.lang ?? cfg.locale?.split("-")[0] ?? "en"

@@ -13,10 +13,11 @@ const Backlinks: QuartzComponent = ({
   const slug = simplifySlug(fileData.slug!)
   const backlinkFiles = allFiles.filter((file) => file.links?.includes(slug))
   return (
-    <div class={classNames(displayClass, "backlinks")}>
-      <ul class="overflow">
-        {backlinkFiles.length > 0 ? (
-          <>
+    <>
+      {backlinkFiles.length > 0 ? (
+        <div class={classNames(displayClass, "backlinks")}>
+          <ul class="overflow">
+
             <h3>{i18n(cfg.locale).components.backlinks.title}</h3>
             {backlinkFiles.map((f) => (
               <li key={f.slug}>
@@ -25,10 +26,11 @@ const Backlinks: QuartzComponent = ({
                 </a>
               </li>
             ))}
-          </>
-        ) : null}
-      </ul>
-    </div>
+          </ul>
+        </div>
+      ) : null}
+    </>
+
   )
 }
 

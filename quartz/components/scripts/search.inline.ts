@@ -177,9 +177,9 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
     if (searchBar) {
       searchBar.value = "" // clear the input when we dismiss the search
     }
-    if (sidebar) {
-      sidebar.style.zIndex = "unset"
-    }
+    // if (sidebar) {
+    //   sidebar.style.zIndex = "unset"
+    // }
     if (results) {
       removeAllChildren(results)
     }
@@ -195,9 +195,9 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
 
   function showSearch(searchTypeNew: SearchType) {
     searchType = searchTypeNew
-    if (sidebar) {
-      sidebar.style.zIndex = "1"
-    }
+    // if (sidebar) {
+    //   sidebar.style.zIndex = "10"
+    // }
     container?.classList.add("active")
     searchBar?.focus()
   }

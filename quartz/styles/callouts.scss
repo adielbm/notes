@@ -2,13 +2,6 @@
 @use "sass:color";
 
 .callout {
-  border-color: var(--border);
-  background-color: var(--bg);
-  // border-radius: 5px;
-  padding: 0 1rem;
-  overflow-y: hidden;
-  box-sizing: border-box;
-
   & > *:nth-child(2) {
     margin-top: 0;
   }
@@ -29,24 +22,15 @@
   --callout-icon-fold: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cpolyline points="6 9 12 15 18 9"%3E%3C/polyline%3E%3C/svg%3E');
 
   &[data-callout] {
-    --color: #448aff;
-    --border: #448aff44;
-    --bg: #448aff10;
     --callout-icon: var(--callout-icon-note);
   }
 
   &[data-callout="abstract"] {
-    --color: #00b0ff;
-    --border: #00b0ff44;
-    --bg: #00b0ff10;
     --callout-icon: var(--callout-icon-abstract);
   }
 
   &[data-callout="info"],
   &[data-callout="todo"] {
-    --color: #00b8d4;
-    --border: #00b8d444;
-    --bg: #00b8d410;
     --callout-icon: var(--callout-icon-info);
   }
 
@@ -55,39 +39,24 @@
   }
 
   &[data-callout="tip"] {
-    --color: #00bfa5;
-    --border: #00bfa544;
-    --bg: #00bfa510;
     --callout-icon: var(--callout-icon-tip);
   }
 
   &[data-callout="success"] {
-    --color: #09ad7a;
-    --border: #09ad7144;
-    --bg: #09ad7110;
     --callout-icon: var(--callout-icon-success);
   }
 
   &[data-callout="question"] {
-    --color: #dba642;
-    --border: #dba64244;
-    --bg: #dba64210;
     --callout-icon: var(--callout-icon-question);
   }
 
   &[data-callout="warning"] {
-    --color: #db8942;
-    --border: #db894244;
-    --bg: #db894210;
     --callout-icon: var(--callout-icon-warning);
   }
 
   &[data-callout="failure"],
   &[data-callout="danger"],
   &[data-callout="bug"] {
-    --color: #db4242;
-    --border: #db424244;
-    --bg: #db424210;
     --callout-icon: var(--callout-icon-failure);
   }
 
@@ -100,15 +69,10 @@
   }
 
   &[data-callout="example"] {
-    --color: #7a43b5;
-    --border: #7a43b544;
-    --bg: #7a43b510;
     --callout-icon: var(--callout-icon-example);
   }
 
   &[data-callout="quote"] {
-    --color: green;
-    --border: var(--bg);
     --callout-icon: var(--callout-icon-quote);
   }
 
@@ -122,9 +86,8 @@
   align-items: flex-start;
   gap: 5px;
   padding: 1rem 0;
-  color: var(--color);
 
-  --icon-size: 18px;
+  --icon-size: 1.5rem;
 
   & .fold-callout-icon {
     opacity: 0.8;
@@ -133,7 +96,6 @@
   }
 
   & > .callout-title-inner > p {
-    color: var(--color);
     margin: 0;
   }
 
@@ -146,7 +108,7 @@
     // icon support
     background-size: var(--icon-size) var(--icon-size);
     background-position: center;
-    background-color: var(--color);
+    background-color: var(--tx);
     mask-image: var(--callout-icon);
     mask-size: var(--icon-size) var(--icon-size);
     mask-position: center;
@@ -155,6 +117,6 @@
   }
 
   .callout-title-inner {
-    font-weight: $semiBoldWeight;
+    font-weight: bold;
   }
 }

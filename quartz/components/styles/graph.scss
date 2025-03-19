@@ -7,7 +7,7 @@
   }
 
   & > .graph-outer {
-    border-radius: 5px;
+    border-radius: var(--borderRadius);
     border: 1px solid var(--bg);
     box-sizing: border-box;
     height: 250px;
@@ -25,7 +25,7 @@
       margin: 0.3rem;
       top: 0;
       right: 0;
-      border-radius: 4px;
+      border-radius: var(--borderRadius);
       background-color: transparent;
       cursor: pointer;
       &:hover {
@@ -52,7 +52,7 @@
     & > #global-graph-container {
       border: 1px solid var(--bg);
       background-color: var(--bg);
-      border-radius: 5px;
+      border-radius: var(--borderRadius);
       box-sizing: border-box;
       position: fixed;
       top: 50%;
