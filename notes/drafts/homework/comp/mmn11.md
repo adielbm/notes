@@ -257,7 +257,7 @@ let $M$ be a NFA for the language $C$. if we transform every accept state to a n
 
 # Q5
 
-construct a DFA that is equivalent to the following NFA:
+יש להמיר את ה- NFA הבא ל-DFA שקול: 
 
 ```tikz
 \usepackage{tikz}
@@ -277,13 +277,84 @@ on grid]
 	\node[state, accepting] (2) [right of=1] {$2$};
 	\node[state] (3) [below of=1] {$3$};
     \draw (1) edge[bend right, below, ->] node[auto]{$\varepsilon$} (2);
-    \draw (1) edge [above, ->] node[auto]{$a$} (3);
-    \draw (2) edge[bend right, above, ->] node[auto]{$a$} (1);
-    \draw (3) edge [above, ->] node[auto]{$a$,$b$} (2);
-    \draw (3) edge[loop below, ->] node[auto]{$b$} (3);
+    \draw (1) edge [above, ->] node[auto]{$\texttt{a}$} (3);
+    \draw (2) edge[bend right, above, ->] node[auto]{$\texttt{a}$} (1);
+    \draw (3) edge [above, ->] node[auto]{$\texttt{a}$,$\texttt{b}$} (2);
+    \draw (3) edge[loop below, ->] node[auto]{$\texttt{b}$} (3);
 \end{tikzpicture}
 \end{document}
 ```
+
+נעבוד לפי הוכחת משפט 1.39.
+
+- NFA $N=(Q,\Sigma,\delta,q_{0}=1,F)$
+	- $Q=\{1,2,3\}$
+	- $\Sigma=\{\texttt{a},\texttt{b},\varepsilon\}$
+	- $\delta(1,\texttt{a})=\{3\}$, $\delta(1,\varepsilon)=\{2\}$, $\delta(2,\texttt{a})=\{1\}$, $\delta(3,\texttt{a})=\{2\}$, $\delta(3,\texttt{b})=\{2,3\}$
+	- $F=\{2\}$
+- DFA $M=(Q',\Sigma,\delta',q_{0}',F')$
+	- $Q'=\mathcal{P}(Q)=\{\emptyset,\{1\},\{2\},\{3\},\{1,2\},\{1,3\},\{2,3\},\{1,2,3\}\}$
+	- For each $x\in\Sigma$ and $R\in Q'$ we define $\displaystyle\delta'(R,x):=\bigcup_{r\in R}\delta(r,x)$
+		- $R=\emptyset$ 
+			- $\displaystyle\delta'(\emptyset,\texttt{a})=\bigcup_{r\in\emptyset}\delta(r,\texttt{a})=\emptyset$
+			- $\displaystyle\delta'(\emptyset,\texttt{b})=\bigcup_{r\in\emptyset}\delta(r,\texttt{b})=\emptyset$ 
+			- $\displaystyle\delta'(\emptyset,\varepsilon)=\bigcup_{r\in\emptyset}\delta(r,\varepsilon)=\emptyset$
+		- $R=\{1\}$ 
+			- $\displaystyle\delta'(\{1\},\texttt{a})=\bigcup_{r\in\{1\}}\delta(r,\texttt{a})=\{3\}$
+			- $\displaystyle\delta'(\{1\},\texttt{b})=\bigcup_{r\in\{1\}}\delta(r,\texttt{b})=\emptyset$
+			- $\displaystyle\delta'(\{1\},\varepsilon)=\bigcup_{r\in\{1\}}\delta(r,\varepsilon)=\{2\}$
+		- $R=\{2\}$
+			- $\displaystyle\delta'(\{2\},\texttt{a})=\bigcup_{r\in\{2\}}\delta(r,\texttt{a})=\{1\}$
+			- $\displaystyle\delta'(\{2\},\texttt{b})=\bigcup_{r\in\{2\}}\delta(r,\texttt{b})=\emptyset$
+			- $\displaystyle\delta'(\{2\},\varepsilon)=\bigcup_{r\in\{2\}}\delta(r,\varepsilon)=\emptyset$
+		- $R=\{3\}$ 
+			- $\displaystyle\delta'(\{3\},\texttt{a})=\bigcup_{r\in\{3\}}\delta(r,\texttt{a})=\{2\}$
+			- $\displaystyle\delta'(\{3\},\texttt{b})=\bigcup_{r\in\{3\}}\delta(r,\texttt{b})=\{2,3\}$
+			- $\displaystyle\delta'(\{3\},\varepsilon)=\bigcup_{r\in\{3\}}\delta(r,\varepsilon)=\emptyset$
+		- $R=\{1,2\}$
+			- $\displaystyle\delta'(\{1,2\},\texttt{a})=\bigcup_{r\in\{1,2\}}\delta(r,\texttt{a})=\{1,3\}$
+			- $\displaystyle\delta'(\{1,2\},\texttt{b})=\bigcup_{r\in\{1,2\}}\delta(r,\texttt{b})=\emptyset$
+			- $\displaystyle\delta'(\{1,2\},\varepsilon)=\bigcup_{r\in\{1,2\}}\delta(r,\varepsilon)=\{2\}$
+		- $R=\{1,3\}$
+			- $\displaystyle\delta'(\{1,3\},\texttt{a})=\bigcup_{r\in\{1,3\}}\delta(r,\texttt{a})=\{2,3\}$
+			- $\displaystyle\delta'(\{1,3\},\texttt{b})=\bigcup_{r\in\{1,3\}}\delta(r,\texttt{b})=\{2,3\}$
+			- $\displaystyle\delta'(\{1,3\},\varepsilon)=\bigcup_{r\in\{1,3\}}\delta(r,\varepsilon)=\{2\}$
+		- $R=\{2,3\}$
+			- $\displaystyle\delta'(\{2,3\},\texttt{a})=\bigcup_{r\in\{2,3\}}\delta(r,\texttt{a})=\{1,2\}$
+			- $\displaystyle\delta'(\{2,3\},\texttt{b})=\bigcup_{r\in\{2,3\}}\delta(r,\texttt{b})=\{2,3\}$
+			- $\displaystyle\delta'(\{2,3\},\varepsilon)=\bigcup_{r\in\{2,3\}}\delta(r,\varepsilon)=\emptyset$
+		- $R=\{1,2,3\}$
+			- $\displaystyle\delta'(\{1,2,3\},\texttt{a})=\bigcup_{r\in\{1,2,3\}}\delta(r,\texttt{a})=\{1,2,3\}$
+			- $\displaystyle\delta'(\{1,2,3\},\texttt{b})=\bigcup_{r\in\{1,2,3\}}\delta(r,\texttt{b})=\{2,3\}$
+			- $\displaystyle\delta'(\{1,2,3\},\varepsilon)=\bigcup_{r\in\{1,2,3\}}\delta(r,\varepsilon)=\{2\}$
+
+
+| $R$         | $\delta'(R, \texttt{a})$ | $\delta'(R, \texttt{b})$ | $\delta'(R, \varepsilon)$ |
+| ----------- | ------------------------ | ------------------------ | ------------------------- |
+| $\emptyset$ | $\emptyset$              | $\emptyset$              | $\emptyset$               |
+| $\{1\}$     | $\{3\}$                  | $\emptyset$              | $\{2\}$                   |
+| $\{2\}$     | $\{1,2\}$                | $\emptyset$              | $\emptyset$               |
+| $\{3\}$     | $\{2\}$                  | $\{2,3\}$                | $\emptyset$               |
+| $\{1,2\}$   | $\{1,2,3\}$              | $\emptyset$              | $\{2\}$                   |
+| $\{1,3\}$   | $\{2,3\}$                | $\{2,3\}$                | $\{2\}$                   |
+| $\{2,3\}$   | $\{1,2,3\}$              | $\{2,3\}$                | $\emptyset$               |
+| $\{1,2,3\}$ | $\{1,2,3\}$              | $\{2,3\}$                | $\{2\}$                   |
+
+- $q_{0}'=\{q_{0}\}=\{1\}$
+- $F'=\{R\in Q'\mid R\cap F\neq\emptyset\}=\{\{2\},\{1,2\},\{2,3\},\{1,2,3\}\}$
+- For each $R\in Q'$, we define $E(R)=\{q\mid q\text{ can be reached from }R\text{ by traveling along 0 or more }\varepsilon\text{ transitions}\}$.
+	- $E(\emptyset)=\emptyset$
+	- $E(\{1\})=\{1,2\}$
+	- $E(\{2\})=\{2\}$
+	- $E(\{3\})=\{3\}$
+	- $E(\{1,2\})=\{1,2,3\}$
+	- $E(\{1,3\})=\{1,2,3\}$
+	- $E(\{2,3\})=\{2,3\}$
+	- $E(\{1,2,3\})=\{1,2,3\}$
+- Now redefine $\delta'(R,x):=\{q\in Q\mid q\in E(\delta(r,x))\text{ for some }r\in R\}$
+	- $\delta'(\emptyset,\texttt{a})=\emptyset$
+	- 
+
 
 #### DFA 
 

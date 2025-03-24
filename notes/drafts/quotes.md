@@ -1,0 +1,5 @@
+- The introduction of suitable abstractions is our only mental aid to organize and master complexity. —E. W. Dijkstra, 1930–2002
+- ...only the last line is a genuine theorem here—everything else is in the fantasy. —Douglas Hofstadter, Gödel, Escher, Bach, 1979
+- The mind has finite means but it makes unbounded use of them and in very specific and organized ways. That’s the core problem of language that it became possible to face (by the mid-twentieth century). —Noam Chomsky, circa 1998
+- The theory of probability is at bottom nothing but common sense reduced to a calculus. —Pierre-Simon Laplace (1749–1827)
+- The world of the future will be an ever more demanding struggle against the limitations of our intelligence, not a comfortable hammock in which we can lie down to be waited upon by our robot slaves. —Norbert Wiener, 1964

@@ -7,7 +7,7 @@
 - A **singleton** is a set with exactly one element
 - An **index set** is a set whose elements are used to index (label) the elements of another set
 
-# Set Operations
+### Set Operations, Relations, and Properties
 
 - Let $A$ be a set:
 	- The **power set** of $A$ is the set $\mathcal{P}(A) = \{ X \, | \, X \subseteq A \}$

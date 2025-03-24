@@ -5,10 +5,10 @@
 	- An event $E$ is **compound** if it consists of more than one outcome.
 	- The empty set $\emptyset$ is an event (impossible event).
 	- The sample space $S$ is an event (certain event).
-	- Two events $E$ and $F$ are said to be **mutually exclusive** if $P(E\cap F)=0$ (or equivalently, if $E\cap F=\emptyset$). 
-		- More generally, a sequence of events $E_1,E_2,\ldots$ are said to be mutually exclusive if $P(E_i\cap E_j)=0$ (or equivalently, if $E_i\cap E_j=\emptyset$) for all $i\neq j$.
+	- Two events $E$ and $F$ are said to be **mutually exclusive** if $P(E\cap F)=0$
+		- A sequence of events $E_1,E_2,\ldots$ are said to be mutually exclusive if $P(E_i\cap E_j)=0$
 	- Two events $E$ and $F$ are said to be **exhaustive** if $P(E\cup F)=1$ (or equivalently, if $E\cup F=S$). 
-		- More generally, a sequence of events $E_1,E_2,\ldots$ are said to be exhaustive if $\displaystyle\bigcup_{i=1}^{\infty}E_i=S$.
+		- A sequence of events $E_1,E_2,\ldots$ are said to be exhaustive if $\displaystyle\bigcup_{i=1}^{\infty}E_i=S$.
 - An **experiment** is a procedure that yields one of a given set of outcomes (i.e. a given subset of the sample space).
 - A **subexperiment** is a step in an experiment. 
 	- (Example: If an experiment consists of rolling two dice, then each die roll is a subexperiment.)
@@ -20,6 +20,9 @@
 - If $E_1, E_2, \ldots$ are mutually exclusive events, then $\displaystyle P\left(\bigcup_{i=1}^{\infty}E_i\right) = \sum_{i=1}^{\infty}P(E_i)$
 # Theorems
 
+- [[Set theory#Set Operations, Relations, and Properties|Disjoint]] events are mutually exclusive
+	- $E\cap F = \emptyset \implies P(E\cap F) = 0$
+	- If $E_1, E_2, \ldots$ are [[Set theory#Set Operations, Relations, and Properties|pairwise disjoint]], then they are mutually exclusive. 
 - (4.1) $P(E)+P(E^\complement) = 1$
 	- $P(E\mid F) = 1 - P(E^\complement\mid F)$
 - $E\subset F \implies P(E) \leq P(F)$
@@ -57,6 +60,10 @@ $$\displaystyle P\left(\bigcup_{i=1}^{n}E_i\right) \leq \sum_{i=1}^{n}P(E_i)$$
 - If $P(F)>0$, then the **conditional probability** of $E$ given $F$ is defined as: $$\displaystyle P(E\mid F)=\frac{P(EF)}{P(F)}$$
 - (2.2) $P(EF) = P(E\mid F)P(F)$
 - (**Multiplication Rule**) $\displaystyle P(E_1\cdots E_n) = P(E_1)\prod_{i=2}^{n}P(E_i\mid E_1\cdots E_{i-1})$
+- $P(E|F)=1\implies P(F^\complement|E^\complement)=1$
+- $P(E|F)=0\implies P(E\cap F)=0$
+- If $P(E\cap F)=0$ and $P(E),P(F)>0$, then $E$ and $F$ are not independent.
+- If $E$ and $F$ are independent and $P(E),P(F)>0$, then $P(E\cap F)\neq 0$
 
 ## Bayes' Theorem
 $$\displaystyle \text{Posterior} = \frac{\text{Likelihood}\times\text{Prior}}{\text{Evidence}}$$
@@ -77,7 +84,7 @@ $$P(E\mid F)=P(E\mid GF)P(G\mid F)+P(E\mid G^\complement F)P(G^\complement\mid F
 
 # Independent Events
 
-- Two events $E$ and $F$ are said to be **independent** if $P(EF)=P(E)P(F)$
+- Two events $E$ and $F$ are said to be **independent** (denoted $E\perp F$) if $P(EF)=P(E)P(F)$
 	- If $P(E\mid F)=P(E)$, then $E$ and $F$ are independent.
 - Two events that are not independent are said to be **dependent**.
 - (4.1) If $E$ and $F$ are independent, then so are $E$ and $F^\complement$
@@ -86,8 +93,11 @@ $$P(E\mid F)=P(E\mid GF)P(G\mid F)+P(E\mid G^\complement F)P(G^\complement\mid F
 	- $P(EF)=P(E)P(F)$
 	- $P(EG)=P(E)P(G)$
 	- $P(FG)=P(F)P(G)$
-- Events $E_1,E_2,\ldots,E_n$ are said to be **independent** if, for every subset $\{F_1,F_2,\ldots,F_k\}\subseteq\{E_1,E_2,\ldots,E_n\}$, we have $\displaystyle P\left(\bigcap_{i=1}^{k}F_i\right)=\prod_{i=1}^{k}P(F_i)$.
+- Events $E_1,E_2,\ldots,E_n$ are said to be **(mutually) independent** if, for every subset $\{F_1,F_2,\ldots,F_k\}\subseteq\{E_1,E_2,\ldots,E_n\}$, we have $\displaystyle P\left(\bigcap_{i=1}^{k}F_i\right)=\prod_{i=1}^{k}P(F_i)$.
 - An infinite set of events is said to be **independent** if every finite subset is independent.
+
+- If (i) $P(EF)=P(E)P(F)$, (ii) $P(EG)=P(E)P(G)$, and (iii) $P(FG)=0$, then $P(E(F\cup G))=P(E)P(F\cup G)$
+- If (i) $P(EF)=P(E)P(F)$, (ii) $P(FG)=P(F)P(G)$, and (iii) $P(EFG)=P(E)P(FG)$, then $P(EFG)=P(EF)P(G)$
 
 
 - if $E$ and $F$ are mutually exclusive events of an experiment, then, when independent trials of the experiment are performed, the event $E$ will occur before the event $F$ with probability $\displaystyle\frac{P(E)}{P(E)+P(F)}$
@@ -106,8 +116,83 @@ $$P(E\mid F)=P(E\mid GF)P(G\mid F)+P(E\mid G^\complement F)P(G^\complement\mid F
 - $\Lambda(A_1:A_2\mid B)=\displaystyle\frac{P(B\mid A_1)}{P(B\mid A_2)}$
 
 
-
 ____
 
 
 - $P(E\mid F) \leq P(E)\implies P(F\mid E) \leq P(F)$
+
+# Random Variables
+
+- A **random variable** is a function $X:S\to\mathbb{R}$ that assigns a real number to each outcome in the sample space $S$.
+- A **discrete random variable** is a random variable $X$, whose image, $X(S)=\{X(s):s\in S\}$, is a countable set.
+- The **cumulative distribution function** of a random variable $X$ is the function defined by $F(x)=P(X\leq x)$
+	- $F(x)$ is a nondecreasing function.
+	- $\displaystyle\lim_{x\to-\infty}F(x)=0$ and $\displaystyle\lim_{x\to\infty}F(x)=1$
+	- $\forall x \in \mathbb{R},\, 0\leq F(x)\leq 1$
+	- If $X$ is a discrete random variable, then:
+		- $\displaystyle F(x)=P(X\leq x)=\sum_{t\leq x}P(X=t)$
+		- $F(x)$ is a step function with jumps at the values of $X$.
+	- If $X$ is a continuous random variable, then: 
+		- $F(x)$ is a continuous function.
+		- $\displaystyle f(x)=\frac{d}{dx}F(x)$ is the probability density function of $X$.
+- The **probability mass function** of a discrete random variable $X$ is the function $p:\mathbb{R}\to[0,1]$ defined by $p(a)=P\{X=a\}$
+	- $\displaystyle\sum_{x}p(x)=1$
+	- $\forall x,\, 0\leq p(x)\leq 1$
+	- $\forall x \notin X(S),\, p(x)=0$
+- The **probability density function** of a continuous random variable $X$ is the function $f:\mathbb{R}\to[0,\infty)$ defined by $f(x)=F'(x)$
+	- $\displaystyle\int_{-\infty}^{\infty}f(x)dx=1$
+	- $\forall x,\, f(x)\geq 0$
+- $\displaystyle P(a\leq X\leq b)=\int_{a}^{b}f(x)dx$
+
+#### Expected Value
+
+- The **expected value** (or **expectation** or **mean**) of a discrete random variable $X$ with probability mass function $p(x)$ is defined as $\displaystyle E[X]=\sum_{x:p(x)>0}xp(x)$. (the weighted average of the possible values of $X$)
+- $\displaystyle E[g(X)]=\sum_{i}g(x_i)p(x_i)$
+- If $a$ and $b$ are constants, then $\displaystyle E[aX+b]=aE[X]+b$
+- $E[X^n] = \displaystyle\sum_{x:p(x)>0}x^np(x)$
+#### Variance
+
+- The **variance** of a random variable $X$ is defined as $\displaystyle \text{Var}(X)=E[(X-E[X])^2]$
+- $\displaystyle \text{Var}(X)=E[X^2]-E[X]^2$
+- $\displaystyle \text{Var}(aX+b)=a^2\text{Var}(X)$
+- The **standard deviation** of a random variable $X$ is defined as $\displaystyle \text{SD}(X)=\sqrt{\text{Var}(X)}$
+
+- A random variable $X$ is said to be a **Bernoulli random variable** if its probability mass function is given by $p(0)=1-p$ and $p(1)=p$ for some $p\in[0,1]$
+- A random variable $X$ is said to be a **binomial random variable** with parameters $(n,p)$ if its probability mass function is given by $\displaystyle p(i)=\binom{n}{i}p^i(1-p)^{n-i}$ for $i=0,1,\ldots,n$, where $p(i)$ represents the probability of $X=i$ successes in $n$ trials, each with probability of success $p$.
+
+
+- $\mu$ and $\sigma$ 
+
+
+
+# Todo
+#### **Chapter 5: Continuous Random Variables**
+
+- Continuous Random Variables
+	- Probability Density Function
+	- Expectation & Variance
+- The Uniform Random Variable
+- Exponential Random Variables
+	- Memorylessness Property
+- Normal Random Variables
+	- Standard normal random variable
+- ~~Other Continuous Distributions (Gamma, Weibull, Cauchy, Beta)~~
+- ~~The Distribution of a Function of a Random Variable~~
+#### **Chapter 6: Jointly Distributed Random Variables**
+
+- Independent Random Variables
+- Joint Distribution Functions
+- Joint Probability Function
+- Joint Probability Density Function (PDF)
+- Joint Cumulative Distribution Function (CDF)
+- Joint Distribution of Independent Variables
+- Joint Variance
+- Sums of Independent Random Variables
+- Conditional Distributions
+- Discrete Case
+- Continuous Case
+- Binomial Random Variables
+- Geometric Random Variables
+- Poisson Random Variables
+- Negative Binomial Random Variables
+- Hypergeometric Random Variables
