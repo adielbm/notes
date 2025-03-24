@@ -1,25 +1,22 @@
 .clipboard-button {
-  position: absolute;
-  display: flex;
   float: right;
-  right: 0;
-  padding: 0.4rem;
-  margin: 0.3rem;
-  color: var(--gray);
-  border-color: var(--tx);
-  background-color: var(--bg);
-  border: 1px solid;
+  background: none;
   border-radius: var(--borderRadius);
   opacity: 0;
+  border: 0 solid;
+  margin: .3rem;
+  padding: .4rem;
+  display: flex
+;
+  position: absolute;
+  right: 0;
 
   & > svg {
-    fill: var(--bg);
     filter: contrast(0.3);
   }
 
   &:hover {
     cursor: pointer;
-    border-color: green;
   }
 
   &:focus {
