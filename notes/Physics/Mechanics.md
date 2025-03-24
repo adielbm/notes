@@ -192,6 +192,8 @@ For every action force $\vec{F}_{1 \to 2}$ exerted by object 1 on object 2, ther
 
 ### Moment of Inertia
 
+- The **moment of inertia** (more accurately _rotational inertia_) of a rigid body relative to a given axis of rotation is defined as the ratio of the torque applied to the body to the resulting angular acceleration about the axis.
+
 - moment of inertia I = angular momentum L / angular velocity ω
 - #todo Moments of inertia for various objects of uniform composition, each with mass M.
 
@@ -454,8 +456,8 @@ $$\displaystyle  F=G{\displaystyle\frac {m_{1}m_{2}}{r^{2}}}$$
 
 # Center of Mass (CM)
 
-#todo super simple physics page 86
-
+- The **center of mass** of a system of particles is the point that moves as though all the system's mass were concentrated at that point
+- $\displaystyle x_{\text{cm}} = \frac{\sum m_{i}x_{i}}{\sum m_{i}}$ is the $x$-coordinate of the center of mass
 
 
 

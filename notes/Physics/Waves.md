@@ -20,11 +20,7 @@ $$\displaystyle f=\frac{1}{T}=\frac{\omega}{2\pi}= \frac{v}{\lambda}$$
 
 
 
-
-
-
-
-
+ 
 
 ### Transverse Wave 
 
@@ -56,5 +52,19 @@ $$\displaystyle f=\frac{1}{T}=\frac{\omega}{2\pi}= \frac{v}{\lambda}$$
 - **Intensity** $I$ of a wave is defined as the power transported across unit area perpendicular to the direction of energy flow. 
 - $I\propto A^2$
 - $\displaystyle I\propto \frac{1}{r^2}$
+# Oscillations
 
- 
+
+
+- The **natural frequency** $f_{0}$ of an oscillating system is the frequency at which the system oscillates when it is set in motion and left undisturbed.
+	- $\displaystyle f_0=\frac{1}{2\pi}\sqrt{\frac{k}{m}}$ for a mass-spring system
+	- $\displaystyle f_0=\frac{1}{2\pi}\sqrt{\frac{g}{L}}$ for a simple pendulum
+- When the natural frequency and the driving frequency are the same or very close, the system exhibits **resonance**, which results in large amplitude oscillations. (which also depends on the damping)
+	- At resonance, relatively small forces are required to obtain and maintain large amplitude oscillations.
+
+
+
+
+- In the presence of a sinusoidal external force, a system may exhibit resonance.
+- Resonance occurs when an external force is exerted at the natural frequency of an oscillating system.
+
