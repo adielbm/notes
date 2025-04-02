@@ -155,5 +155,8 @@
 	- $U$ is a set called the **underlying set**
 	- $m:U \to \mathbb{Z}_{\geq 0}$ is a function that assigns to each element of $U$ a nonnegative integer
 		- The value $m(x)$ for an element $x\in U$ is called the **multiplicity** of $x$ in the multiset $M$ and interpreted as the number of occurrences of $x$ in the multiset.
-  
+	- The [[Set theory#Cardinality|cardinality]] (or **size**) of the multiset $M$ is the sum of the multiplicities of its elements, denoted by $\displaystyle |M| = \sum_{x \in U} m(x)$
+	- The **support** of the multiset $M$ is the set $\displaystyle \operatorname{supp}(M) = \{ x \in U \, | \, m(x) > 0 \}$
+	- The elements of the support can be listed with their multiplicities: $\displaystyle M = \{ a_1^{m(a_1)}, a_2^{m(a_2)}, \ldots, a_n^{m(a_n)} \}$ where $a_i \in U$ and $m(a_i) > 0$.
+
 
