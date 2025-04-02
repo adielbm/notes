@@ -5,5 +5,8 @@
     "style"
   ],
   "showRibbon": false,
-  "baseFontSize": 16
+  "baseFontSize": 16,
+  "showViewHeader": true,
+  "accentColor": "",
+  "cssTheme": ""
 }

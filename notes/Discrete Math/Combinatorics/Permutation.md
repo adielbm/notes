@@ -1,5 +1,7 @@
-$$P(n)=n!$$
-- The number of **permutations** (arrangements of objects in a sequence) of a set of size $n$ is $n!$.
+
+- A **permutation** of a set $S$ with $n$ elements is a bijection $\sigma:S\to S$. 
+- A permutation can be viewed as a rearrangement of the elements of $S$ where $\sigma(i)=j$ means that the element $i$ is moved to the position of element $j$.
+- The number of permutations of a set with $n$ elements is: $$P(n)=n!$$
 - The number of bijective functions between two sets of the same size $n$
 
 # Partial Permutation
@@ -40,16 +42,29 @@ $$k!\binom{n+k-1}{k}=\frac{(n+k-1)!}{(n-1)!} = (n+k-1)^{\underline{k}}$$
 
 # Derangement
 
-A **derangement** is a permutation of the elements of a set, such that no element appears in its original position. In other words, a derangement is a **permutation that has no fixed points**. (*אי סדר מלא, בלבול, תמורה ללא נקודות שבת*)
+- A **derangement** of a set $S$ with $n$ elements is a permutation $\sigma:S\to S$ such that $\forall i\in S, \sigma(i)\neq i$.
+	- A derangement can represent an arrangement of a sequence of elements such that no element appears in its original position.
+	- A derangement is a _permutation that has no fixed points_. 
+	- (aka: אי סדר מלא, בלבול, תמורה ללא נקודות שבת)
+- The number of derangements of a set of size $n$ is known as the **subfactorial** of $n$ or the $n$-th derangement number, denoted by $!n$ or $D_n$ and is given by any of the following formulas:
+	- $!n=D_n=(n-1)(D_{n-2}+D_{n-1})$ for $n\geq{2}$ with $D_0=1$ and $D_1=0$.
+	- $\displaystyle !n=n! \sum_{i=0}^{n} \frac{(-1)^i}{i!}=n!\left(1-\frac{1}{1!}+\frac{1}{2!}-\frac{1}{3!}+\ldots+\frac{(-1)^n}{n!}\right)$
+	- $\displaystyle !n = \left\lfloor\frac{n!}{e}+\frac{1}{2}\right\rfloor$
 
-**The number of derangements** of a set of size $n$ is known as the **subfactorial** of $n$ or the $n$-th derangement number or n-th de Montmort number. Notations for subfactorials in common use include $!n$, $D_n$.
-$$!n=D_n=(n-1)(D_{n-2}+D_{n-1})$$
-or
-$$D_n=n! \sum_{i=0}^{n} \frac{(-1)^i}{i!}=n!(1-\frac{1}{1!}+\frac{1}{2!}-\frac{1}{3!}+\ldots+\frac{(-1)^n}{n!})$$
-and the A000166 sequence
-$$1, 0, 1, 2, 9, 44, 265, 1854, 14833, 133496, 1334961,...$$
+###### A000166
+
+| $n$  | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7    | $\ldots$ |
+| ---- | --- | --- | --- | --- | --- | --- | --- | ---- | -------- |
+| $!n$ | 1   | 0   | 1   | 2   | 9   | 44  | 265 | 1854 | $\ldots$ |
+
 
 #### Derivation by inclusion–exclusion principle
 $$!n = n! - \left|S_1 \cup \dotsm \cup S_n\right| = n! \sum_{i=0}^n \frac{(-1)^i}{i!}$$
 >For $1 \leq k \leq n$ we define $S_k$ to be the set of permutations of $n$ objects that fix the $k$-th object. 
+
+
+# Dis. objects into indist. boxes of size r
+
+- The number of ways to distribute $n$ distinguishable objects into $k$ indistinguishable boxes each of size $r$ (where $n=kr$) is given by  is given by $\displaystyle\frac{n!}{(r!)^k k!}$
+
 
