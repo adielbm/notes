@@ -23,7 +23,6 @@ A **probability space** is a triple $(S,\mathcal{F},P)$ where:
 		- (Monotonicity) $E\subseteq F \implies P(E)\leq P(F)$
 		- $P(\emptyset)=0$
 		- (Complement Rule, 4.1) $P(E)+P(E^\complement)=1$
-			- $P(E\mid F) = 1 - P(E^\complement\mid F)$
 		- [[Set theory#Set Operations, Relations, and Properties|Disjoint]] events are mutually exclusive
 			- $E\cap F = \emptyset \implies P(E\cap F) = 0$
 			- If $E_1, E_2, \ldots$ are [[Set theory#Set Operations, Relations, and Properties|pairwise disjoint]], then they are mutually exclusive. 
@@ -32,6 +31,12 @@ A **probability space** is a triple $(S,\mathcal{F},P)$ where:
 		- $P(X=a)=P(\{s\in S:X(s)=a\})$
 		- $P(X\in A)=P(\{s\in S:X(s)\in A\})$
 		- $P(a\leq X\leq b)=P(\{s\in S:a\leq X(s)\leq b\})$
+
+## Counting
+
+- $\displaystyle P(A)=\frac{N(A)}{N}$
+- $\displaystyle P(A\cap B)=\frac{N(A\cap B)}{N}$
+
 ## Inclusion-Exclusion Principle
 $$\displaystyle P(E_1\cup\cdots\cup E_n)=\sum_{i=1}^{n}P(E_i)-\sum_{i<j}P(E_i E_j) + \sum_{i<j<k}P(E_i E_jE_k) + \cdots + (-1)^{n+1}P(E_1 E_2\cdots E_n)$$
 Or equivalently,
@@ -67,7 +72,10 @@ $$\displaystyle P\left(\bigcup_{i=1}^{n}E_i\right) \leq \sum_{i=1}^{n}P(E_i)$$
 - $P(E|F)=0\implies P(E\cap F)=0$
 - If $P(E\cap F)=0$ and $P(E),P(F)>0$, then $E$ and $F$ are not independent.
 - If $E$ and $F$ are independent and $P(E),P(F)>0$, then $P(E\cap F)\neq 0$
-
+- $\displaystyle P(A|B)=\frac{P(A\cap B)}{P(B)}=\frac{\frac{N(A\cap B)}{N}}{\frac{N(B)}{N}}=\frac{N(A\cap B)}{N(B)}$
+- (Complement Rule for Conditional Probability)
+	- $P(E^{\complement}\mid F)+P(E\mid F)=1$
+	- $P(E^{\complement}\mid F^\complement)+P(E\mid F^{\complement})=1$
 ## Bayes' Theorem
 $$\displaystyle \text{Posterior} = \frac{\text{Likelihood}\times\text{Prior}}{\text{Evidence}}$$
 

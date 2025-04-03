@@ -47,21 +47,79 @@ on grid]
 - **a.** Let $R$ be a regular language and $F$ be a finite language. Prove that $F \setminus R$ (the difference between the two languages) is a regular language.
 - **b.** Prove or disprove each of the following statements:
 	- **a.** The family of non-regular languages is closed under complement.
+		- Assume for contratradiction that the statement is false.
+		- There exists a non-regular language $L$ such that $\overline{L}$ is regular.
+		- Since $\overline{L}$ is regular, and regular languages are closed under complement (Exercise 1.14a), then $\overline{\overline{L}}=L$ is regular, which is a contradiction.
+		- Therefore, the statement "The family of non-regular languages is closed under complement" is true.
 	- **b.** The family of non-regular languages is closed under union.
+		- Example: $\Sigma=\{\texttt{0},\texttt{1}\}$, $L=\{\texttt{0}^{n}\texttt{1}^{n}\mid n\geq 0\}$ is non-regular (Example 1.73), $L\cup \overline{L}=\Sigma^*$ is regular, (regular expression: $\texttt{0}^*\texttt{1}^*$), so the statement is false.
 	- **c.** There exists an infinite set of distinct non-regular languages whose union is a regular language.
 
 ## שאלה 3
 
 Using Lemma 1.55, construct an NFA that recognizes the language described by the following regular expression:
 
-- $(((00)^*(11)) \cup 01)$
+$$(((00)^*(11)) \cup 01)$$
+
+```tikz 
+\usepackage{tikz}
+\usetikzlibrary{automata, arrows.meta, positioning}
+\begin{document}
+\begin{tikzpicture}[
+      shorten >=3pt,
+      bend angle=30,
+      inner sep=4pt,
+      thick,
+      node distance=50pt,
+      >={Stealth[round]},
+      initial text=start,
+accepting by double/.style={double, double distance=1.5pt},
+on grid]
+	\node[state, initial left] (q1) {};
+	\node[state] (q2) [above right  of=q1] {};
+	\node[state] (q3) [right  of=q2] {};
+	\node[state] (q4) [right  of=q3] {};
+	\node[state, accepting] (q5) [right  of=q4] {};
+	\node[state] (q6) [below right  of=q1] {};
+	\node[state] (q7) [right  of=q6] {};
+	\node[state] (q8) [right  of=q7] {};
+	\node[state] (q9) [right  of=q8] {};
+	\node[state] (q10) [right  of=q9] {};
+	\node[state] (q11) [right  of=q10] {};
+	\node[state] (q12) [right  of=q11] {};
+	\node[state, accepting] (q13) [right  of=q12] {};
+    \draw (q1) edge[above, ->] node[above]{$\varepsilon$} (q2);
+    \draw (q2) edge[above, ->] node[above]{$\texttt{0}$} (q3);
+    \draw (q3) edge[above, ->] node[above]{$\varepsilon$} (q4);
+    \draw (q4) edge[above, ->] node[above]{$\texttt{1}$} (q5);
+
+    \draw (q1) edge[above, ->] node[above]{$\varepsilon$} (q6);
+    \draw (q6) edge[above, ->] node[above]{$\texttt{0}$} (q7);
+    \draw (q7) edge[above, ->] node[above]{$\varepsilon$} (q8);
+    \draw (q8) edge[above, ->] node[above]{$\texttt{0}$} (q9);
+    \draw (q9) edge[above, ->] node[above]{$\varepsilon$} (q10);
+    \draw (q10) edge[above, ->] node[above]{$\texttt{1}$} (q11);
+    \draw (q11) edge[above, ->] node[above]{$\varepsilon$} (q12);
+    \draw (q12) edge[above, ->] node[above]{$\texttt{1}$} (q13);
+    \draw (q9) edge[bend right, above, ->] node[above]{$\varepsilon$} (q6);
+\end{tikzpicture}
+\end{document}
+```
+
+
+
+
 ## שאלה 4
-
-Construct regular expressions for each of the following languages:
-
+- $\Sigma=\{\texttt{a},\texttt{b}\}$
 - $\{ w \in \Sigma^* \mid w \text{ contains at least two a's, or exactly two b's} \}$
+$$(\texttt{a} \cup \texttt{b})^* \texttt{a} (\texttt{a} \cup \texttt{b})^* \texttt{a} (\texttt{a} \cup \texttt{b})^* \cup \texttt{a}^* \texttt{b} \texttt{a}^* \texttt{b} \texttt{a}^*$$
 - $\{ w \in \Sigma^* \mid w \text{ does not end in a double letter} \}$
+$$\varepsilon \cup ((\texttt{a} \cup \texttt{b})^* (\texttt{ab} \cup \texttt{ba}))$$
 - $\{ w \in \Sigma^* \mid w \text{ has an odd number of a's} \}$
+$$\texttt{b}^*(\texttt{a}\texttt{b}^*\texttt{a}\texttt{b}^*)^*\texttt{a}\texttt{b}^*$$ 
+
+
+
 
 ## שאלה 5
 
@@ -70,3 +128,5 @@ Determine whether the following languages are regular or not. Prove your answers
 - $\{ a^{2n} b^{3 n} a^n \mid n \geq 0 \}$
 - $\{ w \in \{a, b\}^* \mid w \text{ has more a's than b's} \}$
 - $\{ w \in \{a, b\}^* \mid n_a(w) \neq n_b(w) \}$
+
+
