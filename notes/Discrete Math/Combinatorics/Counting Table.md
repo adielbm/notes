@@ -6,4 +6,4 @@
 | $x_i\geq{1}$                    | $n!{\lbrace\textstyle{k\atop n}\rbrace}$ | $\binom{k-1}{n-1}$ |              | $p_{n}(k)$ ^[ [[Partition#Partition into _k_]]. Note, there, n is balls, and k is cells  ] |
 
 
-
+Shahriari, _An Invitation to Combinatorics_, 349.

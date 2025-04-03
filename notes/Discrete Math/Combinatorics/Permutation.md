@@ -65,6 +65,6 @@ $$!n = n! - \left|S_1 \cup \dotsm \cup S_n\right| = n! \sum_{i=0}^n \frac{(-1)^i
 
 # Dis. objects into indist. boxes of size r
 
-- The number of ways to distribute $n$ distinguishable objects into $k$ indistinguishable boxes each of size $r$ (where $n=kr$) is given by  is given by $\displaystyle\frac{n!}{(r!)^k k!}$
+- The number of ways to distribute $n$ distinguishable objects into $k$ indistinguishable boxes each of size $r$ (where $n=kr$) is given by  $\displaystyle\frac{n!}{(r!)^k k!}$
 
 
