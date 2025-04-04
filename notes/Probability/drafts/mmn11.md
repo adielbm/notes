@@ -24,16 +24,18 @@ ___
 
 
 ### סעיף ב
-כפי שראינו בסעיף א
+כפי שראינו קודם:
 $$P(A\overline{B}\overline{C})=0.05$$
 ### סעיף ג
-If Joseph answered Question B correctly, what is the probability that he answers at least two questions correctly in  test?
-- $P(A\cup C\mid B)=$
-
+כפי שראינו קודם:
+- $P(BC)=P(ABC)+P(\overline{A}BC)=0.6+0=0.6$
+- $\displaystyle P(A\cup C\mid B)=\frac{P((A\cap B)\cup(B\cap C))}{P(B)}=\frac{P(AB)+P(BC)-P(ABC)}{P(B)}=\frac{0.7+0.6-0.6}{0.85}=\frac{0.7}{0.85}\approx 0.8235$
+(השתמשתי בפילוג של חיתוך ואיחוד, והכלה והדחה)
 ### סעיף ד
 
 If Joseph answered at least two questions correctly, what is the probability that he answered Question B correctly?
 
+- #todo 
 
 ---
 
@@ -80,7 +82,6 @@ Are the events "Switch 4 is open" and "Current flows in the circuit" independent
 ![[IMG_0776.jpeg]]
 
 #### ב. הסתברות שבסוף הניסוי תבחר הקופסה עם 2 יהלומים אמיתיים
-#todo
 
 - $P(G_1)= \frac{1}{2}$ (ההסתברות לבחור בקופסה הטובה בהתחלה)
 - $P(G_1^{\complement})= \frac{1}{2}$ (ההסתברות לבחור בקופסה הרעה בהתחלה)
@@ -89,8 +90,7 @@ Are the events "Switch 4 is open" and "Current flows in the circuit" independent
 - $P(R^{\complement}\mid G_1)=\frac{1}{3}$ (ההסתברות לבחור יהלום מזויף מהקופסה הטובה)
 - $P(R^{\complement}\mid G_1^{\complement})=\frac{2}{3}$ (ההסתברות לבחור יהלום מזויף מהקופסה הרעה)
 - $P(G_2)=P(G_1)P(R\mid G_1)+P(G_1^{\complement})P(R^{\complement}\mid G_1^{\complement})=\frac{1}{2}\cdot \frac{2}{3}+\frac{1}{2}\cdot \frac{2}{3}=\frac{2}{3}$ (ההסתברות לבחור בקופסה הטובה בסוף)
-
-
+- maybe it 4/9? #todo 
 #### ג.
 
 If the son chose the other box (not the one he initially picked), what is the probability that the box contains 2 real diamonds?
