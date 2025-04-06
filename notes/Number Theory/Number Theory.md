@@ -5,9 +5,8 @@
 
 - The **least common multiple** of two integers $a$ and $b$, usually denoted by $\text{lcm}(a, b)$, is the smallest positive integer that is divisible by both $a$ and $b$
 	- $\text{lcm}(a, b)=\frac{|ab|}{\gcd(a,b)}$
-- **Basis representation theorem** - Let $b$ be a positive integer with $b > 1$. Then every positive integer $n$ can be written uniquely in the form $n = a_kb^k + a_{k-1}b^{k-1} + \dots + a_1b + a_0$ where $k$ is a nonnegative integer, $a_j$ is an integer with $0 \leq a_j \leq b - 1$ for $j = 0, 1, \dots, k$, and the initial coefficient $a_k \neq 0$.
-- **Fundamental theorem of arithmetic**
-	- Every integer $n>1$ can be represented **uniquely** as a product of prime numbers (the **prime factorization** of $n$), up to the order of the factors. 
+- (**Basis representation theorem**) Let $b$ be a positive integer with $b > 1$. Then every positive integer $n$ can be written uniquely in the form $n = a_kb^k + a_{k-1}b^{k-1} + \dots + a_1b + a_0$ where $k$ is a nonnegative integer, $a_j$ is an integer with $0 \leq a_j \leq b - 1$ for $j = 0, 1, \dots, k$, and the initial coefficient $a_k \neq 0$.
+- (**Fundamental theorem of arithmetic**) Every integer $n>1$ can be represented uniquely as a product of prime numbers (the **prime factorization** of $n$), up to the order of the factors. 
 - **The Well-Ordering Principle** - Every nonempty subset of $\mathbb{N}$ has a smallest element
 # Primes 
 
@@ -15,7 +14,7 @@
 - A positive integer $n$ is **composite** if it has a **divisor** $d$ that satisfies $1<d<n$ 
 - Any integer $n>1$ that is not a prime is composite
 - $1$ is neither prime nor composite
-- There are infinitely many primes.
+- (**Euclid's theorem**) There are infinitely many primes.
 - For each composite number $n$ there exists a prime factor $p$ such that $p<n$
 
 

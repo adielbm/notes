@@ -22,7 +22,7 @@
   }
 }
 
-.theme-dark .internal-embed.image-embed img {
+.theme-dark img[src$=".svg"] {
     filter: invert(1) hue-rotate(180deg);
 }
 

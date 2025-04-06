@@ -2,7 +2,7 @@
 
 - The **electric potential** (or **potential**) at a point is the amount of electric potential energy per unit charge at that point. $$V=\frac{U}{q}$$
 - The electric potential at a point is the work done in moving a unit positive charge from infinity to that point.
-- The SI unit of electric potential is the **volt** (V), defined as $\mathsf{1\ V = 1\ J/C}$
+- The **volt** ($\mathsf{V}$), defined as $\mathsf{1\ V = 1\ J/C}$, is the SI unit of electric potential
 - (**Coulomb potential**) $\displaystyle V=k\frac{Q}{r}$
 	- $V$ is the electric potential at a point in space due to a point charge $Q$ (in $\mathsf{V}$)
 	- $Q$ is the point charge creating the electric potential (in $\mathsf{C}$)
