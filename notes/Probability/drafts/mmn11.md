@@ -41,15 +41,23 @@ If Joseph answered at least two questions correctly, what is the probability tha
 
 # שאלה 2
 
-Consider the following circuit where the switches are independent of each other, and each switch is closed with probability 0.6 (allowing current to flow):
+#### א. ההסתברות שיש זרם מ- A ל - B.
 
-#### (a) (10 points)
-What is the probability that current flows from A to B?
+- $P(C_1\cup C_2 \cup C_3)=1-P(C_1^{\complement})P(C_2^{\complement})P(C_3^{\complement})=1-(0.4)^3=0.936$    (ההסתברות שיש זרם לפחות באחד ממתגים 1 עד 3)
+- $P(C_5\cup C_6)=1-P(C_5^{\complement})P(C_6^{\complement})=1-(0.4)^2=0.84$  	(ההסתברות שיש זרם לפחות באחד ממתגים 5 או 6)
+- $P(C_4)=0.6$ (ההסתברות שיש זרם במתג 4)
+- $P(C_4\cap (C_5 \cup C_6))=P(C_4)P(C_5\cup C_6)=0.6\cdot 0.84=0.504$ (ההסתברות שיש זרם במתג 4 ובמתג 5 או 6)
+- $P(C)=1-(1-0.936)(1-0.504)=0.968256$ (ההסתברות שיש זרם מ- A ל - B)
 
-#### (b) (7 points)
-If Switch 5 is open, what is the probability that no current flows from A to B?
+#### ב. ההסתברות שאין זרם בין A ל- B אם מתג 5 פתוח
 
-#### (c) (8 points)
+$P(C_1^{\complement}\cap C_2^{\complement}\cap C_3^{\complement})=(1-0.6)^3=0.064$ (ההסתברות שאין זרם במתגים 1 עד 3)
+
+$P(C_4^{\complement})=0.4$ (ההסתברות שאין זרם במתג 4)
+$P(C_6^{\complement})=0.4$ (ההסתברות שאין זרם במתג 6)
+$P(C_4^{\complement}\cup C_6^{\complement})=0.4+0.4-0.4^2=0.64$ 
+ההסתברות שאין זרם בין A ל- B אם מתג 5 פתוח היא $0.64 \cdot 0.064=0.04096$
+#### ג.
 Are the events "Switch 4 is open" and "Current flows in the circuit" independent? Prove your claim.
 
 
@@ -61,7 +69,8 @@ Are the events "Switch 4 is open" and "Current flows in the circuit" independent
 - $N(E\cap T)=\left( \displaystyle\left(\frac{6!}{(2!)^3*3!}\right)^2\cdot{7}^2 \right)=11025$      (דרכים בהן נוצרות בדיוק שתי קבוצות מעורבות ואהוד ואפרת באותו זוג)
 
 ### א. ההסתברות שיווצרו בדיוק שתי זוגות מעורבים
-- $\displaystyle P(T)=\frac{N(T)}{N}=\frac{352800}{2027025}=\boxed{\frac{224}{1287}}$
+
+$\displaystyle P(T)=\frac{N(T)}{N}=\frac{352800}{2027025}=\boxed{\frac{224}{1287}}$
 
 ### ב. אם נוצרו בדיוק שני זוגות מעורבים (המורכבים מבן ובת) מהי ההסתברות שאהוד ואפרת לא יהיו באותו הזוג
 
@@ -90,10 +99,8 @@ Are the events "Switch 4 is open" and "Current flows in the circuit" independent
 - $P(R^{\complement}\mid G_1)=\frac{1}{3}$ (ההסתברות לבחור יהלום מזויף מהקופסה הטובה)
 - $P(R^{\complement}\mid G_1^{\complement})=\frac{2}{3}$ (ההסתברות לבחור יהלום מזויף מהקופסה הרעה)
 - $P(G_2)=P(G_1)P(R\mid G_1)+P(G_1^{\complement})P(R^{\complement}\mid G_1^{\complement})=\frac{1}{2}\cdot \frac{2}{3}+\frac{1}{2}\cdot \frac{2}{3}=\frac{2}{3}$ (ההסתברות לבחור בקופסה הטובה בסוף)
-- maybe it 4/9? #todo 
+- maybe it's 4/9? #todo 
 #### ג.
-
-If the son chose the other box (not the one he initially picked), what is the probability that the box contains 2 real diamonds?
 
 ההסתברות שהייתה החלפה:
 - $\displaystyle P(R^\complement)=P(R^{\complement}\mid G_1)P(G_1)+P(R^\complement\mid G_1^{\complement})P(G_1^{\complement})=\frac{1}{3}\cdot \frac{1}{2}+\frac{2}{3}\cdot \frac{1}{2}=\frac{3}{6}=\frac{1}{2}$

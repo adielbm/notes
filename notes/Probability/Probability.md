@@ -113,6 +113,7 @@ $$P(E\mid F)=P(E\mid GF)P(G\mid F)+P(E\mid G^\complement F)P(G^\complement\mid F
 
 - if $E$ and $F$ are mutually exclusive events of an experiment, then, when independent trials of the experiment are performed, the event $E$ will occur before the event $F$ with probability $\displaystyle\frac{P(E)}{P(E)+P(F)}$
 - $\displaystyle P_{n,m}=\sum_{k=n}^{m+n-1}\binom{m+n-1}{k}p^k(1-p)^{m+n-1-k}$ is the probability that $n$ successes occur before $m$ failures in a sequence of successes and failures, where $p$ and $1-p$ are the probabilities of success and failure (respectively.) in each trial. 
+- $P(E_1\cup\cdots\cup E_n)=P(E_1^{\complement})P(E_2^{\complement})\cdots P(E_n^{\complement})$
 
 ### Conditional Independence
 
