@@ -17,6 +17,7 @@ export default (() => {
 
     const iconPath = joinSegments(baseDir, "static/icon.svg")
     const iconDarkPath = joinSegments(baseDir, "static/icon-dark.svg")
+    const iconPng = joinSegments(baseDir, "static/icon.png")
 
     // const ogImagePath = `https://${cfg.baseUrl}/static/og-image.png`
 
@@ -39,6 +40,9 @@ export default (() => {
         <meta property="og:height" content="675" />
         <link rel="icon" media="(prefers-color-scheme: light)" href={iconPath} />
         <link rel="icon" media="(prefers-color-scheme: dark)" href={iconDarkPath} />
+        <link rel="apple-touch-icon" href={iconPng} />
+        {/* @ts-ignore: ignore error for next line */}
+        <link rel="mask-icon" href={iconPath} color="#000000" />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
         {css.map((href) => (
