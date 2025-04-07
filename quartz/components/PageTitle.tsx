@@ -22,7 +22,6 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
           </label>
         </div>
       </div>
-      <script src="/static/script.js"></script>
     </div>
   )
 }
