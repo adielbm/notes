@@ -7,7 +7,7 @@
 	- $V$ is the electric potential at a point in space due to a point charge $Q$ (in $\mathsf{V}$)
 	- $Q$ is the point charge creating the electric potential (in $\mathsf{C}$)
 	- $r$ is the distance between the charge and the point in space (in $\mathsf{m}$)
-	- $k$ is Coulomb's constant
+	- $k$ is [[Charge#Coulomb's Law|Coulomb's constant]]
 - The electric potential at a point due to multiple charges is the sum of the potentials due to each charge. $V_{\text{total}}=V_1+V_2+V_3+...$
 
 
@@ -17,13 +17,13 @@
 	- $\displaystyle V=k\int \frac{dq}{r}$
 
 
-  # Voltage
+## Voltage
 
 - **Voltage** (or **(electrical) potential difference**) is the difference in electric potential between two points in a circuit.
 	- $\displaystyle V = V_a - V_b = \frac{\mathrm{PE}_a-\mathrm{PE}_b}{q}$ is the **voltage** between points $a$ and $b$.
 		- $V$ is the work done in moving unit charge from $b$ to $a$ (in $\mathsf{V}$)
 		- $V_a$ and $V_b$ are the electric potentials at points $a$ and $b$ (in $\mathsf{V}$)
-	- The SI unit of voltage is the **volt** (V), defined as $\mathsf{1\ V = 1\ J/C}$.
+	- The SI unit of voltage is the volt ($\mathsf{V}$)
 	- We often use ground (0 V) or infinity as a reference point.
 	- Given a point $a$ with a higher potential $V_a$ and a point $b$ with a lower potential $V_b$:
 		- A **negative charge** placed at $b$ has higher potential energy than at $a$, so it will move from $b$ to $a$ (when released) and decrease its potential energy.

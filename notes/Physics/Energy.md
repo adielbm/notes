@@ -7,12 +7,7 @@
 		- $\omega$ is the angular velocity ($\mathsf{rad/s}$)
 
 - Potential Energy
-	- $E_{p} = mgh$ is the **gravitational (potential) energy**
-		- $E_{p}$ is change in GPE ($\mathsf{J}$)
-		- $m$ is the mass ($\mathsf{kg}$)
-		- $g$ is the acceleration due to gravity ($\mathsf{m/s^2}$)
-		- $h$ is the change in height ($\mathsf{m}$)
-		- $\Delta \text{GPE}=m \cdot g \cdot \Delta h$
+	- [[Mechanics#Gravitational Potential Energy|gravitational (potential) energy]]
 	- $E_{p} = \frac{1}{2}kx^2$ is the **elastic (potential) energy**
 		- $E_{p}$ is the change in elastic potential energy ($\mathsf{J}$)
 		- $k$ is the spring constant ($\mathsf{N/m}$)

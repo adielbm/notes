@@ -45,7 +45,6 @@
 ## Logic Gates
 
 ```tex
-\documentclass{standalone}
 \usepackage{circuitikz}[american]
 \usetikzlibrary{matrix}
 \tikzset{every node/.style={line width=0.2mm}} % Change the thickness here
