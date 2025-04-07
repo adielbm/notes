@@ -43,6 +43,13 @@ export default (() => {
         <link rel="apple-touch-icon" href={iconPng} />
         {/* @ts-ignore: ignore error for next line */}
         <link rel="mask-icon" href={iconPath} color="#000000" />
+
+        <link defer rel="stylesheet" href="/static/tikz.css" />
+        <script defer src="/static/tikzjax.js" type="text/javascript" />
+        <script defer src="/static/script.js"></script>
+
+
+
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
         {css.map((href) => (

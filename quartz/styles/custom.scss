@@ -139,3 +139,19 @@ button#toc {
   font-size: smaller;
   opacity: 0.7;
 }
+
+
+
+/**
+  * for tikzjax diagrams
+  * @see static/script.js, static/tikzjax.js,  
+*/
+.tikzjaxdiagram {
+  text-align: center;
+}
+.tikzjaxdiagram svg {
+  max-width: 98%;
+}
+:root[saved-theme=dark] figure.tikzjaxdiagram path {
+  filter: invert(1) hue-rotate(180deg);
+}
