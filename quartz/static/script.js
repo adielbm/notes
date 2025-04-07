@@ -25,6 +25,11 @@
     });
 }); */
 
+/*
+
+related: tikzjax.js, tikz.css, 
+
+
 function processTikzBlocks() {
   const pretikzBlocks = document.querySelectorAll('pre[data-language="tikz"], pre[data-language="tex"]');
 
@@ -71,3 +76,4 @@ const observer = new MutationObserver(mutations => {
 });
 
 observer.observe(document.body, { attributes: true });
+ */

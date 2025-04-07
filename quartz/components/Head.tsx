@@ -44,9 +44,9 @@ export default (() => {
         {/* @ts-ignore: ignore error for next line */}
         <link rel="mask-icon" href={iconPath} color="#000000" />
 
-        <link defer rel="stylesheet" href="/static/tikz.css" />
+       {/*  <link defer rel="stylesheet" href="/static/tikz.css" />
         <script defer src="/static/tikzjax.js" type="text/javascript" />
-        <script defer src="/static/script.js"></script>
+        <script defer src="/static/script.js"></script> */}
 
 
 
