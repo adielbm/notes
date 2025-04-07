@@ -397,7 +397,13 @@ For every action force $\vec{F}_{1 \to 2}$ exerted by object 1 on object 2, ther
 
 ## Gravity
 
-##### Newton's Law of Universal Gravitation
+- $G=6.67430(15)\times 10^{-11}\ \mathrm {m^{3}kg^{-1}s^{-2}}$ is the **gravitational constant** (dim. ${\mathsf {M^{-1}L^{3}T^{-2}}}$)
+- $\displaystyle g=\frac{F}{m}$ is the **gravitational acceleration** (in $\mathsf{m/s^2}$) of a free-falling object of mass $m$ in a gravitational field with gravitational force $F$ acting on it
+- $\displaystyle g=G\frac{M}{r^2}$ is the **gravitational acceleration** (in $\mathsf{m/s^2}$) at a point a gravitational field due to a mass $M$, where $r$ is the distance from the center of mass of $M$ to the point
+	- If $M$ is the Earth, then $g=G M_{\text{E}}r^2\approx 9.81\ \mathrm {m/s^2}$ (**Gravity on Earth**)
+
+
+#### Newton's Law of Universal Gravitation
 
 $$\displaystyle  F=G{\displaystyle\frac {m_{1}m_{2}}{r^{2}}}$$
 
@@ -407,7 +413,10 @@ $$\displaystyle  F=G{\displaystyle\frac {m_{1}m_{2}}{r^{2}}}$$
 - $\mathbf {r}_{12}=-\mathbf {r}_{21}$ is the position vector from $m_{1}$ to $m_{2}$, 
 	- $r=|\mathbf {r}_{12}|=|\mathbf {r}_{21}|$ the [[Vectors#Norm of a Vector|distance]] between the two objects
 - $\displaystyle\hat {\mathbf {r}}_{12}= \frac {\mathbf {r}_{12}}{r}$ is the unit vector in the direction of $\mathbf {r}_{12}$ (and vice versa)
-- $G=6.67430(15)\times 10^{-11}\ \mathrm {m^{3}kg^{-1}s^{-2}}$ is the **gravitational constant** (dim. ${\mathsf {M^{-1}L^{3}T^{-2}}}$)
+#### Gravitational Potential Energy
+
+- $\displaystyle U_{g}=-G{\displaystyle\frac {m_{1}m_{2}}{r}}$ 
+- $\Delta U_{g} = mg\Delta h$  
 
 ## Mechanical Advantage
 

@@ -112,6 +112,70 @@
 	- $L((R_1\circ R_2)) = L(R_1)\circ L(R_2)$
 	- $L((R_1^*)) = (L(R_1))^*$
 
+## DFA to Regular Expression (using GNFA)
+
+- A **generalized nondeterministic finite automaton** (GNFA) is a 5-tuple, $(Q,\Sigma,\delta,q_{\text{start}},q_{\text{accept}})$, where 
+	- $Q$ is the finite set of states
+	- $\Sigma$ is the input alphabet
+	- $\delta:(Q\setminus \{q_{\text{accept}}\})\times(Q\setminus \{q_{\text{start}}\}\longrightarrow\mathcal{R}$ is the transition function (where $\mathcal{R}$ is the set of all regular expressions over $\Sigma$)
+	- $q_{\text{start}}\in Q$ is the start state
+	- $q_{\text{accept}}\in Q$ is the accept state
+- A GNFA accepts a string $w\in\Sigma^*$ if $w=w_{1}w_{2}\cdots w_{k}$, where $w_{i}\in\Sigma^*$ and there exists a sequence of states $q_{0},q_{1},\dots,q_{k}$ such that:
+	- $q_{0}=q_{\text{start}}$
+	- $q_{k}=q_{\text{accept}}$
+	- For each $i$, we have $w_i\in L(R_{i})$, where $R_{i}=\delta(q_{i-1},q_{i})$; 
+
+
+#### Ripping States 
+
+- In the old GNFA, if
+	- $q_i$ goes to $q_{\mathrm{rip}}$ with an arrow labeled $R_1$
+	- $q_{\mathrm{rip}}$ goes to itself with an arrow labeled $R_2$
+	- $q_{\mathrm{rip}}$ goes to $q_j$ with an arrow labeled $R_3$
+	- $q_i$ goes to $q_j$ with an arrow labeled $R_4$
+- Then, in the new GNFA,
+	- $q_i$ goes to $q_j$ with an arrow labeled $(R_1)(R_2)^*(R_3)\cup(R_4)$
+	- $q_{\mathrm{rip}}$ is removed from the GNFA
+
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{automata, arrows.meta, positioning}
+\usepackage{amssymb}
+\begin{document}
+\begin{tikzpicture}[
+      shorten >=3pt,
+      bend angle=20,
+      inner sep=5pt,
+	node distance=60pt,
+      thick,
+      >={Stealth[round]},
+      initial text=start,
+      accepting by double/.style={double, double distance=1.5pt},
+      on grid]
+  
+  % Left diagram
+  \node[state] (q_i) {$q_i$};
+  \node[state] (qr) [below right=of q_i] {$q_\mathrm{rip}$};
+  \node[state] (q_j) [above right=of qr] {$q_j$};
+
+  \draw (q_i) edge [bend left,above, ->] node[auto]{$R_4$} (q_j);
+  \draw (q_i) edge[bend right, below, ->] node[below left]{$R_1$} (qr);
+  \draw (qr) edge [bend right,above, ->] node[below right]{$R_3$} (q_j);
+  \draw (qr) edge[loop below, ->]node[auto]{$R_2$} (qr);
+
+  % Spacing between the two diagrams
+  \node at (5, 0) {$\scalebox{2}{$\rightsquigarrow$}$}; % Empty node to add some space between the two diagrams
+  
+  % Right diagram
+  \node[state] (q_i2) at (7, 0) {$q_i$};
+  \node[state] (q_j2) [right=150pt of q_i2] {$q_j$};
+  \draw (q_i2) edge [above, ->] node[auto]{$(R_1)(R_2)^*(R_3)\cup(R_4)$} (q_j2);
+\end{tikzpicture}
+\end{document}
+
+```
+
 ### Regular Grammar
 
 - A **regular grammar** is a formal grammar $G=(V,\Sigma,R,S)$ in which each production rule is one of the following forms: (where $A,B,S\in V$ and $a\in \Sigma$)

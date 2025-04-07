@@ -53,13 +53,12 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
 
 ## Electric field
 
-- The **electric field** of is defined as a vector field that associates to each point in space the force per unit of charge exerted on an infinitesimal test charge at rest at that point
-- SI unit of electric field is $\mathsf{N/C}=\mathsf{V/m}$
-- $k$ is Coulomb's constant
-- $\displaystyle E=\frac{F}{q}$ (vector form: $\displaystyle \vec{\mathbf{E}}=\frac{\vec{\mathbf{F}}}{q}$) or $\displaystyle \vec{\mathbf{E}}=\lim_{ q \to 0}\frac{\vec{\mathbf{F}}}{q}$
+- An **electric field** is a vector field that associates to each point in space the force per unit of charge exerted on an infinitesimal test charge at rest at that point $$\displaystyle E=\frac{F}{q}$$  
 	- $E$ is the electric field that a charge $q$ experiences (in $\mathsf{N/C}$)
 	- $F$ is the force on a charge (in $\mathsf{N}$)
 	- $q$ is the **test charge** (in $\mathsf{C}$)
+- (vector form: $\displaystyle \vec{\mathbf{E}}=\frac{\vec{\mathbf{F}}}{q}$) or $\displaystyle \vec{\mathbf{E}}=\lim_{ q \to 0}\frac{\vec{\mathbf{F}}}{q}$
+- The SI unit of electric field is $\mathsf{N/C}=\mathsf{V/m}$
 
 ### Electric Field due to a Point Charge 
 
@@ -69,6 +68,7 @@ $\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
 	- $r$ is the distance between the point $P$ and the charge $Q$ (in $\mathsf{m}$)
 	- $E$ is the electric field (at $P$) due to the source charge $Q$ (in $\mathsf{N/C}$)
 	- $\vec{\mathbf{E}}=k\frac{Q}{r^2}\hat{\mathbf{r}}$ where $\hat{\mathbf{r}}$ is the unit vector pointing from $Q$ to $P$
+	- $k$ is Coulomb's constant
 - (_Superposition Principle_) The total electric field at a point in space is the vector sum of the electric fields due to the individual charges
 	-  $\vec{\mathbf{E}}_{\text{total}}=\vec{\mathbf{E}}_1+\vec{\mathbf{E}}_2+\vec{\mathbf{E}}_3+...$ 
 
