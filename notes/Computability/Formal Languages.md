@@ -10,6 +10,8 @@
 - The set of all possible strings over an alphabet $\Sigma$ is denoted by $\Sigma^*$.  
 - The string of length zero is called the **empty string**, denoted by $\varepsilon \in \Sigma^*$.
 	- The empty string is a substring of every string.  
+	- $\varepsilon w = w \varepsilon = w$
+	- $|\varepsilon| = 0$
 - A **prefix** of a string $w$ is a string $u$ such that $w = uz$ for some string $z$.  
 - A **suffix** of a string $w$ is a string $v$ such that $w = zv$ for some string $z$.  
 - A **substring** of a string $w$ is a string $t$ such that $w = put$ for some strings $p, s \in \Sigma^*$.
@@ -39,6 +41,20 @@
 - Any subset $L \subseteq \Sigma^*$ is called a **language** over $\Sigma$.  
 	- A language is **prefix-free** if no string in it is a proper prefix of another.  
 - The strings in a language are called **words**.  
+- The empty set $\emptyset$ is a language, called the **empty language**.
+	- $L \cdot\emptyset=\emptyset \cdot L  = \emptyset$
+	- $\emptyset^*=\{\varepsilon\}$
+	- $\emptyset$ is regular
+	- $\emptyset^+=\emptyset$
+- The set $\{\varepsilon\}$ is a language (sometimes called the **empty string language**)
+	- $\{\varepsilon\}=\emptyset^*$
+	- $\{\varepsilon\}$ is regular
+	- $\{\varepsilon\}^*=\{\varepsilon\}$
+
+- $\displaystyle L^*=\bigcup_{i=0}^{\infty} L^i$	
+- $L^0=\{\varepsilon\}$
+- $L\cdot \{\varepsilon\} = \{\varepsilon\} \cdot L = L$
+
 ### Operations & Closure Properties 
 
 | Operation     |                                                                            | Regular | CFL |
@@ -111,8 +127,11 @@
 	- $L((R_1\cup R_2)) = L(R_1)\cup L(R_2)$
 	- $L((R_1\circ R_2)) = L(R_1)\circ L(R_2)$
 	- $L((R_1^*)) = (L(R_1))^*$
+- $R^+\cup\varepsilon = R^*$
 
-## DFA to Regular Expression (using GNFA)
+### DFA to Regular Expression
+
+#### GNFA
 
 - A **generalized nondeterministic finite automaton** (GNFA) is a 5-tuple, $(Q,\Sigma,\delta,q_{\text{start}},q_{\text{accept}})$, where 
 	- $Q$ is the finite set of states
@@ -125,17 +144,30 @@
 	- $q_{k}=q_{\text{accept}}$
 	- For each $i$, we have $w_i\in L(R_{i})$, where $R_{i}=\delta(q_{i-1},q_{i})$; 
 
+#### DFA to GNFA
 
-#### Ripping States 
+- Let $M=(Q,\Sigma,\delta,q_{\text{start}},F)$ be a DFA.
+- We can construct a GNFA $G=(Q',\Sigma,\delta',q'_{\text{start}},q'_{\text{accept}})$ as follows:
+	- $Q'=Q\cup\{q'_{\text{start}},q'_{\text{accept}}\}$
+	- $\delta'(q'_{\text{start}},q_{\text{start}})=\varepsilon$
+	- For each $q_\text{accept}\in F$, $\delta'(q_{\text{accept}},q'_{\text{accept}})=\varepsilon$
+	- If any arrows have multiple labels (or if there are multiple arrows going between the same two states in the same direction), we replace each with a single arrow whose label is the union of the previous labels
+	- We add arrows labelled with $\emptyset$ between states that has no arrows.
 
-- In the old GNFA, if
-	- $q_i$ goes to $q_{\mathrm{rip}}$ with an arrow labeled $R_1$
-	- $q_{\mathrm{rip}}$ goes to itself with an arrow labeled $R_2$
-	- $q_{\mathrm{rip}}$ goes to $q_j$ with an arrow labeled $R_3$
-	- $q_i$ goes to $q_j$ with an arrow labeled $R_4$
-- Then, in the new GNFA,
-	- $q_i$ goes to $q_j$ with an arrow labeled $(R_1)(R_2)^*(R_3)\cup(R_4)$
-	- $q_{\mathrm{rip}}$ is removed from the GNFA
+#### GNFA to Regular Expression
+
+The $\mathrm{CONVERT}(G)$ procedure is used to convert a GNFA $G$ into a regular expression $R$.
+
+- $\mathrm{CONVERT}(G)$:
+	- Let $k$ be the number of states in $G$
+	- If $k=2$, then $G$ must consist of a single transition from the start state to the accept state, and the regular expression $R$ is simply the label of that transition. Return $R$
+	- If $k>2$, then:
+		- Select any $q_{\mathrm{rip}}\in Q$ different from $q_{\mathrm{start}}$ and $q_{\mathrm{accept}}$
+		- Let $G'$ be the GNFA $(Q',\Sigma,\delta',q_{\mathrm{start}},q_{\mathrm{accept}})$, where:
+			- $Q'=Q\setminus\{q_{\mathrm{rip}}\}$
+			- For every $q_i\in Q'\setminus\{q_{\mathrm{accept}\}}$, and every $q_j\in Q'\setminus\{q_{\mathrm{start}}\}$:
+				- $\delta'(q_i,q_j)=(\delta(q_i,q_{\mathrm{rip}}))(\delta(q_{\mathrm{rip}},q_{\mathrm{rip}}))^*(\delta(q_{\mathrm{rip}},q_j))\cup(\delta(q_i,q_j))=(R_1)(R_2)^*(R_3)\cup(R_4)$
+	- Return $\mathrm{CONVERT}(G')$
 
 
 ```tikz
