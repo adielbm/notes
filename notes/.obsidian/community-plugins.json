@@ -1,12 +1,12 @@
 [
   "obsidian-hide-sidebars-when-narrow",
   "obsidian-latex-suite",
-  "quick-latex",
   "darlal-switcher-plus",
   "obsidian-tikzjax",
   "obsidian-tex-plugin",
   "obsidian-hl",
   "img-caption",
   "obsidian-git",
-  "github-copilot"
+  "github-copilot",
+  "toggle-dark-mode"
 ]
