@@ -2,6 +2,7 @@
 @use "./syntax.scss";
 @use "./callouts.scss";
 
+
 :root {
   --tx: #100f0f;
   --tx3: #24837B;
@@ -112,7 +113,12 @@ ul {
 body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-family: -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, Helvetica, Arial, sans-serif;
+  font-optical-sizing: auto;
+  // font-family: -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+body, button {
+  font-family: "Asap", sans-serif;
 }
 
 html {
@@ -157,6 +163,7 @@ ul,
   overflow-wrap: anywhere;
 }
 
+
 .math {
   &.math-display {
     text-align: center;
@@ -168,6 +175,17 @@ a:hover {
 }
 
 article {
+
+  ::marker {
+    color: color-mix(in srgb, var(--tx) 50%, transparent);
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+    list-style-type: disc;
+  }
+
+
   a {
     &:focus {
       outline: none;
@@ -308,6 +326,8 @@ blockquote {
   border-radius: var(--borderRadius);
 }
 
+
+
 h1,
 h2,
 h3,
@@ -315,6 +335,7 @@ h4,
 h5,
 h6,
 thead {
+  font-family: 'Roboto', sans-serif;
   color: var(--tx);
   font-weight: revert;
   margin-bottom: 0;
@@ -490,7 +511,7 @@ th {
 td,
 th {
   white-space: nowrap;
-  padding: .5vw;
+  padding: .5em .5vw;
 }
 
 tr {

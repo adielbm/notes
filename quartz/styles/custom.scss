@@ -94,20 +94,7 @@ div#search-icon {
   }
 }
 
-.dm-gh {
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
 
-  svg {
-    cursor: pointer;
-    color: var(--tx);
-  }
-
-  input {
-    display: none;
-  }
-}
 
 // Links in article
 button#toc {
@@ -154,4 +141,9 @@ button#toc {
 }
 :root[saved-theme=dark] figure.tikzjaxdiagram path {
   filter: invert(1) hue-rotate(180deg);
+}
+
+// for theme toggle
+.disable-theme-toggle-animation .theme-toggle * {
+  transition: none !important;
 }
