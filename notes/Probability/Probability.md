@@ -1,5 +1,5 @@
 A **probability space** is a triple $(S,\mathcal{F},P)$ where:
-
+	
 - $S$ is the **sample space** (the set of all possible **outcomes** of an experiment)
 	- An **experiment** is a procedure that yields one of a given set of outcomes (i.e. a given subset of the sample space).
 	- A **subexperiment** is a step in an experiment. 
@@ -140,6 +140,8 @@ ____
 	- $\displaystyle\lim_{x\to-\infty}F(x)=0$ and $\displaystyle\lim_{x\to\infty}F(x)=1$
 	- $\forall x \in \mathbb{R},\, 0\leq F(x)\leq 1$
 	- $F$ is right continuous.
+- A **mode** of a random variable $X$ is a value $x_0$ such that $p(x_0)\geq p(x)$ for all $x$, where $p$ is the pmf or pdf of $X$.
+- The **median** of a random variable $X$ is a value $m$ such that $P(X\leq m)\geq \frac{1}{2}$ and $P(X\geq m)\geq \frac{1}{2}$.
 
 ## Discrete Random Variables
 
@@ -155,6 +157,7 @@ ____
 		- $p(x)=F(x)-\displaystyle\lim_{t\to x^-}F(t)$
 		- $\displaystyle P(a< X\leq b)=F(b)-F(a)$
 		- $\displaystyle P(X<b)=\lim_{n\to\infty}F\left(b-\frac{1}{n}\right)$
+
 ### Expected Value
 
 - The **expected value** (or **expectation** or **mean**) of a discrete random variable $X$ with probability mass function $p(x)$ is defined as $\displaystyle E[X]=\sum_{x:p(x)>0}xp(x)$. 
@@ -168,7 +171,7 @@ ____
 - $\displaystyle \text{Var}(X)=E[X^2]-E[X]^2$
 - $\displaystyle \text{Var}(aX+b)=a^2\text{Var}(X)$
 - The **standard deviation** (denoted by $\sigma$) of a random variable $X$ is defined as $\displaystyle \text{SD}(X)=\sqrt{\text{Var}(X)}$
-
+ 
 ### Discrete Distributions
 
 | **Distribution**                                                                                                                             | $\operatorname{supp}(X)$                                                                    | PMF                                                                       | $E(X)$                       | $\text{Var}(X)$      | CDF                                                                        |
@@ -212,27 +215,29 @@ ____
 	- (2.1) $\displaystyle E[g(X)]=\int_{-\infty}^{\infty}g(x)f(x)dx$
 	- (c2.1) $E[aX+b]=aE[X]+b$
 - The **variance** of a continuous rv $X$ is defined as $\displaystyle \text{Var}(X)=E[(X-E[X])^2]=E[X^2]-E[X]^2$
+	- $\displaystyle \text{Var}(X)=\int_{-\infty}^{\infty}(x-\mu)^2f(x)dx=\int_{-\infty}^{\infty}x^2f(x)dx-\mu^2$ 
 	- (c2.1) $\displaystyle \text{Var}(aX+b)=a^2\text{Var}(X)$
 
 
 
 
 
-| **Distribution**      | PDF                      | $E(X)$            | **Var(X)**             | **CDF**                                    | **MGF**                                     |
-| --------------------- | ------------------------ | ----------------- | ---------------------- | ------------------------------------------ | ------------------------------------------- |
-| $\text{Uniform}(a,b)$ | $f(x) = \frac{1}{b - a}$ | $\frac{a + b}{2}$ | $\frac{(b - a)^2}{12}$ | $\displaystyle F(x) = \frac{x - a}{b - a}$ | $M_X(t) = \frac{e^{tb} - e^{ta}}{t(b - a)}$ |
+| **Distribution**                     | PDF                                                                                          | $E(X)$            | **Var(X)**             | **CDF**                                                                                             | **MGF** |
+| ------------------------------------ | -------------------------------------------------------------------------------------------- | ----------------- | ---------------------- | --------------------------------------------------------------------------------------------------- | ------- |
+| $\text{Uniform}(a,b)$                | $f(x) = \frac{1}{b - a}$                                                                     | $\frac{a + b}{2}$ | $\frac{(b - a)^2}{12}$ | $\displaystyle F(x) = \frac{x - a}{b - a}$                                                          |         |
+| $\mathcal{N}(\mu,\sigma^2)$ (Normal) | $f(x) = \frac{1}{\sigma\sqrt{2\pi}}\cdot\exp\left( {-\frac{(x - \mu)^2}{2\sigma^2}} \right)$ | $\mu$             | $\sigma^2$             |                                                                                                     |         |
+| $\mathcal{N}(0,1)$ (Standard Normal) | $\varphi(x) = \frac{1}{\sqrt{2\pi}}\cdot\exp\left( {-\frac{x^2}{2}} \right)$                 | 0                 | 1                      | $\Phi(x)=\displaystyle\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{x}\exp\left( {-\frac{t^2}{2}} \right)dt$ |         |
+
+- (4.3, Symmetry) $\Phi(-x)=1-\Phi(x)$
+- If $\displaystyle Z=\frac{X-\mu}{\sigma}$ then $Z\sim\mathcal{N}(0,1)\iff X\sim\mathcal{N}(\mu,\sigma^2)$
+- $\displaystyle P(a<Z<b)=\Phi(b)-\Phi(a)$
 
 
+- (**De Moivre–Laplace theorem**) If $X_{n}\sim\mathrm{Bin}(n,p)$ and $Z_{n}=\displaystyle\frac{X_{n}-np}{\sqrt{np(1-p)}}$, then $\displaystyle\lim_{ n \to \infty }P\left( a\leq Z_{n} \leq b \right)=P(a\leq Z\leq b)=\Phi(b)-\Phi(a)$
 
-
-
-
-
-
-
-
-
-
+- Let $X\sim\text{Bin}(n,p)$ and $k\in\{0,1,\ldots,n\}$, then $\displaystyle P(X=k)\approx\Phi\left( \frac{k+0.5-\mu}{\sigma} \right)-\Phi\left( \frac{k-0.5-\mu}{\sigma} \right)$ where:
+	- $\mu=np$
+	- $\sigma=\sqrt{np(1-p)}$
 
 
 # Todo

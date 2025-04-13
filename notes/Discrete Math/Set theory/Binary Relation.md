@@ -1,6 +1,6 @@
 
 - A **binary relation** $R$ defined as a subset of a [[Cartesian Product]] $A\times B$
-	- A [[#Homogeneous Relation]] over a set $X$ is a binary relation over $X$ and itself, i.e. it is a subset of the cartesian product
+	- A [[#Homogeneous Relation]] over a set $X$ is a binary relation over $X$ and itself, i.e. it is a subset of the cartesian product $X \times X$.
 		- It is also simply called a (binary) relation over $X$
 	- A **heterogeneous relation** is a subset of a cartesian product $A \times B$, where $A$ and $B$ are possibly distinct sets
 	- When an operation or proposition concerns a relation of either form, we sometimes give a hint 'possibly heterogeneous'
@@ -106,23 +106,16 @@
 
 ## Equivalence relation
 
-- An **equivalence relation** is a binary relation $R$ on $A$ that is reflexive, symmetric and transitive
-
-### Equivalence Class
-
-- The **equivalence class** of $a\in{A}$ under equivalence relation $R$ is the set $[a]=\{x \in A : x R a\}$ ^[20476 notation: $\overline{a}$]
-- The [[Bell numbers|Bell number]] $B_{n}$ counts **the number of different ways to partition a set** that has exactly $n$ elements, or equivalently, **the number of equivalence relations** on it.
-
-### Quotient Set
-
+- An **equivalence relation** is a binary relation $R$ (often denoted by $\sim$) on a set $A$ that is reflexive, symmetric and transitive.
+- The **equivalence class** of $a\in{A}$ under equivalence relation $R$ is the set $[a]=\{x \in A : x R a\}$ (sometimes $\overline{a}$)
+- The [[Bell numbers|Bell number]] $B_{n}$ counts the number of different ways to partition a set that has exactly $n$ elements, or equivalently, the number of equivalence relations on it.
 - The **quotient set** of $A$ induced by $R$ is the set of all equivalence classes of A under R, and denote by $R/A:=\{ [x]:x \in A \}$
-
-#### Theorems 
-
 - (q43) if $E_1, E_2$ are equivalence relations on a set $A$, then $E_1\cap{E_2}$ is also equivalence relation on $A$.
+- (**Fundamental Theorem of Equivalence Relations**) Every equivalence relation on a set defines a partition of this set (in which the the cells are the equivalence classes, and the partition is the quotient set), and vice versa.
 
-### Partition of a set
+## Partition
 
- - A **partition of a set** (quotient set) is a grouping of its elements into non-empty subsets that called **cells** (equivalence classes), in such a way that every element is included in exactly one subset.
- - Every equivalence relation on a set defines a partition of this set, and every partition defines an equivalence relation. (theorem 2.16)
- - A partition $P_1$ is called a **refinement** (עידון) of the partition $P_2$ if every set in $P_1$ is a subset of one of the sets in $P_2$.
+- A **partition** of $A$ is a set of non-empty pairwise disjoint sets whose union is $A$
+	- The sets in the partition are called **cells** (or **blocks**)
+	- If $a\in A$ then the cell containing $a$ is denoted by $[a]$
+	- A partition $P_1$ is called a **refinement** (עידון) of the partition $P_2$ if every set in $P_1$ is a subset of one of the sets in $P_2$.
