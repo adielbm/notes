@@ -16,7 +16,7 @@
 - ATAP (Attributive-Appositive)
 	- **Attributive**
 		- **Endocentric**: blue-eyed,  wooden table, 
-			- Adj-Noun: atomic bomb, solar energy, blue cheese, geometric series, high school, digital camera,
+			- Adj-Noun: atomic bomb, solar energy, blue cheese, geometric series, high school, digital camera
 			- Noun-Noun:  office chair, security camera, toy car, baroque pop, cylinder lock, dog bed, chalkboard
 			- Noun-Adj: sky blue
 		- **Exocentric**: 

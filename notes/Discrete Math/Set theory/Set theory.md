@@ -12,9 +12,7 @@
 - Let $A$ be a set:
 	- The **power set** of $A$ is the set $\mathcal{P}(A) = \{ X \, | \, X \subseteq A \}$
 	- The **complement** of $A$ is the set $A^{\complement} = \{ x \, | \, x \in U \land x \notin A \}$ (also denoted by $\overline{A}$ or $A'$)
-	- A **partition** of $A$ is a set of non-empty pairwise disjoint sets whose union is $A$
-		- The sets in the partition are called **cells** (or **blocks**)
-		- If $a\in A$ then the cell containing $a$ is denoted by $[a]$
+
 - Let $A$ and $B$ be sets:
 	- $A$ and $B$ are **disjoint** if $A \cap B = \emptyset$
 	- $A$ is a **subset** of $B$ (and $B$ is a **superset** of $A$) if $\forall x \, (x \in A \implies x \in B)$, and denoted by $A \subseteq B$ (and $B \supseteq A$)
@@ -72,7 +70,7 @@
 
 # Cardinality
 
-- The term _cardinal number_ (or _cardinal_) is what is commonly called the number of elements in a set.
+- The term _cardinal number_ (or _cardinal_) of a set $A$, denoted by $|A|$ or $\operatorname{card}(A)$, is what is commonly called the number of elements in a set.
 - Two sets $A$ and $B$ are said to have the same **cardinality**, denoted by $|A| = |B|$, if there exists a [[Functions|bijection]] from $A$ to $B$.
 	- If there exists an injective function from $A$ to $B$, then the cardinality of $A$ is said to be _less than or equal to_ the cardinality of $B$, denoted by $|A| \leq |B|$.
 - A set $A$ is **countably infinite** if $|A| = |\mathbb{N}|$ and its cardinality is denoted by $|A| = \aleph_0$ (**aleph-null**)

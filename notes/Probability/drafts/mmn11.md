@@ -2,7 +2,7 @@
 הסתברות
 2025ב
 ___
-# שאלה 1
+## שאלה 1
 
 - $P(A)=0.85$, $P(B)=0.85$, $P(C)=0.7$, $P(ABC)=0.6$, $P(A\mid C)=1$, $P(\overline{A}\,\overline{B})=0$
 - $P(A \cup B)=1$
@@ -12,15 +12,19 @@ ___
 - $P(AC)=P(ABC)+P(A\overline{B}C)\implies 0.7=0.6+P(A\overline{B}C)\implies P(A\overline{B}C)=0.1$
 - $P(A)=P(AB)+P(A\overline{B})\implies 0.85=0.7+P(A\overline{B})\implies P(A\overline{B})=0.15$
 - $P(A\overline{B})=P(A\overline{B}C)+P(A\overline{B}\overline{C})\implies 0.15=0.1+P(A\overline{B}\overline{C})\implies\boxed{P(A\overline{B}\overline{C})=0.05}$ 
-- $P(A\overline{B}C)+P(ABC)=P(AC)\implies P(A\overline{B}C)=P(AC)-P(ABC)=0.7-0.6=0.1\implies\boxed{P(A\overline{B}C)=0.1}$
-- $P(AB)=P(ABC)+P(AB\overline{C})\implies 0.7=0.6+P(AB\overline{C})\implies \boxed{P(AB\overline{C})=0.1}$
-- $0.7=P(C)=P(ABC)+P(\overline{A}BC)+P(A\overline{B}C)+P(\overline{A}\overline{B}C)=0.6+P(\overline{A}BC)+0.1+0\implies P(\overline{A}BC)=0.7-0.6-0.1=0\implies\boxed{P(\overline{A}BC)=0}$
+- $P(A\overline{B}C)+P(ABC)=P(AC)\implies$ 
+	 $P(A\overline{B}C)=P(AC)-P(ABC)=0.7-0.6=0.1\implies\boxed{P(A\overline{B}C)=0.1}$
+- $P(AB)=P(ABC)+P(AB\overline{C})\implies$ 
+	  $0.7=0.6+P(AB\overline{C})\implies \boxed{P(AB\overline{C})=0.1}$
+- $0.7=P(C)=P(ABC)+P(\overline{A}BC)+P(A\overline{B}C)+P(\overline{A}\overline{B}C)=0.6+P(\overline{A}BC)+0.1+0\implies$ 
+	  $P(\overline{A}BC)=0.7-0.6-0.1=0\implies\boxed{P(\overline{A}BC)=0}$
 - $P(\overline{A}\,\overline{B})=0\implies \boxed{P(\overline{A}\,\overline{B}C)=0}$
-- $0.85=P(B)=0.6+0.1+0+P(\overline{A}BC)\implies P(\overline{A}B\overline{C})=0.85-0.6-0.1=0.15\implies\boxed{P(\overline{A}B\overline{C})=0.15}$ 
+- $0.85=P(B)=0.6+0.1+0+P(\overline{A}BC)\implies$ 
+	  $P(\overline{A}B\overline{C})=0.85-0.6-0.1=0.15\implies\boxed{P(\overline{A}B\overline{C})=0.15}$ 
 
 ### סעיף א
 
-![[IMG_0772 1.jpeg]]
+![[Pasted image 20250411153340.png|300]]
 
 
 ### סעיף ב
@@ -33,11 +37,8 @@ $$P(A\overline{B}\overline{C})=0.05$$
 (השתמשתי בפילוג של חיתוך ואיחוד, והכלה והדחה)
 ### סעיף ד
 
-If Joseph answered at least two questions correctly, what is the probability that he answered Question B correctly?
+(חסר)
 
-- #todo 
-
----
 
 # שאלה 2
 
@@ -58,8 +59,8 @@ $P(C_6^{\complement})=0.4$ (ההסתברות שאין זרם במתג 6)
 $P(C_4^{\complement}\cup C_6^{\complement})=0.4+0.4-0.4^2=0.64$ 
 ההסתברות שאין זרם בין A ל- B אם מתג 5 פתוח היא $0.64 \cdot 0.064=0.04096$
 #### ג.
-Are the events "Switch 4 is open" and "Current flows in the circuit" independent? Prove your claim.
 
+(**חסר**)
 
 # שאלה 3
 
@@ -88,8 +89,8 @@ $\displaystyle P(T)=\frac{N(T)}{N}=\frac{352800}{2027025}=\boxed{\frac{224}{1287
 # שאלה 4
 #### א. עץ הסתברות
 
-![[IMG_0776.jpeg]]
 
+![[Pasted image 20250411153302.png|300]]
 #### ב. הסתברות שבסוף הניסוי תבחר הקופסה עם 2 יהלומים אמיתיים
 
 - $P(G_1)= \frac{1}{2}$ (ההסתברות לבחור בקופסה הטובה בהתחלה)
@@ -99,7 +100,6 @@ $\displaystyle P(T)=\frac{N(T)}{N}=\frac{352800}{2027025}=\boxed{\frac{224}{1287
 - $P(R^{\complement}\mid G_1)=\frac{1}{3}$ (ההסתברות לבחור יהלום מזויף מהקופסה הטובה)
 - $P(R^{\complement}\mid G_1^{\complement})=\frac{2}{3}$ (ההסתברות לבחור יהלום מזויף מהקופסה הרעה)
 - $P(G_2)=P(G_1)P(R\mid G_1)+P(G_1^{\complement})P(R^{\complement}\mid G_1^{\complement})=\frac{1}{2}\cdot \frac{2}{3}+\frac{1}{2}\cdot \frac{2}{3}=\frac{2}{3}$ (ההסתברות לבחור בקופסה הטובה בסוף)
-- maybe it's 4/9? #todo 
 #### ג.
 
 ההסתברות שהייתה החלפה:
@@ -107,3 +107,7 @@ $\displaystyle P(T)=\frac{N(T)}{N}=\frac{352800}{2027025}=\boxed{\frac{224}{1287
 
 
 $\displaystyle P(G_1\mid R^{\complement})=\frac{P(R^{\complement}\mid G_1)P(G_1)}{P(R^{\complement})}=\frac{\frac{1}{3}\cdot \frac{1}{2}\cdot \frac{1}{2}}{\frac{1}{2}}=\frac{1}{6}$
+
+___
+
+תודה רבה!
