@@ -1,0 +1,5 @@
+- A **zero** (or **root**) of a function $f(x)$ is an element $c\in\text{dom}(f)$ such that $f(c)=0$.
+- The **zero set** of a function $f(x)$ is the set of all zeros of $f(x)$
+	- _Remarks_:
+		- The zero of a function $f(x)$ can be viewed as the solution set of the equation $f(x)=0$.
+		- The zero set of a linear map is also known as its _kernel_.

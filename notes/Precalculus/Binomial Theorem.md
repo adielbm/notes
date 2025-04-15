@@ -1,9 +1,5 @@
 
-
-- The process of writing a polynomial as a product is called **factoring**
-- If a polynomial does not factor using integer coefficients, then it is **prime** or **irreducible** over the integers
-- A polynomial is **completely factored** when each of its factors is prime
-
+binomial theorem (or binomial expansion)
 
 - Binomial Formula $\displaystyle(a+b)^n = \sum_{k=0}^n {n \choose k}a^{n-k}b^k = \sum_{k=0}^n {n \choose k}a^{k}b^{n-k}$
 	- $(1+x)^n = \sum_{k=0}^n {n \choose k}x^k$
