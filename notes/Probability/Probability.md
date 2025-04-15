@@ -222,11 +222,13 @@ ____
 
 
 
-| **Distribution**                     | PDF                                                                                          | $E(X)$            | **Var(X)**             | **CDF**                                                                                             | **MGF** |
-| ------------------------------------ | -------------------------------------------------------------------------------------------- | ----------------- | ---------------------- | --------------------------------------------------------------------------------------------------- | ------- |
-| $\text{Uniform}(a,b)$                | $f(x) = \frac{1}{b - a}$                                                                     | $\frac{a + b}{2}$ | $\frac{(b - a)^2}{12}$ | $\displaystyle F(x) = \frac{x - a}{b - a}$                                                          |         |
-| $\mathcal{N}(\mu,\sigma^2)$ (Normal) | $f(x) = \frac{1}{\sigma\sqrt{2\pi}}\cdot\exp\left( {-\frac{(x - \mu)^2}{2\sigma^2}} \right)$ | $\mu$             | $\sigma^2$             |                                                                                                     |         |
-| $\mathcal{N}(0,1)$ (Standard Normal) | $\varphi(x) = \frac{1}{\sqrt{2\pi}}\cdot\exp\left( {-\frac{x^2}{2}} \right)$                 | 0                 | 1                      | $\Phi(x)=\displaystyle\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{x}\exp\left( {-\frac{t^2}{2}} \right)dt$ |         |
+| **Distribution**                     | PDF                                                                                          | $E(X)$              | **Var(X)**             | **CDF**                                                                                             | **MGF** |
+| ------------------------------------ | -------------------------------------------------------------------------------------------- | ------------------- | ---------------------- | --------------------------------------------------------------------------------------------------- | ------- |
+| $\text{Uniform}(a,b)$                | $f(x) = \frac{1}{b - a}$                                                                     | $\frac{a + b}{2}$   | $\frac{(b - a)^2}{12}$ | $\displaystyle F(x) = \frac{x - a}{b - a}$                                                          |         |
+| $\mathcal{N}(\mu,\sigma^2)$ (Normal) | $f(x) = \frac{1}{\sigma\sqrt{2\pi}}\cdot\exp\left( {-\frac{(x - \mu)^2}{2\sigma^2}} \right)$ | $\mu$               | $\sigma^2$             |                                                                                                     |         |
+| $\mathcal{N}(0,1)$ (Standard Normal) | $\varphi(x) = \frac{1}{\sqrt{2\pi}}\cdot\exp\left( {-\frac{x^2}{2}} \right)$                 | 0                   | 1                      | $\Phi(x)=\displaystyle\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{x}\exp\left( {-\frac{t^2}{2}} \right)dt$ |         |
+| $\text{Exp}(\lambda)$                | $f(x)=\lambda e^{-\lambda x}$ (for $x>0$)                                                    | $\frac{1}{\lambda}$ | $\frac{1}{\lambda^2}$  | $1-e^{-\lambda x}$                                                                                  |         |
+
 
 - (4.3, Symmetry) $\Phi(-x)=1-\Phi(x)$
 - If $\displaystyle Z=\frac{X-\mu}{\sigma}$ then $Z\sim\mathcal{N}(0,1)\iff X\sim\mathcal{N}(\mu,\sigma^2)$
@@ -240,19 +242,15 @@ ____
 	- $\sigma=\sqrt{np(1-p)}$
 
 
-# Todo
-#### **Chapter 5: Continuous Random Variables**
 
-- Continuous Random Variables
-	- Probability Density Function
-	- Expectation & Variance
-- The Uniform Random Variable
-- Exponential Random Variables
-	- Memorylessness Property
-- Normal Random Variables
-	- Standard normal random variable
-- ~~Other Continuous Distributions (Gamma, Weibull, Cauchy, Beta)~~
-- ~~The Distribution of a Function of a Random Variable~~
+
+
+
+
+
+
+# Todo
+
 #### **Chapter 6: Jointly Distributed Random Variables**
 
 - Independent Random Variables
