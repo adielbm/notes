@@ -80,4 +80,23 @@
 | Type-3            | Regular                                 | Finite State Automaton   |
 
 
+# Automata
 
+| Automaton                                                              |
+| ---------------------------------------------------------------------- |
+| Deterministic Finite Automaton (DFA)                                   |
+| Nondeterministic Finite Automaton (NFA)                                |
+| $\cap$                                                                 |
+| Deterministic Push Down Automaton (DPDA-I) with 1 push-down store      |
+| $\cap$                                                                 |
+| Nondeterministic Push Down Automaton (NPDA-I) with 1 push-down store   |
+| $\cap$                                                                 |
+| Linear Bounded Automaton (LBA)                                         |
+| $\cap$                                                                 |
+| Deterministic Push Down Automaton (DPDA-II) with 2 push-down stores    |
+| Nondeterministic Push Down Automaton (NPDA-II) with 2 push-down stores |
+| Deterministic Turing Machine (DTM)                                     |
+| Nondeterministic Turing Machine (NTM)                                  |
+| Probabilistic Turing Machine (PTM)                                     |
+| Multitape Turing Machine (MTM)                                         |
+| Multidimensional Turing Machine                                        |
