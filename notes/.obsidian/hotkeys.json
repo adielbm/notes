@@ -8,14 +8,6 @@
       "key": "G"
     }
   ],
-  "file-explorer:open": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "Q"
-    }
-  ],
   "editor:toggle-checklist-status": [],
   "latex-ocr:paste-latex-from-clipboard": [
     {
@@ -74,6 +66,14 @@
         "Mod"
       ],
       "key": "L"
+    }
+  ],
+  "workspace:close-window": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Q"
     }
   ]
 }
