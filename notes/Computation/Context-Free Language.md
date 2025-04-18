@@ -35,6 +35,11 @@
 	- $L$ is in Chomsky normal form #todo 
 - Two CFGs $G_1$ and $G_2$ are said to be **equivalent** if $L(G_1)=L(G_2)$.
 	- _Remark_: There can be multiple CFGs that generate the same language, moreoever, some of these may be ambiguous while others are unambiguous.
+- (2.34, **Pumping lemma**) If $L$ is a CFL, then there exists a number $p$ (the _pumping length_) such that any string $s\in L$ with $|s|\geq p$ can be written as $s=uvxyz$, where:
+	- $\forall i\geq 0,uv^ixy^iz\in L$ 
+	- $|vxy|\leq p$
+	- $|vy|>0$
+
 
 # Pushdown Automata (PDA)
 
@@ -65,8 +70,23 @@
 
 ### CFG to CNF
 
-- Given a CFG $G$ we can construct an equivalent CFG $G'$ in Chomsky normal form 
-- #todo theorem 2.9
+- (2.9) Given a CFG $G=(V,\Sigma,R,S)$ we can construct an equivalent CFG $G'$ in Chomsky normal form
+	- Add new start variable $S_{0}$ and new rule $S_{0}\to S$
+	- For each an $\varepsilon$-rule, $A\to \varepsilon$, where $A\neq S_{0}$
+		- Remove $A\to \varepsilon$
+		- For every rule $R\to u_{1}Au_{2}Au_{3}\cdots u_{n-1}Au_{n}$, add the rules:
+			- $R\to u_{1}u_{2}Au_{3}\cdots u_{n-1}Au_{n}$
+			- $R\to u_{1}Au_{2}u_{3}\cdots u_{n-1}Au_{n}$
+			- $\dots$
+			- $R\to u_{1}Au_{2}Au_{3}\cdots u_{n-1}u_{n}$
+	- For each unit rule $A\to B$
+		- Remove $A\to B$
+		- For each rule $B\to u$, where $u\in (V\cup \Sigma)^*$
+			- Add the rule $A\to u$, unless this was a unit rule previously removed
+	- For each rule $A\to u_{1}u_{2}\cdots u_{k}$, where $k\geq 3$ and $u_{i}\in V\cup \Sigma$,
+		- Replace $A\to u_{1}u_{2}\cdots u_{k}$ with the rules, $A\to u_{1}A_{1},A_{1}\to u_{2}A_{2},\dots,A_{k-2}\to u_{k-1}u_{k}$, where $A_{i}$'s are new variables.
+			- Repalce each terminal $u_i$ in the previous rule(s) with the new variable $U_{i}$ and add the rule $U_{i}\to u_{i}$ 
+
 
 ### DFA to CFG
 
