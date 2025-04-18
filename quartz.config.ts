@@ -14,7 +14,7 @@ const config: QuartzConfig = {
     enablePopovers: false,
     analytics: null,
     locale: "en-US",
-    baseUrl: "adiel.netlify.app",
+    baseUrl: "adielbm.netlify.app",
     ignorePatterns: ["private", "templates", ".obsidian", "**/drafts", "My Tasks.md"],
     defaultDateType: "created",
     theme: {

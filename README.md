@@ -1,3 +1,3 @@
 - This repo is a fork of [jackyzha0/quartz](https://github.com/jackyzha0/quartz) with some style changes i made to customize it like the [Flexoki](https://github.com/kepano/flexoki) color scheme.
 - My notes, (markdown using [obsidian.md](https://obsidian.md/)), are located in the `notes` folder. (see `notes/index.md` for more details)
-- Currently hosted at [adiel.netlify.app](https://adiel.netlify.app/). (Build command: `npx quartz build -d notes`, Publish directory: `public`)
+- Currently hosted at [adielbm.netlify.app](https://adielbm.netlify.app/). (Build command: `npx quartz build -d notes`, Publish directory: `public`)
