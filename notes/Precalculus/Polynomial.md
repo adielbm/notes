@@ -2,7 +2,8 @@
 
 - A **(univariate) polynomial** (over $R$) is an expression of the form $a_{n}x^{n}+a_{n-1}x^{n-1}+\cdots +a_{1}x+a_{0}$, where:
 	- $x$ is the **variable** (or **indeterminate**) of the polynomial
-	- $a_0,a_1,\dots,a_n \in R$ are the **coefficients** (or **constants**), where $R$ is a commutative ring.
+	- $R$ is a commutative ring
+	- $a_0,a_1,\dots,a_n \in R$ are the **coefficients** (or **constants**
 	- $n$ is a nonnegative integer called the **degree** of the polynomial
 	- $a_ix^i$ (for $i=0,1,\dots,n$) are called the **terms** (or **monomials**) of the polynomial
 	- $a_n$ is the **leading coefficient**

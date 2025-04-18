@@ -31,25 +31,31 @@
 		- $uaq_i$ will be handled as if it were $uaq_i\sqcup$
 ### Acceptance
 
-- A Turing machine $M$ **accepts** input $w$ if a sequence of configurations $C_1,C_2,\dots,C_k$ exists, such that:
+- A Turing machine $M$ **accepts** (or **reject**) a string input $w$ if a sequence of configurations $C_1,C_2,\dots,C_k$ exists, such that:
 	- $C_1$ is the start configuration of $M$ on input $w$
-	- $C_k$ is an accepting configuration of $M$
+	- $C_k$ is an _accepting_ (or _rejecting_, respectively) configuration of $M$
 	- $C_i$ yields $C_{i+1}$ for $i=1,\dots,k-1$
+- A Turing machine $M$ said to **halt** on input $w$ if it either accepts or rejects $w$.
 
-- The set of all strings accepted by $M$ is called the **language recognized by $M$**, denoted by $L(M)$.
+### Recursively Enumerable (RE)
+
+- A language $L$ is said to be **recognized** by a Turing machine $M$ if:
+	- For every string $w\in L$, $M$ accepts $w$
+	- For every string $w\notin L$, $M$ either rejects $w$ or loops forever
 - A language is said to be **Turing-recognizable** (or **recursively enumerable** (RE)) if it is recognized by some Turing machine.
-- For a given input, a Turing machine may:
-	- Accept the input
-	- Reject the input
-	- Loop forever (not halt)
-- A Turing machine is a **decider** if it halts on all inputs.
-- A decider that recognizes some language is said to **decide** that language.
-- A language is said to be **decidable** (or **Turing-decidable**  or **recursive**) if some Turing machine decides it.
+#### Recursive (Decidable) Languages (R)
+
+- A Turing machine $M$ is said to **decide** a language $L$ (and $L$ is said to be **decided** by $M$) if: 	
+	- For every string $w\in L$, $M$ accepts $w$
+	- For every string $w\notin L$, $M$ rejects $w$
+- A Turing machine is called a **decider** if it halts on all inputs.
+- A language is said to be **decidable** (**Turing-decidable** or **recursive**) if some Turing machine decides it.
+- Examples:
 	- Every finite language is decidable.
 	- The language of univariate polynomials with integer roots is decidable.
 	- The set polynomials with integer roots is undecidable.
 
-
+# Equivalence Models
 #### Multitape Turing Machine
 
 - A **multitape Turing machine** is a Turing machine with multiple tapes, each with its own head. Each tape can be read and written to independently. 
