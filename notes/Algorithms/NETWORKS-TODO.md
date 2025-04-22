@@ -86,6 +86,6 @@ Conversely, suppose there is a flow $f'$ in $(G', c', s, t)$ of value $\text{val
 
 **Note**: From the proof of correctness, it follows that a necessary condition for the existence of a distribution is $-d(S) = d(T)$.
 
-**Theorem**: A distribution exists in the network if and only if $-d(S) = d(T)$ and for all $R \subseteq V$, it holds that:
-$c(\text{out}(R)) \geq -d(S \cap R) - d(T \cap R)$.
-(The proof is left as an exercise.)
+- Theorem: A distribution exists in the network if and only if $-d(S) = d(T)$ and for all $R \subseteq V$, it holds that:
+	- $c(\text{out}(R)) \geq -d(S \cap R) - d(T \cap R)$.
+	- (The proof is left as an exercise.)

@@ -43,6 +43,9 @@
 	- For every string $w\in L$, $M$ accepts $w$
 	- For every string $w\notin L$, $M$ either rejects $w$ or loops forever
 - A language is said to be **Turing-recognizable** (or **recursively enumerable** (RE)) if it is recognized by some Turing machine.
+- (4.18) There exists some languages that are not Turing-recognizable.
+- A language is said to be **co-Turing-recognizable** if its complement is Turing-recognizable. 
+
 #### Recursive (Decidable) Languages (R)
 
 - A Turing machine $M$ is said to **decide** a language $L$ (and $L$ is said to be **decided** by $M$) if: 	
@@ -50,10 +53,33 @@
 	- For every string $w\notin L$, $M$ rejects $w$
 - A Turing machine is called a **decider** if it halts on all inputs.
 - A language is said to be **decidable** (**Turing-decidable** or **recursive**) if some Turing machine decides it.
-- Examples:
+- A language is decidable iff it is Turing-recognizable and co-Turing-recognizable. 
+
+#### Examples
+
+- Turing-unrecognizable languages:
+	- $\overline{A_{TM}}=\{ \langle M,w\rangle\mid M \text{ is a TM that does not accept } w\}$
+	- $EQ_{\textsf{TM}}$
+	- $\overline{EQ_{\textsf{TM}}}$
+	- $EQ_{\textsf{CFG}}$
+	- $\overline{HALT_{\textsf{TM}}}$
+- Turing-recognizable but not decidable languages:
+	- $A_{TM}=\{ \langle M,w\rangle\mid M \text{ is a TM that accepts } w\}$
+	- $HALT_{TM}=\{ \langle M,w\rangle\mid M \text{ is a TM that halts on } w\}$
+	- $D=\{ p \mid p \text{ is an integer polynomial with an integral root} \}$
+	- $\overline{EQ_{\textsf{CFG}}}$
+- Turing-decidable languages:
+	- $A_{\textsf{DFA}}$, $A_{\textsf{NFA}}$, $A_{\textsf{REX}}$
+	- $E_{\textsf{DFA}}$
+	- $EQ_{\textsf{DFA}}$
+	- $A_{\textsf{CFG}}$
+	- $E_{\textsf{CFG}}$
+	- (4.9) Every CFL is decidable.
 	- Every finite language is decidable.
-	- The language of univariate polynomials with integer roots is decidable.
-	- The set polynomials with integer roots is undecidable.
+	- $D_1=\{ p \mid p \text{ is an univariate integer polynomial with an integral root} \}$
+
+
+
 
 # Equivalence Models
 #### Multitape Turing Machine

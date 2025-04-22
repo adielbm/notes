@@ -1,6 +1,6 @@
-ממ"ן 13 
-מודלים חישוביים
-2025ב
+**2025ב, מודלים חישוביים, ממ"ן 13** 
+עדיאל בן משה
+
 ___
 
 # שאלה 1 
@@ -210,9 +210,27 @@ on grid]
 
 # שאלה 5 
 
-הוכיחו שהשפות הבאות אינן CFL.
+הוכיחו שהשפות הבאות אינן CFL
+### א. $L=\{ ww^{\mathcal{R}}w \mid w\in\{ \texttt{0},\texttt{1} \}^*\}$
 
-- $\Sigma=\{ \texttt{a},\texttt{b},\texttt{c} \}$
-- $L=\{ ww^{\mathcal{R}}w \mid w\in\{ \texttt{0},\texttt{1} \}^*\}$
-- $L=\{ \texttt{a}^i\texttt{b}^{j}\texttt{c}^{\max(i,j)} \mid i,j\geq 0\}$
+- for the contradiction let's say $L$ is CFL
+- let $p$ be the PL
+- let's define a string $w=\texttt{0}^{p}\texttt{1}^{p}$.
+- then $s=ww^{\mathcal{R}}w=\texttt{0}^{p}\texttt{1}^{2p}\texttt{0}^{2p}\texttt{1}^{p}$ in L and its length greater than $p$
+- since $|vxy|\leq p$ then the substring $vxy$ must be either of the form:
+	- $000\dots 000$, two cases possible (as substring (of $s$) of left 0's or right 0's)
+		- (a) if we pump down, the string $\texttt{0}^{p-k}\texttt{1}^{2p}\texttt{0}^{2p}\texttt{1}^{p}=\texttt{0}^{p-k}\texttt{1}^{p}\cdot\texttt{1}^{p}\texttt{0}^{p+k}\cdot\texttt{0}^{p-k}\texttt{1}^{p}$ for some $k>0$ is suppoed to be in $L$ by the lemma, which is not true, $(\texttt{1}^{p}\texttt{0}^{p+k})^{\mathcal{R}}=\texttt{0}^{p+k}\texttt{1}^{p}\neq \texttt{0}^{p-k}\texttt{1}^{p}=w$.
+		- (b) if we pump down, the string $\texttt{0}^{p}\texttt{1}^{2p}\texttt{0}^{2p-k}\texttt{1}^{p}=\texttt{0}^{p}\texttt{1}^{p}\cdot\texttt{1}^{p}\texttt{0}^{p-k}\cdot\texttt{0}^{p}\texttt{1}^{p}$ for some $k>0$ is suppoed to be in L by the lemma, which is not, because, $\texttt{1}^{p}\texttt{0}^{p-k}\neq(\texttt{0}^{p}\texttt{1}^{p})^{\mathcal{R}}$.
+	- $111 \dots 111$
+		- here too. we can prove in similar way..
+	- $000\dots000111\dots 111$
+	- $111\dots 111000\dots000$
+
+
+
+### ב. $L=\{ \texttt{a}^i\texttt{b}^{j}\texttt{c}^{\max(i,j)} \mid i,j\geq 0\}$
+
+ (מעל $\Sigma=\{ \texttt{a},\texttt{b},\texttt{c} \}$)
+
+
 
