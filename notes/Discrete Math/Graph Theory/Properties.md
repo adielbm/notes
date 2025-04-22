@@ -76,7 +76,7 @@ A regular graph is a graph where each vertex has the same number of neighbors; i
 - **Graph Subdivision** (עידון של גרף) - A graph which has been derived from $G$ by a sequence of edge subdivision operations is called a **subdivision of** $G$. (can also be referred to as a $G$**-subdivision**).
 - The graphs $G_1=(V_1,E_1)$ and $G_2=(V_2,E_2)$ are called **homeomorphic** if they can be obtained from the same graph by a sequence of edge subdivisions.
 -  Theorems
-	- **Theorem** (5.7) - A graph $G$ is planar, if and only if, every subdivision of $G$ is planar.
+	- (5.7) A graph $G$ is planar, if and only if, every subdivision of $G$ is planar.
 	- **Kuratowski's theorem** (5.8) - A graph is planar, if and only if, it does not contain a [[Graph#Subgraphs|subgraph]] that is a subdivision of $K_5$ or $K_{3,3}$.
 
 

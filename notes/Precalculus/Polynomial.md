@@ -1,5 +1,3 @@
-
-
 - A **(univariate) polynomial** (over $R$) is an expression of the form $a_{n}x^{n}+a_{n-1}x^{n-1}+\cdots +a_{1}x+a_{0}$, where:
 	- $x$ is the **variable** (or **indeterminate**) of the polynomial
 	- $R$ is a commutative ring

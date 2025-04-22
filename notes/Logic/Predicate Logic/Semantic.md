@@ -15,7 +15,7 @@ A **model** $\mathcal{M}$ for a [[Logic/Predicate Logic/Syntax#Non-logical symbo
 > - **model**: structure, interpretation, assignment
 > - **interpretation function**: interpretation, assignment function
 
-> If we don't mention other, we are in **first-order logic with equality**, which means, the equality symbol ̇$=$ is defined as the identity relation $R = \{(x, x) : x \in A\}$
+> If we don't mention other, we are in **first-order logic with equality**, which means, the equality symbol $=$ is defined as the identity relation $R = \{(x, x) : x \in A\}$
 
 ## Variable Assignment
 

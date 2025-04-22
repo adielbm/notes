@@ -1,5 +1,4 @@
-
-> Here we describe an example (C6.1) of a [[Proof Calculus]] (תחשיב הוכחה), which is [[Proof Calculus#Strong completeness|complete]].  This is kind of expansion of the proof calculus described in [[Propositional Calculus]]
+Here we describe an example (C6.1) of a [[Proof Calculus]] (תחשיב הוכחה), which is [[Proof Calculus#Strong completeness|complete]].  This is kind of expansion of the proof calculus was described in [[Propositional Calculus]]
 
 # Characterization
 
@@ -12,7 +11,7 @@
 
 > **Note:** The *logical axioms* (as opposed to the axioms of a concrete theory $K$) can be formulas that are not sentences, and therefore, in proof sequences, there may also be formulas with free variables.
 
-The set $\Lambda$ of **logical axioms** consists of
+The set $\Lambda$ of **logical axioms** consists of:
 ### Taulogical Axioms
 
 > These axioms are from [[Propositional Calculus]], but here $\varphi,\psi,\theta$ can be [[Logic/Predicate Logic/Syntax#Formulas|formulas of predicate of logic]]

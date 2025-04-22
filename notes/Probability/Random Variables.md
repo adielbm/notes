@@ -34,24 +34,42 @@
  
 ### Discrete Distributions
 
-| **Distribution**                                                                                                                             | $\operatorname{supp}(X)$                                                                    | PMF                                                                       | $E(X)$                                        | $\text{Var}(X)$      | CDF                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | --------------------------------------------- | -------------------- | -------------------------------------------------------------------------- |
-| $\text{Uniform}(a,b)$, <br>$n=b-a+1$                                                                                                         | $k\in\{a,a+1,\dots,b-1,b\}$                                                                 | $P(X = k) = \frac{1}{n}$                                                  | $\frac{a+b}{2}$                               | $\frac{n^2 - 1}{12}$ | $F(k) = \frac{\lfloor k \rfloor -a+1}{n}$                                  |
-| $\text{Uniform}(\{ x_{1},\dots,x_{n} \})$                                                                                                    | $k\in\{ x_{1},\dots,x_{n} \}$                                                               | $P(X = k) = \frac{1}{n}$                                                  | $\displaystyle\frac{1}{n} \sum_{i=1}^{n} x_i$ |                      |                                                                            |
-| $\text{Bernoulli}(p)$                                                                                                                        | $x\in\{\underset{\textsf{\color{gray}fail.}}{0},\underset{\textsf{\color{gray}succ.}}{1}\}$ | $P(X = x)=p^x(1-p)^{1-x}$                                                 | $p$                                           | $p(1 - p)$           | $F(x) = \begin{cases} 0, & x < 0 \\ 1 - (1 - p)^x, & x \geq 0 \end{cases}$ |
-| $\text{Binomial}(\underset{\textsf{\color{gray}trials}}{n}, p)$                                                                              | $\underset{\textsf{\color{gray}successes}}{k}\in\{0,1,\dots ,n\}$                           | $P(X = k) = \binom{n}{k} p^k (1 - p)^{n-k}$                               | $np$                                          | $np(1 - p)$          | $\displaystyle F(x) = \sum_{k=0}^x \binom{n}{k} p^k (1 - p)^{n-k}$         |
-| $\text{NB}(\underset{\textsf{\color{gray}successes}}{r}, p)$                                                                                 | $\underset{\textsf{\color{gray}trials}}{n}\in\{r,r+1,\dots\}$                               | $\displaystyle P(X = n) = \binom{n-1}{r-1} (1-p)^{n-r} p^r$               |                                               |                      |                                                                            |
-| $\text{Pois}(\underset{\textsf{\color{gray}rate}}{\lambda})$                                                                                 | $\underset{\textsf{\color{gray}events}}{k}\in\{0,1,\dots \}$                                | $\displaystyle P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}$              | $\lambda$                                     | $\lambda$            | $\displaystyle F(x) = \sum_{k=0}^x \frac{\lambda^k e^{-\lambda}}{k!}$      |
-| $\text{Geo}(p)$                                                                                                                              | $\underset{\textsf{\color{gray}trials}}{n}\in\{1,2,\dots\}$                                 | $P(X = n) = (1-p)^{n-1} p$                                                | $\frac{1}{p}$                                 | $\frac{1-p}{p^2}$    |                                                                            |
-| $\mathcal{N}(\mu,\sigma^2)$                                                                                                                  |                                                                                             |                                                                           |                                               |                      |                                                                            |
-| $\text{Hypergeo}(\underset{\textsf{\color{gray}pop.}}{N},\underset{\textsf{\color{gray}succ.}}{K},\underset{\textsf{\color{gray}draws}}{n})$ | $\small{\underset{\textsf{\color{gray}observed}}{k}\in\{\max(0,n+K-N),\dots,\min(n,K)\}}$   | $\displaystyle P(X=k)=\frac{\binom{K}{k} \binom{N-K}{n-k}}{\binom{N}{n}}$ | $\displaystyle n\frac{K}{N}$                  |                      |                                                                            |
+- $p$ is probability of success
 
-- Poisson:
-	- (Average Rate of Occurrence) $\displaystyle\lambda=\frac{\text{Total number of occurrences}}{\text{Total observed time or space}}$
-	- $\displaystyle\lambda=\sum_{i=1}^{n}p_i$
-	- $\displaystyle \lambda\approx \bar{X}=\frac{1}{n}\sum_{i=1}^{n}X_i$
-	- (Binomial Approximation) If $n$ is large, $p$ is small, and $\lambda=np$, then $\text{Binom}(n,p)\approx\text{Pois}(\lambda)$
-	- $\displaystyle\frac{P(X=k+1)}{P(X=k)}=\frac{\lambda}{k+1}$
+| **Distribution**                                                                                                                             | $\operatorname{supp}(X)$                                                                    | PMF                                                                       | $E(X)$                                        | $\text{Var}(X)$                                                                    | CDF                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | --------------------------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| $\text{Uniform}(a,b)$, <br>$n=b-a+1$                                                                                                         | $k\in\{a,a+1,\dots,b-1,b\}$                                                                 | $P(X = k) = \frac{1}{n}$                                                  | $\frac{a+b}{2}$                               | $\frac{n^2 - 1}{12}$                                                               | $F(k) = \frac{\lfloor k \rfloor -a+1}{n}$                                  |
+| $\text{Uniform}(\{ x_{1},\dots,x_{n} \})$                                                                                                    | $k\in\{ x_{1},\dots,x_{n} \}$                                                               | $P(X = k) = \frac{1}{n}$                                                  | $\displaystyle\frac{1}{n} \sum_{i=1}^{n} x_i$ |                                                                                    |                                                                            |
+| $\text{Bernoulli}(p)$                                                                                                                        | $x\in\{\underset{\textsf{\color{gray}fail.}}{0},\underset{\textsf{\color{gray}succ.}}{1}\}$ | $P(X = x)=p^x(1-p)^{1-x}$                                                 | $p$                                           | $p(1 - p)$                                                                         | $F(x) = \begin{cases} 0, & x < 0 \\ 1 - (1 - p)^x, & x \geq 0 \end{cases}$ |
+| $\text{Binomial}(\underset{\textsf{\color{gray}trials}}{n}, p)$<br>(Run $n$ i.i.d. Ber(p) trials)                                            | $\underset{\textsf{\color{gray}successes}}{k}\in\{0,1,\dots ,n\}$                           | $P(X = k) = \binom{n}{k} p^k (1 - p)^{n-k}$                               | $np$                                          | $np(1 - p)$                                                                        | $\displaystyle F(x) = \sum_{k=0}^x \binom{n}{k} p^k (1 - p)^{n-k}$         |
+| $\text{NB}(\underset{\textsf{\color{gray}successes}}{r}, p)$<br>(Run i.i.d. Ber($p$) trials until $r$th suc.)                                | $\underset{\textsf{\color{gray}trials}}{n}\in\{r,r+1,\dots\}$                               | $\displaystyle P(X = n) = \binom{n-1}{r-1} (1-p)^{n-r} p^r$               |                                               |                                                                                    |                                                                            |
+| $\text{Geo}(p)$<br>(Run i.i.d. Ber($p$) trials until $1$st suc.)                                                                             | $\underset{\textsf{\color{gray}trials}}{n}\in\{1,2,\dots\}$                                 | $P(X = n) = (1-p)^{n-1} p$                                                | $\frac{1}{p}$                                 | $\frac{1-p}{p^2}$                                                                  |                                                                            |
+| $\text{Pois}(\underset{\textsf{\color{gray}rate}}{\lambda})$                                                                                 | $\underset{\textsf{\color{gray}events}}{k}\in\{0,1,\dots \}$                                | $\displaystyle P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}$              | $\lambda$                                     | $\lambda$                                                                          | $\displaystyle F(x) = \sum_{k=0}^x \frac{\lambda^k e^{-\lambda}}{k!}$      |
+| $\text{Hypergeo}(\underset{\textsf{\color{gray}pop.}}{N},\underset{\textsf{\color{gray}succ.}}{K},\underset{\textsf{\color{gray}draws}}{n})$ | $\small{\underset{\textsf{\color{gray}observed}}{k}\in\{\max(0,n+K-N),\dots,\min(n,K)\}}$   | $\displaystyle P(X=k)=\frac{\binom{K}{k} \binom{N-K}{n-k}}{\binom{N}{n}}$ | $\displaystyle n\frac{K}{N}$                  | $n \cdot \frac{K}{N} \cdot \left(1 - \frac{K}{N}\right) \cdot \frac{N - n}{N - 1}$ |                                                                            |
+
+#### Poisson
+
+- (Average Rate of Occurrence) $\displaystyle\lambda=\frac{\text{Total number of occurrences}}{\text{Total observed time or space}}$
+- $\displaystyle\lambda=\sum_{i=1}^{n}p_i$
+- $\displaystyle \lambda\approx \bar{X}=\frac{1}{n}\sum_{i=1}^{n}X_i$
+- (Binomial Approximation) If $n$ is large, $p$ is small, and $\lambda=np$, then $\text{Binom}(n,p)\approx\text{Pois}(\lambda)$
+- $\displaystyle\frac{P(X=k+1)}{P(X=k)}=\frac{\lambda}{k+1}$
+- If $X_i\sim\text{Pois}(\lambda_{i})$ then $\displaystyle X=\sum_{i=1}^{n}X_i\sim\text{Pois}(\lambda_{1}+\cdots+\lambda_{n})$
+
+##### Poisson Process
+
+- A set of random variables $\{N(t),t\geq 0\}$ (where $N(t)\in\mathbb{N}_{0}$) is the number of events in the interval $[0,t]$) is said to be a **Poisson process** having rate $\lambda$ (where $\lambda>0$) if:
+	- (Initial Condition) $N(0)=0$ 
+	- (Independent Increments) For $0\leq t_1<t_2<\cdots<t_n$, the random variables $N(t_2)-N(t_1),\ldots,N(t_n)-N(t_{n-1})$ are independent.
+	- (Stationary Increments) For all $s,t\geq 0$, and $k\in\mathbb{N}_{0}$, we have $P(N(s+t)-N(s)=k)=P(N(t)=k)$
+	- $\displaystyle P(N(h)=1)=\lambda h+o(h)$
+	- $\displaystyle P(N(h)\geq 2)=o(h)$
+- Let $\{N(t),t\geq 0\}$ be a Poisson process with rate $\lambda$.
+	- $P(N(t)=0)=e^{-\lambda t}$ 
+	- $P(N(t)=k)=\displaystyle\frac{(\lambda t)^k}{k!}e^{-\lambda t}$
+	- $\forall s,t\geq 0,N(s+t)-N(s)\sim\text{Pois}(\lambda t)$
+
+
 - Geometric:
 	- $\displaystyle P(X\geq k)=(1-p)^{k-1}$
 - Speical Cases:
@@ -80,6 +98,11 @@
 	- (c2.1) $\displaystyle \text{Var}(aX+b)=a^2\text{Var}(X)$
 
 
+
+
+
+
+
 ### Continuous Distributions
 
 
@@ -104,5 +127,29 @@
 
 
 
+
+## Jointly Distributed Random Variables
+
+https://chatgpt.com/c/680509b8-3ac0-8007-ae08-7f6cbf014c5f
+
+- (Discrete) 
+	- $X$ and $Y$
+		- $p(i,j)=P(X=i,Y=j)$ is the **joint PMF** of $X$ and $Y$
+		- $\displaystyle P(X=i)=\sum_{j}p(i,j)$ is the **marginal PMF** of $X$
+		- $\displaystyle P(Y=j)=\sum_{i}p(i,j)$ is the **marginal PMF** of $Y$
+	- If $\displaystyle P(X_1=n_1,\ldots,X_r=n_r) = \frac{n!}{n_1!\cdots n_r!}p_1^{n_1}\cdots p_r^{n_r}$, then $X_1,\ldots,X_r$ are said to be **jointly multinomial**, where:
+		- $n=n_1+\cdots+n_r$
+		- $p_1+\cdots+p_r=1$
+	- $X$ and $Y$ are said to be **independent** if $P(X=x,Y=y)=P(X=x)P(Y=y)$ for all $x,y$, otherwise they are **dependent**.
+	
+
+- (Continuous) 
+	- $X$ and $Y$ are said to be **jointly continuous** if there exists a function $f(x,y)$ such that $\displaystyle P((X,Y)\in C)=\iint_{C}f(x,y)\,dx\,dy$ for all sets $C\subseteq\mathbb{R}^2$.
+	- The function $f(x,y)$ is called the **joint probability density function** of $X$ and $Y$.
+	- $\displaystyle P(X \in A,Y \in B)=\int _{A}\int_{B}f(x,y)\,dx\,dy$ (where $A,B\subseteq\mathbb{R}$)
+		- $\displaystyle P(X\in A)=\int_{A}\int_{-\infty}^{\infty}f(x,y)\,dy\,dx=\int_{A}f_{X}(x)\,dx$
+		- $\displaystyle P(Y\in B)=\int_{B}^{}\int_{-\infty}^{\infty}f(x,y)\,dx\,dy=\int_{B}f_{Y}(y)\,dy$
+	- $\displaystyle F(a,b)=P(X\leq a,Y\leq b)=\int_{-\infty}^{a}\int_{-\infty}^{b}f(x,y)\,dx\,dy$
+	- $\displaystyle f(a,b)=\frac{\partial^2}{\partial a \partial b}F(a,b)$
 
 

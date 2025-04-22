@@ -3,29 +3,49 @@
 	- A **binary operation** on $F$ is a mapping $F × F → F$, that is, a correspondence that associates with each ordered pair of elements of F a uniquely determined element of $F$.
 	- The result of the addition of $a$ and $b$ is called the **sum** of $a$ and $b$, and is denoted $a + b$. Similarly, the result of the multiplication of $a$ and $b$ is called the **product** of $a$ and $b$, and is denoted ab or $a ⋅ b$. 
 	- These operations are required to satisfy the following properties, referred to as **field axioms** (in these axioms, $a$, $b$, and $c$ are arbitrary elements of the field $F$):
+		- Addition
+			- Associative $(a+b)+c = a+(b+c)$
+			- Commutative $a+b=b+a$
+			- Identity $\exists{0}:a + 0 = 0 + a = a$
+			- Inverse $\forall a \in \mathbb{F}, \exists b \in \mathbb{F} : a + b = 0$
+		- Multiplication
+			- Associative $a · (b · c) = (a · b) · c$
+			- Commutative $a · b = b · a$
+			- Identity $∃ 1 \neq 0 : a · 1 = 1 · a = a$ 
+			- Inverse $\forall a \in \mathbb{F} \setminus \{0\}, \exists b \in \mathbb{F} : a \cdot b = 1$
+		- Distributive $a · (b + c) = a · b + a · c$
 
-- Addition
-	- Associative $(a+b)+c = a+(b+c)$
-	- Commutative $a+b=b+a$
-	- Identity $\exists{0}:a + 0 = 0 + a = a$
-	- Inverse $\forall a \in \mathbb{F}, \exists b \in \mathbb{F} : a + b = 0$
-- Multiplication
-	- Associative $a · (b · c) = (a · b) · c$
-	- Commutative $a · b = b · a$
-	- Identity $∃ 1 \neq 0 : a · 1 = 1 · a = a$ 
-	- Inverse $\forall a \in \mathbb{F} \setminus \{0\}, \exists b \in \mathbb{F} : a \cdot b = 1$
-- Distributive $a · (b + c) = a · b + a · c$
+> A _field_ can be defined alternatively, but equivalently, as s [[Ring|commutative ring]] with unity in which every nonzero element is a unit (i.e., has a multiplicative inverse).
 
-> A field can define as a [[Ring|commutative ring]] with unity in which every nonzero element is a unit (i.e., has a multiplicative inverse).
+> Examples:
+> - Rational numbers
+> - [[Real Numbers]]
+> - Complex numbers
 
+## Field Properties
 
-
-
-### Examples
-
-- Rational numbers
-- [[Real Numbers]]
-- Complex numbers
+- Let $F$ be a field, and let $a,b,c,d\in F$.
+	- (uniqueness of additive inverse) $\forall a\in F, \exists! b\in F: a+b=0$ 
+		- (This unique element $b$ is called the **additive inverse** of $a$, and is denoted $-a$)
+	- (uniqueness of multiplicative inverse) $\forall a\in F\setminus \{0\}, \exists! b\in F: a\cdot b=1$
+		- (This unique element $b$ is called the **multiplicative inverse** of $a$, and is denoted $a^{-1}$ or $\frac{1}{a}$)
+	- $\nexists x\in F: x\cdot 0=1$
+	- (additive cancellation) $a+c=b+c\iff a=b$
+	- (multiplicative cancellation) $(c\neq 0)\land(a\cdot c=b\cdot c)\implies a=b$
+	- $a\cdot 0=0\cdot a=0$
+	- $a+(-0)=a$
+	- $a\cdot 1^{-1}=a$
+	- (zero-product property) $a \cdot b=0\iff a=0\lor b=0$
+	- $-0=0$
+	- $1^{-1}=1$
+	- $(-a)\cdot b=a\cdot (-b)=-(a\cdot b)$
+	- $a\neq 0\implies(a^{-1})^{-1}=a$
+	- $-a=a\cdot (-1)$
+	- $(-(-a))=a$
+	- $F$ is an integral domain
+- Notation:
+	- $a-b:=a+(-b)$
+	- $a/b:=a\cdot b^{-1}$ (where $b\neq 0$)
 
 ## Field Extension
 
