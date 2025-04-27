@@ -16,7 +16,7 @@ $$\displaystyle P(n,k)=\frac{n!}{(n-k)!}=n(n-1)\cdots(n-k+1)$$
 
 $$P(n;k_1,...,k_i)={n \choose k_1, \ldots, k_i} = \frac{n!}{k_1! \cdots k_i!}={k_1\choose k_1}{k_1+\choose k_2}\cdots{k_1+\cdots+k_i\choose k_i}$$
 - [[Binomial Coefficient#Multinomial Coefficient|Multinomial Coefficient]]
-- The number of ways to arrange a [[Set theory#Multisets|multiset]] of size $n$ where $k_1,\ldots, k_i$ are the multiplicities of the elements of the multiset. (i.e. $k_1+\cdots+k_i=n$)
+- The number of ways to arrange a [[Sets#Multisets|multiset]] of size $n$ where $k_1,\ldots, k_i$ are the multiplicities of the elements of the multiset. (i.e. $k_1+\cdots+k_i=n$)
 
 
 # Permutations with Repetition

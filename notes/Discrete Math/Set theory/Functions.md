@@ -1,9 +1,16 @@
-- **injective** (one-to-one) - $f(x_1) = f(x_2) \implies x_1=x_2$. (Equivalently, $x_1 ≠ x_2 \implies f(x_1) ≠ f(x_2)$)
-- **surjection** (onto) - $\forall y \in Y, \, \exists x \in X, \;\; f(x)=y$
-- **bijective** (one-to-one correspondence, or invertible function ^[פונקציה הפיכה]) - **injective+surjection**
-
-## Theroems
-
-- (3.25) - $f:A\to{B}$ is bijection $\implies f^{-1}:B\to{A}$ is bijection $\land$ $(f^{-1})^{-1}=f$
-- (3.26) -  $f:A\to{B}$ is bijection $\implies f^{-1}\circ{f}=I_A \land f\circ{f^{-1}}=I_B$
-- (3.27) -  $f:A\to{B}, g:B\to{A}$, s.t. $g\circ{f}=I_A\land{f\circ{g}=I_B}\implies{g, f}$ are bijections, and $f^{-1}=g$
+- A **function** $f$ (from the set $X$ (**domain**) to the set $Y$ (**codomain**)) is defined as a total functional binary relation $f\subseteq{X\times{Y}}$.
+	- (arrow notation) $f:X\to{Y},\quad x\mapsto f(x)$ denotes the function $f$ from $X$ to $Y$ that maps $x$ to $f(x)$
+		- (e.g. $\operatorname{sqr}:\mathbb{Z} \to \mathbb{Z},\quad x\mapsto x^2$)
+- The set of all functions from $X$ to $Y$, denoted by $Y^X$ (or $^XY$) is the set $Y^X=\{f \mid f : X \to Y\}$.
+- Let $f$ and $g$ be functions:
+	- The **inverse** of $f$ is the relation $f^{-1}=\{(y,x) : (x,y) \in f\}$.
+	- For each set $A$, the **restriction** of $f$ to $A$ is the function $\{(x,y) : (x,y) \in f \land x\in A\}$.
+	- For each set $A\subseteq\text{dom}(f)$, the **image** of $A$ under $f$ is the set $f(A)=\{f(x) : x\in A\}$ 
+	- $f$ is said to be **one-to-one** (or **injective** or an **injection**), if $\forall x_1,x_2 \in \text{dom}(f), f(x_1)=f(x_2) \implies x_1=x_2$. (Equivalently, $x_1 \neq x_2 \implies f(x_1) \neq f(x_2)$)
+	- $f$ is said to be **onto** (or **surjective** or a **surjection**), if $\forall y\in \text{codom}(f), \exists x\in \text{dom}(f) : f(x)=y$.
+	- $f$ is said to be **one-to-one correspondence** (or **bijective** or a **bijection**), if $f$ is both one-to-one and onto.
+	- The **composition** of $f$ and $g$ is the relation $f\circ g=\{(x,z) : \exists y \in Y : (x,y) \in f \land (y,z) \in g\}$, denoted by $g\circ f$ or $gf$.
+- The **empty function** is the function with an empty domain. 
+- $f:A\to{B}$ is bijection $\implies f^{-1}:B\to{A}$ is bijection $\land$ $(f^{-1})^{-1}=f$
+- $f:A\to{B}$ is bijection $\implies f^{-1}\circ{f}=I_A \land f\circ{f^{-1}}=I_B$
+- $f:A\to{B}, g:B\to{A}$, s.t. $g\circ{f}=I_A\land{f\circ{g}=I_B}\implies{g, f}$ are bijections, and $f^{-1}=g$

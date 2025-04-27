@@ -1,0 +1,5 @@
+- Let $M$ be a determistic decider TM. The **running time** or **time complexity** of $M$ is the function $f:\mathbb{N} \to \mathbb{N}$, where $f(n)$ is the maximum number of steps that $M$ takes on any input of length $n$. 
+	- If $f$ is the running time of $M$, we say that $M$ **runs in time $f(n)$**, and we say that $M$ is a **$f(n)$-time TM**.
+- The **time complexity class** (of a function $t:\mathbb{N} \to \mathbb{R}^+$) is defined by $\text{TIME}(t(n))=\set{L \mid L \text{ is decidable by an }O(t(n))\text{-time TM}}$.
+	- (e.g. $\mathrm{TIME}(n^2)$ is the set of languages decidable by a TM that runs in $O(n^2)$ time.)
+- $\displaystyle\mathrm{P}=\bigcup_{k=1}^{\infty}\mathrm{TIME}(n^k)$ is the time complexity class of languages decidable by a polynomial-time TM. 

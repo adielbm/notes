@@ -5,6 +5,22 @@
   --titlebar-background-focused: var(--background-modifier-active-hover) !important;
 }
 
+@media not print {
+  .page-break {
+    border-width: 3px 0 0 0;
+    border-style: dashed;
+    border-color: var(--hr-color);
+  }
+
+  .page-break::before {
+    content: "PAGE BREAK";
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+    color: var(--text-muted);
+  }
+}
+
 @media print {
   body {
     --font-text-theme: "EB Garamond", "David Libre", serif !important;
@@ -25,9 +41,7 @@
     --h6-font: sans-serif;
   }
 
-  h1 {
-    page-break-before: always;
-  }
+  .page, .page-break { break-after: page; }
 
 }
 

@@ -21,7 +21,29 @@
 
 # Exapmles
 
-Here are some important [[Logic/Predicate Logic/Syntax#Theory|theories]] in mathematics. 
+Here are some example [[Logic/Predicate Logic/Syntax#Theory|first-order theories]] that are important in mathematics. 
+
+
+## Equivalence Relation
+
+- (Language) The non-logical symbols of $L$ contains only one predicate symbol: $\sim$  
+- (Axioms)
+	- $\forall x (x\sim x)$ (reflexivity)
+	- $\forall x \forall y (x\sim y \to y\sim x)$ (symmetry)
+	- $\forall x \forall y \forall z ((x\sim y \land y\sim z) \to x\sim z)$ (transitivity)
+
+## Graph Theory (Simple Undirected) 
+
+- (Language) 
+	- Predicate symbols: $E$ (binary)
+- (Axioms)
+	- $\forall x \forall y (E(x,y) \leftrightarrow E(y,x))$ (edges are undirected)
+	- $\forall x (\lnot E(x,x))$ (no loops)
+## Graph Theory (Directed) 
+
+- (Language) 
+	- Predicate symbols: $E$ (binary)
+- (Axioms) No axioms (!) 
 
 ## Theories of Order
 
@@ -33,7 +55,7 @@ In the language there is one binary relation symbol $<$. (we prefer to denote $t
 	- $\forall v_0 \lnot(v_0<v_0)$ (irreflexivity)
 	- $\forall v_0 \forall v_1 \forall v_2 ((v_0<v_1)\land(v_1<v_2))\to(v_0<v_2)$ (transitivity)
 
-> See also: [[Binary Relation#Transitive Relations]] (strict partial order)
+> See also: [[Discrete Math/Set theory/Relations#Transitive Relations]] (strict partial order)
 
 > [!Exercise]
 > Prove that $T_{\text{order}}\vdash \forall v_0 \forall v_1 ((v_0<v_1)\to\lnot(v_1<v_0))$ 
@@ -42,7 +64,7 @@ In the language there is one binary relation symbol $<$. (we prefer to denote $t
 
 - $T_{\text{LO}}$=$T_{\text{order}}\cup\{\forall v_0 \forall v_1 (v_0=v_1)\lor(v_0<v_1)\lor(v_1<v_0)\}$ (totality)
 
-> See also: [[Binary Relation#Transitive Relations]] (strict total order)
+> See also: [[Discrete Math/Set theory/Relations#Transitive Relations]] (strict total order)
 
 > [!Exercise]
 > (1.) Show that for all $n$, $T_{\text{LO}}$ has a model with domain of size $n$. (every two such are isomorphic).
@@ -59,8 +81,9 @@ In the language there is one binary relation symbol $<$. (we prefer to denote $t
 
 ## Theories of Groups
 
-The language has a constant $0$, a unary function symbol, $-$, amd a binary function symbol, $+$. 
-
+- (Language) 
+	- Constant: $0$
+	- Function Symbols: $-$ (unary), and $+$ (binary).
 ### Group Theory
 
 - $T_{\text{G}}$ has the following axioms:
@@ -97,6 +120,58 @@ The axioms of the theory $T_{\text{F}}$ are the axioms of the commutative group 
 > [!Exercise]
 > Prove that $T_{\text{F}}\vdash \forall x (x\cdot 0=0)$. (zero property)
 > 
+
+
+## Peano Axioms
+
+- (Language) 
+	- Constant: $0$
+	- Function Symbols: $s$ (unary), $+$ (binary), and $\cdot$ (binary).
+	- Predicate Symbols: $<$ (binary).
+- (Axioms)
+	- $\forall x (\lnot(s(x)=0))$ (zero is not a successor)
+	- $\forall x \forall y (s(x)=s(y)\to x=y)$ (successor is injective)
+	- $\forall x (x+0=x)$ (zero is identity for addition; base step of addition definition)
+	- $\forall x \forall y (x+s(y)=s(x+y))$ (addition successor; recursive step of addition)
+	- $\forall x (x\cdot 0=0)$ (base step of multiplication definition)
+	- $\forall x \forall y (x\cdot s(y)=(x\cdot y)+x)$ (multiplication successor; recursive step of multiplication)
+	- $\forall x (\lnot(x<0))$ (non-negativity)
+	- $∀x∀y[(x<s(y))↔((x<y)∨(x=y))]$
+	- Axiom schema: For every formula $\varphi[x_{1},\dots ,x_{k},y]$, we have $\forall x_{1}\dots \forall x_{k}\forall y((\varphi[0/y]\land \forall y(\varphi\to \varphi[s(y) / y]))\to \forall y\varphi)$
+
+
+- todo
+	- only 0 has no predecessor: $\forall x(x\neq 0\to \exists y(x=s(y)))$
+	- $\forall x\forall y(x\neq s(y)+x)$
+	- Addition
+		- Associativity $\forall x \forall y \forall z((x+y)+z=x+(y+z))$
+		- Commutative $\forall x\forall y(x+y=y+x)$
+	- Multiplication
+		- Associativity $\forall x \forall y \forall z((x\cdot y)\cdot z=x\cdot (y\cdot z))$
+		- Commutative $\forall x\forall y(x\cdot y=y \cdot x)$
+	- multiplication is distributes over addition: $\forall x \forall y \forall z(x\cdot (y+ z)=x\cdot y\cdot + x \cdot z)$
+	- Exp
+		- $\forall x \forall y \forall z(x^y\cdot x^z=x^{y+z})$
+		- $\forall x \forall y \forall z((x^y)^z=x^{y\cdot z})$
+		- $\forall x \forall y \forall z((x\cdot z)^y=x^y\cdot x^z)$
+	- $\forall x\forall y (x<y \leftrightarrow \exists z(x+S(z)=y))$
+	- the relation $<$ is a [[Discrete Math/Set theory/Relations#Transitive Relations|strict total order]] relation
+		- irreflexivity $\forall x\lnot(x<x)$
+		- transitivity $\forall x \forall y \forall z((x<y \land y<z)\to (x < z))$
+		- $\forall x \forall y((x<y)\lor (x=y)\lor (x>y))$
+	- is $P$ a [[Logic/Predicate Logic/Syntax#Theory|complete]] theory?
+	- [[Logic/Predicate Logic/Syntax#Theory|consistency]]
+
+
+## Set Theory (ZFC)
+
+- (Language) 
+	- Predicate Symbols: $\in$ (binary)
+- (Axioms) 
+	- $\forall A\forall B (\forall x (x\in A \leftrightarrow x\in B)\to A=B)$ (extensionality)
+	- $\exists y (\forall x (\lnot(x\in y)))$ (empty set)
+	- (Axiom schema of specification) #todo
+
 
 # Definable set
 

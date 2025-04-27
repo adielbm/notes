@@ -8,7 +8,7 @@ $$C(n,k)=\binom{n}{k}=\binom{n}{n-k}=\frac{n!}{k!(n-k)!}$$
 # Combination with Repetitions
 $$\left(\!\!{n\choose k}\!\!\right)=\binom{n+k-1}{n-1}=\binom{n+k-1}{k}=\frac{(n+k-1)!}{k!\,(n-1)!}$$
 - aka: _n_ **multichoose** _k_, or **multiset coefficient**
-- The number of [[Set theory#Multisets|multisets]] of cardinality $k$, with elements taken from a finite set of cardinality $n$.
+- The number of [[Sets#Multisets|multisets]] of cardinality $k$, with elements taken from a finite set of cardinality $n$.
 - The number of ways to distribute $k$ identical balls into $n$ distinct boxes 
 - The number of **weak compositions** of $k$ into $n$ parts
 - The number of nonnegative integer solutions of $x_1+\cdots+x_n=k$ (with regard to the order of variables. i.e. $x_1+x_2=k$ and $x_2+x_1=k$ are considered as two different solutions. for consider them as a single solution use in _Generating Functions_)

@@ -1,21 +1,20 @@
-
-binomial theorem (or binomial expansion)
-
-- Binomial Formula $\displaystyle(a+b)^n = \sum_{k=0}^n {n \choose k}a^{n-k}b^k = \sum_{k=0}^n {n \choose k}a^{k}b^{n-k}$
-	- $(1+x)^n = \sum_{k=0}^n {n \choose k}x^k$
-	- **Perfect Square Trinomial**: **square** of sum/difference 
-		- $(a+b)^2=a^2+2ab+b^2=(-a-b)^2$     
-			- $(Ax+B)^2=(Ax)^2+2ABx+B^2$
-		- $(a-b)^2=a^2-2ab+b^2$
-	- **cube** of sum/difference 
-		- $(a-b)^3=a^3-3a^2b+3ab^2-b^3$
-		- $(a+b)^3=a^3+3a^2b+3ab^2+b^3$
-	- **Difference of two squares** $a^2-b^2=(a-b)(a+b)$
-	- **Sum of squares** $a^2+b^2=(a+b)^2-2ab=(a-b)^2+2ab$
-	- Sum/difference of cubes (SOAP)
-		- $a^3\pm{b^3}=(a\pm{b})({a^2\mp{ab}+{b^2}})$
-
-
-
-<img width="300" src="https://upload.wikimedia.org/wikipedia/commons/0/00/Binomial_expansion_visualisation.svg" />
-
+- A **perfect square** is a number that can be expressed as the square of an integer.
+- **Distributing** is the process of of applying the distributive property to an expression (e.g. $a(b+c)=ab+ac$).
+- **Expansion form** is sum of products (e.g. $ac+ad+bc+bd$)
+	- **Expansion** is the process of applying the distributive property to an expression for rewriting it in expansion form.
+- **Factored form** is product of sums (e.g. $(a+b)(c+d)$)
+	- **Factoring** #todo some types
+		- Factoring monomials (e.g. $12x^2 = (4x)(3x)$)
+		- Factoring the gcf from polynomials (e.g. $2x^2+4x = 2x(x+2)$)
+		- Factoring out binomial factors (e.g. $x(2x-1)-4(2x-1) = (2x-1)(x-4)$)
+- A **binomial** is an algebraic expression that contains two terms. 
+	- (e.g. $a+b$, $x-y$, $2x+3y$, $x^2-4$)
+- A **trinomial** is an expression of the form $x^2+bx+c$ 
+- (**Binomial theorem** or **binomial expansion**) For any $a,b\in\mathbb{R}$ and $n\in\mathbb{N}$, we have $$\displaystyle(a+b)^n = \sum_{k=0}^n {n \choose k}a^{n-k}b^k$$
+	- (Special case) $\displaystyle(1+x)^n = \sum_{k=0}^n {n \choose k}x^k$
+	- $\displaystyle\sum_{k=0}^n {n \choose k}=2^n$
+	- $\displaystyle\sum_{k=0}^n (-1)^{k}{n \choose k}=0$
+- (**Perfect Square Formulas**) 
+	- $\displaystyle(a+b)^2=a^2+2ab+b^2$
+		- $(Ax+B)^2=(Ax)^2+2ABx+B^2$
+	- $\displaystyle(a-b)^2=a^2-2ab+b^2$

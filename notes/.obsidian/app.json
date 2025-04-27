@@ -3,7 +3,7 @@
   "showLineNumber": false,
   "spellcheck": false,
   "pdfExportSettings": {
-    "includeName": true,
+    "includeName": false,
     "pageSize": "A4",
     "landscape": false,
     "margin": "0",
@@ -12,5 +12,6 @@
   "showInlineTitle": true,
   "propertiesInDocument": "hidden",
   "foldIndent": true,
-  "showIndentGuide": true
+  "showIndentGuide": true,
+  "alwaysUpdateLinks": true
 }

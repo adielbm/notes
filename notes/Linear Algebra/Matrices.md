@@ -68,7 +68,7 @@ In this section:
 	- (q7.5.12) $\text{Row}(A)=\text{Row}(B)$
 	- $\text{Null}(A)=\text{Null}(B)$
 	- $T_A$ and $T_B$ are the same linear transformation with respect to different bases of the codomain $\mathbb{F}^m$
-- _Row equivalence_ is an [[Binary Relation#Equivalence relation|equivalence relation]] on the set $M_{m\times n}(\mathbb{F})$
+- _Row equivalence_ is an [[Discrete Math/Set theory/Relations#Equivalence relation|equivalence relation]] on the set $M_{m\times n}(\mathbb{F})$
 - If $A$ and $B$ are row equivalent matrices, then: 
 	- A given set of column vectors of $A$ is linearly independent if and only if the corresponding column vectors of $B$ are linearly independent. 
 	- A given set of column vectors of $A$ forms a basis for the column space of $A$ if and only if the corresponding column vectors of $B$ form a basis for the column space of $B$. 
@@ -281,7 +281,7 @@ See [[Linear Transformations#Transformation matrix]]
 
 - Two $m\times n$ matrices $A$ and $B$ are **equivalent** if there exist invertible matrices $P_m$ and $Q_n$ such that $B=PAQ$
 - Two $m\times n$ matrices $A$ and $B$ are equivalent if and only if they have the same rank
-- _Matrix equivalence_ is an [[Binary Relation#Equivalence relation|equivalence relation]] on $M_{m\times n}(\mathbb{F})$
+- _Matrix equivalence_ is an [[Discrete Math/Set theory/Relations#Equivalence relation|equivalence relation]] on $M_{m\times n}(\mathbb{F})$
 - If $A$ and $B$ are row equivalent, then they are equivalent
 - #todo Matrix equivalent matrices represent the same map, with respect to appropriate pairs of bases.
 
@@ -527,7 +527,7 @@ Definitions of the **eigenspace of** $A$ **associated with its eigenvalue** $\la
 
 ## Similarity
 
-Similarity is an [[Binary Relation#Equivalence relation|equivalence relation]] on the space of square matrices.
+Similarity is an [[Discrete Math/Set theory/Relations#Equivalence relation|equivalence relation]] on the space of square matrices.
 
 $A$ and $B$ are square matrices
 
