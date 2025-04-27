@@ -24,7 +24,7 @@
 		- $\displaystyle P(X<b)=\lim_{n\to\infty}F\left(b-\frac{1}{n}\right)$
 - The **expected value** (or **expectation** or **mean**) of a discrete random variable $X$ with probability mass function $p(x)$ is defined as $\displaystyle E[X]=\sum_{x:p(x)>0}xp(x)$. 
 	- The expected value is the [[Means|weighted arithmetic mean]] of the possible values of $X$ where the weights are the probabilities of the values.
-	- $\displaystyle E[g(X)]=\sum_{i}g(x_i)p(x_i)$
+	- (**LOTUS**) $\displaystyle E[g(X)]=\sum_{i}g(x_i)p(x_i)$
 	- $\displaystyle E[aX+b]=aE[X]+b$
 	- $E[X^n] = \displaystyle\sum_{x:p(x)>0}x^np(x)$
 - The **variance** of a random variable $X$ is defined as $\displaystyle \text{Var}(X)=E[(X-E[X])^2]$
@@ -82,25 +82,25 @@
 ## Continuous Random Variables
 
 - A **continuous random variable** is a random variable $X$, whose image, $X(S)=\{X(s):s\in S\}$, is an uncountable set.
-- Let $X$ be a continuous random variable with CDF $F$.
-	- $F(x)$ is a continuous function.
-	- $\displaystyle f(x)=\frac{d}{dx}F(x)$ (the PDF of $X$ is the derivative of the CDF of $X$)
-	- The **probability density function** (PDF) of $X$ is the function $f:\mathbb{R}\to[0,\infty)$ defined by $\displaystyle f(x)=\frac{d}{dx}F(x)$
+- Let $X$ be a continuous random variable:
+	- The **probability density function** (PDF) of $X$ is a function $f:\mathbb{R}\to[0,\infty)$ such that: 
+		- $\displaystyle \int_{-\infty}^{\infty}f(x)dx=1$ 
+		- $f(x)=\displaystyle\frac{d}{dx}F(x)$ where $F$ is the CDF of $X$
+	- Let $F$ be the CDF of $X$:
+		- $F(x)$ is a continuous function.
+		- The PDF of $X$ is given by $f(x)=\displaystyle\frac{d}{dx}F(x)$
+	- Let $f$ be the PDF of $X$:
 		- $\displaystyle\int_{-\infty}^{\infty}f(x)dx=1$
 		- $\forall x,\, f(x)\geq 0$
 		- $\displaystyle P(X\in B)=\int_{B}f(x)dx$
-			- $\displaystyle P(a\leq X\leq b)=\int_{a}^{b}f(x)dx$
-- The **expected value** of a continuous rv $X$ with PDF $f(x)$ is defined as $\displaystyle E[X]=\int_{-\infty}^{\infty}xf(x)dx$.
-	- (2.1) $\displaystyle E[g(X)]=\int_{-\infty}^{\infty}g(x)f(x)dx$
-	- (c2.1) $E[aX+b]=aE[X]+b$
-- The **variance** of a continuous rv $X$ is defined as $\displaystyle \text{Var}(X)=E[(X-E[X])^2]=E[X^2]-E[X]^2$
-	- $\displaystyle \text{Var}(X)=\int_{-\infty}^{\infty}(x-\mu)^2f(x)dx=\int_{-\infty}^{\infty}x^2f(x)dx-\mu^2$ 
-	- (c2.1) $\displaystyle \text{Var}(aX+b)=a^2\text{Var}(X)$
-
-
-
-
-
+		- $\displaystyle P(a\leq X\leq b)=\int_{a}^{b}f(x)dx$
+		- The CDF of $X$ is given by $\displaystyle F(x)=\int_{-\infty}^{x}f(t)dt=P(X\leq x)$
+		- The **expected value** of $X$ is defined as $\displaystyle E[X]=\int_{-\infty}^{\infty}xf(x)dx$.
+			- (2.1, **LOTUS**) $\displaystyle E[g(X)]=\int_{-\infty}^{\infty}g(x)f(x)dx$
+			- (c2.1) $E[aX+b]=aE[X]+b$
+		- The **variance** of a continuous rv $X$ is defined as $\displaystyle \text{Var}(X)=E[(X-E[X])^2]=E[X^2]-E[X]^2$
+			- $\displaystyle \text{Var}(X)=\int_{-\infty}^{\infty}(x-\mu)^2f(x)dx=\int_{-\infty}^{\infty}x^2f(x)dx-\mu^2$ 
+			- (c2.1) $\displaystyle \text{Var}(aX+b)=a^2\text{Var}(X)$
 
 
 ### Continuous Distributions
