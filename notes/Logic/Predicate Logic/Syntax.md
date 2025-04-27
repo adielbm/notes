@@ -1,6 +1,6 @@
 ## Alphabet 
 
-The alphabet of a first-order language consists of the following distinct symbols:
+The **alphabet** of a **first-order language** consists of the following distinct symbols:
 ### Logical symbols
 
 |                            | Logical symbols                                                      |
@@ -100,7 +100,11 @@ The formulas obtained from the first two rules are said to be **atomic formulas*
 
 # Theory
 
-- A [[Predicate Calculus#Theory|theory]] is a consistent set of sentences
+- A **(first-order) theory** (for a first-order language $L$) is a set $K$ of sentences (which are in $L$) that are called the **axioms** of the theory, (or the _non-logical axioms_ in contrast to [[Predicate Calculus#Logical Axioms|logical axioms]]).
+	- For a given proof calculus, some require a [[Predicate Calculus#Theory|theory]] to be _consistent_ set of sentences, in addition, we can talk about _complete_ theory.
+	- The set $K$ is often finite or recursively enumerable, in which case it is called _effective_.
+	- See also [[Model Theory#Exapmles|Examples of first-order theories]] 
+
 
 > In the propositional logic a [[Propositional Calculus#Completeness Theorem|complete theory]] has [[Propositional Calculus#Completeness Theorem|unique model]] (4.5), but in the predicate logic, a complete theory may have many models.
 

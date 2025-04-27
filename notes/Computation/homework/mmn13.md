@@ -1,8 +1,6 @@
 **2025ב, מודלים חישוביים, ממ"ן 13** 
-עדיאל בן משה
-
+עדיאל בן משה 208969378
 ___
-
 # שאלה 1 
 
 מהי השפה של כל אחד מהדקדוקים הבאים. הסבירו.
@@ -21,8 +19,6 @@ ___
 קבוצת כל המילים ב- $\Sigma^*=\{ \texttt{0},\texttt{1} \}$ שמכילות מספר זהה של 1 ו-0.
 
 # שאלה 2
-
-בנו CFG עבור כל אחת משלוש השפות הבאות, תנו הסבר קצר.
 
 ### $\{\texttt{a}^i\texttt{b}^j\mid i\neq j\}$
 
@@ -76,17 +72,7 @@ _הסבר: כל מילה ב-L מורכבת מתת מילה E של מספר שו�
 - $C\to SB$
 - $Z\to \texttt{0}$
 
-
-
-```old
-- $S_{0} \to BC\mid BS\mid SB\mid ZZ\mid \varepsilon$  
-- $S\to BC\mid BS\mid SB\mid ZZ$  
-- $B\to ZZ$  
-- $C \to SB$  
-- $Z \to 0$
-```
-
-
+<div class="page-break"></div>
 
 # שאלה 4
 
@@ -182,7 +168,7 @@ on grid]
       bend angle=40,
       inner sep=6pt,
       thick,
-      node distance=110pt,
+      node distance=100pt,
       >={Stealth[round]},
       initial text=start,
 accepting by double/.style={double, double distance=1.5pt},
@@ -206,31 +192,37 @@ on grid]
 \end{document}
 ```
 
-
+<div class="page-break"></div>
 
 # שאלה 5 
 
 הוכיחו שהשפות הבאות אינן CFL
 ### א. $L=\{ ww^{\mathcal{R}}w \mid w\in\{ \texttt{0},\texttt{1} \}^*\}$
 
-- for the contradiction let's say $L$ is CFL
-- let $p$ be the PL
-- let's define a string $w=\texttt{0}^{p}\texttt{1}^{p}$.
-- then $s=ww^{\mathcal{R}}w=\texttt{0}^{p}\texttt{1}^{2p}\texttt{0}^{2p}\texttt{1}^{p}$ in L and its length greater than $p$
-- since $|vxy|\leq p$ then the substring $vxy$ must be either of the form:
-	- $000\dots 000$, two cases possible (as substring (of $s$) of left 0's or right 0's)
-		- (a) if we pump down, the string $\texttt{0}^{p-k}\texttt{1}^{2p}\texttt{0}^{2p}\texttt{1}^{p}=\texttt{0}^{p-k}\texttt{1}^{p}\cdot\texttt{1}^{p}\texttt{0}^{p+k}\cdot\texttt{0}^{p-k}\texttt{1}^{p}$ for some $k>0$ is suppoed to be in $L$ by the lemma, which is not true, $(\texttt{1}^{p}\texttt{0}^{p+k})^{\mathcal{R}}=\texttt{0}^{p+k}\texttt{1}^{p}\neq \texttt{0}^{p-k}\texttt{1}^{p}=w$.
-		- (b) if we pump down, the string $\texttt{0}^{p}\texttt{1}^{2p}\texttt{0}^{2p-k}\texttt{1}^{p}=\texttt{0}^{p}\texttt{1}^{p}\cdot\texttt{1}^{p}\texttt{0}^{p-k}\cdot\texttt{0}^{p}\texttt{1}^{p}$ for some $k>0$ is suppoed to be in L by the lemma, which is not, because, $\texttt{1}^{p}\texttt{0}^{p-k}\neq(\texttt{0}^{p}\texttt{1}^{p})^{\mathcal{R}}$.
-	- $111 \dots 111$
-		- here too. we can prove in similar way..
-	- $000\dots000111\dots 111$
-	- $111\dots 111000\dots000$
-
-
+- נניח בשלילה ש-$L$ היא CFL
+- יהי $p$ אורך הניפוח
+- נגדיר מחרוזת $w=\texttt{0}^{p}\texttt{1}^{p}$
+- אז $s=ww^{\mathcal{R}}w=\texttt{0}^{p}\texttt{1}^{2p}\texttt{0}^{2p}\texttt{1}^{p}$ שייכת ל-$L$ ואורכה גדול מ-$p$
+- מאחר ש-$|vxy|\leq p$, תת-המחרוזת $vxy$ חייבת להיות אחת מהצורות:
+	- א. $000\dots 000$: יש שני מקרים אפשריים (כתת-מחרוזת של $s$) (א) של האפסים השמאליים או (ב) הימניים:
+		- (א) אם נבצע ניפוח (down), אז המחרוזת $\texttt{0}^{p-k}\texttt{1}^{2p}\texttt{0}^{2p}\texttt{1}^{p}=\texttt{0}^{p-k}\texttt{1}^{p}\cdot\texttt{1}^{p}\texttt{0}^{p+k}\cdot\texttt{0}^{p-k}\texttt{1}^{p}$ עבור $k>0$ אמורה להיות ב-$L$ לפי הלמה, אך זה לא נכון, כי $(\texttt{1}^{p}\texttt{0}^{p+k})^{\mathcal{R}}=\texttt{0}^{p+k}\texttt{1}^{p}\neq \texttt{0}^{p-k}\texttt{1}^{p}=w$
+		- (ב) אם נבצע ניפוח (down), אז המחרוזת $\texttt{0}^{p}\texttt{1}^{2p}\texttt{0}^{2p-k}\texttt{1}^{p}=\texttt{0}^{p}\texttt{1}^{p}\cdot\texttt{1}^{p}\texttt{0}^{p-k}\cdot\texttt{0}^{p}\texttt{1}^{p}$ עבור $k>0$ אמורה להיות ב-$L$ לפי הלמה, אך אינה, כי $\texttt{1}^{p}\texttt{0}^{p-k}\neq(\texttt{0}^{p}\texttt{1}^{p})^{\mathcal{R}}$
+	- ב. $111 \dots 111$:        גם כאן ניתן להוכיח באופן דומה...
+	- ג. $000\dots000111\dots 111$:      לא בטוח איך לנסח את זה פורמלית (מקווה שלא טעיתי בדוגמה הזו)
+	- ד.   $111\dots 111000\dots000$:  כנל....
 
 ### ב. $L=\{ \texttt{a}^i\texttt{b}^{j}\texttt{c}^{\max(i,j)} \mid i,j\geq 0\}$
 
- (מעל $\Sigma=\{ \texttt{a},\texttt{b},\texttt{c} \}$)
+- נניח בשלילה ש-$L$ היא CFL
+- יהי $p$ אורך הניפוח
+- נגדיר מחרוזת $s=\texttt{a}^{p}\texttt{b}^{p}\texttt{c}^{p}\in L$ כאשר $|s|\geq p$
+- מאחר ש-$|vxy|\leq p$, אז תת-המחרוזת $vxy$ אינה יכולה להכיל גם 'a', גם 'b' וגם 'c'
+- כעת, $vxy$ היא אחת מהאפשרויות:
+	- אינה מכילה 'c': אז נוכל לבצע ניפוח (up) כך שמספר ה-'a' (או וגם) ה-'b' יהיה גדול ממספר ה-'c', כלומר המחרוזת לא תהיה ב-$L$. בסתירה ללמה.
+	- מכילה 'c' כלשהם: במקרה זה אינו יכול להכיל 'a' (מאחר ש-$|vxy|\leq|\texttt{b}^{p}|$), ואז אם נבצע ניפוח (down), מספר ה-'c' יקטן, בעוד שמספר ה-'a' נשאר $p$, שגדול ממספר ה-'c', (סתירה להגדרת $L$)
+- לכן, בכל מקרה נקבל סתירה
+- לכן $L$ אינה CFL
 
+___
 
-
+תודה רבה! 

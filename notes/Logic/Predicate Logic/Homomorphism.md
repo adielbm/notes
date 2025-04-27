@@ -72,17 +72,17 @@ https://people.math.sc.edu/mcnulty/762/modeltheory.pdf
 
 ## Congruence Relation
 
-- A [[Binary Relation|binary relation]] $E$ on a [[Logic/Predicate Logic/Semantic#Model|model]] $M$ in $L$ is called a **congruence (relation)** on $M$ if
-	- $E$ is an [[Binary Relation#Equivalence relation|equivalence relation]]
+- A [[Discrete Math/Set theory/Relations|binary relation]] $E$ on a [[Logic/Predicate Logic/Semantic#Model|model]] $M$ in $L$ is called a **congruence (relation)** on $M$ if
+	- $E$ is an [[Discrete Math/Set theory/Relations#Equivalence relation|equivalence relation]]
 	- if $f$ is n-ary function in $L$, and $(b_{1},a_{1})\in E,\dots,(b_{n},a_{n}) \in E$, then $(f^{M}(b_{1},\dots,b_{n}),f^{M}(a_{1},\dots,a_{n}))\in E$
 	- if $R$ is n-ary relation in $L$, and $(b_{1},a_{1})\in E,\dots ,(b_{n},a_{n})\in E$, then $(b_{1},\dots,b_{n})\in{R}\iff (a_{1},\dots,a_{n})\in {R}$
 
 - Let be a [[Logic/Predicate Logic/Semantic#Model|model]] $M=\langle D,\dots\rangle$ in $L$.
 	- We define a model $M'=\langle D',\dots\rangle$ as follow:
-		- $D'$ is the [[Binary Relation#Quotient Set|quotient set]] of $D$ induced by $E$
+		- $D'$ is the [[Discrete Math/Set theory/Relations#Quotient Set|quotient set]] of $D$ induced by $E$
 		- The function $I:D\to D'$, $I(a)=[a]$ is called (ההתאמה הטבעית)
 		- For every constant $c$ in $L$, we define $c^{M'}=[c^{M}]$
-		- Let be n-ary function symbol $f$ in $L$, and $C_{1},\dots,C_{n}$ the [[Binary Relation#Equivalence Class|equivalence classes]] in $M'$, we choose $a_{1},\dots,a_{n}$ where $a_{i}\in C_{i}$, and we define $f^{M'}(C_{1},\dots,C_{n})$ to be the equivalence class in which $f^{M}(a_{1},\dots,a_{n})$ is contained. (i.e. $f^{M'}([a_{1}],\dots ,[a_{n}])=[f^{M}(a_{1},\dots ,a_{n})]$)
+		- Let be n-ary function symbol $f$ in $L$, and $C_{1},\dots,C_{n}$ the [[Discrete Math/Set theory/Relations#Equivalence Class|equivalence classes]] in $M'$, we choose $a_{1},\dots,a_{n}$ where $a_{i}\in C_{i}$, and we define $f^{M'}(C_{1},\dots,C_{n})$ to be the equivalence class in which $f^{M}(a_{1},\dots,a_{n})$ is contained. (i.e. $f^{M'}([a_{1}],\dots ,[a_{n}])=[f^{M}(a_{1},\dots ,a_{n})]$)
 		- For every n-ary relation $R$ in $L$, we define the relation $R^{M'}$ in $M'$ as follow: $([a_{1}],\dots,[a_{n}])\in R^{M'}\iff(a_{1},\dots,a_{n})\in R^M$
 	- Then $M'$ is well-defined (i.e. the definition of $M'$ does not depend on the choice of the representatives of the equivalence classes), and called the **quotient structure** defined by $E$ and denote by $M'=\frac{E}{M}$, and $I$ is epimorphism
 - (6.21) let $H:M\to M'$ be an epimorphism, and $E$ be a binary realtion in $M$ where $(a,b)\in E \iff H(a)=H(b)$, then $E$ is congruence relation, and the quotient structure $\frac{E}{M}$ and $M'$ are isomorphic 

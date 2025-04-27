@@ -23,9 +23,9 @@ A **probability space** is a triple $(S,\mathcal{F},P)$ where:
 		- (Monotonicity) $E\subseteq F \implies P(E)\leq P(F)$
 		- $P(\emptyset)=0$
 		- (Complement Rule, 4.1) $P(E)+P(E^\complement)=1$
-		- [[Set theory#Set Operations, Relations, and Properties|Disjoint]] events are mutually exclusive
+		- [[Sets#Set Operations, Relations, and Properties|Disjoint]] events are mutually exclusive
 			- $E\cap F = \emptyset \implies P(E\cap F) = 0$
-			- If $E_1, E_2, \ldots$ are [[Set theory#Set Operations, Relations, and Properties|pairwise disjoint]], then they are mutually exclusive. 
+			- If $E_1, E_2, \ldots$ are [[Sets#Set Operations, Relations, and Properties|pairwise disjoint]], then they are mutually exclusive. 
 		- $\displaystyle P\left(\bigcap_{i=1}^{n}E_i\right) = 1-P\left(\bigcup_{i=1}^{n}E_i^\complement\right)$ (By 4.1 and De Morgan's Law)
 	- Notation for random variables:
 		- $P(X=a)=P(\{s\in S:X(s)=a\})$
@@ -147,23 +147,3 @@ $$P(E\mid F)=P(E\mid GF)P(G\mid F)+P(E\mid G^\complement F)P(G^\complement\mid F
 		- $\displaystyle O(E:F\mid G)=\Lambda(E:F\mid G)O(E:F)$
 		- $\displaystyle \frac{P(E\mid G)}{P(F\mid G)}=\frac{P(G\mid E)}{P(G\mid F)}\frac{P(E)}{P(F)}$
 
-# Todo
-
-#### **Chapter 6: Jointly Distributed Random Variables**
-
-- Independent Random Variables
-- Joint Distribution Functions
-- Joint Probability Function
-- Joint Probability Density Function (PDF)
-- Joint Cumulative Distribution Function (CDF)
-- Joint Distribution of Independent Variables
-- Joint Variance
-- Sums of Independent Random Variables
-- Conditional Distributions
-- Discrete Case
-- Continuous Case
-- Binomial Random Variables
-- Geometric Random Variables
-- Poisson Random Variables
-- Negative Binomial Random Variables
-- Hypergeometric Random Variables

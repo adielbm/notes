@@ -71,8 +71,10 @@ Here are some definitions related to this proof calculus:
 	- $K$ is **inconsistent** if there exists a sentence $\varphi$ s.t. $K ⊢ \varphi$ and $K ⊢ ¬\varphi$ 
 	- $K$ is **consistent** if it is not inconsistent
 	- $K$ is **maximally consistent** if every superset of $K$ is inconsistent
-- A consistent set of sentences is called a **theory** (תורה)
+- A (consistent?) set of sentences is called a **theory** (תורה)
 - (syntactical completeness) A theory $K$ is **complete** (שלמה) if for every sentence $φ$, either $K \vdash\varphi$ or $K \vdash\lnot\varphi$
+- See also [[Logic/Predicate Logic/Syntax#Theory|theory]]
+- An inconsistent theory has no [[Logic/Predicate Logic/Semantic#Truth Value in Model|models]] #todo
 
 > Usually a theory is understood to be closed under the relation of logical implication. Some accounts define a theory to be closed under the [[Logic/Predicate Logic/Semantic#Logical Implication|semantic consequence]] relation, (i.e. if $K \models \varphi$, then $\varphi \in K$), while others define it to be closed under the [[#Provable Formula|syntactic consequence]], (i.e. if $K \vdash \varphi$, then $\varphi \in K$). [wikipedia](https://en.wikipedia.org/wiki/Theorem#Theorems_in_logic)
 

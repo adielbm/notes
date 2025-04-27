@@ -1,9 +1,30 @@
-
-- A **binary relation** $R$ defined as a subset of a [[Cartesian Product]] $A\times B$
+- A **binary relation** (or **relation**) $R$ from a set $A$ to a set $B$ is defined as a subset of a Cartesian Product $A\times B$
+	- The set $A$ is called the **domain** of $R$
+	- The set $B$ is called the **codomain** of $R$
+	- The set $\{y\in{B}\mid \exists x\in{A}:(x,y)\in{R}\}$ is called the **codomain of definition** (or **image** or **range**) of $R$
+	- The set $\{x\in{A}\mid \exists y\in{B}:(x,y)\in{R}\}$ is called the **domain of definition** of $R$.
+	- The union $\text{domain-of-definition}(R)\cup\text{codomain-of-definition}(R)$ is called the **field** of $R$
+	- An element $x\in{A}$ is said to be **related** to an element $y\in{B}$ by $R$ if $(x,y)\in{R}$, and we write $xRy$ or $R(x,y)$
 	- A [[#Homogeneous Relation]] over a set $X$ is a binary relation over $X$ and itself, i.e. it is a subset of the cartesian product $X \times X$.
 		- It is also simply called a (binary) relation over $X$
 	- A **heterogeneous relation** is a subset of a cartesian product $A \times B$, where $A$ and $B$ are possibly distinct sets
 	- When an operation or proposition concerns a relation of either form, we sometimes give a hint 'possibly heterogeneous'
+#### Types
+
+Given a binary relation $R$ from $A$ to $B$:
+
+- injective (left-unique): $\forall x_1,x_2\in{A},\,\forall y\in{B}\,(x_1Ry\land x_2Ry\implies x_1=x_2)$
+- functional (right-unique, univalent, partial function): $\forall x\in{A},\,\forall y_1,y_2\in{B}\,(xRy_1\land xRy_2\implies y_1=y_2)$
+- one-to-one: injective and functional
+- one-to-many: injective and not functional
+- many-to-one: functional and not injective
+- many-to-many: not injective nor functional
+- total (left-total): $\forall x\in{A},\,\exists y\in{B}\,(xRy)$
+- surjective (right-total): $\forall y\in{B},\,\exists x\in{A}\,(xRy)$
+- [[Functions|function]] (mapping): functional and total
+- injection: injective and function
+- surjection: surjective and function
+- bijection: injection and surjection
 
 # Operations
 
@@ -119,3 +140,26 @@
 	- The sets in the partition are called **cells** (or **blocks**)
 	- If $a\in A$ then the cell containing $a$ is denoted by $[a]$
 	- A partition $P_1$ is called a **refinement** (עידון) of the partition $P_2$ if every set in $P_1$ is a subset of one of the sets in $P_2$.
+
+
+
+# Misc.
+
+### Transitive realtions full table
+
+|                                             |  Reflexive |  Irreflexive |  Symmetric |  Antisymmetric |  Asymmetric |  Connected |
+| ------------------------------------------- | ---------- | ------------ | ---------- | -------------- | ----------- | ---------- |
+|  [[#Equivalence relation]]                       | TRUE       |              | TRUE       |                |             |            |
+|  Preorder (Quasiorder)                      | TRUE       |              |            |                |             |            |
+|  Partial order, (סדר חלקי 80181, חלש)       | TRUE       |              |            | TRUE           |             |            |
+|  Total preorder                             | TRUE       |              |            |                |             | TRUE       |
+|  Total order, linear order, (מלא, ליניארי)  | TRUE       |              |            | TRUE           |             | TRUE       |
+|  Prewellordering                            | TRUE       |              |            |                |             | TRUE       |
+|  Well-quasi-ordering                        | TRUE       |              |            |                |             |            |
+|  Well-ordering                              | TRUE       |              |            | TRUE           |             | TRUE       |
+|  Lattice                                    | TRUE       |              |            | TRUE           |             |            |
+|  Join-semilattice                           | TRUE       |              |            | TRUE           |             |            |
+|  Meet-semilattice                           | TRUE       |              |            | TRUE           |             |            |
+|  **Strict partial order,(סדר חלקי 20476, חזק)** |            | TRUE         |            |                | TRUE        |            |
+|  Strict weak order                          |            | TRUE         |            |                | TRUE        |            |
+|  **Strict total order, (יחס סדר מלא 20476)**                         |            | TRUE         |            |                | TRUE        | TRUE       |

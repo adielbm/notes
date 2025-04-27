@@ -75,13 +75,13 @@
 
 >aka **totally ordered field**
 
-- A field $(F,+,\cdot \,)$ together with a [[Binary Relation#Transitive Relations|total order]] denoted $\leq$ on $F$ is an **ordered field** if the order satisfies the following properties for all $\displaystyle a,b,c\in F$
+- A field $(F,+,\cdot \,)$ together with a [[Discrete Math/Set theory/Relations#Transitive Relations|total order]] denoted $\leq$ on $F$ is an **ordered field** if the order satisfies the following properties for all $\displaystyle a,b,c\in F$
 	- $a\leq b\implies a+c\leq b+c$
 	- $0\leq a\land 0\leq b\implies 0\leq a\cdot b$
 
 ### Alternative Definition $<$
 
-- A field $(F,+,\cdot \,)$ together with a [[Binary Relation#Transitive Relations|strict total order]] denoted $<$ on $F$ is an **ordered field** if the order satisfies the following properties for all $\displaystyle a,b,c\in F$
+- A field $(F,+,\cdot \,)$ together with a [[Discrete Math/Set theory/Relations#Transitive Relations|strict total order]] denoted $<$ on $F$ is an **ordered field** if the order satisfies the following properties for all $\displaystyle a,b,c\in F$
 	- $a<b\implies a+c<b+c$
 	- $a<b \land c>0\implies a \cdot c<b \cdot c$
 

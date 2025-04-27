@@ -2,7 +2,6 @@
 - (**Axiom of Extensionality**) $\forall A \, \forall B \, ( \forall x \, (x \in A \iff x \in B) \implies A = B)$
 - A **set** is an unordered collection of distinct objects, called **elements** (or **members**) of the set. 
 	- A set is said to **contain** its elements. We write $a \in A$ to denote that $a$ is an element of the set $A$. The notation $a \notin A$ denotes that $a$ is not an element of the set $A$.
-- The **universal set** (or **universe of discourse**) is the set containing all elements under consideration
 - The **empty set** (or **null set**) is the set containing no elements, denoted by $\emptyset$ or $\{\}$
 - A **singleton** is a set with exactly one element
 - An **index set** is a set whose elements are used to index (label) the elements of another set
@@ -11,8 +10,7 @@
 
 - Let $A$ be a set:
 	- The **power set** of $A$ is the set $\mathcal{P}(A) = \{ X \, | \, X \subseteq A \}$
-	- The **complement** of $A$ is the set $A^{\complement} = \{ x \, | \, x \in U \land x \notin A \}$ (also denoted by $\overline{A}$ or $A'$)
-
+	- The **complement** of $A$ is the set $A^{\complement} = \{ x \, | \, x \in U \land x \notin A \}$ (also denoted by $\overline{A}$ or $A'$), where $U$ is a set called the **universe (of discourse)**
 - Let $A$ and $B$ be sets:
 	- $A$ and $B$ are **disjoint** if $A \cap B = \emptyset$
 	- $A$ is a **subset** of $B$ (and $B$ is a **superset** of $A$) if $\forall x \, (x \in A \implies x \in B)$, and denoted by $A \subseteq B$ (and $B \supseteq A$)
@@ -27,7 +25,17 @@
 	- The **union** of the sets is $\displaystyle\bigcup_{i \in I} A_i = \{ x \, | \, \exists i \in I : x \in A_i \}$
 	- The **intersection** of the sets is $\displaystyle\bigcap_{i \in I} A_i = \{ x \, | \, \forall i \in I : x \in A_i \}$
 	- The sets in $\mathcal{A}$ are **pairwise disjoint** (or **mutually disjoint** or **non-overlapping**) if $\forall i,j \in I : i \neq j \implies A_i \cap A_j = \emptyset$
-  
+
+
+- $A\times{(B\cup{C})}=(A\times{B})\cup({A\times{C}})$
+- $(B\cup{C})\times{A}=(B\times{A})\cup{(C\times{A})}$
+- $A\times(B\cap{C})=(A\times{B})\cap{(A\times{C})}$
+- $(B\cap{C})\times{A}=(B\times{A})\cap{(C\times{A})}$
+- $A\times{(B\setminus{C})=(A\times{B})\setminus{(A\times{C})}}$
+- $(B\setminus{C})\times{A}=(B\times{A})\setminus{(C\times{A})}$
+
+
+
 # Set Identities
 
 | Identity                                                                                                          | Name                                    |
@@ -73,17 +81,26 @@
 - The term _cardinal number_ (or _cardinal_) of a set $A$, denoted by $|A|$ or $\operatorname{card}(A)$, is what is commonly called the number of elements in a set.
 - Two sets $A$ and $B$ are said to have the same **cardinality**, denoted by $|A| = |B|$, if there exists a [[Functions|bijection]] from $A$ to $B$.
 	- If there exists an injective function from $A$ to $B$, then the cardinality of $A$ is said to be _less than or equal to_ the cardinality of $B$, denoted by $|A| \leq |B|$.
+- (**Set equivalence**) Two sets $A$ and $B$ are said to be **equivalent** (or **equipotent**) and denoted by $A\sim B$ iff they have the same cardinality.
+	- Set equivalence is an [[Discrete Math/Set theory/Relations#Equivalence relation|equivalence relation]]
+
 - A set $A$ is **countably infinite** if $|A| = |\mathbb{N}|$ and its cardinality is denoted by $|A| = \aleph_0$ (**aleph-null**)
 - A set $A$ is **finite** if $\exists n \in \mathbb{N} : |A| = n$
 - A set $A$ is **countable** if it is _finite_ or _countably infinite_
 - A set $A$ is **uncountable** if it is not countable
 	- $\set{0,1}^{\mathbb{N}}$ is uncountable
 - The set of real numbers $\mathbb{R}$ is uncountable, and its cardinality is denoted by $\mathfrak{c}$ (or $2^{\aleph_0}$ or $\beth_1$) and called the **cardinality of the continuum** (or **beth-one**)
+	- (This theorem can be proved either by *Cantor's first uncountability proof* or *Cantor's diagonal argument*)
 	- If a set $A$ has a cardinality $|A|=\mathfrak{c}$, then $A$ is uncountable
 - (**Cantor's theorem**) For every set $A$, we have $|A| < |\mathcal{P}(A)|$
+- (**Cantor's paradox**) "the set of all sets" does not exist #todo
+	- (corollary) it is not true that every "collection" of sets is a set (though it is a _class_)
 - If $|A|=\aleph_0$, then $\mathcal{P}(A)$ is uncountable
+- (**Continuum hypothesis**) There is no set $A\subseteq{\mathbb{R}}$ such that $\aleph_0<|A|<\mathfrak{c}$.
 - Let $A$ and $B$ be sets:
-	- (**Cantor–Bernstein theorem**) If there exist injective functions $f : A → B$ and $g : B → A$ between the sets $A$ and $B$, then there exists a bijective function $h : A → B$.
+	- (**Cantor–Bernstein theorem**) 
+		- If there exist injective functions $f : A → B$ and $g : B → A$ between the sets $A$ and $B$, then there exists a bijective function $h : A → B$. Equivalently, 
+		- If $|A| \leq |B|$ and $|B| \leq |A|$, then $|A| = |B|$.
 	- If $|A| \leq |B|$ and $|B| \neq |A|$, then it is denoted $|A| < |B|$.
 	- $|A|=|A|$
 	- $|A|=|B|\iff|B|=|A|$
@@ -116,10 +133,10 @@
 - (4.38) $\kappa\lambda=\lambda\kappa$
 - (4.38) $(\kappa\lambda)\mu=\kappa(\lambda\mu)$
 - (4.39) $\kappa(\lambda+\mu)=\kappa\lambda+\kappa\mu$
-- (4.42) $|P(A)|=2^{|A|}$ 
+- (4.42) $2^{|A|}=|\mathcal{P}(A)|$ 
 - (4.43) $\kappa<{2^\kappa}$ 
 - (4.45) $\mathfrak{c}^{\aleph_0}=\mathfrak{c}$
-
+- If $|A|=|B|$, then $2^{|A|} = 2^{|B|}$
 #### Examples
 
 - The cardinality of the following sets is $\aleph_0$:
@@ -153,7 +170,7 @@
 	- $U$ is a set called the **underlying set**
 	- $m:U \to \mathbb{Z}_{\geq 0}$ is a function that assigns to each element of $U$ a nonnegative integer
 		- The value $m(x)$ for an element $x\in U$ is called the **multiplicity** of $x$ in the multiset $M$ and interpreted as the number of occurrences of $x$ in the multiset.
-	- The [[Set theory#Cardinality|cardinality]] (or **size**) of the multiset $M$ is the sum of the multiplicities of its elements, denoted by $\displaystyle |M| = \sum_{x \in U} m(x)$
+	- The [[Sets#Cardinality|cardinality]] (or **size**) of the multiset $M$ is the sum of the multiplicities of its elements, denoted by $\displaystyle |M| = \sum_{x \in U} m(x)$
 	- The **support** of the multiset $M$ is the set $\displaystyle \operatorname{supp}(M) = \{ x \in U \, | \, m(x) > 0 \}$
 	- The elements of the support can be listed with their multiplicities: $\displaystyle M = \{ a_1^{m(a_1)}, a_2^{m(a_2)}, \ldots, a_n^{m(a_n)} \}$ where $a_i \in U$ and $m(a_i) > 0$.
 

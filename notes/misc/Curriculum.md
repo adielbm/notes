@@ -27,7 +27,8 @@
 |         | Software Testing           | 4         | [20946](https://www.openu.ac.il/courses/20946.htm)          |
 |         | Data Systems               | 4         | [20574](https://www.openu.ac.il/courses/20574.htm)          |
 |         | Cryptography               | 4         | [20580](https://www.openu.ac.il/courses/20580.htm)          |
-|         | Cybersecurity              | 4         | [20940](https://www.openu.ac.il/courses/20940.htm)          |
+|         | Computer Networks          | 4         | [20948](https://www.openu.ac.il/courses/20948.htm)          |
+|         | Cybersecurity              | 4         | [20940](https://www.openu.ac.il/courses/20940.htm)          |
 |         | Algorithmic Robotics       | 4         | [20944](https://www.openu.ac.il/courses/20944.htm)          |
 |         | **Seminars**               |           |                                                             |
 |         | Seminar in CS (Eng)        | 3         | [20954](https://www.openu.ac.il/courses/20954.htm)          |

@@ -80,8 +80,7 @@ Here are some properties of this proof calculus
 	- If $K\cup \{ \lnot \varphi \}$ is inconsistent, then $K\vdash{\varphi}$
 - examples #todo 
 - (4.4) **Soundness Theorem** (נאותות)
-	- This proof calculus is [[Proof Calculus#Soundness|sound]], i.e.
-	- Let $K$ be a set of propositions and $\psi$ be a proposition. If $K\vdash \varphi$ ([[#Proof Sequence|provable]]), then $K\implies\varphi$ ([[Logic/Propositional Logic/Semantic#Logical Implication|logically implied]]. common notation $K \models\varphi$)
+	- This proof calculus is [[Proof Calculus#Soundness|sound]], (i.e for all set of propositions $K$ and proposition $\psi$, If $K\vdash \varphi$ ([[#Proof Sequence|provable]]), then $K\models\varphi$ ([[Logic/Propositional Logic/Semantic#Logical Implication|logically implied]]))
 		- In particular, if $\emptyset\vdash \varphi$ then, $\varphi$ is a tautology ($\models \varphi$)
 		- Corollary: If a set of propositions has a [[Logic/Propositional Logic/Semantic#Model|model]], then it is consistent
 - (4.5) Every [[#Theory|complete theory]] has unique model
@@ -90,8 +89,7 @@ Here are some properties of this proof calculus
 - (4.7) **Completeness Theorem**
 	- This proof calculus is [[Proof Calculus#Strong completeness|strongly complete]]
 	- For every theory $K$, there exists a [[Logic/Propositional Logic/Semantic#Model|model]] $M$ such that $M \models K$ 
-	- If a theory $K$ [[Logic/Propositional Logic/Semantic#Logical Implication|logically implies]] a proposition $\psi$, then $\psi$ is [[#Provable Proposition|provable]] from $K$
-	- If $K \implies \psi$ then $K \vdash \psi$
+	- If $K \models \psi$ then $K \vdash \psi$ (i.e. if a theory $K$ [[Logic/Propositional Logic/Semantic#Logical Implication|logically implies]] a proposition $\psi$, then $\psi$ is [[#Provable Proposition|provable]] from $K$)
 - Corollary: A set of propositions is consistent iff it is satisfiable
 
 ## Summary 

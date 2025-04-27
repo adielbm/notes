@@ -139,7 +139,7 @@ In this section:
 	- (9.5.7, 9.5.9) $\dim{V}=\dim{W}$
 - Theorems
 	 - (9.5.8) $\dim{V}=n\implies V\cong{F^n}$
-	- Isomorphic is an [[Binary Relation#Equivalence relation|equivalence relation]]
+	- Isomorphic is an [[Discrete Math/Set theory/Relations#Equivalence relation|equivalence relation]]
 - [[#Examples]]
 
 

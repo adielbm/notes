@@ -126,30 +126,40 @@
 	- $\sigma=\sqrt{np(1-p)}$
 
 
-
-
 ## Jointly Distributed Random Variables
 
-https://chatgpt.com/c/680509b8-3ac0-8007-ae08-7f6cbf014c5f
+- $X$ and $Y$
+	- $p(i,j)=P(X=i,Y=j)$ is the **joint PMF** of $X$ and $Y$
+	- $\displaystyle P(X=i)=\sum_{j}p(i,j)$ is the **marginal PMF** of $X$
+	- $\displaystyle P(Y=j)=\sum_{i}p(i,j)$ is the **marginal PMF** of $Y$
+### Multinomial
 
-- (Discrete) 
-	- $X$ and $Y$
-		- $p(i,j)=P(X=i,Y=j)$ is the **joint PMF** of $X$ and $Y$
-		- $\displaystyle P(X=i)=\sum_{j}p(i,j)$ is the **marginal PMF** of $X$
-		- $\displaystyle P(Y=j)=\sum_{i}p(i,j)$ is the **marginal PMF** of $Y$
-	- If $\displaystyle P(X_1=n_1,\ldots,X_r=n_r) = \frac{n!}{n_1!\cdots n_r!}p_1^{n_1}\cdots p_r^{n_r}$, then $X_1,\ldots,X_r$ are said to be **jointly multinomial**, where:
-		- $n=n_1+\cdots+n_r$
-		- $p_1+\cdots+p_r=1$
-	- $X$ and $Y$ are said to be **independent** if $P(X=x,Y=y)=P(X=x)P(Y=y)$ for all $x,y$, otherwise they are **dependent**.
-	
+- If $\displaystyle P(X_1=n_1,\ldots,X_r=n_r) = \frac{n!}{n_1!\cdots n_r!}p_1^{n_1}\cdots p_r^{n_r}$, then $X_1,\ldots,X_r$ are said to be **jointly multinomial**, where:
+	- $n=n_1+\cdots+n_r$
+	- $p_1+\cdots+p_r=1$
+- If $X_1,\ldots,X_r$ are jointly multinomial, then: - 
+	- $X_i\sim\text{Bin}(n,p_i)$
+	- $X_1,\ldots,X_r$ are dependent
+	- For all $i\neq j$, $X_i+X_j\sim\text{Bin}(n,p_i+p_j)$
+	- If $r=2$, then $X\sim\text{Bin}(n,p_1)$
 
-- (Continuous) 
-	- $X$ and $Y$ are said to be **jointly continuous** if there exists a function $f(x,y)$ such that $\displaystyle P((X,Y)\in C)=\iint_{C}f(x,y)\,dx\,dy$ for all sets $C\subseteq\mathbb{R}^2$.
-	- The function $f(x,y)$ is called the **joint probability density function** of $X$ and $Y$.
-	- $\displaystyle P(X \in A,Y \in B)=\int _{A}\int_{B}f(x,y)\,dx\,dy$ (where $A,B\subseteq\mathbb{R}$)
-		- $\displaystyle P(X\in A)=\int_{A}\int_{-\infty}^{\infty}f(x,y)\,dy\,dx=\int_{A}f_{X}(x)\,dx$
-		- $\displaystyle P(Y\in B)=\int_{B}^{}\int_{-\infty}^{\infty}f(x,y)\,dx\,dy=\int_{B}f_{Y}(y)\,dy$
-	- $\displaystyle F(a,b)=P(X\leq a,Y\leq b)=\int_{-\infty}^{a}\int_{-\infty}^{b}f(x,y)\,dx\,dy$
-	- $\displaystyle f(a,b)=\frac{\partial^2}{\partial a \partial b}F(a,b)$
+### Independence
+
+- $X$ and $Y$ are said to be **independent** if $P(X=x,Y=y)=P(X=x)P(Y=y)$ for all $x,y$, otherwise they are **dependent**.
+	- If $X$ and $Y$ are independent, iff, their joint PMF can be written as $p_{X,Y}(x,y)=h(x)g(y)$ for some functions $h$ and $g$.
+	- $X_1,\ldots,X_n$ are said to be **(mutually) independent** if $P(X_1=x_1,\ldots,X_n=x_n)=P(X_1=x_1)\cdots P(X_n=x_n)$ for all $x_1,\ldots,x_n$
+- If $X_i\sim \text{Pois}(\lambda_i)$, and $X_i$ are independent, then $\displaystyle X=\sum_{i=1}^{n}X_i\sim\text{Pois}(\lambda_1+\cdots+\lambda_n)$
+- If $X_i\sim \text{Bin}(n_i,p)$, and $X_i$ are independent, then $\displaystyle X=\sum_{i=1}^{n}X_i\sim\text{Bin}(n_1+\cdots+n_n,p)$
+- The **conditional PMF** of $X$ given $Y=y$ is defined as $p_{X|Y}(x|y)=\displaystyle P(X=x|Y=y)=\frac{P(X=x,Y=y)}{P(Y=y)}=\frac{p(x,y)}{p_{Y}(y)}$, where $p$ is the joint PMF of $X$ and $Y$, and $p_{Y}$ is the marginal PMF of $Y$, and $p_{Y}(y)>0$.
+
+### Continuous
+
+- $X$ and $Y$ are said to be **jointly continuous** if there exists a function $f(x,y)$ such that $\displaystyle P((X,Y)\in C)=\iint_{C}f(x,y)\,dx\,dy$ for all sets $C\subseteq\mathbb{R}^2$.
+- The function $f(x,y)$ is called the **joint probability density function** of $X$ and $Y$.
+- $\displaystyle P(X \in A,Y \in B)=\int _{A}\int_{B}f(x,y)\,dx\,dy$ (where $A,B\subseteq\mathbb{R}$)
+	- $\displaystyle P(X\in A)=\int_{A}\int_{-\infty}^{\infty}f(x,y)\,dy\,dx=\int_{A}f_{X}(x)\,dx$
+	- $\displaystyle P(Y\in B)=\int_{B}^{}\int_{-\infty}^{\infty}f(x,y)\,dx\,dy=\int_{B}f_{Y}(y)\,dy$
+- $\displaystyle F(a,b)=P(X\leq a,Y\leq b)=\int_{-\infty}^{a}\int_{-\infty}^{b}f(x,y)\,dx\,dy$
+- $\displaystyle f(a,b)=\frac{\partial^2}{\partial a \partial b}F(a,b)$
 
 

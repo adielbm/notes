@@ -90,31 +90,3 @@
 | exponential time     | $O(k^n),\,\, k>1$       |                     |
 | factorial time       | $O(n!)$                 |                     |
 
-# Chapter 2: Algorithm Analysis
-
-## 2.1: Computational Tractability
-
-- Proposed Definition of Efficiency:
-	1. An algorithm is **efficient** if it performs well on real input instances.
-	2. An algorithm is **efficient** if it performs _quantitatively better_ than brute-force search in worst-case scenarios.
-	3. An algorithm is **efficient** if it runs in _polynomial time_.
-
-- A **Brute-force search** is a straightforward but typically inefficient approach involving the examination of all possible solutions
-
-
-# Polynomial Time
-
-#todo 
-
-- **Polynomial Algorithm**        
-- **Pseudo-Polynomial Algorithm**   
-- **Weakly Polynomial Algorithm**   
-- **Strongly Polynomial Algorithm** 
-
-
-|                                   |                                                                            | input size            |                                               |
-| --------------------------------- | -------------------------------------------------------------------------- | --------------------- | --------------------------------------------- |
-| **Polynomial Algorithm**          | with numbers represented in binary.                                        | polynomial input size |                                               |
-| **Pseudo-Polynomial Algorithm**   | depends on the numerical values of the input, which are in unary notation. | polynomial input size |                                               |
-| **Weakly Polynomial Algorithm**   |                                                                            |                       | depend on **input numerical values**          |
-| **Strongly Polynomial Algorithm** |                                                                            |                       | does not depend on **input numerical values** |

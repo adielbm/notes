@@ -1,0 +1,2 @@
+- A **linear bounded automaton** (LBA) is a restricted type of Turing machine that has a tape of limited size. If the machine tries to move beyond its rightmost boundary, the head stays in place. (In the same way that the head of an ordinary TM will stay in place if it tries to move left of the leftmost boundary.)
+	- There are exactly $qng$ distinct configurations of an LBA with $q$ states, $g$ tape alphabet symbols, and $n$ tape length.
