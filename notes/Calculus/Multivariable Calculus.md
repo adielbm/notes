@@ -11,9 +11,18 @@
 		- The **partial derivative** of $f$ with respect to $x$ at the point $(x_0,y_0)$ is defined as $\displaystyle\frac{\partial f}{\partial x}(x_0,y_0)=\lim_{h\to 0} \frac{f(x_0+h,y_0)-f(x_0,y_0)}{h}$. (assuming the limit exists)
 		- The **partial derivative** of $f$ with respect to $y$ at the point $(x_0,y_0)$ is defined as $\displaystyle\frac{\partial f}{\partial y}(x_0,y_0)=\lim_{h\to 0} \frac{f(x_0,y_0+h)-f(x_0,y_0)}{h}$. (assuming the limit exists)
 		- $\displaystyle\frac{\partial^2 f}{\partial x \partial y} = \frac{\partial}{\partial x} \left( \frac{\partial f}{\partial y} \right)$
-	- The **directional derivative** of $f$ at the point $p_{0}=(x_0,y_0)$ in the direction of the vector $\mathbf{v}=(a,b)$ is defined as $\displaystyle D_{\mathbf{v}}f(p_0)=\lim_{t\to 0} \frac{f(p_0+tv)-f(p_{0})}{t}$ (assuming the limit exists).
+	- The **directional derivative** of $f$, in the direction of the vector $\mathbf{v}=(a,b)$, in the point $p_{0}=(x_0,y_0)$, is defined as $\displaystyle D_{\mathbf{v}}f(p_0)=\lim_{t\to 0} \frac{f(p_0+tv)-f(p_{0})}{t}$.
+		- (Assuming the limit exists)
+		- Also denoted by $\displaystyle\frac{\partial f}{\partial \mathbf{v}}(p_0)$
 	- The **gradient vector** (or **gradient**) of $f$ is the vector $\nabla f=\left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y}\right)$. 
 		- $\nabla f(p_{0})=\left(\frac{\partial f}{\partial x}(p_{0}),\frac{\partial f}{\partial y}(p_{0})\right)$ is the vector of partial derivatives at the point $p_{0}$.
+	- $\displaystyle \frac{\partial f}{\partial \mathbf{v}}(p_0)=\nabla f(p_{0})\cdot \mathbf{v}$
+
+
+- Let $f(x,y)$ be a function of two variables, defined in a neighborhood of $p_{0}=(x_{0},y_{0})$.
+	- $f$ is said to be **differentiable** at $p_{0}$ if there exist $A,B\in \mathbb{R}$ and function $r(x,y)$ such that:
+		- $\forall (x,y)\in \text{dom}(f),\,f(x,y)=f(x_{0},y_{0})+A(x-x_{0})+B(y-y_{0})+r(x,y)$
+		- $r(p)=o(d(p,p_{0}))$ in the neighborhood of $p_{0}$
 
 
 # Multiple Integrals

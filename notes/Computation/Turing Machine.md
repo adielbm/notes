@@ -45,6 +45,7 @@
 - A language is said to be **Turing-recognizable** (or **recursively enumerable** (RE)) if it is recognized by some Turing machine.
 - (4.18) There exists some languages that are not Turing-recognizable.
 - A language is said to be **co-Turing-recognizable** if its complement is Turing-recognizable. 
+- Every infinite Turing-recognizable language has an infinite decidable subset.
 
 #### Recursive (Decidable) Languages (R)
 
@@ -52,10 +53,13 @@
 	- For every string $w\in L$, $M$ accepts $w$
 	- For every string $w\notin L$, $M$ rejects $w$
 - A Turing machine is called a **decider** if it halts on all inputs.
-- A language is said to be **decidable** (**Turing-decidable** or **recursive**) if some Turing machine decides it, and it is said to be **undecidable** if it is not decidable.
-- A language is decidable iff it is Turing-recognizable and co-Turing-recognizable. 
+- For every language $L$, the following statements are equivalent:
+	- $L$ is **decidable** (**Turing-decidable** or **recursive**)
+	- $L$ is Turing-recognizable and co-Turing-recognizable
+	- There exists a Turing machine that decides $L$
+	- (p3.18) There exists an enumerator that enumerates $L$ in lexicographic order
+- A language is said to be **undecidable** if it is not decidable.
 - (**Rice's Theorem**) Let $P$ be a language of TM descriptions, such that (i) $P$ is nontrivial (not empty and not all TM descriptions) and (ii) for each two TM $M_1$ and $M_2$, we have $L(M_1)=L(M_2)\implies(\langle M_1\rangle\in P\iff \langle M_2\rangle\in P)$. Then $P$ is undecidable. 
-
 
 #### Examples
 ##### Turing-unrecognizable languages
@@ -102,7 +106,7 @@
 
 
 # Equivalence Models
-#### Multitape Turing Machine
+## Multitape Turing Machine
 
 - A **multitape Turing machine** is a Turing machine with multiple tapes, each with its own head. Each tape can be read and written to independently. 
 	- The transition function for a multitape Turing machine is of the form $\delta:Q\times\Gamma^k\longrightarrow Q\times\Gamma^k\times\{L,R,S\}^k$, where $k$ is the number of tapes.
@@ -110,23 +114,39 @@
 - Every multitape Turing machine has an equivalent single-tape Turing machine.
 - A language is Turing-recognizable iff some multitape Turing machine recognizes it.
 
-#### Nondeterministic Turing Machine
+## Nondeterministic Turing Machine
 
-#todo 
+- A **nondeterministic Turing machine** (NTM) is defined as a Turing machine but with a transition function $\delta:Q\times\Gamma\longrightarrow \mathcal{P}(Q\times\Gamma\times\{\text{L},\text{R}\})$.
+- The computation of an NTM is a tree whose branches correspond to different possibilities for the machine's transitions. If some branch of the computation leads to the accept state, the NTM _accepts_ its input.
+- (3.16) Every NTM has an equivalent deterministic Turing machine.
 
-#### Enumerator
+## Enumerator
 
-- An **enumerator** is a 7-tuple $(Q,\Sigma,\Gamma,\delta,q_0,q_{\text{print}},q_{\text{halt}})$, where:
-	- $Q$ is a finite set of states
-	- $\Gamma$ is a finite alphabet of **work tape**
-	- $\Sigma$ is a finite alphabet of **output tape**
-	- $\delta:Q\times \Gamma\longrightarrow Q\times \Gamma\times \{L,R\}\times\Sigma_\varepsilon$ is the transition function
+- An **enumerator** $E$ is a 7-tuple $(Q,\Sigma,\Gamma,\delta,q_0,q_{\text{print}},q_{\text{halt}})$, where:
+	- $Q$ is the set of states
+	- $\Gamma$ is the work tape alphabet, and $\sqcup\in \Gamma$ is the **blank symbol**
+	- $\Sigma$ is the output tape alphabet
+	- $\delta:Q\times \Gamma\longrightarrow Q\times \Gamma\times \{\mathrm{L},\mathrm{R}\}\times\Sigma_\varepsilon$ is the transition function
 	- $q_0\in Q$ is the start state
 	- $q_{\text{print}}\in Q$ is the print state
 	- $q_{\text{halt}}\in Q$ is the halt state (where $q_{\text{print}}\neq q_{\text{halt}}$)
+- The computation of an enumerator $E$ is defined as in ordinary TM, except for the following points:
+	- It has two tapes, a **work tape** and an **output tape**. both initially blank.
+	- At each step, 
+		- If $\delta(q,a)=(r,b,D,c)$ it means that in state $q$, reading $a$, enumerator $E$: 
+			- enters state $r$
+			- writes $b$ on the work tape
+			- moves the work tape to the direction $D\in\{\mathrm{L},\mathrm{R}\}$
+			- writes $c$ on the output tape, and 
+			- moves the output tape head to the right if $c\neq\varepsilon$.
+		- Whenever state $q_{\text{print}}$ is entered, the string $w$ on the output tape is said to be **printed** by the enumerator, the output tape is reset to blank and the head returns to the left-hand end of the output tape.
+			- (note: a string may be printed more than once)
+		- $E$ halts when $q_{\text{halt}}$ is entered.
+	- The **language enumerated** by $E$ is the set $L(E)=\{ w \in \Sigma^* \mid w \text{ is printed by } E\}$.
+- (3.21) A language is Turing-recognizable iff some enumerator enumerates it.
+- (p3.18) A language is Turing-decidable iff some enumerator enumerates it in lexicographic order.
 
-
-##### Unrestricted Grammar
+## Unrestricted Grammar
 
 - An **unrestricted grammar** (or **phrase structure grammar**) is a formal grammar $\displaystyle {\textstyle G=(V,\Sigma,R,S)}$, where each production rule is of the form $\displaystyle \alpha \to \beta$ where:
 	- $\alpha \in (V\cup \Sigma)^+$
