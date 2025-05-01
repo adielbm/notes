@@ -27,11 +27,18 @@
 	- (**LOTUS**) $\displaystyle E[g(X)]=\sum_{i}g(x_i)p(x_i)$
 	- $\displaystyle E[aX+b]=aE[X]+b$
 	- $E[X^n] = \displaystyle\sum_{x:p(x)>0}x^np(x)$
+	- If $X$ and $Y$ has joint PMF $p(x,y)$, and $E[X]$ and $E[Y]$ are finite, then $E[X+Y]=E[X]+E[Y]$.
 - The **variance** of a random variable $X$ is defined as $\displaystyle \text{Var}(X)=E[(X-E[X])^2]$
 	- $\displaystyle \text{Var}(X)=E[X^2]-E[X]^2$
 	- $\displaystyle \text{Var}(aX+b)=a^2\text{Var}(X)$
 - The **standard deviation** (denoted by $\sigma$) of a random variable $X$ is defined as $\displaystyle \text{SD}(X)=\sqrt{\text{Var}(X)}$
- 
+- Random variables $X_1,\ldots,X_n$ are said to be **independent and identically distributed** (i.i.d.) if:
+	- $X_i$ and $X_j$ are independent for all $i\neq j$
+	- $X_i$ and $X_j$ have the same distribution for all $i,j$
+- i.i.d. random variables $X_1,\ldots,X_n$ with CDF $F$ are said to be a **random sample** (of size $n$) from the distribution $F$.
+	- $\displaystyle\overline{X}=\frac{1}{n}\sum_{i=1}^{n}X_i$ is the **sample mean** of $X_1,\ldots,X_n$.
+	- $\displaystyle S^2=\frac{1}{n-1}\sum_{i=1}^{n}(X_i-\overline{X})^2$ is the **sample variance** of $X_1,\ldots,X_n$.
+
 ### Discrete Distributions
 
 - $p$ is probability of success
@@ -55,7 +62,7 @@
 - (Binomial Approximation) If $n$ is large, $p$ is small, and $\lambda=np$, then $\text{Binom}(n,p)\approx\text{Pois}(\lambda)$
 - $\displaystyle\frac{P(X=k+1)}{P(X=k)}=\frac{\lambda}{k+1}$
 - If $X_i\sim\text{Pois}(\lambda_{i})$ then $\displaystyle X=\sum_{i=1}^{n}X_i\sim\text{Pois}(\lambda_{1}+\cdots+\lambda_{n})$
-
+$y$
 ##### Poisson Process
 
 - A set of random variables $\{N(t),t\geq 0\}$ (where $N(t)\in\mathbb{N}_{0}$) is the number of events in the interval $[0,t]$) is said to be a **Poisson process** having rate $\lambda$ (where $\lambda>0$) if:

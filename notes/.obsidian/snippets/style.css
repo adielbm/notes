@@ -32,7 +32,7 @@
     --h5-font: "EB Garamond", "David Libre", serif !important;
     --h6-font: "EB Garamond", "David Libre", serif !important;
 
-    --font-text-size: 13px !important;
+    --font-text-size: 15px !important;
     --h1-font: sans-serif;
     --h2-font: sans-serif;
     --h3-font: sans-serif;
@@ -45,7 +45,7 @@
 
 }
 
-.theme-dark img[src$=".svg"] {
+.theme-dark img[src*=".svg"], .theme-dark img[alt*=".svg"] {
     filter: invert(1) hue-rotate(180deg);
 }
 

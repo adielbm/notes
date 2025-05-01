@@ -93,7 +93,16 @@
 
 #### Polynomial Long Division
 
-- ${\text{divisor}})\overline{\text{dividend}}$
+$$\require{enclose} 
+\begin{array}{rll} 
+\text{quotient} && \\[-3pt] 
+\text{divisor} \enclose{longdiv}{\text{dividend}}\kern-.2ex \\[-3pt] 
+\underline{\phantom{0}\dots} && \\[-3pt] 
+\phantom{0}\text{remainder} 
+\end{array}\to\quad\frac{\text{dividend}}{\text{divisor}}\quad=\quad\text{quotient}+\frac{\text{remainder}}{\text{divisor}}
+$$
+
+
 - If $f(x)$ (**dividend**) and $d(x)$ (**divisor**) are polynomials such that $d(x)\neq 0$ and $\deg{d(x)}\leq\deg f(x)$, then there exist unique polynomials $q(x)$ (**quotient**) and $r(x)$ (**remainder**) such that: 
 	- $f(x)=d(x)q(x)+r(x)$ (or $\displaystyle\frac{f(x)}{d(x)}=q(x)+\frac{r(x)}{d(x)}$)
 	- where $r(x)=0$ or $\deg{r(x)} <\deg{d(x)}$ (if $r=0$ then $d(x)$ **divides evenly** into $f(x)$)

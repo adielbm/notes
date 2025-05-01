@@ -69,13 +69,10 @@
 - The field $\mathbb{Q}$ of rational numbers has no subfields other than itself
 - If $F$ is an extension field of $\mathbb{Q}$, and $K$ is a subfield of $F$, then $K$ is an extension field of $\mathbb{Q}$
 - The field $\mathbb{Q}(\sqrt{2})=\{a+b\sqrt{2} \mid a,b \in \mathbb{Q}\}$ is a subfield of $\mathbb{R}$
-- 
 
 ## Ordered Field
 
->aka **totally ordered field**
-
-- A field $(F,+,\cdot \,)$ together with a [[Discrete Math/Set theory/Relations#Transitive Relations|total order]] denoted $\leq$ on $F$ is an **ordered field** if the order satisfies the following properties for all $\displaystyle a,b,c\in F$
+- A field $(F,+,\cdot \,)$ together with a [[Discrete Math/Set theory/Relations#Transitive Relations|total order]] denoted $\leq$ on $F$ is an **ordered field** (or **totally ordered field**) if the order satisfies the following properties for all $\displaystyle a,b,c\in F$
 	- $a\leq b\implies a+c\leq b+c$
 	- $0\leq a\land 0\leq b\implies 0\leq a\cdot b$
 
