@@ -1,0 +1,12 @@
+- A **population** is a collection of objects or individuals that we want to study.
+- A **parameter** is a numerical characteristic of a population.
+- Let $X_1,\ldots,X_{n}$ be a random sample from a population with some distribution. The random variable $T=T(X_1,\ldots,X_{n})$ is called a **statistic** if:
+	- $T$ is a function of $X_1,\ldots,X_{n}$.
+	- $T$ does not depend on any unknown parameters.
+- An **estimator** (אומד) (of an unknown parameter $\theta$) is a statistic $T$, denoted by $\hat{\theta}$, that is used to estimate $\theta$.
+	- (For any given $x_1,\ldots,x_{n}$ observed values) $T=T(x_1,\ldots,x_{n})$ is called an **estimate** (אומדן) of the parameter $\theta$.
+	- (e.g. $T=\bar{X}$ is an estimator of $\theta=\mu$).
+	- $T$ is said to be **unbiased** if $E[T]=\theta$ for all $\theta$.
+	- $|T-\theta|$ is called the **error** of the estimate.
+	- The **bias** of $T$ is defined as $E[T]-\theta$.
+- $E[\bar{X}]=\mu$ for all $\mu$ and $\bar{X}=\frac{1}{n}\sum_{i=1}^{n}X_i$ is an unbiased estimator of $\mu$.

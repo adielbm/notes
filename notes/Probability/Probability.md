@@ -31,6 +31,7 @@ A **probability space** is a triple $(S,\mathcal{F},P)$ where:
 		- $P(X=a)=P(\{s\in S:X(s)=a\})$
 		- $P(X\in A)=P(\{s\in S:X(s)\in A\})$
 		- $P(a\leq X\leq b)=P(\{s\in S:a\leq X(s)\leq b\})$
+	- An event $E$ is said to happen **almost surely** (a.s.) if $P(E)=1$. An event $E$ is said to happen **almost never** if $P(E)=0$.
 
 ## Counting
 

@@ -78,14 +78,18 @@
 	- if $|r|<1$, $\sum_{n=0}^{\infty}ar^n=\frac{a}{1-r}$.
 	- if $|r|\geq1$, $\sum_{n=0}^{\infty}ar^n$ diverges.
 		- if $r=1$, $\sum_{n=0}^{\infty}ar^n$ diverges to $\infty$ if $a>0$ (or $-\infty$ if $a<0$).
-- The sum of a finite initial segment of an infinite geometric series is called a **finite geometric series**, that is
-	- $\displaystyle\sum _{k=1}^{n}ar^{k-1}={\begin{cases}a\left(\displaystyle\frac {1-r^{n}}{1-r}\right)&r\neq 1\\an&{r=1}\end{cases}}$
+- The $n$-partial sum of a geometric series is called a **finite geometric series**, that is $S_n=\displaystyle\sum _{k=1}^{n}ar^{k-1}={\begin{cases}a\left(\displaystyle\frac {1-r^{n}}{1-r}\right)&r\ne 1\\an&{r=1}\end{cases}}$
 
 ## p-series & harmonic series
 
-- A series of the form $\sum_{n=1}^{\infty}\frac{1}{n^p}$ is called a **p-series**. 
+- A series of the form $\displaystyle\sum_{n=1}^{\infty}\frac{1}{n^p}$ is called a **p-series** 
 	- (e5.8) The p-series converges if $p>1$ and diverges if $p\leq1$.
-	- When $p=1$, the series is called the **harmonic series** $\sum_{n=1}^{\infty}\frac{1}{n}$, which diverges.
+	- (see also [Riemann zeta function](https://en.wikipedia.org/wiki/Riemann_zeta_function))
+	- The $n$-partial sum of a p-series is called a the **$n$-th generalized harmonic number** of order $p$, that is $H_n^{(p)}=\displaystyle\sum_{k=1}^{n}\frac{1}{k^p}$. 
+	- When $p=1$, the series is called the **harmonic series** $\displaystyle\sum_{n=1}^{\infty}\frac{1}{n}$, which diverges.
+		- The $n$-partial sum of a harmonic series is called a **harmonic number** and is denoted by $H_n=\displaystyle\sum_{k=1}^{n}\frac{1}{k}$. 
+			- $H_n \approx \ln n + \gamma$ (where $\gamma$ is the [Euler's constant](https://en.wikipedia.org/wiki/Euler%27s_constant)), more precisely, $\displaystyle\lim_{n\to\infty}(H_n-\ln n)=\gamma$.
+
 
 - The **alternating harmonic series** is the series $\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}=\ln 2$.
 

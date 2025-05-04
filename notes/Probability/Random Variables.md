@@ -1,4 +1,4 @@
-
+ 
 - A **random variable** is a function $X:S\to\mathbb{R}$ that assigns a real number to each outcome in the sample space $S$.
 - The **cumulative distribution function** (CDF) of a random variable $X$ is the function defined by $F(x)=P(X\leq x)$
 	- $F$ is nondecreasing.
@@ -7,6 +7,77 @@
 	- $F$ is right continuous.
 - A **mode** of a random variable $X$ is a value $x_0$ such that $p(x_0)\geq p(x)$ for all $x$, where $p$ is the pmf or pdf of $X$.
 - The **median** of a random variable $X$ is a value $m$ such that $P(X\leq m)\geq \frac{1}{2}$ and $P(X\geq m)\geq \frac{1}{2}$.
+
+## Moments
+
+- The **moment generating function** (MGF) $M(t)$ of a random variable $X$ is defined for all $t\in\mathbb{R}$ by $M(t)=E[e^{tX}]$
+	- If $X$ is discrete with PMF $p(x)$, then $M(t)=\displaystyle\sum_{x}e^{tx}p(x)$
+	- If $X$ is continuous with PDF $f(x)$, then $M(t)=\displaystyle\int_{-\infty}^{\infty}e^{tx}f(x)dx$
+	- $\mu_{n}(a)=E[(a-X)^n]$ is called the $n$th **moment** of $X$ about $a$.
+		- $\mu_{n}'=\mu_{n}(0)=M^{(n)}(0)=E[X^n]$ is called the $n$th **raw moment** (or **moment about origin** $a=0$) of $X$.
+			- The 0th raw moment is $\mu_{0}'=E[X^0]=1$.
+			- The 1st raw moment, denoted by $\mu$ is $\mu_{1}'=E[X]$, the mean of $X$.
+			- The 2nd raw moment is $\mu_{2}'=E[X^2]$.
+		- $\mu_{n}=\mu_{n}(\mu)=E[(X-\mu)^n]$ is called the $n$th **central moment** (or **moment about the mean** $a=\mu$) of $X$.
+			- The 0th central moment is $\mu_{0}=E[(X-\mu)^0]=1$.
+			- The 1st central moment is $\mu_{1}=E[X-\mu]=0$. 
+			- The 2nd central moment is $\mu_{2}=E[(X-\mu)^2]=\mu_{2}'-\mu^2=\text{Var}(X)$.
+
+
+
+	- $M'(0)=E[X]$
+	- $M''(0)=E[X^2]$ and $M''(t)=E[X^2e^{tX}]$
+	- $M^{(n)}(0)=E[X^n]$ and $M^{(n)}(t)=E[X^ne^{tX}]$
+	- $M_{X+Y}(t)=M_X(t)M_Y(t)$ where $X$ and $Y$ are independent
+	- $M_{X_1+\cdots+X_n}(t)=M_{X_1}(t)\cdots M_{X_n}(t)$
+	- If $X_1,\ldots,X_n$ are independent and $X_i\sim\mathcal{N}(\mu_i,\sigma_i^2)$, then $\displaystyle \sum_{i=1}^{n}X_i\sim\mathcal{N}\left( \sum_{i=1}^{n}\mu_i,\sum_{i=1}^{n}\sigma_i^2 \right)$
+
+### Expectation
+
+- Equivalence definition of **expected value** (or **expectation** or **mean**) of a random variable $X$:
+	- (via MGF) $\displaystyle E[X]=M'(0)$
+	- (via CDF) $\displaystyle E[X]=\int_{-\infty}^{\infty}x\,dF(x)$ (Riemann–Stieltjes integral)
+- $\displaystyle E[aX+b]=aE[X]+b$
+
+### Variance
+
+- The **variance** of a random variable $X$ is defined as $\displaystyle \text{Var}(X)=E[(X-E[X])^2]$ (the 2nd central moment)
+	- $\displaystyle \text{Var}(X)=E[X^2]-E[X]^2$
+	- (c2.1) $\displaystyle \text{Var}(aX+b)=a^2\text{Var}(X)$
+	- $\text{Var}(X)\geq 0$
+	- If $X$ and $Y$ are independent, then $\text{Var}(X+Y)=\text{Var}(X)+\text{Var}(Y)$
+- The **standard deviation** (denoted by $\sigma$) of a random variable $X$ is defined as $\displaystyle \text{SD}(X)=\sqrt{\text{Var}(X)}$
+
+### Covariance
+
+- The **covariance** between $X$ and $Y$, denoted by $\text{Cov}(X,Y)$, is defined by $\text{Cov}(X,Y)=E[(X-E[X])(Y-E[Y])]$
+	- $\text{Cov}(X,Y)=\text{Cov}(Y,X)$
+	- $\text{Cov}(X,X)=\text{Var}(X)$
+	- $\text{Cov}(aX,Y)=a\text{Cov}(X,Y)$
+	- $\displaystyle\text{Cov}\left( \sum^{n}_{i=1}X_{i},\sum^{m}_{j=1}Y_{j} \right)=\sum^{n}_{i=1}\sum^{m}_{j=1}\text{Cov}(X_{i},Y_{j})$
+- $\displaystyle\text{Var}\left( \sum^{n}_{i=1}X_{i} \right)=\sum^{n}_{i=1}\text{Var}(X_{i})+2\sum_{i<j}\text{Cov}(X_{i},X_{j})$
+- If $X_1,\ldots,X_n$ are pairwise independent, then $\displaystyle\text{Var}\left( \sum_{i=1}^{n}X_i \right)=\sum_{i=1}^{n}\text{Var}(X_i)$
+
+## Independent Identically (i.i.d.)
+
+- Random variables $X_1,\ldots,X_n$ are said to be **independent and identically distributed** (i.i.d.) if:
+	- $X_i$ and $X_j$ are [[#Independence|independent]] for all $i\neq j$
+	- $X_i$ and $X_j$ have the same distribution for all $i,j$
+
+
+- i.i.d. random variables $X_1,\ldots,X_n$ with CDF $F$ are said to be a **random sample** (of size $n$) from the distribution $F$.
+	- $\displaystyle\overline{X}=\frac{1}{n}\sum_{i=1}^{n}X_i$ is the **sample mean** of $X_1,\ldots,X_n$.
+	- $\displaystyle S^2=\frac{1}{n-1}\sum_{i=1}^{n}(X_i-\overline{X})^2$ is the **sample variance** of $X_1,\ldots,X_n$.
+
+
+## Correlation
+
+- The **correlation** between $X$ and $Y$, denoted by $\rho(X,Y)$, is defined, as long as $\text{Var}(X)\text{Var}(Y)>0$, by $\displaystyle\rho(X,Y)=\frac{\text{Cov}(X,Y)}{\sqrt{\text{Var}(X)\text{Var}(Y)}}$
+	- $-1\leq \rho(X,Y)\leq 1$
+	- If $\rho(X,Y)=1$, then $X$ and $Y$ are said to be **perfectly positively correlated**.
+	- If $\rho(X,Y)=-1$, then $X$ and $Y$ are said to be **perfectly negatively correlated**.
+	- If $\rho(X,Y)=0$, then $X$ and $Y$ are said to be **uncorrelated**.
+
 
 ## Discrete Random Variables
 
@@ -25,21 +96,23 @@
 - The **expected value** (or **expectation** or **mean**) of a discrete random variable $X$ with probability mass function $p(x)$ is defined as $\displaystyle E[X]=\sum_{x:p(x)>0}xp(x)$. 
 	- The expected value is the [[Means|weighted arithmetic mean]] of the possible values of $X$ where the weights are the probabilities of the values.
 	- (**LOTUS**) $\displaystyle E[g(X)]=\sum_{i}g(x_i)p(x_i)$
-	- $\displaystyle E[aX+b]=aE[X]+b$
 	- $E[X^n] = \displaystyle\sum_{x:p(x)>0}x^np(x)$
-	- If $X$ and $Y$ has joint PMF $p(x,y)$, and $E[X]$ and $E[Y]$ are finite, then $E[X+Y]=E[X]+E[Y]$.
-- The **variance** of a random variable $X$ is defined as $\displaystyle \text{Var}(X)=E[(X-E[X])^2]$
-	- $\displaystyle \text{Var}(X)=E[X^2]-E[X]^2$
-	- $\displaystyle \text{Var}(aX+b)=a^2\text{Var}(X)$
-- The **standard deviation** (denoted by $\sigma$) of a random variable $X$ is defined as $\displaystyle \text{SD}(X)=\sqrt{\text{Var}(X)}$
-- Random variables $X_1,\ldots,X_n$ are said to be **independent and identically distributed** (i.i.d.) if:
-	- $X_i$ and $X_j$ are independent for all $i\neq j$
-	- $X_i$ and $X_j$ have the same distribution for all $i,j$
-- i.i.d. random variables $X_1,\ldots,X_n$ with CDF $F$ are said to be a **random sample** (of size $n$) from the distribution $F$.
-	- $\displaystyle\overline{X}=\frac{1}{n}\sum_{i=1}^{n}X_i$ is the **sample mean** of $X_1,\ldots,X_n$.
-	- $\displaystyle S^2=\frac{1}{n-1}\sum_{i=1}^{n}(X_i-\overline{X})^2$ is the **sample variance** of $X_1,\ldots,X_n$.
+	-  If $X$ and $Y$ have a joint PMF $p(x,y)$, then:
+		- (7.2.1) $E[g(X,Y)]=\displaystyle\sum_{x}\sum_{y}g(x,y)p(x,y)$
+		- If $E[X]$ and $E[Y]$ are finite, then $E[X+Y]=E[X]+E[Y]$.
+	- For every infinite collection of random variables $X_i,i\geq 1$:
+		- (7.2.6) If $\sum_{i=1}^{\infty}E[\vert X_i\vert]$ is finite, then $\displaystyle E\left[  \sum^{\infty}_{i=1}X_{i} \right]=\sum^{\infty}_{i=1}E[X_{i}]$.
+		- If $\forall i , P(X_{i}\geq 0)=1$, then $\displaystyle E\left[  \sum^{\infty}_{i=1}X_{i} \right]=\sum^{\infty}_{i=1}E[X_{i}]$
 
-### Discrete Distributions
+
+
+
+
+- #todo conditional variance and expectation
+
+
+
+### Distributions
 
 - $p$ is probability of success
 
@@ -62,7 +135,7 @@
 - (Binomial Approximation) If $n$ is large, $p$ is small, and $\lambda=np$, then $\text{Binom}(n,p)\approx\text{Pois}(\lambda)$
 - $\displaystyle\frac{P(X=k+1)}{P(X=k)}=\frac{\lambda}{k+1}$
 - If $X_i\sim\text{Pois}(\lambda_{i})$ then $\displaystyle X=\sum_{i=1}^{n}X_i\sim\text{Pois}(\lambda_{1}+\cdots+\lambda_{n})$
-$y$
+
 ##### Poisson Process
 
 - A set of random variables $\{N(t),t\geq 0\}$ (where $N(t)\in\mathbb{N}_{0}$) is the number of events in the interval $[0,t]$) is said to be a **Poisson process** having rate $\lambda$ (where $\lambda>0$) if:
@@ -102,12 +175,9 @@ $y$
 		- $\displaystyle P(X\in B)=\int_{B}f(x)dx$
 		- $\displaystyle P(a\leq X\leq b)=\int_{a}^{b}f(x)dx$
 		- The CDF of $X$ is given by $\displaystyle F(x)=\int_{-\infty}^{x}f(t)dt=P(X\leq x)$
-		- The **expected value** of $X$ is defined as $\displaystyle E[X]=\int_{-\infty}^{\infty}xf(x)dx$.
+		- $\displaystyle E[X]=\int_{-\infty}^{\infty}xf(x)dx$.
 			- (2.1, **LOTUS**) $\displaystyle E[g(X)]=\int_{-\infty}^{\infty}g(x)f(x)dx$
-			- (c2.1) $E[aX+b]=aE[X]+b$
-		- The **variance** of a continuous rv $X$ is defined as $\displaystyle \text{Var}(X)=E[(X-E[X])^2]=E[X^2]-E[X]^2$
-			- $\displaystyle \text{Var}(X)=\int_{-\infty}^{\infty}(x-\mu)^2f(x)dx=\int_{-\infty}^{\infty}x^2f(x)dx-\mu^2$ 
-			- (c2.1) $\displaystyle \text{Var}(aX+b)=a^2\text{Var}(X)$
+		- $\displaystyle \text{Var}(X)=\int_{-\infty}^{\infty}(x-\mu)^2f(x)dx=\int_{-\infty}^{\infty}x^2f(x)dx-\mu^2$ 
 
 
 ### Continuous Distributions
@@ -139,6 +209,7 @@ $y$
 	- $p(i,j)=P(X=i,Y=j)$ is the **joint PMF** of $X$ and $Y$
 	- $\displaystyle P(X=i)=\sum_{j}p(i,j)$ is the **marginal PMF** of $X$
 	- $\displaystyle P(Y=j)=\sum_{i}p(i,j)$ is the **marginal PMF** of $Y$
+
 ### Multinomial
 
 - If $\displaystyle P(X_1=n_1,\ldots,X_r=n_r) = \frac{n!}{n_1!\cdots n_r!}p_1^{n_1}\cdots p_r^{n_r}$, then $X_1,\ldots,X_r$ are said to be **jointly multinomial**, where:
@@ -155,9 +226,13 @@ $y$
 - $X$ and $Y$ are said to be **independent** if $P(X=x,Y=y)=P(X=x)P(Y=y)$ for all $x,y$, otherwise they are **dependent**.
 	- If $X$ and $Y$ are independent, iff, their joint PMF can be written as $p_{X,Y}(x,y)=h(x)g(y)$ for some functions $h$ and $g$.
 	- $X_1,\ldots,X_n$ are said to be **(mutually) independent** if $P(X_1=x_1,\ldots,X_n=x_n)=P(X_1=x_1)\cdots P(X_n=x_n)$ for all $x_1,\ldots,x_n$
+	- $X_1,\ldots,X_n$ are said to be **pairwise independent** if $X_i$ and $X_j$ are independent for all $i\neq j$
 - If $X_i\sim \text{Pois}(\lambda_i)$, and $X_i$ are independent, then $\displaystyle X=\sum_{i=1}^{n}X_i\sim\text{Pois}(\lambda_1+\cdots+\lambda_n)$
 - If $X_i\sim \text{Bin}(n_i,p)$, and $X_i$ are independent, then $\displaystyle X=\sum_{i=1}^{n}X_i\sim\text{Bin}(n_1+\cdots+n_n,p)$
 - The **conditional PMF** of $X$ given $Y=y$ is defined as $p_{X|Y}(x|y)=\displaystyle P(X=x|Y=y)=\frac{P(X=x,Y=y)}{P(Y=y)}=\frac{p(x,y)}{p_{Y}(y)}$, where $p$ is the joint PMF of $X$ and $Y$, and $p_{Y}$ is the marginal PMF of $Y$, and $p_{Y}(y)>0$.
+
+- (7.3.1) If $X$ and $Y$ are independent, then for any functions $g$ and $h$, $E[g(X)h(Y)]=E[g(X)]E[h(Y)]$.
+
 
 ### Continuous
 
