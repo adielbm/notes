@@ -10,8 +10,9 @@
 	- $\forall{c>0},\exists\, n_{0}>0 : \forall n>n_{0},\, 0\leq{f(n)}\leq c\cdot g(n)\,$
 	- $g(n)=\Omega(f(n))$
 - **asymptotically tight bounds** 
-	- $f(x)=\Theta({g(n)})$
+	- $f(n)=\Theta({g(n)})$
 	- ${{f(n)=O(g(n))}\land{f(n)=\Omega{(g(n))}}}$
+	- $g(n)=\Theta(f(n))$
 - **asymptotic lower bound** 
 	- $f(n)=\Omega(g(n))$
 	- $\forall{c>0},\,\exists\, n_{0}>0:\forall n>n_{0},\,0\leq c\cdot g(n)\leq{f(n)}$
