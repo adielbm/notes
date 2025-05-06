@@ -7,6 +7,8 @@
 	- $F$ is right continuous.
 - A **mode** of a random variable $X$ is a value $x_0$ such that $p(x_0)\geq p(x)$ for all $x$, where $p$ is the pmf or pdf of $X$.
 - The **median** of a random variable $X$ is a value $m$ such that $P(X\leq m)\geq \frac{1}{2}$ and $P(X\geq m)\geq \frac{1}{2}$.
+- (**Chebyshev's inequality**) For any random variable $X$ with nonzero finite variance, and for any $k>0$, we have $P(|X-\mu|\geq k\sigma)\leq \frac{1}{k^2}$. (or equivalently, $\displaystyle P(|X-\mu|\geq k)\leq \frac{\sigma^2}{k^2}$)
+- (**Markov's inequality**) For any non-negative random variable $X$ and for any $a>0$, we have $P(X\geq a)\leq \frac{E[X]}{a}$.
 
 ## Moments
 
@@ -47,6 +49,7 @@
 	- $\text{Var}(X)\geq 0$
 	- If $X$ and $Y$ are independent, then $\text{Var}(X+Y)=\text{Var}(X)+\text{Var}(Y)$
 - The **standard deviation** (denoted by $\sigma$) of a random variable $X$ is defined as $\displaystyle \text{SD}(X)=\sqrt{\text{Var}(X)}$
+- (8.2.3) $\text{Var}(X)=0\implies P(X=E[X])=1$
 
 ### Covariance
 
@@ -57,18 +60,18 @@
 	- $\displaystyle\text{Cov}\left( \sum^{n}_{i=1}X_{i},\sum^{m}_{j=1}Y_{j} \right)=\sum^{n}_{i=1}\sum^{m}_{j=1}\text{Cov}(X_{i},Y_{j})$
 - $\displaystyle\text{Var}\left( \sum^{n}_{i=1}X_{i} \right)=\sum^{n}_{i=1}\text{Var}(X_{i})+2\sum_{i<j}\text{Cov}(X_{i},X_{j})$
 - If $X_1,\ldots,X_n$ are pairwise independent, then $\displaystyle\text{Var}\left( \sum_{i=1}^{n}X_i \right)=\sum_{i=1}^{n}\text{Var}(X_i)$
-
 ## Independent Identically (i.i.d.)
 
 - Random variables $X_1,\ldots,X_n$ are said to be **independent and identically distributed** (i.i.d.) if:
 	- $X_i$ and $X_j$ are [[#Independence|independent]] for all $i\neq j$
 	- $X_i$ and $X_j$ have the same distribution for all $i,j$
 
-
-- i.i.d. random variables $X_1,\ldots,X_n$ with CDF $F$ are said to be a **random sample** (of size $n$) from the distribution $F$.
-	- $\displaystyle\overline{X}=\frac{1}{n}\sum_{i=1}^{n}X_i$ is the **sample mean** of $X_1,\ldots,X_n$.
-	- $\displaystyle S^2=\frac{1}{n-1}\sum_{i=1}^{n}(X_i-\overline{X})^2$ is the **sample variance** of $X_1,\ldots,X_n$.
-
+- Let $X_1,\ldots,X_n$ be i.i.d. random variables with CDF $F$.
+	- $X_1,\ldots,X_n$ are said to be a **random sample** (of size $n$) from the distribution $F$.
+		- $\displaystyle\overline{X}=\frac{1}{n}\sum_{i=1}^{n}X_i$ is the **sample mean** of $X_1,\ldots,X_n$.
+		- $\displaystyle S^2=\frac{1}{n-1}\sum_{i=1}^{n}(X_i-\overline{X})^2$ is the **sample variance** of $X_1,\ldots,X_n$.`
+	- (**Weak Law of Large Numbers**) If $E[X_i]=\mu$ is finite, then $\forall \varepsilon>0,\,\displaystyle \lim_{ n \to \infty } P\left( \left| \frac{X_{1}+X_{n}}{n}-\mu \right|>\varepsilon \right)= 0$.
+	- (**Central Limit Theorem**) If $E[X_i]=\mu$ is finite and $\mathrm{Var}(X_i)=\sigma^2$, then $\displaystyle\forall a\in\mathbb{R},\lim_{ n \to \infty }P\left( \frac{\overline{X}-\mu}{\sigma/\sqrt{n}}\leq a \right)=\Phi(a)$.
 
 ## Correlation
 
@@ -93,19 +96,16 @@
 		- $p(x)=F(x)-\displaystyle\lim_{t\to x^-}F(t)$
 		- $\displaystyle P(a< X\leq b)=F(b)-F(a)$
 		- $\displaystyle P(X<b)=\lim_{n\to\infty}F\left(b-\frac{1}{n}\right)$
-- The **expected value** (or **expectation** or **mean**) of a discrete random variable $X$ with probability mass function $p(x)$ is defined as $\displaystyle E[X]=\sum_{x:p(x)>0}xp(x)$. 
-	- The expected value is the [[Means|weighted arithmetic mean]] of the possible values of $X$ where the weights are the probabilities of the values.
+- Let $X$ be a discrete random variable with PMF $p(x)$.
+	-  $\displaystyle E[X]=\sum_{x}xp(x)$. ([[Means|weighted arithmetic mean]])
 	- (**LOTUS**) $\displaystyle E[g(X)]=\sum_{i}g(x_i)p(x_i)$
-	- $E[X^n] = \displaystyle\sum_{x:p(x)>0}x^np(x)$
-	-  If $X$ and $Y$ have a joint PMF $p(x,y)$, then:
-		- (7.2.1) $E[g(X,Y)]=\displaystyle\sum_{x}\sum_{y}g(x,y)p(x,y)$
-		- If $E[X]$ and $E[Y]$ are finite, then $E[X+Y]=E[X]+E[Y]$.
-	- For every infinite collection of random variables $X_i,i\geq 1$:
-		- (7.2.6) If $\sum_{i=1}^{\infty}E[\vert X_i\vert]$ is finite, then $\displaystyle E\left[  \sum^{\infty}_{i=1}X_{i} \right]=\sum^{\infty}_{i=1}E[X_{i}]$.
-		- If $\forall i , P(X_{i}\geq 0)=1$, then $\displaystyle E\left[  \sum^{\infty}_{i=1}X_{i} \right]=\sum^{\infty}_{i=1}E[X_{i}]$
-
-
-
+	- $E[X^n] = \displaystyle\sum_{x}x^np(x)$
+-  If $X$ and $Y$ have a joint PMF $p(x,y)$, then:
+	- (7.2.1) $E[g(X,Y)]=\displaystyle\sum_{x}\sum_{y}g(x,y)p(x,y)$
+	- If $E[X]$ and $E[Y]$ are finite, then $E[X+Y]=E[X]+E[Y]$.
+- For every infinite collection of random variables $X_i,i\geq 1$:
+	- (7.2.6) If $\displaystyle\sum_{i=1}^{\infty}E[\vert X_i\vert]$ is finite, then $\displaystyle E\left[  \sum^{\infty}_{i=1}X_{i} \right]=\sum^{\infty}_{i=1}E[X_{i}]$.
+	- If $\forall i , P(X_{i}\geq 0)=1$, then $\displaystyle E\left[  \sum^{\infty}_{i=1}X_{i} \right]=\sum^{\infty}_{i=1}E[X_{i}]$
 
 
 - #todo conditional variance and expectation
@@ -180,6 +180,8 @@
 		- $\displaystyle \text{Var}(X)=\int_{-\infty}^{\infty}(x-\mu)^2f(x)dx=\int_{-\infty}^{\infty}x^2f(x)dx-\mu^2$ 
 
 
+- (5.7.1) Let $X$ be continuous with PDF $f(x)$, and the support of $X$ is an interval $I$, and $g$ is differentiable on $I$, and $g'(x)\neq 0$ for all $x\in I$, then, the PDF of $Y=g(X)$ is given by: $$f_{Y}(y)=\displaystyle \begin{cases}f_{X}(g^{-1}(y))\cdot \displaystyle \left| \frac{d}{dy}g^{-1}(y) \right|  & \text{if } y\in g(I) \\ 0 & \text{otherwise} \end{cases}$$ 
+
 ### Continuous Distributions
 
 
@@ -194,7 +196,10 @@
 - (4.3, Symmetry) $\Phi(-x)=1-\Phi(x)$
 - If $\displaystyle Z=\frac{X-\mu}{\sigma}$ then $Z\sim\mathcal{N}(0,1)\iff X\sim\mathcal{N}(\mu,\sigma^2)$
 - $\displaystyle P(a<Z<b)=\Phi(b)-\Phi(a)$
-
+- (The **68–95–99.7**, **empirical**, or $3\sigma$ rule) If $X\sim\mathcal{N}(\mu,\sigma^2)$, then:
+	- $\displaystyle P(\mu-\sigma<X<\mu+\sigma)\approx 68\%$ 
+	- $\displaystyle P(\mu-2\sigma<X<\mu+2\sigma)\approx 95\%$ 
+	- $\displaystyle P(\mu-3\sigma<X<\mu+3\sigma)\approx 99.7\%$ 
 
 - (**De Moivre–Laplace theorem**) If $X_{n}\sim\mathrm{Bin}(n,p)$ and $Z_{n}=\displaystyle\frac{X_{n}-np}{\sqrt{np(1-p)}}$, then $\displaystyle\lim_{ n \to \infty }P\left( a\leq Z_{n} \leq b \right)=P(a\leq Z\leq b)=\Phi(b)-\Phi(a)$
 
