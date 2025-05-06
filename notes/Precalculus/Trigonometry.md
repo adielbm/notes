@@ -1,4 +1,22 @@
-
+```tex
+\usepackage{tikz}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[scale=1.2] 
+	\draw[very thick] (0,0) circle (2cm);
+	\draw[-stealth, very thick] (-2.5,0) -- (2.5,0); % x-axis
+	\draw[-stealth, very thick] (0,-2.5) -- (0,2.5); % y-axis
+	\def\angle{65}
+	\coordinate (P) at ({2*cos(\angle)}, {2*sin(\angle)});
+	\draw[very thick] (0,0) -- (P) node[midway, left] {$1$};
+	\draw[red, very thick] (P) -- (P |- 0,0) node[midway, right] {$\sin(\theta)$};
+	\draw[blue, very thick] (P |-0,0) -- (0,0) node[midway, below] {$\cos(\theta)$};
+	\draw (0.5,0) arc (0:\angle:0.5cm) node at (\angle/2:0.35) {$\theta$};
+    \fill (P) circle (0.07);
+\end{tikzpicture}
+\end{document}
+```
+ 
 | $\displaystyle\sin\theta=\cos\left(\frac{\pi}{2} - \theta \right)$ | $\displaystyle\cos\theta = \sin\left(\frac{\pi}{2} - \theta \right)$ | $\displaystyle\tan\theta = \frac{\sin \theta}{\cos \theta}$ |
 | ------------------------------------------------------------------ | -------------------------------------------------------------------- | ----------------------------------------------------------- |
 | $\displaystyle\csc\theta=\frac{1}{\sin \theta}$                    | $\displaystyle\sec\theta=\frac{1}{\cos \theta}$                      | $\displaystyle\cot\theta = \frac{\cos \theta}{\sin \theta}$ |
@@ -57,8 +75,6 @@ $$
 
 ___
 
-
-![trigo\|250](https://upload.wikimedia.org/wikipedia/commons/7/72/Sinus_und_Kosinus_am_Einheitskreis_1.svg)
 
 ___
 
