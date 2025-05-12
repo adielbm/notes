@@ -170,7 +170,7 @@ if $f$ is [[Continuity#Continuous over an Interval|continuous]] on $[a,b]$ then:
 
 ## Arc Length
 
-- If $f'$ is [[Derivative#Continuously Differentiability|continuously differentiable]] on $[a,b]$, then the **length** (**arc length**) of the curve $y=f(x)$ from the point $(a, f(a))$ to the point $(b, f(b))$ is $\displaystyle L=\int ^b_{a}\sqrt{ 1+(f'(x))^2 } \, dx=\int ^b_{a}\sqrt{ 1+\left(\frac{dy}{dx}\right)^2 } \, dx$ 
+- If $f'$ is [[Derivative#Continuously Differentiability|continuously differentiable]] on $[a,b]$, then the **length** (or **arc length**) of the curve $y=f(x)$ from the point $(a, f(a))$ to the point $(b, f(b))$ is $\displaystyle L=\int ^b_{a}\sqrt{ 1+(f'(x))^2 } \, dx=\int ^b_{a}\sqrt{ 1+\left(\frac{dy}{dx}\right)^2 } \, dx$ 
 
 
 ## Volume

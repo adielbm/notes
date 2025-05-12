@@ -158,7 +158,7 @@
 	- **concave down** on an open interval $I$ if $f'$ is decreasing on $I$
 - A point $(x_{0},f(x_{0}))$ where the graph of a function has a tangent line and where the concavity changes is an **inflection point** (or **point of inflection**)
 - The Second Derivative Test for Concavity #todo 
-- At an inflection point $(x_{0},f(x_{0}))$, either $f''(x_{0})=0$ or $f''(x_{0})$ fails to exist
+- If $x_0$ is an inflection point of $f$, then either $f''(x_0)=0$ or $f''(x_0)$ does not exist
 - An inflection point $x_{0}$ can be categorized by $f'$
 	- if $f'(x_{0})=0$, the point is a **stationary inflection point**
 	- if $f'(x_{0})\neq 0$, the point is a **non-stationary inflection point**
