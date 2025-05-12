@@ -29,3 +29,22 @@
 - Exmaples of languages in $\mathrm{NP}$:
 	- **Clique**: $\text{CLIQUE}=\{\langle G,k\rangle \mid G \text{ is an undirected graph with a }k\text{-clique}\}$.
 	- **Subset sum problem** (SSP): $\displaystyle\text{SUBSET-SUM}=\{\langle S,k\rangle \mid S \text{ is a multiset of integers and there exists }  T\subseteq S \text{ s.t.} \sum_{x\in T}x=k\}$.
+
+
+- A function $f:\Sigma^*\to\Sigma^*$ is a **polynomial time computable function** if there exists a polynomial time TM $M$ such that for every $w\in\Sigma^*$, $M$ halts with $f(w)$ on its tape.
+- A language $A$ is **polynomial time many-one reducible** (or **polynomial time (mapping) reducible**) to a language $B$, denoted $A\leq_P B$, if there exists a polynomial time computable function $f:\Sigma^*\to\Sigma^*$ such that for every $w\in\Sigma^*$, $w\in A \iff f(w)\in B$. (in such case $f$ is called the **polynomial time reduction** of $A$ to $B$).
+	- If $A\leq_P B$ and $B\in\mathrm{P}$, then $A\in\mathrm{P}$.
+	- If $A\leq_P B$ and $B\leq_P A$, then $A$ and $B$ are **polynomial time equivalent**, denoted $A\equiv_P B$. 
+		- $\equiv_P$ is an equivalence relation on $\mathrm{NP}$. 
+		- $\mathrm{P}\setminus \{ \emptyset, \Sigma^* \}$ is an equivalence class of $\equiv_P$. 
+		- 
+- A language $B$ is **$\mathrm{NP}$-complete** if:
+	- $B\in\mathrm{NP}$.
+	- For every language $A\in\mathrm{NP}$, $A\leq_P B$.
+- (7.35) If $B$ is $\mathrm{NP}$-complete and $B\in\mathrm{P}$, then $\mathrm{P}=\mathrm{NP}$.
+- (7.36) If $B$ is $\mathrm{NP}$-complete and $B\leq_P C$ for $C$ in $\mathrm{NP}$, then $C$ is $\mathrm{NP}$-complete.
+- If $\mathrm{P}\neq\mathrm{NP}$, then:
+	- (**Ladner's theorem**) $\mathrm{NP}\text{-intermediate}=\mathrm{NP}\setminus(\mathrm{P}\cup\mathrm{NP}\text{-complete})\neq \emptyset$.  
+- If $\mathrm{P}=\mathrm{NP}$, then:
+	- $\mathrm{NP}\text{-complete}=\mathrm{P}=\mathrm{NP}$. 
+	- 

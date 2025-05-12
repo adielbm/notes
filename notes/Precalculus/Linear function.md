@@ -1,0 +1,5 @@
+- A _linear function_ can refer to two different concepts:
+	- A [[Polynomial|polynomial function]] of degree one or less. 
+		- (_univariate_) $f(x) = ax + b$ 
+		- (_multivariate_) $f(x_{1},\dots ,x_{k})=a_{1}x_{1} + \dots + a_{k}x_{k} + b$
+	- [[Linear Transformations]]

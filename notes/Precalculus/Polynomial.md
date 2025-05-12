@@ -11,7 +11,7 @@
 - A **non-zero** polynomial is a polynomial that is not the zero polynomial. 
 - A **monic** polynomial is a non-zero polynomial in which the leading coefficient is equal to 1.
 	- $\displaystyle  x^{n}+c_{n-1}x^{n-1}+\cdots +c_{2}x^{2}+c_{1}x+c_{0},$
-- A polynomial of degree $0,1,2,3$ is called a **constant, linear, quadratic, cubic** polynomial respectively.
+- A polynomial of degree $0,1,2,3$ is called a **constant, linear, quadratic, cubic polynomial** respectively. 
 - (number of monomials) 
 	- A **binomial** is a polynomial consisting of two monomials: $ax^{n}-bx^{m}$
 	- A **trinomial** is a polynomial consisting of three monomials: $ax^{n}+bx^{m}+cx^{k}$
@@ -25,6 +25,9 @@
 		- There are expressions that are not polynomials, but are polynomial functions. (e.g. $\left(\sqrt{1-x^2}\right)^2$ is not a polynomial, but is a polynomial function since $\forall x\in[-1,1],\left(\sqrt{1-x^2}\right)^2=1-x^2$)
 		- The **evaluation** of a polynomial is the computation of the corresponding polynomial function by substituting a numeric value to each variable in the polynomial, and calculating carrying out the indicated multiplications and additions.
 - A **polynomial equation** is an equation that its left-hand side is a polynomial and its right-hand side is $0$. (e.g. $ax^2+bx+c=0$ (**quadratic equation**))
+- A [[Zero of a Function|root]] $x=r$ of a polynomial $p(x)$ is a number such that $p(r)=0$.
+	- A root $x=r$ of a polynomial $p(x)$ has **multiplicity** $m$ if $(x-r)^m$ divides $p(x)$, but $(x-r)^{m+1}$ does not divide $p(x)$. 
+		- A root of multiplicity $1$ is called a **simple root**.
 - The following are equivalent for any non-zero polynomials:
 	- $r(x)$ and $q(x)$ are **factors** of $p(x)$
 	- $p(x)$ is **divisible** by $r(x)$ and $q(x)$

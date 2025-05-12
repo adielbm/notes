@@ -1,4 +1,12 @@
-```tex
+
+
+
+
+
+
+
+
+```tikz
 \usepackage{tikz}
 \usepackage{amsmath}
 \begin{document}
@@ -16,7 +24,16 @@
 \end{tikzpicture}
 \end{document}
 ```
- 
+
+
+
+- A **unit circle** is a circle of radius $1$.
+	- The [[Definite Integral#Arc Length|arc length]] of a unit circle from $(1,0)$ to $(\cos \theta, \sin \theta)$ is $\theta$.
+- The **unit circle** is a circle of radius $1$ centered at the origin $O=(0,0)$ in the Cartesian coordinate system in the Euclidean plane. Formally, $\mathbb{S}^1=\{(x,y) \in \mathbb{R}^2 : x^2 + y^2 = 1\}$.
+- The **trigonometric functions** (or **circular functions**) 
+
+
+
 | $\displaystyle\sin\theta=\cos\left(\frac{\pi}{2} - \theta \right)$ | $\displaystyle\cos\theta = \sin\left(\frac{\pi}{2} - \theta \right)$ | $\displaystyle\tan\theta = \frac{\sin \theta}{\cos \theta}$ |
 | ------------------------------------------------------------------ | -------------------------------------------------------------------- | ----------------------------------------------------------- |
 | $\displaystyle\csc\theta=\frac{1}{\sin \theta}$                    | $\displaystyle\sec\theta=\frac{1}{\cos \theta}$                      | $\displaystyle\cot\theta = \frac{\cos \theta}{\sin \theta}$ |
@@ -87,4 +104,9 @@ ___
 ### Inverse trigonometric functions
 
 - $\arcsin(x),~ \arccos(x), ~\arctan(x)$
+
+
+________
+
+
 

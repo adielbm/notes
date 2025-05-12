@@ -75,5 +75,14 @@
       ],
       "key": "Q"
     }
+  ],
+  "markdown:add-metadata-property": [],
+  "workspace:export-pdf": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": ";"
+    }
   ]
 }

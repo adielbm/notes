@@ -69,8 +69,8 @@
 - Let $X_1,\ldots,X_n$ be i.i.d. random variables with CDF $F$.
 	- $X_1,\ldots,X_n$ are said to be a **random sample** (of size $n$) from the distribution $F$.
 		- $\displaystyle\overline{X}=\frac{1}{n}\sum_{i=1}^{n}X_i$ is the **sample mean** of $X_1,\ldots,X_n$.
-		- $\displaystyle S^2=\frac{1}{n-1}\sum_{i=1}^{n}(X_i-\overline{X})^2$ is the **sample variance** of $X_1,\ldots,X_n$.`
-	- (**Weak Law of Large Numbers**) If $E[X_i]=\mu$ is finite, then $\forall \varepsilon>0,\,\displaystyle \lim_{ n \to \infty } P\left( \left| \frac{X_{1}+X_{n}}{n}-\mu \right|>\varepsilon \right)= 0$.
+		- $\displaystyle S^2=\frac{1}{n-1}\sum_{i=1}^{n}(X_i-\overline{X})^2$ is the **sample variance** of $X_1,\ldots,X_n$.
+	- (**Weak Law of Large Numbers**) If $E[X_i]=\mu$ is finite, then $\forall \varepsilon>0,\,\displaystyle \lim_{ n \to \infty } P\left( \left| \frac{X_{1}+\dots+X_{n}}{n}-\mu \right|>\varepsilon \right)= 0$.
 	- (**Central Limit Theorem**) If $E[X_i]=\mu$ is finite and $\mathrm{Var}(X_i)=\sigma^2$, then $\displaystyle\forall a\in\mathbb{R},\lim_{ n \to \infty }P\left( \frac{\overline{X}-\mu}{\sigma/\sqrt{n}}\leq a \right)=\Phi(a)$.
 
 ## Correlation
