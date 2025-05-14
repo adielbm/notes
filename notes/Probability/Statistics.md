@@ -1,17 +1,11 @@
-The sample space of an experiment, denoted by S, is the set of all possible outcomes of that experiment.
-Suppose p(x) depends on a quantity that can be assigned any one of a number of possible values, with each different value determining a different probability distribution. Such a quantity is called a parameter of the distribution. The collection of all probability distributions for different values of the parameter is called a family of probability distributions.
-
-# Population
-
 - (**population**) sample space $\Omega$
 - (**population size**) $N$ or $\infty$.
 - (**population random variable**) $X:\Omega\to\mathbb{R}$
-- (**population distribution**) The distribution of $X$
+- (**population distribution**) $X\sim P_\theta$
 - (**parameter** $\theta$) A fixed (unknown usually) value on which the population distribution depends.
-
-# Sample 
-
-- A **random sample** (of **sample size** $n$) is a set of i.i.d random variables $X_1,\ldots,X_n$ (**observations**) distributed as $X$. 
+	- $\mu=E[X]$ (population mean)
+	- $\sigma^2=\mathrm{Var}(X)$ (population variance)
+- (**sample**) $X_1,\ldots,X_n$ where each $X_i \overset{\text{i.i.d.}}{\sim} P_\theta$ 
 	- (e.g.9.1) For each $i=1,\ldots,n$, $E[X_i]=\mu$. 
 	- $\{x_1,\ldots,x_n\}$ (observed data values, realizations)
 		- The joint PMF $p(x_1,\ldots,x_n)$ is called the **sample distribution** of $X_1,\ldots,X_n$
@@ -39,8 +33,23 @@ Suppose p(x) depends on a quantity that can be assigned any one of a number of p
 	- The **likelihood function** (of given realizations $x_1,\ldots,x_n$) is a function of $\theta$ defined by $L(\theta)=f(x_1,\ldots,x_n;\theta)$.
 	- $\ell(\theta)=\log L(\theta)$ is the **log-likelihood function**.
 	- An estimator $T=T(X_1,\ldots,X_n)$ is called a **maximum likelihood estimator** (MLE) of $\theta$ if $\displaystyle\hat{\theta}=\arg\max_{\theta}L(\theta)$, or equivalently, if for all $L(\hat{\theta})\geq L(\theta)$ for all $\theta$. 
+		- (9.20) If $\hat{\theta}$ is a MLE of $\theta$, then $g(\hat{\theta})$ is a MLE of $g(\theta)$ for any one-to-one function $g$.
 
-
+- A **confidence interval** (for an unknown parameter $\theta$) with **confidence level** $1-\alpha$ is an interval $[A,B]$ such that $P(A\leq \theta \leq B)=1-\alpha$.
+	- $P(-\varepsilon<\hat{\theta}-\theta<\varepsilon)=1-\alpha$ 
+	- Example:
+		- $X\sim \mathcal{N}(\mu,\sigma^2)$
+		- $1-\alpha=0.95$ (confidence level) 
+		- parameter: $\theta=\mu$ 
+		- estimator: $\hat{\theta}=\bar{X}$ (sample mean)
+		- $P(-\varepsilon<\bar{X}-\mu<\varepsilon)=0.95$ 
+		- $P\left( \frac{\varepsilon}{2}\leq \frac{\bar{X}-\mu}{2}\leq \frac{\varepsilon}{2} \right)=0.95$
+		- $\Phi(\frac{\varepsilon}{2})-\Phi(-\frac{\varepsilon}{2})=0.95$
+		- $\Phi(\frac{\varepsilon}{2})=0.975$
+		- $\frac{\varepsilon}{2}=z_{0.975}$
+		- $\varepsilon=2z_{0.975}=2\cdot 1.96=3.92$
+		- $[A,B]=[\hat{\mu}-\varepsilon,\hat{\mu}+\varepsilon]=[\bar{X}-3.92,\bar{X}+3.92]$ (confidence interval for $\mu$ with confidence level $1-\alpha=0.95$).
+			- For multiple number of samples, $0.975$ of the cases, the confidence interval will contain the true value of the parameter $\mu$.
 
 # Examples
 
