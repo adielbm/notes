@@ -59,6 +59,8 @@
 	- $\text{Cov}(aX,Y)=a\text{Cov}(X,Y)$
 	- $\displaystyle\text{Cov}\left( \sum^{n}_{i=1}X_{i},\sum^{m}_{j=1}Y_{j} \right)=\sum^{n}_{i=1}\sum^{m}_{j=1}\text{Cov}(X_{i},Y_{j})$
 - $\displaystyle\text{Var}\left( \sum^{n}_{i=1}X_{i} \right)=\sum^{n}_{i=1}\text{Var}(X_{i})+2\sum_{i<j}\text{Cov}(X_{i},X_{j})$
+- $\text{Cov}(X,Y)=0$ iff $\rho(X,Y)=0$.
+- If $X\perp Y$, then $\text{Cov}(X,Y)=0$.
 - If $X_1,\ldots,X_n$ are pairwise independent, then $\displaystyle\text{Var}\left( \sum_{i=1}^{n}X_i \right)=\sum_{i=1}^{n}\text{Var}(X_i)$
 ## Independent Identically (i.i.d.)
 
@@ -75,7 +77,7 @@
 
 ## Correlation
 
-- The **correlation** between $X$ and $Y$, denoted by $\rho(X,Y)$, is defined, as long as $\text{Var}(X)\text{Var}(Y)>0$, by $\displaystyle\rho(X,Y)=\frac{\text{Cov}(X,Y)}{\sqrt{\text{Var}(X)\text{Var}(Y)}}$
+- The **Pearson correlation coefficient** between $X$ and $Y$, denoted by $\rho(X,Y)$, is defined, as long as $\text{Var}(X)\text{Var}(Y)>0$, by $\displaystyle\rho(X,Y)=\frac{\text{Cov}(X,Y)}{\sqrt{\text{Var}(X)\text{Var}(Y)}}$
 	- $-1\leq \rho(X,Y)\leq 1$
 	- If $\rho(X,Y)=1$, then $X$ and $Y$ are said to be **perfectly positively correlated**.
 	- If $\rho(X,Y)=-1$, then $X$ and $Y$ are said to be **perfectly negatively correlated**.
@@ -228,7 +230,7 @@
 
 ### Independence
 
-- $X$ and $Y$ are said to be **independent** if $P(X=x,Y=y)=P(X=x)P(Y=y)$ for all $x,y$, otherwise they are **dependent**.
+- $X$ and $Y$ are said to be **independent**, denoted by $X\perp Y$, if $P(X=x,Y=y)=P(X=x)P(Y=y)$ for all $x,y$, otherwise they are **dependent**.
 	- If $X$ and $Y$ are independent, iff, their joint PMF can be written as $p_{X,Y}(x,y)=h(x)g(y)$ for some functions $h$ and $g$.
 	- $X_1,\ldots,X_n$ are said to be **(mutually) independent** if $P(X_1=x_1,\ldots,X_n=x_n)=P(X_1=x_1)\cdots P(X_n=x_n)$ for all $x_1,\ldots,x_n$
 	- $X_1,\ldots,X_n$ are said to be **pairwise independent** if $X_i$ and $X_j$ are independent for all $i\neq j$

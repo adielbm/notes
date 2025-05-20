@@ -1,7 +1,7 @@
 # Alphabet
 
 - An **alphabet** is a nonempty finite set $\Sigma$ of **symbols** (or **letters**).  
-	- Symbols are typically denoted by `a, b, c, ...`.  
+	- Symbols are typically denoted by $\texttt{a},\texttt{b},\texttt{c},\dots$.
 # Strings 
 
 - A **string** over an alphabet $\Sigma$ is a finite sequence of symbols from $\Sigma$, usually written without separators.  
@@ -82,21 +82,21 @@
 
 # Automata
 
-| Automaton                                                              |
-| ---------------------------------------------------------------------- |
-| Deterministic Finite Automaton (DFA)                                   |
-| Nondeterministic Finite Automaton (NFA)                                |
-| $\cap$                                                                 |
-| Deterministic Push Down Automaton (DPDA-I) with 1 push-down store      |
-| $\cap$                                                                 |
-| Nondeterministic Push Down Automaton (NPDA-I) with 1 push-down store   |
-| $\cap$                                                                 |
-| Linear Bounded Automaton (LBA)                                         |
-| $\cap$                                                                 |
-| Deterministic Push Down Automaton (DPDA-II) with 2 push-down stores    |
-| Nondeterministic Push Down Automaton (NPDA-II) with 2 push-down stores |
-| Deterministic Turing Machine (DTM)                                     |
-| Nondeterministic Turing Machine (NTM)                                  |
-| Probabilistic Turing Machine (PTM)                                     |
-| Multitape Turing Machine (MTM)                                         |
-| Multidimensional Turing Machine                                        |
+| Automaton                                                                  |
+| -------------------------------------------------------------------------- |
+| Deterministic Finite Automaton (DFA)                                       |
+| Nondeterministic Finite Automaton (NFA)                                    |
+| $\cap$                                                                     |
+| Deterministic Push Down Automaton (DPDA-I) with 1 push-down store          |
+| $\cap$                                                                     |
+| Nondeterministic Push Down Automaton (NPDA-I, PDA) with 1 push-down store. |
+| $\cap$                                                                     |
+| Linear Bounded Automaton (LBA)                                             |
+| $\cap$                                                                     |
+| Deterministic Push Down Automaton (DPDA-II) with 2 push-down stores        |
+| Nondeterministic Push Down Automaton (NPDA-II) with 2 push-down stores     |
+| Deterministic Turing Machine (DTM)                                         |
+| Nondeterministic Turing Machine (NTM)                                      |
+| Probabilistic Turing Machine (PTM)                                         |
+| Multitape Turing Machine (MTM)                                             |
+| Multidimensional Turing Machine                                            |

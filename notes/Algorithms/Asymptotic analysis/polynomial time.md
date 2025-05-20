@@ -3,6 +3,7 @@
 
 - **Polynomial Algorithm**        
 - **Pseudo-Polynomial Algorithm**   
+	- polynomial in the numeric value of the input (the largest integer present in the input)
 - **Weakly Polynomial Algorithm**   
 - **Strongly Polynomial Algorithm** 
 
