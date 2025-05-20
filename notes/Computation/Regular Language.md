@@ -18,7 +18,7 @@
 
 ### Finite Automata
 
-- A **deteministic finite automaton** (DFA) is a 5-tuple $M=(Q,\Sigma,\delta,q_0,F)$
+- A **deterministic finite automaton** (DFA) is a 5-tuple $M=(Q,\Sigma,\delta,q_0,F)$
 	- $Q$ is a finite set of **states**
 	- $\Sigma$ is an alphabet
 	- $\delta$ is a **transition function**

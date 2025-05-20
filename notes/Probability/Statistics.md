@@ -63,4 +63,30 @@
 - (9.9) If $\mu$ is known, then the statistic $\displaystyle S^2=\frac{1}{n}\sum_{i=1}^{n}(X_i-\mu)^2$ (denoted also by $\hat\sigma ^2$) is an unbiased estimator of the population variance $\sigma^2$. 
 
 
+# Hypothesis Testing
+
+- A **pivotal quantity** is a function $Q(X_1,\ldots,X_n,\theta)$ such that the distribution of $Q$ does not depend on the unknown parameter $\theta$. 
+	- (Example: $Q=\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}$)
+- The **null hypothesis** $H_0$ 
+- The **alternative hypothesis** $H_1$
+- The **test statistic** $T=T(X_1,\ldots,X_n)$ is a statistic used to test the null hypothesis $H_0$.
+	- The **rejection region** (or **critical region**) is the set $C$ of values of the test statistic $T$ for which the null hypothesis $H_0$ is rejected.
+	- The **acceptance region** $\bar{C}$ is the set of values of the test statistic $T$ for which the null hypothesis $H_0$ is accepted.
+	- $C\cap \bar{C}=\emptyset$
+	- $T$ is called a **critical value** 
+
+
+- **Type I error**: Rejecting $H_0$ when $H_0$ is true.
+	- $P_{H_0}(C)=\alpha$ (**significance level**)  
+- **Type II error**: Accepting $H_0$ when $H_1$ is true.
+	- $P_{H_1}(\bar{C})=\beta$
+	- If $H_1$ is composite, then $\beta$ is a function of $\theta$. 
+- $P_{H_1}(C)=\pi=1-\beta$ (**power**) 
+
+
+- $L(\theta_0\mid x)$ 
+- $\displaystyle\Lambda(x)=\frac{L(\theta_0\mid x)}{L(\theta_1\mid x)}$ is the **likelihood ratio** (of $H_0$ and $H_1$). 
+- $\displaystyle\lambda(x_1,\ldots,x_n)=\frac{P_{1}(x_1,\ldots,x_n)}{P_{0}(x_1,\ldots,x_n)}$ is the **likelihood ratio** (of hypotheses $H_0:P=P_0$ and $H_1:P=P_1$, where $P$ is the population distribution). 
+- (**Neyman-Pearson lemma**) If $C=\{(x_1,\ldots,x_n):\lambda(x_1,\ldots,x_n)\geq K\}$ and $\alpha =P_{H_0}(C)$, then $C$ is the most powerful test of significance level at most $\alpha$ for testing $H_0$ against $H_1$. 
+
 

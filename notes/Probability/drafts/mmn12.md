@@ -1,18 +1,8 @@
-ממ"ן 12 
-הסתברות
-2025ב
-___
+`= date(today)`
+<h4 style="text-align: center;">הסתברות ומ' לסטטיסטיקה: ממ"ן 12</h4>
+<p style="text-align: center;">עדיאל בן משה</p>
+
 ## שאלה 1
-
-- The distribution of the height of a certain plant species is normal with a mean of 30.
-- $P(19.15\leq X\leq 40.85)=0.97$
-
-- (a) what is the SD of the distribution?
-- (b) find $P(X>33.89)$
-- (c) find $P(X>33\mid X>25)$
-- (d) what is the height such that with probability 5%, a plant of this species will be shorter than it?
-
-note: make linear interpolation where necessary.
 
 (בשאלה זו נעבוד בעיקר לפי פרק 5.4, בפרט לפי הטבלה של $\Phi$. השתמשתי בנוסחה 5.4.3 $\Phi(-x)=1-\Phi(x)$)
 #### א.
@@ -40,7 +30,7 @@ P\left( -\frac{10.85}{\sigma}\leq Z\leq \frac{10.85}{\sigma} \right) &= \Phi\lef
 #### ב.
 
 $$\begin{align*}
-P(X>33.89) &= P\left( \frac{33.89-50}{5}<\frac{X-30}{5} \right) \\
+P(X>33.89) &= P\left( \frac{33.89-30}{5}<\frac{X-30}{5} \right) \\
 &= P(0.778<Z) \\
 &= 1-P(Z<0.778) \\
 &= 1-\Phi(0.778) \\
@@ -69,28 +59,36 @@ $$\displaystyle \Phi\left( \frac{h-30}{5} \right)=0.05$$
 $$\displaystyle h=30+5\cdot \Phi^{-1}(0.05)$$
 $$\displaystyle h=30+5\cdot (-\Phi^{-1}(0.95))$$
 
-נערוך אינטרפולציה:
+אינטרפולציה:
 $\Phi(1.64)=0.9495$
 $\Phi(1.65)=0.9505$
-$1.64+\frac{0.95-0.9495}{0.9505-0.9495}(1.65-1.64)=1.645$ 
+
+$\displaystyle 1.64+\frac{0.95-0.9495}{0.9505-0.9495}(1.65-1.64)=1.645$ 
 
 לכן
 $$\displaystyle h=30+5\cdot (-1.645)=21.775$$
 
 
+<div class="page-break"></div>
 
 # שאלה 2
 פונק' הצפיפות של $X$ היא:   
 $f(x)=ke^{-x}$ for $-1<x<0$.
 #### א. מצא את $k$.
 
-$$\displaystyle \int_{-1}^{0} e^{-x}dx=e^{-x}\bigg|_{-1}^{0}=e^{-0}-e^{1}=1-e$$ ($u=-x,\quad  du=-dx,\quad x=0\Rightarrow u=0,\quad x=-1\Rightarrow u=1$) 
+$$\displaystyle \int_{-1}^{0} e^{-x}dx=-e^{-x}\bigg|_{-1}^{0}=-e^{-0}+e^{1}=e-1$$ ($u=-x,\quad  du=-dx,\quad x=0\Rightarrow u=0,\quad x=-1\Rightarrow u=1$) 
 $$\displaystyle k\int_{-1}^{0} e^{-x}dx=k(e-1)=1$$
 $$\displaystyle k=\frac{1}{e-1}$$ 
 #### ב. מצא את $E[X]$.
 לפי א', $f(x)=\frac{1}{e-1}e^{-x}$ 
+$$\displaystyle E[X]=\int_{-1}^{0} x\cdot f(x)dx=\frac{1}{e-1}\int_{-1}^{0} x\cdot e^{-x}dx$$
+$$\displaystyle\int x\cdot e^{-x}dx=\int u\,dv=uv-\int v \, du =x(-e^{-x})+\int e^{-x} \, dx=-xe^{-x}- e^{-x}+C $$
+($u=x,\quad  dv=e^{-x}dx\Rightarrow v=-e^{-x},\quad x=0\Rightarrow u=0,\quad x=-1\Rightarrow u=-1$) 
 
-$$\displaystyle E[X]=\int_{-1}^{0} x\cdot f(x)dx=\frac{1}{e-1}\int_{-1}^{0} x\cdot e^{-x}dx=-\frac{1}{e-1}$$ #todo
+$$\displaystyle\int_{-1}^{0} x\cdot e^{-x} \, dx=[-xe^{-x}- e^{-x}]\bigg|^{0}_{-1}=-1$$
+
+$$\displaystyle E[X]=\int_{-1}^{0} x\cdot f(x)dx=\frac{1}{e-1}\int_{-1}^{0} x\cdot e^{-x}dx=-\frac{1}{e-1}$$
+
 #### ג. יהי $Y=X^2$. מצא את פונ' הצפיפות של $Y$. 
 (נעבוד לפי משפט 5.7.1)
 $x=y^2,\quad x\in [-1, 0]\implies  x=-\sqrt{y}$ 
@@ -103,6 +101,9 @@ $\displaystyle\int_{-1}^{a} e^{-x}dx=\int_{1}^{-a} -e^{u}du=\int_{-a}^{1} e^{u}d
 ($u=-x,\quad du=-dx,\quad x=a\Rightarrow u=-a,\quad x=-1\Rightarrow u=1$) 
 
 $\displaystyle F_X(a)=\int_{-1}^{a} f(x)dx=\frac{1}{e-1}\int_{-1}^{a} e^{-x}dx=\frac{1}{e-1}\left( e^{1}-e^{-a} \right)$ 
+
+<div class="page-break"></div>
+
 # שאלה 3
 
 נתון:
@@ -131,11 +132,10 @@ $$
 
 $$
 \begin{align*}
-P(X<1.5\mid X\geq 1)
+P(X<2.5\mid X\geq 1)
 &= \frac{P(X<2.5\cap X> 1)}{P(X> 1)} \\
 &= \frac{0.6875}{1-P(X< 1)} \\
-&= \frac{0.6875}{\frac{3}{4}} \\
-&= \frac{11}{12}
+&= \frac{0.6875}{\frac{3}{4}} =\boxed{ \frac{11}{12} }
 \end{align*} 
 $$
 
@@ -148,18 +148,22 @@ E[Y]=E\left[\frac{1}{X}\right]
 &= \int_{0}^{1} \frac{1}{x} f(x) dx + \int_{1}^{2} \frac{1}{x} f(x) dx + \int_{2}^{3} \frac{1}{x} f(x) dx \\
 &= 0.5 + 0.5\int_{1}^{2} \frac{1}{x}  \,dx + 0.5\int_{2}^{3} \frac{1}{x} \cdot (3-x) \,dx \\
 &= 0.5 + 0.5\left( \ln(2) - \ln(1) \right) + 1.5\int_{2}^{3}  \frac{1}{x}  \,dx- 0.5 \int_{2}^{3}  1  \,dx \\
-&= \frac{3}{2}\ln(3)-\frac{1}{2}\ln(2)  
+&= 0.5 + 0.5 \ln(2)  + 1.5\left( \ln 3 - \ln 2 \right)- 0.5  \\
+&= \frac{3}{2}\ln(3)-\ln(2)  
 \end{align*} 
 $$
+
+
+<div class="page-break"></div>
+
 # שאלה 4
 
-### א.
+### א. אחידה בין 1 ל 3
 
 קודם נחשב את ההסתברות שרכיב i עובד אחרי שנתיים, בעזרת פונקציית ההצטברות של התפלגות אחידה רציפה (פרק 5.3).
 $$p=1-F(2)=1-\int_{1}^{2} \frac{1}{3-1} dx = 1-\left( 1-\frac{1}{2} \right)=\frac{1}{2}$$
 
 נחשב את ההסתברות שהמערכת תעבוד אחרי שנתיים.
-
 $$
 \begin{align*} 
 P((X_{1}>2,X_{2}>2) \cup X_{3}>2) &= P(X_{1}>2,X_{2}>2)+P(X_{3}>2)-P(X_{1}>2,X_{2}>2,X_{3}>2) \\
@@ -177,25 +181,25 @@ P(X_{3}>2|W) &= \frac{P(X_{3}>2\cap W)}{P(W)} \\
 &= \frac{0.5}{0.625}=\boxed{ 0.8 }
 \end{align*} 
 $$
-### ג.
+### ג. מעריכית עם תוחלת 2
 
- נתון שהתוחלת היא $\frac{1}{\lambda}=2$  לכן $\lambda=\frac{1}{2}$.
-חשב את ההסתברות שרכיב i עובד אחרי שנתיים, בעזרת פונקציית ההצטברות
+ נתון שהתוחלת היא $\frac{1}{\lambda}=2$  לכן $\lambda=\frac{1}{2}$. נחשב את ההסתברות שרכיב i עובד אחרי שנתיים, בעזרת פונקציית ההצטברות
 $$
 \begin{align*}
-p=1-F(2)&=1-\frac{1}{2}\int_{1}^{2} e^{-x/2 }dx =\\
-&=1-\frac{1}{2}\left( -2e^{-x/2} \right)\bigg|_{1}^{2} =\\
-&=1-\frac{1}{2}\left( -2e^{-1} + 2e^{-1/2} \right) =\\
-&=1-e^{-1/2} + e^{-1} \\
-&\approx \boxed{ 0.7613 }
+p=1-F(2)&=1-\frac{1}{2}\int_{0}^{2} e^{-x/2 }dx =\\
+&=1-\frac{1}{2}\left( -2e^{-x/2} \right)\bigg|_{0}^{2} =\\
+&=1-\frac{1}{2}\left( -2e^{-1} + 2e^{0} \right) =\\
+&=  e^{-1} \\
+&\approx { 0.3679 }
 \end{align*}
 $$
 
+בדומה לסעיף א'
+$$p^2+p-p^3\approx \boxed{ 0.453 }$$
+
 ### ד.
+בדומה לסעיף ב.
 
-בדומה לסעיף ב'
-$$p^2+p-p^3\approx \boxed{ 0.8997 }$$
-
-
+$$\frac{p}{p^2+p-p^3}\approx \boxed{ 0.811 }$$
 
 

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 .theme-dark {
   --titlebar-background-focused: var(--background-modifier-active-hover) !important;
@@ -30,23 +31,47 @@
     --h4-font: "EB Garamond", "David Libre", serif !important;
     --h5-font: "EB Garamond", "David Libre", serif !important;
     --h6-font: "EB Garamond", "David Libre", serif !important;
-    --font-text-size: 15px !important;
+    --font-text-size: 14px !important;
   }
 
   .page, .page-break { break-after: page; }
 
 }
 
-.theme-dark img[src*=".svg"], .theme-dark img[alt*=".svg"] {
-    filter: invert(1) hue-rotate(180deg);
+.theme-dark img[src*=".svg"],
+.theme-dark img[alt*=".svg"] {
+  filter: invert(1) hue-rotate(180deg);
 }
 
 .internal-embed {
-    display: flex !important;
-    flex-direction: column;
-    gap: 10px;
+  display: flex !important;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .markdown-rendered table {
   margin: auto;
 }
+
+
+/* CUSTOM-1 */
+/* @media print {
+  body {
+    --font-text-theme: "Lora", serif !important;
+    --font-text-size: 13px !important;
+    --h1-font: "Lora", serif !important;
+    --h1-size: 16px !important;
+  }
+
+  .markdown-preview-view {
+    column-count: 2;
+    column-gap: 0.5em;
+    column-rule: 1px dashed #ccc;
+  }
+
+  h1:first-of-type {
+    column-span: all;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+  }
+} */
