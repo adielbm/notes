@@ -13,22 +13,8 @@
 
 ## Coulomb's Law
 
-```tex
-\documentclass[varwidth]{standalone}
-\usepackage{xcolor,tikz,amsmath}
-\newcommand*\circled[2]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,fill=#1,inner sep=2pt] (char) {#2};}}
-\begin{document}
-$\underset{q_1}{\circled{red!40}{$\pm$}}$ 
-$\underset{\vec{\mathbf{F}}_{12}}{\longrightarrow}$ 
-$\underset{\vec{\mathbf{F}}_{21}}{\longleftarrow}$ 
-$\underset{q_2}{\circled{blue!40}{$\mp$}}$
-\\
-$\underset{\vec{\mathbf{F}}_{12}}{\longleftarrow}$
-$\underset{q_1}{\circled{red!40}{$\pm$}}$
-$\underset{q_2}{\circled{red!40}{$\pm$}}$ 
-$\underset{\vec{\mathbf{F}}_{21}}{\longrightarrow}$
-\end{document}
-```
+![[Coulomb's Law.svg]]
+
 
 - $\displaystyle F=k\frac{q_1q_2}{r^2}$ is the **electrostatic force** (or **Coulomb force**) between two charges (in $\mathsf{N}$)
 	- $q_1$ and $q_2$ are the magnitudes of the charges (in $\mathsf{C}$)

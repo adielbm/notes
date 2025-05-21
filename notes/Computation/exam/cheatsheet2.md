@@ -7,7 +7,7 @@
 	- There exists some languages that are not TR.
 	- (**co-TR**) if its complement is TR. 
 	- Every inf. TR lang. has an inf. decidable subset.
-	- TR but not TD e.g.: $A_{TM}$, $HALT_{TM}=\{ \langle M,w\rangle\mid M \text{ is a TM that halts on } w\}$, $D=\{ p \mid p \text{ is an integer polynomial with an integral root} \}$, $\overline{EQ_{\textsf{CFG}}}$
+	- TR but not TD e.g.: $A_{TM}$, $HALT_{TM}=\{ \langle M,w\rangle\mid M \text{ is a TM that halts on } w\}$, $D=\{ p \mid p \text{ is an int. poly. with an int. root} \}$, $\overline{EQ_{\textsf{CFG}}}$
 - (**TD** (dec)) accepts if $w\in L$, rejects if $w\notin L$.
 	- $L\text{ is TD}\iff L\text{ is TR and }L\text{ is co-TR}\iff \exists\,\text{TM decides }L$. 
 	- e.g.: $A_{\textsf{DFA}}$, $A_{\textsf{NFA}}$, $A_{\textsf{REX}}$, $E_{\textsf{DFA}}$, $EQ_{\textsf{DFA}}$, $A_{\textsf{CFG}}$, $E_{\textsf{CFG}}$, every CFL, every finite lang., $A_{\textsf{LBA}}$, 

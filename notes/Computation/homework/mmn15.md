@@ -24,13 +24,28 @@
 
 #### ג. $\{\langle D,Q\rangle : D \text{ and }Q\text{ are DFAs and }L(D)\cap L(Q)=\emptyset\}$
 
-השפה $L(D)\cap L(Q)$ היא רגולרית (שפות רגולריות סגורות תחת חיתוך), ולכן קיים DFA $A$ שמקבל את השפה הזו. 
+השפה $L(D)\cap L(Q)$ היא רגולרית (שפות רגולריות סגורות תחת חיתוך), ולכן קיים DFA $A$ שמקבל את החיתוך. 
 נשתמש במ"ט $T$ ממשפט 4.4 שמכריע את $E_{\text{DFA}}$.
 
 - $\text{``On input }\langle D,Q\rangle$
 	1. If $D$ or $Q$ is not a DFA, _reject_.
-	2. Run $T$ on $\langle A\rangle$.
-	3. If $T$ accepts, _accept_. If it rejects, _reject_. $\text{''}$
+	2. Construct a DFA $A$ for $L(D)\cap L(Q)$. 
+	3. Run $T$ on $\langle A\rangle$.
+	4. If $T$ accepts, _accept_. If it rejects, _reject_. $\text{''}$
+
+כעת נצדיק את שלב 2, נראה איך לבנות את ה- DFA $A$, (לפי עמ' 47 בספר, ובפרט ההערה שם):
+- נתון:
+	- $D=(Q_D,\Sigma_{D},\delta_D,q_{0,D},F_D)$
+	- $Q=(Q_Q,\Sigma_{Q},\delta_Q,q_{0,Q},F_Q)$
+	- נסמן: $A=(Q_A,\Sigma_{A},\delta_A,q_{0,A},F_A)$, כאשר:
+		- $Q_A=Q_D\times Q_Q$ 
+		- $\Sigma_{A}=\Sigma_D \cup\Sigma_Q$ 
+		- לכל $(r_1,r_2)\in Q_A$: 
+		- $\delta_A((r_1,r_2),a)=(\delta_D(r_1,a),\delta_Q(r_2,a))$. 
+		- $q_{0,A}=(q_{0,D},q_{0,Q})$ 
+		- $F_A=F_D\times F_Q$.
+
+לפי זה $A$ מקבל מילה אם ורק אם היא מתקבלת על ידי שני ה- DFA $D$ ו- $Q$.
 
 #### ד. $\{\langle D,w\rangle : D \text{ is a DFA and }w\notin L(D)\}$
 
@@ -87,6 +102,7 @@ $L=\{\langle M\rangle : M \text{ is a TM and }M\text{ accepts the empty string}\
 כלומר בנינו מ"ט $D_A$ שמכריעה את השפה $A_{\textsf{TM}}$, **בסתירה** למשפט 4.11. 
 
 מסקנה: $L$ איננה כריעה.
+
 <div class="page-break"></div>
 
 # שאלה 4

@@ -304,7 +304,7 @@ In this section:
 - $\text{Row}(A)=\text{Col}(A)\implies \text{Col}(A)\oplus\text{Null}(A)=\mathbb{R}^n$ (by 9.3.7, 12.3.1, 12.3.2a, e2023a85q1a)
 - $\text{Null}(A)=\text{Null}(A^3)\implies \text{Null}(A)=\text{Null}(A^2)$ (e2024a83q1)
 - $A^2=0\iff \text{Col}(A)\subseteq\text{Null}(A)$ (see [[#Nilpotent matrix]])
-- $\text{rank}(A)=\text{rank}(A^2)\implies \text{Null}(A)=\text{Null}(A^2)$ (see [[Exercises]])
+- $\text{rank}(A)=\text{rank}(A^2)\implies \text{Null}(A)=\text{Null}(A^2)$ (see [[Linear Algebra/drafts/Exercises]])
 
 
 
