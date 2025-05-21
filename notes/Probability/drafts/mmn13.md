@@ -1,5 +1,5 @@
 `= date(today)`
-<h4 style="text-align: center;">הסתברות ומ' לסטטיסטיקה: ממ"ן 13</h4>
+<h5 style="text-align: center;">הסתברות: ממ"ן 13</h5>
 <p style="text-align: center;">עדיאל בן משה</p>
 ## שאלה 1
 
@@ -159,8 +159,85 @@ $$
 
 #### א. חשבו את $P(X_1=2,X_2=1)$
 
+למשתנים $X_1,\ldots,X_n$ יש התפלגות משותפת מולטינומית, כאשר $r=n$, עם פרמטרים $p_1,\ldots,p_n$ כולם שווים. כלומר:
+- $(X_1,\ldots,X_n)\sim \text{Mult}(n,p_1,\ldots,p_n)$ 
+- $p_1=\ldots=p_n=\frac{1}{n}$
+כעת נוכל להסתכל על כל התאים $3,4,\ldots,n$ כעל תא אחד, כאשר $Y=X_3ּּ+\ldots+X_n$ ייצג את מספר הכדורים בתא הזה. 
 
+נסמן $p=1/n$ את ההסתברות של כדור להיכנס לתא $1$ או $2$.
+וגם $q=(n-2)/n$ את ההסתברות של כדור להיכנס לתא $3,\ldots,n$.
+
+כעת
+$$(X_1,X_2,Y)\sim \text{Mult}(n,p,p,q)=\text{Mult}(n,\frac{1}{n},\frac{1}{n},\frac{n-2}{n})$$ 
+לכן נחשב:
+
+$$
+\begin{align*}
+P(X_1=2,X_2=1)&=P(X_1=2,X_2=1,Y=n-3)\\
+&=\binom{n}{2,1,n-3}\cdot p^2\cdot p^1\cdot q^{n-3}\\
+&=\frac{n!}{2!1!(n-3)!}\cdot \left( \frac{1}{n} \right)^2\cdot \left( \frac{1}{n} \right)^1\cdot \left( \frac{n-2}{n} \right)^{n-3}\\
+&=\frac{n!}{2!1!(n-3)!}\cdot \left( \frac{1}{n} \right)^3\cdot \left( \frac{n-2}{n} \right)^{n-3}\\
+&=\boxed{ \frac{1}{2}(n-2)^{n-2}(n-1)n^{1-n} }
+\end{align*} 
+$$ 
 #### ב. חשבו את $P(X_4=1\mid X_3=2)$
 
+בדרך דומה לסעיף א'.
+$$
+\begin{align*}
+P(X_4=1\mid X_3=2)&=\frac{P(X_4=1,X_3=2)}{P(X_3=2)}\\ 
+&=\frac{P(X_4=1,X_3=2,Y_{1}=n-3)}{P(X_3=2,Y_{2}=n-2)}\\
+&=\frac{\frac{1}{2}(n-2)^{n-2}(n-1)n^{1-n}}{\binom{n}{2,n-2}\cdot \left( \frac{1}{n} \right)^2\cdot \left( \frac{n-1}{n} \right)^{n-2}}\\
+&=\frac{\frac{1}{2}(n-2)^{n-2}(n-1)n^{1-n}}{\frac{1}{2}{n\cdot(n-1)}\cdot n^{-2}\cdot \left( \frac{n-1}{n} \right)^{n-2}}\\
+&=\frac{(n-2)^{n-2}(n-1)n^{1-n}}{{n^{1-n}\cdot(n-1)^{n-1}}}\\
+&=\frac{(n-2)^{n-2}}{{(n-1)^{n-2}}}\\
+&=\boxed{ \left(\frac{n-2}{n-1}\right)^{n-2} }
+\end{align*} 
+$$
 
 #### ג. חשבו את $\rho(X_1,X_2)$
+
+$$
+\begin{align*}
+\rho(X_1,X_2)&=\frac{\text{Cov}(X_1,X_2)}{\sqrt{\text{Var}(X_1)\cdot\text{Var}(X_2)}} \\
+\end{align*} 
+$$ 
+$$X_1,X_{2}\sim \text{Bin}\left( n,\frac{1}{n} \right)$$
+ולכן:
+$$\text{Var}(X_{1})=\text{Var}(X_{2})=n\cdot\frac{1}{n}\cdot\left( 1-\frac{1}{n} \right)=1-\frac{1}{n}$$
+
+כמו כן, לפי הנוסחה בדוגמה האחרונה בסוף פרק 7.3 בספר:
+$$\text{Cov}(X_{1},X_{2})=-n\cdot\frac{1}{n}\cdot\frac{1}{n}=-\frac{1}{n}$$
+לפי זה נקבל:
+$$\rho(X_1,X_2)=\frac{-\frac{1}{n}}{\sqrt{\left( 1-\frac{1}{n} \right)^2}}=\frac{-\frac{1}{n}}{1-\frac{1}{n}}=\boxed{ -\frac{1}{n-1} }$$
+
+
+
+## שאלה 4
+
+נתון:
+- $X\sim \text{Geo}(p)$
+- $Y\sim \text{Bin}(n,p)$ 
+- $X,Y$ בלתי תלויים.
+### א. מהי ההסתברות ש- $X+Y=3$
+
+
+### ב. מהי ההסתברות ש- $X-1=Y$ 
+
+
+
+
+
+```
+1a:    ≈ 0.875
+1b:    ≈ 0.021
+1c:    ≈ 0.004
+1d:    ≈ 0.275
+1e:    ≈ 0.072
+2a:    p(2,0)=1/3, p(1,1)=1/6, p(1,-1)=1/3, p(0,0)=1/6
+2c:    1/17
+3a:    1/2 * (n-2)^(n-2) * (n-1) * n^(1-n)
+3b:    ((n-2)/(n-1))^(n-2)
+3c:    -1/(n-1)
+4a:    1/6 * (n - 1) n (n + 1) p^3 (1 - p)^(n-1)
+```

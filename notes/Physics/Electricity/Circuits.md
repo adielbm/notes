@@ -70,15 +70,7 @@ classification of elements:
 - This law is based on the conservation of energy
 
 # Resistance & Conductance
-
-```tex
-\usepackage{circuitikz}
-\begin{document}
-\begin{circuitikz}[american, thick]
-\draw (0,0) to [V, l={$V$}, invert](0,2) to[short, >, i=$I$](2,2) to [R, l={$R$}](2,0) to (0,0);
-\end{circuitikz}
-\end{document}
-```
+![[Resistance.svg]]
 
 - the electric current through a conductor between two points is directly proportional to the voltage across the two points
 	- Ohm's Law holds for **ohmic materials** (like most metals) but not for **non-ohmic materials** (like diodes, transistors, and other semiconductors)
@@ -98,16 +90,7 @@ classification of elements:
 
 ### Resistor
 
-```tex
-\usepackage{color,graphicx,circuitikz}
-\begin{document}
-\begin{circuitikz}[american, thick]
-\draw (0,0) to [R, l={$R$}](2,0);
-\end{circuitikz}
-\end{document}
-```
-
-
+![[Resistor.svg]]
 
 - The resistors could be simple resistors, or they could be lightbulbs, heating elements, or other resistive devices
 
@@ -128,19 +111,7 @@ classification of elements:
 		- When $R_i<R_j$ then $P_i<P_j$
 
 #### Parallel Resistors
-
-```tex
-\usepackage{circuitikz}
-\begin{document}
-\begin{circuitikz}[american, thick]
-	\draw (-1,0) -- (2,0) to (-1,0) to [battery1, l_={$V$}] (-1,-2) -- (2,-2);
-	\draw (0,0) to [R, l={$R_1$}, i={$I_1$}](0,-2);
-	\draw (1,0) to [R, l={$R_2$}, i={$I_2$}](1,-2);
-	\draw (2,0) to [R, l={$R_3$}, i={$I_3$}](2,-2);
-	\draw (-1,0) to [short, i={$I$}] (0,0);
-\end{circuitikz}
-\end{document}
-```
+![[Parallel Resistors.svg]]
 
 - We say that $n$ resistors are connected in **parallel** when the current from the source splits into $n$ paths
 	- $\displaystyle I_i=\frac{V}{R_i}$ is the current through the $i$-th resistor
@@ -170,15 +141,8 @@ todo
 - #todo https://www.youtube.com/watch?v=33vbFFFn04k
 
 # Capacitance
+![[Capacitor.svg]]
 
-```tex
-\usepackage{color,graphicx,circuitikz}
-\begin{document}
-\begin{circuitikz}[american, thick]
-\draw (0,0) to [C, l={$C$}](2,0);
-\end{circuitikz}
-\end{document}
-```
 
 - A **capacitor** is a device that can store electric charge, and normally consists of two condaucting objects (usually plates or sheets) placed near each other but not touching
 	- The capacitor was originally known as the **condenser**

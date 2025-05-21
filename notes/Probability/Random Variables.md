@@ -53,7 +53,7 @@
 
 ### Covariance
 
-- The **covariance** between $X$ and $Y$, denoted by $\text{Cov}(X,Y)$, is defined by $\text{Cov}(X,Y)=E[(X-E[X])(Y-E[Y])]$
+- The **covariance** between $X$ and $Y$, denoted by $\text{Cov}(X,Y)$, is defined by $\text{Cov}(X,Y)=E[(X-E[X])(Y-E[Y])]=E[XY]-E[X]E[Y]$. 
 	- $\text{Cov}(X,Y)=\text{Cov}(Y,X)$
 	- $\text{Cov}(X,X)=\text{Var}(X)$
 	- $\text{Cov}(aX,Y)=a\text{Cov}(X,Y)$
@@ -155,7 +155,7 @@
 - Geometric:
 	- $\displaystyle P(X\geq k)=(1-p)^{k-1}$
 - Speical Cases:
-	- $\text{Binomial}(1,p)=\text{Bernoulli}(p)$
+	- $\text{Bernoulli}(p)=\text{Binomial}(1,p)$
 	- $\text{Geometric}(p)=\text{NB}(1,p)$
 - Hypergeometric:
 	- If $p=\displaystyle\frac{K}{N}$, then $\displaystyle E[X]=n\frac{K}{N}=np$

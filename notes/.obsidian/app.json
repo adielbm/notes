@@ -13,5 +13,6 @@
   "propertiesInDocument": "source",
   "foldIndent": true,
   "showIndentGuide": true,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "Images"
 }
