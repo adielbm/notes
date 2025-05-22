@@ -529,7 +529,8 @@ tr {
 img {
   max-width: 100%;
   border-radius: var(--borderRadius);
-  margin: 1rem 0;
+  margin: 0 auto;
+  display: block;
 }
 
 p>img+em {
