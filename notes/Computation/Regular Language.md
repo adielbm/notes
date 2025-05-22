@@ -90,44 +90,8 @@ The $\mathrm{CONVERT}(G)$ procedure is used to convert a GNFA $G$ into a regular
 				- $\delta'(q_i,q_j)=(\delta(q_i,q_{\mathrm{rip}}))(\delta(q_{\mathrm{rip}},q_{\mathrm{rip}}))^*(\delta(q_{\mathrm{rip}},q_j))\cup(\delta(q_i,q_j))=(R_1)(R_2)^*(R_3)\cup(R_4)$
 	- Return $\mathrm{CONVERT}(G')$
 
+![[GNFA to Regular Expression.svg]]
 
-```tikz
-\usepackage{tikz}
-\usetikzlibrary{automata, arrows.meta, positioning}
-\usepackage{amssymb}
-\begin{document}
-\begin{tikzpicture}[
-      shorten >=3pt,
-      bend angle=20,
-      inner sep=5pt,
-	node distance=60pt,
-      thick,
-      >={Stealth[round]},
-      initial text=start,
-      accepting by double/.style={double, double distance=1.5pt},
-      on grid]
-  
-  % Left diagram
-  \node[state] (q_i) {$q_i$};
-  \node[state] (qr) [below right=of q_i] {$q_\mathrm{rip}$};
-  \node[state] (q_j) [above right=of qr] {$q_j$};
-
-  \draw (q_i) edge [bend left,above, ->] node[auto]{$R_4$} (q_j);
-  \draw (q_i) edge[bend right, below, ->] node[below left]{$R_1$} (qr);
-  \draw (qr) edge [bend right,above, ->] node[below right]{$R_3$} (q_j);
-  \draw (qr) edge[loop below, ->]node[auto]{$R_2$} (qr);
-
-  % Spacing between the two diagrams
-  \node at (5, 0) {$\scalebox{2}{$\rightsquigarrow$}$}; % Empty node to add some space between the two diagrams
-  
-  % Right diagram
-  \node[state] (q_i2) at (7, 0) {$q_i$};
-  \node[state] (q_j2) [right=150pt of q_i2] {$q_j$};
-  \draw (q_i2) edge [above, ->] node[auto]{$(R_1)(R_2)^*(R_3)\cup(R_4)$} (q_j2);
-\end{tikzpicture}
-\end{document}
-
-```
 
 ### Regular Grammar
 
