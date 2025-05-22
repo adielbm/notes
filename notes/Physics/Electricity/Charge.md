@@ -61,32 +61,7 @@
 - $\displaystyle\vec{E}=k \int \frac{dq}{r^2} \hat{r}$ #todo 
 
 
-
-```tex
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta}
-\definecolor{_red}{HTML}{D63146}
-\definecolor{_pink}{HTML}{ef3875}
-\definecolor{_green}{HTML}{5dc3ad}
-\newcommand{\customarrow}[5]{
-	\draw[ultra thick, arrows = {-Stealth[reversed, reversed]}, color=#4] (#1,#2) -- (#3,#2) node[midway, below] {#5};
-}
-\begin{document}
-\begin{tikzpicture}
-\customarrow{0}{0}{1}{_red}{$\vec{\mathbf{E}}$}
-\draw[fill] (0,0) circle [radius=0.08] node[above] {$P$};
-\draw[fill=_green, draw=none] (2,0) circle [radius=0.2] node[right, xshift=0.2cm] {$Q$};
-\node at (2, 0) {$-$};
-\node at (4, 0) {$\mathsf{negative\ charge}$};
-\draw[|-|] (0,0.7) -- (2,0.7) node[midway, below] {$r$};
-\customarrow{0}{-1}{-1}{_red}{$\vec{\mathbf{E}}$}
-\draw[fill] (0,-1) circle [radius=0.08] node[above] {$P$};
-\draw[fill=_pink, draw=none] (2,-1) circle [radius=0.2] node[right, xshift=0.2cm] {$Q$};
-\node at (2, -1) {$+$};
-\node at (4, -1) {$\mathsf{positive\ charge}$};
-\end{tikzpicture}
-\end{document}
-```
+![[Electric Field due to a Point Charge.svg]]
 
 > [!Notes]
 > - There is no electric charge at point $P$. But there is an electric field there. The only real charge is $Q$.

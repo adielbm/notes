@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="59.482pt" height="45.549pt" viewBox="0 0 59.482 45.549"><desc>\usepackage{color,graphicx,circuitikz}
+\begin{document}
+\begin{circuitikz}[american, thick]
+\draw (0,0) to [leDo, l={$$}](2,0);	
+\end{circuitikz}
+\end{document}</desc>
+<defs>
+<clipPath id="clip-0">
+<path clip-rule="nonzero" d="M 0 1 L 59.480469 1 L 59.480469 45.550781 L 0 45.550781 Z M 0 1 "/>
+</clipPath>
+</defs>
+<path fill="none" stroke-width="0.79701" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -0.00046875 -0.0019375 L 20.409688 -0.0019375 M 36.284687 -0.0019375 L 56.694844 -0.0019375 " transform="matrix(1, 0, 0, -1, 1.395, 33.834)"/>
+<g clip-path="url(#clip-0)">
+<path fill="none" stroke-width="1.59404" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 36.284687 -0.0019375 L 20.409688 9.919938 L 20.409688 -9.919906 Z M 36.284687 -0.0019375 " transform="matrix(1, 0, 0, -1, 1.395, 33.834)"/>
+</g>
+<path fill="none" stroke-width="1.59404" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 36.284687 -9.919906 L 36.284687 9.919938 " transform="matrix(1, 0, 0, -1, 1.395, 33.834)"/>
+<path fill="none" stroke-width="0.79701" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 25.171406 9.919938 L 31.1675 17.416031 " transform="matrix(1, 0, 0, -1, 1.395, 33.834)"/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 34.503906 13.992188 C 33.492188 14.839844 31.632812 16.335938 29.75 16.824219 C 31.671875 16.703125 32.480469 17.347656 32.785156 19.25 C 32.84375 17.308594 33.898438 15.164062 34.503906 13.992188 Z M 34.503906 13.992188 "/>
+<path fill="none" stroke-width="0.79701" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 29.933125 7.935563 L 35.929219 15.431656 " transform="matrix(1, 0, 0, -1, 1.395, 33.834)"/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 39.265625 15.976562 C 38.253906 16.824219 36.394531 18.320312 34.511719 18.808594 C 36.433594 18.6875 37.242188 19.332031 37.546875 21.234375 C 37.609375 19.292969 38.660156 17.148438 39.265625 15.976562 Z M 39.265625 15.976562 "/>
+</svg>

@@ -1,9 +1,9 @@
 
-| Common terminology       | CLRS                            | Diagram                   |
-| ------------------------ | ------------------------------- | ------------------------- |
-| **Full** Binary Tree     |                                 | ![ \|110](fullBT.svg)     |
-| **Complete** Binary Tree | **Nearly Complete** Binary Tree | ![ \|110](completeBT.svg) |
-| **Perfect** Binary Tree  | **Complete** Binary Tree        | ![ \|110](perfectBT.svg)  |
+| Common terminology       | CLRS                            | Diagram                                 |
+| ------------------------ | ------------------------------- | --------------------------------------- |
+| **Full** Binary Tree     |                                 | ![ \|110](Full%20Binary%20Tree.svg)     |
+| **Complete** Binary Tree | **Nearly Complete** Binary Tree | ![ \|110](Complete%20Binary%20Tree.svg) |
+| **Perfect** Binary Tree  | **Complete** Binary Tree        | ![ \|110](Perfect%20Binary%20Tree.svg)                |
 
 >[!warning] **Common terminology** will be used below
 

@@ -1,19 +1,6 @@
 # Electric Battery
 
-```tex
-\usepackage{color,graphicx,circuitikz}
-\begin{document}
-\begin{circuitikz}[american]
-
-% battery symbol `battery1`
-%\draw (2,0) to [battery1, l={$\mathsf{}$}] (3,0);
-
-% `battery1`, polarity marks below, without text
-\draw (0,0) to [battery1, l={$\mathsf{}$}, v_=$\;$] (1,0);
-
-\end{circuitikz}
-\end{document}
-```
+![[Battery symbol.svg]]
 
 - A **Galvanic cell** (or **voltaic cell**) is an electrochemical cell that converts chemical energy into electrical energy, consisting of:
 	- two **electrodes**: conductors through which electric current enters or leaves the cell
