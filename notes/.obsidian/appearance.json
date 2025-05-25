@@ -1,12 +1,13 @@
 {
-  "theme": "obsidian",
+  "theme": "moonstone",
   "translucency": false,
   "enabledCssSnippets": [
-    "style"
+    "style",
+    "print"
   ],
   "showRibbon": false,
   "baseFontSize": 16,
   "showViewHeader": true,
-  "accentColor": "",
+  "accentColor": "#289f95",
   "cssTheme": "Flexoki"
 }
