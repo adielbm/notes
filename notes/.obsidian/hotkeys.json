@@ -102,5 +102,6 @@
       ],
       "key": "ArrowLeft"
     }
-  ]
+  ],
+  "file-explorer:new-file": []
 }

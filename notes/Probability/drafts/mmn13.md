@@ -12,15 +12,14 @@ P(X_1+\cdots+X_{5}\geq 2)&=1-P(X_1+\cdots+X_{5}< 2) \\
 &=1-\frac{37}{2e^5} \\ 
 &\approx \boxed{ 0.875 }
 \end{align*}$$
-
 ### ב.
 
 $$\begin{align*}
-P(X_1+\cdots+X_{5} = 1)\cdot P(X_{6}\geq 1)&= e^{-5}{5}^1\frac{1}{1!}\cdot \left( 1-\left( e^{-1}1^1\cdot \frac{1}{0!} \right) \right) \\
-&= \frac{5\left( 1-\frac{1}{e} \right)}{e^5} \\ 
-&\approx \boxed{ 0.021 }
+P(X_1+\cdots+X_{5} = 1)\cdot P(X_{6}\geq 1)+\,\\\,+\,P(X_1+\cdots+X_{5} = 0)\cdot P(X_{6}\geq 2)&= e^{-5}{5}^1\frac{1}{1!}\cdot \left( 1-\left( e^{-1}1^1\cdot \frac{1}{0!} \right) \right)+ e^{-5}\frac{5^0}{0!}\cdot\left( 1-e^{-1}\frac{1^1}{0!} -e^{-1}\frac{1^0}{1!} \right) \\
+&= e^{-5}{5}^1\cdot \left( 1-\left( e^{-1}\right) \right)+ e^{-5}\cdot\left( 1-e^{-1}-e^{-1} \right) \\
+&= \frac{6e - 7}{e^6} \\ 
+&\approx \boxed{ 0.023 }
 \end{align*}$$
-
 
 ### ג. 
 $$\begin{align*}
@@ -197,12 +196,7 @@ P(X_4=1\mid X_3=2)&=\frac{P(X_4=1,X_3=2)}{P(X_3=2)}\\
 $$
 
 #### ג. חשבו את $\rho(X_1,X_2)$
-
-$$
-\begin{align*}
-\rho(X_1,X_2)&=\frac{\text{Cov}(X_1,X_2)}{\sqrt{\text{Var}(X_1)\cdot\text{Var}(X_2)}} \\
-\end{align*} 
-$$ 
+ 
 $$X_1,X_{2}\sim \text{Bin}\left( n,\frac{1}{n} \right)$$
 ולכן:
 $$\text{Var}(X_{1})=\text{Var}(X_{2})=n\cdot\frac{1}{n}\cdot\left( 1-\frac{1}{n} \right)=1-\frac{1}{n}$$
@@ -210,7 +204,7 @@ $$\text{Var}(X_{1})=\text{Var}(X_{2})=n\cdot\frac{1}{n}\cdot\left( 1-\frac{1}{n}
 כמו כן, לפי הנוסחה בדוגמה האחרונה בסוף פרק 7.3 בספר:
 $$\text{Cov}(X_{1},X_{2})=-n\cdot\frac{1}{n}\cdot\frac{1}{n}=-\frac{1}{n}$$
 לפי זה נקבל:
-$$\rho(X_1,X_2)=\frac{-\frac{1}{n}}{\sqrt{\left( 1-\frac{1}{n} \right)^2}}=\frac{-\frac{1}{n}}{1-\frac{1}{n}}=\boxed{ -\frac{1}{n-1} }$$
+$$\rho(X_1,X_2)=\frac{\text{Cov}(X_1,X_2)}{\sqrt{\text{Var}(X_1)\cdot\text{Var}(X_2)}}=\frac{-\frac{1}{n}}{\sqrt{\left( 1-\frac{1}{n} \right)^2}}=\frac{-\frac{1}{n}}{1-\frac{1}{n}}=\boxed{ -\frac{1}{n-1} }$$
 
 
 
@@ -246,19 +240,3 @@ P(X-1=Y)&=\sum_{k-1=m}P(X=k)P(Y=m) \\
 
 (המעבר השני נובע מכך ש- $P(Y=m)=0$ עבור $m>n$. כמו כן השתמשתי בנוסחת הבינום $\sum_{k=0}^{n}\binom{n}{k}x^k=(1+x)^{n}$).  
 
-```
-maman 13:
-1a:    ≈ 0.875
-1b:    ≈ 0.021
-1c:    ≈ 0.004
-1d:    ≈ 0.275
-1e:    ≈ 0.072
-2a:    p(2,0)=1/3, p(1,1)=1/6, p(1,-1)=1/3, p(0,0)=1/6
-2b:    אינם בלתי תלויים
-2c:    1/17
-3a:    1/2 * (n-2)^(n-2) * (n-1) * n^(1-n)
-3b:    ((n-2)/(n-1))^(n-2)
-3c:    -1/(n-1)
-4a:    p(1-p)^{n+2} + p^2n (1-p)^{n} + p^3 \binom{n}{2} (1-p)^{n-2}
-4b:    p(1-p^2)^{n}
-```

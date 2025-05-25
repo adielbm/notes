@@ -33,6 +33,6 @@
 - $P=I^2R=I_0^2R\sin^2(\omega t)$ is the power transformed in a resistance $R$ at time $t$
 	- Because the current is squared, the power is always positive
 	- The average power is $\overline{P}=\frac{1}{2}I_0^2R$
-- The [[Means#Root-Mean Square (RMS)|rms]] values of sinusoidally alternating currents and voltages are:
+- The [[Means#Continuous Functions|rms]] values of sinusoidally alternating currents and voltages are:
 	- $I_{\text{rms}}=\frac{I_0}{\sqrt{2}}$
 	- $V_{\text{rms}}=\frac{V_0}{\sqrt{2}}$
