@@ -49,7 +49,7 @@
 
 #### ד. $\{\langle D,w\rangle : D \text{ is a DFA and }w\notin L(D)\}$
 
-מאחר $A_{\textsf{DFA}}$ היא כריעה, אז גם המשלים שלה $\overline{A_{\textsf{DFA}}}$ היא כריעה. (תרגיל 3.15d).
+מאחר ו- $A_{\textsf{DFA}}$ היא כריעה, אז גם המשלים שלה $\overline{A_{\textsf{DFA}}}$ היא כריעה. (תרגיל 3.15d).
 ולכן קיימת מ"ט שמכריעה את השפה הזו.
 
 <div class="page-break"></div>

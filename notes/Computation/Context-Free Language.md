@@ -39,6 +39,8 @@
 	- $\forall i\geq 0,uv^ixy^iz\in L$ 
 	- $|vxy|\leq p$
 	- $|vy|>0$
+- The class of CFLs is closed under: union, concatenation, Kleene star, reversal, and intersection with regular languages. However, it is not closed under intersection or complementation.
+
 
 
 # Pushdown Automata (PDA)

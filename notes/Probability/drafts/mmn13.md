@@ -2,6 +2,7 @@
 <h5 style="text-align: center;">הסתברות: ממ"ן 13</h5>
 <p style="text-align: center;">עדיאל בן משה</p>
 
+
 ## שאלה 1
 
 ### א.
@@ -48,6 +49,9 @@ P(X_{1}+\dots+X_{5}=4 \cap X_{3}=0)&=P(X_{1}+X_{2}+X_{4}+X_{5}=4)\cdot P(X_{3}=0
 &\approx \boxed{ 0.072 }
 \end{align*} 
 $$
+
+<div class="page-break"></div>
+
 
 ## שאלה 2
 
@@ -153,6 +157,8 @@ $$
 $$
 
 
+<div class="page-break"></div>
+
 ## שאלה 3
 
 - $n\geq 4$
@@ -207,6 +213,8 @@ $$\text{Cov}(X_{1},X_{2})=-n\cdot\frac{1}{n}\cdot\frac{1}{n}=-\frac{1}{n}$$
 $$\rho(X_1,X_2)=\frac{\text{Cov}(X_1,X_2)}{\sqrt{\text{Var}(X_1)\cdot\text{Var}(X_2)}}=\frac{-\frac{1}{n}}{\sqrt{\left( 1-\frac{1}{n} \right)^2}}=\frac{-\frac{1}{n}}{1-\frac{1}{n}}=\boxed{ -\frac{1}{n-1} }$$
 
 
+
+<div class="page-break"></div>
 
 ## שאלה 4
 

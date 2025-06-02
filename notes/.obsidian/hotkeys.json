@@ -27,14 +27,6 @@
     }
   ],
   "command-palette:open": [],
-  "darlal-switcher-plus:switcher-plus:open-symbols": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "P"
-    }
-  ],
   "darlal-switcher-plus:switcher-plus:open-commands": [
     {
       "modifiers": [
@@ -103,5 +95,30 @@
       "key": "ArrowLeft"
     }
   ],
-  "file-explorer:new-file": []
+  "file-explorer:new-file": [],
+  "darlal-switcher-plus:switcher-plus:open-symbols-active": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "O"
+    }
+  ],
+  "oin-gotoheading:gotoheading-next": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "PageDown"
+    }
+  ],
+  "oin-gotoheading:gotoheading-previous": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "PageUp"
+    }
+  ]
 }
