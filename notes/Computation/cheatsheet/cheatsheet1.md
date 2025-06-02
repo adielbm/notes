@@ -10,14 +10,15 @@
 - Every NFA can be converted to an equivalent one that has a single accept state.
 - (**regular grammar**) $G=(V,\Sigma,R,S)$. Rules: $A\to aB$, $A\to a$ or $S\to \varepsilon$. ($A,B,S\in V$ and $a\in \Sigma$).
 
-|         | NReg | Reg | CFL | TD  | TR  |
-| ------- | ---- | --- | --- | --- | --- |
-| Union   |      | ✓   | ✓   | ✓   | ✓   |
-| Inter.  |      | ✓   | ✗   | ✓   | ✓   |
-| Comp.   | ✓    | ✓   | ✗   | ✓   | ✗   |
-| Concat. |      | ✓   | ✓   | ✓   | ✓   |
-| Star    |      | ✓   | ✓   | ✓   | ✓   |
-| Rev.    |      | ✓   | ✓   | ✓   | ✓   |
+|           | NReg | Reg | CFL | TD  | TR  |
+| --------- | ---- | --- | --- | --- | --- |
+| Union     |      | ✓   | ✓   | ✓   | ✓   |
+| Inter.    |      | ✓   | ✗   | ✓   | ✓   |
+| Comp.     | ✓    | ✓   | ✗   | ✓   | ✗   |
+| Concat.   |      | ✓   | ✓   | ✓   | ✓   |
+| Star      |      | ✓   | ✓   | ✓   | ✓   |
+| Rev.      |      | ✓   | ✓   | ✓   | ✓   |
+| $L\cap R$ |      | ✓   | ✓   | ✓   | ✓   |
 
 # CFG
 

@@ -1,0 +1,28 @@
+html {
+    background: #f8fbff;
+}
+body {
+    direction: rtl;
+    font-family: sans-serif;
+    line-height: 1.7;
+    background: white;
+	max-width: 50em;
+}
+h1, h2, h3, h4, h5, h6, strong, b b { 
+	color: #2a73f0;
+}
+img {
+    max-width: 25em;
+    margin: 0 auto;
+    display: block;
+}
+span.subq {
+    font-size: 20px;
+    color: #2a73f0;
+    font-weight: bold;
+    padding-left: 14px;
+}
+
+html.dark {
+filter: invert(1) hue-rotate(180deg);
+}

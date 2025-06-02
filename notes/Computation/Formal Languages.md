@@ -60,15 +60,16 @@
 
 ### Operations & Closure Properties 
 
-| Operation     |                                                                            | Regular | CFL | Decidable (R) | Turing-recognizable (RE) |
-| ------------- | -------------------------------------------------------------------------- | ------- | --- | ------------- | ------------------------ |
-| Union         | $L_1 \cup L_2 = \{w \mid w \in L_1 \lor w \in L_2\}$                       | Yes     | Yes | Yes           | Yes                      |
-| Intersection  | $L_1 \cap L_2 = \{w \mid w \in L_1 \land w \in L_2\}$                      | Yes     | ╳   | Yes           | Yes                      |
-| Complement    | $\overline{L_1} = \{w \mid w \not\in L_1\}$                                | Yes     | ╳   | Yes           | ╳                        |
-| Concatenation | $L_1 \cdot L_2 = \{wz \mid w \in L_1 \land z \in L_2\}$                    | Yes     | Yes | Yes           | Yes                      |
-| Kleene Star   | $L_1^{*} = \{\varepsilon\} \cup \{wz \mid w \in L_1 \land z \in L_1^{*}\}$ | Yes     | Yes | Yes           | Yes                      |
-| Reverse       | $L^\mathcal{R} = \{w^\mathcal{R} \mid w \in L\}$                           | Yes     | Yes | Yes           | Yes                      |
-| Homomorphism  |                                                                            | Yes     | Yes | ╳             | Yes                      |
+| Operation                             |                                                                            | Regular | CFL | Decidable (R) | Turing-recognizable (RE) |
+| ------------------------------------- | -------------------------------------------------------------------------- | ------- | --- | ------------- | ------------------------ |
+| Union                                 | $L_1 \cup L_2 = \{w \mid w \in L_1 \lor w \in L_2\}$                       | Yes     | Yes | Yes           | Yes                      |
+| Intersection                          | $L_1 \cap L_2 = \{w \mid w \in L_1 \land w \in L_2\}$                      | Yes     | ╳   | Yes           | Yes                      |
+| Complement                            | $\overline{L_1} = \{w \mid w \not\in L_1\}$                                | Yes     | ╳   | Yes           | ╳                        |
+| Concatenation                         | $L_1 \cdot L_2 = \{wz \mid w \in L_1 \land z \in L_2\}$                    | Yes     | Yes | Yes           | Yes                      |
+| Kleene Star                           | $L_1^{*} = \{\varepsilon\} \cup \{wz \mid w \in L_1 \land z \in L_1^{*}\}$ | Yes     | Yes | Yes           | Yes                      |
+| Reverse                               | $L^\mathcal{R} = \{w^\mathcal{R} \mid w \in L\}$                           | Yes     | Yes | Yes           | Yes                      |
+| Homomorphism                          |                                                                            | Yes     | Yes | ╳             | Yes                      |
+| Intersection with a regular lang. $R$ | ${\displaystyle L\cap R=\{w\mid w\in L\land w\in R\}}$                     | Yes     | Yes | Yes           | Yes                      |
 
 ### Classification
 
