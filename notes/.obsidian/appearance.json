@@ -3,7 +3,7 @@
   "translucency": false,
   "enabledCssSnippets": [
     "style",
-    "print"
+    "custom1"
   ],
   "showRibbon": false,
   "baseFontSize": 16,
