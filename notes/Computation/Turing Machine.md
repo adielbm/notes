@@ -60,6 +60,10 @@
 	- (p3.18) There exists an enumerator that enumerates $L$ in lexicographic order
 - A language is said to be **undecidable** if it is not decidable.
 - (**Rice's Theorem**) Let $P$ be a language of TM descriptions, such that (i) $P$ is nontrivial (not empty and not all TM descriptions) and (ii) for each two TM $M_1$ and $M_2$, we have $L(M_1)=L(M_2)\implies(\langle M_1\rangle\in P\iff \langle M_2\rangle\in P)$. Then $P$ is undecidable. 
+- The set of all Turing machines is countable.
+- The set of all languages is uncountable.
+- The set of all strings $\Sigma^*$ is countable for any alphabet $\Sigma$. 
+- The set of all infinite binary sequences is uncountable.  
 
 #### Examples
 ##### Turing-unrecognizable languages
