@@ -1,0 +1,1 @@
+- A **locus** is the set of all points and only those points that satisfy a given condition (or set of conditions)

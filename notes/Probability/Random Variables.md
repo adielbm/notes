@@ -9,6 +9,8 @@
 - The **median** of a random variable $X$ is a value $m$ such that $P(X\leq m)\geq \frac{1}{2}$ and $P(X\geq m)\geq \frac{1}{2}$.
 - (**Chebyshev's inequality**) For any random variable $X$ with nonzero finite variance, and for any $k>0$, we have $P(|X-\mu|\geq k\sigma)\leq \frac{1}{k^2}$. (or equivalently, $\displaystyle P(|X-\mu|\geq k)\leq \frac{\sigma^2}{k^2}$)
 - (**Markov's inequality**) For any non-negative random variable $X$ and for any $a>0$, we have $P(X\geq a)\leq \frac{E[X]}{a}$.
+- (Memoryless Property) A random variable $X$ is said to have the **memoryless property** if $\forall s,t\geq 0,\,P(X>s+t \mid X>s)=P(X>t)$.
+	- The exponential and geometric distribution have the memoryless property.
 
 ## Moments
 
@@ -83,8 +85,7 @@
 	- If $\rho(X,Y)=-1$, then $X$ and $Y$ are said to be **perfectly negatively correlated**.
 	- If $\rho(X,Y)=0$, then $X$ and $Y$ are said to be **uncorrelated**.
 
-
-## Discrete Random Variables
+## Discrete RV
 
 - A **discrete random variable** is a random variable $X$, whose image, $X(S)=\{X(s):s\in S\}$, is a countable set.
 	- The **support** of a discrete random variable $X$ is the set $\{x\in\mathbb{R}:P(X=x)>0\}$
@@ -152,6 +153,8 @@
 	- $\forall s,t\geq 0,N(s+t)-N(s)\sim\text{Pois}(\lambda t)$
 
 
+### theorems 
+
 - Geometric:
 	- $\displaystyle P(X\geq k)=(1-p)^{k-1}$
 - Speical Cases:
@@ -160,8 +163,11 @@
 - Hypergeometric:
 	- If $p=\displaystyle\frac{K}{N}$, then $\displaystyle E[X]=n\frac{K}{N}=np$
 		- If $N$ is large in relation to $n$, then $\text{Var}(X)\approx np(1-p)$
+- If $X\perp Y$ and $X\sim\text{Pois}(\lambda_{1})$ and $Y\sim\text{Pois}(\lambda_{2})$, then $X\mid X+Y=n\sim \text{Binomial}\left( n,\frac{\lambda_{1}}{\lambda_{1}+\lambda_{2}} \right)$
+- If $X\perp Y$ and $X\sim\text{Bin}(n_{1},p)$ and $Y\sim\text{Bin}(n_{2},p)$, then $X\mid X+Y=n\sim \text{Hypergeo}\left( n_1+n_2,n_1,n \right)$
 
-## Continuous Random Variables
+
+## Continuous RV
 
 - A **continuous random variable** is a random variable $X$, whose image, $X(S)=\{X(s):s\in S\}$, is an uncountable set.
 - Let $X$ be a continuous random variable:
@@ -184,7 +190,7 @@
 
 - (5.7.1) Let $X$ be continuous with PDF $f(x)$, and the support of $X$ is an interval $I$, and $g$ is differentiable on $I$, and $g'(x)\neq 0$ for all $x\in I$, then, the PDF of $Y=g(X)$ is given by: $$f_{Y}(y)=\displaystyle \begin{cases}f_{X}(g^{-1}(y))\cdot \displaystyle \left| \frac{d}{dy}g^{-1}(y) \right|  & \text{if } y\in g(I) \\ 0 & \text{otherwise} \end{cases}$$ 
 
-### Continuous Distributions
+### Distributions
 
 
 | **Distribution**                     | PDF                                                                                          | $E(X)$              | **Var(X)**             | **CDF**                                                                                             | **MGF** |
@@ -210,7 +216,7 @@
 	- $\sigma=\sqrt{np(1-p)}$
 
 
-## Jointly Distributed Random Variables
+## Jointly Distributed RV
 
 - $X$ and $Y$
 	- $p(i,j)=P(X=i,Y=j)$ is the **joint PMF** of $X$ and $Y$
