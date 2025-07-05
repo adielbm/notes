@@ -27,15 +27,14 @@ For every action force $\vec{F}_{1 \to 2}$ exerted by object 1 on object 2, ther
 
 ### Momentum
 
-- $\vec{p} = m\vec{v}$
-  - $\vec{p}$ is the **(linear) momentum** vector (in $\mathsf{kg\cdot m/s}$)
-  - $m$ is the mass (in $\mathsf{kg}$)
-  - $\vec{v}$ is the velocity vector (in $\mathsf{m/s}$)
+- $\vec{p} = m\vec{v}$ is the **(linear) momentum** (in $\mathsf{kg\cdot m/s}$) of a body with mass $m$ (in $\mathsf{kg}$) and velocity $\vec{v}$ (in $\mathsf{m/s}$)
+
 
 #### Impulse 
 
-- If a constant force $\vec{\mathbf{F}}$ acts on an object, the **impulse** $\vec{\mathbf{J}}$ delivered to the object over a time interval $\Delta t$ is given by $$\vec{\mathbf{J}} = \vec{\mathbf{F}}\Delta t$$
-- (Impulse-Momentum Theorem) $$\vec{\mathbf{J}} = \Delta \vec{\mathbf{p}}$$ (the impulse is equal to the change in momentum)
+- $\vec{\mathbf{J}} = \vec{\mathbf{F}}\Delta t$ is the **impulse** (in $\mathsf{N\cdot s}$) delivered to an object by a constant force $\vec{\mathbf{F}}$ (in $\mathsf{N}$) over a time interval $\Delta t$ (in $\mathsf{s}$)
+- $\displaystyle \vec{\mathbf{J}} = \int_{t_1}^{t_2} \vec{\mathbf{F}} dt$ is the impulse delivered to an object by a variable force $\vec{\mathbf{F}}$ over the time interval $[t_1, t_2]$ (in $\mathsf{N\cdot s}$)
+- (**Impulse-Momentum Theorem**) $\vec{\mathbf{J}} = \Delta \vec{\mathbf{p}}$ (the impulse is equal to the change in momentum)
 
 ### Motion in One Dimension
 

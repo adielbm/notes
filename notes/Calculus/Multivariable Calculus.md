@@ -37,3 +37,27 @@
 - $\displaystyle\iiint_D f(x,y,z)\,dx\,dy\,dz$  
 - $\displaystyle \int_0^\infty \int_0^y f(x,y)\,dx\,dy$  
 
+# Line Integrals 
+### Line integral of a scalar field
+
+![](https://upload.wikimedia.org/wikipedia/commons/4/42/Line_integral_of_scalar_field.gif)
+
+- $\displaystyle \int_\mathcal {C} f(x,y)\,ds=\int_a^b f(\mathbf{r}(t))\, \vert\mathbf{r}'(t)\vert\,dt$ is the **line integral** of a scalar field $f$ along a curve $\mathcal{C}$, where:
+	- $f: U\to \mathbb{R}$
+	- $U\subset \mathbb{R}^2$ is an open set  
+	- ${\displaystyle {\mathcal {C}}\subset U}$ is a piecewise smooth curve parametrized by $\mathbf{r}(t)=(x(t),y(t))$ for $t\in [a,b]$.
+	- $\displaystyle ds=\sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2}\,dt$ is the differential arc length along the curve $\mathcal{C}$.
+
+> this can be generalized to curve $\mathcal{C}$ in $\mathbb{R}^3$ as follows: $\displaystyle \int_\mathcal {C} f(x,y,z)\,ds=\int_a^b f(\mathbf{r}(t))\, \vert\mathbf{r}'(t)\vert\,dt$ where $\mathbf{r}(t)=(x(t),y(t),z(t))$ for $t\in [a,b]$.
+
+### Line integral of a vector field (2d)
+
+![](https://upload.wikimedia.org/wikipedia/commons/b/b0/Line_integral_of_vector_field.gif)
+
+- $\displaystyle \int_\mathcal {C} \mathbf{F}(\mathbf{r})\cdot d\mathbf{r}=\int_a^b \mathbf{F}(\mathbf{r}(t))\cdot \mathbf{r}'(t)\,dt$ is the **line integral** of a vector field $\mathbf{F}$ along a curve $\mathcal{C}$, where:
+	- $\mathbf{F}: U\to \mathbb{R}^2$
+	- $U\subset \mathbb{R}^2$ is an open set  
+	- ${\displaystyle {\mathcal {C}}\subset U}$ is a piecewise smooth curve parametrized by $\mathbf{r}(t)=(x(t),y(t))$ for $t\in [a,b]$.
+	- $\displaystyle d\mathbf{r}=\left(\frac{dx}{dt},\frac{dy}{dt}\right)\,dt$ is the differential displacement vector along the curve $\mathcal{C}$.
+
+

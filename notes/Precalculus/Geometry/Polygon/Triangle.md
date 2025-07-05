@@ -117,3 +117,10 @@
 - Given the triangles $\triangle A'B'C'$ and $\triangle ABC$
 	- If $\frac{\overline{AB}}{\overline{A'B'}}=\frac{\overline{BC}}{\overline{B'C'}}=\frac{\overline{AC}}{\overline{A'C'}}$ then $\triangle ABC \sim \triangle A'B'C'$
 	- If it holds that the angles are equal: $\sphericalangle{A}=\sphericalangle{A'}, \sphericalangle{B}=\sphericalangle{B'}, \sphericalangle{C}=\sphericalangle{C'}$ then $\triangle ABC \sim \triangle A'B'C'$
+
+
+# Circle and Triangle 
+
+- The **incircle** (or **inscribed circle**, מעגל חסום) of a triangle is the greatest circle that can be contained in the triangle.
+- The **circumcircle** (or **circumscribed circle**, מעגל חוסם) of a triangle is the circle that passes through all three vertices of the triangle.
+- The **circumcenter** of triangle is the point where three perpendicular bisectors from the sides of a triangle intersect.
