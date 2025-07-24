@@ -1,0 +1,4 @@
+- The **gradient vector** (or **gradient**) of $f$ is the vector $\nabla f=\left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y}\right)$. 
+	- $\nabla f(p_{0})=\left(\frac{\partial f}{\partial x}(p_{0}),\frac{\partial f}{\partial y}(p_{0})\right)$ is the vector of partial derivatives at the point $p_{0}$.
+	- $\displaystyle \frac{\partial f}{\partial \mathbf{v}}(p_0)=\nabla f(p_{0})\cdot \mathbf{v}$
+- The **divergence** of a vector field $\mathbf{F}=F_x\mathbf{i}+F_y\mathbf{j}+F_z\mathbf{k}$ is defined as the scalar-valued function $\displaystyle\text{div}(\mathbf{F})=\nabla\cdot\mathbf{F}=\frac{\partial F_x}{\partial x}+\frac{\partial F_y}{\partial y}+\frac{\partial F_z}{\partial z}$.

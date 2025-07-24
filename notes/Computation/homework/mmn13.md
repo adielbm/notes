@@ -208,8 +208,8 @@ on grid]
 		- (א) אם נבצע ניפוח (down), אז המחרוזת $\texttt{0}^{p-k}\texttt{1}^{2p}\texttt{0}^{2p}\texttt{1}^{p}=\texttt{0}^{p-k}\texttt{1}^{p}\cdot\texttt{1}^{p}\texttt{0}^{p+k}\cdot\texttt{0}^{p-k}\texttt{1}^{p}$ עבור $k>0$ אמורה להיות ב-$L$ לפי הלמה, אך זה לא נכון, כי $(\texttt{1}^{p}\texttt{0}^{p+k})^{\mathcal{R}}=\texttt{0}^{p+k}\texttt{1}^{p}\neq \texttt{0}^{p-k}\texttt{1}^{p}=w$
 		- (ב) אם נבצע ניפוח (down), אז המחרוזת $\texttt{0}^{p}\texttt{1}^{2p}\texttt{0}^{2p-k}\texttt{1}^{p}=\texttt{0}^{p}\texttt{1}^{p}\cdot\texttt{1}^{p}\texttt{0}^{p-k}\cdot\texttt{0}^{p}\texttt{1}^{p}$ עבור $k>0$ אמורה להיות ב-$L$ לפי הלמה, אך אינה, כי $\texttt{1}^{p}\texttt{0}^{p-k}\neq(\texttt{0}^{p}\texttt{1}^{p})^{\mathcal{R}}$
 	- ב. $111 \dots 111$:        גם כאן ניתן להוכיח באופן דומה...
-	- ג. $000\dots000111\dots 111$:      לא בטוח איך לנסח את זה פורמלית (מקווה שלא טעיתי בדוגמה הזו)
-	- ד.   $111\dots 111000\dots000$:  כנל....
+	- ג. $000\dots000111\dots 111$:      
+	- ד.   $111\dots 111000\dots000$:  
 
 ### ב. $L=\{ \texttt{a}^i\texttt{b}^{j}\texttt{c}^{\max(i,j)} \mid i,j\geq 0\}$
 

@@ -48,7 +48,8 @@ $$k!\binom{n+k-1}{k}=\frac{(n+k-1)!}{(n-1)!} = (n+k-1)^{\underline{k}}$$
 	- (aka: אי סדר מלא, בלבול, תמורה ללא נקודות שבת)
 - The number of derangements of a set of size $n$ is known as the **subfactorial** of $n$ or the $n$-th derangement number, denoted by $!n$ or $D_n$ and is given by any of the following formulas:
 	- $!n=D_n=(n-1)(D_{n-2}+D_{n-1})$ for $n\geq{2}$ with $D_0=1$ and $D_1=0$.
-	- $\displaystyle !n=n! \sum_{i=0}^{n} \frac{(-1)^i}{i!}=n!\left(1-\frac{1}{1!}+\frac{1}{2!}-\frac{1}{3!}+\ldots+\frac{(-1)^n}{n!}\right)$
+	- $\displaystyle !n=n! \sum_{i=0}^{n} \frac{(-1)^i}{i!}$
+	- $!n=\displaystyle \sum _{i\,=\,0}^{n}(-1)^{i}{\binom {n}{i}}(n-i)!$
 	- $\displaystyle !n = \left\lfloor\frac{n!}{e}+\frac{1}{2}\right\rfloor$
 
 ###### A000166

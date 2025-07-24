@@ -119,4 +119,5 @@
 	- $\displaystyle\oint \mathbf{E} \cdot d\mathbf{A} = \frac{Q_{\text{enc}}}{\varepsilon_0}$ is the electric flux through a closed surface
 		- $q_{\text{enc}}$ is the charge enclosed by the surface (in $\mathsf{C}$)
 		- $\epsilon_0$ is the permittivity of free space (in $\mathsf{C^2/N\cdot m^2}$)
+	- (Differential form) $\displaystyle \nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}$, where $\rho$ is the charge density (in $\mathsf{C/m^3}$)
 

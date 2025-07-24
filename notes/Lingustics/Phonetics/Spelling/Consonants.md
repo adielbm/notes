@@ -40,12 +40,12 @@ https://lingbase.com/en/english/grammar/silent-consonants
 
 ## `<th>`
 
-| IPA   | Examples               | Notes                              |
-| ----- | ---------------------- | ---------------------------------- |
-| `/ð/` | the, this, though      | At the beginning of function words (articles, prepositions, pronouns, etc) |
-|       | bathe, breathe, soothe | between a vowel and a silent `<e>` |
-| `/θ/` | think, third, theory   | At the beginning of lexical words (nouns, verbs, adjectives, and some adverbs)  |
-|       | bath, path, truth      | At the end of words                |
+| IPA   | Examples               | Notes                                                                          |
+| ----- | ---------------------- | ------------------------------------------------------------------------------ |
+| `/ð/` | the, this, though      | At the beginning of function words (articles, prepositions, pronouns, etc)     |
+|       | bathe, breathe, soothe | between a vowel and a silent `<e>`                                             |
+| `/θ/` | think, third, theory   | At the beginning of lexical words (nouns, verbs, adjectives, and some adverbs) |
+|       | bath, path, truth      | At the end of words                                                            |
 
 - excaptions: clothes `/kloʊz/`, months `/mʌnts/`, Thomas `/ˈtɑm·əs/`, Thailand `/ˈtaɪ·lænd/`
 

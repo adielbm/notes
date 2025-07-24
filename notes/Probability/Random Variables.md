@@ -141,6 +141,26 @@
 
 ##### Poisson Process
 
+
+
+- $\displaystyle X=\sum_{i=1}^{k}X_i\sim\text{Pois}(\lambda t)$ 
+	- $X_1\perp X_2 \perp \ldots \perp X_k$
+	- $\forall i\in \{ 1,\ldots,k\}$
+		- $p_i$ is the probability of an event occurring in category $i$.
+			- $\sum _{i=1}^{k}p_i=1$
+			- $p_i\geq 0$
+		- $X_i\sim\text{Pois}(\lambda_i =\lambda t \cdot p_i)$ (number of events in category $i$ in time $t$)
+			- $\mathbb{E}[X_i]=\lambda_i$
+			- $\text{Var}(X_i)=\lambda_i$
+			- $\displaystyle \mathbb{P}(X_i=m)=e^{-\lambda_i}\frac{\lambda_i^m}{m!}$
+		- $X_i\mid X=n\sim\text{Bin}(n,p_i)$
+			- $\mathbb{P}(X_i=m\mid X=n)=\binom{n}{m}\cdot p_i^m(1-p_i)^{n-m}$ 
+	- $(X_1,\ldots,X_k)\mid X=n\sim\text{Multinomial}(n,p_1,\ldots,p_k)$
+	- If $\mu=\lambda t$ is large, then $X \approx \mathcal{N}(\mu,\mu)$
+	
+
+
+
 - A set of random variables $\{N(t),t\geq 0\}$ (where $N(t)\in\mathbb{N}_{0}$) is the number of events in the interval $[0,t]$) is said to be a **Poisson process** having rate $\lambda$ (where $\lambda>0$) if:
 	- (Initial Condition) $N(0)=0$ 
 	- (Independent Increments) For $0\leq t_1<t_2<\cdots<t_n$, the random variables $N(t_2)-N(t_1),\ldots,N(t_n)-N(t_{n-1})$ are independent.
@@ -151,6 +171,9 @@
 	- $P(N(t)=0)=e^{-\lambda t}$ 
 	- $P(N(t)=k)=\displaystyle\frac{(\lambda t)^k}{k!}e^{-\lambda t}$
 	- $\forall s,t\geq 0,N(s+t)-N(s)\sim\text{Pois}(\lambda t)$
+
+
+
 
 
 ### theorems 
