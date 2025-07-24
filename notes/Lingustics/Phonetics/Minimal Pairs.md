@@ -16,44 +16,44 @@
 | lawn | lone |
 
 ## /i/ VS /ɪ/
-| /i/ | /ɪ/ |
-|-----|-----|
-| bead | bid |
-| beef | biff |
-| bean | been |
-| beat | bit |
+| /i/   | /ɪ/   |
+| ----- | ----- |
+| bead  | bid   |
+| beef  | biff  |
+| bean  | been  |
+| beat  | bit   |
 | cheek | chick |
-| cheap | chip |
-| deep | dip |
-| eat | it |
-| feel | fill |
-| feat | fit |
-| he'd | hid |
-| he'll | hill |
-| heap | hip |
-| heat | hit |
-| he's | his |
-| leak | lick |
-| leap | lip |
-| leave | live |
-| meal | mil |
-| neat | knit |
-| peace | piss |
-| peat | pit |
-| reach | rich |
-| read | rid |
-| scene | sin |
-| seep | sip |
-| seat | sit |
-| seek | sick |
-| sheep | ship |
-| sheet | shit |
-| sleep | slip |
+| cheap | chip  |
+| deep  | dip   |
+| eat   | it    |
+| feel  | fill  |
+| feat  | fit   |
+| he'd  | hid   |
+| he'll | hill  |
+| heap  | hip   |
+| heat  | hit   |
+| he's  | his   |
+| leak  | lick  |
+| leap  | lip   |
+| leave | live  |
+| meal  | mil   |
+| neat  | knit  |
+| peace | piss  |
+| peat  | pit   |
+| reach | rich  |
+| read  | rid   |
+| scene | sin   |
+| seep  | sip   |
+| seat  | sit   |
+| seek  | sick  |
+| sheep | ship  |
+| sheet | shit  |
+| sleep | slip  |
 | steal | still |
-| teen | tin |
-| weak | wick |
-| weep | whip |
-| wheel | will |
+| teen  | tin   |
+| weak  | wick  |
+| weep  | whip  |
+| wheel | will  |
 | beach | bitch |
 
 ## /ɑ/ VS /ɔ/
@@ -138,23 +138,23 @@
 | fan | fen |
 
 ## /ʌ/ VS /ɑ/
-| /ʌ/ | /ɑ/ |
-|-----|-----|
-| color | collar |
-| cup | cop |
-| hut | hot |
-| nut | not |
-| cut | cot |
-| gut | got |
-| shut | shot |
-| suck | sock |
-| cluck | clock |
-| come | calm |
-| stuck | stock |
-| luck | lock |
+| /ʌ/    | /ɑ/    |
+| ------ | ------ |
+| color  | collar |
+| cup    | cop    |
+| hut    | hot    |
+| nut    | not    |
+| cut    | cot    |
+| gut    | got    |
+| shut   | shot   |
+| suck   | sock   |
+| cluck  | clock  |
+| come   | calm   |
+| stuck  | stock  |
+| luck   | lock   |
 | wonder | wander |
-| some | psalm |
-| what | watt |
+| some   | psalm  |
+| what   | watt   |
 
 
 ## /ʊ/ vs /u/

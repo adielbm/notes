@@ -90,31 +90,31 @@ next to
 
 participle - בינוני
 
-| en                                   | he                  |     |
-| ------------------------------------ | ------------------- | --- |
-| Dynamic (Action) Verbs               | פעלי פעולה          |     |
-| Stative verbs                        | פעלי מצב            |     |
-| Transitive verbs                     | פועל יוצא           | with a direct object    |
-| Intransitive verbs                   | פועל עומד           | without a direct object    |
-| Ambitransitive verb                  | פועל עומד-יוצא      | can be either transitive or intransitive    |
-| ditransitive (or bitransitive) verbs | פועל דו-יוצא        | can take two objects, a direct object and an indirect object.    |
-| Light verbs                          |                     |     |
-| Causative verb                       | פועל גרימה          |     |
-| Linking verbs                        |                     |     |
-| Helping verbs (auxiliary verbs)      | פועל עזר            |     |
-| Modal verbs                          |                     |     |
-| Regular verbs                        |                     |     |
-| Irregular verbs                      |                     |     |
-| Phrasal verbs                        | צירוף פועלי         |     |
-| Infinitives                          |                     |     |
-| finite verbs                         | פועל נטוי לפי גופים |     |
-| infinitive                           | שם הפועל            |     |
+| en                                   | he                  |                                                               |
+| ------------------------------------ | ------------------- | ------------------------------------------------------------- |
+| Dynamic (Action) Verbs               | פעלי פעולה          |                                                               |
+| Stative verbs                        | פעלי מצב            |                                                               |
+| Transitive verbs                     | פועל יוצא           | with a direct object                                          |
+| Intransitive verbs                   | פועל עומד           | without a direct object                                       |
+| Ambitransitive verb                  | פועל עומד-יוצא      | can be either transitive or intransitive                      |
+| ditransitive (or bitransitive) verbs | פועל דו-יוצא        | can take two objects, a direct object and an indirect object. |
+| Light verbs                          |                     |                                                               |
+| Causative verb                       | פועל גרימה          |                                                               |
+| Linking verbs                        |                     |                                                               |
+| Helping verbs (auxiliary verbs)      | פועל עזר            |                                                               |
+| Modal verbs                          |                     |                                                               |
+| Regular verbs                        |                     |                                                               |
+| Irregular verbs                      |                     |                                                               |
+| Phrasal verbs                        | צירוף פועלי         |                                                               |
+| Infinitives                          |                     |                                                               |
+| finite verbs                         | פועל נטוי לפי גופים |                                                               |
+| infinitive                           | שם הפועל            |                                                               |
 
 
-|                 |           | 
-| --------------- | --------- |
-| direct object   | מושא ישיר |   
-| indirect object | מושא עקיף |    
+|                 |           |     |
+| --------------- | --------- | --- |
+| direct object   | מושא ישיר |     |
+| indirect object | מושא עקיף |     |
 
 ### Irregular verbs
 
@@ -124,16 +124,16 @@ participle - בינוני
 - **Present Participle** - which is formed with an **-ing** suffix
 - **3rd Person Present**[^1] - (He, She, It) - verb(s) / irregular forms.
 
-| Base form  | Past Tense (V2) | Past Participle (V3) | 3rd person present  |
-| ----------- | ----------- | --- | --- |
-| be      | was/were       | been  | is |
-| do |	did |	done | does |
-| have | had | had | has |
-| go | went | gone | goes |
-| get | got | got/gotten | gets |
-| give | gave | given | gives |
-| become | became | become | becomes |
-| begin | began | begun | begins |
+| Base form | Past Tense (V2) | Past Participle (V3) | 3rd person present |
+| --------- | --------------- | -------------------- | ------------------ |
+| be        | was/were        | been                 | is                 |
+| do        | did             | done                 | does               |
+| have      | had             | had                  | has                |
+| go        | went            | gone                 | goes               |
+| get       | got             | got/gotten           | gets               |
+| give      | gave            | given                | gives              |
+| become    | became          | become               | becomes            |
+| begin     | began           | begun                | begins             |
 
 - **was** = I, He, She, It. **were** = We, You, They.
 

@@ -1,4 +1,4 @@
-	- (**population**) sample space $\Omega$
+- (**population**) sample space $\Omega$
 - (**population size**) $N$ or $\infty$.
 - (**population random variable**) $X:\Omega\to\mathbb{R}$
 - (**population distribution**) $X\sim P_\theta$

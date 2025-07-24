@@ -167,3 +167,6 @@
 - (5.28) If $A\leq_{\text{m}}B$ and $B$ is Turing-recognizable, then $A$ is Turing-recognizable.
 - (5.29) If $A\leq_{\text{m}}B$ and $A$ is not Turing-recognizable, then $B$ is not Turing-recognizable.
 - (e5.6) If $A\leq_{\text{m}}B$ and $B\leq_{\text{m}}C$, then $A\leq_{\text{m}}C$. 
+
+
+
