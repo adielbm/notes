@@ -147,3 +147,12 @@ button#toc {
 .disable-theme-toggle-animation .theme-toggle * {
   transition: none !important;
 }
+
+
+// for plugins/transformers/image-alt-to-parent.ts
+.img-desc {
+    opacity: .6;
+    display: block;
+    font-style: italic;
+    text-align: center;
+}
