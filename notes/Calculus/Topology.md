@@ -10,6 +10,9 @@
 - Let $p\in \mathbb{R}^2$ and $r>0$. Every point $q\in N_r(p)$ is an interior point of $N_r(p)$.
 
 
+
+
+
 --- 
 
 

@@ -60,7 +60,9 @@ $$
 
 ## Common Trigonometric Values
 
+
 ![410](https://upload.wikimedia.org/wikipedia/commons/4/4c/Unit_circle_angles_color.svg)
+
 
 
 ___

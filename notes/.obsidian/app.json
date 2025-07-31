@@ -1,5 +1,5 @@
 {
-  "readableLineLength": true,
+  "readableLineLength": false,
   "showLineNumber": false,
   "spellcheck": false,
   "pdfExportSettings": {
@@ -14,5 +14,6 @@
   "foldIndent": true,
   "showIndentGuide": true,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "Images"
+  "attachmentFolderPath": "Images",
+  "focusNewTab": false
 }

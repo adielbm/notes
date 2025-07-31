@@ -20,7 +20,7 @@
 - A 19th-century convention, still in use, treats any electric current as a flow of positive charge from a region of positive potential to one of negative potential.
 	- The real motion, however, in the case of electrons flowing through a metal conductor, is in the opposite direction, from negative to positive.
 
-## Alternating Current (AC)
+## Alternating current (AC)
 
 - $V=V_0\sin(\omega t)$ is the voltage of an alternating current (see [[Waves#Sine Wave|sine wave]])
 	- $V_0$ is the **peak voltage** (in $\mathsf{V}$) (the _amplitude_)
