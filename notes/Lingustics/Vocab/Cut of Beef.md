@@ -1,5 +1,8 @@
-  
-![[Pasted image 20241218143848.png]]
+
+![](https://upload.wikimedia.org/wikipedia/commons/2/2a/US_Beef_cuts.svg)
+
+
+
 rib steak
 
   ![[Pasted image 20241218143813.png]]
