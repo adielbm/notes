@@ -15,7 +15,7 @@ const config: QuartzConfig = {
     analytics: null,
     locale: "en-US",
     baseUrl: "adielbm.netlify.app",
-    ignorePatterns: ["private", "templates", ".obsidian", "**/drafts","**/homework", "My Tasks.md"],
+    ignorePatterns: ["private", "copyrighted", "templates", ".obsidian", "**/drafts","**/homework", "My Tasks.md"],
     defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",
