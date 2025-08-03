@@ -1,0 +1,63 @@
+
+
+- 2.2 Encoding
+- 2.4 Error Detection
+- 2.4.1 Internet Checksum Algorithm
+- 2.4.2 Cyclic Redundancy Check
+- 2.5 Reliable Transmission
+- 2.5.1 Stop-and-Wait
+- 2.5.2 Sliding Window
+- 2.6 Multiaccess Networks
+- 2.6.2 Access Protocol
+- 2.6.3 Longevity of Ethernet
+- 3.2 Switched Ethernet
+- 3.2.1 Learning Bridges
+- 3.2.3 Spanning Tree Algorithm
+- 3.1 Switching Basics
+- 3.2 Switched Ethernet
+- 3.3 Internet (IP)
+- 3.3.3 Global Addresses
+- 3.3.4 Datagram Forwarding in IP
+- 3.3.5 Subnetting and Classless Addressing
+- 3.3.6 Address Translation (ARP)
+- 3.3.7 Host Configuration (DHCP)
+- 3.4 Routing
+- 3.4.2 Distance-Vector (RIP)
+- 3.4.3 Link State (OSPF)
+- 4.1 Global Internet
+- 4.1.2 Interdomain Routing (BGP)
+- 4.2 IP Version 6
+- 4.2.2 Addresses and Routing
+- 4.2.3 Packet Format
+- 5.1 Simple Demultiplexor (UDP)
+- 5.2 Reliable Byte Stream (TCP)
+- 5.2.2 Segment Format
+- 5.2.3 Connection Establishment and Termination
+- 6.3 TCP Congestion Control
+- 6.3.1 Additive Increase/Multiplicative Decrease
+- 6.3.2 Slow Start
+- 6.3.3 Fast Retransmit and Fast Recovery
+- 9.3.1 Name Service (DNS)
+- 9.1 Traditional Applications
+- 9.1.1 Electronic Mail (SMTP, MIME, IMAP)
+- 9.1.2 World Wide Web (HTTP)
+- 2.7 Wireless Networks
+- 2.7.1 Basic Issues
+- 2.7.2 802.11/Wi-Fi
+- 2.8.2 Cellular Network
+- 8.2 Cryptographic Building Blocks
+- 8.2.1 Principles of Ciphers
+- 8.2.2 Secret-Key Ciphers
+- 8.2.3 Public-Key Ciphers
+- 8.2.4 Authenticators
+- 8.1 Trust and Threats
+- 8.5 Example Systems
+- 8.5.3 Transport Layer Security (TLS, SSL, HTTPS)
+- 8.5.5 Wireless Security (802.11i)
+- 8.5.6 Firewalls
+- 3.5.3 Software-Defined Networks
+- 9.4.3 Content Distribution Networks
+- 9.4 Overlay Networks
+- 9.4.1 Routing Overlays
+- 9.4.2 Peer-to-Peer Networks
+- 9.3.2 Network Management (SNMP, OpenConfig)
