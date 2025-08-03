@@ -1,5 +1,5 @@
 
-![](https://progress-bar.xyz/48/?scale=120&width=140&progress_color=00D26A&suffix=%20out%20of%20120)
+![](https://progress-bar.xyz/53/?scale=120&width=140&progress_color=00D26A&suffix=%20out%20of%20120)
 
 |     | Course                     | Credits   |                                                             |
 | --- | -------------------------- | --------- | ----------------------------------------------------------- |
@@ -9,7 +9,7 @@
 |     | Linear Algebra 2           | 5         | [20229](https://www.openu.ac.il/courses/20229.htm)          |
 | ✓   | Calculus 1                 | 7         | [20474](https://www.openu.ac.il/courses/20474.htm)          |
 |     | Calculus 2                 | 7         | [20475](https://www.openu.ac.il/courses/20475.htm)          |
-| ⧗   | Probability and Statistics | 5         | [20425](https://www.openu.ac.il/courses/20425.htm)          |
+| ✓   | Probability and Statistics | 5         | [20425](https://www.openu.ac.il/courses/20425.htm)          |
 |     | **CS**                     |           |                                                             |
 | ✓   | Intro to CS (Java)         | 6         | [20441](https://www.openu.ac.il/courses/20441.htm)          |
 | ✓   | Intro to Algorithms        | 6         | [20407](https://www.openu.ac.il/courses/20407.htm)          |
@@ -18,10 +18,10 @@
 | ⧗   | Computational Models       | 5         | [20604](https://www.openu.ac.il/courses/20604.htm)          |
 | ✓   | Computer Organization      | 4         | [20471](https://www.openu.ac.il/courses/20471.htm)          |
 | ✓   | Logic                      | 4         | [20466](https://www.openu.ac.il/courses/20466.htm)          |
-|     | Operating Systems          | 4         | [20594](https://www.openu.ac.il/courses/20594.htm)          |
+| ⧗   | Operating Systems          | 4         | [20594](https://www.openu.ac.il/courses/20594.htm)          |
 |     | Programming Languages      | 4         | [20905](https://www.openu.ac.il/courses/20905.htm)          |
 |     | **Electives**              |           |                                                             |
-|     | Computer Networks          | 4         | [20948](https://www.openu.ac.il/courses/20948.htm)          |
+| ⧗   | Computer Networks          | 4         | [20948](https://www.openu.ac.il/courses/20948.htm)          |
 |     | Cryptography               | 4         | [20580](https://www.openu.ac.il/courses/20580.htm)          |
 |     | Cybersecurity              | 4         | [20940](https://www.openu.ac.il/courses/20940.htm)          |
 |     | Defensive Sys. Programming | 4         | [20937](https://www.openu.ac.il/courses/20937.htm)          |
