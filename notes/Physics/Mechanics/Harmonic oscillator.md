@@ -12,7 +12,7 @@
 - $v_{\text{max}} = \omega A$ is the maximum velocity
 - $m$ is the mass of the **oscillating body** (in $\mathsf{kg}$) 
 - $E=\frac{1}{2}kx^2 + \frac{1}{2}mv^2$ is the total mechanical energy (in $\mathsf{J}$)
-	- $\frac{1}{2}mv^2$ is the [[Physics/Energy#Kinetic Energy|kinetic energy]] (in $\mathsf{J}$) (it's total energy in the moment of equilibrium, $x=0$)
+	- $\frac{1}{2}mv^2$ is the [[Physics/Mechanics/Energy#Kinetic Energy|kinetic energy]] (in $\mathsf{J}$) (it's total energy in the moment of equilibrium, $x=0$)
 	- $\frac{1}{2}kx^2$ is the elastic potential energy (in $\mathsf{J}$) (it's total energy in the monent of turning point, $v=0$)
 
 #### Mass-Spring System

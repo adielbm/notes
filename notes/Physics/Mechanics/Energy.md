@@ -7,7 +7,7 @@
 		- $\omega$ is the angular velocity ($\mathsf{rad/s}$)
 
 - Potential Energy
-	- [[Kinematics#Gravitational Potential Energy|gravitational (potential) energy]]
+	- [[Linear motion#Gravitational Potential Energy|gravitational (potential) energy]]
 	- $E_{p} = \frac{1}{2}kx^2$ is the **elastic (potential) energy**
 		- $E_{p}$ is the change in elastic potential energy ($\mathsf{J}$)
 		- $k$ is the spring constant ($\mathsf{N/m}$)
