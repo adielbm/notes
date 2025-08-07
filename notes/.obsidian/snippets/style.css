@@ -2,6 +2,10 @@
   --titlebar-background-focused: var(--background-modifier-active-hover) !important;
 }
 
+.sidebar-toggle-button {
+  display: none;
+}
+
 @media not print {
   .page-break {
     border-width: 3px 0 0 0;
