@@ -37,6 +37,8 @@
 - $\displaystyle \sigma = \frac{Q}{A}$ is the **surface charge density** (in $\mathsf{C/m^2}$)
 - $\displaystyle \rho = \frac{Q}{V}$ is the **volume charge density** (in $\mathsf{C/m^3}$)
 
+- $\displaystyle Q_{\text{total}} = \int \rho(r) dV$
+
 ## Electric field
 
 - An **electric field** is a vector field that associates to each point in space the force per unit of charge exerted on an infinitesimal test charge at rest at that point $$\displaystyle E=\frac{F}{q}$$  
@@ -90,34 +92,26 @@
 - The lines are drawn such that the magnitude of the electric field, $E$, is proportional to the number of lines crossing unit area perpendicular to the lines. The closer the lines, the stronger the field
 - The lines start on positive charges and end on negative charges
 
-
-- $\displaystyle \Phi_E = \int \vec{E} \cdot d\vec{A}$
-- $\displaystyle \oint \vec{E} \cdot d\vec{A} = \frac{q_{enc}}{\epsilon_0}$
-- $\displaystyle Q_{\text{total}} = \int \rho(r) dV$
+ 
 
 
 
-### todo
+# Electric dipole moment
 
-- electric field lines
-- electric dipole
-- static electric field
-- equipotential surfaces, equipotential lines
+- An **electric dipole** consists of two equal and opposite charges separated by a distance $d$
+- The **electric dipole moment** $\vec{\mathbf{p}}$ (in $\mathsf{C\cdot m}$) of a dipole is defined as $\vec{\mathbf{p}}=q\vec{\mathbf{d}}$ where $q$ is the magnitude of the charges and $\vec{\mathbf{d}}$ is the vector pointing from the negative charge to the positive charge
+- $\vec{\boldsymbol{\tau}}=\vec{\mathbf{p}}\times\vec{\mathbf{E}}$ is the torque on an electric dipole
+- $U=-\vec{\mathbf{p}}\cdot\vec{\mathbf{E}}$ is the potential energy for an electric dipole in an electric field
 
 
-# Electric Flux
+# Electric flux
 
-- $\displaystyle \Phi_E = EA\cos\theta=EA_{\perp}=E_{\perp}A$ is the **electric flux** through a surface
-	- $E$ is the magnitude of the electric field $\vec{\mathbf{E}}$ (in $\mathsf{N/C}$)
-	- $A$ is the area of the surface (in $\mathsf{m^2}$)
-	- $E_{\perp}=E\cos\theta$ is the component of the electric field perpendicular to the surface
-	- $A_{\perp}=A\cos\theta$ is the projection of the area perpendicular to the field
-	- $\theta$ is the angle between $\vec{\mathbf{E}}$ and $E_{\perp}$
-	- $N \propto \Phi_E$ - the number of field lines crossing the surface is proportional to the electric flux
-- $\displaystyle \Phi_E =\sum E \Delta A \cos\theta$, where the sum is over all the patches of the surface
+- $\displaystyle \Phi_E =\oint \vec{\mathbf{E}} \cdot d\vec{\mathbf{A}}$ is the **electric flux** through a closed surface
+	- $\oint$ indicates a closed surface integral
+	- $d\vec{A}$ is the differential area vector pointing outward from the surface (in $\mathsf{m^2}$)
+	- $\vec{E} \cdot d\vec{A}$ is the dot product of the electric field and the area vector
+	- (uniform electric field) $\displaystyle \Phi_E = EA\cos\theta$ where $A$ is the area of the surface and $\theta$ is the angle between the electric field and the normal to the surface
 - (**Gauss's Law**) 
-	- $\displaystyle\oint \mathbf{E} \cdot d\mathbf{A} = \frac{Q_{\text{enc}}}{\varepsilon_0}$ is the electric flux through a closed surface
-		- $q_{\text{enc}}$ is the charge enclosed by the surface (in $\mathsf{C}$)
-		- $\epsilon_0$ is the permittivity of free space (in $\mathsf{C^2/N\cdot m^2}$)
-	- (Differential form) $\displaystyle \nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}$, where $\rho$ is the charge density (in $\mathsf{C/m^3}$)
+	- (integral form) $\displaystyle \Phi_E =\oint \vec{\mathbf{E}} \cdot d\vec{\mathbf{A}}={\frac {Q_{\text{enc}}}{\varepsilon _{0}}}$ is the electric flux through a closed surface where $Q_{\text{enc}}$ is the total charge enclosed by the surface
+	- (differential form) $\displaystyle \nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}$, where $\rho$ is the charge density (in $\mathsf{C/m^3}$)
 

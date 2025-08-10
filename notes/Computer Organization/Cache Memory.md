@@ -90,8 +90,8 @@ Cache CPI Misses per instruction Miss penalty
 - $\text{Memory-Accesses} = \text{Hits} + \text{Misses}$
 - $\displaystyle\text{Hit Rate} = \frac{\text{Hits}}{\text{Memory-Accesses}}$
 - $\displaystyle\text{Miss Rate} =1-\text{Hit Rate}$
-- The **Hit Time** is the time required to access a level of the memory hierarchy, including the time needed to determine whether the access is a hit or a miss.
-- The **Miss Penalty** is the time required to fetch a block into a level of the memory hierarchy from the lower level, including (1) the time to access the block, (2) transmit it from one level to the other, (3) insert it in the level that experienced the miss, and then (4) pass the block to the requestor.
+- The **hit time** is the time required to access a level of the memory hierarchy, including the time needed to determine whether the access is a hit or a miss.
+- The **miss penalty** is the time required to fetch a block into a level of the memory hierarchy from the lower level, including (1) the time to access the block, (2) transmit it from one level to the other, (3) insert it in the level that experienced the miss, and then (4) pass the block to the requestor.
 - $\text{Miss Penalty} = \frac{\text{Memory-Access Time}}{\text{CCT}}=\text{Memory-Access Time}\times \text{CR}$
 
 
@@ -99,6 +99,8 @@ Cache CPI Misses per instruction Miss penalty
 
 - $\text{CPI}=\text{Base CPI}+\text{Miss Rate}\times \text{Miss Penalty}$
 - (**Average memory-access time**) $\text{AMAT}= \text{Hit time} + \text{Miss rate} \times \text{Miss penalty}$
+
+
 
 - Ex.
 	- $\text{Hit time}=2\text{ cycles}$
@@ -153,3 +155,21 @@ Cache CPI Misses per instruction Miss penalty
 	- $\text{CPU-Time}=\frac{2\times 10^9}{4\times 10^9}\times 27.3=13.65\,\mathsf{sec}$
 - in general:
 	- $\displaystyle\text{CPU Time} = \frac{\text{IC} }{\text{CR}}\times \left(\text{CPI}_{\text{base}} + \left(\text{MR}_{\text{data}} \times f_{\text{LS}} \times \text{MP}_{\text{data}}\right) + \left(\text{MR}_{\text{ins}} \times \text{MP}_{\text{ins}}\right)\right)$
+
+
+##### N-level
+
+$$\displaystyle  T_{\text{avg}} = \sum_{i=1}^N \left[ \left( \prod_{j=1}^{i-1} (1 - h_j) \right) h_i \left( \sum_{k=1}^i t_k \right) \right]$$
+
+- $N$ is the number of levels in the hierarchy, where level $1$ is the fastest and level $N$ is the slowest.
+- $h_i$ is the hit rate at level $i$ given that all previous levels were misses
+	- $h_N=1$ (the last level is always hit)
+- $1 - h_i$ is the miss rate at level $i$
+- $t_i$ is the access time at level $i$
+
+
+example: 
+
+- $N=3$ 
+- $h_1=0.95,h_2=0.99, h_3=1$
+- $t_1=2\,\mathsf{ns}, t_2=10\,\mathsf{ns}, t_3=10^7 \,\mathsf{ns}$ 

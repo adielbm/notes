@@ -82,3 +82,11 @@ Transmit = Size/Bandwidth
 | Digital | (Square-wave) digital | NRZ, NRZI, Manchester, Differential Manchester |
 | Digital | (Discrete) analog     |                                                |
 | Analog  | Digital               |                                                |
+
+
+# Framing 
+
+- A **frame** 
+
+
+
