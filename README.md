@@ -1,4 +1,4 @@
-This repository contains my personal notes, currently hosted at [adielbm.netlify.app](https://adielbm.netlify.app/). Build command: `npx quartz build -d notes`. Publish directory: `public`.
+This repository contains my notes, hosted at [adielbm.github.io/notes](https://adielbm.github.io/notes).
 
 # License
 

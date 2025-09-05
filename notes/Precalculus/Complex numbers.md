@@ -28,7 +28,7 @@ $$z=re^{i\theta}$$
 - (Power of integer) $z^n=r^n\left(\cos n\theta+i\sin n\theta\right)$
 
 - **Inverse** $\large\frac{1}{z}=z^{-1}=\frac{\bar{z}}{|z|^2}$
-- **Absolute value** $|{z}|=\sqrt{a^2+b^2}$
+- **Absolute value** $|{z}|=\sqrt{a^2+b^2}=r$
 	- $|w||z|=|wz|$
 	- $|w+z|\leq|w|+|z|$
 	- $|z^{-1}|=|z|^{-1}$ where ($z\neq 0$)
@@ -46,8 +46,8 @@ $$z=re^{i\theta}$$
 
 - **De Moivre's formula** - $(\cos x + i \sin x)^n = \cos nx + i \sin nx$
 
-- $\mathbb{S}^1=\{z\in\mathbb{C} \mid |z|=1\}= \{e^{i\theta} \mid \theta\in[0,2\pi)\}$ is the **unit circle** in $\mathbb{C}$
-	- Multiplication by a complex number $e^{i\theta}$ is a rotation by $\theta$ radians about the origin
+- $\mathbb{S}^1=\{z\in\mathbb{C} : |z|=1\}= \{e^{i\theta} \mid \theta\in[0,2\pi)\}$ is the **unit circle** in $\mathbb{C}$
+- Multiplication by $e^{i\theta}$ rotates a complex number $z$ counterclockwise by an angle $\theta$ in the complex plane
 - An $n$th **root of unity**, where $n\in\mathbb{N}$, is a complex number $z$ such that $z^n=1$ 
 	- The $n$th roots of unity are: 
 		- $1,\omega,\omega^2,\dots,\omega^{n-1}$ where $\omega=e^{i\frac{2\pi}{n}}$, or equivalently 

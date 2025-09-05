@@ -1,7 +1,6 @@
-# Minimum Spanning Tree Problem
 
-- Th problem is to find a [[Graph#Minimum Spanning Tree|minimum spanning tree]] $T$ for a connected undirected graph $G=(V,E)$ with weights on the edges. (the weights are non-negative)
-## Prim's Algorithm
+- The problem is to find a [[Graph#Minimum Spanning Tree|minimum spanning tree]] $T$ for a connected undirected graph $G=(V,E)$ with weights on the edges. (the weights are non-negative)
+## Prim's algorithm
 
 ```Algorithm
 for each v ∈ V:

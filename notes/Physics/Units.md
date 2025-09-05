@@ -48,3 +48,10 @@
     - (pound-force foot) $\mathsf{1\,lb_f\cdot ft}\approx 1.3558\,\mathsf{N\cdot m}$
 - rotational frequency:
     - (revolutions per minute, $\mathsf{r \cdot min^{-1}}$) $\mathsf{1\, rpm} = \frac{1}{60}\,\mathsf{Hz}$
+
+
+### decibels
+
+- $L = 10 \log_{10}\left(\frac{P}{P_0}\right) \, \text{dB}$
+	- $P$: power level
+	- $P_0$: reference power level

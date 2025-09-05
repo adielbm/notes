@@ -6,7 +6,7 @@
 > - $c_f(e) = \begin{cases} c(e) - f(e) & \text{if \( e \) is a forward edge,} \\ f(e) &  \text{if \( e \) is a backward edge.} \end{cases}$
 >  
 > Also here we require that the flow network is bidirectional, which is not a common requirement.   
-
+ 
 ___
 
 # Flow Network

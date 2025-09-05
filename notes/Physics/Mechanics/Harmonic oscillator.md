@@ -3,11 +3,11 @@
 - A displacement function $x(t)$ is said to describe **simple harmonic motion** iff it satisfies the differential equation $\displaystyle \frac{d^2x}{dt^2} +\omega^2x=0$
 - $x(t) = A\cos(\omega t + \phi)$ is the displacement from the equilibrium position
 	- $\phi$ is the phase angle (in $\mathsf{rad}$) 
-	- $A$ is the [[Periodic Functions|amplitude]] (the maximum displacement from the equilibrium)
+	- $A$ is the amplitude (the maximum displacement from the equilibrium)
 	- $\displaystyle\omega=\sqrt{\frac{k}{m}}$ is the angular frequency (in $\mathsf{rad / s}$)
 - $F=-kx$ is the restoring force (Hooke's Law)
 - $k$ is the spring constant (related to the stiffness of the spring) (in $\mathsf{N\cdot m^{-1}}$)
-- $\displaystyle T = \frac{2\pi}{\omega}$ is the [[Periodic Functions|period]] (in $\mathsf{s}$)
+- $\displaystyle T = \frac{2\pi}{\omega}$ is the period (in $\mathsf{s}$)
 - $v=\omega\sqrt{A^2 - x^2}$ is the velocity as a function of position
 - $v_{\text{max}} = \omega A$ is the maximum velocity
 - $m$ is the mass of the **oscillating body** (in $\mathsf{kg}$) 

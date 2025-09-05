@@ -1,13 +1,5 @@
 {
   "graph:open": [],
-  "app:toggle-left-sidebar": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "G"
-    }
-  ],
   "editor:toggle-checklist-status": [],
   "latex-ocr:paste-latex-from-clipboard": [
     {
@@ -127,6 +119,14 @@
         "Mod"
       ],
       "key": "H"
+    }
+  ],
+  "app:toggle-left-sidebar": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "G"
     }
   ]
 }

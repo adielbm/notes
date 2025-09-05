@@ -9,15 +9,14 @@
 | Perfect                   | **have/has** `V3`            | **had** `V3`            | `modal` **have** `V3`            |
 | Perfect **+** Progressive | **have/has been** `verb-ing` | **had been** `verb-ing` | `modal` **have been** `verb-ing` |
 
+
+
 - **פועל עזר** $=$ כל פועל לפני הפועל הראשי.
 - **שאלה/שלילה** $\impliedby$ אם אין, (יתכן רק ב- present/past simple), יש להוסיף פועל עזר.
 - **שאלה** $\impliedby$ היפוך (_inversion_) סדר בין הפועל עזר הראשון לנושא.
 - **שלילה** $\impliedby$ הוספת **not**.
 - **גוף שלישי + יחיד + Present Simple + כשאין פועל עזר** $\impliedby$ יש להוסיף **s-** לפועל.
 - (אפשר להחליף `verb-ing` בתואר `adjective`)
-
-
-
 
 
 
@@ -36,7 +35,7 @@
 | ...    | ...             | ...                  | ...                     |
 
 ### Irregular verbs
-
+ 
 | `verb` | Past Tense `V2` | Past Participle `V3` | 3rd-person present `-s` |
 | ------ | --------------- | -------------------- | ----------------------- |
 | be     | was/were        | been                 | is                      |
@@ -51,6 +50,7 @@
 | begin  | began           | begun                | begins                  |
 | win    | won             | won                  | wins                    |
 | become | became          | become               | becomes                 |
+| come   | came            | come                 | comes                   |
 | ...    | ...             | ...                  | ...                     |
 
 ### Modal verbs
@@ -62,6 +62,7 @@
 | shall             | should         |
 | may               | might          |
 | must              |                |
+
 
 
 

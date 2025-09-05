@@ -5,22 +5,6 @@ $$\displaystyle f=\frac{1}{T}=\frac{\omega}{2\pi}= \frac{v}{\lambda}$$
 - $v$ is the **wave speed** of the wave (in $\mathsf{m/s}$)
 - $\lambda$ is the **wavelength** of the wave (in $\mathsf{m}$)
 
-### Sine Wave
-
-- A **sine wave** (or **sinusoid**, symbol: ∿)
-- $y(t)=A\sin(\omega t + \phi)$
-- $A$ is the amplitude
-- $\omega$ is the [[Periodic Functions|angular frequency]] (in $\mathsf{rad/s}$)
-- $\phi$ is the phase shift (which moves the wave left or right on the time axis)
-
-- $\displaystyle y(x,t)=A\sin\left(\frac{2\pi}{\lambda}x-\omega t+\phi\right)=A\sin\left(\frac{2\pi}{\lambda}(x-vt)+\phi\right)$
-- is the equation of a traveling wave (to the right. if it is to the left, the minus sign is replaced by a plus sign)
-	- $x$ is the position of the wave we are considering
-	- $vt$ is the distance the wave has traveled from the origin at time $t$
-
-
-
- 
 
 ### Transverse Wave 
 

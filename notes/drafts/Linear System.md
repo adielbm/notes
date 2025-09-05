@@ -5,10 +5,8 @@
 	- **Linear**: Satisfies the properties of additivity and homogeneity
 	- **Time-invariant**: If an input $x(t)$ produces an output $y(t)$, then a time-shifted input $x(t-t_0)$ produces a time-shifted output $y(t-t_0)$
 - Convolution
-	- A **discrete convolution** is a mathematical operation on two functions $f,g:\mathbb{Z}\to \mathbb{C}$ that produces a third function $f*g:\mathbb{Z}\to \mathbb{C}$ and is defined as $(f*g)(n)=\displaystyle \sum _{m\in \mathbb{Z}}f(m)g(n-m)$
-	- A **continuous convolution** is a mathematical operation on two functions $f,g:\mathbb{R}\to \mathbb{C}$ that produces a third function $f*g:\mathbb{R}\to \mathbb{C}$ and is defined as $(f*g)(t)=\displaystyle \int _{-\infty}^{\infty}f(\tau)g(t-\tau)d\tau$
 
-
+ 
 - Example:
 	- $s(t)$ is an analog signal (air pressure that created by a speaker)
 	- $a(t)$ is a discrete sample of $s(t)$ (a digital signal)

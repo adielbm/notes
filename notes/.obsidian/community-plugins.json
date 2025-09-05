@@ -1,16 +1,10 @@
 [
-  "obsidian-hide-sidebars-when-narrow",
+  "img-caption",
+  "css-editor",
+  "toggle-dark-mode",
   "obsidian-latex-suite",
   "darlal-switcher-plus",
-  "obsidian-tikzjax",
-  "obsidian-tex-plugin",
-  "obsidian-hl",
-  "img-caption",
-  "obsidian-git",
+  "obsidian-hide-sidebars-when-narrow",
   "github-copilot",
-  "toggle-dark-mode",
-  "dataview",
-  "css-editor",
-  "oin-gotoheading",
-  "open-tab-settings"
+  "obsidian-git"
 ]

@@ -1,52 +1,6 @@
 
 - A **link** is 
 
-
-- $\text{data rate}=\frac{\text{data transmitted}}{\text{time taken}}$
-	- $\text{Bit rate}=\frac{\text{ \# bits transmitted}}{\text{Time taken}}$ (unit: bits per second, bps) 
-	- The **bit rate** $R$ (קצב נתונים) is the number of bits transmitted per a unit of time (unit: **bps**, bits per second)
-	- The **data bandwidth** (or **digital bandwidth** or simply **bandwidth**) is the maximum data rate that can be transmitted over a communication channel
-- Throughput
-	- Throughput is a measurement of the average amount of data that _actually_ passes through a network in a specific time frame, taking into account the impact of latency
-- Latency 
-	- latency is the amount of time it takes for a packet of data to travel between two points across a network connection
-	- Latency is the time it takes for data to pass from one point on a network to another
-
-
-Latency = Propagation + Transmit + Queue
-Propagation =  Distance/SpeedOfLight
-Transmit = Size/Bandwidth
-
-
-- Propagation delay
-
-
-
-
-
-- The **(analog) bandwidth** (or **frequency bandwidth**) (רוחב סרט) is the range of frequencies that a channel can transmit, defined as $B = f_\text{high} - f_\text{low}$ (unit: Hz)
-	- **Nyquist rate** = $2B$
-- The **symbol rate** (or **baud rate**) $R_s$ is the number of symbols transmitted per unit time 
-	- the number of times the signal changes state per second 
-	- (unit: baud (Bd) = symbols per second)
-- The **symbol duration time** $T_s$ is the time taken to transmit one symbol (unit: seconds)
-	- $T_s = \frac{1}{R_s}$
-
-- $R=R_s \cdot \log_2(M)$
-	- $R_s$ = symbol rate (baud)
-	- $M$ = number of symbols
-	- $R$ = bit rate (bps)
-- $R_s \leq 2B$
-- (**Nyquist's formula**) $R \leq 2B \cdot \log_2 M$
-	- $B$ is the bandwidth of the channel (Hz)
-
-
-- $\displaystyle\frac{\text{data}}{\text{data}+\text{overhead}}$
-
-
-
-
-
 - Connection-oriented service
 - Connection-less service
 
@@ -58,6 +12,120 @@ Transmit = Size/Bandwidth
 	- LAN
 
 
+
+## Signal processing
+
+
+- **ADC** (analog-to-digital converter) is a device that converts a continuous analog signal to a discrete digital signal
+	- **Sampling** converts a continuous-time signal $s(T)$ to a discrete-time signal, a sequence of numbers $s(nT)$, where: 
+		- $T$ is the **sampling period** (or **sampling interval**).
+		- $f_s = 1/T$  is the **sampling frequency** (or **sampling rate**) which is the number times per second the original analog voltage is measured ("sampled")
+	- **Quantization** replaces input values by an approximation from a finite set of values
+		- The **resolution** (or **bit depth**) is the number of bits or values for the voltage of each sample (=measurement)
+		- The difference between the original continuous analog signal and its digital approximation is called the **quantization error** (or **quantization noise**)
+- **DAC** (digital-to-analog converter) is a device that converts a digital signal to an analog signal
+	- Spectral band
+	- frequency band
+	- Digital data
+	- A **digital signal** is a signal that represents data as a sequence of discrete values
+	- analog signal
+	- analog data 
+
+
+
+
+
+- The **spectrum** $[f_\text{low}, f_\text{high}]$ of a signal is the range of frequencies it contains
+- The **center frequency** $f_c$ of a channel is defined in two ways:
+	- $f_c = \frac{f_\text{high} + f_\text{low}}{2}$ (arithmetic mean, most common)
+	- $f_c = \sqrt{f_\text{high} \cdot f_\text{low}}$ (geometric mean)
+- The **(analog) bandwidth** (or **frequency bandwidth**) (רוחב סרט) is the range of frequencies that a channel can transmit, defined as $B = f_\text{high} - f_\text{low}$ (unit: Hz)
+	- The **effective bandwidth** refers to the range of frequencies within which a significant portion of the signal's power or energy is concentrated.
+- **Fractional bandwidth**: $B_\text{frac} = \frac{B}{f_c}$
+
+
+- The **symbol rate** (or **baud rate**) $R_s$ is the number of symbols transmitted per unit time 
+	- the number of times the signal changes state per second 
+	- (unit: baud (Bd) = symbols per second)
+- The **symbol duration time** $T_s$ is the time taken to transmit one symbol (unit: seconds)
+	- $T_s = \frac{1}{R_s}$
+
+- (**Nyquist's formula**) $R = R_s \cdot \log_2(M) \leq 2B \cdot \log_2 (M)=C$
+	- (for a noiseless channel)
+	- $R_s$: symbol rate (in $\textsf{baud}$)
+	- $M$: modulation order (number of distinct symbols, or distinct amplitude (or phase, or frequency) levels)
+	- $R$: bit rate (in $\textsf{bps}$)
+	- $N=\log_2(M)$ = number of bits encoded per symbol
+	- $B$ is the bandwidth of the channel (Hz)
+	- $R_{\text{max}}=2B$ is the **Nyquist rate** (in symbols per second (baud)), which is the maximum symbol rate 
+	- $C$ is the channel capacity (in bps) (maximum bit rate)
+
+
+- The **Nyquist rate** of a signal is defined as $2f_\text{max}$ (in samples per second (Hz)), where $f_\text{max}$ is the highest frequency present in the signal (in Hz)
+- The **Nyquist frequency** (in Hz) is defined as $\displaystyle {f_s}/{2}$, where $f_s$ is the sampling rate (in samples per second (Hz)), and is the highest frequency that can be accurately represented when sampling at $f_s$.
+
+- (**Shannon–Hartley theorem**) $C = B \log_2\bigl(1 + \mathrm{SNR}\bigr)$ is the **channel capacity** (in bps) (maximum possible data rate) of a channel with bandwidth $B$ (in Hz) and signal-to-noise ratio $\mathrm{SNR}$
+- $C/B$ is the **spectral efficiency** (in bps/Hz)
+- $\mathrm{SNR}=\frac{S}{N}$: signal-to-noise ratio (SNR) (unitless)
+	- $\mathrm{SNR_{dB}}=10\log_{10}\left( \frac{S}{N} \right)$: signal-to-noise ratio (in dB)
+	- $S$: signal power (in watts)
+	- $N$: noise power (in watts)
+
+
+- **Nyquist–Shannon sampling theorem** #todo
+
+
+- $\displaystyle\frac{\text{data}}{\text{data}+\text{overhead}}$
+
+
+
+
+## Performance 
+
+#### Bandwidth 
+
+- $\text{data rate}=\frac{\text{data transmitted}}{\text{time taken}}$
+- $\text{Bit rate}=\frac{\text{ \# bits transmitted}}{\text{Time taken}}$ (unit: bits per second, bps) 
+- The **bit rate** $R$ (קצב נתונים) is the number of bits transmitted per a unit of time (unit: **bps**, bits per second)
+- The **data bandwidth** (or **digital bandwidth** or simply **bandwidth**) is the maximum data rate that can be transmitted over a communication channel
+
+###### Throughput
+
+- **Network throughput** (or just **throughput**) (in bps) is a measurement of the average amount of data that _actually_ passes through a network in a specific time frame, taking into account the impact of latency
+
+#### Latency 
+$$\text{Latency} = t_{\text{prop}} + t_{\text{tx}} + t_\text{queue}$$
+- latency is the amount of time it takes for a packet of data to travel between two points across a network connection
+- latency (also called delay (?) #todo) is the time it takes for data to pass from one point on a network to another
+- (**Propagation delay**) $t_{\text{prop}} = \frac{d}{s}= \frac{\text{distance}}{\text{speed of signal}}$
+- (**Transmission delay**) $t_{\text{tx}} =\frac{L}{R} = \frac{\text{length}\,\textsf{[bits]}}{\text{transmission rate}\,\textsf{[bps]}}$
+- (**Queueing delay**)
+- (**Processing delay**)
+- **round-trip time** (**RTT**) (or (**round-trip delay** (**RTD**)): the time it takes for a signal to travel from the source to the destination and back again
+	- $\text{RTT} \approx 2 \times t_{\text{prop}}$
+
+#### Bandwidth-delay product
+
+- The **bandwidth-delay product**, $\text{RTT}  \times \text{bandwidth}$, in bits, is the amount of data that can be in transit in the network at any given time
+
+
+#### Stop-and-wait
+
+$\displaystyle \text{Throughput}\,\textsf{[bps]} = \frac{\text{frame size}\,\textsf{[bits]} }{\text{RTT}}$
+
+#### File transfer time
+
+- Minimum transfer time: $\text{RTT} + t_{\text{tx}}$
+
+- $T_\text{total} =t_\text{handshake} + t_\text{data}$
+	- $t_\text{handshake}=k\times \text{RTT}$, where $k$ is the number of RTTs needed for handshaking
+		- $2 \times \text{RTT}$ #todo
+	- (Continuous pipeline) $t_\text{data} = N\cdot t_{\text{tx}} + t_{\text{prop}}$ 
+	- (Stop-and-wait) $t_\text{data} = (N-1)\cdot (t_{\text{tx}}+\text{RTT}) + t_{\text{tx}} + t_{\text{prop}}$
+	- (window-limited) $t_\text{data} = (K-1)\cdot \text{RTT} + t_{\text{prop}}$
+		- $K=\left\lceil\frac{N}{W}\right\rceil$ 
+		- $W$ is the window size (packets per RTT)
+	- $N=\left\lceil\frac{\text{File Size}}{\text{Packet Size}}\right\rceil$ is the number of packets needed to transmit the file
 
 
 # encoding 
@@ -76,6 +144,8 @@ Transmit = Size/Bandwidth
 - Differential Manchester: transition at the midpoint. change at the start: 0, no change at the start: 1
 
 
+# modulation 
+
 | Data    | Signal                | Encoding/Conversion Technique                  |
 | ------- | --------------------- | ---------------------------------------------- |
 | Analog  | Analog                | AM, FM                                         |
@@ -89,4 +159,19 @@ Transmit = Size/Bandwidth
 - A **frame** 
 
 
+# errors
 
+- A **bit error** is when a bit is received incorrectly (0 instead of 1 or vice versa)
+- A **burst error** is when a sequence of bits is received incorrectly
+- The **bit error ratio** is defined as $\displaystyle\text{BER} = \frac{\text{\# bit errors}}{\text{Total transmitted bits}}$
+- The **bit error probability** is defined as $p_{e}=\mathrm{E}[\text{BER}]$
+
+
+- error detection:
+	- goal: transmit a message $M$ of length $n$ with $k\ll n$ redundant bits $R=f(M)$
+	- the sender transmits $(M,R)$. The receiver receives $(M',R')$ and checks if $R' = f(M')$, if yes, assume no error with high probability, else, error detected 
+- internet checksum
+	- message is divided into words of 16 bits: $w_1, w_2, \ldots, w_m$
+	- the checksum is $R = \sim(w_1 + w_2 + \ldots + w_m)$ (where $\sim$ is the bitwise NOT operation. The sum is done using [[Data Storage#Ones' complement|ones' complement addition]])
+	- the sender sends $(M,R)$
+	- the receiver computes $S = w_1' + w_2' + \ldots + w_m' + R'$ (using ones' complement addition) and checks if $\sim S = 0$, if yes, assume no error, else, error detected
