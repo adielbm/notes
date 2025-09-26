@@ -37,6 +37,14 @@ export default (() => {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/expand.min.css"/>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <meta name="theme-color" content="#f2f0e5" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#182b26" media="(prefers-color-scheme: dark)" />
+        
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" media="(prefers-color-scheme: light)" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" media="(prefers-color-scheme: dark)" />
+        
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         {/* {cfg.baseUrl && <meta property="og:image" content={ogImagePath} />} */}
