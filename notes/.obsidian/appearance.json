@@ -1,5 +1,5 @@
 {
-  "theme": "moonstone",
+  "theme": "obsidian",
   "translucency": false,
   "enabledCssSnippets": [
     "style",
@@ -8,6 +8,6 @@
   "showRibbon": false,
   "baseFontSize": 16,
   "showViewHeader": true,
-  "accentColor": "#289f95",
+  "accentColor": "#1baca0",
   "cssTheme": "Flexoki"
 }

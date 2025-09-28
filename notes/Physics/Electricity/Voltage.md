@@ -1,7 +1,7 @@
 # Electric Potential
 
 - The **electric potential** (or **potential**) at a point is the amount of electric potential energy per unit charge at that point. $$V=\frac{U}{q}$$
-- The electric potential at a point is the work done in moving a unit positive charge from infinity to that point.
+- The electric potential at a point $\vec{\mathbf{r}}$ is the work done in moving a unit positive charge from infinity to that point. $$\displaystyle V=V(\vec{\mathbf{r}}) - V(\infty)=-\int_{\infty}^{\vec{\mathbf{r}}} \vec{\mathbf{E}}\cdot d\vec{\mathbf{l}}$$
 - The **volt** ($\mathsf{V}$), defined as $\mathsf{1\ V = 1\ J/C}$, is the SI unit of electric potential
 - (**Coulomb potential**) $\displaystyle V=k\frac{Q}{r}$
 	- $V$ is the electric potential at a point in space due to a point charge $Q$ (in $\mathsf{V}$)
@@ -10,38 +10,23 @@
 	- $k$ is [[Charge#Coulomb's Law|Coulomb's constant]]
 - The electric potential at a point due to multiple charges is the sum of the potentials due to each charge. $V_{\text{total}}=V_1+V_2+V_3+...$
 
-
-- todo
-	- $\displaystyle V=-\int \vec{\mathbf{E}}\cdot d\vec{\mathbf{r}}$
-	- $\displaystyle\Delta V = V_b - V_a = -\int_a^b \vec{\mathbf{E}}\cdot d\vec{\mathbf{r}}$
-	- $\displaystyle V=k\int \frac{dq}{r}$
-
-
 ## Voltage
+$$\displaystyle V = V_a - V_b =\frac{W_{a \to b}}{q} =-\frac{\Delta U}{q}=\int_a^b \vec{\mathbf{E}}\cdot d\vec{\mathbf{l}}=-\int_b^a \vec{\mathbf{E}}\cdot d\vec{\mathbf{l}}$$is the **voltage** (or **(electrical) potential difference**) between points $a$ and $b$. (also called the **potential difference** of $a$ with respect to $b$) 
 
-- **Voltage** (or **(electrical) potential difference**) is the difference in electric potential between two points in a circuit.
-	- $\displaystyle V = V_a - V_b = \frac{\mathrm{PE}_a-\mathrm{PE}_b}{q}$ is the **voltage** between points $a$ and $b$.
-		- $V$ is the work done in moving unit charge from $b$ to $a$ (in $\mathsf{V}$)
-		- $V_a$ and $V_b$ are the electric potentials at points $a$ and $b$ (in $\mathsf{V}$)
-	- The SI unit of voltage is the volt ($\mathsf{V}$)
-	- We often use ground (0 V) or infinity as a reference point.
-	- Given a point $a$ with a higher potential $V_a$ and a point $b$ with a lower potential $V_b$:
-		- A **negative charge** placed at $b$ has higher potential energy than at $a$, so it will move from $b$ to $a$ (when released) and decrease its potential energy.
-			- $\mathrm{PE}_a < \mathrm{PE}_b \implies \Delta \mathrm{PE} < 0$
-		- A **positive charge** placed at $a$ has higher potential energy than at $b$, so it will move from $a$ to $b$ (when released) and decrease its potential energy.
-			- $\mathrm{PE}_a > \mathrm{PE}_b \implies \Delta \mathrm{PE} > 0$
-		- In both cases, $\Delta V = V_a - V_b > 0$.
-
-- $V_{ba}=-dE$ 
-	- $V_{ba}$ is the potential difference between points $a$ and $b$ (in $\mathsf{V}$)
-	- $d$ is the distance between the points (in $\mathsf{m}$)
-	- $E$ is the electric field (in $\mathsf{N/C}$) (uniform $\vec{\mathbf{E}}$)
-
+- $V_a$ and $V_b$ are the electric potentials at points $a$ and $b$ (in $\mathsf{V}$)
+- $\Delta U=(U_b- U_a)$ 
+- $\frac{W_{a \to b}}{q} = -\frac{\Delta U}{q}$ is the work done by the electric field in moving a unit charge $q$ from point $a$ to point $b$ (in $\mathsf{J}$)
+- The SI unit of voltage is the volt
+- If $V_a>V_b$:
+	- A negative charge $q^{-}$ placed at $b$ has higher potential energy than at $a$ (i.e. $U _a < U _b$)
+	- A positive charge $q^{+}$ placed at $b$ has lower potential energy than at $a$ (i.e. $U _a > U _b$)
+	- In both cases, $V = V_a - V_b >0$
+- We often use ground (0 V) or infinity as a reference point.
 
 # Electromotive Force
 
-- #todo A **source of electromotive force (emf)** (or **source**) is a device that transforms some other form of energy into electrical energy
-- The potential difference (voltage) between the terminals of a source when no current is flowing is called the **emf** of the source 
+- A **source (of emf)** is a device that transforms some other form of energy into electrical energy
+- The potential difference (voltage) be tween the terminals of a source when no current is flowing is called the **emf** of the source 
 	- The emf of a source is determined by the chemical reactions that occur within the source
 - The **terminal voltage (difference)** is the potential difference between the terminals of a source
 - The **internal resistance** of a source is the resistance that the source itself has to the flow of current

@@ -9,5 +9,3 @@ I write them in Markdown using [Obsidian](https://obsidian.md/), generate a stat
 
 These notes are just my personal summaries, so they may contain mistakes. I update them from time to time.
 
-
-

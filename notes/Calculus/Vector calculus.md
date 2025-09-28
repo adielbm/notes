@@ -21,3 +21,26 @@
 
 - The **curl** of a vector field $\mathbf{F}=F_x\mathbf{i}+F_y\mathbf{j}$ is defined as the vector-valued function $\displaystyle\text{curl}(\mathbf{F})=\nabla\times\mathbf{F}=\left(\frac{\partial F_y}{\partial x}-\frac{\partial F_x}{\partial y}\right)\mathbf{k}$.
 - The **curl** of a vector field $\mathbf{F}=F_x\mathbf{i}+F_y\mathbf{j}+F_z\mathbf{k}$ is defined as the vector-valued function $\displaystyle\text{curl}(\mathbf{F})=\nabla\times\mathbf{F}=\left(\frac{\partial F_z}{\partial y}-\frac{\partial F_y}{\partial z}\right)\mathbf{i}+\left(\frac{\partial F_x}{\partial z}-\frac{\partial F_z}{\partial x}\right)\mathbf{j}+\left(\frac{\partial F_y}{\partial x}-\frac{\partial F_x}{\partial y}\right)\mathbf{k}$.
+
+
+
+# Parametric Equations 
+
+- A **parametric curve** is a set $C=\{\mathbf{r}(t):t\in I\}$, where:
+	- $I\subseteq \mathbb{R}$ is the **parameter interval**
+		- If $I=[a,b]$, then $(x(a),y(a),z(a))$ is the **initial point** and $(x(b),y(b),z(b))$ is the **terminal point** of the curve.
+	- $x,y,z:I\to\mathbb{R}$ 
+		- $x=x(t)$, $y=y(t)$, and $z=z(t)$ are the **parametric equations** of the curve
+	- $\mathbf{r}:I\to\mathbb{R}^3$ and $\mathbf{r}(t) = \big( x(t), y(t),z(t) \big)$ 
+	- $t$ is the **parameter** of the curve.
+- A **parametric surface** is a set $S=\{\mathbf{r}(u,v):(u,v)\in D\}$, where:
+	- $D\subseteq \mathbb{R}^2$ is the **parameter domain**
+	- $x,y,z:D\to\mathbb{R}$
+		- $x=x(u,v)$, $y=y(u,v)$, and $z=z(u,v)$ are the **parametric equations** of the surface
+	- $\mathbf{r}:D\to\mathbb{R}^3$ and $\mathbf{r}(u,v) = \big( x(u,v),\, y(u,v),\, z(u,v) \big)$
+	- $u,v$ are the **parameters** of the surface.
+- (The parametric equations are collectively called a **parametric representation** or **parametrization** of the curve/surface)
+
+
+
+- The **surface area** of a parametric surface $S$ is given by $A(S) = \iint_D \left\| \frac{\partial \mathbf{r}}{\partial u} \times \frac{\partial \mathbf{r}}{\partial v} \right\|\, dA$, where $D$ is the parameter domain.

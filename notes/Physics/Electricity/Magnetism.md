@@ -66,8 +66,8 @@
 ### Gauss's Law for Magnetism 
 
 - ${\displaystyle \nabla \cdot \mathbf {B} =0}$
-- $\displaystyle \oint \vec{B} \cdot d\vec{A} = 0$ 
-	- (the magnetic flux through a closed surface is zero, indicating that there are no magnetic monopoles)
+- $\displaystyle \iint_{S} \vec{B} \cdot d\vec{A} = 0$ where $S$ is any closed surface
+	- (i.e. the magnetic flux through a closed surface is zero, indicating that there are no magnetic monopoles)
 ### Maxwell–Faraday equation
 
 - ${\displaystyle \nabla \times \mathbf {E} =-{\frac {\partial \mathbf {B} }{\partial t}}}$

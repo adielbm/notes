@@ -30,10 +30,10 @@ classification of elements:
 	- Multiport elements
 - energy source:
 	- **passive elements** do not have a source of energy
-			- dioes, resistors, capacitors, inductors
+		- dioes, resistors, capacitors, inductors
 	- **active elements** (or **sources**) have a source of energy
-			- voltage sources, current sources
-			- dependent sources
+		- voltage sources, current sources
+		- dependent sources
 - linearity:
 	- **linear elements** have a linear relationship between voltage and current
 		- resistors, capacitors, inductors
@@ -80,12 +80,10 @@ classification of elements:
 		- $V$ is the voltage (in $\mathsf{V}$)
 		- $I$ is the current (in $\mathsf{A}$)
 		- $R$ is the resistance (in $\mathsf{\Omega}$)
-- Electrical **resistivity** (or **specific resistance**) denoted by $\rho$, is a measure of how strongly a material opposes the flow of electric current
-	- $\displaystyle R=\rho\frac{L}{A}$
-		- $R$ is the resistance of the conductor (in $\mathsf{\Omega}$)
-		- $\rho$ is the resistivity of the material (in $\mathsf{\Omega\cdot m}$)
-		- $L$ is the length of the conductor (in $\mathsf{m}$)
-		- $A$ is the cross-sectional area of the conductor (in $\mathsf{m^2}$)
+- The **(electrical) resistivity** (or **specific resistance**) $\rho$ (in $\mathsf{\Omega\cdot m}$) of a material is a measure of how strongly that material opposes the flow of electric current  
+	- $\displaystyle R=\rho\frac{L}{A}$ is the resistance of a conductor of length $L$ and cross-sectional area $A$ with resistivity $\rho$
+	- $\rho=\frac{E}{J}$ where $E$ is the electric field (in $\mathsf{V/m}$) and $J$ is the current density (in $\mathsf{A/m^2}$)
+	- $\rho(T)=\rho_0[1+\alpha(T-T_0)]$
 	- The reciprocal of the resistivity, called the **electrical conductivity** (or **specific conductance**) is $\sigma=\frac{1}{\rho}$ (in $\mathsf{S/m}$, siemens per meter, or $\mathsf{(\Omega\cdot m)^{-1}}$)
 
 ### Resistor
@@ -140,52 +138,29 @@ todo
 
 - #todo https://www.youtube.com/watch?v=33vbFFFn04k
 
-# Capacitance
-![[Capacitor.svg]]
-
-
-- A **capacitor** is a device that can store electric charge, and normally consists of two condaucting objects (usually plates or sheets) placed near each other but not touching
-	- The capacitor was originally known as the **condenser**
-	- $Q=CV$ is the relationship between charge, capacitance, and voltage
-		- $Q$ is the charge stored on the capacitor (in $\mathsf{C}$)
-		- $C$ is the capacitance of the capacitor (in $\mathsf{F}$, farads)
-		- $V$ is the voltage across the capacitor (in $\mathsf{V}$)
-	- $C=\epsilon_0 \frac{A}{d}$ is the capacitance of a parallel-plate capacitor
-		- $C$ is the capacitance (in $\mathsf{F}$)
-		- $\epsilon_0$ is the **permittivity of free space** (or **vacuum permittivity**) that is $8.85\times 10^{-12}\ \mathsf{F/m}$
-		- $A$ is the area of the plates (in $\mathsf{m^2}$)
-		- $d$ is the separation between the plates (in $\mathsf{m}$)
-
-- The **total** (or **equivalent**) capacitance of capacitors connected:
-	- (series) $\displaystyle\frac{1}{C_{\text{total}}}=\frac{1}{C_1}+\frac{1}{C_2}+\ldots+\frac{1}{C_n}$
-	- (parallel) $C_{\text{total}}=C_1+C_2+\ldots+C_n$
-
+ 
 # RC Circuits
 
-- $V_C=V_0(1-e^{-t/RC})$ is the voltage across the capacitor in time $t$ in an RC circuit
-	- $V_0$ is the initial voltage across the capacitor (in $\mathsf{V}$)
-	- $V_C$ is the voltage across the capacitor at time $t$ (in $\mathsf{V}$)
-	- $R$ is the resistance in the circuit (in $\mathsf{\Omega}$)
-	- $C$ is the capacitance of the capacitor (in $\mathsf{F}$)
-	- $t$ is the time (in $\mathsf{s}$)
-	- $e$ is the base of the natural logarithm
-	- $\tau=RC$ is the time constant of the circuit (in $\mathsf{s}$)
-- $V_R=V_0-V_C$ is the voltage across the resistor in time $t$ in an RC circuit
-- $Q=Q_0(1-e^{-t/RC})$ is the charge on the capacitor in time $t$ in an RC circuit
-	- $Q_0$ is the initial charge on the capacitor (in $\mathsf{C}$)
-- $I=\frac{V_R}{R}=\frac{V_0}{R}e^{-t/RC}$ is the current in the circuit in time $t$ in an RC circuit
+- $\tau=RC$ (in $\mathsf{s}$) is the **time constant** (or **relaxation time**) of the RC circuit
 
-# Ground
+#### Capacitor charging
 
-- ground fault
-- ground wire
-- Leakage
-- ground and neutral
-- Fuse
-- GFCI (Ground Fault Circuit Interrupter)
-- Circuit breaker
-- grounding system
-- grounding rod
-- leakage current
-- hot, neutral, and ground wires
-- Grounding is the action of electrically connecting something to a Grounding Electrode, which is a conductive object used to create a direct connection to ground--typically a Ground Rod
+- $q=Q_{\text{f}}(1-e^{-t/RC})$ is the charge on the capacitor in time $t$
+	- $Q_{\text{f}}=C\mathcal{E}$  
+- $i=I_{0}e^{-t/RC}$ is the current in time $t$
+	- $I_0=\frac{\mathcal{E}}{R}$ 
+- $v_C=\mathcal{E}(1-e^{-t/RC})$ is the voltage across the capacitor in time $t$
+- $v_R=\mathcal{E}-v_C$ is the voltage across the resistor in time $t$
+
+![[RC circuit - charging.svg]]
+
+#### Capacitor discharging 
+
+- $q=Q_{0}e^{-t/RC}$ is the charge on the capacitor in time $t$
+	- $Q_0$ is the initial charge on the capacitor
+- $i=I_{0}e^{-t/RC}$ is the current in time $t$
+	- $I_0=\frac{Q_0}{RC}$
+- $v_C=V_0 e^{-t/RC}$ is the voltage across the capacitor in time $t$
+	- $V_0$ is the initial voltage across the capacitor
+- $v_R=v_C$ is the voltage across the resistor in time $t$
+

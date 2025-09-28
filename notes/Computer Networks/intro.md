@@ -1,18 +1,4 @@
 
-- A **link** is 
-
-- Connection-oriented service
-- Connection-less service
-
-
-
-- Link Classification
-	- Last-Mile
-	- Backbone
-	- LAN
-
-
-
 ## Signal processing
 
 
@@ -78,6 +64,16 @@
 - $\displaystyle\frac{\text{data}}{\text{data}+\text{overhead}}$
 
 
+### modulation 
+
+| Data    | Signal                | Encoding/Conversion Technique                  |
+| ------- | --------------------- | ---------------------------------------------- |
+| Analog  | Analog                | AM, FM                                         |
+| Digital | (Square-wave) digital | NRZ, NRZI, Manchester, Differential Manchester |
+| Digital | (Discrete) analog     |                                                |
+| Analog  | Digital               |                                                |
+
+
 
 
 ## Performance 
@@ -128,7 +124,71 @@ $\displaystyle \text{Throughput}\,\textsf{[bps]} = \frac{\text{frame size}\,\tex
 	- $N=\left\lceil\frac{\text{File Size}}{\text{Packet Size}}\right\rceil$ is the number of packets needed to transmit the file
 
 
-# encoding 
+# OSI and TCP/IP models
+
+<table border="1">
+  <thead>
+    <tr>
+      <th></th>
+      <th>OSI</th>
+      <th>TCP/IP</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Data</td>
+      <td>Application</td>
+      <td style="vertical-align: middle;" align="center" rowspan="3">Application</td>
+      <td style="vertical-align: middle;" align="center" rowspan="3">Software</td>
+    </tr>
+    <tr>
+      <td>Data</td>
+      <td>Presentation</td>
+    </tr>
+    <tr>
+      <td>Data</td>
+      <td>Session</td>
+    </tr>
+    <tr>
+      <td>Segment</td>
+      <td>Transport</td>
+      <td>Transport</td>
+      <td>Hardware/Software</td>
+    </tr>
+    <tr>
+      <td>Packet</td>
+      <td>Network</td>
+      <td>Internet</td>
+      <td style="vertical-align: middle;" align="center" rowspan="3">Hardware</td>
+    </tr>
+    <tr>
+      <td>Frame</td>
+      <td>Data Link (קו)</td>
+      <td style="vertical-align: middle;" align="center" rowspan="2">Link (or Network Access)</td>
+    </tr>
+    <tr>
+      <td>Bit</td>
+      <td>Physical</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+# Link layer
+
+- Link Classification
+	- Last-Mile
+	- Backbone
+	- LAN
+
+
+- Connection-oriented service
+- Connection-less service
+
+
+## encoding 
 
 - baseline wander
 
@@ -144,22 +204,14 @@ $\displaystyle \text{Throughput}\,\textsf{[bps]} = \frac{\text{frame size}\,\tex
 - Differential Manchester: transition at the midpoint. change at the start: 0, no change at the start: 1
 
 
-# modulation 
 
-| Data    | Signal                | Encoding/Conversion Technique                  |
-| ------- | --------------------- | ---------------------------------------------- |
-| Analog  | Analog                | AM, FM                                         |
-| Digital | (Square-wave) digital | NRZ, NRZI, Manchester, Differential Manchester |
-| Digital | (Discrete) analog     |                                                |
-| Analog  | Digital               |                                                |
-
-
-# Framing 
+## Framing 
 
 - A **frame** 
 
 
-# errors
+
+## Error detection and correction
 
 - A **bit error** is when a bit is received incorrectly (0 instead of 1 or vice versa)
 - A **burst error** is when a sequence of bits is received incorrectly
@@ -175,3 +227,131 @@ $\displaystyle \text{Throughput}\,\textsf{[bps]} = \frac{\text{frame size}\,\tex
 	- the checksum is $R = \sim(w_1 + w_2 + \ldots + w_m)$ (where $\sim$ is the bitwise NOT operation. The sum is done using [[Data Storage#Ones' complement|ones' complement addition]])
 	- the sender sends $(M,R)$
 	- the receiver computes $S = w_1' + w_2' + \ldots + w_m' + R'$ (using ones' complement addition) and checks if $\sim S = 0$, if yes, assume no error, else, error detected
+- cyclic redundancy check (CRC) #todo 
+- Parity check #todo 
+
+
+## protocols 
+### Stop-and-wait ARQ
+
+### Sliding window protocol
+
+
+## Ethernet
+
+### Frame format (Ethernet II)
+
+<table>
+  <tr>
+    <th align="center">8 bytes</th>
+    <th align="center">6</th>
+    <th align="center">6</th>
+    <th align="center">2</th>
+    <th align="center">46-1500</th>
+    <th align="center">4</th>
+  </tr>
+  <tr>
+    <td align="center">Preamble</td>
+    <td align="center">Dest addr</td>
+    <td align="center">Src addr</td>
+    <td align="center">EtherType</td>
+    <td align="center">Payload</td>
+    <td align="center">CRC</td>
+  </tr>
+  <tr>
+    <td align="center"></td>
+    <td align="center" colspan="3">Header</td>
+    <td align="center">Data</td>
+    <td align="center">Footer</td>
+  </tr>
+</table>
+
+#### MAC address
+
+<table style="font-family: monospace;">
+  <tr>
+    <th align="center" colspan="2">MAC address<br><small>(12 hex digits = 6 bytes = 48 bits)</small></th>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">XX:XX:XX:XX:XX:XX</td>
+  </tr>
+  <tr>
+    <td  align="center" >XX:XX:XX</td>
+    <td  align="center" >XX:XX:XX</td>
+  </tr>
+  <tr>
+    <td  align="center" >OUI<br><small>(Organizationally Unique Identifier)</small></td>
+    <td  align="center" >NIC<br><small>(Device Identifier)</small></td>
+  </tr>
+</table>
+
+- **unicast address**: 
+- **broadcast address**: FF:FF:FF:FF:FF:FF = all 1s
+	- an adpaptor will pass all frames addressed to this address up to host
+- **multicast address**: the first bit is 1 but the address is not the broadcast address
+	- an adpaptor can be configured to accept frames addressed to set of multicast addresses
+
+- Ethernet adaptor receives all frames, but accepts only:
+	- frames addressed to its unicast address
+	- frames addressed to the broadcast address
+	- frames addressed to multicast addresses it is configured to accept
+	- (all frames if in **promiscuous mode**)
+
+
+# CSMA
+
+- **Carrier Sense Multiple Access** (CSMA)
+	- CSMA/CD (Collision Detection)
+	- CSMA/CA (Collision Avoidance)
+
+
+- backoff time = $k\times \text{slot time}$,
+	- $k$ is a random integer in $[0, 2^n - 1]$
+	- $n$ is the number of collisions for the frame (up to a maximum value, e.g., 10)
+	- slot time is the time to transmit 512 bits (minimum Ethernet frame size) (51.2 μs for 10 Mbps Ethernet, 5.12 μs for 100 Mbps Fast Ethernet, 0.512 μs for 1 Gbps Gigabit Ethernet)
+
+#### access methods
+
+##### 1-persistent 
+
+```mermaid 
+flowchart TD
+    C{Channel Status?} -->|Busy| C
+    C -->|Idle| F[Transmit Frame]
+    F -->|successful transmission| A[done]
+    F -->|collision| R[Wait random time] --> C
+```
+
+##### p-persistent 
+
+```mermaid
+flowchart TD
+    C{Channel Status?}
+    
+    C -->|Busy| D[Wait for Next Time Slot]
+    D --> C
+    
+    C -->|Idle| E{Random}
+    
+    E -->|Random ≤ p| F[Transmit Frame]
+    E -->|Random > p| D
+    
+    F -->|successful transmission| A[done]
+    F -->|failed transmission| C
+    
+```
+
+##### non-persistent
+
+
+```mermaid
+flowchart TD
+	A[has data to send?] -->|yes| C
+    C{Sense: Channel Status?}
+    
+    C -->|Busy| D[Wait random time] --> C
+    C -->|Idle| F
+    
+    E{Random}
+    F[Transmit Frame]    
+```

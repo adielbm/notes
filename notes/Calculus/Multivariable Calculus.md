@@ -26,7 +26,7 @@
 
 # Multiple Integrals
 
-- (Double Integral) The **double integral** of a function $f(x,y)$ over a region $D$ in the $xy$-plane is defined as $\displaystyle\iint_D f(x,y)\,dx\,dy=\lim_{m,n\to \infty} \sum_{i=1}^{m}\sum_{j=1}^{n} f(x_{ij},y_{ij})\Delta A_{ij}$, where: 
+- The **double integral** of a function $f(x,y)$ over a region $D$ in the $xy$-plane is defined as $\displaystyle\iint_D f(x,y)\,dx\,dy=\lim_{m,n\to \infty} \sum_{i=1}^{m}\sum_{j=1}^{n} f(x_{ij},y_{ij})\Delta A_{ij}$, where: 
 	- $\Delta A_{ij}$ is the area of the rectangle $R_{ij}$
 	- $(x_{ij},y_{ij})$ is a point in the rectangle $R_{ij}$.
 - If $D$ is a rectangle $[a,b]\times[c,d]$, then the double integral can be evaluated as $\displaystyle\iint_D f(x,y)\,dx\,dy=\int_a^b \int_c^d f(x,y)\,dy\,dx=\int_c^d \int_a^b f(x,y)\,dx\,dy$.
@@ -47,9 +47,9 @@
 	- ${\displaystyle {\mathcal {C}}\subset U}$ is a piecewise smooth curve parametrized by $\mathbf{r}(t)=(x(t),y(t))$ for $t\in [a,b]$.
 	- $\displaystyle ds=\sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2}\,dt$ is the differential arc length along the curve $\mathcal{C}$.
 
-> this can be generalized to curve $\mathcal{C}$ in $\mathbb{R}^3$ as follows: $\displaystyle \int_\mathcal {C} f(x,y,z)\,ds=\int_a^b f(\mathbf{r}(t))\, \vert\mathbf{r}'(t)\vert\,dt$ where $\mathbf{r}(t)=(x(t),y(t),z(t))$ for $t\in [a,b]$.
+> this can be generalized to curve $\mathcal{C}\subset U \subset\mathbb{R}^3$ as follows: $\displaystyle \int_\mathcal {C} f(x,y,z)\,ds=\int_a^b f(\mathbf{r}(t))\, \vert\mathbf{r}'(t)\vert\,dt$ where $\mathbf{r}(t)=(x(t),y(t),z(t))$ for $t\in [a,b]$.
 
-### Line integral of a vector field (2d)
+### Line integral of a vector field
 
 ![](https://upload.wikimedia.org/wikipedia/commons/b/b0/Line_integral_of_vector_field.gif)
 
@@ -59,4 +59,4 @@
 	- ${\displaystyle {\mathcal {C}}\subset U}$ is a piecewise smooth curve parametrized by $\mathbf{r}(t)=(x(t),y(t))$ for $t\in [a,b]$.
 	- $\displaystyle d\mathbf{r}=\left(\frac{dx}{dt},\frac{dy}{dt}\right)\,dt$ is the differential displacement vector along the curve $\mathcal{C}$.
 
-
+> this can be generalized to curve $\mathcal{C}\subset U \subset\mathbb{R}^3$ where $\mathbf{F}: U\to \mathbb{R}^3$ and $\mathbf{r}(t)=(x(t),y(t),z(t))$ for $t\in [a,b]$.

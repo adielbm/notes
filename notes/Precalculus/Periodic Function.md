@@ -1,5 +1,3 @@
-
-
 - A function $F(t)$ is said to be **periodic** if there exists a nonzero number $T$ such that $F(t+T)=F(t)$ for all $t$ in the domain of $F$.
 	- A nonzero constant $T$ for which this is the case is called a **period** of the function
 	- The smallest such $T$ (if it exists) is called the **fundamental period** (or **the period**) of the function
@@ -20,9 +18,4 @@
 		- $c=\frac{2}{T}\int_{0}^{T} F(t) dt$
 
 
-- A **sine wave** (or **sinusoid**) (symbol: ∿) is any function of the form $y(t)=A\sin(\omega t + \phi)$
-	- A sine wave is a periodic function with period $T=\frac{2\pi}{\omega}$, amplitude $A$, and phase shift $\phi$.
-	- $\displaystyle y(x,t)=A\sin\left(\frac{2\pi}{\lambda}x-\omega t+\phi\right)=A\sin\left(\frac{2\pi}{\lambda}(x-vt)+\phi\right)$
-	- is the equation of a traveling wave (to the right. if it is to the left, the minus sign is replaced by a plus sign)
-		- $x$ is the position of the wave we are considering
-		- $vt$ is the distance the wave has traveled from the origin at time $t$
+

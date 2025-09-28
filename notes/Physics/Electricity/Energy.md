@@ -4,6 +4,8 @@ $$\displaystyle U_E=k\frac{q_1q_2}{r}$$
 
 - **Electric potential energy** is the energy stored in a system of charges due to their positions relative to each other
 - The work done in bringing a charge from infinity to that point
+- ${\displaystyle U_{\mathrm {E} }(\mathbf {r} )=-W_{r_{\rm {ref}}\rightarrow r}=-\int _{{\mathbf {r} }_{\rm {ref}}}^{\mathbf {r} }q\mathbf {E} (\mathbf {r'} )\cdot \mathrm {d} \mathbf {r'} }$
+
 
 ## Electric energy
 

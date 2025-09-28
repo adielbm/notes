@@ -5,9 +5,6 @@
 
 - A force is an interaction between two objects or between an object and its environment.
 - A force is a vector quantity.
-- $\vec{\mathbf{F}}_{\text{G}} = m\vec{\mathbf{g}}$ is the **gravitational force** (in $\mathsf{N}$) acting on an object with mass $m$ in a gravitational field with gravitational acceleration $\vec{\mathbf{g}}$.
-	- $W=mg$ is the **weight** (in $\mathsf{N}$) of an object with mass $m$ in a gravitational field with gravitational acceleration $g$.
-	- (Some define weight as a vector quantity, the gravitational force acting on an object, while others define it as a scalar quantity, the magnitude of the gravitational force)
 - The **normal force** $\vec{F}_{\text{N}}$ is the force exerted by a surface perpendicular to the object in contact with it.
 - The **friction force** $\vec{F}_{\text{fr}}$ is the force exerted by a surface parallel to the object in contact with it, opposing its motion.
 	- $F_{\text{fr}}=\mu_{k} F_{\text{N}}$ is the **kinetic friction force** (in $\mathsf{N}$) acting on an object moving on a surface with normal force $F_{\text{N}}$ and coefficient of kinetic friction $\mu_{k}$.
@@ -36,12 +33,17 @@ The acceleration of a body is directly proportional to the net force acting on i
 
 For every action force $\vec{F}_{1 \to 2}$ exerted by object 1 on object 2, there is an equal in magnitude and opposite in direction reaction force $\vec{F}_{2 \to 1}$ exerted by object 2 on object 1. $$\vec{F}_{1 \to 2} = -\vec{F}_{2 \to 1}$$
 ## Gravity
+$$\vec{\mathbf{F}}_{\text{G}} = m\vec{\mathbf{g}}$$
 
-- $G=6.67430(15)\times 10^{-11}\ \mathrm {m^{3}kg^{-1}s^{-2}}$ is the **gravitational constant** (dim. ${\mathsf {M^{-1}L^{3}T^{-2}}}$)
-- $\displaystyle g=\frac{F}{m}$ is the **gravitational acceleration** (in $\mathsf{m/s^2}$) of a free-falling object of mass $m$ in a gravitational field with gravitational force $F$ acting on it
-- $\displaystyle g=G\frac{M}{r^2}$ is the **gravitational acceleration** (in $\mathsf{m/s^2}$) at a point a gravitational field due to a mass $M$, where $r$ is the distance from the center of mass of $M$ to the point
-	- If $M$ is the Earth, then $g=G M_{\text{E}}r^2\approx 9.81\ \mathrm {m/s^2}$ (**Gravity on Earth**)
-
+- $\vec{\mathbf{F}}_{\text{G}}$ is the **gravitational force** (in $\mathsf{N}$) acting on a mass $m$ in a gravitational acceleration field $\vec{\mathbf{g}}$.
+- The **gravitational acceleration field** (or **gravitational field**) $\vec{\mathbf{g}}$ (in $\mathsf{m/s^2}$) is a vector field that describes the gravitational acceleration that a mass would experience at any point in space due to the presence of other masses.
+	- $\vec{\mathbf{g}} = - G \frac{M}{r^2} \, \hat{r}$ (or $g=G\frac{M}{r^2}$) is the **gravitational acceleration** at a point in space $\vec{\mathbf{r}}$ due to a point mass $M$ located at the origin.
+		- $\hat{r}$ is the unit vector pointing from the center of mass of $M$ to the point where $\vec{\mathbf{g}}$ is being calculated
+		- The negative sign indicates that the gravitational field points towards the mass $M$
+		- $G=6.67430(15)\times 10^{-11}\ \mathrm {m^{3}kg^{-1}s^{-2}}$ is the **gravitational constant** (dim. ${\mathsf {M^{-1}L^{3}T^{-2}}}$)
+		- If $M$ is the Earth, then $g=G M_{\text{E}}r^2\approx 9.81\ \mathrm {m/s^2}$ (**Gravity on Earth**)
+- $W=mg$ is the **weight** (in $\mathsf{N}$) of an object with mass $m$ in a gravitational field with gravitational acceleration $g$.
+	- (Some define weight as a vector quantity, the gravitational force acting on an object, while others define it as a scalar quantity, the magnitude of the gravitational force)
 
 #### Newton's Law of Universal Gravitation
 

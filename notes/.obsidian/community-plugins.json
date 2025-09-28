@@ -1,10 +1,11 @@
 [
-  "img-caption",
   "css-editor",
   "toggle-dark-mode",
   "obsidian-latex-suite",
   "darlal-switcher-plus",
   "obsidian-hide-sidebars-when-narrow",
   "github-copilot",
-  "obsidian-git"
+  "obsidian-git",
+  "sheets",
+  "img-caption"
 ]

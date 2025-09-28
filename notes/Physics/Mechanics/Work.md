@@ -6,7 +6,7 @@
     - $\theta$ is the angle between the force vector and the distance vector
     - Work is the [[Vectors#Dot Product|dot product]] of the force and distance vectors
 
-- $W=\int_{x_1}^{x_2} F(x) dx$ (Work = Integral of Force with respect to distance)
+- $W=\int_{x_1}^{x_2} F(x) dx$
     - $F(x)$ is the force acting on the object as a function of distance $x$
     - $dx$ is an infinitesimally small distance.
     - $x_1$ and $x_2$ are the initial and final positions of the object, respectively.

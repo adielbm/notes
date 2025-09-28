@@ -20,7 +20,6 @@
 	- $q_1$ and $q_2$ are the magnitudes of the charges (in $\mathsf{C}$)
 	- $r$ is the distance between the charges (in $\mathsf{m}$)
 	- $\displaystyle k=\frac{1}{4\pi\epsilon_{0}}=8.99\times 10^9\ \mathsf{N\cdot m^2/C^2}$ is **Coulomb's constant**
-	- $\displaystyle\epsilon_{0}=\frac{1}{4\pi k}=8.85\times 10^{-12}\ \mathsf{C^2/N\cdot m^2}$ is the **permittivity of free space**
 
 - limitations and assumptions of Coulomb's Law #todo
 	- point charges
@@ -71,12 +70,13 @@
 > - In the figure, the electric field is positive, so it points towards a negative charge and away from a positive charge. But if the electric field is negative, it is the opposite.
 
 
-### Electric Field and Potential Eifference
+### Electric field and potential
 
-- $\displaystyle E=-\frac{V_{ba}}{x}$ is the electric field (uniform $\vec{\mathbf{E}}$)
+- (uniform electric field) $\displaystyle E=-\frac{V_{ba}}{d}$
 	- $V_{ba}$ is the potential difference between points $a$ and $b$ (in $\mathsf{V}$)
-	- $x$ is the distance between the points (in $\mathsf{m}$)
-- $\displaystyle E_{x}=-\frac{dV}{dx}$ is the electric field (non-uniform $\vec{\mathbf{E}}$)
+	- $d$ is the distance between the points (in $\mathsf{m}$)
+- (non-uniform electric field) $\vec{\mathbf{E}}=-\nabla V$
+	- $\nabla V$ is the gradient of the electric potential $V$
 
 ### Electric Field between Two Parallel Plates
 

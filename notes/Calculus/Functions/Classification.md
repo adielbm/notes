@@ -34,6 +34,17 @@
 			- $\displaystyle\lim_{ x \to \infty }f(x)=0$
 	- [[Derivative#Examples|Derivative]]
 
+
+- (**natural exponential function**) $f(x)=e^x$
+- generalizations of exponential function:
+	- $f(x)=ab^{cx+d}$, for $a,b,c,d \in \mathbb{R}$ and $b>0$
+		- $f(x)$ is an **exponentially increasing function** if $c>0$, and is an **exponentially decreasing function** if $c<0$.
+	- $f(x)=ab^{x}=a(1+r)^x$, where: 
+		- $a$ is the **initial amount**
+		- $b$ is the **base**
+		- $r$ is the **growth rate** (if $r>0$) or the **decay rate** (if $r<0$) per time period
+		- $x=0,1,2,\dots$ is the number of time periods that have passed
+
 #### Logarithmic Functions
 
 - $f(x)=\log_{a}(x)$ where $a>0$ and $a\neq 1$
