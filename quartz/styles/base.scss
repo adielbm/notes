@@ -24,8 +24,10 @@
   --broader: #36554d;
 }
 
-:root[saved-theme=dark] img {
-  filter: invert(1) hue-rotate(180deg);
+:root[saved-theme=dark] {
+  img {
+    filter: url(#invert-luminance) !important;
+  }
 }
 
 .page-title {
@@ -60,7 +62,9 @@
     text-decoration: none;
   }
 
-  & a, & p, & span {
+  & a,
+  & p,
+  & span {
     opacity: 0.8;
   }
 }
@@ -121,7 +125,8 @@ body {
   // font-family: -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, Helvetica, Arial, sans-serif;
 }
 
-body, button {
+body,
+button {
   font-family: "Asap", sans-serif;
 }
 

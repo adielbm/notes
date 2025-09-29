@@ -19,6 +19,7 @@ import DesktopOnly from "./DesktopOnly"
 import MobileOnly from "./MobileOnly"
 import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
+import Filters from "./Filters"
 
 /* i added these */
 import CustomFooter from "./CustomFooter"
@@ -46,6 +47,7 @@ export {
   RecentNotes,
   NotFound,
   Breadcrumbs,
+  Filters,
   
   /* i added these */
   CustomFooter, 
