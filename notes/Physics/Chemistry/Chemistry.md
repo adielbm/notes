@@ -45,7 +45,7 @@
 ## Atomic Mass
 
 - The atomic mass ($m$ or $m_{\text{a}}$) is the mass of an atom
-    - Although the SI unit of mass is the $\mathsf{kg}$, atomic mass is often expressed in the non-SI unit of unified atomic mass units (u).
+    - Although the SI unit of mass is the $\mathrm{kg}$, atomic mass is often expressed in the non-SI unit of unified atomic mass units (u).
     - Examples: 
         - $m(\ce{^{12}C})=12 \, \mathsf{u}$ (the atomic mass of an carbon-12 atom is $12 \, \mathsf{u}$)
         - $m(\ce{^{13}C})=13.0033548378 \, \mathsf{u}$ (the atomic mass of an carbon-13 atom is $13.0033548378 \, \mathsf{u}$)
@@ -60,8 +60,8 @@
 Because substances are usually not isotopically pure, (i.e., they are a mixture of isotopes of the element) it is convenient to use the **average atomic mass** (or **atomic weight**) which is the weighted average of the atomic masses of the naturally occurring isotopes of the element to calculate the atomic mass of given sample of the element.
     - General formula for calculating the average atomic mass of an element:
         - $m(E)=\sum_i \left( m_i \cdot f_i \right)$, where:
-            - $m(E)$ is the average atomic mass of the element $E$ (in $\mathsf{u}$)
-            - $m_i$ is the atomic mass of the $i$-th isotope of the element (in $\mathsf{u}$)
+            - $m(E)$ is the average atomic mass of the element $E$ (in $\mathrm{u}$)
+            - $m_i$ is the atomic mass of the $i$-th isotope of the element (in $\mathrm{u}$)
             - $f_i$ is the natural abundance of the $i$-th isotope of the element (in $\%$)
     - Example:
         - The natural abundance of $\ce{^{12}C}$ and $\ce{^{13}C}$ are $98.93\%$ and $1.07\%$ respectively.
@@ -73,8 +73,8 @@ Because substances are usually not isotopically pure, (i.e., they are a mixture 
 
 - The **relative isotopic mass** of a particular isotope of an element is the mass of the isotope relative to the mass of carbon-12.
     - It is defined as $m_i = \frac{m}{m_{\text{C}}}$, where:
-        - $m$ is the atomic mass of the isotope (in $\mathsf{u}$)
-        - $m_{\text{C}}$ is the atomic mass of $\ce{^{12}C}$ (in $\mathsf{u}$)
+        - $m$ is the atomic mass of the isotope (in $\mathrm{u}$)
+        - $m_{\text{C}}$ is the atomic mass of $\ce{^{12}C}$ (in $\mathrm{u}$)
         - $m_i$ is the relative isotopic mass of the isotope (dimensionless)
     - Example:
         - The relative isotopic mass of $\ce{^{13}C}$ is $m_{\ce{^{13}C}}=\frac{13.0033548378}{12}=1.083$
@@ -103,8 +103,8 @@ Because substances are usually not isotopically pure, (i.e., they are a mixture 
 
 
 - The **molar mass** ($M$) of an element/compound is the mass of one mole of a substance of that element/compound.
-    - The molar mass is expressed in $\mathsf{g/mol}$.
-- The **molar mass of an element** is numerically equal to the atomic mass of the element in $\mathsf{u}$.
+    - The molar mass is expressed in $\mathrm{g/mol}$.
+- The **molar mass of an element** is numerically equal to the atomic mass of the element in $\mathrm{u}$.
     - Example: 
         - The molar mass of carbon is $12.011 \, \mathsf{g/mol}$.
         - The molar mass of oxygen is $15.999 \, \mathsf{g/mol}$.
@@ -112,23 +112,23 @@ Because substances are usually not isotopically pure, (i.e., they are a mixture 
 - The **molar mass of a compound** is the sum of the molar masses of the elements in the compound.
     - To determine the molar mass of a compound, multiply the molar mass of each element by its subscript in the formula and add the results.
     - $M=\sum_i \left( a_i \times M_i \right)$, where:
-        - $M$ is the molar mass of the compound (in $\mathsf{g/mol}$)
+        - $M$ is the molar mass of the compound (in $\mathrm{g/mol}$)
         - $a_i$ is the subscript of the $i$-th element in the compound's chemical formula (which is the number of atoms of that element in one molecule of the compound).
-        - $M_i$ is the molar mass of the $i$-th element (in $\mathsf{g/mol}$)
+        - $M_i$ is the molar mass of the $i$-th element (in $\mathrm{g/mol}$)
     - Example:
         - The molar mass of $\ce{H2O}$ is $2 \times 1.008 \, \mathsf{g/mol} + 15.999 \, \mathsf{g/mol} = 18.015 \, \mathsf{g/mol}$.
         - The molar mass of $\ce{CO2}$ is $12.011 \, \mathsf{g/mol} + 2 \times 15.999 \, \mathsf{g/mol} = 44.01 \, \mathsf{g/mol}$.
 - The molar mass $M$ of a substance can be calculated by these formulas: 
     - $M=\frac{m}{N_A}$, where:
-        - $m$ is the mass of the substance (in $\mathsf{g}$)
+        - $m$ is the mass of the substance (in $\mathrm{g}$)
         - $N_0$ is Avogadro's number
     - $M=\frac{m}{n}$, where:
-        - $m$ is the mass of the substance (in $\mathsf{g}$)
-        - $n$ is the number of moles of the substance (in $\mathsf{mol}$)
+        - $m$ is the mass of the substance (in $\mathrm{g}$)
+        - $n$ is the number of moles of the substance (in $\mathrm{mol}$)
     
 
 > [!EXAMPLE] Converting Moles to Grams
-> Given $0.750 \, \mathsf{mol}$ of $\ce{Ag}$, calculate the mass (in $\mathsf{g}$) of $\ce{Ag}$.
+> Given $0.750 \, \mathsf{mol}$ of $\ce{Ag}$, calculate the mass (in $\mathrm{g}$) of $\ce{Ag}$.
 > **Answer:** The molar mass of $\ce{Ag}$ is $107.87 \, \mathsf{g/mol}$, so, by the formula $m=n \times M$, the mass of $0.750 \, \mathsf{mol}$ of $\ce{Ag}$ is $m=0.750 \, \mathsf{mol} \times 107.87 \, \mathsf{g/mol}=80.9 \, \mathsf{g}$.
 
 > [!EXAMPLE] Converting Grams to Moles
@@ -265,9 +265,9 @@ Because substances are usually not isotopically pure, (i.e., they are a mixture 
 
 - The **Molar volume** ($V_m$) of a substance is the ration of the volume occupied by a substance to the amount of substance.
     - $V_m=\frac{M}{\rho}$, where:
-        - $V_m$ is the molar volume of the substance (in $\mathsf{m^3/mol}$)
-        - $M$ is the molar mass of the substance (in $\mathsf{g/mol}$)
-        - $\rho$ is the density of the substance (in $\mathsf{g/m^3}$)
+        - $V_m$ is the molar volume of the substance (in $\mathrm{m^3/mol}$)
+        - $M$ is the molar mass of the substance (in $\mathrm{g/mol}$)
+        - $\rho$ is the density of the substance (in $\mathrm{g/m^3}$)
 
 ## Ideal Gas Law
 

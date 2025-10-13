@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42.918pt" height="6.749pt" viewBox="0 0 42.918 6.749"><desc>\documentclass{standalone}
+\usepackage[american]{circuitikz} 
+\begin{document} 
+\begin{tikzpicture} 
+    \draw (0,0) to[american inductor] (1.5,0) ; 
+\end{tikzpicture} 
+\end{document} </desc>
+<defs>
+<clipPath id="clip-0">
+<path clip-rule="nonzero" d="M 0 5 L 42.917969 5 L 42.917969 6.75 L 0 6.75 Z M 0 5 "/>
+</clipPath>
+<clipPath id="clip-1">
+<path clip-rule="nonzero" d="M 4 0 L 39 0 L 39 6.75 L 4 6.75 Z M 4 0 "/>
+</clipPath>
+</defs>
+<g clip-path="url(#clip-0)">
+<path fill="none" stroke-width="0.3985" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 0.00021875 -0.00040625 L 5.386938 -0.00040625 M 37.133031 -0.00040625 L 42.51975 -0.00040625 " transform="matrix(1, 0, 0, -1, 0.199, 6.191)"/>
+</g>
+<g clip-path="url(#clip-1)">
+<path fill="none" stroke-width="0.797" stroke-linecap="butt" stroke-linejoin="bevel" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 4.9885 -0.160562 C 4.9885 3.1285 6.808813 5.792563 9.054906 5.792563 C 11.301 5.792563 13.125219 3.1285 13.125219 -0.160562 C 13.125219 3.1285 14.945531 5.792563 17.191625 5.792563 C 19.437719 5.792563 21.261937 3.1285 21.261937 -0.160562 C 21.261937 3.1285 23.08225 5.792563 25.328344 5.792563 C 27.574437 5.792563 29.39475 3.1285 29.39475 -0.160562 C 29.39475 3.1285 31.218969 5.792563 33.465063 5.792563 C 35.711156 5.792563 37.531469 3.1285 37.531469 -0.160562 " transform="matrix(1, 0, 0, -1, 0.199, 6.191)"/>
+</g>
+</svg>

@@ -26,15 +26,18 @@
 
 # Multiple Integrals
 
+## double integral
+
+![[Double integral.svg]]
 - The **double integral** of a function $f(x,y)$ over a region $D$ in the $xy$-plane is defined as $\displaystyle\iint_D f(x,y)\,dx\,dy=\lim_{m,n\to \infty} \sum_{i=1}^{m}\sum_{j=1}^{n} f(x_{ij},y_{ij})\Delta A_{ij}$, where: 
 	- $\Delta A_{ij}$ is the area of the rectangle $R_{ij}$
 	- $(x_{ij},y_{ij})$ is a point in the rectangle $R_{ij}$.
 - If $D$ is a rectangle $[a,b]\times[c,d]$, then the double integral can be evaluated as $\displaystyle\iint_D f(x,y)\,dx\,dy=\int_a^b \int_c^d f(x,y)\,dy\,dx=\int_c^d \int_a^b f(x,y)\,dx\,dy$.
 
-
+## triple integral 
 
 - $\displaystyle\iiint_D f(x,y,z)\,dx\,dy\,dz$  
-- $\displaystyle \int_0^\infty \int_0^y f(x,y)\,dx\,dy$  
+
 
 # Line Integrals 
 ### Line integral of a scalar field
@@ -60,3 +63,42 @@
 	- $\displaystyle d\mathbf{r}=\left(\frac{dx}{dt},\frac{dy}{dt}\right)\,dt$ is the differential displacement vector along the curve $\mathcal{C}$.
 
 > this can be generalized to curve $\mathcal{C}\subset U \subset\mathbb{R}^3$ where $\mathbf{F}: U\to \mathbb{R}^3$ and $\mathbf{r}(t)=(x(t),y(t),z(t))$ for $t\in [a,b]$.
+
+
+# Surface Integrals
+
+## Surface integral of a scalar field
+![[Surface integral of a scalar field.svg]]
+- (surface given parametrically) Given $S$ is a smooth surface parametrized by $\mathbf{r}(u,v)=(x(u,v),y(u,v),z(u,v))$ for $(u,v)\in D\subset \mathbb{R}^2$.
+	- The **surface integral** of a $f$ over $S$ is $\displaystyle \iint_S f(x,y,z)\,dS=\iint_D f(\mathbf{r}(u,v))\left\|\frac{\partial \mathbf{r}}{\partial u}\times \frac{\partial \mathbf{r}}{\partial v}\right\|\,du\,dv$, where:
+		- $f$ is continuous function defined on $S$
+		- $dv\,du$ is the differential area element on $D$
+		- $\frac{\partial \mathbf{r}}{\partial u}\times \frac{\partial \mathbf{r}}{\partial v}$ is the normal vector to the surface $S$ at the point $\mathbf{r}(u,v)$
+		- $\left\|\frac{\partial \mathbf{r}}{\partial u}\times \frac{\partial \mathbf{r}}{\partial v}\right\|$ is equal to the area of the parallelogram formed by the tangent vectors $\frac{\partial \mathbf{r}}{\partial u}$ and $\frac{\partial \mathbf{r}}{\partial v}$ at the point $\mathbf{r}(u,v)$.
+		- $\displaystyle dS=\left\|\frac{\partial \mathbf{r}}{\partial u}\times \frac{\partial \mathbf{r}}{\partial v}\right\|\,du\,dv$ is the differential area element on the surface $S$.
+- (surface given implicitly) Given $S$ is a smooth surface defined implicitly by $F(x,y,z)=c$. #todo
+
+## Surface integral of a vector field 
+
+![[Surface integral of vector field.svg]]
+- (surface given parametrically) Given $S$ is a smooth surface parametrized by $\mathbf{r}(u,v)=(x(u,v),y(u,v),z(u,v))$ for $(u,v)\in D\subset \mathbb{R}^2$.
+	- The **surface integral** of a vector field $\mathbf{F}$ over $S$ is $\displaystyle \iint_S \mathbf{F}\cdot {d}{\mathbf{S}}=\iint_D \mathbf{F}(\mathbf{r}(u,v))\cdot (\mathbf{r}_u \times \mathbf{r}_v)\,du\,dv$, where:
+		- $\mathbf{F}$ is continuous vector field defined on $S$
+		- $dv\,du$
+		- $\mathbf{r}_u \times \mathbf{r}_v=\frac{\partial \mathbf{r}}{\partial u}\times \frac{\partial \mathbf{r}}{\partial v}$
+		- $\displaystyle d\mathbf{S}=\left(\mathbf{r}_u \times \mathbf{r}_v\right)\,du\,dv$
+		- $dS=\left\|\mathbf{r}_u \times \mathbf{r}_v\right\|\,du\,dv$
+		- $\hat{\mathbf{n}}=\frac{\mathbf{r}_u \times \mathbf{r}_v}{\|\mathbf{r}_u \times \mathbf{r}_v\|}$ is the unit normal vector to the surface $S$ at the point $\mathbf{r}(u,v)$
+		- $\mathbf{F}\cdot \hat{\mathbf{n}}$ is the component of the vector field $\mathbf{F}$ normal to the surface $S$ at the point $\mathbf{r}(u,v)$.
+		- The integral also called the **flux** of $\mathbf{F}$ across $S$, denoted by $\Phi=\iint_S \mathbf{F}\cdot \hat{\mathbf{n}}\,dS$.
+			- $\frac{d\Phi}{dS}=\mathbf{F}\cdot \hat{\mathbf{n}}$ is the called **flux density** of $\mathbf{F}$ across $S$
+
+
+#### Stokes' Theorem
+
+- $\displaystyle \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{S} = \oint_{\partial S} \mathbf{F} \cdot d\mathbf{r}$ where:
+	- $S$ is a smooth oriented surface with boundary $\partial S$
+	- $\mathbf{F}$ is a vector field defined on an open region containing $S$
+	- $\nabla \times \mathbf{F}$ is the curl of $\mathbf{F}$
+	- $d\mathbf{S}$ is the vector area element of $S$
+	- $d\mathbf{r}$ is the differential displacement vector along the boundary $\partial S$

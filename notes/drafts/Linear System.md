@@ -1,10 +1,15 @@
 - A **linear system** is a system where the output is directly proportional to the input. 
 	- **Additivity (Superposition)**: If $x(t)=x_1(t)+x_2(t)$, then $y(t)=y_1(t)+y_2(t)$
 	- **Homogeneity**: If $x(t)=ax_1(t)$, then $y(t)=ay_1(t)$
-- A **linear time-invariant system (LTI system)** is a system that is:
-	- **Linear**: Satisfies the properties of additivity and homogeneity
-	- **Time-invariant**: If an input $x(t)$ produces an output $y(t)$, then a time-shifted input $x(t-t_0)$ produces a time-shifted output $y(t-t_0)$
-- Convolution
+- A system is **time-invariant** if an input $x(t)$ produces an output $y(t)$, then a time-shifted input $x(t-t_0)$ produces a time-shifted output $y(t-t_0)$
+- A **linear time-invariant system (LTI system)** is a linear system that is also time-invariant
+- The **Dirac delta function** $\delta(t)$ is a generalized function such that:
+	- $\delta(t)=0$ for all $t\neq0$
+	- $\displaystyle \int_{-\infty}^{\infty}\delta(t)dt=1$
+	- $\displaystyle \int_{-\infty}^{\infty}f(t)\delta(t-a)dt=f(a)$
+- The **impulse response** $h(t)$ of a system is the output of the system when the input is the Dirac delta function $\delta(t)$
+
+
 
  
 - Example:

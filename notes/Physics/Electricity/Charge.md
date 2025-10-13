@@ -13,12 +13,12 @@
 
 ## Coulomb's Law
 
-![[Coulomb's Law.svg]]
+![[Coulomb's Law.svg|200]]
 
 
-- $\displaystyle F=k\frac{q_1q_2}{r^2}$ is the **electrostatic force** (or **Coulomb force**) between two charges (in $\mathsf{N}$)
-	- $q_1$ and $q_2$ are the magnitudes of the charges (in $\mathsf{C}$)
-	- $r$ is the distance between the charges (in $\mathsf{m}$)
+- $\displaystyle F=k\frac{q_1q_2}{r^2}$ is the **electrostatic force** (or **Coulomb force**) between two charges (in $\mathrm{N}$)
+	- $q_1$ and $q_2$ are the magnitudes of the charges (in $\mathrm{C}$)
+	- $r$ is the distance between the charges (in $\mathrm{m}$)
 	- $\displaystyle k=\frac{1}{4\pi\epsilon_{0}}=8.99\times 10^9\ \mathsf{N\cdot m^2/C^2}$ is **Coulomb's constant**
 
 - limitations and assumptions of Coulomb's Law #todo
@@ -32,32 +32,32 @@
 
 ## Charge Density
 
-- $\displaystyle \lambda = \frac{Q}{L}$ is the **linear charge density** (in $\mathsf{C/m}$)
-- $\displaystyle \sigma = \frac{Q}{A}$ is the **surface charge density** (in $\mathsf{C/m^2}$)
-- $\displaystyle \rho = \frac{Q}{V}$ is the **volume charge density** (in $\mathsf{C/m^3}$)
+- $\displaystyle \lambda = \frac{Q}{L}$ is the **linear charge density** (in $\mathrm{C/m}$)
+- $\displaystyle \sigma = \frac{Q}{A}$ is the **surface charge density** (in $\mathrm{C/m^2}$)
+- $\displaystyle \rho = \frac{Q}{V}$ is the **volume charge density** (in $\mathrm{C/m^3}$)
 
 - $\displaystyle Q_{\text{total}} = \int \rho(r) dV$
 
 ## Electric field
 
 - An **electric field** is a vector field that associates to each point in space the force per unit of charge exerted on an infinitesimal test charge at rest at that point $$\displaystyle E=\frac{F}{q}$$  
-	- $E$ is the electric field that a charge $q$ experiences (in $\mathsf{N/C}$)
-	- $F$ is the force on a charge (in $\mathsf{N}$)
-	- $q$ is the **test charge** (in $\mathsf{C}$)
-- (vector form: $\displaystyle \vec{\mathbf{E}}=\frac{\vec{\mathbf{F}}}{q}$) or $\displaystyle \vec{\mathbf{E}}=\lim_{ q \to 0}\frac{\vec{\mathbf{F}}}{q}$
-- The SI unit of electric field is $\mathsf{N/C}=\mathsf{V/m}$
+	- $E$ is the electric field that a charge $q$ experiences (in $\mathrm{N/C}$)
+	- $F$ is the force on a charge (in $\mathrm{N}$)
+	- $q$ is the **test charge** (in $\mathrm{C}$)
+- (vector form: $\displaystyle \vec{\boldsymbol{E}}=\frac{\vec{\boldsymbol{F}}}{q}$) or $\displaystyle \vec{\boldsymbol{E}}=\lim_{ q \to 0}\frac{\vec{\boldsymbol{F}}}{q}$
+- The SI unit of electric field is $\mathrm{N/C}=\mathrm{V/m}$
 
 ### Electric Field due to a Point Charge 
 
-- $\displaystyle E =k\frac{Q}{r^2}{\color{gray}\impliedby E =\frac{F}{q}=\frac{kQq/r^2}{q}}$ 
+- $\displaystyle E =k\frac{Q}{r^2}$ 
 	- $P$ is the point in space where the electric field is being calculated
-	- $Q$ is the point charge creating the electric field (in $\mathsf{C}$)
-	- $r$ is the distance between the point $P$ and the charge $Q$ (in $\mathsf{m}$)
-	- $E$ is the electric field (at $P$) due to the source charge $Q$ (in $\mathsf{N/C}$)
-	- $\vec{\mathbf{E}}=k\frac{Q}{r^2}\hat{\mathbf{r}}$ where $\hat{\mathbf{r}}$ is the unit vector pointing from $Q$ to $P$
+	- $Q$ is the point charge creating the electric field (in $\mathrm{C}$)
+	- $r$ is the distance between the point $P$ and the charge $Q$ (in $\mathrm{m}$)
+	- $E$ is the electric field (at $P$) due to the source charge $Q$ (in $\mathrm{N/C}$)
+	- $\vec{\boldsymbol{E}}=k\frac{Q}{r^2}\hat{\mathbf{r}}$ where $\hat{\mathbf{r}}$ is the unit vector pointing from $Q$ to $P$
 	- $k$ is Coulomb's constant
 - (_Superposition Principle_) The total electric field at a point in space is the vector sum of the electric fields due to the individual charges
-	-  $\vec{\mathbf{E}}_{\text{total}}=\vec{\mathbf{E}}_1+\vec{\mathbf{E}}_2+\vec{\mathbf{E}}_3+...$ 
+	-  $\vec{\boldsymbol{E}}_{\text{total}}=\vec{\boldsymbol{E}}_1+\vec{\boldsymbol{E}}_2+\vec{\boldsymbol{E}}_3+...$ 
 
 - $\displaystyle\vec{E}=k \int \frac{dq}{r^2} \hat{r}$ #todo 
 
@@ -70,13 +70,9 @@
 > - In the figure, the electric field is positive, so it points towards a negative charge and away from a positive charge. But if the electric field is negative, it is the opposite.
 
 
-### Electric field and potential
 
-- (uniform electric field) $\displaystyle E=-\frac{V_{ba}}{d}$
-	- $V_{ba}$ is the potential difference between points $a$ and $b$ (in $\mathsf{V}$)
-	- $d$ is the distance between the points (in $\mathsf{m}$)
-- (non-uniform electric field) $\vec{\mathbf{E}}=-\nabla V$
-	- $\nabla V$ is the gradient of the electric potential $V$
+
+
 
 ### Electric Field between Two Parallel Plates
 
@@ -94,24 +90,28 @@
 
  
 
+# Electrostatic field
 
+- An **electrostatics field** (or **static electric field**) is an electric field that does not change with time
+- For any electrostatic field:
+	- $\vec{\boldsymbol{E}}=-\nabla V$
+		- (uniform electrostatic field) $\displaystyle E=-\frac{V_{ba}}{d}$
+			- $V_{ba}$ is the potential difference between points $a$ and $b$ (in $\mathrm{V}$)
+			- $d$ is the distance between the points (in $\mathrm{m}$)
+	- $\displaystyle\oint_{\mathcal{C}} \vec{\boldsymbol{E}} \cdot d\vec{\boldsymbol{\ell}} = 0$ for any closed curve $\mathcal{C}$
 
 # Electric dipole moment
 
 - An **electric dipole** consists of two equal and opposite charges separated by a distance $d$
-- The **electric dipole moment** $\vec{\mathbf{p}}$ (in $\mathsf{C\cdot m}$) of a dipole is defined as $\vec{\mathbf{p}}=q\vec{\mathbf{d}}$ where $q$ is the magnitude of the charges and $\vec{\mathbf{d}}$ is the vector pointing from the negative charge to the positive charge
-- $\vec{\boldsymbol{\tau}}=\vec{\mathbf{p}}\times\vec{\mathbf{E}}$ is the torque on an electric dipole
-- $U=-\vec{\mathbf{p}}\cdot\vec{\mathbf{E}}$ is the potential energy for an electric dipole in an electric field
+- The **electric dipole moment** $\vec{\boldsymbol{p}}$ (in $\mathrm{C\cdot m}$) of a dipole is defined as $\vec{\boldsymbol{p}}=q\vec{\boldsymbol{d}}$ where $q$ is the magnitude of the charges and $\vec{\boldsymbol{d}}$ is the vector pointing from the negative charge to the positive charge
+- $\vec{\boldsymbol{\tau}}=\vec{\boldsymbol{p}}\times\vec{\boldsymbol{E}}$ is the torque on an electric dipole
+- $U=-\vec{\boldsymbol{p}}\cdot\vec{\boldsymbol{E}}$ is the potential energy for an electric dipole in an electric field
+
+
 
 
 # Electric flux
 
-- $\displaystyle \Phi_E =\oint \vec{\mathbf{E}} \cdot d\vec{\mathbf{A}}$ is the **electric flux** through a closed surface
-	- $\oint$ indicates a closed surface integral
-	- $d\vec{A}$ is the differential area vector pointing outward from the surface (in $\mathsf{m^2}$)
-	- $\vec{E} \cdot d\vec{A}$ is the dot product of the electric field and the area vector
-	- (uniform electric field) $\displaystyle \Phi_E = EA\cos\theta$ where $A$ is the area of the surface and $\theta$ is the angle between the electric field and the normal to the surface
-- (**Gauss's Law**) 
-	- (integral form) $\displaystyle \Phi_E =\oint \vec{\mathbf{E}} \cdot d\vec{\mathbf{A}}={\frac {Q_{\text{enc}}}{\varepsilon _{0}}}$ is the electric flux through a closed surface where $Q_{\text{enc}}$ is the total charge enclosed by the surface
-	- (differential form) $\displaystyle \nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}$, where $\rho$ is the charge density (in $\mathsf{C/m^3}$)
-
+- $\displaystyle \Phi_E =\iint_{S} \vec{\boldsymbol{E}} \cdot d\vec{\boldsymbol{S}}$ is the **electric flux** (in $\mathrm{N\cdot m^2/C}$) through a surface $S$ in an electric field $\vec{\boldsymbol{E}}$
+	- $\displaystyle \Phi_E = \vec{\boldsymbol{E}} \cdot \vec{\boldsymbol{A}}$ is the electric flux through a flat surface with a vector area $\vec{\boldsymbol{A}}$ in a uniform electric field $\vec{\boldsymbol{E}}$.
+	- (See [[Magnetism#Maxwell's equations|Gauss's Law for electricity]])

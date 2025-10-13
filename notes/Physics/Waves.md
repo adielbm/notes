@@ -1,10 +1,10 @@
 $$\displaystyle f=\frac{1}{T}=\frac{\omega}{2\pi}= \frac{v}{\lambda}$$
-- $f$ the **frequency** of the wave (in $\mathsf{Hz}$)
-- $\omega$ is the **angular frequency** of the wave (in $\mathsf{rad/s}$)
-- $T$ is the **period** of the wave (in $\mathsf{s}$)
-- $v$ is the **wave speed** of the wave (in $\mathsf{m/s}$)
-- $\lambda$ is the **wavelength** of the wave (in $\mathsf{m}$)
-- $k=\frac{2\pi}{\lambda}$ is the **wavenumber** (in $\mathsf{rad/m}$)
+- $f$ the **frequency** of the wave (in $\mathrm{Hz}$)
+- $\omega$ is the **angular frequency** of the wave (in $\mathrm{rad/s}$)
+- $T$ is the **period** of the wave (in $\mathrm{s}$)
+- $v$ is the **wave speed** of the wave (in $\mathrm{m/s}$)
+- $\lambda$ is the **wavelength** of the wave (in $\mathrm{m}$)
+- $k=\frac{2\pi}{\lambda}$ is the **wavenumber** (in $\mathrm{rad/m}$)
 
 ##### Energy Transport
 
@@ -30,7 +30,7 @@ $$\displaystyle f=\frac{1}{T}=\frac{\omega}{2\pi}= \frac{v}{\lambda}$$
 
 ![250](https://upload.wikimedia.org/wikipedia/commons/6/6d/Onde_cisaillement_impulsion_1d_30_petit.gif)
 
-- $v=\sqrt{\frac{T}{\mu}}$ is the wave speed of a transverse wave traveling along a stretched string of tension $T$ (in $\mathsf{N}$) and linear mass density $\mu$ (in $\mathsf{kg/m}$)
+- $v=\sqrt{\frac{T}{\mu}}$ is the wave speed of a transverse wave traveling along a stretched string of tension $T$ (in $\mathrm{N}$) and linear mass density $\mu$ (in $\mathrm{kg/m}$)
 
 ### Longitudinal wave
 
@@ -79,6 +79,23 @@ $$y(x,t) = 2 A \sin\!\left(kx\right)\cos(\omega t)$$
 
 - In the presence of a sinusoidal external force, a system may exhibit resonance.
 - Resonance occurs when an external force is exerted at the natural frequency of an oscillating system.
+
+
+
+##### draft
+
+
+- $e^{st} = e^{(\sigma + i\omega)t} = e^{\sigma t} e^{i\omega t}$
+	- $e^{\sigma t}$ is the **exponential envelope**
+	- $s=\sigma + i\omega$ is the **complex frequency**
+	- $\sigma$ is the **damping factor**
+		- If $\sigma<0$ the signal is **decaying**
+		- If $\sigma>0$ the signal is **growing**
+		- If $\sigma=0$ the signal is **steady-state**
+	- $\omega = 2\pi f$ is the **angular frequency** (in radians per unit time)
+	- $e^{i\omega t}$ is the **oscillatory part**
+	- The **phase** of $e^{i\omega t}$ is $\omega t$
+	- 
 
 
 # Mechanical waves

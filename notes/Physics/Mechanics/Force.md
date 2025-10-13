@@ -7,8 +7,8 @@
 - A force is a vector quantity.
 - The **normal force** $\vec{F}_{\text{N}}$ is the force exerted by a surface perpendicular to the object in contact with it.
 - The **friction force** $\vec{F}_{\text{fr}}$ is the force exerted by a surface parallel to the object in contact with it, opposing its motion.
-	- $F_{\text{fr}}=\mu_{k} F_{\text{N}}$ is the **kinetic friction force** (in $\mathsf{N}$) acting on an object moving on a surface with normal force $F_{\text{N}}$ and coefficient of kinetic friction $\mu_{k}$.
-	- $F_{\text{fr}}=\mu_{s} F_{\text{N}}$ is the **static friction force** (in $\mathsf{N}$) acting on an object at rest on a surface with normal force $F_{\text{N}}$ and coefficient of static friction $\mu_{s}$.
+	- $F_{\text{fr}}=\mu_{k} F_{\text{N}}$ is the **kinetic friction force** (in $\mathrm{N}$) acting on an object moving on a surface with normal force $F_{\text{N}}$ and coefficient of kinetic friction $\mu_{k}$.
+	- $F_{\text{fr}}=\mu_{s} F_{\text{N}}$ is the **static friction force** (in $\mathrm{N}$) acting on an object at rest on a surface with normal force $F_{\text{N}}$ and coefficient of static friction $\mu_{s}$.
 
 ## Newton's Laws of Motion
 
@@ -35,14 +35,14 @@ For every action force $\vec{F}_{1 \to 2}$ exerted by object 1 on object 2, ther
 ## Gravity
 $$\vec{\mathbf{F}}_{\text{G}} = m\vec{\mathbf{g}}$$
 
-- $\vec{\mathbf{F}}_{\text{G}}$ is the **gravitational force** (in $\mathsf{N}$) acting on a mass $m$ in a gravitational acceleration field $\vec{\mathbf{g}}$.
-- The **gravitational acceleration field** (or **gravitational field**) $\vec{\mathbf{g}}$ (in $\mathsf{m/s^2}$) is a vector field that describes the gravitational acceleration that a mass would experience at any point in space due to the presence of other masses.
+- $\vec{\mathbf{F}}_{\text{G}}$ is the **gravitational force** (in $\mathrm{N}$) acting on a mass $m$ in a gravitational acceleration field $\vec{\mathbf{g}}$.
+- The **gravitational acceleration field** (or **gravitational field**) $\vec{\mathbf{g}}$ (in $\mathrm{m/s^2}$) is a vector field that describes the gravitational acceleration that a mass would experience at any point in space due to the presence of other masses.
 	- $\vec{\mathbf{g}} = - G \frac{M}{r^2} \, \hat{r}$ (or $g=G\frac{M}{r^2}$) is the **gravitational acceleration** at a point in space $\vec{\mathbf{r}}$ due to a point mass $M$ located at the origin.
 		- $\hat{r}$ is the unit vector pointing from the center of mass of $M$ to the point where $\vec{\mathbf{g}}$ is being calculated
 		- The negative sign indicates that the gravitational field points towards the mass $M$
 		- $G=6.67430(15)\times 10^{-11}\ \mathrm {m^{3}kg^{-1}s^{-2}}$ is the **gravitational constant** (dim. ${\mathsf {M^{-1}L^{3}T^{-2}}}$)
 		- If $M$ is the Earth, then $g=G M_{\text{E}}r^2\approx 9.81\ \mathrm {m/s^2}$ (**Gravity on Earth**)
-- $W=mg$ is the **weight** (in $\mathsf{N}$) of an object with mass $m$ in a gravitational field with gravitational acceleration $g$.
+- $W=mg$ is the **weight** (in $\mathrm{N}$) of an object with mass $m$ in a gravitational field with gravitational acceleration $g$.
 	- (Some define weight as a vector quantity, the gravitational force acting on an object, while others define it as a scalar quantity, the magnitude of the gravitational force)
 
 #### Newton's Law of Universal Gravitation
@@ -80,7 +80,7 @@ $$\displaystyle  F=G{\displaystyle\frac {m_{1}m_{2}}{r^{2}}}$$
   
 # Density
 
-- $\displaystyle\rho = \frac{m}{V}$ is the **density** (in $\mathsf{kg/m^3}$)
+- $\displaystyle\rho = \frac{m}{V}$ is the **density** (in $\mathrm{kg/m^3}$)
 
 
 

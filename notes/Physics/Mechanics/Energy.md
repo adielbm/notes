@@ -1,22 +1,22 @@
 - Kinetic Energy
 	- $E_{k}=\frac{1}{2}mv^2$ is the **(translational) kinetic Energy**
-		- $m$ is the mass ($\mathsf{kg}$)
-		- $v$ is the velocity ($\mathsf{m/s}$)
+		- $m$ is the mass ($\mathrm{kg}$)
+		- $v$ is the velocity ($\mathrm{m/s}$)
 	- $E_{k}=\frac{1}{2}I\omega^2$ is the **rotational/angular kinetic energy**
-		- $I$ is the moment of inertia ($\mathsf{kg \cdot m^2}$)
-		- $\omega$ is the angular velocity ($\mathsf{rad/s}$)
+		- $I$ is the moment of inertia ($\mathrm{kg \cdot m^2}$)
+		- $\omega$ is the angular velocity ($\mathrm{rad/s}$)
 
 - Potential Energy
 	- [[Linear motion#Gravitational Potential Energy|gravitational (potential) energy]]
 	- $E_{p} = \frac{1}{2}kx^2$ is the **elastic (potential) energy**
-		- $E_{p}$ is the change in elastic potential energy ($\mathsf{J}$)
-		- $k$ is the spring constant ($\mathsf{N/m}$)
-		- $x$ is the change in length ($\mathsf{m}$)
+		- $E_{p}$ is the change in elastic potential energy ($\mathrm{J}$)
+		- $k$ is the spring constant ($\mathrm{N/m}$)
+		- $x$ is the change in length ($\mathrm{m}$)
 		- $\Delta \text{EPE} = \frac{1}{2}k \cdot \Delta x^2$
 	- $U_E = k\frac{q_1q_2}{r}$ is the **electric potential energy**
-		- $k$ is the Coulomb constant ($\mathsf{N \cdot m^2/C^2}$)
-		- $q_1$ and $q_2$ are the charges ($\mathsf{C}$)
-		- $r$ is the distance between the charges ($\mathsf{m}$)
+		- $k$ is the Coulomb constant ($\mathrm{N \cdot m^2/C^2}$)
+		- $q_1$ and $q_2$ are the charges ($\mathrm{C}$)
+		- $r$ is the distance between the charges ($\mathrm{m}$)
 
 ___
 
@@ -24,9 +24,9 @@ ___
 - Mechanical Energy
 	- $E_{\text{total}} = E_{k} + E_{p}$
 - $\Delta E = m \cdot c \cdot \Delta T$ is the change in **thermal energy**
-	- $m$ is the mass ($\mathsf{kg}$)
-	- $c$ is the specific heat capacity ($\mathsf{J \cdot kg^{-1} \cdot K^{-1}}$)
-	- $\Delta T$ is the change in temperature ($\mathsf{K}$)
+	- $m$ is the mass ($\mathrm{kg}$)
+	- $c$ is the specific heat capacity ($\mathrm{J \cdot kg^{-1} \cdot K^{-1}}$)
+	- $\Delta T$ is the change in temperature ($\mathrm{K}$)
 
 
 

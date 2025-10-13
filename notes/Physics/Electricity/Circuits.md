@@ -74,17 +74,17 @@ classification of elements:
 
 - the electric current through a conductor between two points is directly proportional to the voltage across the two points
 	- Ohm's Law holds for **ohmic materials** (like most metals) but not for **non-ohmic materials** (like diodes, transistors, and other semiconductors)
-	- The unit of resistance is the $\mathsf{ohm}$ ($\mathsf{\Omega}$) defined as $\mathsf{1\ \Omega = 1\ V/A}$
-	- The reciprocal of resistance is called the **electrical conductance** (in $\mathsf{S}$, siemens, which is $\mathsf{1\ S = 1 \Omega^{-1}}$)
+	- The unit of resistance is the $\mathrm{ohm}$ ($\mathrm{\Omega}$) defined as $\mathrm{1\ \Omega = 1\ V/A}$
+	- The reciprocal of resistance is called the **electrical conductance** (in $\mathrm{S}$, siemens, which is $\mathrm{1\ S = 1 \Omega^{-1}}$)
 	- $\displaystyle V=IR$
-		- $V$ is the voltage (in $\mathsf{V}$)
-		- $I$ is the current (in $\mathsf{A}$)
-		- $R$ is the resistance (in $\mathsf{\Omega}$)
-- The **(electrical) resistivity** (or **specific resistance**) $\rho$ (in $\mathsf{\Omega\cdot m}$) of a material is a measure of how strongly that material opposes the flow of electric current  
+		- $V$ is the voltage (in $\mathrm{V}$)
+		- $I$ is the current (in $\mathrm{A}$)
+		- $R$ is the resistance (in $\mathrm{\Omega}$)
+- The **(electrical) resistivity** (or **specific resistance**) $\rho$ (in $\mathrm{\Omega\cdot m}$) of a material is a measure of how strongly that material opposes the flow of electric current  
 	- $\displaystyle R=\rho\frac{L}{A}$ is the resistance of a conductor of length $L$ and cross-sectional area $A$ with resistivity $\rho$
-	- $\rho=\frac{E}{J}$ where $E$ is the electric field (in $\mathsf{V/m}$) and $J$ is the current density (in $\mathsf{A/m^2}$)
+	- $\rho=\frac{E}{J}$ where $E$ is the electric field (in $\mathrm{V/m}$) and $J$ is the current density (in $\mathrm{A/m^2}$)
 	- $\rho(T)=\rho_0[1+\alpha(T-T_0)]$
-	- The reciprocal of the resistivity, called the **electrical conductivity** (or **specific conductance**) is $\sigma=\frac{1}{\rho}$ (in $\mathsf{S/m}$, siemens per meter, or $\mathsf{(\Omega\cdot m)^{-1}}$)
+	- The reciprocal of the resistivity, called the **electrical conductivity** (or **specific conductance**) is $\sigma=\frac{1}{\rho}$ (in $\mathrm{S/m}$, siemens per meter, or $\mathrm{(\Omega\cdot m)^{-1}}$)
 
 ### Resistor
 
@@ -141,10 +141,10 @@ todo
  
 # RC Circuits
 
-- $\tau=RC$ (in $\mathsf{s}$) is the **time constant** (or **relaxation time**) of the RC circuit
+- $\tau=RC$ (in $\mathrm{s}$) is the **time constant** (or **relaxation time**) of the RC circuit
 
 #### Capacitor charging
-
+![[rc circuit - charging.svg]]
 - $q=Q_{\text{f}}(1-e^{-t/RC})$ is the charge on the capacitor in time $t$
 	- $Q_{\text{f}}=C\mathcal{E}$  
 - $i=I_{0}e^{-t/RC}$ is the current in time $t$
@@ -152,10 +152,9 @@ todo
 - $v_C=\mathcal{E}(1-e^{-t/RC})$ is the voltage across the capacitor in time $t$
 - $v_R=\mathcal{E}-v_C$ is the voltage across the resistor in time $t$
 
-![[RC circuit - charging.svg]]
 
 #### Capacitor discharging 
-
+![[rc circuit - discharging.svg]]
 - $q=Q_{0}e^{-t/RC}$ is the charge on the capacitor in time $t$
 	- $Q_0$ is the initial charge on the capacitor
 - $i=I_{0}e^{-t/RC}$ is the current in time $t$
@@ -164,3 +163,16 @@ todo
 	- $V_0$ is the initial voltage across the capacitor
 - $v_R=v_C$ is the voltage across the resistor in time $t$
 
+# RL circuit
+
+![[RL.svg]]
+
+- $\tau=\frac{L}{R}$ (in $\mathrm{s}$) is the **time constant** (or **relaxation time**) of the RL circuit
+- $i=\frac{\mathcal{E}}{R}(1-e^{-(R/L)t})$ is the current growth in time $t$
+- $i=I_0 e^{-(R/L)t}$ is the current decay in time $t$
+
+
+# RLC circuit 
+
+- $L \frac{d^2 i(t)}{dt^2} + R \frac{di(t)}{dt} + \frac{1}{C} i(t) = \frac{dv_s(t)}{dt}$
+- 

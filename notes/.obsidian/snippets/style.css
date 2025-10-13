@@ -23,14 +23,6 @@
 }
 
 
-.theme-dark img[src*=".svg"],
-.theme-dark img[alt*=".svg"],
-.theme-dark img[src*=".png"],
-.theme-dark img[alt*=".png"]
-{
-   filter: invert(1) hue-rotate(180deg); 
-}
-
 .internal-embed {
   display: flex !important;
   flex-direction: column;

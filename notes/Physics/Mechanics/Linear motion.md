@@ -1,13 +1,13 @@
 
 ### Momentum
 
-- $\vec{p} = m\vec{v}$ is the **(linear) momentum** (in $\mathsf{kg\cdot m/s}$) of a body with mass $m$ (in $\mathsf{kg}$) and velocity $\vec{v}$ (in $\mathsf{m/s}$)
+- $\vec{p} = m\vec{v}$ is the **(linear) momentum** (in $\mathrm{kg\cdot m/s}$) of a body with mass $m$ (in $\mathrm{kg}$) and velocity $\vec{v}$ (in $\mathrm{m/s}$)
 
 
 #### Impulse 
 
-- $\vec{\mathbf{J}} = \vec{\mathbf{F}}\Delta t$ is the **impulse** (in $\mathsf{N\cdot s}$) delivered to an object by a constant force $\vec{\mathbf{F}}$ (in $\mathsf{N}$) over a time interval $\Delta t$ (in $\mathsf{s}$)
-- $\displaystyle \vec{\mathbf{J}} = \int_{t_1}^{t_2} \vec{\mathbf{F}} dt$ is the impulse delivered to an object by a variable force $\vec{\mathbf{F}}$ over the time interval $[t_1, t_2]$ (in $\mathsf{N\cdot s}$)
+- $\vec{\mathbf{J}} = \vec{\mathbf{F}}\Delta t$ is the **impulse** (in $\mathrm{N\cdot s}$) delivered to an object by a constant force $\vec{\mathbf{F}}$ (in $\mathrm{N}$) over a time interval $\Delta t$ (in $\mathrm{s}$)
+- $\displaystyle \vec{\mathbf{J}} = \int_{t_1}^{t_2} \vec{\mathbf{F}} dt$ is the impulse delivered to an object by a variable force $\vec{\mathbf{F}}$ over the time interval $[t_1, t_2]$ (in $\mathrm{N\cdot s}$)
 - (**Impulse-Momentum Theorem**) $\vec{\mathbf{J}} = \Delta \vec{\mathbf{p}}$ (the impulse is equal to the change in momentum)
 
 ### Motion in One Dimension
@@ -140,8 +140,8 @@
 
 ### Power
 
-- $\displaystyle P = \vec{F} \cdot \vec{v}=\frac{dW}{dt}$ is the **power** (in $\mathsf{W}$)
-	- $\vec{F}$ is the force vector (in $\mathsf{N}$)
-	- $\vec{v}$ is the velocity vector (in $\mathsf{m/s}$)
+- $\displaystyle P = \vec{F} \cdot \vec{v}=\frac{dW}{dt}$ is the **power** (in $\mathrm{W}$)
+	- $\vec{F}$ is the force vector (in $\mathrm{N}$)
+	- $\vec{v}$ is the velocity vector (in $\mathrm{m/s}$)
 
 

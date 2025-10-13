@@ -1,4 +1,10 @@
 
+- A **vector-valued function** (or **vector function**) is a function (of one or more variables) whose range is a set of vectors. 
+	- Given $\mathbf{r}(t)=\langle x(t),y(t),z(t)\rangle$, we define: 
+		- $\displaystyle\lim_{t\to a}\mathbf{r}(t)=\langle \lim_{t\to a}x(t),\lim_{t\to a}y(t),\lim_{t\to a}z(t)\rangle$.
+		- $\displaystyle\frac{d\mathbf{r}}{dt}=\mathbf{r}'(t)=\lim_{h\to 0}\frac{\mathbf{r}(t+h)-\mathbf{r}(t)}{h}$ (assume $\mathbf{r}$ is differentiable)
+			- $\mathbf{r}'(t)=\langle x'(t),y'(t),z'(t)\rangle$ 
+
 # Gradient
 
 ![350](https://upload.wikimedia.org/wikipedia/commons/d/d2/3d-gradient-cos.svg "The gradient of f(x,y) = −(cos²x + cos²y)² as a projected vector field on the bottom plane.")
@@ -12,35 +18,17 @@
 
 # Divergence
 
-![[Divergence.svg|400]]
+![[Divergence.svg|300]]
  
 
 - The **divergence** of a continuously differentiable vector field ${\displaystyle \mathbf {F} =F_{x}\mathbf {i} +F_{y}\mathbf {j} +F_{z}\mathbf {k} }$ is defined as the scalar-valued function ${\displaystyle \operatorname {div} \mathbf {F} =\nabla \cdot \mathbf {F} =\left({\frac {\partial }{\partial x}},{\frac {\partial }{\partial y}},{\frac {\partial }{\partial z}}\right)\cdot (F_{x},F_{y},F_{z})={\frac {\partial F_{x}}{\partial x}}+{\frac {\partial F_{y}}{\partial y}}+{\frac {\partial F_{z}}{\partial z}}}$
+- A vector field $\mathbf{F}$ is said to be **solenoidal** (or **divergence-free** or **incompressible**) if $\nabla \cdot \mathbf{F}=0$ everywhere 
+
 
 # Curl
-
+![[curl.svg|300]]
 - The **curl** of a vector field $\mathbf{F}=F_x\mathbf{i}+F_y\mathbf{j}$ is defined as the vector-valued function $\displaystyle\text{curl}(\mathbf{F})=\nabla\times\mathbf{F}=\left(\frac{\partial F_y}{\partial x}-\frac{\partial F_x}{\partial y}\right)\mathbf{k}$.
 - The **curl** of a vector field $\mathbf{F}=F_x\mathbf{i}+F_y\mathbf{j}+F_z\mathbf{k}$ is defined as the vector-valued function $\displaystyle\text{curl}(\mathbf{F})=\nabla\times\mathbf{F}=\left(\frac{\partial F_z}{\partial y}-\frac{\partial F_y}{\partial z}\right)\mathbf{i}+\left(\frac{\partial F_x}{\partial z}-\frac{\partial F_z}{\partial x}\right)\mathbf{j}+\left(\frac{\partial F_y}{\partial x}-\frac{\partial F_x}{\partial y}\right)\mathbf{k}$.
-
-
-
-# Parametric Equations 
-
-- A **parametric curve** is a set $C=\{\mathbf{r}(t):t\in I\}$, where:
-	- $I\subseteq \mathbb{R}$ is the **parameter interval**
-		- If $I=[a,b]$, then $(x(a),y(a),z(a))$ is the **initial point** and $(x(b),y(b),z(b))$ is the **terminal point** of the curve.
-	- $x,y,z:I\to\mathbb{R}$ 
-		- $x=x(t)$, $y=y(t)$, and $z=z(t)$ are the **parametric equations** of the curve
-	- $\mathbf{r}:I\to\mathbb{R}^3$ and $\mathbf{r}(t) = \big( x(t), y(t),z(t) \big)$ 
-	- $t$ is the **parameter** of the curve.
-- A **parametric surface** is a set $S=\{\mathbf{r}(u,v):(u,v)\in D\}$, where:
-	- $D\subseteq \mathbb{R}^2$ is the **parameter domain**
-	- $x,y,z:D\to\mathbb{R}$
-		- $x=x(u,v)$, $y=y(u,v)$, and $z=z(u,v)$ are the **parametric equations** of the surface
-	- $\mathbf{r}:D\to\mathbb{R}^3$ and $\mathbf{r}(u,v) = \big( x(u,v),\, y(u,v),\, z(u,v) \big)$
-	- $u,v$ are the **parameters** of the surface.
-- (The parametric equations are collectively called a **parametric representation** or **parametrization** of the curve/surface)
-
-
-
-- The **surface area** of a parametric surface $S$ is given by $A(S) = \iint_D \left\| \frac{\partial \mathbf{r}}{\partial u} \times \frac{\partial \mathbf{r}}{\partial v} \right\|\, dA$, where $D$ is the parameter domain.
+- A vector field $\mathbf{F}$ is said to be **irrotational** (or **curl-free**) if $\nabla \times \mathbf{F}=0$ everywhere
+- A vector field $\mathbf{F}:D\subseteq \mathbb{R}^n\to \mathbb{R}^n$ is said to be **conservative** if there exists a function $\phi:D\to \mathbb{R}$ such that $\mathbf{F}=\nabla \phi$. (such a function $\phi$ is called a **potential function** for $\mathbf{F}$)
+- Every conservative vector field is irrotational. The converse is true if the domain $D$ is simply connected.

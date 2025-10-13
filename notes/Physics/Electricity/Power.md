@@ -10,9 +10,9 @@
     - $I$ is current (in amperes)
     - $q$ is charge (in coulombs)
 - $P=I^2R=\frac{V^2}{R}$
-	- $P$ is the power dissipated by the resistor (in $\mathsf{W}$)
-	- $R$ is the resistance of the resistor (in $\mathsf{\Omega}$)
-	- $I$ is the current through the resistor (in $\mathsf{A}$)
+	- $P$ is the power dissipated by the resistor (in $\mathrm{W}$)
+	- $R$ is the resistance of the resistor (in $\mathrm{\Omega}$)
+	- $I$ is the current through the resistor (in $\mathrm{A}$)
 
 # Passive sign convention
 
