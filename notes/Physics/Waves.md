@@ -22,8 +22,9 @@ $$\displaystyle f=\frac{1}{T}=\frac{\omega}{2\pi}= \frac{v}{\lambda}$$
 	- $\displaystyle y(x,t)=A\sin\left(\frac{2\pi}{\lambda}x-\omega t+\phi\right)=A\sin\left(\frac{2\pi}{\lambda}(x-vt)+\phi\right)$ is the equation of a traveling wave (to the right. if it is to the left, the minus sign is replaced by a plus sign)
 		- $x$ is the position of the wave we are considering
 		- $vt$ is the distance the wave has traveled from the origin at time $t$
-- A **harmonic** is a sine wave whose frequency is an integer multiple of the fundamental frequency of a periodic wave. 
 
+- A **harmonic** is a sine wave whose frequency is an integer multiple of the fundamental frequency of a periodic wave. 
+- The **phasor** of a sinusoid $y(t)=A \cos (\omega t + \phi)=\Re\{A e^{i(\omega t + \phi)}\}$ is a complex number $A e^{i\phi}$ (also denoted as $A \angle \phi$)
 # Transverse and longitudinal waves
 
 ### Transverse wave 
@@ -84,18 +85,24 @@ $$y(x,t) = 2 A \sin\!\left(kx\right)\cos(\omega t)$$
 
 ##### draft
 
+https://www.youtube.com/watch?v=-j8PzkZ70Lg
 
 - $e^{st} = e^{(\sigma + i\omega)t} = e^{\sigma t} e^{i\omega t}$
-	- $e^{\sigma t}$ is the **exponential envelope**
-	- $s=\sigma + i\omega$ is the **complex frequency**
-	- $\sigma$ is the **damping factor**
-		- If $\sigma<0$ the signal is **decaying**
-		- If $\sigma>0$ the signal is **growing**
-		- If $\sigma=0$ the signal is **steady-state**
-	- $\omega = 2\pi f$ is the **angular frequency** (in radians per unit time)
-	- $e^{i\omega t}$ is the **oscillatory part**
-	- The **phase** of $e^{i\omega t}$ is $\omega t$
-	- 
+	- $s=\sigma + i\omega$
+	- $e^{\sigma t}$
+		- $\sigma$ is representing exponential growth/decay rate
+			- $\sigma > 0$ (exponential growth)
+			- $\sigma < 0$ (exponential decay)
+			- $\sigma = 0$ (constant amplitude)
+	- $e^{i\omega t}$
+		- $\omega = 2\pi f$ is representing oscillation (angular frequency)
+		- $\omega t$
+	- $\zeta=\frac{\sigma}{\omega}$ is the damping ratio
+		- $\zeta < 1$ (underdamped)
+		- $\zeta = 1$ (critically damped)
+		- $\zeta > 1$ (overdamped)
+		- $\zeta = 0$ (undamped)
+	- $\Re \{e^{st}\} = e^{\sigma t} \cos(\omega t)$
 
 
 # Mechanical waves

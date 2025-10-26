@@ -13,6 +13,8 @@
 
 #### Mass-spring System
 
+$$m\ddot{x} + kx = 0$$
+
 - $m$ is the mass of the **oscillating body** (in $\mathrm{kg}$) 
 - $k$ is the **spring constant** (related to the stiffness of the spring) (in $\mathrm{N\cdot m^{-1}}$)
 - $F=-kx$ is the restoring force (**Hooke's Law**)
@@ -29,9 +31,9 @@
 - $g$ is the acceleration due to gravity
 - $\frac{mg}{L}$ 
 
-### Damped Harmonic Motion
+### Damped harmonic oscillator
 
-#todo 
+$$m\ddot{x} + b\dot{x} + kx = 0$$
 
 
 

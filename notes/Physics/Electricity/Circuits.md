@@ -130,14 +130,6 @@ classification of elements:
 >[!NOTE]
 >The total power dissipated from a source is greater in a parallel circuit than in a series circuit with the same resistors and voltage source
  
-## Electrical Impedance
-
-todo
-
-## Semiconductor
-
-- #todo https://www.youtube.com/watch?v=33vbFFFn04k
-
  
 # RC Circuits
 

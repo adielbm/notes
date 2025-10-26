@@ -1,128 +1,5 @@
 
-## Signal processing
-
-
-- **ADC** (analog-to-digital converter) is a device that converts a continuous analog signal to a discrete digital signal
-	- **Sampling** converts a continuous-time signal $s(T)$ to a discrete-time signal, a sequence of numbers $s(nT)$, where: 
-		- $T$ is the **sampling period** (or **sampling interval**).
-		- $f_s = 1/T$  is the **sampling frequency** (or **sampling rate**) which is the number times per second the original analog voltage is measured ("sampled")
-	- **Quantization** replaces input values by an approximation from a finite set of values
-		- The **resolution** (or **bit depth**) is the number of bits or values for the voltage of each sample (=measurement)
-		- The difference between the original continuous analog signal and its digital approximation is called the **quantization error** (or **quantization noise**)
-- **DAC** (digital-to-analog converter) is a device that converts a digital signal to an analog signal
-	- Spectral band
-	- frequency band
-	- Digital data
-	- A **digital signal** is a signal that represents data as a sequence of discrete values
-	- analog signal
-	- analog data 
-
-
-
-
-
-- The **spectrum** $[f_\text{low}, f_\text{high}]$ of a signal is the range of frequencies it contains
-- The **center frequency** $f_c$ of a channel is defined in two ways:
-	- $f_c = \frac{f_\text{high} + f_\text{low}}{2}$ (arithmetic mean, most common)
-	- $f_c = \sqrt{f_\text{high} \cdot f_\text{low}}$ (geometric mean)
-- The **(analog) bandwidth** (or **frequency bandwidth**) (רוחב סרט) is the range of frequencies that a channel can transmit, defined as $B = f_\text{high} - f_\text{low}$ (unit: Hz)
-	- The **effective bandwidth** refers to the range of frequencies within which a significant portion of the signal's power or energy is concentrated.
-- **Fractional bandwidth**: $B_\text{frac} = \frac{B}{f_c}$
-
-
-- The **symbol rate** (or **baud rate**) $R_s$ is the number of symbols transmitted per unit time 
-	- the number of times the signal changes state per second 
-	- (unit: baud (Bd) = symbols per second)
-- The **symbol duration time** $T_s$ is the time taken to transmit one symbol (unit: seconds)
-	- $T_s = \frac{1}{R_s}$
-
-- (**Nyquist's formula**) $R = R_s \cdot \log_2(M) \leq 2B \cdot \log_2 (M)=C$
-	- (for a noiseless channel)
-	- $R_s$: symbol rate (in $\textsf{baud}$)
-	- $M$: modulation order (number of distinct symbols, or distinct amplitude (or phase, or frequency) levels)
-	- $R$: bit rate (in $\textsf{bps}$)
-	- $N=\log_2(M)$ = number of bits encoded per symbol
-	- $B$ is the bandwidth of the channel (Hz)
-	- $R_{\text{max}}=2B$ is the **Nyquist rate** (in symbols per second (baud)), which is the maximum symbol rate 
-	- $C$ is the channel capacity (in bps) (maximum bit rate)
-
-
-- The **Nyquist rate** of a signal is defined as $2f_\text{max}$ (in samples per second (Hz)), where $f_\text{max}$ is the highest frequency present in the signal (in Hz)
-- The **Nyquist frequency** (in Hz) is defined as $\displaystyle {f_s}/{2}$, where $f_s$ is the sampling rate (in samples per second (Hz)), and is the highest frequency that can be accurately represented when sampling at $f_s$.
-
-- (**Shannon–Hartley theorem**) $C = B \log_2\bigl(1 + \mathrm{SNR}\bigr)$ is the **channel capacity** (in bps) (maximum possible data rate) of a channel with bandwidth $B$ (in Hz) and signal-to-noise ratio $\mathrm{SNR}$
-- $C/B$ is the **spectral efficiency** (in bps/Hz)
-- $\mathrm{SNR}=\frac{S}{N}$: signal-to-noise ratio (SNR) (unitless)
-	- $\mathrm{SNR_{dB}}=10\log_{10}\left( \frac{S}{N} \right)$: signal-to-noise ratio (in dB)
-	- $S$: signal power (in watts)
-	- $N$: noise power (in watts)
-
-
-- **Nyquist–Shannon sampling theorem** #todo
-
-
-- $\displaystyle\frac{\text{data}}{\text{data}+\text{overhead}}$
-
-
-### modulation 
-
-| Data    | Signal                | Encoding/Conversion Technique                  |
-| ------- | --------------------- | ---------------------------------------------- |
-| Analog  | Analog                | AM, FM                                         |
-| Digital | (Square-wave) digital | NRZ, NRZI, Manchester, Differential Manchester |
-| Digital | (Discrete) analog     |                                                |
-| Analog  | Digital               |                                                |
-
-
-
-
-## Performance 
-
-#### Bandwidth 
-
-- $\text{data rate}=\frac{\text{data transmitted}}{\text{time taken}}$
-- $\text{Bit rate}=\frac{\text{ \# bits transmitted}}{\text{Time taken}}$ (unit: bits per second, bps) 
-- The **bit rate** $R$ (קצב נתונים) is the number of bits transmitted per a unit of time (unit: **bps**, bits per second)
-- The **data bandwidth** (or **digital bandwidth** or simply **bandwidth**) is the maximum data rate that can be transmitted over a communication channel
-
-###### Throughput
-
-- **Network throughput** (or just **throughput**) (in bps) is a measurement of the average amount of data that _actually_ passes through a network in a specific time frame, taking into account the impact of latency
-
-#### Latency 
-$$\text{Latency} = t_{\text{prop}} + t_{\text{tx}} + t_\text{queue}$$
-- latency is the amount of time it takes for a packet of data to travel between two points across a network connection
-- latency (also called delay (?) #todo) is the time it takes for data to pass from one point on a network to another
-- (**Propagation delay**) $t_{\text{prop}} = \frac{d}{s}= \frac{\text{distance}}{\text{speed of signal}}$
-- (**Transmission delay**) $t_{\text{tx}} =\frac{L}{R} = \frac{\text{length}\,\textsf{[bits]}}{\text{transmission rate}\,\textsf{[bps]}}$
-- (**Queueing delay**)
-- (**Processing delay**)
-- **round-trip time** (**RTT**) (or (**round-trip delay** (**RTD**)): the time it takes for a signal to travel from the source to the destination and back again
-	- $\text{RTT} \approx 2 \times t_{\text{prop}}$
-
-#### Bandwidth-delay product
-
-- The **bandwidth-delay product**, $\text{RTT}  \times \text{bandwidth}$, in bits, is the amount of data that can be in transit in the network at any given time
-
-
-#### Stop-and-wait
-
-$\displaystyle \text{Throughput}\,\textsf{[bps]} = \frac{\text{frame size}\,\textsf{[bits]} }{\text{RTT}}$
-
-#### File transfer time
-
-- Minimum transfer time: $\text{RTT} + t_{\text{tx}}$
-
-- $T_\text{total} =t_\text{handshake} + t_\text{data}$
-	- $t_\text{handshake}=k\times \text{RTT}$, where $k$ is the number of RTTs needed for handshaking
-		- $2 \times \text{RTT}$ #todo
-	- (Continuous pipeline) $t_\text{data} = N\cdot t_{\text{tx}} + t_{\text{prop}}$ 
-	- (Stop-and-wait) $t_\text{data} = (N-1)\cdot (t_{\text{tx}}+\text{RTT}) + t_{\text{tx}} + t_{\text{prop}}$
-	- (window-limited) $t_\text{data} = (K-1)\cdot \text{RTT} + t_{\text{prop}}$
-		- $K=\left\lceil\frac{N}{W}\right\rceil$ 
-		- $W$ is the window size (packets per RTT)
-	- $N=\left\lceil\frac{\text{File Size}}{\text{Packet Size}}\right\rceil$ is the number of packets needed to transmit the file
-
+ 
 
 # OSI and TCP/IP models
 
@@ -152,20 +29,19 @@ $\displaystyle \text{Throughput}\,\textsf{[bps]} = \frac{\text{frame size}\,\tex
     </tr>
     <tr>
       <td>Segment</td>
-      <td>Transport</td>
-      <td>Transport</td>
+      <td align="center" colspan="2">Transport <small>(תעבורה, תובלה)</small></td>
       <td>Hardware/Software</td>
     </tr>
     <tr>
       <td>Packet</td>
       <td>Network</td>
-      <td>Internet</td>
+      <td>Internet <small>(or Network)</small></td>
       <td style="vertical-align: middle;" align="center" rowspan="3">Hardware</td>
     </tr>
     <tr>
       <td>Frame</td>
-      <td>Data Link (קו)</td>
-      <td style="vertical-align: middle;" align="center" rowspan="2">Link (or Network Access)</td>
+      <td>Data Link <small>(קו)</small></td>
+      <td style="vertical-align: middle;" align="center" rowspan="2">Link <small>(or Network Access) (קשר, ערוץ)</small></td>
     </tr>
     <tr>
       <td>Bit</td>
@@ -188,54 +64,165 @@ $\displaystyle \text{Throughput}\,\textsf{[bps]} = \frac{\text{frame size}\,\tex
 - Connection-less service
 
 
-## encoding 
-
-- baseline wander
-
-
-![350](https://upload.wikimedia.org/wikipedia/commons/9/95/Digital_signal_encoding_formats-en.svg "An arbitrary bit pattern in various binary line code formats")
-
-
-- non-return to zero (NRZ or NRZ‑L): low: 0, high: 1
-- non-return to zero inverted (NRZI): change at the start: 1, no change at the start: 0
-- Manchester: transition at the midpoint. 
-	- (G. E. Thomas) low-to-high: 1, high-to-low: 0
-	- (IEEE 802.3) low-to-high: 0, high-to-low: 1
-- Differential Manchester: transition at the midpoint. change at the start: 0, no change at the start: 1
-
-
 
 ## Framing 
 
 - A **frame** 
 
+#### Point-to-Point Protocol (PPP)
 
+Byte-Oriented
+
+<table>
+  <tr>
+    <th align="center">1 byte</th>
+    <th align="center">1</th>
+    <th align="center">1</th>
+    <th align="center">2</th>
+    <th align="center"></th>
+    <th align="center">2</th>
+    <th align="center">1 byte</th>
+  </tr>
+  <tr>
+    <td align="center">Flag (0x7E)</td>
+    <td align="center">Address (0xFF)</td>
+    <td align="center">Control (0x03)</td>
+    <td align="center">Protocol</td>
+    <td align="center">Information (payload)</td>
+    <td align="center">FCS (Frame Check Sequence)</td>
+    <td align="center">Flag (0x7E)</td>
+  </tr>
+  <tr>
+    <td align="center"></td>
+    <td align="center" colspan="3">Header</td>
+    <td align="center">Data</td>
+    <td align="center">Footer</td>
+    <td align="center"></td>
+  </tr>
+</table>
+
+
+- Link Control Protocol (LCP)
+
+#### High-Level Data Link Control (HDLC)
+
+bit-oriented
 
 ## Error detection and correction
 
+
+
+- A **message** (סיביות מידע, מילת מידע) $M$ of length $m$.
+- **Redundant bits** (סיביות ביקורת) $R=f(M)$ of length $r$ (where $r \ll m$). 
+- The sender transmits the **codeword** (מילת קוד) $P = (M,R)$ of length $n=m+r$. 
+- The receiver receives $(M',R')$ and checks if $R' = f(M')$, if yes, assume no error with high probability, else, error detected.
+- (**code rate**) $R_{c}=\frac{m}{n}$
+- (**overhead**, תקורה) $\frac{r}{n}$
+- (**redundancy**) $\frac{r}{m}$ 
+
 - A **bit error** is when a bit is received incorrectly (0 instead of 1 or vice versa)
 - A **burst error** is when a sequence of bits is received incorrectly
-- The **bit error ratio** is defined as $\displaystyle\text{BER} = \frac{\text{\# bit errors}}{\text{Total transmitted bits}}$
-- The **bit error probability** is defined as $p_{e}=\mathrm{E}[\text{BER}]$
+- (**bit error ratio**) $\displaystyle\text{BER} = \frac{\text{\# bit errors}}{\text{Total transmitted bits}}$
+- (**bit error probability**) $p_{e}=\mathrm{E}[\text{BER}]$
 
 
-- error detection:
-	- goal: transmit a message $M$ of length $n$ with $k\ll n$ redundant bits $R=f(M)$
-	- the sender transmits $(M,R)$. The receiver receives $(M',R')$ and checks if $R' = f(M')$, if yes, assume no error with high probability, else, error detected 
-- internet checksum
-	- message is divided into words of 16 bits: $w_1, w_2, \ldots, w_m$
-	- the checksum is $R = \sim(w_1 + w_2 + \ldots + w_m)$ (where $\sim$ is the bitwise NOT operation. The sum is done using [[Data Storage#Ones' complement|ones' complement addition]])
-	- the sender sends $(M,R)$
-	- the receiver computes $S = w_1' + w_2' + \ldots + w_m' + R'$ (using ones' complement addition) and checks if $\sim S = 0$, if yes, assume no error, else, error detected
-- cyclic redundancy check (CRC) #todo 
-- Parity check #todo 
+נצילות השידור
+### parity checks 
 
 
-## protocols 
+- even parity: $R = 0$ if number of 1s in $M$ is even, else $R = 1$
+- odd parity: $R = 0$ if number of 1s in $M$ is odd, else $R = 1$
+- two-dimensional parity check: $$\begin{array}{ccc|c} b_{1,1} & \cdots & b_{1,j} & r_1 \\ b_{2,1} & \cdots & b_{2,j} & r_2 \\ \vdots & \ddots & \vdots & \vdots \\ b_{i,1} & \cdots & b_{i,j} & r_i \\ \hline c_1 & \cdots & c_j & p \end{array}$$
+	- $M$ is an $i \times j$ matrix of bits $b_{m,n}$
+	- row parity bits $r_m$ for each row $m$
+	- column parity bits $c_n$ for each column $n$
+	- overall parity bit $p$
+
+### internet checksum
+
+(note: used in IP, not used in link layer)
+
+- message is divided into words of 16 bits: $w_1, w_2, \ldots, w_m$
+- the checksum is $R = \sim(w_1 + w_2 + \ldots + w_m)$ (where $\sim$ is the bitwise NOT operation. The sum is done using [[Data Storage#Ones' complement|ones' complement addition]])
+- the sender sends $(M,R)$
+- the receiver computes $S = w_1' + w_2' + \ldots + w_m' + R'$ (using ones' complement addition) and checks if $\sim S = 0$, if yes, assume no error, else, error detected
+
+
+### cyclic redundancy check (CRC)
+
+- the message has $n+1$ bits
+- $G(x)$ is the **generator polynomial** of degree $k$
+- $M(x)$ is the **message polynomial** of degree $\text{deg}(M) \leq n$
+- the transmitted word will be a polynomial $T(x)$ of degree $n+k$ such that $G(x) \mid T(x)$.
+- $T(x)$ construction: 
+	1. multiply $M(x)$ by $x^k$ to get $M'(x) = M(x) \cdot x^k$
+	2. divide $M'(x)$ by $G(x)$ to get the remainder $R(x)$
+	3. compute $T(x) = M'(x) - R(x)$
+- the receiver receives $T'(x)=T(x)+E(x)$ where $E(x)$ is the **error polynomial** (non-zero coefficients indicate bit errors)
+- the receiver checks if $G(x) \mid T'(x)$, if yes, it means that $E(x)=0$ (no error), else, error detected
+
+<iframe width="100%" height="500" src="https://adielbm.github.io/crc-calculator/" frameborder="0"></iframe>
+
+## Reliable Transmission protocols 
 ### Stop-and-wait ARQ
+
+
+```
+sender:
+	n = 0 
+	while true:
+		send frame[n]
+		if ack[n] received within T time:
+			n = n + 1
+		else: # timeout, we start over
+
+receiver: 
+	expected = 0
+	while true:
+		receive frame[n]
+		if n == expected:
+			deliver data to upper layer
+			expected = expected + 1
+		send ack[n]
+		
+```
 
 ### Sliding window protocol
 
+- sender:
+	- constants:
+		- SWS: send window size
+	- variables:
+		- LFS: last frame sent
+		- LAR: last frame acknowledged
+	- invariant: 
+		- $\textsf{LFS} - \textsf{LAR} \leq \textsf{SWS}$
+	- algorithm:
+		- if ack for frame k received and $k > \textsf{LAR}$:
+			- set $\textsf{LAR} = k$
+		- if $\textsf{LFS} - \textsf{LAR} < \textsf{SWS}$: 
+			- send frame $\textsf{LFS}+1$
+			- increment $\textsf{LFS}$
+		- if timeout for frame k:
+			- resend frame k
+		- 
+- receiver:
+	- constants:
+		- RWS: receive window size, s.t. $\textsf{RWS} \leq \textsf{SWS}$ 
+	- variables:
+		- LAF: last acceptable frame
+		- LFR: last frame received
+	- invariant:
+		- $\textsf{LAF} - \textsf{LFR} \leq \textsf{RWS}$
+
+
+- $\textsf{SWS} < \frac{1}{2} \times (\text{MaxSeqNum}+1)$ 
+
+
+- negative acknowledgment
+	- 
+- selective acknowledgments 
+	- the receiver could acknowledge exactly those frames it has received rather than just the highest numbered frame received in order
 
 ## Ethernet
 

@@ -2,8 +2,15 @@
 
 - Given $\vec{\mathbf{v}}$ is a vector
 	- 2D Plane: 
-		- Cartesian: $\vec{\mathbf{v}} = (v_x,v_y)$
+		- Cartesian: $\vec{\mathbf{v}} = (v_x,v_y)= v_x \hat{i} + v_y \hat{j}$
 		- Polar: $\vec{\mathbf{v}} = (v,\theta)$
+		- Complex: $z = r e^{i\theta}$
+			- geometric meaning of operations:
+				- addition: $z_1 + z_2$ is the vector sum of $z_1$ and $z_2$
+				- scalar multiplication: $a z=(ar)e^{i\theta}$ scales the vector by $a$
+				- rotation: multiplying $z = r e^{i\theta}$ by $e^{i\phi}$ rotates the vector by angle $\phi$, resulting in $e^{i\phi}z = r e^{i(\theta + \phi)}$
+				- dot product: $\mathbf{v} \cdot \mathbf{w} = \Re(z_1 \overline{z_2})$
+				- cross product: $\mathbf{v} \times \mathbf{w} = \Im(z_1 \overline{z_2})$
 	- 3D Space:
 	    - Cartesian: $\vec{\mathbf{v}} = (v_x,v_y,v_z)$
 	    - Spherical:
@@ -28,10 +35,11 @@ $$\begin{array}{c} \vec{\mathbf{v}} = (v,\theta,\phi)  \\   \end{array}  \implie
 
 # Sum of Vectors
 
-- Vector $\mathbf{a}$ has magnitude $a$ and is on the $x$-axis.
-- Vector $\mathbf{b}$ has magnitude $b$ and forms an angle $\theta$ with $\mathbf{a}$.
-- $\mathbf{a} + \mathbf{b} = (a + b \cos(\theta), b \sin(\theta))$
-- $\|\mathbf{a} + \mathbf{b}\| = \sqrt{a^2 + 2ab \cos(\theta) + b^2}$ (Law of Cosines)
+- Given two vectors $\mathbf{a}=(a_x,a_y)$ and $\mathbf{b}=(b_x,b_y)$, and $\theta_a$, $\theta_b$ are the angles they make with the x-axis respectively. Then their sum is given by:
+	- (cartesian) $\mathbf{r}=\mathbf{a} + \mathbf{b} = (a_x + b_x, a_y + b_y)$ 
+	- (polar) $\mathbf{r}=\mathbf{a} + \mathbf{b}=\left(r,\theta\right)$ where
+		- $r = \sqrt{a^2 + b^2 + 2ab \cos(\theta_b - \theta_a)}$
+		- $\theta = \arctan\left(\displaystyle \frac{a \sin(\theta_a) + b \sin(\theta_b)}{a \cos(\theta_a) + b \cos(\theta_b)}\right)$
 
 # Dot Product (Scalar Product)
 
