@@ -14,7 +14,10 @@
 $$\text{Latency} = t_{\text{prop}} + t_{\text{tx}} + t_\text{queue}$$
 - latency is the amount of time it takes for a packet of data to travel between two points across a network connection
 - latency (also called delay (?) #todo) is the time it takes for data to pass from one point on a network to another
-- (**Propagation delay**) $t_{\text{prop}} = \frac{d}{s}= \frac{\text{distance}}{\text{speed of signal}}$
+- (**Propagation delay**) $t_{\text{prop}} = \frac{d}{v}$
+	- $d$ is the length of the physical link (in $\mathrm{m}$)
+	- $v$ is the propagation speed in the medium (in $\mathrm{m/s}$).
+		- (Typically, $v \approx \frac{2}{3}c$, where $c$ is the speed of light in vacuum.)
 - (**Transmission delay**) $t_{\text{tx}} =\frac{L}{R} = \frac{\text{length}\,\textsf{[bits]}}{\text{transmission rate}\,\textsf{[bps]}}$
 - (**Queueing delay**)
 - (**Processing delay**)

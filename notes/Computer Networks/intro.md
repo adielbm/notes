@@ -1,13 +1,15 @@
 
  
-
 # OSI and TCP/IP models
 
-<table border="1">
+
+
+<table>
   <thead>
     <tr>
       <th></th>
       <th>OSI</th>
+      <th>Five-layer</th>
       <th>TCP/IP</th>
       <th></th>
     </tr>
@@ -15,41 +17,40 @@
   <tbody>
     <tr>
       <td>Data</td>
-      <td>Application</td>
-      <td style="vertical-align: middle;" align="center" rowspan="3">Application</td>
+      <td><b>Application</b></td>
+      <td style="vertical-align: middle;" align="center" colspan="2" rowspan="3"><b>Application</b></td>
       <td style="vertical-align: middle;" align="center" rowspan="3">Software</td>
     </tr>
     <tr>
       <td>Data</td>
-      <td>Presentation</td>
+      <td><b>Presentation</b></td>
     </tr>
     <tr>
       <td>Data</td>
-      <td>Session</td>
+      <td><b>Session</b></td>
     </tr>
     <tr>
       <td>Segment</td>
-      <td align="center" colspan="2">Transport <small>(תעבורה, תובלה)</small></td>
+      <td align="center" colspan="3"><b>Transport</b><br/><small>(תעבורה, תובלה)</small></td>
       <td>Hardware/Software</td>
     </tr>
     <tr>
       <td>Packet</td>
-      <td>Network</td>
-      <td>Internet <small>(or Network)</small></td>
+      <td><b>Network</b></td>
+      <td align="center" colspan="2"><b>Internet</b> <small>(or Network)</small></td>
       <td style="vertical-align: middle;" align="center" rowspan="3">Hardware</td>
     </tr>
     <tr>
       <td>Frame</td>
-      <td>Data Link <small>(קו)</small></td>
-      <td style="vertical-align: middle;" align="center" rowspan="2">Link <small>(or Network Access) (קשר, ערוץ)</small></td>
+      <td colspan="2" align="center"><b>Data Link</b><br/><small>(קו, ערוץ)</small></td>
+      <td style="vertical-align: middle;" align="center" rowspan="2"><b>Link</b> <small>(or Network Access)<br/>(קשר, ערוץ)</small></td>
     </tr>
     <tr>
       <td>Bit</td>
-      <td>Physical</td>
+      <td colspan="2"><b>Physical</b></td>
     </tr>
   </tbody>
 </table>
-
 
 
 # Link layer
@@ -163,7 +164,7 @@ bit-oriented
 
 <iframe width="100%" height="500" src="https://adielbm.github.io/crc-calculator/" frameborder="0"></iframe>
 
-## Reliable Transmission protocols 
+## Error control 
 ### Stop-and-wait ARQ
 
 
@@ -195,6 +196,7 @@ receiver:
 	- variables:
 		- LFS: last frame sent
 		- LAR: last frame acknowledged
+		- $\text{Send Window} = [\textsf{LAR}+1, \textsf{LFS}]$
 	- invariant: 
 		- $\textsf{LFS} - \textsf{LAR} \leq \textsf{SWS}$
 	- algorithm:
@@ -208,10 +210,11 @@ receiver:
 		- 
 - receiver:
 	- constants:
-		- RWS: receive window size, s.t. $\textsf{RWS} \leq \textsf{SWS}$ 
+		- RWS: receive window size, s.t. $\textsf{RWS} \leq \textsf{SWS}$
 	- variables:
 		- LAF: last acceptable frame
 		- LFR: last frame received
+		- $\text{Receive Window} = [\textsf{LFR}+1, \textsf{LAF}]$
 	- invariant:
 		- $\textsf{LAF} - \textsf{LFR} \leq \textsf{RWS}$
 
@@ -224,32 +227,40 @@ receiver:
 - selective acknowledgments 
 	- the receiver could acknowledge exactly those frames it has received rather than just the highest numbered frame received in order
 
+
+- Go-Back-N ARQ
+	- $\textsf{RWS} = 1$
+	- $\textsf{SWS} = N$
+- Selective Repeat ARQ
+	- 
+
 ## Ethernet
 
 ### Frame format (Ethernet II)
 
 <table>
-  <tr>
-    <th align="center">8 bytes</th>
-    <th align="center">6</th>
-    <th align="center">6</th>
-    <th align="center">2</th>
-    <th align="center">46-1500</th>
-    <th align="center">4</th>
+<tr>
+	<td align="center"></td>
+    <td align="center" colspan="5">Ethernet frame (64–1522 bytes)</td>
   </tr>
   <tr>
-    <td align="center">Preamble</td>
-    <td align="center">Dest addr</td>
-    <td align="center">Src addr</td>
-    <td align="center">EtherType</td>
-    <td align="center">Payload</td>
-    <td align="center">CRC</td>
+    <td align="center" colspan="6">Ethernet packet (72–1530 bytes)</td>
   </tr>
   <tr>
-    <td align="center"></td>
-    <td align="center" colspan="3">Header</td>
-    <td align="center">Data</td>
-    <td align="center">Footer</td>
+    <td align="center"><b>Preamble</b></td>
+    <td align="center"><b>Dest addr</b></td>
+    <td align="center"><b>Src addr</b></td>
+    <td align="center"><b>EtherType</b></td>
+    <td align="center"><b>Payload</b></td>
+    <td align="center"><b>CRC</b></td>
+  </tr>
+  <tr>
+    <td align="center">8 (bytes)</td>
+    <td align="center">6</td>
+    <td align="center">6</td>
+    <td align="center">2</td>
+    <td align="center">46-1500</td>
+    <td align="center">4</td>
   </tr>
 </table>
 
@@ -283,7 +294,7 @@ receiver:
 	- frames addressed to the broadcast address
 	- frames addressed to multicast addresses it is configured to accept
 	- (all frames if in **promiscuous mode**)
-
+- Classic Ethernet uses the 1-persistent CSMA/CD
 
 # CSMA
 
@@ -291,11 +302,24 @@ receiver:
 	- CSMA/CD (Collision Detection)
 	- CSMA/CA (Collision Avoidance)
 
-
+$$\displaystyle t_{\text{tx}} \geq 2 \cdot t_{\text{prop}}$$
+- The **slot time** is the time to transmit the minimum frame size, given by $\displaystyle \text{slot-time} = \frac{n_\text{min}}{R}= 2 \frac{d_\text{max}}{v}$
+	- $d_\text{max}$ is the maximum distance of the Ethernet segment (in meters)
+	- $n_\text{min}$ is the minimum frame size (in Ethernet, 512 bits (= 64 bytes))
+	- (10 Mbps Ethernet) $51.2\,\mathrm{\mu s}=\frac{512\,\text{bits}}{10 \times 10^6\,\text{bps}}$
+	- (100 Mbps Ethernet) $5.12\,\mathrm{\mu s}=\frac{512\,\text{bits}}{100 \times 10^6\,\text{bps}}$
+- $a=\frac{t_{\text{prop}}}{t_{\text{tx}}}$
 - backoff time = $k\times \text{slot time}$,
 	- $k$ is a random integer in $[0, 2^n - 1]$
 	- $n$ is the number of collisions for the frame (up to a maximum value, e.g., 10)
-	- slot time is the time to transmit 512 bits (minimum Ethernet frame size) (51.2 μs for 10 Mbps Ethernet, 5.12 μs for 100 Mbps Fast Ethernet, 0.512 μs for 1 Gbps Gigabit Ethernet)
+	- algo:
+		- $n=0$
+		- while not transmitted:
+			- choose random $k$ in $[0, 2^n - 1]$
+			- wait $\text{backoff time}=k \times \text{slot time}$
+			- try to transmit
+			- if collision:
+				- $n = \min(n+1, n_\text{max})$
 
 #### access methods
 

@@ -32,6 +32,7 @@
 	- $F\subseteq Q$ is the set of accept states
 - (1.39) Every NFA has an equivalent DFA.
 - (exercise 1.11) Every NFA can be converted to an equivalent one that has a single accept state.
+
 ### Regular Expressions
 
 - Say that $R$ is a **regular expression** if $R$ is one of the following:
