@@ -107,7 +107,7 @@ svg {
   margin-right: 5px;
   cursor: pointer;
   backface-visibility: visible;
-  color: var(--broader);
+  color: var(--border);
 }
 
 li:has(> .folder-outer:not(.open)) > .folder-container > svg {

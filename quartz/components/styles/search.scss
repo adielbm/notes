@@ -1,139 +1,157 @@
 @use "../../styles/variables.scss" as *;
 
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--pX);
+  margin-right: var(--pX);
+}
+
+// ===== Small screens =====
+@media (max-width: $fullPageWidth) {
+  .page-title {
+    flex-wrap: nowrap;
+    transition: all 0.3s ease; // smooth reflow on focus transitions
+  }
+
+  .site-link,
+  .theme-toggle {
+    flex: 0 0 auto; // fixed width, should not shrink
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .search {
+    flex: 1 1 auto; // can shrink if needed
+    transition: flex-grow 0.3s ease, max-width 0.3s ease;
+  }
+
+  // when the search input is focused
+  // use :focus-within on .search so that any child input focus triggers it
+  .search:focus-within {
+    flex-grow: 1; // expand search field
+    max-width: 100%; // allow full width
+  }
+
+  // hide the link and toggle smoothly when search is active
+  .search:focus-within~.site-link,
+  .search:focus-within~.theme-toggle,
+  .page-title:has(.search:focus-within) .site-link,
+  .page-title:has(.search:focus-within) .theme-toggle-container {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+    transform: scale(0.0); // slight shrinking effect
+  }
+
+  .page-title:has(.search:focus-within) {
+    gap: 0;
+  }
+}
+
+// ===== Large screens =====
+// First row: site-link (left) + theme-toggle (right)
+// Second row: search bar spans full width
+@media (min-width: $fullPageWidth) {
+  .page-title {
+    flex-wrap: wrap;
+    gap: var(--pX);
+  }
+
+  .site-link {
+    order: 1;
+  }
+
+  .theme-toggle-container {
+    order: 2;
+  }
+
+  .search {
+    order: 3;
+    flex: 1 0 100%;
+    max-width: none;
+    min-width: 0;
+    margin-right: 0;
+  }
+}
+
+// ===== Shared search styling =====
 .search {
-  min-width: fit-content;
-  max-width: 14rem;
+  position: relative;
+  max-width: 30rem;
   flex-grow: 0.3;
+  transition: all 0.3s ease; // smooth width change
 
-  & > #search-icon {
+  input#search-bar {
+    width: 100%;
+    transition: width 0.3s ease;
+  }
+}
+
+
+// shared search styling
+.search {
+
+  &>#search-bar {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem 1rem;
+    color: var(--tx);
+    border: 1px solid var(--border);
     border-radius: var(--borderRadius);
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    white-space: nowrap;
-    border: 1px solid var(--broader);
+    background: var(--bg);
 
-    & > div {
-      flex-grow: 1;
-    }
-
-    & > p {
-      display: inline;
-      padding: 0 1vw;
-      margin: 0;
-    }
-
-    & svg {
-      cursor: pointer;
-      width: 18px;
-      min-width: 18px;
-      margin: 0 0.5rem;
-
-      .search-path {
-        stroke: var(--broader);
-        stroke-width: 1px;
-      }
+    &:focus {
+      outline: none;
+      border-color: var(--tx3);
     }
   }
 
-  & > #search-container {
-    position: fixed;
-    contain: layout;
+  &>#search-container {
+    position: absolute;
     z-index: 999;
+    top: 100%;
     left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow-y: auto;
+    right: 0;
+    margin-top: 0.5rem;
     display: none;
-    backdrop-filter: blur(4px) brightness(0.6);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--borderRadius);
+    box-shadow:
+      0 14px 50px rgba(27, 33, 48, 0.12),
+      0 10px 30px rgba(27, 33, 48, 0.16);
+    max-height: 60vh;
+    overflow: hidden;
 
     &.active {
-      display: inline-block;
+      display: block;
     }
 
-    & > #search-space {
-      width: 65%;
-      margin-top: 12vh;
-      margin-left: auto;
-      margin-right: auto;
+    &>#search-space {
+      width: 100%;
+      height: 100%;
 
-      @media all and (max-width: $fullPageWidth) {
-        width: 90%;
-      }
-
-      & > * {
+      &>* {
         width: 100%;
-        border-radius: var(--borderRadius);
-        background: var(--bg2);
-        box-shadow:
-          0 14px 50px rgba(27, 33, 48, 0.12),
-          0 10px 30px rgba(27, 33, 48, 0.16);
-        margin-bottom: 2em;
       }
 
-      & > input {
-        box-sizing: border-box;
-        padding: 1rem;
-        color: var(--tx);
-        border: 1px solid var(--broader);
-
-        &:focus {
-          outline: none;
-        }
-      }
-
-      & > #search-layout {
+      &>#search-layout {
         display: none;
         flex-direction: row;
-        border: 1px solid var(--bg);
         flex: 0 0 100%;
         box-sizing: border-box;
+        height: 100%;
 
         &.display-results {
           display: flex;
         }
 
-        &[data-preview] > #results-container {
-          flex: 0 0 min(30%, 450px);
-        }
-
-        @media all and (min-width: $tabletBreakpoint) {
-          &[data-preview] {
-            & .result-card > p.preview {
-              display: none;
-            }
-
-            & > div {
-              &:first-child {
-                border-right: 1px solid var(--bg);
-                border-top-right-radius: unset;
-                border-bottom-right-radius: unset;
-              }
-
-              &:last-child {
-                border-top-left-radius: unset;
-                border-bottom-left-radius: unset;
-              }
-            }
-          }
-        }
-
-        & > div {
-          height: calc(75vh - 12vh);
-          border-radius: var(--borderRadius);
-        }
-
-        @media all and (max-width: $tabletBreakpoint) {
-          & > #preview-container {
-            display: none !important;
-          }
-
-          &[data-preview] > #results-container {
-            width: 100%;
-            height: auto;
-            flex: 0 0 100%;
-          }
+        &>div {
+          max-height: 60vh;
+          overflow-y: auto;
         }
 
         & .highlight {
@@ -141,34 +159,15 @@
           scroll-margin-top: 2rem;
         }
 
-        & > #preview-container {
-          display: block;
-          overflow: hidden;
-          font-family: inherit;
-          color: var(--tx);
-          line-height: 1.5em;
-          font-weight: $normalWeight;
+        &>#results-container {
           overflow-y: auto;
-          padding: 0 2rem;
-
-          & .preview-inner {
-            margin: 0 auto;
-            width: min($pageWidth, 100%);
-          }
-
-          a[role="anchor"] {
-            background-color: transparent;
-          }
-        }
-
-        & > #results-container {
-          overflow-y: auto;
+          width: 100%;
 
           & .result-card {
             overflow: hidden;
-            padding: 1em;
+            padding: .5rem 1rem;
             cursor: pointer;
-            border-bottom: 1px solid var(--broader);
+            border-bottom: 1px solid var(--border);
             width: 100%;
             display: block;
             box-sizing: border-box;
@@ -183,24 +182,31 @@
             outline: none;
             font-weight: inherit;
 
+            &:last-child {
+              border-bottom: none;
+            }
+
             &:hover,
             &:focus,
             &.focus {
-              background: var(--bg);
+              background: var(--bg3);
             }
 
-            & > h3 {
+            &>h3 {
               margin: 0;
               font-weight: normal;
               font-size: 1rem !important;
+
+
+
             }
 
-            & > ul.tags {
+            &>ul.tags {
               margin-top: 0.45rem;
               margin-bottom: 0;
             }
 
-            & > ul > li > p {
+            &>ul>li>p {
               border-radius: var(--borderRadius);
               background-color: var(--highlight);
               padding: 0.2rem 0.4rem;
@@ -213,7 +219,7 @@
               }
             }
 
-            & > p {
+            &>p {
               margin-bottom: 0;
             }
           }
