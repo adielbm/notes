@@ -11,7 +11,7 @@ import { FullPageLayout } from "../../cfg"
 import { Argv } from "../../util/ctx"
 import { FilePath, isRelativeURL, joinSegments, pathToRoot } from "../../util/path"
 import { defaultContentPageLayout, sharedPageComponents } from "../../../quartz.layout"
-import { Content, FolderContent } from "../../components"
+import { Content, FolderContent, IndexContent } from "../../components"
 import chalk from "chalk"
 import { write } from "./helpers"
 import DepGraph from "../../depgraph"
@@ -96,6 +96,12 @@ export const ContentPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOp
         }
 
         const externalResources = pageResources(pathToRoot(slug), resources)
+        
+        // Use IndexContent for the index page, Content for others
+        const customOpts = slug === "index" 
+          ? { ...opts, pageBody: IndexContent() }
+          : opts
+
         const componentData: QuartzComponentProps = {
           ctx,
           fileData: file.data,
@@ -106,7 +112,7 @@ export const ContentPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOp
           allFiles,
         }
 
-        const content = renderPage(cfg, slug, componentData, opts, externalResources)
+        const content = renderPage(cfg, slug, componentData, customOpts, externalResources)
         const fp = await write({
           ctx,
           content,

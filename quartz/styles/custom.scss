@@ -108,10 +108,12 @@ button#toc {
 .pagelist {
   gap: .5em;
   display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   a {
-    padding: 0.8em;
+    border: 1px solid var(--border);
+    padding: 0.8em !important;
     text-decoration: none;
-    border-radius: var(--borderRadius);
+    border-radius: var(--borderRadius) !important;
   }
 }
 .pagelist--folder {

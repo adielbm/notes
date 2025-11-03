@@ -20,7 +20,8 @@ const defaultOptions: SearchOptions = {
 export default ((userOpts?: Partial<SearchOptions>) => {
   const Search: QuartzComponent = ({ fileData, displayClass, cfg }: QuartzComponentProps) => {
     const opts = { ...defaultOptions, ...userOpts }
-    const searchPlaceholder = i18n(cfg.locale).components.search.searchBarPlaceholder
+    // const searchPlaceholder = i18n(cfg.locale).components.search.searchBarPlaceholder
+    const searchPlaceholder = "Search..."
     const title = cfg?.pageTitle ?? i18n(cfg.locale).propertyDefaults.title
     const baseDir = pathToRoot(fileData.slug!)
 

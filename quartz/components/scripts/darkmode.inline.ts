@@ -18,6 +18,9 @@ const emitThemeChangeEvent = (theme: "light" | "dark") => {
 
 // Initialize the theme toggle after the DOM is ready
 document.addEventListener("nav", () => {
+  // Get the CURRENT theme from localStorage (not the initial one)
+  const savedTheme = localStorage.getItem("theme") ?? userPref;
+  
   // Switch theme when toggle is changed
   const switchTheme = (e: Event) => {
     const newTheme = (e.target as HTMLInputElement)?.checked ? "dark" : "light";
@@ -38,21 +41,16 @@ document.addEventListener("nav", () => {
   // Darkmode toggle handling
   const toggleSwitch = document.querySelector("#darkmode-toggle") as HTMLInputElement;
 
+  if (!toggleSwitch) return; // Guard against missing element
+
   toggleSwitch.addEventListener("change", switchTheme);
 
-  // Set the initial state of the toggle based on current theme
-  if (currentTheme === "dark") {
-    toggleSwitch.checked = true;
-  }
+  // Set the initial state of the toggle based on CURRENT theme (not initial)
+  toggleSwitch.checked = savedTheme === "dark";
 
   // Listen for system preference changes
   const colorSchemeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
   colorSchemeMediaQuery.addEventListener("change", themeChange);
-
-  // Immediately update the toggle state based on system preference (if not already set)
-  if (currentTheme === "dark") {
-    toggleSwitch.checked = true;
-  }
 
   // Ensure transitions are disabled initially, and then re-enable them after load
   window.onload = () => {
