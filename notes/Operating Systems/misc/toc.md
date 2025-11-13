@@ -316,3 +316,34 @@
     - **9.1.1** הגנה על ידי קביעת תחומים - Protection Domains - 280
     - **9.1.2** רשימות גישה - ACL - 281
     - **9.1.3** רשימות יכולת - C-lists - 282
+
+
+
+_____
+
+
+Here is the translation into English, keeping the technical context and style appropriate for an operating systems textbook or course:
+
+---
+
+interprocess communication (IPC)
+- Race Conditions
+- Critical Race
+* Critical Regions
+* Mutual Exclusion with Busy Waiting
+	* Interrupt Disabling
+	* Lock Variables
+	* Queue-based Solution
+	* Dekker’s and Peterson’s Solutions
+	* TSL (Test-and-Set Lock)
+* Sleep and Wakeup
+- Producer–consumer problem
+	* Semaphores
+	* Solution to the PCP Using Semaphores
+* Mutex (lock)
+	* condition variables
+* Monitors
+* Message Passing
+* Characteristics of the Message Passing Mechanism
+	* Solution to the PCP Using Message Passing
+* Barriers

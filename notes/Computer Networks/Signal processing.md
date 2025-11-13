@@ -43,6 +43,27 @@
 - $\displaystyle\frac{\text{data}}{\text{data}+\text{overhead}}$
 
 
+
+o
+# Filter
+
+- baseband
+	- baseband signal
+	- baseband channel
+- 
+- broadband
+- narrowband
+
+baseband signal
+bandpass signal
+
+
+![200](https://upload.wikimedia.org/wikipedia/commons/b/b8/Passband_schematic3.png)
+
+- passband
+
+- bandpass filter
+
 # Modulation 
 
 - modulator, demodulator
@@ -96,6 +117,7 @@ pulse amplitude modulation (PAM)
 
 
 # Multiplexing
+![200](https://upload.wikimedia.org/wikipedia/commons/6/6f/Multiplexing_diagram.svg)
 
 - FDM
 - TDM
