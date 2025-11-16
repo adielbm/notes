@@ -1,5 +1,6 @@
 .theme-dark {
   --titlebar-background-focused: var(--background-modifier-active-hover) !important;
+  --bold-modifier: 400;
 }
 
 .sidebar-toggle-button {

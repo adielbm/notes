@@ -7,5 +7,3 @@ This repository is a fork of [jackyzha0/quartz](https://github.com/jackyzha0/qua
 The content of the `notes/` directory, unless otherwise stated, is dedicated to the public domain under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). 
 
 If you believe any content here infringes on rights or lacks proper attribution, please contact me. I will promptly address the issue by removing the content or providing appropriate credit.
-
-

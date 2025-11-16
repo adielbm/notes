@@ -44,14 +44,6 @@
       "key": "ArrowLeft"
     }
   ],
-  "toggle-dark-mode:toggle-dark-mode": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "L"
-    }
-  ],
   "workspace:close-window": [
     {
       "modifiers": [
@@ -127,6 +119,14 @@
         "Mod"
       ],
       "key": "G"
+    }
+  ],
+  "theme:toggle-light-dark": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "L"
     }
   ]
 }
