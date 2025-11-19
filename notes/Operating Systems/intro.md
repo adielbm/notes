@@ -7,6 +7,8 @@
 			* This mechanism improves the utilization of execution units during stalls (such as memory latency), but it does not provide genuine parallelism, as only one thread is actively executing at any given moment.
 
 
+
+
 - **context switch** is performing a state save of the current process and a state restore of a different process. switching the CPU core to another process
 
 
@@ -35,6 +37,8 @@
 
 
 
+
+
 * **Address Space**: the memory range a process can access.
 * **Command Interpreter**: program that reads and executes user commands (e.g., shell).
 * **Core Image**: memory snapshot of a process, including code and data.
@@ -56,3 +60,31 @@
 
 
 
+# Linux
+
+
+- The kernel and user use the term _PID_ differently: 
+	- (kernel view) Each thread has its own ID called **PID** (sometime called **thread ID** (**TID**)). 
+	- (user view) **PID** of process refers to the TGID
+
+- A **thread group** is a collecation of threads sharing the same **thread group ID** (TGID)
+	- The first thread in a procces is called the **thread group leader**, and it has TGID the same as its (kernel) PID. The other thread will have TGID the same as the TGID of the thread group leader.
+	- the TGID is the same as the PID of the procces of the theards.
+	- each thread has its own `struct task_struct *task`.
+	- each thread has its own (kernel) PID (=TID). 
+		- (kernel) `pid_t task->pid`.
+		- (user) `syscall(SYS_gettid)`.
+	- all threads have the same TGID.
+		- (kernel) `pid_t task->tgid`
+		- (user) `getpid()`.
+	- all threads have the same PPID. (using `pid_t getppid()`)
+- A **process group** is a set of one or more processes sharing the same **process group ID** (PGID, `pgid`), (which is a number of type `pid_t`).
+	- a process group groups processes (not threads)
+	- a process group has a **process group leader**, which is the process that creates the group and whose PID becomes the PGID of the group. 
+		- A new process inherits its parent’s process group ID.
+
+job control
+
+- A **session** is a collection of process groups (jobs)
+	- All of the processes in a session have the same session identifier. 
+	- A session leader is the process that created the session, and its process ID becomes the session ID.
