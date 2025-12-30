@@ -66,6 +66,16 @@ bit-oriented
 - (**bit error ratio**) $\displaystyle\text{BER} = \frac{\text{\# bit errors}}{\text{Total transmitted bits}}$
 - (**bit error probability**) $p_{e}=\mathrm{E}[\text{BER}]$
 
+- A **code** (of length $n$) over an alphabet $\Sigma$ is a subset $\mathcal{C}\subseteq \Sigma^n$.
+- A **codeword** is an element $c = (c_1,c_2,\ldots,c_n) \in \mathcal{C}$.
+- An **encoder** is a function that maps messages to codewords: $\mathcal{E}: \Sigma^m \to \mathcal{C} \subseteq \Sigma^n$.
+- The **Hamming distance** between two codewords $c_1,c_2 \in \mathcal{C}$ is $\displaystyle d(c_1,c_2) = |\{i : c_{1,i} \neq c_{2,i}, 1 \leq i \leq n\}|$ (the number of positions where they differ).
+- The **Hamming weight** of a codeword $c \in \mathcal{C}$ is $\displaystyle w(c) = d(c,0^n)$ (the number of non-zero positions).
+- The **error-correction capability** $t$ of a code $\mathcal{C}$ is the maximum number of bit errors that can be corrected
+	- $\displaystyle t = \left\lfloor \frac{d_{\min} - 1}{2} \right\rfloor$
+- The **error-detecting capability** $s$ of a code $\mathcal{C}$ is the maximum number of bit errors that can be detected
+	- $\displaystyle s = d_{\min} - 1$ 
+- The **minimum Hamming distance** of a code $\mathcal{C}$ is $\displaystyle d_{\min} = \min_{c_1 \neq c_2 \in \mathcal{C}} d(c_1,c_2)$.
 
 נצילות השידור
 ### parity checks 
@@ -84,7 +94,7 @@ bit-oriented
 (note: used in IP, not used in link layer)
 
 - message is divided into words of 16 bits: $w_1, w_2, \ldots, w_m$
-- the checksum is $R = \sim(w_1 + w_2 + \ldots + w_m)$ (where $\sim$ is the bitwise NOT operation. The sum is done using [[Data Storage#Ones' complement|ones' complement addition]])
+- the checksum is $R = \sim(w_1 + w_2 + \ldots + w_m)$ (where $\sim$ is the bitwise NOT operation. The sum is done using [[Computer Organization/Data Storage#Ones' complement|ones' complement addition]])
 - the sender sends $(M,R)$
 - the receiver computes $S = w_1' + w_2' + \ldots + w_m' + R'$ (using ones' complement addition) and checks if $\sim S = 0$, if yes, assume no error, else, error detected
 
@@ -103,6 +113,12 @@ bit-oriented
 - the receiver checks if $G(x) \mid T'(x)$, if yes, it means that $E(x)=0$ (no error), else, error detected
 
 <iframe width="100%" height="500" src="https://adielbm.github.io/crc-calculator/" frameborder="0"></iframe>
+
+
+
+
+
+
 
 ## Error control 
 ### Stop-and-wait ARQ

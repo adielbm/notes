@@ -1,10 +1,9 @@
 {
-  "theme": "obsidian",
+  "theme": "system",
   "translucency": false,
   "enabledCssSnippets": [
     "style",
-    "custom1",
-    "print"
+    "custom1"
   ],
   "showRibbon": false,
   "baseFontSize": 16,

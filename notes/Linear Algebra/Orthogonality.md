@@ -16,14 +16,11 @@ $$\large{K=\set{{v}_1,\dots,{v}_m}\subseteq V}, \quad \dim{V}=n$$
 - $A\mathbf{u}=\mathbf{0}$
 ## Orthogonal set
 
-**Definition:**
-- (d12.4.1a) let $K=\{ \textbf{u}_{1}, \dots,\textbf{u}_{k} \} \subseteq\mathbb{R}^n$. we say that $K$ is a **orthogonal set**, if $\textbf{0}\notin{K}$, and $\forall{j\neq i}:\textbf{u}_{i}\cdot\textbf{u}_{j}=0$
-
-**Properties:**
-$K=\{ \textbf{u}_{1}, \dots,\textbf{u}_{k} \} \subseteq\mathbb{R}^n$ is orthogonal set. then:
-- (12.4.2) $K$ is independent set
-- (q12.4.3a) $K$ has at most $n$ vectors
-- $K$ is a basis of $\text{Sp}(K)$
+- (d12.4.1a) A set $K=\{ \textbf{u}_{1}, \dots,\textbf{u}_{k} \} \subseteq\mathbb{R}^n$ is an **orthogonal set**, if $\textbf{0}\notin{K}$, and $\forall{j\neq i},\textbf{u}_{i}\cdot\textbf{u}_{j}=0$.
+- If $K=\{ \textbf{u}_{1}, \dots,\textbf{u}_{k} \} \subseteq\mathbb{R}^n$ is orthogonal set. then:
+	- (12.4.2) $K$ is independent set
+	- (q12.4.3a) $K$ has at most $n$ vectors
+	- $K$ is a basis of $\text{Sp}(K)$
 
 
 ### Orthogonal basis

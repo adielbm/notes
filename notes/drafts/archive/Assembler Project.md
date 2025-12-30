@@ -10,7 +10,7 @@ The Project: to write an assembler for a specific assembly language defined here
 		- cell (word) size: 14 bits, 
 		- The bits in each word are numbered similarly to the register.
 - This computer supports only **integers** (positive & negative). there is no support for real numbers. 
-	- Arithmetic is performed using the [[Data Storage#Two's complement|Two's complement]] method.
+	- Arithmetic is performed using the [[Computer Organization/Data Storage#Two's complement|Two's complement]] method.
 - There is also support for characters, represented in ASCII code
 
 ## Registers

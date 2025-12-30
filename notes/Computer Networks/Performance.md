@@ -1,8 +1,8 @@
 #### Bandwidth 
 
-- $\text{data rate}=\frac{\text{data transmitted}}{\text{time taken}}$
-- $\text{Bit rate}=\frac{\text{ \# bits transmitted}}{\text{Time taken}}$ (unit: bits per second, bps) 
-- The **bit rate** $R$ (קצב נתונים) is the number of bits transmitted per a unit of time (unit: **bps**, bits per second)
+- $\text{data rate}=\frac{\text{data transmitted}}{\text{time}}$
+	- (**bit rate** $R$) (קצב נתונים)
+		- $\textbf{bit-rate}=\frac{\text{data transmitted}\,\textsf{[bits]}}{\text{time}\,\textsf{[sec]}}$ (unit: **bits per second** (or **bps**)) 
 - The **data bandwidth** (or **digital bandwidth** or simply **bandwidth**) is the maximum data rate that can be transmitted over a communication channel
 - transmission rate? #todo
 
@@ -12,7 +12,10 @@
 
 #### Latency 
 $$\text{Latency} = t_{\text{prop}} + t_{\text{tx}} + t_\text{queue}$$
-- latency is the amount of time it takes for a packet of data to travel between two points across a network connection
+- **latency**
+	- the amount of time it takes for a packet of data to travel between two points across a network connection
+	- "_The delay between the transmission of a signal and its receipt_" [^1]
+	- 
 - latency (also called delay (?) #todo) is the time it takes for data to pass from one point on a network to another
 - (**Propagation delay**) $t_{\text{prop}} = \frac{d}{v}$
 	- $d$ is the length of the physical link (in $\mathrm{m}$)
@@ -23,26 +26,50 @@ $$\text{Latency} = t_{\text{prop}} + t_{\text{tx}} + t_\text{queue}$$
 - (**Processing delay**)
 - **round-trip time** (**RTT**) (or (**round-trip delay** (**RTD**)): the time it takes for a signal to travel from the source to the destination and back again
 	- $\text{RTT} \approx 2 \times t_{\text{prop}}$
+- (packet switched network with $S$ switches (i.e. $S+1$ links))
+	- $\text{source} \to \text{switch}_1 \to \cdots \to \text{switch}_S \to \text{destination}$
+	- (store-and-forward) $T= (S+1)\cdot (t_{\text{tx}} + t_{\text{prop}})$ (time to send a packet from source to destination)
+	- (cut-through) $T= t_{\text{tx}} + (S+1)\cdot t_{\text{prop}}+ S\cdot \frac{H}{R}$.
+		- $H$ is the header size (in bits)
+		- $\frac{H}{R}$ is the cut-through delay at each switch
+
+- (_effective throughput_) $\displaystyle\frac{\text{size}\,\textsf{[bits]}}{\text{RTT}+\frac{\text{size}\,\textsf{[bits]}}{\text{bandwidth}\,\textsf{[bps]}}}$
+
+
+- (stop-and-wait)
+	- $\displaystyle \text{throughput}\,\textsf{[bps]} = \frac{\text{packet-size}\,\textsf{[bits]} }{\text{RTT}}$
+		- $\displaystyle\text{RTT}=N\cdot \left(\frac{\text{packet-size}\,\textsf{[bits]}+\text{ack-size}\,\textsf{[bits]}}{\text{bandwidth}\,\textsf{[bps]}} + 2\cdot t_{\text{prop}}\right)$
+			- $N$ is the number of links in one direction 
 
 #### Bandwidth-delay product
 
 - The **bandwidth-delay product**, $\text{RTT}  \times \text{bandwidth}$, in bits, is the amount of data that can be in transit in the network at any given time
 
 
-#### Stop-and-wait
 
-$\displaystyle \text{Throughput}\,\textsf{[bps]} = \frac{\text{frame size}\,\textsf{[bits]} }{\text{RTT}}$
 
 #### File transfer time
 
-- Minimum transfer time: $\text{RTT} + t_{\text{tx}}$
+- $T_\text{total} =t_\text{handshake} + t_\text{data}+t_{\text{prop}}$
+	- $t_\text{handshake}=h\times \text{RTT}$, where $h$ is the number of RTTs needed for handshaking
+		- (often $h=2$)
+	- $t_{\text{prop}} \approx \frac{\text{RTT}}{2}$
+	- $N=\left\lceil\frac{\text{file-size}\,\textsf{[bits]}}{\text{packet-size}\,\textsf{[bits]}}\right\rceil$ is the number of packets needed to transmit the file
+	- $t_{\text{tx}}=\frac{\text{packet-size}\,\textsf{[bits]}}{\text{bandwidth}\,\textsf{[bps]}}$ is the transmission time for one packet
+	- $N\cdot t_{\text{tx}}\approx \frac{\text{file-size}\,\textsf{[bits]}}{\text{bandwidth}\,\textsf{[bps]}}$ is the total transmission time for all packets
+	- (Continuous pipeline) 
+		- $t_\text{data} = N\cdot t_{\text{tx}}$ 
+	- (Stop-and-wait) 
+		- $t_\text{data} = N\cdot t_{\text{tx}} + (N-1)\cdot \text{RTT}$
+	- (window limited to $W$ packets) 
+		- $t_\text{data} = (K-1)\cdot \text{RTT}$
+			- $K=\left\lceil\frac{N}{W}\right\rceil$ (number of RTT rounds needed to send all packets)
+			- $W$ is the window size (packets can be sent per RTT)
+	- (exponential increase) 
+		- $t_\text{data} = (\left\lceil \log_2(N+1) \right\rceil -1)\cdot \text{RTT}$
 
-- $T_\text{total} =t_\text{handshake} + t_\text{data}$
-	- $t_\text{handshake}=k\times \text{RTT}$, where $k$ is the number of RTTs needed for handshaking
-		- $2 \times \text{RTT}$ #todo
-	- (Continuous pipeline) $t_\text{data} = N\cdot t_{\text{tx}} + t_{\text{prop}}$ 
-	- (Stop-and-wait) $t_\text{data} = (N-1)\cdot (t_{\text{tx}}+\text{RTT}) + t_{\text{tx}} + t_{\text{prop}}$
-	- (window-limited) $t_\text{data} = (K-1)\cdot \text{RTT} + t_{\text{prop}}$
-		- $K=\left\lceil\frac{N}{W}\right\rceil$ 
-		- $W$ is the window size (packets per RTT)
-	- $N=\left\lceil\frac{\text{File Size}}{\text{Packet Size}}\right\rceil$ is the number of packets needed to transmit the file
+## draft  
+
+- (**Channel utilization**) $U=\frac{\text{throughput}}{R}$
+
+[^1]: West, J. (2021). _Data communication and computer networks: A Business User’s Approach_. Course Technology.

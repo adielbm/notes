@@ -93,6 +93,8 @@
 
 ## Hash function
 
+- [Hash function](https://developer.mozilla.org/en-US/docs/Glossary/Hash_function)
+
 ## Collision resolution
 
 ### Chaining

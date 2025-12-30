@@ -13,7 +13,7 @@
 |     | **CS**                     |           |                                                             |
 | ✓   | Intro to CS (Java)         | 6         | [20441](https://www.openu.ac.il/courses/20441.htm)          |
 | ✓   | Intro to Algorithms        | 6         | [20407](https://www.openu.ac.il/courses/20407.htm)          |
-| ⧗   | Algorithms                 | 5         | [20417](https://www.openu.ac.il/courses/20417.htm)          |
+|     | Algorithms                 | 5         | [20417](https://www.openu.ac.il/courses/20417.htm)          |
 | ✓   | Systems Programming (C)    | 4         | [20465](https://www.openu.ac.il/courses/20465.htm)          |
 | ⧗   | Computational Models       | 5         | [20604](https://www.openu.ac.il/courses/20604.htm)          |
 | ✓   | Computer Organization      | 4         | [20471](https://www.openu.ac.il/courses/20471.htm)          |
@@ -28,9 +28,10 @@
 |     | Software Testing (english) | 4         | [20946](https://www.openu.ac.il/courses/20946.htm)          |
 |     | Database Systems           | 4         | [20277](https://www.openu.ac.il/courses/20277.htm)          |
 |     | Algorithmic Robotics       | 4         | [20944](https://www.openu.ac.il/courses/20944.htm)          |
-|     | **Seminar** (6)            |           |                                                             |
-|     | Seminar (english)          | 3         |                                                             |
-|     | (workshop) ?               | 3         |                                                             |
+|     | Coding Theory              | 4         | [20296](https://www.openu.ac.il/courses/20296.htm)          |
+|     | **Seminar** (6)            |           |                                                             |
+|     | (seminar ?)                | 3         |                                                             |
+|     | (workshop ?)               | 3         |                                                             |
 |     | **General** (9)            |           |                                                             |
 | ✓   | Gateway to Mathematics     | 6         | [04101](https://www.openu.ac.il/courses/04101.htm)          |
 |     | Chemistry                  | 3         | [20116](https://www.openu.ac.il/courses/20116.htm)          |

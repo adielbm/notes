@@ -1,4 +1,7 @@
 
+
+
+
 * **Process** (תהליך): an executing instance of a program, with its own memory space.
 	* **Child Process** (CP): processes created by another (parent) process.
 

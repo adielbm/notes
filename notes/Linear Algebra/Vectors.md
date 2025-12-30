@@ -98,7 +98,7 @@ $$\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\mathbf {a} ^{T}\
 
 # Orthogonality  
 
-- (d12.2.1) orthogonality of two vectors - $\textbf{a}$ and $\textbf{b}$ are called orthogonal if $\textbf{a}\cdot\textbf{b}=0$ (This relationship is denoted $\textbf{a}\perp\textbf{b}$)
+- (d12.2.1) $\textbf{a}$ and $\textbf{b}$ are **orthogonal** (denoted by $\textbf{a}\perp\textbf{b}$) if $\textbf{a}\cdot\textbf{b}=0$ 
 - (q12.2.3) Generalized Theorem of Pythagoras: $\textbf{a}\perp\textbf{b}\implies\| \textbf{a} + \textbf{b} \|^2 = \| \textbf{a} \|^2 +{\| \textbf{b} \|}^2$
 - (d12.2.2) $\mathbf{v} \perp U$ if for all vectors $\mathbf{u} \in U$, $\mathbf{v} \cdot \mathbf{u} = 0$
 

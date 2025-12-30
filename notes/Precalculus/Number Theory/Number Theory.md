@@ -1,4 +1,8 @@
 
+
+- **Euclidean division** (or **division with remainder**) of an integer $a$ by a nonzero integer $b$ gives unique integers $q$ (the **quotient**) and $r$ (the **remainder**) such that $a = bq + r$ and $0 \le r < |b|$.
+	- $q = \left\lfloor \dfrac{a}{b} \right\rfloor$
+	- $r = a - b \cdot q= a \mod b$ (also known as $a$ **modulo** $b$)
 - **Division Theorem** (or **Quotient-Remainder Theorem**)
 	- $\forall a, b \in \mathbb{Z}, b \ne 0: \exists! q, r \in \mathbb{Z}: a = q b + r, 0 \le r <  |b|$
 - The **greatest common divisor** of two integers $a$ and $b$, which are not both $0$, usually denoted by $\gcd(a,b)$, is the largest integer that divides both $a$ and $b$
@@ -21,7 +25,7 @@
 - (**Euclid's lemma**) If $p$ is a prime, then $p|{ab}\implies p|a \lor p|b$.
 - **GCD is a Linear Combination** - For any nonzero integers $a$ and $b$, there exist integers $s$ and $t$ such that $\gcd(a, b) = as + bt$. 
 	- Moreover, $\gcd(a, b)$ is the smallest positive integer of the form $as + bt$.
-- The non-zero integers $a$ and $b$ are **relatively prime** if $\gcd(a,b)=1$
+- Two non-zero integers $a$ and $b$ are **coprime** (or **relatively prime**) if $\gcd(a,b)=1$
 	- Integers $a$ and $b$ are relatively prime if and only if there exist integers $s$ and $t$ such that $as + bt = 1$
 
 

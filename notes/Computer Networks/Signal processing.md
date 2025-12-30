@@ -38,13 +38,14 @@
 
 
 - **Nyquist–Shannon sampling theorem** #todo
+- **intersymbol interference** (ISI)
 
 
 - $\displaystyle\frac{\text{data}}{\text{data}+\text{overhead}}$
 
 
 
-o
+
 # Filter
 
 - baseband
@@ -127,9 +128,9 @@ pulse amplitude modulation (PAM)
 
 # encoding 
 
-digital to digital 
-
-- baseline wander
+- digital to digital 
+- **baseline wander**
+- **DC bias** (or **DC component**)
 
 
 ![350](https://upload.wikimedia.org/wikipedia/commons/9/95/Digital_signal_encoding_formats-en.svg "An arbitrary bit pattern in various binary line code formats")

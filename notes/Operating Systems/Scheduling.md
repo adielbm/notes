@@ -20,7 +20,8 @@
 			- Policy enforcement
 			- Balance
 		- Batch systems
-			- CPU utilization
+			- **CPU utilization** $1-p^n$ 
+				- $n$ is the number of processes in the system
 			- **Throughput** is the number of processes completed per time unit
 			- **Turnaround time** (TAT) is the statistically average time from the moment that a batch job is submitted until the moment it is completed.
 		- Interactive systems
