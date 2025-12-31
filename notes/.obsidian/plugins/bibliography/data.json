@@ -1,0 +1,98 @@
+[
+  {
+    "id": "Stallings, 2013",
+    "type": "book",
+    "author": [
+      {
+        "family": "Stallings",
+        "given": "W."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2013
+        ]
+      ]
+    },
+    "title": "Data and Computer Communications"
+  },
+  {
+    "id": "Forouzan, 2012",
+    "type": "book",
+    "author": [
+      {
+        "family": "Forouzan",
+        "given": "B. A."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2012
+        ]
+      ]
+    },
+    "title": "Data Communications and networking",
+    "publisher": "McGraw-Hill Education"
+  },
+  {
+    "id": "Kozierok, 2005",
+    "type": "book",
+    "author": [
+      {
+        "family": "Kozierok",
+        "given": "C. M."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2005
+        ]
+      ]
+    },
+    "title": "The TCP/IP guide: A Comprehensive, Illustrated Internet Protocols Reference",
+    "publisher": "No Starch Press"
+  },
+  {
+    "id": "Peterson, 2020",
+    "type": "book",
+    "ISBN": "9780128237151",
+    "title": "Computer Networks",
+    "author": [
+      {
+        "family": "Peterson",
+        "given": "Larry L."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "publisher": "Elsevier Science & Technology"
+  },
+  {
+    "id": "West, 2021",
+    "type": "book",
+    "ISBN": "9780357504406",
+    "title": "Data Communication and Computer Networks",
+    "author": [
+      {
+        "family": "West",
+        "given": "Jill"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "publisher": "Course Technology"
+  }
+]

@@ -5,10 +5,15 @@ tsconfig.tsbuildinfo
 .quartz-cache
 private/
 .replit
-.obsidian
+notes/.obsidian/**
+!notes/.obsidian/
 !notes/.obsidian/community-plugins.json
 !notes/.obsidian/core-plugins.json
+!notes/.obsidian/snippets/
 !notes/.obsidian/snippets/style.css
+!notes/.obsidian/plugins/
+!notes/.obsidian/plugins/bibliography/
+!notes/.obsidian/plugins/bibliography/data.json
 notes/Discrete Math/Graph Theory/EN-HE.md
 *.pdf
 public
