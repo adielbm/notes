@@ -5,6 +5,17 @@
 	- Backbone
 	- LAN
 
+
+- _media access control_ (_MAC_) (or _medium access control_) may refer to:
+	- a sublayer of the data link layer
+	- a frame structure  
+
+- The Data link layer is often divided into two sublayers:
+	- **logical link control** (**LLC**)
+		- (flow control, error control, framing) 
+	- **media access control** (**MAC**)
+		- (channel access method,
+
 ## Framing 
 
 - A **frame** 
@@ -192,9 +203,9 @@ receiver:
 	- invariant:
 		- $\textsf{LAF} - \textsf{LFR} \leq \textsf{RWS}$
 
-- to fully utilize the link the SWS must be at least the bandwidth-delay product (in frames) 
-- $2\times \textsf{SWS} < (\text{MaxSeqNum}+1)$ 
+- to fully utilize the link the SWS must be at least the bandwidth-delay product (in frames), i.e. $\displaystyle\textsf{SWS} \geq \text{BDP} \textsf{ [frames]}=\left\lceil { \frac{\text{BDP \textsf{[bits]}}}{\text{frame-size \textsf{[bits]}}}}  \right\rceil$
 
+- **sequence number space** $[0, \text{MaxSeqNum}]$
 
 - negative acknowledgment
 	- 
@@ -202,13 +213,35 @@ receiver:
 	- the receiver could acknowledge exactly those frames it has received rather than just the highest numbered frame received in order
 
 
-- Go-Back-N ARQ
+- **Go-Back-N ARQ** (or **Go-Back-N**) protocol
 	- $\textsf{RWS} = 1$
 	- $\textsf{SWS} = N$
-- Selective Repeat ARQ
-	- 
+	- $N +1 \leq \text{MaxSeqNum}$
+- **Selective Repeat ARQ** (or **Selective Reject ARQ**) protocol 
+	- $\textsf{RWS} = \textsf{SWS} = N$
+	- The sequence number space must be at least twice the size of the send window to avoid ambiguity, i.e.:
+		- $N < \frac{\text{MaxSeqNum}+1}{2}$ 
 
 ## Ethernet
+
+
+- evolution of Ethernet (by [@Forouzan, 2012])
+	- 10 Mbps ("Standard Ethernet")
+		- unbridged 
+			- all stations share 10 Mbps bandwidth
+		- bridged Ethernet 
+			- raised bandwidth
+			- separated collision domains
+		- switched Ethernet
+			- layer-2 switche acts as N-port bridge (where N is number of stations), so each station gets 10 Mbps bandwidth
+			- (10Base5 and 10Base2)
+		- full-duplex switched Ethernet
+			- introduced full-duplex (with 10Base-T), double bandwidth from 10 Mbps to 20 Mbps
+			- no need for CSMA/CD
+	- 100 Mbps (**Fast Ethernet**) 
+
+- **switched Ethernet**
+- full-duplex switched Ethernet Ethernet in which each station, in its own separate collision domain, can both send and receive
 
 ### Frame format (802.3 Ethernet II)
 

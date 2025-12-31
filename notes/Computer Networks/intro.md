@@ -81,8 +81,11 @@
 
 
 
-- **Connection-oriented** and **Connectionless** (service/protocol/communication)
-	- **Connectionless-mode Network Service** (**CLNS**) (or simply **Connectionless Network Service**)
+- **Connection-oriented** (service/protocol/communication)
+	- "A service for data transfer involving establishment and termination of a connection." [@Forouzan, 2012]
+- **Connectionless** (service/protocol/communication)
+	- "A service for data transfer without connection establishment or termination." [@Forouzan, 2012]
+- **Connectionless-mode Network Service** (**CLNS**) (or simply **Connectionless Network Service**)
 
 
 - **bit stuffing**
