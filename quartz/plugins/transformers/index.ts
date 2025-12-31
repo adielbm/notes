@@ -1,6 +1,7 @@
 export { FrontMatter } from "./frontmatter"
 export { GitHubFlavoredMarkdown } from "./gfm"
 export { Citations } from "./citations"
+export { ObsidianBibliography } from "./obsidianBibliography"
 export { CreatedModifiedDate } from "./lastmod"
 export { Latex } from "./latex"
 export { Description } from "./description"
