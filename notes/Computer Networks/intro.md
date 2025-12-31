@@ -56,9 +56,9 @@
 
 
 - **protocol data unit (PDU)**
-	- _"The combination of data from the next higher layer and control information"_ [^1]
-	- _"Another name for a packet or frame"_. [^2] 
-	- _"A PDU at layer $N$ is a message sent between protocols at layer $N$. It consists of layer $N$ header information and an encapsulated message from layer $N+1$, which is called both the layer $N$ SDU and the layer $N+1$ PDU"_. [^3]
+	- _"The combination of data from the next higher layer and control information"_ [@Stallings, 2013]
+	- _"Another name for a packet or frame"_. [@Peterson, 2020]
+	- _"A PDU at layer $N$ is a message sent between protocols at layer $N$. It consists of layer $N$ header information and an encapsulated message from layer $N+1$, which is called both the layer $N$ SDU and the layer $N+1$ PDU"_. [@Kozierok, 2005]
 - **service data unit (SDU)**
 - (**packet**) 
 	- (1) _a generic term used to describe unit of data at all levels of the protocol stack_. ([RFC 1594](https://www.rfc-editor.org/rfc/rfc1594.html))
@@ -67,6 +67,8 @@
 	- a synonym with _packet_
 	- connectionless communication, packet-switched network
 	- _"A self-contained, independent entity of data carrying sufficient information to be routed from the source to the destination computer without reliance on earlier exchanges between this source and destination computer and the transporting network"_. ([RFC 1594](https://www.rfc-editor.org/rfc/rfc1594.html))
+- (**frame**) 
+	- "A packet at the data-link layer is normally called a _frame_." [@Forouzan, 2012]
 
 
 - **Best-effort service**
@@ -83,13 +85,19 @@
 	- **Connectionless-mode Network Service** (**CLNS**) (or simply **Connectionless Network Service**)
 
 
+- **bit stuffing**
+	- "A technique used to distinguish control sequences and data on the bit level." [@Peterson, 2020]
+	- "In a bit-oriented protocol, the process of adding an extra bit in the data section of a frame to prevent a sequence of bits from looking like a flag." [@Forouzan, 2012]
+- **byte stuffing**
+	- "The process of adding one extra byte whenever there is a flag or escape character in the text." [@Forouzan, 2012]
+	- "In a byte-oriented protocol, the process of adding an extra byte in the data section of a frame to prevent a byte from looking like a flag." [@Forouzan, 2012]
+- **bit-oriented protocol**
+	- "A protocol in which the data frame is interpreted as a sequence of bits" [@Forouzan, 2012]
+- **byte-oriented protocol**
+	- "A protocol in which the data section of the frame is interpreted as a sequence of bytes (characters)." [@Forouzan, 2012]
 
-[[Transport layer]]
-# Internet layer
 
 
-[^1]: Stallings, W. (2013). _Data and computer communications_.
 
-[^2]: Peterson, L. L., & Davie, B. (2020). _Computer networks: A Systems Approach_. Morgan Kaufmann Publishers.
 
-[^3]: Kozierok, C. M. (2005). _The TCP/IP guide: A Comprehensive, Illustrated Internet Protocols Reference_. No Starch Press.
+

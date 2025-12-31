@@ -5,14 +5,13 @@
 	- Backbone
 	- LAN
 
-
 ## Framing 
 
 - A **frame** 
 
 #### Point-to-Point Protocol (PPP)
 
-Byte-Oriented
+- PPP is a byte-oriented protocol
 
 <table>
   <tr>
@@ -44,25 +43,43 @@ Byte-Oriented
 
 
 - Link Control Protocol (LCP)
+	- "A PPP protocol responsible for establishing, maintaining, configuring, and terminating links" [@Forouzan, 2012]
 
 #### High-Level Data Link Control (HDLC)
 
-bit-oriented
+- **High-Level Data Link Control** (**HDLC**)
+- HDLC is a bit-oriented protocol
 
 ## Error detection and correction
 
 
+- **error detection and correction** (**EDAC**) (or **error control**)
+	- "The handling of errors in data transmission." [@Forouzan, 2012]
+- Error-detection codes
+- **forward error correction** (FEC)
+	- "The process that enables a receiver, upon detecting an error in the arriving data, to correct the error without further information from the transmitter." [@West, 2021] 
+	- "Correction of errors at the receiver without retransmission." [@Forouzan, 2012]
+- **error-correction codes** (or **error-correcting codes**) (ECC)
 
-- A **message** (סיביות מידע, מילת מידע) $M$ of length $m$.
-- **Redundant bits** (סיביות ביקורת) $R=f(M)$ of length $r$ (where $r \ll m$). 
-- The sender transmits the **codeword** (מילת קוד) $P = (M,R)$ of length $n=m+r$. 
-- The receiver receives $(M',R')$ and checks if $R' = f(M')$, if yes, assume no error with high probability, else, error detected.
+- **data bits** (or **dataword** or **message** or **(data) block**) (סיביות מידע, מילת מידע) 
+	- $M$ of length $m$.
+- **redundant bits** (or **redundancy**) (סיביות ביקורת) 
+	- $R=f(M)$ of length $r$ (where $r \ll m$). 
+- sender: 
+	- transmits the **codeword** (מילת קוד) $P = (M,R)$ of length $n=m+r$. 
+- receiver: 
+	- receives $(M',R')$
+	- checks if $R' = f(M')$, 
+		- if yes, assume no error with high probability, 
+		- else, error detected.
+- There can be $2^m$ possible datawords, and $2^n$ possible codewords.
+	- Thus, there are $2^{n}-2^{m}$ **invalid** codewords that can be used to detect errors.
 - (**code rate**) $R_{c}=\frac{m}{n}$
 - (**overhead**, תקורה) $\frac{r}{n}$
-- (**redundancy**) $\frac{r}{m}$ 
+- (**redundancy**, יתירות) $\frac{r}{m}$ 
 
 - A **bit error** is when a bit is received incorrectly (0 instead of 1 or vice versa)
-- A **burst error** is when a sequence of bits is received incorrectly
+- A **burst error** (or **error burst**) is when a sequence of bits is received incorrectly
 - (**bit error ratio**) $\displaystyle\text{BER} = \frac{\text{\# bit errors}}{\text{Total transmitted bits}}$
 - (**bit error probability**) $p_{e}=\mathrm{E}[\text{BER}]$
 
@@ -77,7 +94,7 @@ bit-oriented
 	- $\displaystyle s = d_{\min} - 1$ 
 - The **minimum Hamming distance** of a code $\mathcal{C}$ is $\displaystyle d_{\min} = \min_{c_1 \neq c_2 \in \mathcal{C}} d(c_1,c_2)$.
 
-נצילות השידור
+
 ### parity checks 
 
 
@@ -118,10 +135,11 @@ bit-oriented
 
 
 
-
-
 ## Error control 
 ### Stop-and-wait ARQ
+
+- **stop-and-wait**
+	- "A protocol in which the sender sends one frame, stops until it receives confirmation from the receiver, and then sends the next frame" [@Forouzan, 2012]
 
 
 ```
@@ -174,8 +192,8 @@ receiver:
 	- invariant:
 		- $\textsf{LAF} - \textsf{LFR} \leq \textsf{RWS}$
 
-
-- $\textsf{SWS} < \frac{1}{2} \times (\text{MaxSeqNum}+1)$ 
+- to fully utilize the link the SWS must be at least the bandwidth-delay product (in frames) 
+- $2\times \textsf{SWS} < (\text{MaxSeqNum}+1)$ 
 
 
 - negative acknowledgment

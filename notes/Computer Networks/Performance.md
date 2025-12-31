@@ -14,7 +14,7 @@
 $$\text{Latency} = t_{\text{prop}} + t_{\text{tx}} + t_\text{queue}$$
 - **latency**
 	- the amount of time it takes for a packet of data to travel between two points across a network connection
-	- "_The delay between the transmission of a signal and its receipt_" [^1]
+	- "_The delay between the transmission of a signal and its receipt_" [@West, 2021]
 	- 
 - latency (also called delay (?) #todo) is the time it takes for data to pass from one point on a network to another
 - (**Propagation delay**) $t_{\text{prop}} = \frac{d}{v}$
@@ -43,7 +43,11 @@ $$\text{Latency} = t_{\text{prop}} + t_{\text{tx}} + t_\text{queue}$$
 
 #### Bandwidth-delay product
 
-- The **bandwidth-delay product**, $\text{RTT}  \times \text{bandwidth}$, in bits, is the amount of data that can be in transit in the network at any given time
+- **bandwidth-delay product** (in bits)
+	- $\text{RTT}\times\text{bandwidth}$
+	- the amount of data that can be in transit in the network at any given time
+	- "The bandwidth-delay product defines the number of bits that can fill the link." [@Forouzan, 2012]
+	- link utilization = $\displaystyle\frac{\text{data in flight}}{\text{bandwidth-delay product}}$
 
 
 
@@ -72,4 +76,3 @@ $$\text{Latency} = t_{\text{prop}} + t_{\text{tx}} + t_\text{queue}$$
 
 - (**Channel utilization**) $U=\frac{\text{throughput}}{R}$
 
-[^1]: West, J. (2021). _Data communication and computer networks: A Business User’s Approach_. Course Technology.
