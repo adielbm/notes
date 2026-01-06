@@ -3,12 +3,13 @@
 - $\text{data rate}=\frac{\text{data transmitted}}{\text{time}}$
 	- (**bit rate** $R$) (קצב נתונים)
 		- $\textbf{bit-rate}=\frac{\text{data transmitted}\,\textsf{[bits]}}{\text{time}\,\textsf{[sec]}}$ (unit: **bits per second** (or **bps**)) 
-- The **data bandwidth** (or **digital bandwidth** or simply **bandwidth**) is the maximum data rate that can be transmitted over a communication channel
-- transmission rate? #todo
-
-###### Throughput
-
-- **Network throughput** (or just **throughput**) (in bps) is a measurement of the average amount of data that _actually_ passes through a network in a specific time frame, taking into account the impact of latency
+- **data bandwidth** (or **digital bandwidth** or simply **bandwidth**)
+	- 
+- **network throughput** (or just **throughput**) (in bps)
+	- "The amount of data that a medium transmits, either theoretically or practically, during a given period of time." [@West, 2021]
+	- "Throughput at any point in a network is defined as the number of bits passing through the point in a second, which is actually the transmission rate of data at that point." [@Forouzan, 2012]
+- "The throughput is a measure of how fast we can actually send data through a network. Although, at first glance, bandwidth in bits per second and throughput seem the same, they are different. ...the bandwidth is a potential measurement of a link; the throughput is an actual measurement of how fast we can send data." [@Forouzan, 2012]
+- "The terms _bandwidth_ and _throughput_ are often used interchangeably" [@Kozierok, 2005]
 
 #### Latency 
 $$\text{Latency} = t_{\text{prop}} + t_{\text{tx}} + t_\text{queue}$$
@@ -23,7 +24,9 @@ $$\text{Latency} = t_{\text{prop}} + t_{\text{tx}} + t_\text{queue}$$
 		- (Typically, $v \approx \frac{2}{3}c$, where $c$ is the speed of light in vacuum.)
 - (**Transmission delay**) $t_{\text{tx}} =\frac{L}{R} = \frac{\text{length}\,\textsf{[bits]}}{\text{transmission rate}\,\textsf{[bps]}}$
 - (**Queueing delay**)
+	- (internet layer) "The time a packet waits in input and output queues in a router" [@Forouzan, 2012]
 - (**Processing delay**)
+	- (internet layer) "Time required to process a packet in a router or a destination host" [@Forouzan, 2012]
 - **round-trip time** (**RTT**) (or (**round-trip delay** (**RTD**)): the time it takes for a signal to travel from the source to the destination and back again
 	- $\text{RTT} \approx 2 \times t_{\text{prop}}$
 - (packet switched network with $S$ switches (i.e. $S+1$ links))

@@ -210,7 +210,7 @@ leave_region:
 #####  The Producer–Consumer (Bounded Buffer) Problem
 
 - problem definition:
-	- Two processes share a bounded buffer of size `N`:
+	- Two processes share a fixed-size buffer of size `N`:
 		- Producer inserts items into the buffer.
 		- Consumer removes items from the buffer.
 		- `int count` tracks the number of items in the buffer.

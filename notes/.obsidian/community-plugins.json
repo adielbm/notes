@@ -1,13 +1,9 @@
 [
-  "css-editor",
-  "obsidian-latex-suite",
   "darlal-switcher-plus",
   "obsidian-hide-sidebars-when-narrow",
-  "github-copilot",
-  "obsidian-git",
-  "sheets",
-  "img-caption",
+  "bibliography",
   "dark-mode-images",
-  "execute-python",
-  "bibliography"
+  "img-caption",
+  "obsidian-latex-suite",
+  "obsidian-git"
 ]

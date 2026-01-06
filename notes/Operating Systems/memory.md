@@ -19,7 +19,19 @@
 		- not frequently used (NFU)
 		- aging
 		- working set
-			- $W(t,\tau)$ 
+			- $w(k,t)=$ pages referenced by the $k$ most recent memory references up to time $t$.
+			- approximation for $k$ references:
+				- $w(\tau,t)=$ pages referenced in the past $\tau$ time units of virtual time (the amount of CPU time a process actually uses) up to the current time $t$.
+			- algorithm:
+				- in a page fault: 
+					- for each page in memory:
+						- if $R=1$, then set $\tau \leftarrow t$ and $R \leftarrow 0$
+						- if $R=0$
+							- $\text{age} \leftarrow t - \tau$
+							- if $\text{age} > \tau$, then evict the page
+							- if $\text{age} \le \tau$, then keep the page
+					- if no page is evicted, then evict the page with the largest age
+					- if all pages have $R=1$, then evict a page at random 
 	- page fault frequency (PFF)
 	- reference string $R = (r_1, r_2, \ldots, r_k)$
 	- $\text{PageFaults}(R,n) =|\{ r_i \in R : r_i \notin \text{Frames}(i,n) \}|$
@@ -102,6 +114,7 @@ $$\text{Virtual page number}\to \boxed{\displaystyle \mathrm{Page \atop Table}} 
 	- segmentation fault
 - multilevel page table
 - inverted page table (IPT)
+	- $\mathrm{IPT}(\text{physical frame}) = \text{(process id, virtual page number)}$
 - demand paging
 
 

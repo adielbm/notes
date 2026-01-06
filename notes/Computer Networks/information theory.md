@@ -9,32 +9,35 @@
 - (**channel output**) $y=(y_1, y_2, \ldots, y_n) \in A_y^n$
 	- $A_y=\{y_1,y_2, \ldots, y_m\}$ is the set of channel output symbols
 
+- $X$ is a discrete random variable
+- $p(x)$ is the probability of an outcome $x$
+- $\mathcal{X}=\{ x:X=x \}$ is the **alphabet** of $X$.
+	- $|\mathcal{X}|=n$
 
-# Self-information
 
-- $I(x)= -\log p(x)$ is the **self-information** (or **information content**) of outcome $x$
+- The **self-information** (or **information content**) of an outcome $x \in \mathcal{X}$ is defined as $$\displaystyle I(x)= -\log p(x)$$
 	- (It measures how surprising or informative the specific outcome $x$ is. If $p(x)$ is small, then observing $x$ is rare and thus carries more information, so $I(x)$ is large. Conversely, if $p(x)$ is large, then observing $x$ is common and carries less information, so $I(x)$ is small.)
 	- $I(x) \geq 0$
 	- $I(x, y) = I(x) + I(y)$ 
 
-# Entropy
+- The **(Shannon) entropy** of $X$ is defined as $$\displaystyle H(X)= - \sum_{x \in \mathcal{X}} p(x)\,\log p(x).$$
 
-The **(Shannon) entropy** of $X$ is defined as $$\displaystyle H(X)= - \sum_{x \in \mathcal{X}} p(x)\,\log p(x).$$
-- $X$ is a discrete random variable
-- $\mathcal{X}$ is a countable set of all possible outcomes of $X$
-- $p(x)$ is the probability of outcome $x$
-- $H(X)=\mathbb{E}[I(X)]$
-- $H(X) \geq 0$
-- $H(X)\leq \log |\mathcal{X}|$, with equality if and only if $X$ is uniformly distributed over $\mathcal{X}$
-- $H(X, Y) = H(X) + H(Y)$ 
+	- $H(X)=\mathbb{E}[I(X)]$
+	- $H(X) \geq 0$
+	- $H(X)\leq \log n$, with equality if and only if $X$ is uniformly distributed over $\mathcal{X}$
+	- $H(X, Y) = H(X) + H(Y)$ 
 
 
 - (examples)
 	- (deterministic variable) Let $\displaystyle p(x_0)=1$ for some $x_0 \in \mathcal{X}$, then $H(X)=0$
-	- (uniform distribution) Let $\displaystyle p(x)=\frac{1}{n}$ for all $x \in \mathcal{X}$, where $|\mathcal{X}|=n$, then $\displaystyle H(X)=\log n$
+	- (uniform distribution) Let $\displaystyle p(x)=\frac{1}{n}$ for all $x \in \mathcal{X}$, then $\displaystyle H(X)=\log n$
 		- (fair die) If $n=6$, then $\displaystyle H(X)=\log 6 \approx 2.585$
 	- (binary variable) Let $\displaystyle p(0)=p$ and $\displaystyle p(1)=1-p$, then $\displaystyle H(X)=-p\log p - (1-p)\log(1-p)$
 		- (fair coin) If $p=\frac{1}{2}$, then $\displaystyle H(X)=1$
 
 - (**Shannon's source coding theorem**) 
 - $\displaystyle {\frac {H(X)}{\log _{2}a}}\leq \mathbb {E} [S]<{\frac {H(X)}{\log _{2}a}}+1$
+
+- (**maximum possible entropy**) $H_\text{max}(X)=\log_2 n$
+- (**absolute redundancy**) $R = H_{\max}(X) - H(X)$
+- (**(relative) redundancy**) $r = 1 - \frac{H(X)}{H_{\max}(X)}$

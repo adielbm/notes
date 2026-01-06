@@ -23,18 +23,53 @@
 	- memory bus
 - **bus snooping** (or **bus sniffing**)
 - **memory controller** (or **memory chip controller** (**MCC**) or a **memory controller unit** (**MCU**))
-- **Direct memory access** (**DMA**)
-	- **DMA controller**
+- **disk controller**
+
 - **cycle stealing**
 - **input–output memory management unit** (**IOMMU**)
 - **buffer underrun** (or **buffer underflow**)
-- **programmed input–output** (or **programmed I/O**, **PIO**)
-- **interrupt-driven I/O**
+
 - **polling** (or **interrogation**)
 	- **polled I/O** (or **software-driven I/O**)
 - **Hot swapping**
 	- **Hot plugging**
 
+
+
+- **programmed input–output** (or **programmed I/O**, **PIO**)
+- **interrupt-driven I/O**
+- **Direct memory access** (**DMA**)
+	- registers:
+		- byte count register
+		- memory address register
+		- control register(s), to specify:
+			- I/O port to use
+			- transfer direction (reading/writing)
+			- transfer unit (byte/word at a time)
+			- number of bytes to transfer in a burst
+	- **DMA controller**
+
+- reading from disk: (by [@Modern Operating Systems, Tanenbaum, 2022])
+	- (using interrupt-driven I/O)
+		- disk controller: 
+			- read block (one or more sector(s)) (bit by bit)
+			- store the block in its buffer
+			- computes the checksum
+			- causes an interrupt
+		- OS:
+			- reads the block from the disk controller buffer (using a loop where in each iteration it reads one byte/word from the register of the disk controller and writes it to the main memory) 
+	- (using DMA)
+		- CPU: 
+			- programs the DMA controller (by writing to its registers)
+			- instructs the disk controller to read data from the disk into the buffer of the disk controller and do the checksum verification
+		- (when a verified data block is ready in the disk controller buffer then the DMA controller is triggered)
+		- DMA controller:
+			- issues a read request to the disk controller (via the bus)
+		- disk controller:
+			- transfers the data to the main memory (via the bus)
+			- sends acknowledgment to the DMA controller (via the bus)
+		- DMA controller:
+			- sends an interrupt to the CPU when the entire block has been transferred
 
 - **Input/output** (**I/O**) **scheduling** (or **disk scheduling**)
 	- **first-come, first-served** (FCFS)

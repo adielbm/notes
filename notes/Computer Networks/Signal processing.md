@@ -6,6 +6,7 @@
 	- $f_c = \sqrt{f_\text{high} \cdot f_\text{low}}$ (geometric mean)
 - The **(analog) bandwidth** (or **frequency bandwidth**) (רוחב סרט) is the range of frequencies that a channel can transmit, defined as $B = f_\text{high} - f_\text{low}$ (unit: Hz)
 	- The **effective bandwidth** refers to the range of frequencies within which a significant portion of the signal's power or energy is concentrated.
+		- "The bandwidth of a signal after noise and other factors such as environmental conditions have been applied." [@West, 2021]
 - **Fractional bandwidth**: $B_\text{frac} = \frac{B}{f_c}$
 
 

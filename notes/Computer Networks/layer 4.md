@@ -1,19 +1,25 @@
 
-
+- The **transport layer** (or **layer 4**)
 - **Transport PDU**s (TPDU) are typically called **segments**
 	- UDP datagram 
 	- TCP segment
-
-maximum segment size
-
-
-- port
-	- Ephemeral port
-- socket
-
-
-- client-server model
-- client-server architecture
+- **maximum segment size** (**MSS**)
+- **client-server** (model/paradigm/architecture)
+	- **client**
+	- **server**
+- **port** number
+	- well-known port numbers
+	- ephemeral port number
+	- ICANN ranges:
+		- Well-known ports 
+			- 0 to 1023
+			- assigned and controlled by ICANN
+		- Registered ports
+			- 1024 to 49,151 
+		- Dynamic ports
+			- 49,152 to 65,535
+			- (neither controlled nor registered)
+- **socket**
 
 - Reliable byte stream
 

@@ -94,5 +94,89 @@
       ]
     },
     "publisher": "Course Technology"
+  },
+  {
+    "id": "Modern Operating Systems, Tanenbaum, 2022",
+    "type": "book",
+    "ISBN": "9780137618873",
+    "title": "Modern Operating Systems",
+    "author": [
+      {
+        "family": "Tanenbaum",
+        "given": "Andrew S."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "publisher": "Pearson"
+  },
+  {
+    "id": "Kozierok, 2005a",
+    "type": "book",
+    "ISBN": "9781593270476",
+    "title": "The TCP/IP Guide",
+    "author": [
+      {
+        "family": "Kozierok",
+        "given": "Charles"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2005
+        ]
+      ]
+    },
+    "publisher": "No Starch Press"
+  },
+  {
+    "id": "Tanenbaum, 2011",
+    "type": "book",
+    "ISBN": "9780132126953",
+    "title": "Computer networks",
+    "author": [
+      {
+        "family": "Tanenbaum",
+        "given": "Andrew S."
+      },
+      {
+        "family": "Wetherall",
+        "given": "John David"
+      },
+      {
+        "family": "Wetherall",
+        "given": "David J."
+      },
+      {
+        "family": "Feamster",
+        "given": "Nickolas"
+      },
+      {
+        "family": "Wetherall",
+        "given": "David"
+      },
+      {
+        "family": "Kurose",
+        "given": "James F."
+      },
+      {
+        "family": "Ross",
+        "given": "Keith W."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2011
+        ]
+      ]
+    },
+    "publisher": "Pearson Prentice Hall"
   }
 ]

@@ -1,7 +1,11 @@
 
+- The **network layer** (or **layer 3**, and in TCP/IP, the **internet layer**)
+
 
 - IP supports fragmentation and reassembly.
 - **IP datagram** = network packet = IP packet 
+
+- packet loss
 
 ### IP Datagram Format 
 
@@ -47,21 +51,25 @@
 
 
 
-- fragmentation (פיצול, פרגמנטציה)
+- **fragmentation** (פיצול, פרגמנטציה)
+	- "The division of a packet into smaller units to accommodate a protocol’s MTU." [@Forouzan, 2012]
+	- IPv4 allows fragmentation
+	- IPv6 does not allow fragmentation
 - fragment (רסיס)
 - reassembly (הרכבה)
 
-- The **maximum transmission unit (MTU)** of a network is the size of the largest IP datagram that the network can transmit in a single frame.
+- The **maximum transmission unit (MTU)** (or **maximum transfer unit**) of a network is the size of the largest IP datagram that the network can transmit in a single frame.
+	- "The size of the largest IP datagram that can be transmitted over a physical network" [@Kozierok, 2005]
 	- The size of the largest packet that can be sent over a physical network.
-
-
-
-
-- Maximum Transmission Unit (MTU)
-- Path MTU
-- Path MTU Discovery (PMTUD)
+	- **Path MTU**
+	- **Path MTU Discovery** (**PMTUD**)
 
 ### IP address
+
+
+- **subnet** (or **subnetwork**)
+	- **subnetting**
+	- **subnet mask** (or **netmask**)
 
 - IPv4 is limit to $2^{32}= 4,294,967,296$ adresses
 
@@ -310,9 +318,7 @@ DHCP Relay
 • Reassembly process failed
 • TTL had reached 0
 • IP header checksum failed
-ICMP-Redirect
-
-ICMP-Redirect
+- ICMP-Redirect
 
 #### virtual networks 
 
@@ -323,52 +329,49 @@ ICMP-Redirect
 
 # Routing
 
-
-- control plane
-- data plane (or forwarding plane)
+- **router**
+	- "_A node that is connected to two or more networks is commonly called a **router** or **gateway**_" [@Tanenbaum, 2011]
+	 - "_The general name for a machine that makes a connection between two or more networks and provides the necessary translation, both in terms of hardware and software, is a **gateway**_" [@Peterson, 2020]
+- **routing protocol**
+	- **routing algorithm**
+		- "The algorithm used to make a routing decision for a particular datagram, based on current routing information" [@Stallings, 2013]
+- **static routing** (or **non-adaptive routing**)
+- **dynamic routing** (or **adaptive routing**) 
+	- "An adaptive routing technique in which routing tables react to network fluctuations when calculating the best path between networks." [@West, 2021]
+- [[#Distance-vector routing]]
+- [[#Link-state routing]]
+- [[#Path-vector routing]]
+- **routing domain**
+	- **interior gateway protocol** (IGP) (or **interior routing protocol**)
+	- **exterior gateway protocol** (_Not to be confused with the specific protocol_ Exterior Gateway Protocol (EGP))
+	- **intradomain** and **interdomain** routing
+		- **intra-AS** routing
+			- (using OSPF, IS-IS and RIP)
+		- **inter-AS** routing
+			- (using BGP)
+- **control plane**
+- **data plane** (or **forwarding plane**)
 - network topology
-- routing domain
-
+- packet forwarding
 - **backbone network** (or **core network**)
 	- (e.g. the **Internet backbone**)
-
-- **path-vector routing** protocol
-	- (e.g. BGP)
-- **intradomain** and **interdomain** routing
-
-- **intra-AS** routing
-	- (using OSPF)
-- **inter-AS** routing
-	- (using BGP)
-
 - **hot-potato routing**
 - **cold-potato routing**
-
-
-- **distance vector** and **link state** routing
-- **interior gateway protocol** (IGP) (or **interior routing protocol**)
-- **border gateway protocol** (BGP) 
-- **Intermediate System to Intermediate System** (IS-IS)
-
-
-- **Autonomous systems** (AS)
-	- autonomous system number (ASN)
+- **autonomous systems** (AS)
+	- "A group of networks and routers under the authority of a single administration." [@Forouzan, 2012]
+	- **autonomous system number** (**ASN**)
+		- formats:
+			- 16-bit
+			- 32-bit 
 	- types:
 		- stub
 		- multihomed
 		- transit
 		- IXP
-
-
-
 - **Internet service provider** (ISP)
-- Tier 1 network
-- Tier 2 network
-- Tier 3 network
-
-
-- Internet exchange points (IXes or IXPs)
-- Peering
+	- Tier 1, Tier 2 and Tier 3
+- **internet exchange point** (**IX** or **IXP**)
+- peering
 - **forwarding table**
 	- Prefix/Length 
 	- MAC address
@@ -377,15 +380,13 @@ ICMP-Redirect
 	- network identifier (Prefix/Length)
 	- next hop (or gateway)
 	- metric
-
 - **routing loop**
+- **address aggregation** (or **address summarization** or **route summarization** or **route aggregation**)
+- anycast
 
 
-> - "_A node that is connected to two or more networks is commonly called a **router** or **gateway**_" (Tanenbaum & Wetherall, 2011)
-> - "_The general name for a machine that makes a connection between two or more networks and provides the necessary translation, both in terms of hardware and software, is a **gateway**_" (Peterson & Davie, 2020)
 
-
-### Distance-Vector (RIP)
+## Distance-vector routing
 
 - The **distance vector** of a node $i$ is a vector $(c_{i1}, c_{i2}, \ldots, c_{in})$ that contains the cost from node $i$ to each of the other nodes in the network.
 - Initially: 
@@ -404,24 +405,43 @@ ICMP-Redirect
 
 - implementation: **routing information protocol** (RIP)
 
-### Link State 
+- Count to Infinity
+	- Split horizon
+
+## Link-state routing
 
 - Link-state routing protocol
+	- **Open Shortest Path First** (OSPF)
+	- **Intermediate System to Intermediate System** (IS-IS)
 - link-state advertisement (LSA)
 - **link state packet** (LSP)
-- **Open Shortest Path First** (OSPF)
+	- each node has its own LSP which contains:
+		- id
+		- TTL
+		- SEQNO
+		- cost for each neighbor link
+- LSDB
 - flooding
 
+## Path-vector routing
+
+- **path-vector routing** 
 
 ### Border gateway protocol (BGP) 
 
-
+- **border gateway protocol** (**BGP**) 
+	- BGP is path-vector routing protocol 
 - **Internal BGP** (**iBGP** or **Interior Border Gateway Protocol**)
+	- used for all routers in an AS
 - **External BGP** (**eBGP** or **Exterior Border Gateway Protocol**)
+	- used for border routers in an AS
 
-- A *border router*[^1] is a router responsible for forwarding packets between different ASs.
+- A **border router** is a router responsible for forwarding packets between different ASs.
 	- A "BGP speaker" router is a router within an AS that runs the BGP protocol to communicate with BGP speakers in other Autonomous Systems. Every AS participating in BGP must have at least one BGP speaker. A border router is often also a BGP speaker, but this is not a strict requirement.
 - Edge Router
+
+- 
+
 
 - `OPEN`
 - `UPDATE`
@@ -430,4 +450,4 @@ ICMP-Redirect
 
 
 
-[^1]: not-widely-used term. specific to Peterson and Davie.
+

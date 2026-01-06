@@ -70,22 +70,26 @@
 - (**frame**) 
 	- "A packet at the data-link layer is normally called a _frame_." [@Forouzan, 2012]
 
-
-- **Best-effort service**
-
-
-- **circuit switching**
-- **packet switching**
-	- **store-and-forward** switching
-	- **cut-through** switching
+- **encapsulation**
+- **decapsulation** or (**deencapsulation** (or **de-encapsulation**))
 
 
+- **local area network** (**LAN**)
+	- **wireless LAN** (**WLAN**)
+- **wide area network** (**WAN**)
+	- **wireless wide area network** (**WWAN**)
 
-- **Connection-oriented** (service/protocol/communication)
-	- "A service for data transfer involving establishment and termination of a connection." [@Forouzan, 2012]
-- **Connectionless** (service/protocol/communication)
-	- "A service for data transfer without connection establishment or termination." [@Forouzan, 2012]
-- **Connectionless-mode Network Service** (**CLNS**) (or simply **Connectionless Network Service**)
+- Last-Mile
+- Backbone
+
+- point-to-point link
+- broadcast link
+
+- **piggybacking**
+
+
+- **best-effort service**
+
 
 
 - **bit stuffing**
@@ -104,3 +108,42 @@
 
 
 
+- **Connection-oriented** (service/protocol/communication)
+	- "A service for data transfer involving establishment and termination of a connection." [@Forouzan, 2012]
+- **Connectionless** (service/protocol/communication)
+	- "A service for data transfer without connection establishment or termination." [@Forouzan, 2012]
+- **Connectionless-mode Network Service** (**CLNS**) (or simply **Connectionless Network Service**)
+
+
+
+
+- **circuit switching**
+	- always connection-oriented (e.g., POTS)
+- **packet switching**
+	-  
+		- datagram (connectionless) (e.g., IP, UDP)
+		- virtual circuit (connection-oriented) (e.g., TCP, ATM) 
+	- 
+		- **store-and-forward** switching
+		- **cut-through** switching
+
+
+- **virtual circuit** (**VC**)
+	- **virtual circuit identifier** (**VCI**)
+	- table:
+		- incoming interface
+		- incoming VCI
+		- outgoing interface
+		- outgoing VCI
+	- types:
+		- permanent virtual circuit (PVC)
+			- "A virtual circuit transmission method in which the same virtual circuit is used between source and destination on a continual basis." [@Forouzan, 2012]
+		- switched virtual circuit (SVC)
+			- "A virtual circuit transmission method in which a virtual circuit is created and in existence only for the duration of the exchange." [@Forouzan, 2012]
+	
+
+- virtual circuit connection (VCC)
+
+- virtual path (VP)
+- transmission path (TP)
+- virtual-path identifier (VPI)

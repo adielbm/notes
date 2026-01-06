@@ -1,65 +1,31 @@
 
-
-- Link Classification
-	- Last-Mile
-	- Backbone
-	- LAN
-
-
+- The **data link layer** (or **layer 2**)
 - _media access control_ (_MAC_) (or _medium access control_) may refer to:
 	- a sublayer of the data link layer
 	- a frame structure  
+- data link control (DLC) can refer to:
+	-  the service provided by the data link layer
+	- a protocol in the transport protocol  
+- The data link layer is often divided into two sublayers:
+	- **[[#logical link control (LLC)]]**
+		- error control
+		- flow control
+		- framing
+	- **[[#media access control (MAC)]]** (only in broadcast links)
+		- channel access method
+		- addressing
+		- switching
+			- Store-and-forward switching or cut-through switching
+		- VLANs
+		- QoS control
 
-- The Data link layer is often divided into two sublayers:
-	- **logical link control** (**LLC**)
-		- (flow control, error control, framing) 
-	- **media access control** (**MAC**)
-		- (channel access method,
+# Logical link control (LLC)
 
 ## Framing 
 
 - A **frame** 
 
-#### Point-to-Point Protocol (PPP)
 
-- PPP is a byte-oriented protocol
-
-<table>
-  <tr>
-    <th align="center">1 byte</th>
-    <th align="center">1</th>
-    <th align="center">1</th>
-    <th align="center">2</th>
-    <th align="center"></th>
-    <th align="center">2</th>
-    <th align="center">1 byte</th>
-  </tr>
-  <tr>
-    <td align="center">Flag (0x7E)</td>
-    <td align="center">Address (0xFF)</td>
-    <td align="center">Control (0x03)</td>
-    <td align="center">Protocol</td>
-    <td align="center">Information (payload)</td>
-    <td align="center">FCS (Frame Check Sequence)</td>
-    <td align="center">Flag (0x7E)</td>
-  </tr>
-  <tr>
-    <td align="center"></td>
-    <td align="center" colspan="3">Header</td>
-    <td align="center">Data</td>
-    <td align="center">Footer</td>
-    <td align="center"></td>
-  </tr>
-</table>
-
-
-- Link Control Protocol (LCP)
-	- "A PPP protocol responsible for establishing, maintaining, configuring, and terminating links" [@Forouzan, 2012]
-
-#### High-Level Data Link Control (HDLC)
-
-- **High-Level Data Link Control** (**HDLC**)
-- HDLC is a bit-oriented protocol
 
 ## Error detection and correction
 
@@ -222,6 +188,129 @@ receiver:
 	- The sequence number space must be at least twice the size of the send window to avoid ambiguity, i.e.:
 		- $N < \frac{\text{MaxSeqNum}+1}{2}$ 
 
+
+
+
+
+# Media access control (MAC)
+
+## CSMA
+
+- **Carrier Sense Multiple Access** (CSMA)
+	- CSMA/CD (Collision Detection)
+	- CSMA/CA (Collision Avoidance)
+
+$$\displaystyle t_{\text{tx}} \geq 2 \cdot t_{\text{prop}}$$
+- The **slot time** is the time to transmit the minimum frame size, given by $\displaystyle \text{slot-time} = \frac{n_\text{min}}{R}= 2 \frac{d_\text{max}}{v}$
+	- $d_\text{max}$ is the maximum distance of the Ethernet segment (in meters)
+	- $n_\text{min}$ is the minimum frame size (in Ethernet, 512 bits (= 64 bytes))
+	- (10 Mbps Ethernet) $51.2\,\mathrm{\mu s}=\frac{512\,\text{bits}}{10 \times 10^6\,\text{bps}}$
+	- (100 Mbps Ethernet) $5.12\,\mathrm{\mu s}=\frac{512\,\text{bits}}{100 \times 10^6\,\text{bps}}$
+- $a=\frac{t_{\text{prop}}}{t_{\text{tx}}}$
+- backoff time = $k\times \text{slot time}$,
+	- $k$ is a random integer in $[0, 2^n - 1]$
+	- $n$ is the number of collisions for the frame (up to a maximum value, e.g., 10)
+	- algo:
+		- $n=0$
+		- while not transmitted:
+			- choose random $k$ in $[0, 2^n - 1]$
+			- wait $\text{backoff time}=k \times \text{slot time}$
+			- try to transmit
+			- if collision:
+				- $n = \min(n+1, n_\text{max})$
+
+#### access methods
+
+##### 1-persistent 
+
+```mermaid 
+flowchart TD
+    C{Channel Status?} -->|Busy| C
+    C -->|Idle| F[Transmit Frame]
+    F -->|successful transmission| A[done]
+    F -->|collision| R[Wait random time] --> C
+```
+
+##### p-persistent 
+
+```mermaid
+flowchart TD
+    C{Channel Status?}
+    
+    C -->|Busy| D[Wait for Next Time Slot]
+    D --> C
+    
+    C -->|Idle| E{Random}
+    
+    E -->|Random ≤ p| F[Transmit Frame]
+    E -->|Random > p| D
+    
+    F -->|successful transmission| A[done]
+    F -->|failed transmission| C
+    
+```
+
+##### non-persistent
+
+
+```mermaid
+flowchart TD
+	A[has data to send?] -->|yes| C
+    C{Sense: Channel Status?}
+    
+    C -->|Busy| D[Wait random time] --> C
+    C -->|Idle| F
+    
+    E{Random}
+    F[Transmit Frame]    
+```
+
+
+
+# Protocols
+
+## Point-to-Point Protocol (PPP)
+
+- PPP is a byte-oriented protocol
+
+<table>
+  <tr>
+    <th align="center">1 byte</th>
+    <th align="center">1</th>
+    <th align="center">1</th>
+    <th align="center">2</th>
+    <th align="center"></th>
+    <th align="center">2</th>
+    <th align="center">1 byte</th>
+  </tr>
+  <tr>
+    <td align="center">Flag (0x7E)</td>
+    <td align="center">Address (0xFF)</td>
+    <td align="center">Control (0x03)</td>
+    <td align="center">Protocol</td>
+    <td align="center">Information (payload)</td>
+    <td align="center">FCS (Frame Check Sequence)</td>
+    <td align="center">Flag (0x7E)</td>
+  </tr>
+  <tr>
+    <td align="center"></td>
+    <td align="center" colspan="3">Header</td>
+    <td align="center">Data</td>
+    <td align="center">Footer</td>
+    <td align="center"></td>
+  </tr>
+</table>
+
+
+- Link Control Protocol (LCP)
+	- "A PPP protocol responsible for establishing, maintaining, configuring, and terminating links" [@Forouzan, 2012]
+
+## High-Level Data Link Control (HDLC)
+
+- **High-Level Data Link Control** (**HDLC**)
+- HDLC is a bit-oriented protocol
+
+
 ## Ethernet
 
 
@@ -308,74 +397,3 @@ receiver:
 	- frames addressed to multicast addresses it is configured to accept
 	- (all frames if in **promiscuous mode**)
 - Classic Ethernet uses the 1-persistent CSMA/CD
-
-# CSMA
-
-- **Carrier Sense Multiple Access** (CSMA)
-	- CSMA/CD (Collision Detection)
-	- CSMA/CA (Collision Avoidance)
-
-$$\displaystyle t_{\text{tx}} \geq 2 \cdot t_{\text{prop}}$$
-- The **slot time** is the time to transmit the minimum frame size, given by $\displaystyle \text{slot-time} = \frac{n_\text{min}}{R}= 2 \frac{d_\text{max}}{v}$
-	- $d_\text{max}$ is the maximum distance of the Ethernet segment (in meters)
-	- $n_\text{min}$ is the minimum frame size (in Ethernet, 512 bits (= 64 bytes))
-	- (10 Mbps Ethernet) $51.2\,\mathrm{\mu s}=\frac{512\,\text{bits}}{10 \times 10^6\,\text{bps}}$
-	- (100 Mbps Ethernet) $5.12\,\mathrm{\mu s}=\frac{512\,\text{bits}}{100 \times 10^6\,\text{bps}}$
-- $a=\frac{t_{\text{prop}}}{t_{\text{tx}}}$
-- backoff time = $k\times \text{slot time}$,
-	- $k$ is a random integer in $[0, 2^n - 1]$
-	- $n$ is the number of collisions for the frame (up to a maximum value, e.g., 10)
-	- algo:
-		- $n=0$
-		- while not transmitted:
-			- choose random $k$ in $[0, 2^n - 1]$
-			- wait $\text{backoff time}=k \times \text{slot time}$
-			- try to transmit
-			- if collision:
-				- $n = \min(n+1, n_\text{max})$
-
-#### access methods
-
-##### 1-persistent 
-
-```mermaid 
-flowchart TD
-    C{Channel Status?} -->|Busy| C
-    C -->|Idle| F[Transmit Frame]
-    F -->|successful transmission| A[done]
-    F -->|collision| R[Wait random time] --> C
-```
-
-##### p-persistent 
-
-```mermaid
-flowchart TD
-    C{Channel Status?}
-    
-    C -->|Busy| D[Wait for Next Time Slot]
-    D --> C
-    
-    C -->|Idle| E{Random}
-    
-    E -->|Random ≤ p| F[Transmit Frame]
-    E -->|Random > p| D
-    
-    F -->|successful transmission| A[done]
-    F -->|failed transmission| C
-    
-```
-
-##### non-persistent
-
-
-```mermaid
-flowchart TD
-	A[has data to send?] -->|yes| C
-    C{Sense: Channel Status?}
-    
-    C -->|Busy| D[Wait random time] --> C
-    C -->|Idle| F
-    
-    E{Random}
-    F[Transmit Frame]    
-```
