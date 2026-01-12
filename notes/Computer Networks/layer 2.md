@@ -6,7 +6,7 @@
 - data link control (DLC) can refer to:
 	-  the service provided by the data link layer
 	- a protocol in the transport protocol  
-- The data link layer is often divided into two sublayers:
+- The [[Computer Networks/intro#IEEE 802|IEEE 802]] divides the OSI data link layer into two sub-layers:
 	- **[[#logical link control (LLC)]]**
 		- error control
 		- flow control
@@ -261,7 +261,6 @@ flowchart TD
     C -->|Busy| D[Wait random time] --> C
     C -->|Idle| F
     
-    E{Random}
     F[Transmit Frame]    
 ```
 
@@ -313,24 +312,32 @@ flowchart TD
 
 ## Ethernet
 
-
-- evolution of Ethernet (by [@Forouzan, 2012])
+- (Ethernet) IEEE 802.3
 	- 10 Mbps ("Standard Ethernet")
-		- unbridged 
-			- all stations share 10 Mbps bandwidth
-		- bridged Ethernet 
+		- 10BASE5 (_Thick Ethernet_, _DIX Standard_, 802.3, 1983) and 10BASE2 (_Thin Ethernet_, 802.3a, 1988)
+			- bus topology
+			- coax cable
+			- CSMA/CD
+			- one collision domain
+		- 10BASE-T (802.3i, 1990)
+			- twisted pair cable
+			- star topology
+		- (802.3x, 1997)
+			- full duplex
+	- **Fast Ethernet** (100 Mbps) 
+		- (802.3u, 1995)
+	- **Gigabit Ethernet** (1 Gbps)
+	- **10 Gigabit Ethernet**
+	- **40 Gigabit Ethernet** (**40GbE**) and **100 Gigabit Ethernet** (**100GbE**)
+	- **Terabit Ethernet** (**TbE**)
+- IEEE 802.1
+	- (802.1D, 1990) 
+		- bridged Ethernet  
 			- raised bandwidth
 			- separated collision domains
-		- switched Ethernet
-			- layer-2 switche acts as N-port bridge (where N is number of stations), so each station gets 10 Mbps bandwidth
-			- (10Base5 and 10Base2)
-		- full-duplex switched Ethernet
-			- introduced full-duplex (with 10Base-T), double bandwidth from 10 Mbps to 20 Mbps
-			- no need for CSMA/CD
-	- 100 Mbps (**Fast Ethernet**) 
 
 - **switched Ethernet**
-- full-duplex switched Ethernet Ethernet in which each station, in its own separate collision domain, can both send and receive
+	- layer-2 switch acts as N-port bridge (where N is number of stations), so each station gets 10 Mbps bandwidth
 
 ### Frame format (802.3 Ethernet II)
 

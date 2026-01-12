@@ -21,6 +21,8 @@
 			- (neither controlled nor registered)
 - **socket**
 
+- sequence number
+
 - Reliable byte stream
 
 - **reliable** and **unreliable**
@@ -34,11 +36,12 @@
 
 # UDP
 
-- UDP
+- **user datagram protocol** (**UDP**)
 	- connectionless
 	- unreliable
+- 
 
-### header 
+
 
 ![[UDP header.svg]]
 

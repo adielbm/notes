@@ -411,17 +411,27 @@ DHCP Relay
 ## Link-state routing
 
 - Link-state routing protocol
+	- (flooding)
+		- initially, each node generates an LSP describing its local link state.
+		- at every node X, upon receiving an LSP from node Y:
+			- if no LSP originated by Y is stored → store the LSP.
+			- if an LSP from Y exists and the received LSP has a higher SEQNO → replace the stored LSP.
+			- if the received LSP is accepted → forward it to all neighbors of X except the one from which it was received.
+	- (route calculation) once a node has received the most recent LSP from every node, it runs [[Shortest Path Problem#Dijkstra's Algorithm|Dijkstra's algorithm]] to compute the shortest paths to all destinations.
+- **link-state advertisement** (**LSA**)
+- a **link state packet** (**LSP**) of a node, contains:
+	- node identifier (originator ID)
+	- sequence number (SEQNO)
+	- time-to-live (TTL)
+	- cost (weight) of each adjacent link
+- a node generates a new LSP periodically or upon a local topology change
+	(e.g., a link or neighbor failure, detected via "Hello" packets).
+- **link-state database** (**LSDB**)
+	- each node maintains an LSDB containing the most recent LSAs from all other nodes in the routing domain.
+- examples:
 	- **Open Shortest Path First** (OSPF)
 	- **Intermediate System to Intermediate System** (IS-IS)
-- link-state advertisement (LSA)
-- **link state packet** (LSP)
-	- each node has its own LSP which contains:
-		- id
-		- TTL
-		- SEQNO
-		- cost for each neighbor link
-- LSDB
-- flooding
+
 
 ## Path-vector routing
 

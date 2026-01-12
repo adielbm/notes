@@ -54,21 +54,29 @@
 
 
 
+# Protocol data units
+
 
 - **protocol data unit (PDU)**
 	- _"The combination of data from the next higher layer and control information"_ [@Stallings, 2013]
 	- _"Another name for a packet or frame"_. [@Peterson, 2020]
 	- _"A PDU at layer $N$ is a message sent between protocols at layer $N$. It consists of layer $N$ header information and an encapsulated message from layer $N+1$, which is called both the layer $N$ SDU and the layer $N+1$ PDU"_. [@Kozierok, 2005]
 - **service data unit (SDU)**
-- (**packet**) 
-	- (1) _a generic term used to describe unit of data at all levels of the protocol stack_. ([RFC 1594](https://www.rfc-editor.org/rfc/rfc1594.html))
-	- (2) a PDU in the Internet (Network) layer
-- (**datagram**) 
-	- a synonym with _packet_
-	- connectionless communication, packet-switched network
+- (**packet**) can refer to:
+	- _a generic term used to describe unit of data at all levels of the protocol stack_. ([RFC 1594](https://www.rfc-editor.org/rfc/rfc1594.html))
+	- **(IP) packet** - a PDU in the Internet (Network) layer
+- **segment** 
+	- PDU in the TCP protocol
+- **datagram** can refer to:
+	- **(user) datagram** - PDU in the UDP protocol
+	- **(IP) datagram** - PDU in the IP protocol 
+	- a PDU in any connectionless communication packet-switched network
 	- _"A self-contained, independent entity of data carrying sufficient information to be routed from the source to the destination computer without reliance on earlier exchanges between this source and destination computer and the transporting network"_. ([RFC 1594](https://www.rfc-editor.org/rfc/rfc1594.html))
 - (**frame**) 
 	- "A packet at the data-link layer is normally called a _frame_." [@Forouzan, 2012]
+
+
+# terms
 
 - **encapsulation**
 - **decapsulation** or (**deencapsulation** (or **de-encapsulation**))
@@ -90,7 +98,7 @@
 
 - **best-effort service**
 
-
+- **network interface controller** (**NIC**)
 
 - **bit stuffing**
 	- "A technique used to distinguish control sequences and data on the bit level." [@Peterson, 2020]
@@ -147,3 +155,22 @@
 - virtual path (VP)
 - transmission path (TP)
 - virtual-path identifier (VPI)
+
+
+# IEEE 802
+
+![](https://upload.wikimedia.org/wikipedia/commons/b/b5/Comparing_OSI_and_IEEE_802_network_stacks.svg)
+
+- (active) working groups
+	- 802.1
+		- Higher Layer LAN Protocols Working Group
+	- [[layer 2#Ethernet|802.3]]
+		- Ethernet
+	- [[Wireless communication#Wi-Fi|802.11]]
+		- Wireless LAN (WLAN) & Mesh (Wi-Fi certification)
+	- 802.15
+		- Wireless PAN
+- **service access point** (**SAP**)
+	- LSAP
+	- MSAP
+	- PSAP

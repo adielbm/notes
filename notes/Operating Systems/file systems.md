@@ -1,4 +1,4 @@
-- **file system** or **filesystem** (abbr. **FS** or **fs**)
+- **file system** or **filesystem** (**FS** or **fs**)
 - file
 - filename
 - structures:

@@ -9,14 +9,15 @@
 	- **authentication**
 	- **non-repudiation**
 - **cyberattack**
-	- **eavesdropping**
-	- **spoofing attack**
-	- **man-in-the-middle (MITM) attack**
-	- **session hijacking** (or **cookie hijacking**)
-	- **denial-of-service attack** (**DoS attack**)
+	- **spoofing attack** (threat to confidentiality)
+	- **eavesdropping** (threat to confidentiality)
+	- **denial-of-service attack** (**DoS attack**) (threat to availability)
 		- **SYN flood**
 			- **SYN cookie**
 		- **distributed denial-of-service attack** (**DDoS attack**)
+
+	- **man-in-the-middle (MITM) attack** (threat to both confidentiality and integrity)
+	- **session hijacking** (or **cookie hijacking**)
 
 
 - **cryptanalysis**

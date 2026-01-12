@@ -1,13 +1,26 @@
 
 
+- **transmission medium**
+	- guided media
+	- unguided media
+
+- A **frequency band** is an interval in the frequency domain, limited by a lower frequency and an upper frequency. (Wikipedia)
 - The **spectrum** $[f_\text{low}, f_\text{high}]$ of a signal is the range of frequencies it contains
 - The **center frequency** $f_c$ of a channel is defined in two ways:
 	- $f_c = \frac{f_\text{high} + f_\text{low}}{2}$ (arithmetic mean, most common)
 	- $f_c = \sqrt{f_\text{high} \cdot f_\text{low}}$ (geometric mean)
-- The **(analog) bandwidth** (or **frequency bandwidth**) (רוחב סרט) is the range of frequencies that a channel can transmit, defined as $B = f_\text{high} - f_\text{low}$ (unit: Hz)
-	- The **effective bandwidth** refers to the range of frequencies within which a significant portion of the signal's power or energy is concentrated.
-		- "The bandwidth of a signal after noise and other factors such as environmental conditions have been applied." [@West, 2021]
-- **Fractional bandwidth**: $B_\text{frac} = \frac{B}{f_c}$
+- **(analog) bandwidth** (or **frequency bandwidth**) (רוחב סרט) is the difference between the upper and lower frequencies in a continuous band of frequencies. (Wikipedia) 
+	- (unit: Hz)
+	- $B = f_\text{high} - f_\text{low}$
+	- may refer to:
+		- passband bandwidth
+			- passband spectrum $[f_c - W,\, f_c + W]$
+			- bandwidth $B = 2W$
+		- baseband bandwidth
+
+- The **effective bandwidth** refers to the range of frequencies within which a significant portion of the signal's power or energy is concentrated.
+	- "The bandwidth of a signal after noise and other factors such as environmental conditions have been applied." [@West, 2021]
+- **fractional bandwidth**: $B_\text{frac} = \frac{B}{f_c}$
 
 
 - The **symbol rate** (or **baud rate**) $R_s$ is the number of symbols transmitted per unit time 
@@ -49,27 +62,34 @@
 
 # Filter
 
+- **carrier wave** (or **carrier signal** or just **carrier**)
+	- carrier frequency $f_c = \frac{f_L + f_H}{2}$
+- passband $[f_L, f_H]$
+- sideband
+	- upper sideband (USB)
+		- $[f_{C},f_{H}]$
+	- lower sideband (LSB)
+		- $[f_{L},f_{C}]$
 - baseband
 	- baseband signal
 	- baseband channel
-- 
 - broadband
 - narrowband
+- baseband signal
+- bandpass signal
 
-baseband signal
-bandpass signal
+- bandpass filter
 
 
 ![200](https://upload.wikimedia.org/wikipedia/commons/b/b8/Passband_schematic3.png)
 
-- passband
 
-- bandpass filter
 
 # Modulation 
 
-- modulator, demodulator
-- carrier signal 
+- **modulator**, **demodulator**
+
+
 ## Analog Modulation
 
 analog-analog
@@ -78,11 +98,18 @@ AM, FM, PM
 
 ## Digital Modulation
 
- analog carrier signal is modulated by a discrete signal
+$$\text{Sender} \xrightarrow[\mathrm{Digital\atop data}]{\texttt{0101}\dots} \boxed{\text{Modulator}} \xrightarrow[\mathrm{Analog \atop signal}]{\Large\sim} \boxed{\text{Demodulator}} \xrightarrow[\mathrm{Digital\atop data}]{\texttt{0101}\dots} \text{Receiver}$$
+
+
+- **amplitude shift keying** (**ASK**)
+	- **on–off keying** (**OOK**) (or **binary ASK** (**BASK**))
+- **frequency shift keying** (**FSK**)
+- **phase shift keying** (**PSK**)
+- **quadrature amplitude modulation** (**QAM**)
+
 
 Digital data , Discrete analog signal
-ASK, FSK, PSK, QAM
-DSL modem
+
 
 
 
@@ -93,6 +120,8 @@ DSL modem
 	- A **digital signal** is a signal that represents data as a sequence of discrete values
 	- analog signal
 	- analog data 
+
+DSL modem
 
 ## Pulse Modulation	
 
@@ -116,18 +145,72 @@ $$\xrightarrow[\text{Analog}]{\displaystyle s(t)} \boxed{\displaystyle \mathrm{S
 
 pulse amplitude modulation (PAM)
 
+# transmission
 
+
+- digital transmission - the data is digital
+	- (analog signal) 
+		- the analog signal is propagated through repeaters, each repeater recoveres the digital data and produce a new analog signal.
+	- (digital signal)
+		- repeaters regenerate the signal
+- analog transmission
+	- the data is digital/analog
+	- the signal is analog
 
 # Multiplexing
 ![200](https://upload.wikimedia.org/wikipedia/commons/6/6f/Multiplexing_diagram.svg)
 
-- FDM
-- TDM
+
+- guard band
+- **frequency-division multiplexing** (**FDM**)
+- **time-division multiplexing** (**TDM**)
+- **wavelength-division multiplexing** (**WDM**)
+- **orthogonal frequency-division multiplexing** (**OFDM**)
+	- subcarrier
+	- bandwidth $Nf_b$ centered at $f_0$
+	- 
+	- split a signal (rate $R$) into $N$ signals of rate $R/N$.
+		-  $f_0+(N-1)f_b/2$  
+		- ...
+		-  $f_0+f_b/2$  
+		-  $f_0-f_b/2$  
+		- ...
+		- $f_0-(N-1)f_b/2$  
+
 - CDM
 
+- "When multiplexing is applied in the support of many users at one time, it’s called [[#channel access method|multiple access]]." [@West, 2021] 
+
+## channel access method
+
+- a **channel access method** (or **multiple access method**)
+	- Frequency-division multiple access (FDMA)
+	- Time-division multiple access (TDMA)
+	- [[#Code-division multiple access (CDMA)]]
+	- [[#Orthogonal frequency-division multiple access (OFDMA)]]
+
+### Code-division multiple access (CDMA)
+
+- $u \in \{U_{1},U_{2},\dots,U_{k}\}$ is a user (sender)
+	- $\mathbf{c}_u = [c_{u,1}, c_{u,2}, \dots, c_{u,m}]$ is the **chiping code** for user $u$, where $c_{u,i} \in \{-1, +1\}$ is the $i$-th chip of the code.
+	- **code length** (or **spreading factor**) $m$ is the number of chips used to represent (spread) a single data bit.
+- The user sends $\mathbf{s}_u = b_u \mathbf{c}_u$, where $b_u \in \{-1, +1\}$ is the data bit for user $u$. where $b_u =-1$ if the user wants to send data bit 0, and $b_u =+1$ if the user wants to send data bit 1.
+- The **received signal** is $\displaystyle\mathbf{r}=\sum_{u=1}^{k} \mathbf{s}_u = \sum_{u=1}^{k} b_u \mathbf{c}_u$
+- The data bit for user $u$ recovered by receiver is $\displaystyle \hat{b}_u=\text{sign}\left(\mathbf{r} \cdot \mathbf{c}_u\right)=\frac{1}{m}(\mathbf{r} \cdot \mathbf{c}_u)$
+	- $\hat{b}_u =0$ means user $u$ did not send any data bit.
+	- $\hat{b}_u =+1$ means user $u$ sent data bit $+1$ (i.e., the user wants to send 1)
+	- $\hat{b}_u =-1$ means user $u$ sent data bit $-1$ (i.e., the user wants to send 0)
+	- $\mathbf{r} \cdot \mathbf{c}_u$ is called the **correlation value** $R_{u}$ 
+
+### Orthogonal frequency-division multiple access (OFDMA)
+
+- resource element (RE)
+- transmission time interval (TTI)
+- physical resource block (PRB)
+- channel quality indicator (CQI)
 
 
-# encoding 
+# Encoding 
 
 - digital to digital 
 - **baseline wander**
