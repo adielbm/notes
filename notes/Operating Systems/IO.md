@@ -49,7 +49,7 @@
 			- number of bytes to transfer in a burst
 	- **DMA controller**
 
-- reading from disk: (by [@Modern Operating Systems, Tanenbaum, 2022])
+- reading from disk: (by [@Tanenbaum, 2022])
 	- (using interrupt-driven I/O)
 		- disk controller: 
 			- read block (one or more sector(s)) (bit by bit)

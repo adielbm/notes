@@ -31,9 +31,12 @@
 - File attributes
 
 
-- Contiguous allocation
-- Linked list allocation
-	- Linked list allocation using an index 
+- contiguous allocation
+- linked list allocation
+	- linked list allocation using an index 
+- indexed allocation
+
+
 - a **directory** is a special file that contains directory entries
 	- a **directory entry** is a pair of $\langle \text{filename, inode-number} \rangle$
 	- **inode** (index node) 

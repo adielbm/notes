@@ -14,6 +14,7 @@
 		- FIFO
 		- Second-chance
 		- least recently used (LRU)
+			- Evict the page that has not been used for the longest time in the past. ("temporal locality")
 		- Clock
 			- WSClock
 		- not frequently used (NFU)
@@ -51,12 +52,22 @@
 - Memory segmentation
 	- segment table
 - swapping
-- 
-	- First fit
-	- Next fit
-	- Best Fit
-	- Worse fit
-	- Quick fit
+- allocation algorithms
+	- **first fit** - first hole that is big enough to hold the process
+		- pros: fast
+		- cons: 
+	- **next fit** - similar to 'first fit' but it starts searching from where the last allocation ended
+		- pros: 
+		- cons: 
+	- **best fit** - smallest hole that is still big enough for the process
+		- pros: 
+		- cons: external fragmentation 
+	- **worse fit** - largest available hole
+		- pros: 
+		- cons: 
+	- **quick fit** - 
+		- pros: 
+		- cons: 
 - mapping
 	- bitmap 
 	- linked lists

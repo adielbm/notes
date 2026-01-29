@@ -96,7 +96,7 @@
     "publisher": "Course Technology"
   },
   {
-    "id": "Modern Operating Systems, Tanenbaum, 2022",
+    "id": "Tanenbaum, 2022",
     "type": "book",
     "ISBN": "9780137618873",
     "title": "Modern Operating Systems",
@@ -178,5 +178,29 @@
       ]
     },
     "publisher": "Pearson Prentice Hall"
+  },
+  {
+    "id": "Kurose & Ross, 2025",
+    "type": "book",
+    "ISBN": "9780135429334",
+    "author": [
+      {
+        "family": "Kurose",
+        "given": "J."
+      },
+      {
+        "family": "Ross",
+        "given": "K."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "title": "Computer Networking a Top-Down approach",
+    "publisher": "Pearson"
   }
 ]

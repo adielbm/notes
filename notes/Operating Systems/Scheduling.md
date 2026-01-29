@@ -17,13 +17,15 @@
 	- Scheduling algorithm goals (criteria)
 		- (any system)
 			- fairness
-			- Policy enforcement
-			- Balance
+			- policy enforcement
+			- balance
 		- Batch systems
 			- **CPU utilization** $1-p^n$ 
 				- $n$ is the number of processes in the system
-			- **Throughput** is the number of processes completed per time unit
-			- **Turnaround time** (TAT) is the statistically average time from the moment that a batch job is submitted until the moment it is completed.
+			- **throughput**
+				- "the number of processes completed per time unit" [@Tanenbaum, 2022]
+			- **turnaround time** (TAT)
+				- "the statistically average time from the moment that a batch job is submitted until the moment it is completed" [@Tanenbaum, 2022]
 		- Interactive systems
 			- **response time** is the time between issuing a command and gettintg the result
 			- proportionality
@@ -48,10 +50,11 @@
 	- FIFO
 	- disadvantage: CPU-bound process may occupies the CPU for a long period. while all I/O-bound processes must wait even though they only need short CPU bursts. As a result, I/O devices become underutilized, since their corresponding processes are waiting in the ready queue.
 - **shortest job first (SJF)** (or **shortest job next** (**SJN**))
-	- The total turnaround time is $T = n t_1 + (n-1)t_2 + \dots + t_n$ #todo explain
-	- The average turnaround time is $T / n$ #todo explain
+	- $n$ jobs (indexed by $i=1,\dots,n$)
+	- $t_i$ is the run time of job $i$ 
+	- The average turnaround time is $\frac{n t_1 + (n-1)t_2 + \dots + t_n}{n}$
 	- nonpreemptive
-- **shortest remaining time (next/first)**
+- **shortest remaining time first (_or_ next)** (SRTF)
 	- At any given time, the scheduler chooses the process with the smallest remaining processing time.
 	- When a new job arrives, its total time is compared to the current process’ remaining time. If the new job needs less time to finish than the current process, the current process is suspended and the new job started.
 	- advantages:
@@ -60,19 +63,24 @@
 	- disadvantages:
 		- the run time has to be known in advance
 	- preemptive version of SJF
-- **Round-robin scheduling**
-	- Processes rotate through CPU access, each getting a fixed **time quantum** (or **time slice**)
-- Priority Scheduling
+- **round-robin scheduling**
+	- processes rotate through CPU access, each getting a fixed **time quantum** (or **time slice**)
+- priority scheduling
 	- Processes assigned priorities; highest priority runs first
-- Multiple Queues (CTSS approach)
-	- Higher priority classes get shorter but more frequent quanta. 
-	- Lower priority processes get longer quanta but run less often
-	- A process that used up all its allocated quanta was moved down to the next lower priority class. 
-- Shortest Process Next
-- Guaranteed Scheduling
-- Lottery Scheduling
-- Fair-Share Scheduling
-
+- multiple queues (CTSS approach)
+	- higher priority classes get shorter but more frequent quanta. 
+	- lower priority processes get longer quanta but run less often
+	- a process that used up all its allocated quanta was moved down to the next lower priority class. 
+- shortest process next (SPN)
+	- SPN chooses the process with the shortest predicted CPU burst. 
+	- $E(i+1)=(1-a)T(i)+aE(i)$
+		- $E(i)$ is the estimated time (for the $i$th process) 
+		- $T(i)$ is the actual time (for the $i$th process)
+		- $a$ is a parameter (where $0<a<1$)
+		- $E(1)$ is an initial guess (given)
+- guaranteed scheduling
+- lottery scheduling
+- fair-share scheduling
 
 
 

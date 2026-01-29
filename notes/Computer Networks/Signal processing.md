@@ -87,14 +87,22 @@
 
 # Modulation 
 
+
+
 - **modulator**, **demodulator**
-
-
 ## Analog Modulation
 
-analog-analog
+- analog-analog
 
-AM, FM, PM
+- message signal: $m(t)$
+- carrier signal: $c(t) = A_c \cos(2\pi f_c t)$
+	- carrier amplitude: $A_c > 0$
+	- carrier frequency: $f_c$ 
+- **amplitude modulation** (**AM**)
+	- $s_{\text{AM}}(t)=A_c \bigl[1 + k_a m(t)\bigr] \cos(2\pi f_c t)$
+- angle modulation
+	- **frequency modulation** (**FM**)
+	- **phase modulation** (**PM**)
 
 ## Digital Modulation
 
@@ -145,17 +153,23 @@ $$\xrightarrow[\text{Analog}]{\displaystyle s(t)} \boxed{\displaystyle \mathrm{S
 
 pulse amplitude modulation (PAM)
 
+
+
+
 # transmission
 
-
-- digital transmission - the data is digital
-	- (analog signal) 
-		- the analog signal is propagated through repeaters, each repeater recoveres the digital data and produce a new analog signal.
+- (analog data)
+	- (analog signal)
+		- examples: AM/FM radio broadcasting, analog broadcast TV
+		- [[#Analog Modulation]]
 	- (digital signal)
-		- repeaters regenerate the signal
-- analog transmission
-	- the data is digital/analog
-	- the signal is analog
+- (digital data)
+	- (analog signal)
+		- examples: DSL modem, Cable modem, cellular, Wi-Fi, Digital broadcast TV
+		- [[#Digital Modulation]]
+	- (digital signal)
+		- examples: Ethernet, USB, HDMI, optical fiber
+		- [[#Encoding]]
 
 # Multiplexing
 ![200](https://upload.wikimedia.org/wikipedia/commons/6/6f/Multiplexing_diagram.svg)
@@ -179,35 +193,9 @@ pulse amplitude modulation (PAM)
 
 - CDM
 
-- "When multiplexing is applied in the support of many users at one time, it’s called [[#channel access method|multiple access]]." [@West, 2021] 
+- "When multiplexing is applied in the support of many users at one time, it’s called [[channel access method|multiple access]]." [@West, 2021] 
 
-## channel access method
 
-- a **channel access method** (or **multiple access method**)
-	- Frequency-division multiple access (FDMA)
-	- Time-division multiple access (TDMA)
-	- [[#Code-division multiple access (CDMA)]]
-	- [[#Orthogonal frequency-division multiple access (OFDMA)]]
-
-### Code-division multiple access (CDMA)
-
-- $u \in \{U_{1},U_{2},\dots,U_{k}\}$ is a user (sender)
-	- $\mathbf{c}_u = [c_{u,1}, c_{u,2}, \dots, c_{u,m}]$ is the **chiping code** for user $u$, where $c_{u,i} \in \{-1, +1\}$ is the $i$-th chip of the code.
-	- **code length** (or **spreading factor**) $m$ is the number of chips used to represent (spread) a single data bit.
-- The user sends $\mathbf{s}_u = b_u \mathbf{c}_u$, where $b_u \in \{-1, +1\}$ is the data bit for user $u$. where $b_u =-1$ if the user wants to send data bit 0, and $b_u =+1$ if the user wants to send data bit 1.
-- The **received signal** is $\displaystyle\mathbf{r}=\sum_{u=1}^{k} \mathbf{s}_u = \sum_{u=1}^{k} b_u \mathbf{c}_u$
-- The data bit for user $u$ recovered by receiver is $\displaystyle \hat{b}_u=\text{sign}\left(\mathbf{r} \cdot \mathbf{c}_u\right)=\frac{1}{m}(\mathbf{r} \cdot \mathbf{c}_u)$
-	- $\hat{b}_u =0$ means user $u$ did not send any data bit.
-	- $\hat{b}_u =+1$ means user $u$ sent data bit $+1$ (i.e., the user wants to send 1)
-	- $\hat{b}_u =-1$ means user $u$ sent data bit $-1$ (i.e., the user wants to send 0)
-	- $\mathbf{r} \cdot \mathbf{c}_u$ is called the **correlation value** $R_{u}$ 
-
-### Orthogonal frequency-division multiple access (OFDMA)
-
-- resource element (RE)
-- transmission time interval (TTI)
-- physical resource block (PRB)
-- channel quality indicator (CQI)
 
 
 # Encoding 

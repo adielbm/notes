@@ -64,7 +64,7 @@
 
 - **near-field communication** (**NFC**)
 
-- **Multiple access with collision avoidance** (**MACA**)
+- **multiple access with collision avoidance** (**MACA**)
 	- RTS (request to send) 
 	- CTS (clear to send)
 - **backhaul**
@@ -145,7 +145,7 @@
 	- "Changing to a new channel as a mobile device moves from one cell to another" [@Forouzan, 2012]
 - **roaming**
 
-- Access Point Name (APN)
+- **Access Point Name** (**APN**)
 
 
 - **mobile switching center** (MSC)
@@ -193,9 +193,12 @@
 	- (_Release 10_, _Release 11_, _Release 12_)
 - **LTE Advanced Pro** (**LTE-A Pro**, or **4.5G**, **4.5G Pro**, **4.9G**, **Pre-5G**, **5G Project**)****
 	- (_Release 13_, _Release 14_)
-- **5G New Radio** (5G NR)
+- **5G New Radio** (5G NR) 
+	- (_Release 15_)
 	- **Frequency Range 1** (FR1)
+		- 410 MHz–7,125 MHz
 	- **Frequency Range 2** (FR2)
+		- 24,250 MHz–71,000 MHz
 - **5G-Advanced** (aka **5.5G**; _Release 18_)
 
 ## Bluetooth

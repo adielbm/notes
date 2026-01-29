@@ -1,9 +1,10 @@
 [
-  "darlal-switcher-plus",
-  "obsidian-hide-sidebars-when-narrow",
-  "bibliography",
-  "dark-mode-images",
-  "img-caption",
+  "obsidian-git",
   "obsidian-latex-suite",
-  "obsidian-git"
+  "dark-mode-images",
+  "obsidian-hide-sidebars-when-narrow",
+  "img-caption",
+  "darlal-switcher-plus",
+  "obsidian-style-settings",
+  "bibliography"
 ]

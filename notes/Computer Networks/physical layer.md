@@ -2,6 +2,24 @@
 
 
 
+
+- **Dial-up Internet access** (גִּישַׁת חִיּוּג)
+	- using PSTN
+	- 1980s
+	- circuit-switched
+- **Integrated Services Digital Network** (**ISDN**)
+	- 1980, 1988
+	- using PSTN
+	- digital transmission
+	- circuit-switched
+- **Digital subscriber line** (**DSL**) (originally **digital subscriber loop**)
+	- packet-switched
+	- **Asymmetric DSL** (**ADSL**)
+- **cable Internet access** (or **cable Internet**)
+
+
+# Fiber-optic
+
 - **optical network terminal**
 - **optical line terminal**
 - **passive optical network** (**PON**)
