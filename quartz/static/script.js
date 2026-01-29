@@ -77,3 +77,29 @@ const observer = new MutationObserver(mutations => {
 
 observer.observe(document.body, { attributes: true });
  */
+
+// Highlight bibliography entries when clicking inline citations
+function setupCitationHighlight() {
+  document.querySelectorAll('.inline-citation').forEach(citation => {
+    citation.addEventListener('click', (e) => {
+      // Remove previous highlights
+      document.querySelectorAll('li[id^="ref-"]').forEach(li => {
+        li.classList.remove('citation-highlight');
+      });
+
+      // Add highlight to the target
+      const href = citation.getAttribute('href');
+      if (href && href.startsWith('#ref-')) {
+        const targetId = href.substring(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.classList.add('citation-highlight');
+        }
+      }
+    });
+  });
+}
+
+// Run on page load and Quartz navigation
+document.addEventListener('nav', setupCitationHighlight);
+document.addEventListener('DOMContentLoaded', setupCitationHighlight);

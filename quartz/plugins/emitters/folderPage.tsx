@@ -71,17 +71,20 @@ export const FolderPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOpt
       )
 
       const folderDescriptions: Record<string, ProcessedContent> = Object.fromEntries(
-        [...folders].map((folder) => [
-          folder,
-          defaultProcessedContent({
-            slug: joinSegments(folder, "index") as FullSlug,
-            frontmatter: {
-              // title: `${i18n(cfg.locale).pages.folderContent.folder}: ${folder}`,
-              title: `${folder}`,
-              tags: [],
-            },
-          }),
-        ]),
+        [...folders].map((folder) => {
+          const folderName = (folder.split('/').pop() || folder).replace(/-/g, ' ')
+          return [
+            folder,
+            defaultProcessedContent({
+              slug: joinSegments(folder, "index") as FullSlug,
+              frontmatter: {
+                // title: `${i18n(cfg.locale).pages.folderContent.folder}: ${folder}`,
+                title: folderName,
+                tags: [],
+              },
+            }),
+          ]
+        }),
       )
 
       for (const [tree, file] of content) {

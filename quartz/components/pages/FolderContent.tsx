@@ -42,15 +42,17 @@ export default ((opts?: Partial<FolderContentOptions>) => {
       const fileParts = fileSlug.split(path.posix.sep)
       const isDirectChild = fileParts.length === folderParts.length + 1
       return prefixed && !isDirectChild
-    }).map(path => {
-      const segments = path.slug?.split('/');
-      return segments?.slice(0, -1).join('/');
+    }).map(file => {
+      const fileSlug = stripSlashes(simplifySlug(file.slug!))
+      const folderParts = folderSlug.split(path.posix.sep)
+      const fileParts = fileSlug.split(path.posix.sep)
+      // Get just the immediate subfolder (one level down from current folder)
+      const immediateSubfolder = fileParts.slice(0, folderParts.length + 1).join('/')
+      return immediateSubfolder + '/'
     }).filter( // remove duplicates
       (value, index, self) => self.indexOf(value) === index
     ).filter( // remove empty strings or such equal to the folderSlug
-      (value) => value !== "" && value !== folderSlug
-    ).map( // add `/` at the end of the folder name
-      (value) => value + '/'
+      (value) => value !== "" && value !== folderSlug + '/'
     )
 
     // print the slug of the current folder to the console
@@ -86,9 +88,10 @@ export default ((opts?: Partial<FolderContentOptions>) => {
           )}
           <div class="pagelist">
             {allSubFoldersInFolder.map((folder) => {
+              const folderName = folder.slice(folderSlug.length + (folderSlug ? 1 : 0)).replace(/\/$/, "").split('/')[0]
               return folder && (
-                <a href={`../${folder}`} class="internal pagelist--folder">
-                  {folder.slice(folderSlug.length).replace(/-/g, " ").replace(/\//g, "")}
+                <a href={resolveRelative(fileData.slug!, folder)} class="internal pagelist--folder">
+                  {folderName.replace(/-/g, " ")}
                 </a>
               )
             }

@@ -27,6 +27,7 @@ export const defaultContentPageLayout: PageLayout = {
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [
     Component.Filters(),
+    Component.Breadcrumbs({ showCurrentPage: false }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.Content(),

@@ -58,9 +58,9 @@ export default (() => {
 
        {/*  <link defer rel="stylesheet" href="/static/tikz.css" />
         <script defer src="/static/tikzjax.js" type="text/javascript" />
-        <script defer src="/static/script.js"></script> */}
+        */}
 
-
+        <script defer src="/static/script.js"></script>
 
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />

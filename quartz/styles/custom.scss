@@ -141,11 +141,13 @@ li[id^="ref-"] {
   scroll-margin-top: calc(var(--pX) * 4);
 }
 
-li[id^="ref-"]:target {
+li[id^="ref-"]:target,
+li[id^="ref-"].citation-highlight {
   background-color: var(--bg3);
   border-radius: var(--borderRadius);
   padding: 0.1rem 0.25rem;
 }
+
 
 // Optional: highlight text fragments when using #:~:text=... URLs (browser support varies)
 ::target-text {
