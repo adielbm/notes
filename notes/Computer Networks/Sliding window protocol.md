@@ -83,7 +83,7 @@ else if LFR < k ≤ LAF then
 
     LAF := LFR + RWS
 
-else
+else # LAF < k
     discard frame(k)
     # optional: cumulative ACK ("additional ACK")
     send_ack(LFR) 

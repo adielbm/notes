@@ -1,4 +1,3 @@
-# Routing
 
 - **router**
 	- "_A node that is connected to two or more networks is commonly called a **router** or **gateway**_" [@Tanenbaum, 2011]
@@ -13,19 +12,15 @@
 - [[#Link-state routing]]
 - [[#Path-vector routing]]
 - **routing domain**
-	- **interior gateway protocol** (IGP) (or **interior routing protocol**)
-	- **exterior gateway protocol** (_Not to be confused with the specific protocol_ Exterior Gateway Protocol (EGP))
-	- **intradomain** and **interdomain** routing
-		- **intra-AS** routing
-			- (using OSPF, IS-IS and RIP)
-		- **inter-AS** routing
-			- (using BGP)
+	- **intra-AS** (or **intradomain**) routing (or **interior gateway protocol** (IGP) (or **interior routing protocol**))
+		- (using OSPF, IS-IS and RIP)
+	- **inter-AS** (or **interdomain**) routing (or **exterior gateway protocol** (_Not to be confused with the specific protocol_ Exterior Gateway Protocol (EGP)))
+		- (using BGP)
 - **control plane**
 - **data plane** (or **forwarding plane**)
 - network topology
 - packet forwarding
-- **backbone network** (or **core network**)
-	- (e.g. the **Internet backbone**)
+
 - **hot-potato routing**
 - **cold-potato routing**
 - **autonomous systems** (AS)
@@ -39,8 +34,19 @@
 		- multihomed
 		- transit
 		- IXP
-- **Internet service provider** (ISP)
+- **Internet service provider** (**ISP**)
 	- Tier 1, Tier 2 and Tier 3
+- **network service provider** (**NSP**)
+- **network access point** (**NAP**)
+- **backbone network** (or **core network**)
+	- (e.g. the **Internet backbone**)
+
+- **regional ISP** (or **national ISP**)
+- **backbone ISP**
+- **point of presence** (**POP**)
+- **customer premises equipment** (**CPE**)
+- "Backbones and provider networks are also called _Internet Service Providers_ (ISPs). The backbones are often referred to as _international ISPs_; the provider networks are often referred to as _national_ or _regional ISPs_." [@Forouzan, 2012]
+
 - **internet exchange point** (**IX** or **IXP**)
 - peering
 - **forwarding table** (or **forwarding information base** (**FIB**) or **MAC** (**address**) **table**, or **CAM table**)

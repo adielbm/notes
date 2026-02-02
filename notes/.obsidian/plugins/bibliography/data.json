@@ -202,5 +202,25 @@
     },
     "title": "Computer Networking a Top-Down approach",
     "publisher": "Pearson"
+  },
+  {
+    "id": "West, 2021a",
+    "type": "book",
+    "ISBN": "9780357508138",
+    "title": "CompTIA Network+ Guide to Networks",
+    "author": [
+      {
+        "family": "West",
+        "given": "Jill"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "publisher": "Cengage Learning"
   }
 ]

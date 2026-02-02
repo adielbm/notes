@@ -69,9 +69,7 @@
 	- CTS (clear to send)
 - **backhaul**
 
-- piconet
-
-## Wi-Fi 
+## Wi-Fi
 
 ![](https://upload.wikimedia.org/wikipedia/commons/6/6f/SSID_ESS-en.svg)
 
@@ -219,7 +217,7 @@
 - modulation: GFSK
 - basic rate (BR)
 - Enhanced Data Rate (EDR)
-- piconet
+- **piconet**
 	- **master** (or _primary_)
 	- **slave** (or _secondary_)
 		- states: _active_ or _parked_ 

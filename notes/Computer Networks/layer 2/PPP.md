@@ -1,6 +1,11 @@
 ## Point-to-Point Protocol (PPP)
 
 - PPP is a [[Computer Networks/intro#byte stuffing|byte-oriented protocol]]
+- **Point-to-Point Protocol** (**PPP**)
+	- "commonly used to carry Internet Protocol packets over various sorts of point-to-point links" [@Peterson, 2020]
+	- "a data link layer (layer 2) communication protocol between two routers directly without any host or any other networking in between" (Wikipedia)
+
+
 
 <table>
   <tr>

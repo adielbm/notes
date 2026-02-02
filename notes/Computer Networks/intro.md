@@ -128,18 +128,21 @@
 - IP supports fragmentation and reassembly
 - packet loss
 
-
 - **multilayer switch** (**MLS**)
-- **router**
+- [[Routing|routing]]
 
 #### layer 4
 
 
 - The **transport layer** (or **layer 4**)
 	- "The transport layer performs end-to-end error control and end-to-end flow control" [@West, 2021]
-- **Transport PDU**s (TPDU) are typically called **segments**
-	- UDP datagram 
-	- TCP segment
+	- protocols:
+		- [[TCP]]
+		- [[UDP]]
+		- **QUIC**
+	- **Transport PDU**s (TPDU) are typically called **segments**
+		- UDP datagram 
+		- TCP segment
 - **client-server** (model/paradigm/architecture)
 	- **client**
 	- **server**

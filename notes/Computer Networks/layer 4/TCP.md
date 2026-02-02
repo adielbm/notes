@@ -1,10 +1,5 @@
 
 
-
-
-
-# TCP 
-
 - **Transmission Control Protocol (TCP)**
 	- characteristics:
 		- connection-oriented
@@ -29,16 +24,14 @@
 
 
 - **maximum segment lifetime** (**MSL**)
+	- (120 seconds by RFC 793)
 - **silly window syndrome** (**SWS**)
 
-- **receive window** (**rwnd**) 
-	- **advertised window**
-- **congestion window** (**cwnd**)
 
-- $2^{n}\geq\displaystyle \text{MSL}\,\text{[sec]} \times BW\,\text{[bps]}$
-	- $n$ is the nubmer of bits in the sequence number field 
-- $2^{m}\geq\displaystyle \text{RTT}\,\text{[sec]} \times BW\,\text{[bps]}$
-	- $m$ is the nubmer of bits in the window size field 
+
+- (given we want create a layer-4 protocol similar to TCP, where $n$ and $m$ are the nubmer of bits in the sequence number field and in the window size field (resp.))
+	- $2^{n}\geq\displaystyle \text{MSL}\,\text{[sec]} \times BW\,\text{[bps]}$ has to be hold to ensure that a sequence number does not "wrap around" and get reused while an old segment with that same number might still be drifting through the network
+	- $2^{m}\geq\displaystyle \text{RTT}\,\text{[sec]} \times BW\,\text{[bps]}$ has to be hold to achieve maximum throughput and keep the "pipe" full
 
 
 - **TCP Fast Open** (**TFO**)
@@ -53,8 +46,8 @@
 	- Destination port
 - (2nd word)
 	- **sequence number** identifies byte positions
-		- ($\textsf{SYN} = 1$) It represents the initial sequence number; actual data starts at sequence number + 1. 
-		- ($\textsf{SYN} = 0$) It represents the sequence number of the first data byte in the segment.
+		- when $\textsf{SYN} = 1$, it represents the initial sequence number; actual data starts at sequence number + 1.
+		- when $\textsf{SYN} = 0$, it represents the sequence number of the first data byte in the segment.
 - (3rd word)
 	- **acknowledgment number** specifies the next sequence number expected, thereby acknowledging receipt of all preceding bytes. (**cumulative acknowledgment**, an ACK $n$ confirms everything up to byte $n-1$)
 		- valid when $\textsf{ACK} = 1$
@@ -67,8 +60,7 @@
 		- **ACK** (acknowledgment): indicates that the _acknowledgment number_ is valid and the sender is confirming receipt of data.
 		- **SYN** (synchronize): used to initiate a connection by synchronizing sequence numbers between hosts.
 		- **FIN** (finish): indicates that the sender has no more data to send and requests connection termination.
-	- **window size**
-		- in bytes
+	- receive window size (in bytes)
 		- the _rwnd_ the receiver advertises (specifies the number of bytes the receiver allows the sender to transmit before needing an acknowledgment)
 			- when _window size_ = 0, 
 - (5th word)
@@ -93,12 +85,39 @@
 	- do not consume sequence numbers
 	- are not acknowledged 
 
+
+
+
+# sliding window 
+
+
+
+- **receive window** (**rwnd**) 
+	- $\text{rwnd} =\text{buffer size}-\text{received and unprocessed data}$ 
+	- **advertised window**
+- **congestion window** (**cwnd**)
+- $\text{send window} = \min(\text{rwnd}, \text{cwnd})$
+
+# operation
+
+
+
+- Transitions are labeled with *event*/*action*:
+	- _event_ causing the transition
+	- _action_ resulting from the transitions
+![](https://upload.wikimedia.org/wikipedia/commons/f/f6/Tcp_state_diagram_fixed_new.svg)
+
+
 ### Connection establishment
+
+
+![400](https://upload.wikimedia.org/wikipedia/commons/8/82/TCP_connection_establishment.svg)
 
 - Connection establishment using **three-way handshake**:
 	- SYN 
 	- SYN-ACK
 	- ACK
+
 
 
 ### Connection termination
@@ -108,6 +127,8 @@
 	- ACK
 	- FIN
 	- ACK
+
+- TIME_WAIT is lasting for 2MSL
 
 
 ![](https://upload.wikimedia.org/wikipedia/commons/5/55/TCP_CLOSE.svg)
