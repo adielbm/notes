@@ -24,7 +24,7 @@
 				- $n$ is the number of processes in the system
 			- **throughput**
 				- "the number of processes completed per time unit" [@Tanenbaum, 2022]
-			- **turnaround time** (TAT)
+			- **turnaround time** (TAT) (זמן השהייה)
 				- "the statistically average time from the moment that a batch job is submitted until the moment it is completed" [@Tanenbaum, 2022]
 		- Interactive systems
 			- **response time** is the time between issuing a command and gettintg the result
@@ -100,5 +100,5 @@
 * A **hard real-time system** is a system in which each task must be completed by its deadline, as missing the deadline is equivalent to system failure.
 * A **periodic task** is a real-time process that alternates between execution and inactivity at fixed, regular intervals.
 * An **aperiodic task** is a task that occurs irregularly and does not repeat at fixed time intervals.
-- If there are $m$ periodic events, where event $i$ occurs every $P_i$ sec and requires $C_i$ sec of CPU time, the system can handle the load only if: $\sum_{i=1}^{m} \frac{C_i}{P_i} \leq 1$. (assumes context switch overhead is negligible)
+- If there are $m$ periodic events, where event $i$ occurs every $P_i$ sec. and requires $C_i$ sec. of CPU time, the system can handle the load only if: $\sum_{i=1}^{m} \frac{C_i}{P_i} \leq 1$. (assumes context switch overhead is negligible)
 

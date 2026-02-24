@@ -1,29 +1,87 @@
 
-
-
-
 * **process** (תהליך) - an executing instance of a program, with its own memory space.
-	* **Child Process** (CP): processes created by another (parent) process.
+* **child process** (**CP**): processes created by another (parent) process.
+* **thread** (תהליכון): the smallest unit of execution within a process.
+	* kernel threads
+	* user thread
+		* done by a user-space library
+		- the kernel knows nothing about the threads
+* **multithreading** (ריבוי תהליכונים): A CPU feature that enables the processor to maintain the state of multiple threads and rapidly alternate between them on a nanosecond scale.
+	* This mechanism improves the utilization of execution units during stalls (such as memory latency), but it does not provide genuine parallelism, as only one thread is actively executing at any given moment.
+- _process_ vs. _thread_: (by [@Tanenbaum, 2022])
+	- shared data:
+		- per-process items
+			- address space
+			- global variables
+			- open files
+			- child processes
+			- pending alarms
+			- signals and signal handlers
+			- accounting information
+		- per-thread items
+			- program counter
+			- registers
+			- stack
+			- state
+	- pros of thread over process:
+		- lightweight
+		- faster context switching
+		- faster creation and termination 
 
-	* **Thread** (תהליכון): the smallest unit of execution within a process.
-		* **Multithreading** (ריבוי תהליכונים): A CPU feature that enables the processor to maintain the state of multiple threads and rapidly alternate between them on a nanosecond scale.
-			* This mechanism improves the utilization of execution units during stalls (such as memory latency), but it does not provide genuine parallelism, as only one thread is actively executing at any given moment.
+
+- process termination: (by [@Tanenbaum, 2022])
+	- normal exit (voluntary)
+	- error exit (voluntary)
+	- fatal error (involuntary)
+	- killed by another process (involuntary)
+- process creation: (by [@Tanenbaum, 2022])
+	- system initialization
+	- execution of a process-creation system call by a running process
+	- a user request to create a new process
+	- initiation of a batch job
+- **process state**: 
+	![180](https://upload.wikimedia.org/wikipedia/commons/8/83/Process_states.svg)
+	- *created* (or *new*)
+	- _running_ (or *waiting*)
+	- *ready*
+	- *blocked*
+	- *terminated*
+	- _swapped out and waiting_ (or *suspended and waiting*)
+	- *swapped out and blocked* (or *suspended and blocked*)
 
 
-
-
-- **context switch** is performing a state save of the current process and a state restore of a different process. switching the CPU core to another process
-
-
+- **context switch**
+	- "The switching of the CPU from one process or thread to another; requires performing a state save of the current process or thread and a state restore of the other." [@Galvin, 2018]
 - the **process table**
 	- data structure used by the OS to manage processes.
 	- an array of structures
 	- one entry per process
-- a **process control block (PCB)** (or **task control block**)
+- **process control block (PCB)** (also **task control block**, **process descriptor**, and **task descriptor**)
+	- "Data needed by the OS to control the process" [@Stallings, 2018]
+	- "A per-process kernel data structure containing many pieces of information associated with the process." [@Galvin, 2018]
 	- Each process is represented in the OS by a PCB
-	- contains: process’ state, including its program counter, stack pointer, memory allocation, the status of its open files, its accounting and scheduling information,
-
-
+	- typically includes:
+		- process state
+		- process ID
+		- program counter
+		- stack pointer
+		- CPU registers
+		- memory-management information
+			- value of the base and limit registers
+			- page tables (or segment tables)
+		- memory allocation
+		- accounting information
+			- amount of CPU and real time used
+			- time limits
+			- account numbers
+			- job or process numbers
+		- the status of its open files
+		- scheduling information
+			- process priority 
+			- pointers to scheduling queues
+		- I/O status information
+			- list of I/O devices allocated to the process
+			- list of open files
 * **timesharing** (חלוקת זמן): CPU time is divided among multiple users or processes.
 * **batch system** (מערכת אצווה): executes jobs in batches with minimal user interaction.
 * **multiprogramming** (ריבוי תוכניות): multiple programs reside in memory to improve CPU utilization.
@@ -33,7 +91,10 @@
  
 
 
-* **system call** - interface for user processes to request OS services.
+* **system call**
+	* "the programmatic way in which a computer program requests a service from the operating system on which it is executed" (Wikipedia)
+	* "Software-triggered interrupt allowing a process to request a kernel service" [@Galvin, 2018] 
+	- "The primary interface between processes and the operating system, providing a means to invoke services made available by the operating system" [@Galvin, 2018]
 
 * **UID (user identification)**: numeric ID assigned to a user for permission control.
 * **GID (group identification)**: numeric ID assigned to a group of users.
@@ -42,12 +103,12 @@
 
 
 
-* **Address Space**: the memory range a process can access.
-* **Command Interpreter**: program that reads and executes user commands (e.g., shell).
-* **Core Image**: memory snapshot of a process, including code and data.
+* **address space**: the memory range a process can access.
+* **command interpreter**: program that reads and executes user commands (e.g., shell).
+* **core image**: memory snapshot of a process, including code and data.
 
-* **File Descriptor**: integer handle used to access open files in a process.
-- **Virtual memory**
+* **file descriptor**: integer handle used to access open files in a process.
+- **virtual memory**
 
 # Interrupts
 
@@ -57,7 +118,7 @@
 	- **hardware interrupts** generated by hardware devices external to the CPU
 	- **software interrupt** is a software-generated interrupt. 
 		- It can be caused by: error, system call instruction, 
-		- ("Most Unix systems and derivatives do not use software interrupts, with the exception of interrupt `0x80`, used to make system calls back in pre mid-2000s days" (from Wikipedia))
+		- ("Most Unix systems and derivatives do not use software interrupts, with the exception of interrupt `0x80`, used to make system calls back in pre mid-2000s days" (Wikipedia))
 	- (e.g. in x86, 0–31 are CPU exceptions, 32-47 hardware interrupts and 48–255 software interrupts)
 - **interrupt vector table** (**IVT**) is a list of **interrupt vector**s, where the $i$th interrupt vector is an address points to the $i$th ISR.
 - **interrupt handler**, aka **interrupt service routine** (ISR),

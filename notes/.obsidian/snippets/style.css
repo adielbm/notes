@@ -7,6 +7,21 @@
   display: none;
 }
 
+
+.search-input-container .input-right-decorator.clickable-icon {
+    display: none;
+}
+
+.search-input-container input {
+    padding-inline-start: 9px;
+}
+.search-row .clickable-icon {
+    display: none;
+}
+.search-input-container:before {
+  display: none;
+}
+
 @media not print {
   .page-break {
     border-width: 3px 0 0 0;

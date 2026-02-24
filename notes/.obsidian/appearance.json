@@ -9,5 +9,6 @@
   "baseFontSize": 16,
   "showViewHeader": true,
   "accentColor": "#1da599",
-  "cssTheme": "Flexoki"
+  "cssTheme": "Flexoki",
+  "nativeMenus": false
 }

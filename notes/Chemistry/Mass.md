@@ -9,24 +9,12 @@
 ### Unified Atomic Mass Unit (u)
 
 - An **unified atomic mass unit** (u) (or **dalton** (Da)) is a non-SI unit of mass defined as $\frac{1}{12}$ of the mass of an unbound neutral atom of carbon-12 in its nuclear and electronic ground state and at rest.
-    - The **atomic mass constant** is a constant defined as $m_{u} =\frac{1}{12} m(^{12}\text{C}) = 1 \, \text{u} = 1.66053906892(52) \times 10^{-27} \, \text{kg}$
+    - The **atomic mass constant** is a constant defined as $m_{\rm{u}} =\frac{1}{12} m(^{12}\text{C}) = 1 \, \text{u} = 1.66053906892(52) \times 10^{-27} \, \text{kg}$
 
-### Average Atomic Mass
+## Atomic Mass
 
-Because substances are usually not isotopically pure, (i.e., they are a mixture of isotopes of the element) it is convenient to use the **average atomic mass** (or **atomic weight**) which is the weighted average of the atomic masses of the naturally occurring isotopes of the element to calculate the atomic mass of given sample of the element.
-    - General formula for calculating the average atomic mass of an element:
-        - $m(E)=\sum_i \left( m_i \cdot f_i \right)$, where:
-            - $m(E)$ is the average atomic mass of the element $E$ (in $\mathrm{u}$)
-            - $m_i$ is the atomic mass of the $i$-th isotope of the element (in $\mathrm{u}$)
-            - $f_i$ is the natural abundance of the $i$-th isotope of the element (in $\%$)
-    - Example:
-        - The natural abundance of $\ce{^{12}C}$ and $\ce{^{13}C}$ are $98.93\%$ and $1.07\%$ respectively.
-        - The average atomic mass of carbon is $m(\ce{C})=\left( m(\ce{^{12}C}) \times \text{NA}(\ce{^{12}C}) \right) + \left( m(\ce{^{13}C}) \times \text{NA}(\ce{^{13}C}) \right)=12.011 \, \mathsf{u}$ 
-
-## Relative Atomic Mass
-
-> the meaning of the term _relative_ in this context is that the atomic mass is a dimensionless quantity, as it is the ratio of the mass of an atom to the unified atomic mass unit.
-
+- **atomic mass** ($m_{\rm{a}}$)
+	- "Rest mass of an atom in its ground state. The commonly used unit is the unified atomic mass unit." ([IUPAC](https://doi.org/10.1351/goldbook.A00496))
 - The **relative isotopic mass** of a particular isotope of an element is the mass of the isotope relative to the mass of carbon-12.
     - It is defined as $m_i = \frac{m}{m_{\text{C}}}$, where:
         - $m$ is the atomic mass of the isotope (in $\mathrm{u}$)
@@ -34,16 +22,27 @@ Because substances are usually not isotopically pure, (i.e., they are a mixture 
         - $m_i$ is the relative isotopic mass of the isotope (dimensionless)
     - Example:
         - The relative isotopic mass of $\ce{^{13}C}$ is $m_{\ce{^{13}C}}=\frac{13.0033548378}{12}=1.083$
-- The **relative atomic mass** ($A_r$) is a dimensionless quantity.
-    - $\displaystyle A_r=\frac{\text{average atomic mass of the element in u}}{\frac{1}{12} \times \text{atomic mass of } \ce{^{12}C}}=\frac{m(E)}{1 \, \text{u}}$
+- **relative atomic mass** (or **atomic weight** (deprecated))
+    - $\displaystyle A_r=\frac{m_{\rm{a}}}{m_{\rm{u}}}$ (dimensionless)
     - Example: $A_r(\ce{C})=\frac{12.011\, \mathsf{u}}{1 \, \mathsf{u}}=12.011$
-        
-    - The **standard atomic weight** ($A_r^\circ(E)$ for an element $E$) the weighted arithmetic mean of the relative isotopic masses of all isotopes of that element weighted by each isotope's abundance on Earth.
-        - Formula: $A_r^\circ(E)=\sum_i \left( m_i \cdot f_i \right)$, where:
-            - $m_i$ is the relative isotopic mass of the $i$-th isotope of the element (dimensionless)
-            - $f_i$ is the natural abundance of the $i$-th isotope
-        - Examples:
-            - (carbon) $A_r^\circ(\ce{C})=12.011$
+- **standard atomic weight** ($A_r^\circ(E)$) 
+	- the weighted arithmetic mean of the relative isotopic masses of all isotopes of that element weighted by each isotope's abundance on Earth.
+	- $A_r^\circ(E)=\sum_i \left( m_i \cdot f_i \right)$, where:
+		- $m_i$ is the relative isotopic mass of the $i$-th isotope of the element (dimensionless)
+		- $f_i$ is the natural abundance of the $i$-th isotope
+	- Examples:
+		- (carbon) $A_r^\circ(\ce{C})=12.011$
+- _average atomic mass_ of a sample of an element
+	- $m(E)=\sum_i \left( m_i \cdot f_i \right)$
+		- $m(E)$ is the average atomic mass of the element $E$ (in $\mathrm{u}$)
+		- $m_i$ is the atomic mass of the $i$-th isotope of the element (in $\mathrm{u}$)
+		- $f_i$ is the natural abundance of the $i$-th isotope of the element (in $\%$)
+	- example:
+        - The natural abundance of $\ce{^{12}C}$ and $\ce{^{13}C}$ are $98.93\%$ and $1.07\%$ respectively.
+        - The average atomic mass of carbon is $m(\ce{C})=\left( m(\ce{^{12}C}) \times \text{NA}(\ce{^{12}C}) \right) + \left( m(\ce{^{13}C}) \times \text{NA}(\ce{^{13}C}) \right)=12.011 \, \mathsf{u}$ 
+
+
+> the meaning of the term _relative_ in this context is that the atomic mass is a dimensionless quantity, as it is the ratio of the mass of an atom to the unified atomic mass unit.
 
 ## Amount of Substance
 

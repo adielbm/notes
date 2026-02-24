@@ -128,5 +128,23 @@
       ],
       "key": "L"
     }
-  ]
+  ],
+  "global-search:open": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "S"
+    }
+  ],
+  "float-search:search-obsidian-globally": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "F"
+    }
+  ],
+  "editor:save-file": []
 }

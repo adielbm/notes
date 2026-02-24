@@ -1,23 +1,36 @@
 
+- **input/output** (**I/O**, **i/o**, or informally **io** or **IO**)
+	- software:
+		- goals: (by [@Tanenbaum, 2022])
+			- device independence
+			- uniform naming
+			- error handling
+			- buffering
+			- synchronous (blocking) vs. asynchronous (interrupt-driven) transfers
+			- sharable vs. dedicated device
+		- layers:
+			- [[processes#Interrupts|interrupt handler]]
+			- **device driver** (מנהל התקן)
 
-
-- **Character special files** (or **character devices** or **block-oriented device**)
-- **Block special files** (or **block devices** or **block-oriented device**)
+- **character special files** (or **character devices** or **character-oriented device**)
+- **block special files** (or **block devices** or **block-oriented device**)
 - **device file** (or **device node** or **special file**)
 	- **major number** 
 	- **minor number**
 - **stream**
 	- **bitstream** (or **bit stream** or **binary sequence**)
 	- **bytestream** 
+- addressing:
+	- **memory-mapped I/O** (**MMIO**) (not to be confused with _memory-mapped file_)
+	- **port-mapped I/O** (**PMIO**)
 - **parallel port**
 - **serial port**
 - **parallel communication**
 - **serial communication**
 - **data buffer** (or **buffer**)
 - **control register**
-- **Video random-access memory** (**VRAM**)
-- **Memory-mapped I/O** (**MMIO**)
-- **port-mapped I/O** (**PMIO**)
+- **video random-access memory** (**VRAM**)
+
 - **bus** (historically also called a **data highway** or **databus**)
 	- address bus
 	- memory bus
@@ -31,14 +44,14 @@
 
 - **polling** (or **interrogation**)
 	- **polled I/O** (or **software-driven I/O**)
-- **Hot swapping**
-	- **Hot plugging**
+- **hot swapping**
+	- **hot plugging**
 
 
 
 - **programmed input–output** (or **programmed I/O**, **PIO**)
 - **interrupt-driven I/O**
-- **Direct memory access** (**DMA**)
+- **direct memory access** (**DMA**)
 	- registers:
 		- byte count register
 		- memory address register
@@ -71,8 +84,8 @@
 		- DMA controller:
 			- sends an interrupt to the CPU when the entire block has been transferred
 
-- **Input/output** (**I/O**) **scheduling** (or **disk scheduling**)
+- **input/output** (**I/O**) **scheduling** (or **disk scheduling**)
 	- **first-come, first-served** (FCFS)
-	- **Shortest seek first** (or **shortest seek time first**)
+	- **shortest seek first** (or **shortest seek time first**)
 	- **elevator algorithm** (or **SCAN**)
 	- **circular SCAN** (or **C-SCAN**)

@@ -1,37 +1,43 @@
 
 
+- **interprocess communication** (**IPC**) 
+	- "Communication between processes" [@Galvin, 2018]
+
 mechanisms for processes to communicate and synchronize.
 
-* issues:
-	- Communication: how one process transmits information to another.
-	- Mutual exclusion: ensuring that concurrent processes or threads do not interfere with each other’s operations
-	- Synchronization: maintaining correct execution order when dependencies exist between processes
-	- (the last two are relevant to threards as well)
+* issues: (by [@Tanenbaum, 2022])
+	- data sharing: how one process passes data to another
+		* pipe
+		* software interrupt, 
+			* signal (`SIG`)
+				* signal handler
+			* asynchronous
+		* shared memory
+		* [[#Message passing]]
+	- ensuring that concurrent processes (or threads) do not interfere with each other when accessing shared resources
+	- enforcing correct execution order (of processes or threads) when dependencies exist, so that a consumer waits until a producer has generated the required data. 
 
-
-* types:
-	* pipe
-	* software interrupt, 
-		* signal (`SIG`)
-			* signal handler
-		* asynchronous
-	* Shared memory
-	* Message passing
 
 
 ### Race condition
 
+- **critical regions** (or **critical section**) 
+	- the part of a process where shared resources are accessed
+
 - A **race condition** is a situation where multiple processes access shared data and the result depends on the order of execution.
+
 - a solution must satisfy: 
-	- (**mutual exclusion**) no two processes in **critical regions** (or **critical section**, the part of a process where shared resources are accessed) at the same time.
+	- (**mutual exclusion**) no two processes in critical regions at the same time.
 	- Independence from assumptions about process speed or number of CPUs.
-	- Processes outside their critical regions cannot block others
-	- No process should experience indefinite waiting to enter its critical region.
+	- (progress) Processes outside their critical regions cannot block others
+	- (**bounded waiting**) no process should experience indefinite waiting to enter its critical region.
 
-#### busy waiting
-##### proposals
+#### mutual exclusion (with busy waiting)
 
-- continuously checking a variable (as in `while (turn != i);`, below) is called **busy waiting**. (it wastes CPU cycles)
+in this section we will list some approaches for achiving mutual exclusion. these approaches inculdes busy waiting.
+
+- (**busy waiting**) continuously checking a variable (as in `while (turn != i);`, below) 
+	- (disadvantage: it wastes CPU cycles)
 	- lock that uses busy waiting is called a **spin lock**.
 
 ###### disabling interrupts
@@ -387,11 +393,13 @@ Issue: writer starvation. if there is a steady stream of readers, a writer may b
 
 Alternative Solution: If a writer is waiting, new readers are blocked behind the writer. Existing readers finish their work, then the writer is allowed to proceed. Once the writer finishes, readers can resume.
 
-#### mutex
+#### mutual exclusion (without busy waiting)
+
+##### mutex
 
 - a **lock** (or **mutex**, from mutual exclusion) 
 	- possible states:
-		- unlocked (available) (0) - critical region is available
+	- unlocked (available) (0) - critical region is available
 		- locked (acquired) (1) - critical region is currently held by some thread
 	- operations:
 		- `mutex_lock()` - attempts to acquire the lock. If a thread calls `mutex_lock()` when the mutex is already locked, it must wait until it becomes available.
@@ -416,12 +424,12 @@ mutex_unlock:
 - (efficiency problem: while the mutex solution aviods the wastes CPU cycles like busy waiting, it has to switch between the user space and the kernel which is expensive. (we could choose the mutex blocking approche when there is a high contention, and the busy waiting approche in case of low contention, but, the amount of contention is usually unpredictable). to solve this tradeoff problem, linux introduces **futexes** (fast user-space mutexes) to combine the best of both worlds).
 - #todo condition variables
 
-#### monitor
+##### monitor
 
 
 #### Message passing
 
-- **Message passing** is a method of _inter-process communication (IPC)_ where processes or threads communicate by sending and receiving _messages_ rather than sharing memory.
+- **message passing** is a method of IPC where processes or threads communicate by sending and receiving _messages_ rather than sharing memory.
 - MPI (Message Passing Interface)
 
 #### barrier

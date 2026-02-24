@@ -2,6 +2,7 @@
   {
     "id": "Stallings, 2013",
     "type": "book",
+    "ISBN": "9781292014388",
     "author": [
       {
         "family": "Stallings",
@@ -20,6 +21,7 @@
   {
     "id": "Forouzan, 2012",
     "type": "book",
+    "ISBN": "9780073376226",
     "author": [
       {
         "family": "Forouzan",
@@ -39,6 +41,7 @@
   {
     "id": "Kozierok, 2005",
     "type": "book",
+    "ISBN": "9781593270476",
     "author": [
       {
         "family": "Kozierok",
@@ -222,5 +225,45 @@
       ]
     },
     "publisher": "Cengage Learning"
+  },
+  {
+    "id": "Galvin, 2018",
+    "type": "book",
+    "ISBN": "9781119320913",
+    "title": "Operating System Concepts",
+    "author": [
+      {
+        "family": "Galvin",
+        "given": "Abraham Silberschatz; Greg Gagne; Peter B."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "publisher": "Wiley Global Education US"
+  },
+  {
+    "id": "Stallings, 2018",
+    "type": "book",
+    "ISBN": "9781292214290",
+    "title": "Operating Systems: Internals and Design Principles, Global Edition",
+    "author": [
+      {
+        "family": "Stallings",
+        "given": "William"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "publisher": "Pearson Education Limited"
   }
 ]

@@ -4,13 +4,13 @@
 - **secondary storage** (or **secondary memory** or **storage**) 
 	- nonvolatile 
 
-- **Non-volatile memory** (**NVM**) (or **non-volatile storage**)
+- **non-volatile memory** (**NVM**) (or **non-volatile storage**)
 	- (retains data even when power is off)
-- **Volatile memory**
+- **volatile memory**
 	- (loses data when power is off)
 
 - **disk storage** (e.g. optical disc, magnetic disk)
-- **Magnetic storage** (or **magnetic recording**)
+- **magnetic storage** (or **magnetic recording**)
 	- **magnetic tape**
 	- **magnetic disk**
 		- [[#Hard disk drive (HDD)]]
@@ -20,7 +20,7 @@
 		- compact disc (CD)
 		- digital versatile disc (DVD)
 		- Blu-ray disc
-- Solid-state storage (SSS)
+- solid-state storage (SSS)
 	- types:
 		- DRAM (dynamic random access memory)
 		- flash memory
