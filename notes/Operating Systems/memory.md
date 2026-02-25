@@ -2,7 +2,7 @@
 
 - memory management
 - memory paging (דפדוף)
-- memory management unit (MMU)
+- **memory management unit** (**MMU**)
 - virtual memory
 
 - mapping
@@ -47,14 +47,29 @@
 
 # virutal memory
 
+- **virutal memory**
+- **page** (or **memory page** or **virtual page**)
+	- "a fixed-length contiguous block of virtual memory, described by a single entry in a page table" (Wikipedia)
+- **page frame**
+	- "the smallest fixed-length contiguous block of physical memory into which memory pages are mapped by the operating system." (Wikipedia)
+
 $$\text{Virtual page number}\to \boxed{\displaystyle \mathrm{Page \atop Table}} \to \begin{cases}
 \text{Page frame number} && \text{if present bit = 1}\\
 \text{``on disk''} && \text{if present bit = 0}
 \end{cases}$$
 
-- virutal memory
-- paging 
-- $\text{page-table}(\text{virtual page number}) = \text{page frame number}$
+- **memory paging** (or **paging**)
+- $\textbf{page-table}(\text{virtual page number}) = \text{page frame number}$
+- **page table entry** (**PTE**) contains:
+	- page frame number
+	- present/absent bit
+		- 1 = in memory
+		- 0 = on disk (then CPU generates a **page fault** exception)
+	- protection bits 
+		- read/write/execute permissions 
+	- reference bit
+	- modified bit
+	- caching disabled/enabled
 - **page frame number** (PFN) (which is the physical page number) 
 - page frame
 
@@ -78,16 +93,7 @@ $$\text{Virtual page number}\to \boxed{\displaystyle \mathrm{Page \atop Table}} 
 - $\# \text{page frames} = \frac{\text{physical memory size}}{\text{page size}}$
 - $\text{physical memory size} = 2^{\text{physical address bits}}$ (set by the actual RAM installed)
 	- $\text{physical address bits}= \text{PFN bits} + \text{offset bits}$
-- page table entry (PTE) contains:
-	- page frame number
-	- present/absent bit
-		- 1 = in memory
-		- 0 = on disk (then CPU generates a **page fault** exception)
-	- protection bits 
-		- read/write/execute permissions 
-	- reference bit
-	- modified bit
-	- caching disabled/enabled
+
 
 - **translation lookaside buffer** (TLB) - cache for page table
 
@@ -97,8 +103,7 @@ $$\text{Virtual page number}\to \boxed{\displaystyle \mathrm{Page \atop Table}} 
 - page fault
 	- Minor page fault
 	- Major page fault
-	- segmentation fault
-- multilevel page table
+	- segmentation fault 
 - inverted page table (IPT)
 	- $\mathrm{IPT}(\text{physical frame}) = \text{(process id, virtual page number)}$
 - demand paging

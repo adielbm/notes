@@ -12,6 +12,11 @@
 - **disk storage** (e.g. optical disc, magnetic disk)
 - **magnetic storage** (or **magnetic recording**)
 	- **magnetic tape**
+		- examples:
+			- audio: 
+				- **cassette tape** (or **Compact Cassette**, **audio cassette**, or simply **tape** or **cassette**)
+			- video: 
+				- **VHS**
 	- **magnetic disk**
 		- [[#Hard disk drive (HDD)]]
 		- floppy disk drive (FDD)
