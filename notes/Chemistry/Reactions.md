@@ -10,16 +10,16 @@
 
 ## Redox (Oxidation-Reduction)
 
-- **Redox** (reduction-oxidation) is a type of chemical reaction in which the oxidation states of the reactants change.
-	- **Oxidation**: Loss of electrons (oxidation state increases)
-	- **Reduction**: Gain of electrons (oxidation state decreases)
-- **Oxidizing Agent**: The reactant that gains electrons
-- **Reducing Agent**: The reactant that loses electrons
+- **redox** (reduction-oxidation) is a type of chemical reaction in which the oxidation states of the reactants change.
+	- **oxidation**: Loss of electrons (oxidation state increases)
+	- **reduction**: Gain of electrons (oxidation state decreases)
+- **oxidizing agent**: The reactant that gains electrons
+- **reducing agent**: The reactant that loses electrons
 - **oxidation number** (or **oxidation state**) 
 	- An atom of a free element has an oxidation number of $0$.
-		- Ex. Each $\ce{Cl}$ atom in $\ce{Cl2}$ has an oxidation number of $0$.
+		- ex. Each $\ce{Cl}$ atom in $\ce{Cl2}$ has an oxidation number of $0$.
 	- The oxidation number of a monatomic ion is equal to the charge of the ion.
-		- Ex. The oxidation number of $\ce{Na+}$ is $+1$
+		- ex. The oxidation number of $\ce{Na+}$ is $+1$
 	- When combined with other elements, _alkali metals_ have an oxidation number of $+1$ and _alkaline earth metals_ have an oxidation number of $+2$.
 	- Fluorine has an oxidation number of $-1$ in all its compounds.
 	- Hydrogen has an oxidation number of $+1$ in most of its compounds.

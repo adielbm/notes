@@ -101,12 +101,7 @@ https://en.wikipedia.org/wiki/Construction_of_the_real_numbers
 - $a,b>0\implies \frac{a}{b}>0$
 - $a,b\geq 0\implies{(a>b\iff{a^n>b^n})}$
 
-## Floor & Ceiling
 
-- $\text{floor}(x)=\displaystyle  \lfloor x\rfloor :=\max\{m\in \mathbb {Z} \mid m\leq x\}$ (also called *integral part* or *integer part*)
-	- (1.64) $x-1<\lfloor x\rfloor\leq{x}< \lfloor x\rfloor+1$
-	- $n<x<n+1\implies n=\lfloor x \rfloor$ for $n\in\mathbb{N}$
-- $\text{ceil}(x)=\displaystyle  \lceil x\rceil :=\min\{n\in \mathbb {Z} \mid n\geq x\}$
 
 ## Sets of Reals
 $$\large A\subset\mathbb{R}$$

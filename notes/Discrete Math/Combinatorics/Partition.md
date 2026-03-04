@@ -2,9 +2,11 @@
 
 $p_{k}(n)$ is number of partitions of _n_ into exactly _k_ parts.
 $${p_{k}(n)=p_{k-1}(n-1)+p_{k}(n-k)}$$
-$$\eqalign{
+$$
+\eqalign{
 &1\cr &1 \ 1\cr &1 \ 1 \ 1 \cr &1 \ 2 \ 1 \ 1 \cr &1 \ 2 \ 2 \ 1 \ 1 \cr &1 \ 3 \ 3 \ 2 \ 1 \ 1 \cr &1 \ 3 \ 4 \ 3 \ 2 \ 1 \ 1 \cr &1 \ 4 \ 5 \ 5 \ 3 \ 2 \ 1 \ 1 \cr &1 \ 4 \ 7 \ 6 \ 5 \ 3 \ 2 \ 1 \ 1 \cr
-}$$
+}
+$$
 
 >https://en.wikipedia.org/wiki/Triangle_of_partition_numbers
 

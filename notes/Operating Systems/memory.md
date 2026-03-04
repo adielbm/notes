@@ -53,10 +53,12 @@
 - **page frame**
 	- "the smallest fixed-length contiguous block of physical memory into which memory pages are mapped by the operating system." (Wikipedia)
 
-$$\text{Virtual page number}\to \boxed{\displaystyle \mathrm{Page \atop Table}} \to \begin{cases}
-\text{Page frame number} && \text{if present bit = 1}\\
-\text{``on disk''} && \text{if present bit = 0}
-\end{cases}$$
+$$
+\text{Virtual page number}\to \boxed{\displaystyle \mathrm{Page \atop Table}} \to \begin{cases}
+\text{Page frame number} &&& \text{if present bit = 1}\\
+\text{``on disk''} &&& \text{if present bit = 0}
+\end{cases}
+$$
 
 - **memory paging** (or **paging**)
 - $\textbf{page-table}(\text{virtual page number}) = \text{page frame number}$
@@ -111,7 +113,7 @@ $$\text{Virtual page number}\to \boxed{\displaystyle \mathrm{Page \atop Table}} 
 - **shared library**
 - **position-independent code** (**PIC**)
 - **paging daemon**
-
+ 
 
 # memory allocation
 

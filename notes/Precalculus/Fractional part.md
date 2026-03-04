@@ -1,0 +1,3 @@
+- The **fractional part** (or **decimal part**) of non-negative real number $x$ is defined as: $\operatorname{frac} (x):=x - \lfloor x \rfloor$
+	- also denoted by $\{x\}$, e.g., $\{3.14\}=0.14$
+	- (the fractional part of logarithm result is also called the **mantissa**, e.g., in $\log_{10}(50)\approx 1.699$, the part $.699$ is the *mantissa*. in contrast, the integer part of logarithm result is called the **characteristic**)

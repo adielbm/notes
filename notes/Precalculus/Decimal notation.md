@@ -1,0 +1,8 @@
+- **decimal number** (or **decimal**)
+- **decimal numeral** (or _decimal_ or, loosely, _decimal number_)
+- **decimal fraction** 
+	- a fraction of the form $\frac{a}{10^n}$ (where $a\in\mathbb{Z},n\in\mathbb{N}$)
+- **decimal place** (or **decimal** (_informal_), or **place of decimals**)
+- **decimal separator**
+	- **decimal mark** (or **decimal marker**, or **decimal sign**)
+		- **decimal point** (and **decimal comma**) refer to a dot (and comma, resp.) when it is used as a decimal separator

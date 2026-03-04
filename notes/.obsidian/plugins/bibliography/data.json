@@ -265,5 +265,72 @@
       ]
     },
     "publisher": "Pearson Education Limited"
+  },
+  {
+    "id": "Denniston, 2022",
+    "type": "book",
+    "ISBN": "9781265138462",
+    "title": "General, Organic, and Biochemistry",
+    "author": [
+      {
+        "family": "Denniston"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "publisher": "McGraw-Hill Education"
+  },
+  {
+    "id": "Jones, 2016",
+    "type": "book",
+    "ISBN": "9781464183959",
+    "title": "Chemical Principles",
+    "author": [
+      {
+        "family": "Jones",
+        "given": "Loretta"
+      },
+      {
+        "family": "Atkins",
+        "given": "Peter W."
+      },
+      {
+        "family": "Atkins",
+        "given": "P. W."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "publisher": "W. H. Freeman"
+  },
+  {
+    "id": "Timberlake, 2017",
+    "type": "book",
+    "ISBN": "9780134421353",
+    "title": "Chemistry: An Introduction to General, Organic, and Biological Chemistry",
+    "author": [
+      {
+        "family": "Timberlake",
+        "given": "Karen C."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "publisher": "Pearson"
   }
 ]

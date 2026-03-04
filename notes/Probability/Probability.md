@@ -86,7 +86,11 @@ $$\displaystyle \text{Posterior} = \frac{\text{Likelihood}\times\text{Prior}}{\t
 - (Extended Form) $\displaystyle P(F_j\mid E)=\frac{P(E\mid F_j)P(F_j)}{\sum_{i=1}^{n}P(E\mid F_i)P(F_i)}$ for $j=1,\ldots,n$
 	- Where $F_1,\ldots,F_n$ form a partition of $S$ (i.e., $F_i\cap F_j=\emptyset$ for $i\neq j$ and $\displaystyle\bigcup_{i=1}^{n}F_i=S$)
 # Law of Total Probability
-$$\begin{align*} P(E) &= P(EF) + P(EF^\complement) \\ &= P(E\mid F)P(F) + P(E\mid F^\complement)P(F^\complement) \\ &= P(E\mid F)P(F) + P(E\mid F^\complement)[1-P(F)]\end{align*}$$
+
+$$
+\displaystyle\begin{align*} P(E) &= P(EF) + P(EF^\complement) \\ &= P(E\mid F)P(F) + P(E\mid F^\complement)P(F^\complement) \\ &= P(E\mid F)P(F) + P(E\mid F^\complement)[1-P(F)]\end{align*}
+$$
+
 - Given $F_1,\ldots,F_n$ form a partition of $S$
 	- (General Form) $P(E)=\displaystyle\sum_{i=1}^{n}P(E\mid F_i)P(F_i)=\sum_{i=1}^{n}P(EF_i)$
 	- $\displaystyle\sum_{i=1}^{n}P(EF_i)=P\left(\bigcup_{i=1}^{n}EF_i\right)$

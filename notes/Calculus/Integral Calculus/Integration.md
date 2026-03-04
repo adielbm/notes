@@ -60,9 +60,16 @@ some exmaple
 # Integration by Parts
 
 (2.6)
-$$\displaystyle \int f(x)g'(x) \, dx=f(x)g(x) -\int f'(x)g(x) \, dx$$
-By substitution, $$\small\displaystyle{\begin{align} u=f(x)&\implies du=f'(x)\,dx \\ dv=g'(x)\,dx &\implies v=\int g'(x) \, dx=g(x) \end{align}}$$ we get:
-$$\displaystyle \int u\,dv =uv-\int v\,du$$
+$$
+\int f(x)g'(x) \, dx=f(x)g(x) -\int f'(x)g(x) \, dx
+$$
+By substitution, 
+$$
+\begin{align} u=f(x)&\implies du=f'(x)\,dx \\ dv=g'(x)\,dx &\implies v=\int g'(x) \, dx=g(x) \end{align}
+$$ we get:
+$$
+\int u\,dv =uv-\int v\,du
+$$
 
 > The **LIATE** rule: choose $u=f(x)$ as the function that appears first in LIATE and choose $dv=g'(x)\,dx$ as the last one. (Logarithmic, Inverse-trig, Algebric, Trig, Exponential)
 # Substitution
@@ -82,7 +89,9 @@ $$\displaystyle \int f(g(x))g'(x)\, dx={\color{gray}\left[\begin{align} u &= g(x
 ###  Version 2
 
 - Substitute & Evaluate:
-$$\int f(x) \, dx={\color{gray}\left[\begin{align} x &= \varphi(t) \\ dx &= \varphi'(t)dt \end{align}\right]}=\int f(\varphi(t))\varphi'(t) \, dt$$
+$$
+\int f(x) \, dx={\color{gray}\left[\begin{align} x &= \varphi(t) \\ dx &= \varphi'(t)dt \end{align}\right]}=\int f(\varphi(t))\varphi'(t) \, dt
+$$
 - return to $x$ by substitute $t=\varphi^{-1}(x)$
 
 
@@ -95,11 +104,11 @@ $\int f(x) \, dx=\int f(g(t))g'(t) \, dt\Big\vert_{t=g'(x)}$
 
 #### Trigonometric substitution
 
-| Integrand containing | Substitution                                                            | Identity            |                                                       | Result of Substitution | After Simplification |
-| -------------------- | ----------------------------------------------------------------------- | ------------------- | ----------------------------------------------------- | ---------------------- | -------------------- |
-| ${a^2-x^2}$          | $x=a\sin t$ <br>$dx=a\cos t \,dt$ <br>$t=\arcsin {\frac {x}{a}}$        | $\sin^2t+\cos^2t=1$ | $-\frac{\pi}{2}\leq t\leq \frac{\pi}{2}$              | $a^2(1-\sin^2 t)$      | $a^2\cos^2t$         |
-| ${a^2+x^2}$          | $x=a\tan t$  <br>$dx=a\sec^2 t \,dt$ <br>$t=\arctan {\frac {x}{a}}$     | $\tan^2t+1=\sec^2t$ | $-\frac{\pi}{2}<t<\frac{\pi}{2}$                      | $a^2(1+\tan^2t)$       | $a^2\sec ^2t$        |
-| ${x^2-a^2}$          | $x=a\sec t$$dx=a\sec t\tan t \,dt$ <br>$t=\text{arcsec} {\frac {x}{a}}$ | $\sec^2t-1=\tan^2t$ | $0\leq t<\frac{\pi}{2}$ or $\pi\leq t<\frac{3\pi}{2}$ | $a^2(\sec^2t-1)$       | $a^2\tan ^2t$        |
+| Integrand containing | Substitution                                                               | Identity            |                                                       | Result of Substitution | After Simplification |
+| -------------------- | -------------------------------------------------------------------------- | ------------------- | ----------------------------------------------------- | ---------------------- | -------------------- |
+| ${a^2-x^2}$          | $x=a\sin t$ <br>$dx=a\cos t \,dt$ <br>$t=\arcsin {\frac {x}{a}}$           | $\sin^2t+\cos^2t=1$ | $-\frac{\pi}{2}\leq t\leq \frac{\pi}{2}$              | $a^2(1-\sin^2 t)$      | $a^2\cos^2t$         |
+| ${a^2+x^2}$          | $x=a\tan t$  <br>$dx=a\sec^2 t \,dt$ <br>$t=\arctan {\frac {x}{a}}$        | $\tan^2t+1=\sec^2t$ | $-\frac{\pi}{2}<t<\frac{\pi}{2}$                      | $a^2(1+\tan^2t)$       | $a^2\sec ^2t$        |
+| ${x^2-a^2}$          | $x=a\sec t$<br>$dx=a\sec t\tan t \,dt$<br>$t=\text{arcsec} {\frac {x}{a}}$ | $\sec^2t-1=\tan^2t$ | $0\leq t<\frac{\pi}{2}$ or $\pi\leq t<\frac{3\pi}{2}$ | $a^2(\sec^2t-1)$       | $a^2\tan ^2t$        |
 
  
 
@@ -190,7 +199,9 @@ Decomposition of a [[Rational function]] $N(x)/D(x)$ into partial fractions
 
 (2.10) Integration by Parts for Definite Integrals
 
-$$\displaystyle\int_{a}^{b}f(x)g'(x)\,dx={\Big [}f(x)g(x){\Big ]}_{a}^{b}-\int _{a}^{b}f'(x)g(x)\,dx$$
+$$
+\displaystyle\int_{a}^{b}f(x)g'(x)\,dx={\Big [}f(x)g(x){\Big ]}_{a}^{b}-\int _{a}^{b}f'(x)g(x)\,dx
+$$
 
 By substitution, $$\small\displaystyle{\begin{align} u=f(x)&\implies du=f'(x)\,dx \\ dv=g'(x)\,dx &\implies v=\int g'(x) \, dx=g(x) \end{align}}$$ we get:
 

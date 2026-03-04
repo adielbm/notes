@@ -7,8 +7,10 @@ $$1, 1, 2, 5, 15, 52, 203, 877, 4140, ...$$
 #### Bell numbers computed using recursive formula
 
 
-$${B_{n + 1}} = \sum\limits_{k = 0}^n {\left( {\begin{array}{*{20}{c}}
+$$
+{B_{n + 1}} = \sum\limits_{k = 0}^n {\left( {\begin{array}{*{20}{c}}
 n\\
 k
-\end{array}} \right){B_k}},$$
+\end{array}} \right){B_k}},
+$$
 

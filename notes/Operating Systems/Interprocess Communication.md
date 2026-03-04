@@ -429,7 +429,8 @@ mutex_unlock:
 
 #### Message passing
 
-- **message passing** is a method of IPC where processes or threads communicate by sending and receiving _messages_ rather than sharing memory.
+- **message passing**
+	- "In interprocess communication, a method of sharing data in which messages are sent and received by processes. Packets of information in predefi ned formats are moved between processes or between computers." [@Galvin, 2018]
 - MPI (Message Passing Interface)
 
 #### barrier

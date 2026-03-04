@@ -3,6 +3,9 @@ import rehypeKatex from "rehype-katex"
 import rehypeMathjax from "rehype-mathjax/svg"
 import { QuartzTransformerPlugin } from "../types"
 
+// Import mhchem extension for chemistry formulas
+import "katex/contrib/mhchem"
+
 interface Options {
   renderEngine: "katex" | "mathjax"
 }
@@ -16,7 +19,10 @@ export const Latex: QuartzTransformerPlugin<Options> = (opts?: Options) => {
     },
     htmlPlugins() {
       if (engine === "katex") {
-        return [[rehypeKatex, { output: "html" }]]
+        return [[rehypeKatex, { 
+          output: "html",
+          trust: (context: any) => ['\\ce', '\\pu'].includes(context.command),
+        }]]
       } else {
         return [rehypeMathjax]
       }
