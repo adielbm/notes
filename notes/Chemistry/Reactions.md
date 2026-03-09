@@ -1,16 +1,20 @@
 
-- **Combination Reaction**: Two or more reactants combine to form a single product.
+- **combination reaction** (תגובת הרכבה) 
+	- Two or more reactants combine to form a single product.
 	- $\ce{A + B -> AB}$
-- **Decomposition Reaction**: A single reactant breaks down into two or more products.
+- **decomposition reaction** (תגובת פירוק)
+	- A single reactant breaks down into two or more products.
 	- $\ce{AB -> A + B}$	
 	- $\ce{ClNa -> Cl + Na}$
-- **Combustion Reaction**: A substance reacts with oxygen gas, releasing energy in the form of heat and light.
+- **single displacement reaction** (תגובת התמרה יחידה)
+- **double displacement reaction** (תגובת התמרה כפולה)
+
+- **combustion reaction**: A substance reacts with oxygen gas, releasing energy in the form of heat and light.
 	- $\ce{CH + O2 -> CO2 + H2O}$
 
+## Redox
 
-## Redox (Oxidation-Reduction)
-
-- **redox** (reduction-oxidation) is a type of chemical reaction in which the oxidation states of the reactants change.
+- **redox** (**reduction-oxidation**, חִמצון־חיזור, חִמְזוּר) is a type of chemical reaction in which the oxidation states of the reactants change.
 	- **oxidation**: Loss of electrons (oxidation state increases)
 	- **reduction**: Gain of electrons (oxidation state decreases)
 - **oxidizing agent**: The reactant that gains electrons

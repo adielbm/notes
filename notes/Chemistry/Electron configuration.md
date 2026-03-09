@@ -43,9 +43,10 @@
 	- "atoms usually react in such a way as to obtain a noble gas configuration" [@Denniston, 2022]
 	- "elements in groups 1A to 7A (1, 2, 13 to 17) react with other elements by forming ionic or covalent bonds to produce a stable electron arrangement, usually eight electrons in the outer shell." [@Timberlake, 2017]
 	- "In covalent bond formation, atoms go as far as possible toward completing their octets by sharing electron pairs." [@Jones, 2016]
-- **lone pair** (or **unshared pair** or **non-bonding pair**)
+- **lone pair** (or **unshared pair**, **non-bonding pair**, or **electron pair**)
+	- "Two paired electrons localized in the valence shell on a single atom. Lone pairs should be designated with two dots. The term 'nonbonding electron pair' is more appropriate, and is found in many modern text books." (_IUPAC Gold Book_)
 
-- electron density
+- **electron density** (or **electronic density**)
 - isoelectronicity
 
 | $\ell$ | subshell<br>letter | electrons <br>$2(2\ell +1)$ | shells containing it                  | orbitals                                               |

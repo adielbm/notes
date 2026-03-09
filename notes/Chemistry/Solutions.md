@@ -1,0 +1,25 @@
+
+
+
+- **solution**
+	- "A liquid or solid phase containing more than one substance, when for convenience one (or more) substance, which is called the solvent, is treated differently from the other substances, which are called solutes. When, as is often but not necessarily the case, the sum of the mole fractions of solutes is small compared with unity, the solution is called a dilute solution." (_IUPAC Gold Book_)
+	- **solubility** (מְסִיסוּת)
+		- "_like dissolves like_" (Latin: "_Similia similibus solventur_")
+		- **insolubility**
+	- **solvation** (הֲמָסָה)
+		- **dissociation** (דיסוציאציה, הִתְפָּרְדוּת, פירוק ליונים)
+	- **hydration** (הִידְרַצְיָה)
+	- **soluble** (מָסִיס)
+		- "A _soluble substance_ is one that dissolves to a significant extent in a specified solvent. When solubility is mentioned without indicating a solvent, it normally means “soluble in water.”" [@Jones, 2016]
+		- "An _insoluble substance_ is one that does not dissolve significantly in a specified solvent" [@Jones, 2016]
+	- **solute** (מוּמָס) - dissolved substance
+		- **dissolved** (_adj_.) - that has been disintegrated in a solvent (Wiktionary) 
+	- **solvent** (מֵמֵס, מְמִסִּים)
+		- "(1) The most abundant component of a solution. (2) The component of a solution in which the other components are considered to be dissolved." [@Jones, 2016]
+	- **electrolysis** (אלקטרוליזה)
+		- **electrolyte** (אלקטרוליט)
+			- **nonelectrolyte**
+
+
+
+
