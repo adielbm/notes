@@ -3,9 +3,11 @@
   "obsidian-latex-suite",
   "dark-mode-images",
   "obsidian-hide-sidebars-when-narrow",
-  "img-caption",
   "darlal-switcher-plus",
   "obsidian-style-settings",
   "bibliography",
-  "github-copilot"
+  "github-copilot",
+  "css-editor",
+  "obsidian-excalidraw-plugin",
+  "highlight-exact-phrase"
 ]

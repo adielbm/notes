@@ -1,0 +1,67 @@
+
+- **thermodynamics**
+- **laws of thermodynamics**
+	- **zeroth law of thermodynamics**
+	- **first law of thermodynamics** 
+		- $\Delta U = Q - W$
+	- **second law of thermodynamics**
+	- **third law of thermodynamics**
+- **state function**
+- **thermodynamic system** (or **system**)
+- **surroundings**
+- **thermal energy**
+- **internal energy** ($U$) (אנרגיה פנימית)
+- **heat** ($Q$)
+- **heat transfer**
+- **thermodynamic potential** (or **thermodynamic potential energy**)
+- **calorimetry** (קלורימטריה)
+- **exothermic reaction**
+- **endothermic reaction** 
+	- (see also _endothermic process_)
+- **spontaneous process**
+- **enthalpy** ($H$)
+	- $\Delta H_{\text{recation}}=H_{\text{products}}-H_{\text{reactants}}$
+	- $H_\text{reactants}<H_{\text{products}}$ → $\Delta H$ is positive → the reaction is endothermic
+	- $H_\text{reactants}>H_{\text{products}}$ → $\Delta H$ is negative → the reaction is exothermic
+	- SI unit: joule
+- **entropy** ($S$)
+- **(thermodynamic) free energy**
+	- **Gibbs free energy** (or **Gibbs energy**)
+		- $\Delta G=\Delta H-T\Delta S$
+		- $\Delta G<0$ → spontaneous reaction
+		- $\Delta G = 0$ → equilibrium
+		- $\Delta G>0$ → nonspontaneous reaction
+- **heat capacity** (or **thermal capacity**) $C$ (קיבול חום)
+	- SI unit: $\mathrm{J \cdot K^{-1}}$
+	- 
+- **specific heat capacity** ($c$) (קיבול חום סגולי) is the amount of heat required to raise the temperature of one unit of mass (typically $1\,\mathrm{kg}$ or $1\,\mathrm{g}$) of a substance by $1^\circ\mathrm{C}$ (or equivalently $1^\circ\mathrm{K}$)
+	- aka: **massic heat capacity** or **specific heat** (חום סגולי)
+	- SI unit: $\mathrm{J \cdot kg^{-1} \cdot K^{-1}}$
+- $Q = mc\Delta T=C\Delta T$
+
+
+
+
+- **chemical kinetics** (or **reaction kinetics**)
+- **reaction rate** (or **rate of reaction**) $v$ 
+- **rate equation** (or **rate law** or **empirical differential rate equation**)
+	- $v=k[\mathrm {A} ]^{n}$ (where $n$ is the **reaction order**)
+	- $v=k[\mathrm {A} ]^{m}[\mathrm {B} ]^{n}$ ($n$ and $m$ are the **partial orders**, and $m+n$ is the **overall order**)
+	- **reaction rate constant** (or **rate coefficient**) $k$
+	- **Arrhenius equation**
+- **activated complex** (קומפלקס משופעל, תצמיד משופעל)
+- **activation energy** (אנרגיית שפעול) $E_a$
+- **effective collision** (התנגשות פוריה)
+
+- **chemical equilibrium** (שיווי משקל כימי)
+- **equilibrium reaction**
+	- "When the reactants in a chemical reaction are initially in a Boltzmann distribution the reaction is referred to as an equilibrium reaction." (IUPAC)
+- **dynamic equilibrium**
+- **equilibrium constant** (of a substance in a given temperature)
+	- $\displaystyle K_{\text{eq}}=\frac{[\ce{C}]^c [\ce{D}]^d}{[\ce{A}]^a [\ce{B}]^b}$ (dimensionless)
+- **reversible process** (תהליך הפיך)
+	- **irreversible process** (תהליך בלתי הפיך)
+	- $\ce{<=>}$
+- **reversible reaction**
+	- $a\ce{A}+b\ce{B}\ce{<=>}c\ce{C}+d\ce{D}$
+- **Le Chatelier's principle**

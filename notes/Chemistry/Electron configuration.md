@@ -6,7 +6,6 @@
 	- For every subshell (given by $n$ and $\ell$):
 		- The number of orbitals is $2\ell+1$.
 		- The maximum number of electrons is $2(2\ell+1)$.
-- **energy level**
 - **atomic orbital**
 	- every atomic orbital can hold a maximum of two electrons
 	- electrons with the same $n$, $\ell$, and $m_{l}$ are in the same orbital. (they have the same energy level, shape, and orientation)
@@ -43,8 +42,12 @@
 	- "atoms usually react in such a way as to obtain a noble gas configuration" [@Denniston, 2022]
 	- "elements in groups 1A to 7A (1, 2, 13 to 17) react with other elements by forming ionic or covalent bonds to produce a stable electron arrangement, usually eight electrons in the outer shell." [@Timberlake, 2017]
 	- "In covalent bond formation, atoms go as far as possible toward completing their octets by sharing electron pairs." [@Jones, 2016]
-- **lone pair** (or **unshared pair**, **non-bonding pair**, or **electron pair**)
-	- "Two paired electrons localized in the valence shell on a single atom. Lone pairs should be designated with two dots. The term 'nonbonding electron pair' is more appropriate, and is found in many modern text books." (_IUPAC Gold Book_)
+
+- **unpaired electron**
+- **electron pair** (or **Lewis pair**)
+	- **lone pair** (or **unshared pair**, **non-bonding pair**, or **electron pair**)
+		- "Two paired electrons localized in the valence shell on a single atom. Lone pairs should be designated with two dots. The term 'nonbonding electron pair' is more appropriate, and is found in many modern text books." (_IUPAC Gold Book_)
+	- **shared pairs** (or **bonding pairs**)
 
 - **electron density** (or **electronic density**)
 - isoelectronicity

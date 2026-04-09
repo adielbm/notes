@@ -1,9 +1,15 @@
-- An **ion** is an atom or molecule that has a net electrical charge. 
+- **ion** 
+	- "an atom or molecule that has a net electrical charge". 
 - The **ionic charge** of an ion is the charge of the ion and its magnitude is the number of electrons gained or lost by the atom.
     - **cation**: positively charged ion (lost electrons)
     - **anion**: negatively charged ion (gained electrons)
-- The ion charge is written as a superscript after the chemical symbol.
-
+	- The ion charge is written as a superscript after the chemical symbol.
+- **polyatomic ion** (or **molecular ion**)
+	- "A group of covalently bonded nonmetal atoms that has an overall electrical charge." [@Timberlake, 2017]
+	- "An ion in which more than two atoms are linked by covalent bonds" [@Jones, 2016]
+- **monatomic ion** (or **monoatomic ion**) ("_atomic ion_" or "_simple ion_")
+	- "An ion formed from a single atom." [@Jones, 2016]
+- **ionization** (יינון)
 # monatomic ions
 
 | cation       | name          |

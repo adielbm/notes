@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" width="260" height="260" role="img" aria-label="Lewis structure">
+  <style>
+    .bond { stroke: #000000; stroke-width: 4; stroke-linecap: square; }
+    .atom { fill: #000000; font-weight: 500; text-anchor: middle; dominant-baseline: central; }
+    .electron { fill: #000000; }
+    .ion-bracket { fill: none; stroke: #000000; stroke-width: 2.4; stroke-linecap: square; stroke-linejoin: round; }
+    .ion-charge { fill: #000000; font-weight: 600; dominant-baseline: middle; }
+  </style>
+  <g style="font-family: &apos;Times New Roman&apos;, &apos;Cambria&apos;, serif; font-size: 36px;">
+    <line class="bond" x1="130" y1="76" x2="130" y2="104" />
+    <line class="bond" x1="130" y1="184" x2="130" y2="156" />
+    <line class="bond" x1="76" y1="130" x2="104" y2="130" />
+    <line class="bond" x1="184" y1="130" x2="156" y2="130" />
+    <circle class="electron" cx="135" cy="27" r="3" />
+    <circle class="electron" cx="125" cy="27" r="3" />
+    <circle class="electron" cx="105" cy="45" r="3" />
+    <circle class="electron" cx="105" cy="55" r="3" />
+    <circle class="electron" cx="155" cy="55" r="3" />
+    <circle class="electron" cx="155" cy="45" r="3" />
+    <circle class="electron" cx="125" cy="235" r="3" />
+    <circle class="electron" cx="135" cy="235" r="3" />
+    <circle class="electron" cx="105" cy="205" r="3" />
+    <circle class="electron" cx="105" cy="215" r="3" />
+    <circle class="electron" cx="155" cy="215" r="3" />
+    <circle class="electron" cx="155" cy="205" r="3" />
+    <circle class="electron" cx="55" cy="107" r="3" />
+    <circle class="electron" cx="45" cy="107" r="3" />
+    <circle class="electron" cx="45" cy="155" r="3" />
+    <circle class="electron" cx="55" cy="155" r="3" />
+    <circle class="electron" cx="25" cy="125" r="3" />
+    <circle class="electron" cx="25" cy="135" r="3" />
+    <circle class="electron" cx="215" cy="107" r="3" />
+    <circle class="electron" cx="205" cy="107" r="3" />
+    <circle class="electron" cx="205" cy="155" r="3" />
+    <circle class="electron" cx="215" cy="155" r="3" />
+    <circle class="electron" cx="235" cy="135" r="3" />
+    <circle class="electron" cx="235" cy="125" r="3" />
+    <text class="atom" x="130" y="130" dy="0.04em">Si</text>
+    <text class="atom" x="130" y="50" dy="0.04em">Br</text>
+    <text class="atom" x="130" y="210" dy="0.04em">Br</text>
+    <text class="atom" x="50" y="130" dy="0.04em">Br</text>
+    <text class="atom" x="210" y="130" dy="0.04em">Br</text>
+  </g>
+  <g style="font-family: &apos;Times New Roman&apos;, &apos;Cambria&apos;, serif; font-size: 25px;">
+  </g>
+</svg>

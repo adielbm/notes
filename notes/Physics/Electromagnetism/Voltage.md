@@ -7,7 +7,7 @@
 	- $V$ is the electric potential at a point in space due to a point charge $Q$ (in $\mathrm{V}$)
 	- $Q$ is the point charge creating the electric potential (in $\mathrm{C}$)
 	- $r$ is the distance between the charge and the point in space (in $\mathrm{m}$)
-	- $k$ is [[Charge#Coulomb's Law|Coulomb's constant]]
+	- $k$ is [[Electric charge#Coulomb's Law|Coulomb's constant]]
 - The electric potential at a point due to multiple charges is the sum of the potentials due to each charge. $V_{\text{total}}=V_1+V_2+V_3+...$
 
 ## Voltage

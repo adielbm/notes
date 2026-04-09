@@ -16,9 +16,10 @@
 - **electron affinity**
 	- Lowest for noble gases and alkali metals
 	- Highest for halogens
-- **electronegativity**
+- **electronegativity** $\chi$
 	- Follows a similar trend to electron affinity
 	- Increases from bottom left to top right of the periodic table
+	- **Pauling scale**
 - effective charge (Z-effective) 
 
 ### Effective Nuclear Charge (Z-effective)

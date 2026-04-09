@@ -105,7 +105,7 @@ Given a binary relation $R$ from $A$ to $B$:
 - $R$ is transitive if and only if $R^n ⊆ R$ (for $n = 1, 2, 3, …$ )
 - (q36a) - if $R,S$ are transitive, then $R\cap{S}$ is transitive
 
-## Transitive Relations 
+## Transitive relations 
 
 > in general, *strict* means *irreflexive*, *total* means *connected*, *partial* means not (necessarily) *total*.
 
@@ -120,7 +120,7 @@ Given a binary relation $R$ from $A$ to $B$:
 	- transitive, connected, irreflexive
 	- transitive, connected, asymmetric
 
-### Ordered Sets
+### Ordered sets
 
 - A **partially ordered set** (or **poset**) is a set on which a partial order is defined
 - A **totally ordered set** (or **linearly ordered set**, **chain**, **toset**) is a set on which a total order is defined
@@ -136,7 +136,7 @@ Given a binary relation $R$ from $A$ to $B$:
 
 ## Partition
 
-- A **partition** of $A$ is a set of non-empty pairwise disjoint sets whose union is $A$
+- (**partition of a set**) A **partition** of $A$ is a set of non-empty pairwise disjoint sets whose union is $A$
 	- The sets in the partition are called **cells** (or **blocks**)
 	- If $a\in A$ then the cell containing $a$ is denoted by $[a]$
 	- A partition $P_1$ is called a **refinement** (עידון) of the partition $P_2$ if every set in $P_1$ is a subset of one of the sets in $P_2$.

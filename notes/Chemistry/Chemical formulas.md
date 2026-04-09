@@ -68,16 +68,20 @@
 - **Valence shell electron pair repulsion** (**VSEPR**) **theory**
 - **molecular geometry**
 - **bond angles**
+- $\text{AX}_m\text{E}_n$
+	- $\mathrm{A}$ represents the central atom.
+	- $\mathrm{X}$ represents the ligands (atoms bonded to the central atom)
+		- $m$ 
+	- $\mathrm{E}$ represents a lone pair of electrons on the central atom
+	- $m+n$ is the **steric number**
 
 
 
-
-
-|     | 0                             | 1                                    | 2                                      |
-| --- | ----------------------------- | ------------------------------------ | -------------------------------------- |
-| 2   | **linear** <br>(180°)         |                                      |                                        |
-| 3   | **trigonal planar**<br>(120°) | **angular** (or **bent**)<br>(<120°) |                                        |
-| 4   | **tetrahedral**<br>(109.5°)   | **trigonal pyramid**<br>(~107°)      | **angular** (or **bent**)<br>(~104.5°) |
+|                         | $n=0$                         | $1$                                  | $2$                                    |
+| ----------------------- | ----------------------------- | ------------------------------------ | -------------------------------------- |
+| (Steric<br>number)<br>2 | **linear** <br>(180°)         |                                      |                                        |
+| 3                       | **trigonal planar**<br>(120°) | **angular** (or **bent**)<br>(<120°) |                                        |
+| 4                       | **tetrahedral**<br>(109.5°)   | **trigonal pyramid**<br>(~107°)      | **angular** (or **bent**)<br>(~104.5°) |
 
 
 

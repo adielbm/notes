@@ -1,39 +1,43 @@
 
-- **chemical bond**
-	- **ionic bonding**
-	- **metallic bonding**
-	- **covalent bond**
-		- polar covalent bond
-		- non-polar covalent bond
-- **polarity** 
-	- of bond:
-		- $\Delta \chi \gtrsim 1.7$ → predominantly ionic bond
-		- $0.4 \lesssim \Delta \chi \lesssim 1.7$ → polar covalent bond
-		- $\Delta \chi \lesssim 0.4$ → nonpolar covalent bond
-	- of molecule:
-		- if it has no lone pair (on the central atom) and where all terminal atoms are the same, then it is nonpolar
-		- if it has one lone pair (on the central atom), then it is polar
-		- if it has two or more lone pair (on the central atom), then it is usually polar
-		- if it is made up of only carbon and hydrogen (hydrocarbons), then it is non-polar
+- **chemical bond** - "A sharing of valence electrons by atoms" [@Timberlake, 2017]
+	- (strong) **intramolecular force**
+		- **ionic bond** ("completely polar bond")
+		- **metallic bond**
+		- **covalent bond**
+			- **single**, **double** or **triple** bond occurs when one (or two or three) pairs of electrons are shared.
+			- **polar covalent bond** (electrons are shared unequally)
+				- "A bond in which there are nonzero partial charges on the atoms" [@Jones, 2016]
+			- **non-polar covalent bond** (electrons are shared equally)
+	- (weak) **intermolecular force** (**IMF**)
+		- **hydrogen bond** (**H-bond**)
+			- **Dn−H···Ac**
+			- the strongest of the intermolecular forces
+			- occurs when a hydrogen atom is covalently bonded to a highly electronegative atom (specifically $\ce{H,O,F}$)
+		- **van der Waals force**
+		- Dipole–dipole interaction
+			- interactions occur between polar molecules
+		- **London dispersion force** (**LDF**)
+			- the weakest of the intermolecular forces
 
 
+- "_completely nonpolar bond_ occurs when the electronegativities are identical and therefore possess a difference of zero" (Wikipedia)
+- "The partial charges on the two atoms in a polar covalent bond form an [[Electric charge#Electric dipole|electric dipole]]"
+- "All bonds between atoms of different elements are polar to some extent." [@Jones, 2016]
+
+
+- polarity of a bond: 
+	- $\Delta \chi \gtrsim 1.7$ → predominantly ionic bond
+	- $0.4 \lesssim \Delta \chi \lesssim 1.7$ → polar covalent bond
+	- $\Delta \chi \lesssim 0.4$ → nonpolar covalent bond
 
 - **partial charge** (or **net atomic charge**)
 	- $\delta+$ and $\delta-$
 
 
-
-- **single bond**
-- **double bond**
-- **triple bond**
 - **bond order**
 - **bond energy** (**BE**)
 - **bond length** (or **bond distance**)
 	- $\text{bond length: triple} < \text{double} < \text{single}$
 - **isomers**
 
-
-
-- **intermolecular force** (**IMF**)
-- **intramolecular force**
 

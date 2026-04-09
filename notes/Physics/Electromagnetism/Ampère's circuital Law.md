@@ -1,0 +1,6 @@
+
+|                              | Differential Form                                                                       | Integral Form                                                                                                                                                                                                      |
+| ---------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Ampère’s (circuital) law** | ${\displaystyle \nabla \times \vec{\boldsymbol{B}} =\mu _{0} {\vec{\boldsymbol{J}}}  }$ | $\displaystyle \oint_{\mathcal{C}} \vec{\boldsymbol{B}} \cdot d\vec{\boldsymbol{\ell}} = \mu_0 I_{\text{enc}}$<br>where $I_{\text{enc}}$ is the current through the area enclosed by the closed path $\mathcal{C}$ |
+
+_Ampère’s circuital law_ is a special case [[Maxwell's equations|Ampère–Maxwell law]] when there is no changing electric field (steady current). 

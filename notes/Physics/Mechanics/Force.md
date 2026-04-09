@@ -42,6 +42,8 @@ $$\vec{\mathbf{F}}_{\text{G}} = m\vec{\mathbf{g}}$$
 		- The negative sign indicates that the gravitational field points towards the mass $M$
 		- $G=6.67430(15)\times 10^{-11}\ \mathrm {m^{3}kg^{-1}s^{-2}}$ is the **gravitational constant** (dim. ${\mathsf {M^{-1}L^{3}T^{-2}}}$)
 		- If $M$ is the Earth, then $g=G M_{\text{E}}r^2\approx 9.81\ \mathrm {m/s^2}$ (**Gravity on Earth**)
+		- **standard acceleration of gravity** (or **standard acceleration of free fall**, often called simply **standard gravity**)
+			- $g_0$ (or $g_\mathrm{n}$, $g_\mathrm{e}$ or $g$)
 - $W=mg$ is the **weight** (in $\mathrm{N}$) of an object with mass $m$ in a gravitational field with gravitational acceleration $g$.
 	- (Some define weight as a vector quantity, the gravitational force acting on an object, while others define it as a scalar quantity, the magnitude of the gravitational force)
 
@@ -78,11 +80,6 @@ $$\displaystyle  F=G{\displaystyle\frac {m_{1}m_{2}}{r^{2}}}$$
 
   
   
-# Density
-
-- $\displaystyle\rho = \frac{m}{V}$ is the **density** (in $\mathrm{kg/m^3}$)
-
-
 
 
 

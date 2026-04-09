@@ -4,13 +4,13 @@
 
 |                                         | SI unit           | In SI base units                                  | Dim.                             | Quantity                                       |                              |                            |
 | --------------------------------------- | ----------------- | ------------------------------------------------- | -------------------------------- | ---------------------------------------------- | ---------------------------- | -------------------------- |
-| $\mathrm{s}$                            | second            | **Base**                                          | $\mathrm{T}$                     | time $t$                                       |                              |                            |
-| $\mathrm{m}$                            | metre             | **Base**                                          | $\mathrm{L}$                     | length $l, r, x$                               |                              |                            |
-| $\mathrm{kg}$                           | kilogram          | **Base**                                          | $\mathrm{M}$                     | mass $m$                                       |                              |                            |
-| $\mathrm{A}$                            | ampere            | **Base**                                          | $\mathrm{I}$                     | electric current $I, i$                        |                              | $I(t)=\frac{dq(t)}{dt}$    |
-| $\mathrm{K}$                            | kelvin            | **Base**                                          | $\mathrm{\Theta}$                | thermodynamic temperature $T$                  |                              |                            |
-| $\mathrm{mol}$                          | mole              | **Base**                                          | $\mathrm{N}$                     | amount of substance $n$                        |                              |                            |
-| $\mathrm{cd}$                           | candela           | **Base**                                          | $\mathrm{J}$                     | luminous intensity $I_{\rm {v}}$               |                              |                            |
+| $\mathrm{s}$                            | second            | **base**                                          | $\mathrm{T}$                     | time $t$                                       |                              |                            |
+| $\mathrm{m}$                            | metre             | **base**                                          | $\mathrm{L}$                     | length $l, r, x$                               |                              |                            |
+| $\mathrm{kg}$                           | kilogram          | **base**                                          | $\mathrm{M}$                     | mass $m$                                       |                              |                            |
+| $\mathrm{A}$                            | ampere            | **base**                                          | $\mathrm{I}$                     | electric current $I, i$                        |                              | $I(t)=\frac{dq(t)}{dt}$    |
+| $\mathrm{K}$                            | kelvin            | **base**                                          | $\mathrm{\Theta}$                | thermodynamic temperature $T$                  |                              |                            |
+| $\mathrm{mol}$                          | mole              | **base**                                          | $\mathrm{N}$                     | amount of substance $n$                        |                              |                            |
+| $\mathrm{cd}$                           | candela           | **base**                                          | $\mathrm{J}$                     | luminous intensity $I_{\rm {v}}$               |                              |                            |
 | $\mathrm{Hz}$                           | hertz             | $\mathrm{s^{-1}}$                                 | ${\mathsf {T^{-1}}}$             | frequency $f$, rotational frequency $\nu$      |                              |                            |
 | $\mathrm{C}$                            | coulomb           | $\mathrm{s\cdot A}$                               | $\mathrm{TI}$                    | electric charge $q$                            |                              |                            |
 | $\mathrm{Pa\cdot s}$                    | pascal-second     | $\mathrm{kg   \cdot m^{−1}\cdot s^{−1}}$          | ${\mathsf {ML^{−1}T^{-1}}}$      | dynamic viscosity $\eta$                       |                              |                            |
@@ -52,7 +52,7 @@
     - (revolutions per minute, $\mathrm{r \cdot min^{-1}}$) $\mathrm{1\, rpm} = \frac{1}{60}\,\mathsf{Hz}$
 
 
-### decibels
+## decibels
 
 - $L = 10 \log_{10}\left(\frac{P}{P_0}\right)$ 
 	- $P$: power level
@@ -61,3 +61,12 @@
 
 
 $L_I = 10 \, \log_{10}\!\left(\frac{I}{I_0}\right) \quad \text{dB}$
+
+
+
+## calorie
+
+- in physics/chemistry: **small calorie**, **gram calorie**, **thermochemical calorie**
+	- $1\,\mathrm{cal}=4.184\,\mathrm{J}$
+- in nutrition: **large calorie**, **kilocalorie**, **Calorie**, **kilogram calorie**
+	- $1\,\mathrm{Cal}=4.184\,\mathrm{kJ}$
