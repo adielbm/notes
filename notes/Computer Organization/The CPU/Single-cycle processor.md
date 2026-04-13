@@ -1,4 +1,4 @@
-> this page covers chapter 4. but some of terms and concepts was already covered in [[Logic Circuits]] 
+> this page covers chapter 4. but some of terms and concepts was already covered in [[Boolean algebra]], [[Sequential logic]], [[Combinational logic]]
 
 ___
 
@@ -23,8 +23,8 @@ ___
 # Logic Design Conventions
 
 - **Datapath elements** are classified into two types:
-	- [[Logic Circuits#Combinational Logic|Combinational elements]] (e.g. [[ALU#ALU Summary|ALU]], [[Logic Circuits#Logic Gates|AND gate]])
-	- [[Logic Circuits#Sequential Logic|State elements]] (e.g. [[Logic Circuits#Register File|Registers]], Memory (data, instruction))
+	- [[Combinational logic|Combinational elements]] (e.g. [[ALU#ALU Summary|ALU]], [[Boolean algebra#Logic Gates|AND gate]])
+	- [[Sequential logic|State elements]] (e.g. [[Register file|Registers]], Memory (data, instruction))
 
 - clock methodology: edge-triggered (positive, rising edge) 
 - nearly all elements are 32-bit wide

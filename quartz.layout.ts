@@ -29,8 +29,6 @@ export const defaultListPageLayout: PageLayout = {
     Component.Filters(),
     Component.Breadcrumbs({ showCurrentPage: false }),
     Component.ArticleTitle(),
-    Component.ContentMeta(),
-    Component.Content(),
   ],
   left: [Component.Search(), Component.DesktopOnly(Component.Explorer())],
   right: [],

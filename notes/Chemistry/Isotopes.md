@@ -1,9 +1,12 @@
 
-- Atoms with the same number of protons but different numbers of neutrons are called **isotopes**.
-    - Example: $\ce{^{12}_{6}C}$, $\ce{^{13}_{6}C}$, and $\ce{^{14}_{6}C}$ are isotopes of carbon.
+- **isotopes** are distinct [[Chemistry#Nuclide|nuclides]] of the same element
+    - examples:
+	    - **protium** ($_{1}^1\ce{H}$): the most common hydrogen isotope (nucleus: proton)
+	    - **deuterium** ($_{1}^2\ce{H}$ or $\ce{D}$) (nucleus: **deuteron**)
+	    - **tritium** ($_{1}^3\ce{H}$ or $\ce{T}$) (nucleus: **triton**)
+	    - $\ce{^{12}_{6}C}$, $\ce{^{13}_{6}C}$, and $\ce{^{14}_{6}C}$ (**radiocarbon**) are isotopes of carbon.
+	- 
 - The **natural abundance** (NA) of an isotope is the percentage of that isotope that occurs in nature.
-
-
 
 ### AZE Notation
 $$\displaystyle \Huge ^{A}_{Z}\ce{E}$$

@@ -31,6 +31,12 @@
 - **stoichiometry**
 	- **stoichiometric amount** (or **stoichiometric ratio**)
 
+
+- **binding energy**
+- [[Chemical bond|bond energy]]
+- [[Nuclear chemistry|nuclear binding energy]]
+- **bond dissociation energy** (**BDE**)
+
 ## nomenclature
 
 - nomenclature for chemical compounds:
@@ -59,25 +65,40 @@
 	- second: prefix and _ide_
 
 
-## Atomic Structure
+# Atom
 
-- An **atomic nucleus** of an atom is the small, dense region consisting of protons and neutrons at the center of the atom.
-- The **atomic number** ($Z$) is the number of protons in the nucleus of an atom. It is also the number of electrons in a neutral atom.
-- The **neutron number** ($N$) is the number of neutrons in the nucleus of an atom.
-- The **(atomic) mass number** ($A$) is the total number of protons and neutrons (together known as **nucleons**) in an atomic nucleus. ($A = Z + N$)
-    - It is approximately equal to the atomic mass of the atom in unified atomic mass units.
-- $D=N-Z$ is known as the **neutron excess**
 - **Bohr model**
 - **ground state**
 - **excited state**
 - **energy level**
 
-## Atomic Particles
+## Nuclide
 
-| Subatomic particle | Symbol | [[Circuits#Electric charge\|Charge]] | Mass (u)                       | Location in atom |
-| ------------------ | ------ | ----------------------------------------------- | ------------------------------ | ---------------- |
-| Proton             | $p^+$  | $+1$                                            | $1.007276466812$               | Nucleus          |
-| Neutron            | $n^0$  | $0$                                             | $1.00866491588$                | Nucleus          |
-| Electron           | $e^-$  | $-1$                                            | $5.48579909070 \times 10^{-4}$ | Electron cloud   |
+- **nuclide** (or **nucleide**, **nuclear species**) (נוּקליד)
+	- Nuclides' classification:
+		- [[isotopes]] (equal $Z$) (see Wikipedia: [Isotope vs. nuclide](https://en.wikipedia.org/wiki/Isotope#Isotope_vs._nuclide))
+		- isotones (equal $A$)
+		- isobars (equal $N$)
 
 
+## Subatomic particles
+
+| subatomic particle | symbol     |                      | charge | mass number | mass ($\mathrm{u}$)                                                  |
+| ------------------ | ---------- | -------------------- | ------ | ----------- | -------------------------------------------------------------------- |
+| **proton**         | $p$, $p^+$ | $\ce{_{1}^{1}H}$     | $1+$   | 1           | $1.007276466812$                                                     |
+| **neutron**        | $n$, $n^0$ | $\ce{^{1}_{0}{\,}}n$ | $0$    | 1           | $1.00866491588$                                                      |
+| **electron**       | $e^-$      |                      | $1-$   | 0           | (**electron mass** $m_\mathrm{e}$)<br>$5.48579909070 \times 10^{-4}$ |
+
+
+## Atomic nucleus
+
+- **atomic nucleus** (גרעין האטום)
+	- "the small, dense region consisting of protons and neutrons at the center of the atom" (Wikipedia)
+
+
+|                    | symbol      |                                                   |                                                                                       | aka                                          |
+| ------------------ | ----------- | ------------------------------------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------- |
+| **atomic number**  | $Z$         | the number of protons in the nucleus of an atom   | also the number of electrons in a neutral atom                                        | **nuclear charge number**                    |
+| **neutron number** | $N$         | the number of neutrons in the nucleus of an atom  |                                                                                       |                                              |
+| **mass number**    | $A = Z + N$ | the number of **nucleons** (protons and neutrons) | It is approximately equal to the atomic mass of the atom in unified atomic mass units | **atomic mass number** or **nucleon number** |
+| **neutron excess** | $D=N-Z$     |                                                   |                                                                                       |                                              |

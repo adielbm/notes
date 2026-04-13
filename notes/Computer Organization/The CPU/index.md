@@ -1,0 +1,1 @@
+this folder contains summary of the CPU was described in _Computer Organization and Design MIPS Edition_.

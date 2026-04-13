@@ -42,8 +42,14 @@
 	- $f(x)=ab^{x}=a(1+r)^x$, where: 
 		- $a$ is the **initial amount**
 		- $b$ is the **base**
+			- if $0<b<1$, then $f$ is an exponential decay
 		- $r$ is the **growth rate** (if $r>0$) or the **decay rate** (if $r<0$) per time period
 		- $x=0,1,2,\dots$ is the number of time periods that have passed
+	- (**exponential decay**) $f(x):[0,\infty]\to \mathbb{R}$, if $\exists \lambda>0:\frac{df}{dx}=-\lambda f$ (or equivalently: $\exists \lambda>0,a>0:f(x)=ae^{-\lambda x}$), where:
+		- $a=f(0)$ is the **initial amount**
+		- $\lambda=-\ln b$ is the **decay constant** (where $b$ is the base)
+		- [[Nuclear chemistry|half-life]]: $t_{1/2}=\frac{\ln(2)}{\lambda}$
+		- mean lifetime: $\tau=\frac{1}{\lambda}$
 
 #### Logarithmic Functions
 

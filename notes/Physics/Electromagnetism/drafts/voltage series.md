@@ -1,0 +1,2 @@
+- The total voltage of a **series** (connected end-to-end positive to negative) connection is the sum of the voltages of the individual cells $V_{\text{total}}=V_1+V_2+\ldots+V_n$
+- The total voltage of an opposite series connection

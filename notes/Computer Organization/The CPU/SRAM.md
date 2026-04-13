@@ -1,16 +1,3 @@
-- Integrated Circuit
-- Transistor
-- **Very-large-scale integration (VLSI)** is the process of creating an integrated circuit (IC) by combining millions or billions of MOS transistors onto a single chip.
-- **metal–oxide–semiconductor** field-effect transistor (MOS transistor) is a type of field-effect transistor (FET), most commonly fabricated by the controlled oxidation of silicon
-- **Field-effect transistor (FET)**
-- Propagation delay
-
-
-# Memory
-
-## SRAM
-
-- A **static random-access memory** (SRAM)
 
 - it's a integrated circuit 
 - usually has a single access port (read/write)
@@ -30,7 +17,7 @@
 	- (read) The _Output enable_ signal must be made active
 		- the access time is specified as the delay from the time the _Output enable_ is true and the _Address_ lines are valid until the time the date is on the _Data output_ lines
 	- (write) The _Write enable_ has to be active, and the _Data input_ lines and _Address_ lines has to be supplied
-		- the time to complete a write is specified by the combination of [[Logic Circuits#Flip-Flop|the setup times, the hold times]], and the _Write enable_ pulse width
+		- the time to complete a write is specified by the combination of [[Sequential logic#Flip-Flop|the setup times, the hold times]], and the _Write enable_ pulse width
 - 
 	- it cannot be build in the same way as a register file, because a giant mux would be impractical. instead, large memories are implemented with a shared output line, called a _bit line_, which multiple memory cells in the memory array can assert.
 	- A **three-state buffer** has two inputs (data and enable) and a single output, which can be in one of three states: _asserted_, _deasserted_, or _high-impedance_

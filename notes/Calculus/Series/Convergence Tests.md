@@ -11,16 +11,16 @@
 
 ## p-Test
 
-- (e5.8) The [[Series#p-series & harmonic series|p-series]] $\displaystyle\sum_{n=1}^{\infty}\frac{1}{n^p}$ converges if $p>1$ and diverges if $p\leq1$
+- (e5.8) The [[Calculus/Series/Series#p-series & harmonic series|p-series]] $\displaystyle\sum_{n=1}^{\infty}\frac{1}{n^p}$ converges if $p>1$ and diverges if $p\leq1$
 ## Absolute Convergence Test
 
-- (5.6) If the seires $\sum \left|a_n\right|$ converges, then $\sum a_n$ converges as well.
-- see also [[Series#Convergence Absolutely]]
+- (5.6) If the series $\sum \left|a_n\right|$ converges, then $\sum a_n$ converges as well.
+- see also [[Calculus/Series/Series#Convergence Absolutely]]
 
 ## Monotone Converges Theorem for Series  
 
 - (5.13 MCT) $(a_n)\geq0\iff(s_n)$ is [[Calculus/Sequences/Monotonicity|increasing]]. In this case:
-	-  $\sum a_n$ converges $\iff$ $\sum a_n$ is [[Series#Bounded Series|bounded]] $\iff$ $(s_n)$ is bounded
+	-  $\sum a_n$ converges $\iff$ $\sum a_n$ is [[Calculus/Series/Series#Bounded Series|bounded]] $\iff$ $(s_n)$ is bounded
 		- In this case, $\sum a_n=\lim{s_n}=\sup\{s_n:n\in\mathbb{N}\}$ 
 	- The series $\sum a_n$ diverges to infinity $\iff$ $(s_n)$ is unbounded. 
 - $(a_n)>0\iff(s_n)$ is strictly increasing.
@@ -99,7 +99,7 @@ The series $\sum a_k$ converges if and only if the improper integral $\int_{1}^{
 
 ## Dirichlet's Test
 
-- (5.22) Let $\sum a_k$ be a [[series#bounded series|bounded]] series, and $(b_k)$ be a [[Calculus/Sequences/Monotonicity|monotone]] [[Calculus/Sequences/Limit#Null Sequence|null sequence]]. Then the series $\sum a_kb_k$ converges.
+- (5.22) Let $\sum a_k$ be a [[Calculus/Series/Series#bounded series|bounded]] series, and $(b_k)$ be a [[Calculus/Sequences/Monotonicity|monotone]] [[Calculus/Sequences/Limit#Null Sequence|null sequence]]. Then the series $\sum a_kb_k$ converges.
 
 ## Abel's Test
 

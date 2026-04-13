@@ -42,26 +42,3 @@
 
 
 
-- **chemical kinetics** (or **reaction kinetics**)
-- **reaction rate** (or **rate of reaction**) $v$ 
-- **rate equation** (or **rate law** or **empirical differential rate equation**)
-	- $v=k[\mathrm {A} ]^{n}$ (where $n$ is the **reaction order**)
-	- $v=k[\mathrm {A} ]^{m}[\mathrm {B} ]^{n}$ ($n$ and $m$ are the **partial orders**, and $m+n$ is the **overall order**)
-	- **reaction rate constant** (or **rate coefficient**) $k$
-	- **Arrhenius equation**
-- **activated complex** (קומפלקס משופעל, תצמיד משופעל)
-- **activation energy** (אנרגיית שפעול) $E_a$
-- **effective collision** (התנגשות פוריה)
-
-- **chemical equilibrium** (שיווי משקל כימי)
-- **equilibrium reaction**
-	- "When the reactants in a chemical reaction are initially in a Boltzmann distribution the reaction is referred to as an equilibrium reaction." (IUPAC)
-- **dynamic equilibrium**
-- **equilibrium constant** (of a substance in a given temperature)
-	- $\displaystyle K_{\text{eq}}=\frac{[\ce{C}]^c [\ce{D}]^d}{[\ce{A}]^a [\ce{B}]^b}$ (dimensionless)
-- **reversible process** (תהליך הפיך)
-	- **irreversible process** (תהליך בלתי הפיך)
-	- $\ce{<=>}$
-- **reversible reaction**
-	- $a\ce{A}+b\ce{B}\ce{<=>}c\ce{C}+d\ce{D}$
-- **Le Chatelier's principle**

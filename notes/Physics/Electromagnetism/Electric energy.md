@@ -15,7 +15,3 @@ $$\displaystyle U_E=k\frac{q_1q_2}{r}$$
     - $P$ is power (in watts)
     - $V$ is voltage (in volts)
     - $I$ is current (in amperes)
-- Units of electrical energy
-	- $\mathrm{1\ J = 1\ C\cdot V}$ (joule)
-	- $\mathrm{1\ kWh = 3.6\times 10^6\ J}$ (kilowatt-hour) which is the energy consumed by a 1-kilowatt appliance in 1 hour
-	- $\mathrm{1\ eV = 1.6\times 10^{-19}\ J}$ (electronvolt) which is the energy acquired by a particle carrying a charge whose magnitude equals that on the electron as a result of moving through a potential difference of $1\ \mathsf{V}$

@@ -57,7 +57,7 @@
 (note: used in IP, not used in link layer)
 
 - message is divided into words of 16 bits: $w_1, w_2, \ldots, w_m$
-- the checksum is $R = \sim(w_1 + w_2 + \ldots + w_m)$ (where $\sim$ is the bitwise NOT operation. The sum is done using [[Computer Organization/Data Storage#Ones' complement|ones' complement addition]])
+- the checksum is $R = \sim(w_1 + w_2 + \ldots + w_m)$ (where $\sim$ is the bitwise NOT operation. The sum is done using [[Data storage#Ones' complement|ones' complement addition]])
 - the sender sends $(M,R)$
 - the receiver computes $S = w_1' + w_2' + \ldots + w_m' + R'$ (using ones' complement addition) and checks if $\sim S = 0$, if yes, assume no error, else, error detected
 
