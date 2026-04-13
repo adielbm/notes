@@ -134,9 +134,9 @@ async function startServing(
 
   const buildFromEntry = argv.fastRebuild ? partialRebuildFromEntrypoint : rebuildFromEntrypoint
   watcher
-    .on("add", (fp) => buildFromEntry(fp, "add", clientRefresh, buildData))
-    .on("change", (fp) => buildFromEntry(fp, "change", clientRefresh, buildData))
-    .on("unlink", (fp) => buildFromEntry(fp, "delete", clientRefresh, buildData))
+    .on("add", (fp) => buildFromEntry(toPosixPath(fp), "add", clientRefresh, buildData))
+    .on("change", (fp) => buildFromEntry(toPosixPath(fp), "change", clientRefresh, buildData))
+    .on("unlink", (fp) => buildFromEntry(toPosixPath(fp), "delete", clientRefresh, buildData))
 
   return async () => {
     await watcher.close()

@@ -6,6 +6,27 @@
   justify-content: space-between;
   gap: var(--pX);
   margin-right: var(--pX);
+  position: relative;
+}
+
+.page-title::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  backdrop-filter: blur(1px) drop-shadow(2px 4px 6px black) brightness(0.8);
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 900;
+}
+
+.page-title:has(.search:focus-within)::after {
+  opacity: 1;
+}
+
+
+.page-title:has(.search:focus-within) .search {
+  z-index: 910;
 }
 
 // ===== Small screens =====
@@ -84,7 +105,8 @@
   flex-grow: 0.3;
   transition: all 0.3s ease; // smooth width change
 
-  input#search-bar {
+  .search-bar,
+  #search-bar {
     width: 100%;
     transition: width 0.3s ease;
   }
@@ -93,8 +115,8 @@
 
 // shared search styling
 .search {
-
-  &>#search-bar {
+  .search-bar,
+  #search-bar {
     width: 100%;
     box-sizing: border-box;
     padding: 0.5rem 1rem;
@@ -109,28 +131,18 @@
     }
   }
 
-  &>#search-container {
-    position: absolute;
-    z-index: 999;
-    top: 100%;
-    left: 0;
-    right: 0;
-    margin-top: 0.5rem;
-    display: none;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: var(--borderRadius);
-    box-shadow:
-      0 14px 50px rgba(27, 33, 48, 0.12),
-      0 10px 30px rgba(27, 33, 48, 0.16);
-    max-height: 60vh;
-    overflow: hidden;
+  .search-container,
+  #search-container {
+    z-index: 910;
+    display: block;
+    overflow: visible;
 
     &.active {
       display: block;
     }
 
-    &>#search-space {
+    .search-space,
+    #search-space {
       width: 100%;
       height: 100%;
 
@@ -138,12 +150,19 @@
         width: 100%;
       }
 
-      &>#search-layout {
+      .search-layout,
+      #search-layout {
         display: none;
         flex-direction: row;
         flex: 0 0 100%;
         box-sizing: border-box;
-        height: 100%;
+        height: auto;
+        position: absolute;
+        z-index: 920;
+        top: calc(100% + 0.35rem);
+        left: 0;
+        right: 0;
+        margin-top: 0;
 
         &.display-results {
           display: flex;
@@ -159,9 +178,18 @@
           scroll-margin-top: 2rem;
         }
 
+        &>.results-container,
         &>#results-container {
           overflow-y: auto;
           width: 100%;
+          height: auto;
+          max-height: min(42vh, 22rem);
+          background: var(--bg);
+          border: 1px solid var(--border);
+          border-radius: var(--borderRadius);
+          box-shadow:
+            0 14px 50px rgba(27, 33, 48, 0.12),
+            0 10px 30px rgba(27, 33, 48, 0.16);
 
           & .result-card {
             overflow: hidden;
@@ -196,9 +224,6 @@
               margin: 0;
               font-weight: normal;
               font-size: 1rem !important;
-
-
-
             }
 
             &>ul.tags {

@@ -1,6 +1,6 @@
-import { FilePath, joinSegments } from "../../util/path"
+import { FilePath, FullSlug } from "../../util/path"
 import { QuartzEmitterPlugin } from "../types"
-import fs from "fs"
+import { write } from "./helpers"
 import chalk from "chalk"
 import DepGraph from "../../depgraph"
 
@@ -17,17 +17,22 @@ export const CNAME: QuartzEmitterPlugin = () => ({
   async getDependencyGraph(_ctx, _content, _resources) {
     return new DepGraph<FilePath>()
   },
-  async emit({ argv, cfg }, _content, _resources): Promise<FilePath[]> {
-    if (!cfg.configuration.baseUrl) {
+  async emit(ctx, _content, _resources): Promise<FilePath[]> {
+    if (!ctx.cfg.configuration.baseUrl) {
       console.warn(chalk.yellow("CNAME emitter requires `baseUrl` to be set in your configuration"))
       return []
     }
-    const path = joinSegments(argv.output, "CNAME")
-    const content = extractDomainFromBaseUrl(cfg.configuration.baseUrl)
+    const content = extractDomainFromBaseUrl(ctx.cfg.configuration.baseUrl)
     if (!content) {
       return []
     }
-    fs.writeFileSync(path, content)
-    return [path] as FilePath[]
+
+    const path = await write({
+      ctx,
+      content,
+      slug: "CNAME" as FullSlug,
+      ext: "",
+    })
+    return [path]
   },
 })

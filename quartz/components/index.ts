@@ -13,7 +13,7 @@ import Explorer from "./Explorer"
 import TagList from "./TagList"
 import Graph from "./Graph"
 import Backlinks from "./Backlinks"
-import Search from "./Search"
+import Search from "./CustomSearch"
 import Footer from "./Footer"
 import DesktopOnly from "./DesktopOnly"
 import MobileOnly from "./MobileOnly"
@@ -48,7 +48,6 @@ export {
   NotFound,
   Breadcrumbs,
   Filters,
-  
   /* i added these */
   CustomFooter, 
   Empty,
