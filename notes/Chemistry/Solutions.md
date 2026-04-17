@@ -3,6 +3,8 @@
 
 - **solution**
 	- "A liquid or solid phase containing more than one substance, when for convenience one (or more) substance, which is called the solvent, is treated differently from the other substances, which are called solutes. When, as is often but not necessarily the case, the sum of the mole fractions of solutes is small compared with unity, the solution is called a dilute solution." (_IUPAC Gold Book_)
+	- **true solution**
+		- "a homogeneous mixture with uniform properties throughout. In a true solution, the solute cannot be isolated from the solution by filtration" [@Denniston, 2022]
 - **solubility** (מְסִיסוּת)
 	- "_like dissolves like_" (Latin: "_Similia similibus solventur_")
 	- an increase in temperature usually increases solubility
@@ -22,13 +24,7 @@
 	- "The separation of ions that occurs when an ionic solid dissolves" [@Jones, 2016]
 	- "a general process in which molecules (or ionic compounds such as salts, or complexes) separate or split into other things such as atoms, ions, or radicals, usually in a reversible manner" (Wikipedia)
 	- **dissociation constant** $K_{\rm{D}}$
-- **precipitation** (תגובת שיקוע, פְּרֶסיפּיטציה)
-	- **precipitate** (_noun_) `/-tət/` (משקע)
-		- the insoluble product
-	- **precipitate** (_verb_) `/-teɪt/`
-	- **precipitant** 
-		- (_adj_.) "that causes precipitation" (Wiktionary)
-		- (_noun_) "A substance that, when added to a solution, causes a dissolved substance to form a precipitate." (Wiktionary)
+
 - **dispersion** (תַּפְזִיר, תִּפְזוּר)
 - **colloidal dispersion**
 - **suspension** (תַּרְחִיף)
@@ -39,7 +35,7 @@
 	 - "a dispersion of small particles (from 1 nm to 1 mm in diameter) in a solvent" [@Jones, 2016]
 	 - "A mixture having particles that are moderately large. Colloids pass through filters but cannot pass through semipermeable membranes." [@Timberlake, 2017]
 - **supersaturation** (רוויית יתר)
-- **saturated** solution
+- **saturated solution**
 - **supernate** (or **supernatant** or **supernatant liquid**) (נוזל עליון)
 
 - **dilution**
@@ -49,24 +45,32 @@
 
 
 
-
-# Colligative properties
+# Raoult's law
 
 - **ideal solution** (or **ideal mixture**)
 	- "A solution that obeys Raoult’s law at any concentration; all solutions behave ideally as the concentration approaches zero" [@Jones, 2016]
-- **Raoult's law** 
-	- $P_i = x_i P_i^{\ast}$
-	- $P_i$ is the partial vapor pressure of a liquid solution of a nonvolatile solute
-	- $x_i$ is the mole fraction of the solvent in the solution
-	- $P_i^\ast$ is the vapor pressure of the pure solvent
-	- $P_{\text{total}} = \sum_i x_i P_i^\ast$
+	- a mixture of substances, where each component $i$ present in the liquid (with amount $n_i$) 
+	- **Raoult's law** 
+		- $P_i = x_i P_i^{\ast}$ is partial vapor pressure of component $i$
+			- $x_i = \frac{n_i}{n_{\text{total}}}$ is the mole fraction of the component $i$
+			- $P_i^\ast$ is the vapor pressure of the pure component $i$
+				- (when $i$ is nonvolatile, $P_i^\ast\approx 0$)
+		- $P_{\text{total}} = \sum_i P_i$ is total vapor pressure of the ideal solution 
+
+
+# Colligative properties
+
 - $i$ is the **van 't Hoff factor**
-- $b$ is the [[Mole|molality]] of the solute
+- $b$ is the [[Mole#Related quantities|molality]] of the solute
 - $k_b$ and $k_f$ are the **ebullioscopic constant** and the **cryoscopic constant** (resp.). they are solvent-specific. 
 	- unit: $\mathrm{K\,m^{-1}}=\mathrm{K\,kg\,mol^{-1}}$ (or $\mathrm{^\circ C\,m^{-1}}$, and then $\Delta T$ are in $\mathrm{^\circ C}$)
 	- (e.g. for water: $k_{b}=0.512\,\mathrm{K\,kg\,mol^{-1}}$ and $k_{f}=1.86\,\mathrm{K\,kg\,mol^{-1}}$)
 - **colligative properties**
-	- relative lowering of vapor pressure (Raoult's law)
+	- relative lowering of vapor pressure (derived from [[#Raoult's law]])
+		- $P_{\text{solution}} = x_{\text{solvent}} P^\circ_{\text{solvent}}$ is the vapor pressure of the solution
+		- $\Delta P = P^{\circ}_{\text{solvent}} - P_{\text{solution}} = x_{\text{solute}} P^{\circ}_{\text{solvent}}$ is the decrease in vapor pressure of the solvent due to the presence of the nonvolatile solute
+			- $P^{\circ}_{\text{solvent}}$: vapor pressure of the pure solvent
+			- $x_{\text{solute}}$: the mole fraction of the solute in the solution
 	- **boiling-point elevation**
 		- $\Delta T_b = ik_b  b$
 	- **freezing-point depression**

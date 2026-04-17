@@ -14,12 +14,12 @@
 			- UV, visible light, etc... 
 		- **particle radiation**
 			- **alpha radiation** (or **alpha rays**)
-				- **alpha decay** (or **α-decay**)
+				- **alpha decay** (or **α-decay**) $\ce{^{A}_{Z}X -> ^{A-4}_{Z-2}Y + ^{4}_{2}He}$
 			- **beta radiation** (or **beta ray**)
-				- **beta decay** (or **β-decay**)
-				- **positron emission** (or **beta plus decay**, **β+ decay**)
+				- **beta decay** (or **β-decay**) $\ce{^{A}_{Z}X -> ^{A}_{Z+1}Y + e^- + \bar{\nu}_e}$
+				- **positron emission** (or **beta plus decay**, **β+ decay**) $\ce{^{A}_{Z}X -> ^{A}_{Z-1}Y + e^+ + \nu_e}$
 			- proton radiation
-			- **neutron radiation**
+			- **neutron radiation** $\ce{^{A}_{Z}X -> ^{A-1}_{Z}Y + ^{1}_{0}n}$
 		- acoustic radiation
 		- **gravitational radiation**
 	- **ionizing radiation** and **non-ionizing radiation**
@@ -71,14 +71,16 @@
 	- absorbed dose of ionizing radiation
 	- SI unit: $\mathrm{Gy}$ 
 	- other units: $\mathrm{rad}$
-- **equivalent dose** ($H$)
-- **effective dose** ($E$)
+- **equivalent dose** ($H$) and **effective dose** ($E$)
+	- SI unit: $\mathrm{Sv}$
+	- other units: $\mathrm{rem}$ 
 - **becquerel** ($\mathrm{B}$) (בקרל) ($1\,\mathrm{B}=1\,\mathrm{s^{-1}}$) an activity of one per second on average
 - **curie** ($\mathrm{Cu}$), $1\,\mathrm{Cu}=3.7 \times 10^{10}\,\mathrm{B}$
 - **gray** ($\mathrm{Gy}$), $1\,\mathrm{Gy}=1\,\mathrm{J \cdot kg^{-1}}$
 - **rad** ($\mathrm{rad}$), $1\,\mathrm{rad}=0.01\,\mathrm{Gy}$
 - **röntgen** (or **roentgen**) ($\mathrm{R}$), $1\,\mathrm{R}=2.58 \times 10^{-4}\,\mathrm{C/kg}$
-- **roentgen equivalent man** (**rem**), $1\,\mathrm{rem}=\mathrm{m^2 / s^{-2}}$
+- **roentgen equivalent man** (**rem**), $1\,\mathrm{rem}=10^{-2}\,\mathrm{Sv}$
+- **sievert** ($\mathrm{Sv}$), $1\,\mathrm{Sv}=1\,\mathrm{m^{2} \cdot s^{-2} }$
 - **median lethal dose** ($\text{LD}_{50}$)
 	- "the dose required to kill half the members of a tested population after a specified test duration" (Wikipedia)
 	- $\approx 500\,\mathrm{rem}$

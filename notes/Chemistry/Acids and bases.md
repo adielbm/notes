@@ -14,10 +14,12 @@
 - **conjugate acid**
 - **conjugate base**
 - conjugate acid base pairs
-- **weak acid**
+
+
 - **strong acid**: completely deprotonated in solution
 - **strong base**: completely protonated in solution
 	- completely dissociates to produce $\ce{OH^-}$ in water
+
 - **weak acid**: incompletely deprotonated in solution
 	- $\ce{HA <=> H+ + A-}$
 - **weak base**: incompletely protonated in solution

@@ -3,6 +3,7 @@
 	- metal and nonmetal
 	- "a chemical compound consisting of an assembly of cations and anions, which results in a compound with no net electric charge. The constituent ions are held together by ionic bonds." (Wikipedia)
 	- "A compound that consists of ions in a ratio that results in overall electrical neutrality" [@Jones, 2016]
+	- ionic compounds are not molecules
 - **molecular compound** (or **covalant compound**)
 	- "consists of electrically neutral molecules" [@Jones, 2016]
 	- 2 nonmetals

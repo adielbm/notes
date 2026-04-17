@@ -10,7 +10,7 @@
 		- [[Compounds|compound]]
 	- **mixture**
 - **chemical composition**
-- **chemical species** (צורון)
+- **chemical species** (צוּרון)
 
 - **chemical property**
 	- "observed as the matter is converted to a new substance" [@Denniston, 2022]
@@ -28,8 +28,6 @@
 	- "a property that does depend on the quantity of matter" [@Denniston, 2022]
 
 
-- **stoichiometry**
-	- **stoichiometric amount** (or **stoichiometric ratio**)
 
 
 - **binding energy**

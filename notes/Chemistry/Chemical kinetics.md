@@ -9,7 +9,7 @@
 - **activation energy** (אנרגיית שפעול) $E_a$
 - **effective collision** (התנגשות פוריה)
 
-- **chemical equilibrium** (שיווי משקל כימי)
+- **chemical equilibrium** (שיווי משקל כימי, שיווי משקל דינמי)
 - **equilibrium reaction**
 	- "When the reactants in a chemical reaction are initially in a Boltzmann distribution the reaction is referred to as an equilibrium reaction." (IUPAC)
 - **dynamic equilibrium**

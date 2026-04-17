@@ -29,7 +29,7 @@
         - $m$ is the mass of the substance (in $\mathrm{g}$)
         - $n$ is the number of moles of the substance (in $\mathrm{mol}$)
 
-- #toask is $1\,\mathrm{u}=1\,\mathrm{g/mol}$ or $1\,\mathrm{u}\approx 1\,\mathrm{g/mol}$
+
 
 # Concentration
 

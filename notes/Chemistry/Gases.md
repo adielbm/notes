@@ -41,7 +41,7 @@
 - **Dalton's law (of partial pressures)** $$\displaystyle \chi_{ i }=\frac {n_{ i }}{n}=\frac {p_{ i }}{p}$$
 	- **total pressure** $p=\sum _{i=1}^{n}p_{i}$
 	- **partial pressure** $p_i$
-	- $\displaystyle\chi_{ i }=\frac {n_{ i }}{n}$ is the [[Mole|mole fraction]]
+	- $\displaystyle\chi_{ i }=\frac {n_{ i }}{n}$ is the [[Mole#Related quantities|mole fraction]]
 
 
 # Henry's law

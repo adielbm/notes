@@ -1,7 +1,7 @@
 
 ### Momentum
 
-- $\vec{p} = m\vec{v}$ is the **(linear) momentum** (in $\mathrm{kg\cdot m/s}$) of a body with mass $m$ (in $\mathrm{kg}$) and velocity $\vec{v}$ (in $\mathrm{m/s}$)
+- $\vec{p} = m\vec{v}$ is the **momentum** (or **linear momentum**) (in $\mathrm{kg\cdot m/s}$) of a body with mass $m$ (in $\mathrm{kg}$) and velocity $\vec{v}$ (in $\mathrm{m/s}$)
 
 
 #### Impulse 

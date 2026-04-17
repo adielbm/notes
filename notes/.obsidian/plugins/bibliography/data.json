@@ -332,5 +332,45 @@
       ]
     },
     "publisher": "Pearson"
+  },
+  {
+    "id": "Petrucci, 2016",
+    "type": "book",
+    "ISBN": "9780132931281",
+    "title": "General Chemistry",
+    "author": [
+      {
+        "family": "Petrucci",
+        "given": "Ralph H."
+      },
+      {
+        "family": "Harwood",
+        "given": "William S."
+      },
+      {
+        "family": "Herring",
+        "given": "Geoffrey"
+      },
+      {
+        "family": "Harwood",
+        "given": "William S"
+      },
+      {
+        "family": "Herring",
+        "given": "Geoff E"
+      },
+      {
+        "family": "Madura",
+        "given": "Jeffry"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "publisher": "Pearson Education Australia"
   }
 ]
