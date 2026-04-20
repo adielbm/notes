@@ -1,7 +1,15 @@
 
 
+|                                    | symbol                                |                                        | charge | mass number | mass ($\mathrm{u}$) |
+| ---------------------------------- | ------------------------------------- | -------------------------------------- | ------ | ----------- | ------------------- |
+| **alpha particles**                | $\alpha$, $\ce{\alpha^{2+}}$          | $\ce{He^{2+}}$, $^{4}_{2}\ce{He^{2+}}$ | $2+$   | 4           | $\approx 4.0015$    |
+| **beta particle** <br>             | $\ce{\beta}$, $\ce{^{0}_{-1}\beta}$,  | $\ce{^0_{-1}e}$                        | $1-$   | 0           | $1\,m_\mathrm{e}$   |
+| **positron** (or **antielectron**) | $\ce{\beta^+}$, $\ce{^{0}_{+1}\beta}$ | $\ce{e^+}$, $\ce{^0_{+1}e}$            | $1+$   | 0           | $1\,m_\mathrm{e}$   |
+| gamma                              | $\gamma$                              | $\ce{^0_{0}\gamma}$                    | $0$    | 0           | 0                   |
+
 - **radioactivity**
 - **radioactive decay** (or **nuclear decay**, or **radioactivity**) (דעיכה רדיואקטיבית)
+
 
 - **nuclear reaction**
 - radioactive
@@ -25,26 +33,13 @@
 	- **ionizing radiation** and **non-ionizing radiation**
 - radioisotope
 
-
-
-|                                    | symbol                                |                                        | charge | mass number | mass ($\mathrm{u}$) |
-| ---------------------------------- | ------------------------------------- | -------------------------------------- | ------ | ----------- | ------------------- |
-| **alpha particles**                | $\alpha$, $\ce{\alpha^{2+}}$          | $\ce{He^{2+}}$, $^{4}_{2}\ce{He^{2+}}$ | $2+$   | 4           | $\approx 4.0015$    |
-| **beta particle** <br>             | $\ce{\beta}$, $\ce{^{0}_{-1}\beta}$,  | $\ce{^0_{-1}e}$                        | $1-$   | 0           | $1\,m_\mathrm{e}$   |
-| **positron** (or **antielectron**) | $\ce{\beta^+}$, $\ce{^{0}_{+1}\beta}$ | $\ce{e^+}$, $\ce{^0_{+1}e}$            | $1+$   | 0           | $1\,m_\mathrm{e}$   |
-| gamma                              | $\gamma$                              | $\ce{^0_{0}\gamma}$                    | $0$    | 0           | 0                   |
-
-
-
-
-
 - **nuclear binding energy** (אנרגיית הקשר הגרעינית)
 - **half-life** ($t_{1/2}$), where: 
 	- $N(t)=N_0 e^{-\lambda t}$ is an exponential decay function, where $\lambda$ is the decay constant. It gives the amount remaining after time $t$.
 	- $t_{1/2}=\frac{\ln(2)}{\lambda}$ is the time required for a quantity to reduce to half of its initial value.
 	- $N(n t_{1/2})=N_0 (1/2)^n$ is the amount after $n$ half-lives.
 		- $\frac{1}{2}$ is the **decay factor** per half-life.
-
+- $\displaystyle\frac{dN}{dt} = -\lambda N$
 
 - **nuclear power** (אנרגיה גרעינית)
 - **nuclear fission** (ביקוע גרעיני)

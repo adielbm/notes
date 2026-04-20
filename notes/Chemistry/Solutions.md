@@ -87,7 +87,7 @@
 			- 1 osmole = 1 mole of particles that contribute to osmotic pressure
 		- **tonicity**
 			- _hypertonic_, _hypotonic_, and _isotonic_
-
+		- **turgor pressure** (לחץ טוּרְגּוֹר, מִלְחָץ)
 
 
 # Water soluble compounds

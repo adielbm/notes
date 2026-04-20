@@ -30,7 +30,6 @@
 	- neutralization
 - [[redox]]
 	- [[Redox#Combustion|combustion]]
-- **condensation reaction** (תגובת דחיסה)
 - **precipitation** (תגובת שיקוע, פְּרֶסיפּיטציה)
 	- $\ce{AgNO3(aq) + NaCl(aq) -> \underset{ precipitate }{ AgCl(s) v } + NaNO3(aq)}$
 	- **precipitate** (_noun_) `/-tət/` (משקע)
@@ -39,6 +38,7 @@
 	- **precipitant** 
 		- (_adj_.) "that causes precipitation" (Wiktionary)
 		- (_noun_) "A substance that, when added to a solution, causes a dissolved substance to form a precipitate." (Wiktionary)
+- [[Organic chemistry|condensation reaction]] (תגובת דחיסה, קוֹנדֶנסָציה)
 - **hydrolysis** (הידרוליזה, תהליך הידרוליטי, הִדְרוּל)
 
 # Stoichiometry

@@ -24,6 +24,8 @@
 - **saturated compound** (תרכובת רוויה)
 - **unsaturated compound**
 
+- **organic compounds**
+
 
 [^1]: https://chemistry.stackexchange.com/questions/86399/are-all-ionic-compounds-salts
 

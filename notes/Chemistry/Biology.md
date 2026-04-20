@@ -1,0 +1,15 @@
+
+
+- **biochemistry** (or **biological chemistry**)
+	- **enzyme** (אֶנְזִים, תַּסָּס)
+	- **metabolism** (חילוף חומרים)
+- monomer
+- polymer
+
+
+
+
+
+
+
+

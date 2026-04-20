@@ -8,8 +8,6 @@
 
 
 
-
-
 - **aerosol** (אירוסול, אֶרְסָס)
 - **haze** (אובך)
 - **fog** (ערפל)
@@ -17,15 +15,13 @@
 
 
 
-# fats / oil
+# oil
 
-- **fat** (שומן)
 - **oil** (שמן)
 	- **mineral oil** (שמן תעשייתי)
 	- **motor oil** (or **engine oil**, or **engine lubricant**) (שמן מנוע)
 	- **cooking oil** (or **edible oil**) (שמן בישול, שמן מאכל)
-- **lipid** (לִיפִּיד)
-- **fatty acid** (חומצת שומן)
+
 
 # fossil fuel
 
@@ -73,11 +69,11 @@
 ### Alkali salts (base salts)
 
 
-|               |                                                    |                                                                    |
-| ------------- | -------------------------------------------------- | ------------------------------------------------------------------ |
-|               | נתרן פחמתי,סודיום קרבונט, סודה לכביסה, סודה לשטיפה | Sodium carbonate, washing soda                                     |
-| $\ce{NaHCO3}$ | סודה לשתייה, נתרן מימן פחמתי, סודיום ביקרבונט      | sodium bicarbonate, sodium hydrogen carbonate, baking soda, bicarb |
-|               |                                                    | sodium acetate                                                     |
+|               |                                                     |                                                                    |
+| ------------- | --------------------------------------------------- | ------------------------------------------------------------------ |
+|               | נתרן פחמתי, סודיום קרבונט, סודה לכביסה, סודה לשטיפה | Sodium carbonate, washing soda                                     |
+| $\ce{NaHCO3}$ | סודה לשתייה, נתרן מימן פחמתי, סודיום ביקרבונט       | sodium bicarbonate, sodium hydrogen carbonate, baking soda, bicarb |
+|               |                                                     | sodium acetate                                                     |
 
 ### Bases
 
@@ -85,7 +81,6 @@
 | ----------- | ------------------------------ | ----------------------------------- |
 | $\ce{NaOH}$ | נתרן הידרוקסידי, סודה קאוסטית  | sodium hydroxide, lye, caustic soda |
 | $\ce{KOH}$  | אשלגן הידרוקסידי, אשלגן קאוסטי | potassium hydroxide, caustic potash |
-
 
 
 ## acids 
