@@ -15,8 +15,7 @@ export default (() => {
     const path = url.pathname as FullSlug
     const baseDir = fileData.slug === "404" ? path : pathToRoot(fileData.slug!)
 
-    const faviconUrl =
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Arthur_Streeton_-_Golden_summer%2C_Eaglemont_-_Google_Art_Project.jpg/1280px-Arthur_Streeton_-_Golden_summer%2C_Eaglemont_-_Google_Art_Project.jpg"
+    const faviconUrl = joinSegments(baseDir, "favicon.jpg")
 
     // const ogImagePath = `https://${cfg.baseUrl}/static/og-image.png`
 
