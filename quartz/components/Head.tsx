@@ -15,7 +15,9 @@ export default (() => {
     const path = url.pathname as FullSlug
     const baseDir = fileData.slug === "404" ? path : pathToRoot(fileData.slug!)
 
-    const faviconUrl = joinSegments(baseDir, "static/favicon.jpg")
+    const faviconPng32Url = joinSegments(baseDir, "static/favicon-32x32.png")
+    const faviconPng16Url = joinSegments(baseDir, "static/favicon-16x16.png")
+    const faviconIcoUrl = joinSegments(baseDir, "static/favicon.ico")
     const appleTouchIconUrl = joinSegments(baseDir, "static/apple-touch-icon.png")
     const manifestUrl = joinSegments(baseDir, "static/site.webmanifest")
 
@@ -55,7 +57,9 @@ export default (() => {
         {/* {cfg.baseUrl && <meta property="og:image" content={ogImagePath} />} */}
         <meta property="og:width" content="1200" />
         <meta property="og:height" content="675" />
-        <link rel="icon" href={faviconUrl} />
+        <link rel="icon" href={faviconPng32Url} type="image/png" sizes="32x32" />
+        <link rel="icon" href={faviconPng16Url} type="image/png" sizes="16x16" />
+        <link rel="icon" href={faviconIcoUrl} sizes="any" />
 
        {/*  <link defer rel="stylesheet" href="/static/tikz.css" />
         <script defer src="/static/tikzjax.js" type="text/javascript" />
