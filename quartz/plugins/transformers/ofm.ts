@@ -240,9 +240,10 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> 
                   const url = slugifyFilePath(fp as FilePath)
                   if ([".png", ".jpg", ".jpeg", ".gif", ".bmp", ".svg", ".webp"].includes(ext)) {
                     const match = wikilinkImageEmbedRegex.exec(alias ?? "")
-                    const alt = match?.groups?.alt ?? ""
+                    const caption = match?.groups?.alt?.trim() ?? ""
                     const width = match?.groups?.width ?? "auto"
                     const height = match?.groups?.height ?? "auto"
+                    const fallbackAlt = path.basename(fp, ext) || path.basename(fp)
                     return {
                       type: "image",
                       url,
@@ -250,7 +251,8 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> 
                         hProperties: {
                           width,
                           height,
-                          alt,
+                          alt: fallbackAlt,
+                          title: caption || undefined,
                         },
                       },
                     }

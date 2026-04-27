@@ -25,7 +25,7 @@
 }
 
 :root[saved-theme=dark] {
-  img {
+  img:not([alt="noinvert"]) {
     filter: url(#invert-luminance) !important;
   }
 }

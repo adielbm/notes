@@ -223,6 +223,7 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
   function hideSearch() {
     container.classList.remove("active")
     searchBar.value = "" // clear the input when we dismiss the search
+    searchBar.blur()
     if (sidebar) sidebar.style.zIndex = ""
     removeAllChildren(results)
     if (preview) {
@@ -235,13 +236,23 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
 
   function showSearch(searchTypeNew: SearchType) {
     searchType = searchTypeNew
-    if (sidebar) sidebar.style.zIndex = "1"
     container.classList.add("active")
     searchBar.focus()
   }
 
   let currentHover: HTMLInputElement | null = null
   async function shortcutHandler(e: HTMLElementEventMap["keydown"]) {
+    const isTypingTarget =
+      e.target instanceof HTMLInputElement ||
+      e.target instanceof HTMLTextAreaElement ||
+      (e.target instanceof HTMLElement && e.target.isContentEditable)
+
+    if (e.key === "/" && !e.ctrlKey && !e.metaKey && !e.altKey && !isTypingTarget) {
+      e.preventDefault()
+      showSearch("basic")
+      return
+    }
+
     if (e.key === "k" && (e.ctrlKey || e.metaKey) && !e.shiftKey) {
       e.preventDefault()
       const searchBarOpen = container.classList.contains("active")
@@ -272,9 +283,11 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
         await displayPreview(active)
         active.click()
       } else {
-        const anchor = document.getElementsByClassName("result-card")[0] as HTMLInputElement | null
+        const anchor =
+          currentHover ?? (results.getElementsByClassName("result-card")[0] as HTMLInputElement | null)
         if (!anchor || anchor.classList.contains("no-match")) return
         await displayPreview(anchor)
+        searchBar.blur()
         anchor.click()
       }
     } else if (e.key === "ArrowUp" || (e.shiftKey && e.key === "Tab")) {

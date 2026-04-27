@@ -124,12 +124,23 @@ const searchUXScript = `
   document.addEventListener(
     "keydown",
     (e) => {
+      const isTypingTarget =
+        e.target instanceof HTMLInputElement ||
+        e.target instanceof HTMLTextAreaElement ||
+        (e.target instanceof HTMLElement && e.target.isContentEditable)
+
+      if (e.key === "/" && !e.ctrlKey && !e.metaKey && !e.altKey && !isTypingTarget) {
+        e.preventDefault()
+        searchBar.focus()
+        return
+      }
+
       if (e.key !== "Escape") return
-      if (document.activeElement !== searchBar) return
+      if (!searchRoot.contains(document.activeElement)) return
       e.preventDefault()
       e.stopImmediatePropagation()
+      searchBar.blur()
       hideResults()
-      searchContainer.classList.add("active")
     },
     true,
   )

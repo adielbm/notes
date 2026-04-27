@@ -23,61 +23,90 @@ export const ImageAltToParent: QuartzTransformerPlugin<Partial<Options> | undefi
                             ) {
                                 const imgSrc = node.properties.src as string
                                 const imgTitle = node.properties.title as string | undefined
-                                const imgAlt = node.properties.alt as string | undefined
+                                const imgWidth = node.properties.width as string | number | undefined
+                                const titleText = imgTitle?.trim() || ""
 
-                                // Add width style from alt
-                                if (imgAlt) {
-                                    node.properties.style = `${node.properties.style || ""} width: ${imgAlt}px;`.trim()
+                                // Add width style from the parsed width property
+                                if (imgWidth !== undefined && imgWidth !== "auto") {
+                                    node.properties.style = `${node.properties.style || ""} width: ${imgWidth}px;`.trim()
                                 }
 
                                 // Parse the image src
                                 let displayDomain = ""
                                 let href = imgSrc
+                                let isExternal = false
                                 try {
                                     const url = new URL(imgSrc)
                                     displayDomain = url.hostname
+                                    isExternal = true
 
                                     if (url.hostname === "upload.wikimedia.org") {
-                                        const filename = path.basename(url.pathname)
+                                        const pathnameParts = url.pathname.split("/").filter(Boolean)
+                                        const thumbIndex = pathnameParts.indexOf("thumb")
+
+                                        // Thumbnail URLs encode the original filename before the size-prefixed segment.
+                                        // Example: .../thumb/.../File.jpg/1280px-File.jpg -> File.jpg
+                                        const rawFilename =
+                                            thumbIndex !== -1 && pathnameParts.length > thumbIndex + 3
+                                                ? pathnameParts[thumbIndex + 3]
+                                                : path.basename(url.pathname)
+
+                                        let filename = rawFilename
+                                        try {
+                                            filename = decodeURIComponent(rawFilename)
+                                        } catch {
+                                            // Keep raw filename when decoding fails.
+                                        }
+
                                         href = `https://commons.wikimedia.org/wiki/File:${filename}`
                                         displayDomain = "commons.wikimedia.org"
                                     }
                                 } catch {
-                                    return // Skip malformed URL
+                                    // Local image path, not an absolute URL
                                 }
 
                                 // Build the new description div
-                                const descNode: Element = {
-                                    type: "element",
-                                    tagName: "div",
-                                    properties: { className: ["img-desc"] },
-                                    children: [
-                                        {
-                                            type: "text",
-                                            value: `${imgTitle || ""} (source: `,
-                                        },
-                                        {
-                                            type: "element",
-                                            tagName: "a",
-                                            properties: {
-                                                href,
+                                let descNode: Element | undefined
+                                if (isExternal) {
+                                    descNode = {
+                                        type: "element",
+                                        tagName: "div",
+                                        properties: { className: ["img-desc"] },
+                                        children: [
+                                            {
+                                                type: "text",
+                                                value: `${titleText} (source: `,
                                             },
-                                            children: [
-                                                {
-                                                    type: "text",
-                                                    value: displayDomain,
+                                            {
+                                                type: "element",
+                                                tagName: "a",
+                                                properties: {
+                                                    href,
                                                 },
-                                            ],
-                                        },
-                                        {
-                                            type: "text",
-                                            value: ")",
-                                        },
-                                    ],
+                                                children: [
+                                                    {
+                                                        type: "text",
+                                                        value: displayDomain,
+                                                    },
+                                                ],
+                                            },
+                                            {
+                                                type: "text",
+                                                value: ")",
+                                            },
+                                        ],
+                                    }
+                                } else if (titleText) {
+                                    descNode = {
+                                        type: "element",
+                                        tagName: "div",
+                                        properties: { className: ["img-desc"] },
+                                        children: [{ type: "text", value: titleText }],
+                                    }
                                 }
 
                                 // Insert the description after the image
-                                if (typeof index === "number") {
+                                if (descNode && typeof index === "number") {
                                     parent.children.splice(index + 1, 0, descNode)
                                 }
                             }
