@@ -15,9 +15,9 @@ export default (() => {
     const path = url.pathname as FullSlug
     const baseDir = fileData.slug === "404" ? path : pathToRoot(fileData.slug!)
 
-    const faviconUrl = "/static/favicon.jpg"
-    const appleTouchIconUrl = "/static/apple-touch-icon.png"
-    const manifestUrl = "/static/site.webmanifest"
+    const faviconUrl = joinSegments(baseDir, "static/favicon.jpg")
+    const appleTouchIconUrl = joinSegments(baseDir, "static/apple-touch-icon.png")
+    const manifestUrl = joinSegments(baseDir, "static/site.webmanifest")
 
     // const ogImagePath = `https://${cfg.baseUrl}/static/og-image.png`
 
@@ -44,7 +44,7 @@ export default (() => {
         <meta name="theme-color" content="#f2f0e5" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#182b26" media="(prefers-color-scheme: dark)" />
         
-        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" media="(prefers-color-scheme: light)" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" media="(prefers-color-scheme: dark)" />
         <link rel="apple-touch-icon" href={appleTouchIconUrl} />
@@ -61,7 +61,7 @@ export default (() => {
         <script defer src="/static/tikzjax.js" type="text/javascript" />
         */}
 
-        <script defer src="/static/script.js"></script>
+        <script defer src={joinSegments(baseDir, "static/script.js")}></script>
 
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
