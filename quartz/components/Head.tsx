@@ -15,7 +15,9 @@ export default (() => {
     const path = url.pathname as FullSlug
     const baseDir = fileData.slug === "404" ? path : pathToRoot(fileData.slug!)
 
-    const faviconUrl = joinSegments(baseDir, "favicon.jpg")
+    const faviconUrl = "/static/favicon.jpg"
+    const appleTouchIconUrl = "/static/apple-touch-icon.png"
+    const manifestUrl = "/static/site.webmanifest"
 
     // const ogImagePath = `https://${cfg.baseUrl}/static/og-image.png`
 
@@ -35,6 +37,9 @@ export default (() => {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/expand.min.css"/>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta name="application-name" content={title} />
+        <meta name="apple-mobile-web-app-title" content={title} />
         
         <meta name="theme-color" content="#f2f0e5" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#182b26" media="(prefers-color-scheme: dark)" />
@@ -42,6 +47,8 @@ export default (() => {
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" media="(prefers-color-scheme: light)" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" media="(prefers-color-scheme: dark)" />
+        <link rel="apple-touch-icon" href={appleTouchIconUrl} />
+        <link rel="manifest" href={manifestUrl} />
         
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />

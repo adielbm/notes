@@ -1,0 +1,21 @@
+{
+  "name": "Adiel's Notes",
+  "short_name": "Notes",
+  "start_url": "/notes/",
+  "scope": "/notes/",
+  "display": "standalone",
+  "background_color": "#f2f0e5",
+  "theme_color": "#182b26",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
