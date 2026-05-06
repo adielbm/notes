@@ -1,6 +1,5 @@
 
 
-
 - **solution**
 	- "A liquid or solid phase containing more than one substance, when for convenience one (or more) substance, which is called the solvent, is treated differently from the other substances, which are called solutes. When, as is often but not necessarily the case, the sum of the mole fractions of solutes is small compared with unity, the solution is called a dilute solution." (_IUPAC Gold Book_)
 	- **true solution**
@@ -35,7 +34,9 @@
 	 - "a dispersion of small particles (from 1 nm to 1 mm in diameter) in a solvent" [@Jones, 2016]
 	 - "A mixture having particles that are moderately large. Colloids pass through filters but cannot pass through semipermeable membranes." [@Timberlake, 2017]
 - **supersaturation** (רוויית יתר)
-- **saturated solution**
+	- "The condition of a solution being more highly concentrated than is normally possible" (Wiktionary)
+	- **supersaturated solution** (תמיסה רווית-יתר)
+- **saturated solution** (תמיסה רוויה)
 - **supernate** (or **supernatant** or **supernatant liquid**) (נוזל עליון)
 
 - **dilution**
@@ -44,27 +45,35 @@
 	- $M_1,M_2$ are the molarities of the solution before and after dilution (resp.)
 
 
+- **ideal solution** (or **ideal mixture**)
+	- "A solution that obeys Raoult’s law at any concentration; all solutions behave ideally as the concentration approaches zero" [@Jones, 2016]
+	- properties:
+		- $\Delta H_{\text{mix}} = 0$
+		- $\Delta V_{\text{mix}} = 0$
+		- obeys Raoult’s law at any concentration
+		- the activity coefficient is equal to one for each component
 
 # Raoult's law
 
-- **ideal solution** (or **ideal mixture**)
-	- "A solution that obeys Raoult’s law at any concentration; all solutions behave ideally as the concentration approaches zero" [@Jones, 2016]
-	- a mixture of substances, where each component $i$ present in the liquid (with amount $n_i$) 
-	- **Raoult's law** 
-		- $P_i = x_i P_i^{\ast}$ is partial vapor pressure of component $i$
-			- $x_i = \frac{n_i}{n_{\text{total}}}$ is the mole fraction of the component $i$
-			- $P_i^\ast$ is the vapor pressure of the pure component $i$
-				- (when $i$ is nonvolatile, $P_i^\ast\approx 0$)
-		- $P_{\text{total}} = \sum_i P_i$ is total vapor pressure of the ideal solution 
+
+- **Raoult's law** 
+	- given a mixture of substances, where each component $i$ present in the liquid (with amount $n_i$) 
+	- $P_i = x_i P_i^{\ast}$ is partial vapor pressure of component $i$
+		- $x_i = \frac{n_i}{n_{\text{total}}}$ is the mole fraction of the component $i$
+		- $P_i^\ast$ is the vapor pressure of the pure component $i$
+			- (when $i$ is nonvolatile, $P_i^\ast\approx 0$)
+	- $P_{\text{total}} = \sum_i P_i$ is total vapor pressure of the ideal solution 
 
 
 # Colligative properties
 
 - $i$ is the **van 't Hoff factor**
 - $b$ is the [[Mole#Related quantities|molality]] of the solute
-- $k_b$ and $k_f$ are the **ebullioscopic constant** and the **cryoscopic constant** (resp.). they are solvent-specific. 
+- $M$ is the molarity
+- $k_b$ and $k_f$ are the **ebullioscopic constant** (קבוע-רתיחה) and the **cryoscopic constant** (קבוע-קפיאה) (resp.). they are solvent-specific. 
 	- unit: $\mathrm{K\,m^{-1}}=\mathrm{K\,kg\,mol^{-1}}$ (or $\mathrm{^\circ C\,m^{-1}}$, and then $\Delta T$ are in $\mathrm{^\circ C}$)
 	- (e.g. for water: $k_{b}=0.512\,\mathrm{K\,kg\,mol^{-1}}$ and $k_{f}=1.86\,\mathrm{K\,kg\,mol^{-1}}$)
+
 - **colligative properties**
 	- relative lowering of vapor pressure (derived from [[#Raoult's law]])
 		- $P_{\text{solution}} = x_{\text{solvent}} P^\circ_{\text{solvent}}$ is the vapor pressure of the solution
@@ -75,20 +84,30 @@
 		- $\Delta T_b = ik_b  b$
 	- **freezing-point depression**
 		- $\Delta T_f = ik_f  b$
-	- **osmotic pressure**
-		- $\pi = MRT$ (where $M=\frac{n}{V}$ is molarity)
-		- $\pi V= nRT$
-		- **semipermeable membrane**
-		- selectively permeable membrane
-		- **osmosis** (אוֹסְמוֹזָה)
-		- **osmotic concentration** (or **osmolarity**) 
-			- $\text{osmolarity} = M \cdot i$ (where $M$ is molarity and $i$ is van't Hoff factor)
-		- **osmole** 
-			- 1 osmole = 1 mole of particles that contribute to osmotic pressure
-		- **tonicity**
-			- _hypertonic_, _hypotonic_, and _isotonic_
-		- **turgor pressure** (לחץ טוּרְגּוֹר, מִלְחָץ)
+	- [[#Osmotic pressure]]
 
+## Osmotic pressure
+
+- **osmotic pressure** $\pi$ (or $\Pi$) 
+	- $\pi = iMRT$
+	- [[Pressure#Units|pressure units]]
+- **semipermeable membrane**
+- selectively permeable membrane
+- **osmosis** (אוֹסְמוֹזָה)
+- **osmotic concentration** (or **osmolarity**) 
+	- $\text{osmolarity} = M \cdot i$ 
+		- SI unit: $\mathrm{Osm/m^3}$
+		- other units: $\mathrm{osmolar=Osm/L}$
+- (**osmole**, $\mathrm{Osm}$, $\mathrm{osmol}$) 1 osmole = 1 mole of particles that contribute to osmotic pressure
+- **osmolality**
+	- $\mathrm{Osm/kg}$
+- Given two solutions $A$ and $B$ with osmolarities $c_A$ and $c_B$:
+	- if $c_A>c_B$, $A$ is **hyperosmotic** 
+	- if $c_A<c_B$, $A$ is **hypoosmotic** (or $A$ is  to $B$)
+	- if $c_A=c_B$, $A$ and $B$ are **isoosmotic** (or $A$  to $B$)
+	- (cf. **tonicity**: **hypertonic**, **hypotonic** and **isotonic**)
+- **turgor pressure** (לחץ טוּרְגּוֹר, מִלְחָץ)
+- see also: diffusion
 
 # Water soluble compounds
 

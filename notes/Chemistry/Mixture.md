@@ -1,0 +1,3 @@
+- **mixture**
+- **homogeneous mixture** (or _uniform mixture_)
+- **heterogeneous mixture** (or _non-uniform mixture_)

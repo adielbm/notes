@@ -8,7 +8,7 @@
 	- pure substance
 		- element
 		- [[Compounds|compound]]
-	- **mixture**
+	- [[mixture]]
 - **chemical composition**
 - **chemical species** (צוּרון)
 
@@ -30,10 +30,7 @@
 
 
 
-- **binding energy**
-- [[Chemical bond|bond energy]]
-- [[Nuclear chemistry|nuclear binding energy]]
-- **bond dissociation energy** (**BDE**)
+
 
 ## nomenclature
 

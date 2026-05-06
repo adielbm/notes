@@ -39,6 +39,8 @@
 		- $\ce{[A]}$ is the molarity of $\ce{A}$ 
 		- SI unit: $\mathrm{mol/m^3}$
 		- other units: $\mathrm{mol/L=M}$ (**molar**)
+		- **equivalent concentration** (or **normality**) $\mathrm{N=\frac{eq}{L}}$
+			- $\text{eq/L} = \text{molarity} \times \text{valence}$
 	- **mass concentration** (ריכוז מסה)
 		- $\displaystyle\rho_{i}=\frac{m_{i}}{V}$
 	- **volume concentration** $\displaystyle \sigma _{i}={\frac {V_{i}}{V}}$

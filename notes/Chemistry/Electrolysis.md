@@ -9,11 +9,11 @@
 	- "A substance that dissolves in water as molecules; its solution does not conduct an electrical current." [@Timberlake, 2017]
 
 - electrolyte identification #todo 
-	- soluble ionic compounds → strong electrolytes
-	- covalent compounds
-		- if ionize when dissolved in water → electrolytes
-		- not ionize → non-electrolytes 
-		- strong acid  → strong electrolyte
+	- soluble ionic compound → strong electrolyte
+	- covalent compound
+		- ionize completely in water → strong electrolyte
+		- ionize partially in water → weak electrolyte
+		- not ionize in water → non-electrolytes 
 
 # Electrochemical cell
 

@@ -5,6 +5,7 @@
 - **state of matter** (or **phase of matter**)
 	- **gaseous state** 
 	- **liquid state**
+		- **liquid** (n. and adj.) (נוזלי, נוזל)
 	- **soild state**
 - **phase transition** (or **phase change**) (מעבר פאזה)
 	- **melting** (התכה, היתוך, (~~המסה~~))
@@ -36,6 +37,6 @@
 
 
 - **compressibility** (or **coefficient of compressibility**) (דחיסות)
-- **viscosity** (צְמיגות)
+- **viscosity** (צְמִיגוּת)
 - **surface tension** (מתח פנים)
 - **surfactant** (חומרים פעילי שטח)

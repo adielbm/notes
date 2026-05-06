@@ -1,5 +1,4 @@
-
-### Unified Atomic Mass Unit (u)
+### Unified atomic mass unit
 
 - The **unified atomic mass unit** ($\mathrm{u}$) (or **dalton** ($\mathrm{Da}$))
 	- non-SI unit of mass 

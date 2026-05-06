@@ -20,7 +20,7 @@ $$m\ddot{x} + kx = 0$$
 - $F=-kx$ is the restoring force (**Hooke's Law**)
 - $\displaystyle\omega=\sqrt{\frac{k}{m}}$
 - $E=\frac{1}{2}kx^2 + \frac{1}{2}mv^2$ is the total mechanical energy (in $\mathrm{J}$)
-	- $\frac{1}{2}mv^2$ is the [[Physics/Mechanics/Energy#Kinetic Energy|kinetic energy]] (in $\mathrm{J}$) (it's total energy in the moment of equilibrium, $x=0$)
+	- $\frac{1}{2}mv^2$ is the [[Energy#Kinetic Energy|kinetic energy]] (in $\mathrm{J}$) (it's total energy in the moment of equilibrium, $x=0$)
 	- $\frac{1}{2}kx^2$ is the elastic potential energy (in $\mathrm{J}$) (it's total energy in the monent of turning point, $v=0$)
 
 #### Simple pendulum 

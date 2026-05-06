@@ -96,9 +96,14 @@
 
 #### Stokes' Theorem
 
+
+
+
 - $\displaystyle \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{S} = \oint_{\partial S} \mathbf{F} \cdot d\mathbf{r}$ where:
 	- $S$ is a smooth oriented surface with boundary $\partial S$
 	- $\mathbf{F}$ is a vector field defined on an open region containing $S$
 	- $\nabla \times \mathbf{F}$ is the curl of $\mathbf{F}$
 	- $d\mathbf{S}$ is the vector area element of $S$
 	- $d\mathbf{r}$ is the differential displacement vector along the boundary $\partial S$
+
+![](https://x.com/alec_helbling/status/2011440462574366878)

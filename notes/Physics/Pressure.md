@@ -6,16 +6,22 @@
 	- $A$ is the area of the surface`
 
 - see also [[Gases#Vapor pressure|vapor pressure]]
-- **atmospheric pressure** (or **air pressure** or **barometric pressure**) (לחץ אטמוספירי, לחץ ברומטרי)
+- **atmospheric pressure** (or **air pressure** or **barometric pressure**) 
+	- he: לחץ אטמוספירי, לחץ ברומטרי, לחץ האטמוספרה, לחץ האוויר
+	- **ambient pressure**
+- **gauge pressure** (לחץ מנומטרי)
+- **absolute pressure** (לחץ מוחלט)
+- $\text{Gauge Pressure}=\text{Absolute Pressure} - \text{Atmospheric Pressure}$
 
 ## Units
 
-| unit of pressure |                                                                                                         |                                                                        |
-| ---------------- | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| **pascal**       | ${\displaystyle {\rm {1~Pa=1~{\frac {N}{m^{2}}}=1~{\frac {kg}{m{\cdot }s^{2}}}=1~{\frac {J}{m^{3}}}}}}$ | the SI unit                                                            |
-| **atmosphere**   | $1 \, \text{atm} = 101325 \, \text{Pa}$                                                                 | roughly equivalent to the mean sea-level atmospheric pressure on Earth |
-| **torr**         | $1 \, \text{Torr}=\frac{1}{760}\,\mathrm{atm} \approx 133.32 \, \text{Pa}$                              |                                                                        |
-| **bar**          | $1 \, \text{bar} = 10^5 \, \text{Pa}$                                                                   |                                                                        |
+| unit of pressure                    |                                                                                                         |                                                                        |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| **pascal**                          | ${\displaystyle {\rm {1~Pa=1~{\frac {N}{m^{2}}}=1~{\frac {kg}{m{\cdot }s^{2}}}=1~{\frac {J}{m^{3}}}}}}$ | the SI unit                                                            |
+| **atmosphere**                      | $1 \, \text{atm} = 101325 \, \text{Pa}$                                                                 | roughly equivalent to the mean sea-level atmospheric pressure on Earth |
+| **torr**                            | $1 \, \text{Torr}=\frac{1}{760}\,\mathrm{atm} \approx 133.32 \, \text{Pa}$                              |                                                                        |
+| **bar**                             | $1 \, \text{bar} = 10^5 \, \text{Pa}$                                                                   |                                                                        |
+| **pound per square inch** (**psi**) | $1 \, \text{psi}\approx 6894.76 \, \text{Pa}$                                                           | also: $\mathrm{lbf/in^2}$                                              |
 
 # Pascal's law
 

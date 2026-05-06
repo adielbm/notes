@@ -30,7 +30,9 @@
 - **acid strength**
 
 
-|      | acid/base dissociation constant                                 |                                                                                                   |
+
+
+|      | acid/base [[Solutions\|dissociation constant]]                  |                                                                                                   |
 | ---- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | acid | $\displaystyle K_a = \frac{[\ce{H+}][\ce{A-}]}{[\ce{HA}]}$      | $\ce{ \underset{ weak acid }{ HA(aq) }  <=> H+(aq) +  \underset{ \text{conj. base} }{ A- (aq) }}$ |
 |      | $\displaystyle K_a = \frac{[\ce{H_{3}O+}][\ce{A-}]}{[\ce{HA}]}$ | $\ce{HA(aq) + H2O(l) <=> H3O+(aq) + A-(aq)}$                                                      |
@@ -40,19 +42,20 @@
 - **molecular autoionization** (or **self-ionization**)
 - **protic solvent**
 - **polyprotic acid** 
+
 - **self-ionization of water** (יינון עצמי של מים)
-- **ion-product of water**
-- $K_{\rm{w}}=[\ce{H3O+}][\ce{OH-}]=1.0\times 10^{-14}$ (at $25^\circ\mathrm{C}$)
-- **pH** (ערך הֲגָבָה, רמת חומציות)
+	- $\ce{2H2O <=> H3O+ + OH-}$
+	- [[Chemical kinetics|equilibrium constant]]: $K_{\mathrm{eq}} = \frac{[\ce{H3O+}][\ce{OH-}]}{[\ce{H2O}]^2}$
+	- (**ionic product of water**) $K_{\rm{w}}=[\ce{H3O+}][\ce{OH-}]$ ($=1.0\times 10^{-14}$ at $25^\circ\mathrm{C}$) 
+		- $\mathrm{p}K_{\mathrm{w}}=-\log_{10}K_{\mathrm{w}}=\mathrm{pH}+\mathrm{pOH}$ ($=14$ at $25^\circ\mathrm{C}$) 
+- **pH** (ערך הֲגָבָה, רמת חומציות) of an aqueous solution (at a given temp.)
 	- $\mathrm{pH}=-\log_{10}[\ce{H_{3}O+}]$
 	- $\mathrm{pOH}=-\log_{10}[\ce{OH-}]$
-	- for any aqueous solution (at $25^\circ\mathrm{C}$): $\mathrm{pH}+\mathrm{pOH}=14$
 	- $\mathrm{p}K_{a}=-\log_{10}K_{a}$
 	- $\mathrm{p}K_{b}=-\log_{10}K_{b}$
+	- a solution with a $\mathrm{pH}=7$ at $25^\circ\mathrm{C}$ is **neutral**
 	- **Henderson-Hasselbalch equation** 
 		- $\displaystyle\mathrm{pH}=\mathrm{p}K_{a}+\log_{10}\left( \frac{[\text{cont. base}]}{[\text{weak acid}]} \right)$
-
-
 
 
 - **neutralization** (סתירה)

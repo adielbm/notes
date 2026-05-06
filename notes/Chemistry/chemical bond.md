@@ -14,8 +14,9 @@
 			- the strongest of the intermolecular forces
 			- occurs when a hydrogen atom is covalently bonded to a highly electronegative atom (specifically $\ce{H,O,F}$)
 		- **van der Waals force**
-		- Dipole–dipole interaction
+		- dipole-dipole interaction
 			- interactions occur between polar molecules
+		- ion-dipole
 		- **London dispersion force** (**LDF**)
 			- the weakest of the intermolecular forces
 
@@ -35,7 +36,8 @@
 
 
 - **bond order**
-- **bond energy** (**BE**)
+
+
 - **bond length** (or **bond distance**)
 	- $\text{bond length: triple} < \text{double} < \text{single}$
 - **isomers**

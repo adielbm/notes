@@ -372,5 +372,77 @@
       ]
     },
     "publisher": "Pearson Education Australia"
+  },
+  {
+    "id": "Brown, 2012",
+    "type": "book",
+    "ISBN": "9780321696724",
+    "title": "Chemistry",
+    "author": [
+      {
+        "family": "Brown",
+        "given": "Theodore L."
+      },
+      {
+        "family": "Lemay",
+        "given": "H. Eugene"
+      },
+      {
+        "family": "Bursten",
+        "given": "Bruce E."
+      },
+      {
+        "family": "Murphy",
+        "given": "Catherine"
+      },
+      {
+        "family": "Woodward",
+        "given": "Patrick"
+      },
+      {
+        "family": "Murphy",
+        "given": "Catherine J."
+      },
+      {
+        "family": "Hill",
+        "given": "James C."
+      },
+      {
+        "family": "Brown",
+        "given": "Theodore E"
+      },
+      {
+        "family": "Burdge",
+        "given": "Julia R"
+      },
+      {
+        "family": "Woodward",
+        "given": "Patrick M."
+      },
+      {
+        "family": "Stoltzfus",
+        "given": "Matthew W."
+      },
+      {
+        "family": "Brown",
+        "given": "Theodore, Jr."
+      },
+      {
+        "family": "Brunauer",
+        "given": "Linda S."
+      },
+      {
+        "family": "Burdge",
+        "given": "Julia R."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2012
+        ]
+      ]
+    },
+    "publisher": "Prentice Hall"
   }
 ]

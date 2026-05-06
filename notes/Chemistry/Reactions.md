@@ -6,7 +6,7 @@
 
 # Chemical equation
 
-- chemical equation
+- chemical equation 
 	- balanced equation
 	- molecular equation
 	- ionic equation
@@ -57,7 +57,16 @@
 - [[Chemical kinetics|chemical equilibrium]]
 - [[Chemical kinetics|equilibrium reaction]]
 - **organic reactions**
-
-
+- **homogeneous reaction** (the reactants and products are in the same phase)
+- **heterogeneous reaction** (reactants in two or more phases)
+- **elementary reaction**
+	- "A process in a chemical reaction that occurs in a single event or step. An overall chemical reaction consists of one or more elementary reactions or steps" [@Brown, 2012]
+	- **reaction step**
+- **molecularity** 
+	- "the number of molecules that come together to react in an elementary reaction and is equal to the sum of stoichiometric coefficients of reactants in the elementary reaction with effective collision and correct orientation" (Wikipedia)
+	- "The number of molecules that participate as reactants in an elementary reaction." [@Brown, 2012]
+	- **unimolecular reaction** (תגובה חד-מולקולרית)
+	- **bimolecular reaction**
+	- **trimolecular reaction**
 
 
