@@ -17,12 +17,6 @@
 	- **dissolved** (_adj_.) - that has been disintegrated in a solvent (Wiktionary) 
 - **solvent** (מֵמֵס, מְמִסִּים)
 	- "(1) The most abundant component of a solution. (2) The component of a solution in which the other components are considered to be dissolved." [@Jones, 2016]
-- **aqueous solution** (תמיסה מימית)
-- **dissociation** (דיסוציאציה, הִתְפָּרְדוּת, פירוק ליונים)
-	- "The separation of an acid or a base into ions in water." [@Timberlake, 2017]
-	- "The separation of ions that occurs when an ionic solid dissolves" [@Jones, 2016]
-	- "a general process in which molecules (or ionic compounds such as salts, or complexes) separate or split into other things such as atoms, ions, or radicals, usually in a reversible manner" (Wikipedia)
-	- **dissociation constant** $K_{\rm{D}}$
 
 - **dispersion** (תַּפְזִיר, תִּפְזוּר)
 - **colloidal dispersion**
@@ -39,11 +33,45 @@
 - **saturated solution** (תמיסה רוויה)
 - **supernate** (or **supernatant** or **supernatant liquid**) (נוזל עליון)
 
-- **dilution**
+- **dilution** (מיהול)
 	- $M_1V_1 = M_2V_2$
 	- $V_1,V_2$ are the volumes of the solution before and after dilution, (resp.) 
 	- $M_1,M_2$ are the molarities of the solution before and after dilution (resp.)
 
+
+- **aqueous solution** (תמיסה מימית)
+	- **spectator ions** (יונים משקיפים)
+
+# Electrolyte
+
+- **electrolyte** (אלקטרוליט)
+	- "A substance that produces ions when dissolved in water; its solution conducts electricity." [@Timberlake, 2017]
+	- "a substance that conducts electricity through the movement of ions, but not through the movement of electrons" (Wikipedia)
+	- **strong electrolyte**
+	- **weak electrolyte**
+- **nonelectrolyte**
+	- "A substance that dissolves in water as molecules; its solution does not conduct an electrical current." [@Timberlake, 2017]
+
+- electrolyte identification #todo 
+	- soluble ionic compound → strong electrolyte
+	- covalent compound
+		- ionize completely in water → strong electrolyte
+		- ionize partially in water → weak electrolyte
+		- not ionize in water → non-electrolytes 
+
+
+
+
+# Dissociation
+
+- **dissociation** (דיסוציאציה, הִתְפָּרְדוּת, פירוק ליונים)
+	- "The separation of an acid or a base into ions in water." [@Timberlake, 2017]
+	- "The separation of ions that occurs when an ionic solid dissolves" [@Jones, 2016]
+	- "a general process in which molecules (or ionic compounds such as salts, or complexes) separate or split into other things such as atoms, ions, or radicals, usually in a reversible manner" (Wikipedia)
+	- **dissociation constant** $K_{\rm{D}}$
+		- a type of [[Chemical equilibrium|equilibrium constant]]
+
+# Ideal solution
 
 - **ideal solution** (or **ideal mixture**)
 	- "A solution that obeys Raoult’s law at any concentration; all solutions behave ideally as the concentration approaches zero" [@Jones, 2016]
@@ -52,6 +80,7 @@
 		- $\Delta V_{\text{mix}} = 0$
 		- obeys Raoult’s law at any concentration
 		- the activity coefficient is equal to one for each component
+
 
 # Raoult's law
 

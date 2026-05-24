@@ -10,13 +10,14 @@
 
 - **atomic radius**
 - **ionization energy**
-	- The ionization energy of an atom or ion is the minimum energy required to remove an electron from the ground state of the isolated gaseous atom or ion
+	- the minimum energy required to remove an electron from the ground state of the isolated gaseous atom or ion
 	- Highest for noble gases and halogens
 	- Lowest for alkali metals (bottom left)
-- **electron affinity**
+- **electron affinity** (זיקת-אלקטרונים, זיקה אלקטרונית)
 	- Lowest for noble gases and alkali metals
 	- Highest for halogens
 - **electronegativity** $\chi$
+	- "the tendency for an atom of a given chemical element to attract shared electrons (or electron density) when forming a chemical bond" (Wikipedia)
 	- Follows a similar trend to electron affinity
 	- Increases from bottom left to top right of the periodic table
 	- **Pauling scale**

@@ -1,22 +1,4 @@
 
-- **electrolysis** (אלקטרוליזה)
-- **electrolyte** (אלקטרוליט)
-	- "A substance that produces ions when dissolved in water; its solution conducts electricity." [@Timberlake, 2017]
-	- "a substance that conducts electricity through the movement of ions, but not through the movement of electrons" (Wikipedia)
-	- **strong electrolyte**
-	- **weak electrolyte**
-- **nonelectrolyte**
-	- "A substance that dissolves in water as molecules; its solution does not conduct an electrical current." [@Timberlake, 2017]
-
-- electrolyte identification #todo 
-	- soluble ionic compound → strong electrolyte
-	- covalent compound
-		- ionize completely in water → strong electrolyte
-		- ionize partially in water → weak electrolyte
-		- not ionize in water → non-electrolytes 
-
-# Electrochemical cell
-
 
 - **electrochemical cell** (תא אלקטרוכימי)
 	- **electrolytic cell**
@@ -59,4 +41,6 @@
 
 
 
- 
+ ---
+
+- see also: **electrolysis** (אלקטרוליזה)

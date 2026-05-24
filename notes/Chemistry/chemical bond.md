@@ -11,8 +11,10 @@
 	- (weak) **intermolecular force** (**IMF**)
 		- **hydrogen bond** (**H-bond**)
 			- **Dn−H···Ac**
-			- the strongest of the intermolecular forces
-			- occurs when a hydrogen atom is covalently bonded to a highly electronegative atom (specifically $\ce{H,O,F}$)
+			- Dn (donor) and Ac (acceptor) are a highly [[Periodic table|electronegative]] atoms (specifically $\ce{N,O,F}$)
+			- Ac has at least one lone pair of electrons
+			- H is covalently bonded to Dn
+			- ··· is the hydrogen bond (weaker than a covalent bond but stronger than van der Waals forces)
 		- **van der Waals force**
 		- dipole-dipole interaction
 			- interactions occur between polar molecules

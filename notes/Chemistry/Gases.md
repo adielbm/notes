@@ -1,4 +1,4 @@
-
+ 
 - **standard temperature and pressure** (**STP**)
 	- until 1982: $T=273.15\,\mathrm{K},\quad P=1\,\text{atm}$
 	- since 1982: $T=273.15\,\mathrm{K},\quad P=1\,\text{bar}$

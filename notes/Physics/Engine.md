@@ -1,10 +1,12 @@
+
+
 - An **engine** (or **motor**) is a machine designed to convert one or more forms of energy into mechanical energy
-	- A **heat engine** (מנוע חום, מנוע תרמי) 
-		- converts heat energy into mechanical energy
-		- **internal combustion engine** (**ICE** or **IC engine**) 
-			- the combustion of a fuel occurs with an oxidizer (usually air) in a combustion chamber that is an integral part of the working fluid flow circuit
-		- **external combustion engine** (**EC engine**) (מנוע בעירה חיצונית)
-			- **steam engine** (מנוע קיטור)
-		- **rocket engine** (מנוע רקטי)
-		- **jet engine** (מנוע סילון)
-		- **radial engine** (מנוע כוכבי)
+- A **heat engine** (מנוע חום, מנוע תרמי) 
+	- converts heat energy into mechanical energy
+	- **internal combustion engine** (**ICE** or **IC engine**) 
+		- the combustion of a fuel occurs with an oxidizer (usually air) in a combustion chamber that is an integral part of the working fluid flow circuit
+	- **external combustion engine** (**EC engine**) (מנוע בעירה חיצונית)
+		- **steam engine** (מנוע קיטור)
+	- **rocket engine** (מנוע רקטי)
+	- **jet engine** (מנוע סילון)
+	- **radial engine** (מנוע כוכבי)

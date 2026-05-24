@@ -42,5 +42,5 @@
 - [[Circuits]]
 - [[Power]]
 - [[Voltage]]
-- [[Electrolysis]]
+- [[Electrochemical cell]]
 - [[Impedance]]

@@ -8,7 +8,6 @@
 - The **reducing agent** (or **reductant**) (גורם מחזר) is the species that: 
 	- **reduces** (מחזר) (or causes **reduction** to) the oxidant
 	- undergoes **oxidation** (or being **oxidized** (מתחמצן)) which is to:
-		- one of its elements 
 		- increase in its oxidation number of one of its atoms
 		- (historicaly: gain oxygen)
 - mnemonic: [OIL RIG](https://en.wikipedia.org/wiki/Redox#Mnemonics)
@@ -22,38 +21,39 @@
 # Oxidation state
 
 - **oxidation state** (O.S.)
-	- **oxidation number** 
-	- oxidation-state(species, atom)=n
-	- "the hypothetical charge of an atom if all of its bonds to other atoms are fully ionic" (Wikipedia)
-	- [List of oxidation states of the elements](https://en.wikipedia.org/wiki/Template:List_of_oxidation_states_of_the_elements)
-	- An atom of a free element has an oxidation number of $0$.
-		- ex. Each $\ce{Cl}$ atom in $\ce{Cl2}$ has an oxidation number of $0$.
-	- The sum of oxidation numbers of all atoms in a species equals its total charge.
-		- examples:
-			- $\ce{H2O}$: 
-				- $\ce{H} = +1$ (each), $\ce{O} = -2$
-				- $2(+1) + (-2) = 0$
-			- $\ce{CO2}$: 
-				- $\ce{O} = -2$, $\ce{C} = +4$
-				- $(+4) + 2(-2) = 0$
-			- $\ce{SO4^{2-}}$
-				- $\ce{O} = -2$, $\ce{S} = +6$
-				- $(+6) + 4(-2) = -2$
-			- $\ce{Cr2O7^{2-}}$
-				- $\ce{O} = -2$, $\ce{Cr} = +6$
-				- $2(+6) + 7(-2) = -2$
-			- $\ce{H2O2}$
-				- $\ce{H} = +1$, $\ce{O} = -1$
-				- $2(+1) + 2(-1) = 0$
-	- When combined with other elements: 
-		- (group 1) alkali metals are $+1$
-		- (group 2) alkaline earth metals are $+2$.
-	- halogens: $-1$, unless it is bonded to other halogen that is above it in the table
-	- hydrogen: 
-		- $+1$ when bonded to non-metals
-		- $-1$ when bonded to metals
-	- oxygen
-		- $-2$ in most of its compounds
+- **oxidation number** 
+- oxidation-state(species, atom)=n
+- "the hypothetical charge of an atom if all of its bonds to other atoms are fully ionic" (Wikipedia)
+- [List of oxidation states of the elements](https://en.wikipedia.org/wiki/Template:List_of_oxidation_states_of_the_elements)
+- An atom of a free element has an oxidation number of $0$.
+	- ex. Each $\ce{Cl}$ atom in $\ce{Cl2}$ has an oxidation number of $0$.
+- The sum of oxidation numbers of all atoms in a species equals its total charge.
+	- The oxidation number of a monatomic ion is equal to its charge
+	- examples:
+		- $\ce{H2O}$: 
+			- $\ce{H} = +1$ (each), $\ce{O} = -2$
+			- $2(+1) + (-2) = 0$
+		- $\ce{CO2}$: 
+			- $\ce{O} = -2$, $\ce{C} = +4$
+			- $(+4) + 2(-2) = 0$
+		- $\ce{SO4^{2-}}$
+			- $\ce{O} = -2$, $\ce{S} = +6$
+			- $(+6) + 4(-2) = -2$
+		- $\ce{Cr2O7^{2-}}$
+			- $\ce{O} = -2$, $\ce{Cr} = +6$
+			- $2(+6) + 7(-2) = -2$
+		- $\ce{H2O2}$
+			- $\ce{H} = +1$, $\ce{O} = -1$
+			- $2(+1) + 2(-1) = 0$
+- When combined with other elements: 
+	- (group 1) alkali metals are $+1$
+	- (group 2) alkaline earth metals are $+2$.
+- halogens: $-1$, unless it is bonded to other halogen that is above it in the table
+- hydrogen: 
+	- $+1$ when bonded to non-metals
+	- $-1$ when bonded to metals
+- oxygen
+	- $-2$ in most of its compounds
 
 
 

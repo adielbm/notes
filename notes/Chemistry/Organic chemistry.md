@@ -46,8 +46,9 @@
 	- **fatty acid** (חומצת שומן)
 		- saturated fatty acids
 		- unsaturated fatty acids
-			- cis
-			- trans
+		
+			- monounsaturated fatty acid (MUFA)
+			- polyunsaturated fatty acid  (PUFA)
 	- **fat** (שומן)
 		- **saturated fat**
 		- **unsaturated fat**
@@ -58,6 +59,9 @@
 		- **diglyceride**
 		- **triglyceride**
 
+
+	- cis
+			- trans
 
 # Protein
 

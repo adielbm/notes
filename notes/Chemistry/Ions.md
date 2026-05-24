@@ -10,6 +10,10 @@
 - **monatomic ion** (or **monoatomic ion**) ("_atomic ion_" or "_simple ion_")
 	- "An ion formed from a single atom." [@Jones, 2016]
 - **ionization** (יינון)
+	- **ionize**
+	- **ionizable**
+
+
 # monatomic ions
 
 | cation       | name          |

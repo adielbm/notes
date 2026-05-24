@@ -1,5 +1,5 @@
 
-- **isotopes** are distinct [[Chemistry#Nuclide|nuclides]] of the same element
+- **isotopes** are distinct [[Nuclear chemistry|nuclides]] of the same element
     - examples:
 	    - **protium** ($_{1}^1\ce{H}$): the most common hydrogen isotope (nucleus: proton)
 	    - **deuterium** ($_{1}^2\ce{H}$ or $\ce{D}$) (nucleus: **deuteron**)

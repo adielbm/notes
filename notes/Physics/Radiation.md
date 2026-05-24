@@ -1,0 +1,10 @@
+- **radiation**
+- types:
+	- **electromagnetic radiation** (**EMR**) (or **electromagnetic wave** (**EMW**))
+		- [[Nuclear chemistry#Radioactive decay|gemma ray]]
+		- X-ray
+		- UV, visible light, etc... 
+	- **particle radiation**
+	- acoustic radiation
+	- **gravitational radiation**
+- **ionizing radiation** and **non-ionizing radiation**

@@ -66,15 +66,7 @@
 - **ground state**
 - **excited state**
 - **energy level**
-
-## Nuclide
-
-- **nuclide** (or **nucleide**, **nuclear species**) (נוּקליד)
-	- Nuclides' classification:
-		- [[isotopes]] (equal $Z$) (see Wikipedia: [Isotope vs. nuclide](https://en.wikipedia.org/wiki/Isotope#Isotope_vs._nuclide))
-		- isotones (equal $A$)
-		- isobars (equal $N$)
-
+- [[Nuclear chemistry|nuclide]]
 
 ## Subatomic particles
 

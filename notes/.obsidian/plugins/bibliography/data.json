@@ -444,5 +444,25 @@
       ]
     },
     "publisher": "Prentice Hall"
+  },
+  {
+    "id": "Giancoli, 2015",
+    "type": "book",
+    "ISBN": "9781292057125",
+    "title": "Physics",
+    "author": [
+      {
+        "family": "Giancoli",
+        "given": "Douglas"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "publisher": "Pearson Higher Education & Professional Group"
   }
 ]

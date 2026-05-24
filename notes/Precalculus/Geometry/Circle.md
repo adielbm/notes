@@ -1,7 +1,7 @@
 
 - A **circle** $\bigcirc$ is the locus of points in a plane that are at a fixed distance $r$ (the **radius**) from a fixed point $O$ (the **center** of the circle).
 	- The **circumference** $C=2\pi r=\pi d$ is the length of one circuit around the circle
-	- The area enclosed by a circle is equal $A=\pi r^2$.
+	- (**area of a circle**) The area enclosed by a circle is equal $A=\pi r^2$.
 	- A **diameter** is a line segment whose endpoints are on the circle and passes through the center of the circle. 
 		- The **diameter** $d=2r$ is the length of any diameter.
 	- A **chord** is a line segment whose endpoints are both on the circle.

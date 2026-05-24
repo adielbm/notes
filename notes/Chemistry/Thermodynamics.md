@@ -12,7 +12,12 @@
 		- $W$ is the work done by the system
 	- (or equivalently $\Delta U = Q + W$, where $W$ is the work done on the system)
 - **second law of thermodynamics**
+	- _Clausius statement_:
+		- "Heat can never pass from a colder to a warmer body without some other change, connected therewith, occurring at the same time" (Wikipedia)
+	- _Kelvin-Planck statement_: (see: https://en.wikipedia.org/wiki/Second_law_of_thermodynamics#Relation_between_Kelvin's_statement_and_Planck's_proposition)
+		- "no device is possible whose sole effect is to transform a given amount of heat completely into work" [@Giancoli, 2015] 
 - **third law of thermodynamics**
+
 
 - **state function** (פונקציית מצב)
 	- examples: internal energy ($U$), enthalpy ($H$), entropy ($S$), pressure ($P$), and temperature ($T$)
@@ -53,20 +58,29 @@
 
 - **surroundings**
 
+## Thermodynamic processes
+
 - **thermodynamic processes**
-	- **isobaric** (אִיזוֹבָּרִי, אחיד-לחץ, קבוע-לחץ)
-	- **isochoric** (אִיזוֹכוֹרִי, אחיד-נפח, קבוע-נפח)
-	- **isothermal** (איזותרמי, אחיד-טמפרטורה, קבוע-טמפרטורה)
-	- **adiabatic** (אַדְיַאבָּטִי)
-	- **isentropic** (אִיזֶנְטְרוֹפִּי, אחיד-אנטרופיה, קבוע-אנטרופיה)
-	- **isenthalpic** (אִיזֶנְתַּלְפִּי, אחיד-אנתלפייה, קבוע-אנתלפייה)
-	- quasistatic
-	- polytropic
-	- **free expansion**
-		- **Joule expansion**
-	- **reversible** (הפיך)
-	- **irreversible** (לא-הפיך)
-	- endoreversibility
+- **isobaric** (אִיזוֹבָּרִי, אחיד-לחץ, קבוע-לחץ)
+	- $\Delta P=0$
+- **isochoric** (or **isovolumetric**) (אִיזוֹכוֹרִי, אחיד-נפח, קבוע-נפח)
+	- $\Delta V=0$
+- **isothermal** (איזותרמי, אחיד-טמפרטורה, קבוע-טמפרטורה)
+	- $\Delta T=0$
+- **adiabatic** (אַדְיַאבָּטִי)
+	- $Q=0$
+- **isentropic** (אִיזֶנְטְרוֹפִּי, אחיד-אנטרופיה, קבוע-אנטרופיה)
+- **isenthalpic** (אִיזֶנְתַּלְפִּי, אחיד-אנתלפייה, קבוע-אנתלפייה)
+- quasistatic
+- polytropic
+- **free expansion**
+	- **Joule expansion**
+- **reversible** (הפיך)
+- **irreversible** (לא-הפיך)
+- endoreversibility
+
+
+---
 
 - **exothermic process**
 	- **exothermic reaction** 
@@ -146,12 +160,52 @@
 	- **lower heating value** (LHV)
 - **specific energy** (or **massic energy**, **gravimetric energy density**)
 
+
+# Temperature
+
+- **temperature**
+	- **thermodynamic temperature** (or **absolute temperature**) (טמפרטורה מוחלטת)
+	- **absolute zero**
+	- **Celsius**
+		- degree Celsius ($^\circ\mathrm{C}$)
+		- (sometimes $\mathrm{C}^\circ$ is used for temperature interval)
+	- For an ideal gas, $\overline{\text{KE}}=\frac{3}{2}k_B T$
+
+
+- **thermal expansion** (התפשטות תרמית)
+	- $\Delta L = \alpha L_{0}\Delta T$
+	- $\Delta V = \beta V_{0}\Delta T$
+
+
+![](https://upload.wikimedia.org/wikipedia/commons/3/34/Phase-diag2.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original)
+
+- **phase diagram**
+	- **lines of equilibrium** (or **phase boundaries**)
+	- The **critical point** (specifically **liquid–vapor critical point**) is the point $(T_c, P_c)$ in which the liquid–gas equilibrium curve ends. Beyond this point, the distinction between liquid and gas vanishes, and the substance becomes a supercritical fluid.
+		- $T_c$ is the **critical temperature**
+		- $P_c$ is the **critical pressure**
+	- The **triple point** is the point $(T_{tp}, P_{tp})$ in which all three phases coexist in dynamic equilibrium
+
+
+
+# Heat engine 
+
+![](https://upload.wikimedia.org/wikipedia/commons/2/22/Carnot_heat_engine_2.svg)
+
+
+- $W = Q_H - Q_L$ (from the first law of thermodynamics)
+- $\displaystyle \eta_{\text{th}}=\frac{W}{Q_{\mathrm{H}}}=\frac{Q_{\mathrm{H}}-Q_{\mathrm{L}}}{Q_{\mathrm{H}}}=1-\frac{Q_{\mathrm{L}}}{Q_{\mathrm{H}}}$
+- **Carnot's theorem**
+	- $\displaystyle \eta_{\text{max}}=\frac{T_{\mathrm{H}}-T_{\mathrm{L}}}{T_{\mathrm{H}}} =1-\frac{T_{\mathrm{L}}}{T_{\mathrm{H}}}$
+
 # Potentials
 
 - **thermodynamic potential** (or **thermodynamic potential energy**)
 	- **Gibbs free energy** (or **Gibbs energy**)
 		- $G=U+PV-TS$
 		- $\Delta G=\Delta H-T\Delta S$
+			- the enthalpy contribution is favorable when $\Delta H < 0$
+			- the entropy contribution is favorable when $\Delta S > 0$
 		- $\Delta G<0$ → spontaneous
 		- $\Delta G = 0$ → equilibrium
 		- $\Delta G>0$ → nonspontaneous
@@ -196,10 +250,15 @@
 		- elastic
 		- gravitational
 
-- for an ideal gas: $\Delta U = n C_{V,m} \Delta T$
-	- $n$ is the number of moles
-	- $C_{V,m}$ is [[#Heat capacity|molar heat capacity]] at constant volume
-	- $\Delta T$ is the change in temperature
+- for an ideal gas: 
+	- $\Delta U = n C_{V,m} \Delta T$
+		- $n$ is the number of moles
+		- $C_{V,m}$ is [[#Heat capacity|molar heat capacity]] at constant volume
+		- $\Delta T$ is the change in temperature
+	- $U = \frac{f}{2}nRT$
+		- $f$ is the degrees of freedom
+			- monatomic gas: $f = 3$ 
+			- diatomic gas: $f = 5$
 
 - #todo 
 	- $\Delta U=\sum_{i}p_{i}E_{i}$
@@ -210,30 +269,7 @@
 
 - **entropy** ($S$)
 
-# Temperature
 
-- **temperature**
-	- **thermodynamic temperature** (or **absolute temperature**) (טמפרטורה מוחלטת)
-	- **absolute zero**
-	- **Celsius**
-		- degree Celsius ($^\circ\mathrm{C}$)
-		- (sometimes $\mathrm{C}^\circ$ is used for temperature interval)
-	- $\overline{\text{KE}}=\frac{3}{2}k_B T$
-
-
-- **thermal expansion** (התפשטות תרמית)
-	- $\Delta L = \alpha L_{0}\Delta T$
-	- $\Delta V = \beta V_{0}\Delta T$
-
-
-![](https://upload.wikimedia.org/wikipedia/commons/3/34/Phase-diag2.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original)
-
-- **phase diagram**
-	- **lines of equilibrium** (or **phase boundaries**)
-	- The **critical point** (specifically **liquid–vapor critical point**) is the point $(T_c, P_c)$ in which the liquid–gas equilibrium curve ends. Beyond this point, the distinction between liquid and gas vanishes, and the substance becomes a supercritical fluid.
-		- $T_c$ is the **critical temperature**
-		- $P_c$ is the **critical pressure**
-	- The **triple point** is the point $(T_{tp}, P_{tp})$ in which all three phases coexist in dynamic equilibrium
 
 # misc.
 

@@ -54,8 +54,8 @@
 
 # misc
 
-- [[Chemical kinetics|chemical equilibrium]]
-- [[Chemical kinetics|equilibrium reaction]]
+- [[chemical equilibrium]]
+- [[Chemical equilibrium|equilibrium reaction]]
 - **organic reactions**
 - **homogeneous reaction** (the reactants and products are in the same phase)
 - **heterogeneous reaction** (reactants in two or more phases)

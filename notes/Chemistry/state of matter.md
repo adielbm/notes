@@ -28,6 +28,18 @@
 	- **standard boiling point**
 
 
+
+- determining state of matter at room temperature:
+	- ionic compound → usually solid
+	- network solid → almost always solid
+	- alloy or pure metal → usually solid (exception: Hg is liquid)
+	- molecular compound:
+		- bigger/heavy molecule → higher boiling point
+		- higher polarity → higher boiling point
+		- capable of hydrogen bonding → higher boiling point
+
+
+
 - **volatility** (נדיפות)
 	- weak [[Chemical bond|IMF]]s → high volatility (evaporates easily) → low boiling point
 	- strong IMFs → low volatility (evaporates slowly) → high boiling point

@@ -3,3 +3,9 @@
 	- A real number $r\in\mathbb{R}$ is rational if and only if its base-$b$ representation is finite or periodic. 
 - An **irreducible fraction** is a fraction in which the numerator and denominator are integers that have no other common divisors than 1 (and −1, when negative numbers are considered).
 
+# Related terms 
+
+- **quotient**
+- **ratio**
+- **rate**
+- **rate of change** (שיעור השינוי, קצב השינוי, מידת השינוי)
