@@ -95,6 +95,7 @@
 	- $t_{1/2}=\frac{\ln(2)}{\lambda}$ is the time required for a quantity to reduce to half of its initial value.
 	- $N(n t_{1/2})=N_0 (1/2)^n$ is the amount after $n$ half-lives.
 		- $\frac{1}{2}$ is the **decay factor** per half-life.
+		- $n=t/t_{1/2}$
 - $\displaystyle\frac{dN}{dt} = -\lambda N$
 - $A = -\frac{dN}{dt} = \lambda N$ is the activity
 

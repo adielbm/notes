@@ -154,5 +154,37 @@
       ],
       "key": "1"
     }
+  ],
+  "insert-template-w-shortcut:insert-chemistry-ce": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "1"
+    }
+  ],
+  "insert-template-w-shortcut:insert-chemistry-ce2": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "2"
+    }
+  ],
+  "insert-template-w-shortcut:insert-mathrm": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "3"
+    }
+  ],
+  "insert-template-w-shortcut:insert-math": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "4"
+    }
   ]
 }
