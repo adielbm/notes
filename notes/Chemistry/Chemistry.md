@@ -1,8 +1,4 @@
 
-
-
-
-
 - **substance**
 - **matter**
 	- pure substance
@@ -28,9 +24,12 @@
 	- "a property that does depend on the quantity of matter" [@Denniston, 2022]
 
 
-
-
-
+- atomic physics
+	- **energy level**
+		- **ground state**
+		- **excited state**
+	- [[Nuclear chemistry|nuclide]]
+	- [[Particles|subatomic particle]]
 
 ## nomenclature
 
@@ -60,32 +59,3 @@
 	- second: prefix and _ide_
 
 
-# Atom
-
-- **Bohr model**
-- **ground state**
-- **excited state**
-- **energy level**
-- [[Nuclear chemistry|nuclide]]
-
-## Subatomic particles
-
-| subatomic particle | symbol     |                      | charge | mass number | mass ($\mathrm{u}$)                                                  |
-| ------------------ | ---------- | -------------------- | ------ | ----------- | -------------------------------------------------------------------- |
-| **proton**         | $p$, $p^+$ | $\ce{_{1}^{1}H}$     | $1+$   | 1           | $1.007276466812$                                                     |
-| **neutron**        | $n$, $n^0$ | $\ce{^{1}_{0}{\,}}n$ | $0$    | 1           | $1.00866491588$                                                      |
-| **electron**       | $e^-$      |                      | $1-$   | 0           | (**electron mass** $m_\mathrm{e}$)<br>$5.48579909070 \times 10^{-4}$ |
-
-
-## Atomic nucleus
-
-- **atomic nucleus** (גרעין האטום)
-	- "the small, dense region consisting of protons and neutrons at the center of the atom" (Wikipedia)
-
-
-|                    | symbol      |                                                   |                                                                                       | aka                                          |
-| ------------------ | ----------- | ------------------------------------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------- |
-| **atomic number**  | $Z$         | the number of protons in the nucleus of an atom   | also the number of electrons in a neutral atom                                        | **nuclear charge number**                    |
-| **neutron number** | $N$         | the number of neutrons in the nucleus of an atom  |                                                                                       |                                              |
-| **mass number**    | $A = Z + N$ | the number of **nucleons** (protons and neutrons) | It is approximately equal to the atomic mass of the atom in unified atomic mass units | **atomic mass number** or **nucleon number** |
-| **neutron excess** | $D=N-Z$     |                                                   |                                                                                       |                                              |

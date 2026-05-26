@@ -1,17 +1,22 @@
 
+
+# Nuclide
+
 - **nuclide** (or **nucleide**, **nuclear species**) (נוּקליד)
 	- Nuclides' classification:
 		- [[isotopes]] (equal $Z$) (see Wikipedia: [Isotope vs. nuclide](https://en.wikipedia.org/wiki/Isotope#Isotope_vs._nuclide))
 		- isotones (equal $A$)
 		- isobars (equal $N$)
-- **nuclear reaction**
-	- "may refer either to a change in a nuclide induced by collision with another particle or to a spontaneous change of a nuclide without collision" (Wikipedia)
-- **nuclear fission** (ביקוע גרעיני)
-	- $\ce{^1_{0}n + ^{235}_{92}U -> ^{236}_{92}U -> ^{92}_{36}Kr + ^{141}_{56}Ba + 3 ^{1}_{0}n + energy}$
-	- induced fission
-- **nuclear chain reaction** (תגובת שרשרת גרעינית)
-- **nuclear fusion** (היתוך גרעיני)
-	- $\ce{^2_{1}H + ^3_{1}H->^4_{2}H + ^1_{0}n + energy}$
+- **atomic nucleus** (גרעין האטום)
+	- "the small, dense region consisting of protons and neutrons at the center of the atom" (Wikipedia)
+
+|                    | symbol      |                                                   |                                                                                       | aka                                          |
+| ------------------ | ----------- | ------------------------------------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------- |
+| **atomic number**  | $Z$         | the number of protons in the nucleus of an atom   | also the number of electrons in a neutral atom                                        | **nuclear charge number**                    |
+| **neutron number** | $N$         | the number of neutrons in the nucleus of an atom  |                                                                                       |                                              |
+| **mass number**    | $A = Z + N$ | the number of **nucleons** (protons and neutrons) | It is approximately equal to the atomic mass of the atom in unified atomic mass units | **atomic mass number** or **nucleon number** |
+| **neutron excess** | $D=N-Z$     |                                                   |                                                                                       |                                              |
+
 
 # Nuclear stability
 
@@ -26,12 +31,36 @@
 - **radioisotope** – an atom containing a radionuclide
 - **radionuclide** – a radioactive nuclide
 
+# Nuclear reaction
+
+- **nuclear reaction**
+	- "may refer either to a change in a nuclide induced by collision with another particle or to a spontaneous change of a nuclide without collision" (Wikipedia)
+	- "A change that a nucleus undergoes (such as a nuclear transmutation)" [@Jones, 2016]
+- **nuclear equation**
+	- "A summary of the changes in a nuclear reaction, written in a form resembling a chemical equation." [@Jones, 2016]
+- **nuclear chain reaction** (תגובת שרשרת גרעינית)
+- **nuclear fusion** (היתוך גרעיני)
+	- $\ce{^2_{1}H + ^3_{1}H->^4_{2}H + ^1_{0}n + energy}$
+- **nuclear fission** (ביקוע גרעיני)
+	- $\ce{^1_{0}n + ^{235}_{92}U -> ^{236}_{92}U -> ^{92}_{36}Kr + ^{141}_{56}Ba + 3 ^{1}_{0}n + energy}$
+	- induced fission
+- **nuclear transformation**
+
 # Radioactive decay
 
 - **radioactivity**
 - **radioactive decay** (or **nuclear decay**, or **radioactivity**) (דעיכה רדיואקטיבית)
 - **induced radioactivity** (or **artificial radioactivity**)
+	- in contrast to "natural radioactivity"
 - spontaneous fission
+
+- **parent nucleus**
+	- "In a nuclear reaction, the nucleus that undergoes disintegration or transmutation" [@Jones, 2016]
+- **daughter nucleus** (or **daughter product**, **decay product**) (תוצר דעיכה)
+	- "A nucleus that is the product of a nuclear decay." [@Jones, 2016]
+- **intermediate nucleus**
+- **decay chain** (or **radioactive series**) (שרשרת דעיכה)
+
 
 - **alpha radiation** (or **alpha rays**)
 	- **alpha decay** (or **α-decay**) $\ce{^{A}_{Z}X -> ^{A-4}_{Z-2}Y + ^{4}_{2}He}$
@@ -51,13 +80,12 @@
 	- **gamma decay**
 
 
-|                                    | symbol                                |                                        | charge | mass number | mass ($\mathrm{u}$) |
-| ---------------------------------- | ------------------------------------- | -------------------------------------- | ------ | ----------- | ------------------- |
-| **alpha particles**                | $\alpha$, $\ce{\alpha^{2+}}$          | $\ce{He^{2+}}$, $^{4}_{2}\ce{He^{2+}}$ | $2+$   | 4           | $\approx 4.0015$    |
-| **beta particle** <br>             | $\ce{\beta}$, $\ce{^{0}_{-1}\beta}$,  | $\ce{^0_{-1}e}$                        | $1-$   | 0           | $1\,m_\mathrm{e}$   |
-| **positron** (or **antielectron**) | $\ce{\beta^+}$, $\ce{^{0}_{+1}\beta}$ | $\ce{e^+}$, $\ce{^0_{+1}e}$            | $1+$   | 0           | $1\,m_\mathrm{e}$   |
-| gamma                              | $\gamma$                              | $\ce{^0_{0}\gamma}$                    | $0$    | 0           | 0                   |
-
+|                  | [[Particles\|particle]] | $^{A}_{Z}\ce{E}^q$                                                   | $\ce{^{\mathit{A}}_{q}x}$              | mass ($\mathrm{u}$) |
+| ---------------- | ----------------------- | -------------------------------------------------------------------- | -------------------------------------- | ------------------- |
+| alpha particle   | Helium-4                | $\alpha$, $\ce{\alpha^{2+}}$, $\ce{He^{2+}}$, $^{4}_{2}\ce{He^{2+}}$ |                                        | $\approx 4.0015$    |
+| β− particle <br> | electron                | $\ce{\beta}$                                                         | $\ce{^0_{-1}e}$, $\ce{^{0}_{-1}\beta}$ | $1\,m_\mathrm{e}$   |
+| β+ particle      | antielectron            | $\ce{\beta^+}$, $\ce{e^+}$                                           | $\ce{^0_{+1}e}$, $\ce{^{0}_{+1}\beta}$ | $1\,m_\mathrm{e}$   |
+| gamma            | photon                  | $\gamma$                                                             | $\ce{^0_{0}\gamma}$                    | 0                   |
 
 
 ## Half-life
@@ -92,9 +120,10 @@
 - **röntgen** (or **roentgen**) ($\mathrm{R}$), $1\,\mathrm{R}=2.58 \times 10^{-4}\,\mathrm{C/kg}$
 - **roentgen equivalent man** (**rem**), $1\,\mathrm{rem}=10^{-2}\,\mathrm{Sv}$
 - **sievert** ($\mathrm{Sv}$), $1\,\mathrm{Sv}=1\,\mathrm{m^{2} \cdot s^{-2} }$
-- **median lethal dose** ($\text{LD}_{50}$)
-	- "the dose required to kill half the members of a tested population after a specified test duration" (Wikipedia)
-	- $\approx 500\,\mathrm{rem}$
+- **lethal dose**
+	- **median lethal dose** ($\text{LD}_{50}$)
+		- "the dose required to kill half the members of a tested population after a specified test duration" (Wikipedia)
+		- $\approx 500\,\mathrm{rem}$
 
 
 # Applications

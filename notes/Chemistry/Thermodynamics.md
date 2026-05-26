@@ -243,7 +243,7 @@
 
 # Internal energy
 
-- **** ($U$) (אנרגיה פנימית)
+- **internal energy** ($U$) (אנרגיה פנימית)
 - in contrast to:
 	- macroscopic kinetic energy
 	- macroscopic potential energy

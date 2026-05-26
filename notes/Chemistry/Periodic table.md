@@ -9,7 +9,7 @@
 ![400](https://upload.wikimedia.org/wikipedia/commons/f/fe/Periodic_trends.svg)
 
 - **atomic radius**
-- **ionization energy**
+- **ionization energy** (אנרגיית יינון)
 	- the minimum energy required to remove an electron from the ground state of the isolated gaseous atom or ion
 	- Highest for noble gases and halogens
 	- Lowest for alkali metals (bottom left)
