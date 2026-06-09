@@ -25,19 +25,15 @@
 		- $\ce{ClNa -> Cl + Na}$
 		- $\ce{CaCO3(s) ->[\Delta] CaO(s) + CO2(g)}$
 - **single displacement reaction** (or **(single) substitution reaction**) (תגובת התמרה יחידה)
-	- **double displacement reaction** (or **salt metathesis reaction**) (תגובת התמרה כפולה)
+	- $\ce{A + BC -> AC + B}$
+- **double displacement** (or **salt metathesis**, **double replacement**) (תגובת התמרה כפולה)
+	- $\ce{AB + CD -> AD + CB}$
+	- "two ionic compounds in aqueous solution exchange their component ions to form two new compounds" (Wikipedia)
 - [[Acids and bases|acid–base reaction]]
-	- neutralization
+	- [[Acids and bases#Neutralization|neutralization]]
 - [[redox]]
 	- [[Redox#Combustion|combustion]]
-- **precipitation** (תגובת שיקוע, פְּרֶסיפּיטציה)
-	- $\ce{AgNO3(aq) + NaCl(aq) -> \underset{ precipitate }{ AgCl(s) v } + NaNO3(aq)}$
-	- **precipitate** (_noun_) `/-tət/` (משקע)
-		- the insoluble product
-	- **precipitate** (_verb_) `/-teɪt/`
-	- **precipitant** 
-		- (_adj_.) "that causes precipitation" (Wiktionary)
-		- (_noun_) "A substance that, when added to a solution, causes a dissolved substance to form a precipitate." (Wiktionary)
+- [[Solutions#Precipitation|precipitation]]
 - [[Organic chemistry|condensation reaction]] (תגובת דחיסה, קוֹנדֶנסָציה)
 - **hydrolysis** (הידרוליזה, תהליך הידרוליטי, הִדְרוּל)
 

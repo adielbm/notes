@@ -10,21 +10,41 @@
 - A **binary**, **ternary**, or **quaternary** compound is a compound that contains two, three, or four different elements, respectively.
 
 
-- **amorphous solid** (or **non-crystalline solid**) (מוצק אמורפי)
-- **crystal** (or **crystalline solid**) (גביש, מוצק גבישי)
-	- **ionic crystal**
-	- **crystal structure** (מבנה גבישי)
-	- **network solid** (or **covalent network solid**) (סריג אטומרי)
-	- types of crystalline solids by [@Denniston, 2022]:
-		- ionic soild
-		- network solid (מוצק אטומרי)
-		- molecular solid
-		- metallic solid
+
 
 - **saturated compound** (תרכובת רוויה)
 - **unsaturated compound**
 
 - **organic compounds**
+
+
+# Solids
+
+- **amorphous solid** (or **non-crystalline solid**) (מוצק אמורפי)
+	- **amorphous metal** (or **metallic glass**)
+- **crystal** (or **crystalline solid**) (גביש, מוצק גבישי)
+	- **crystal structure** (מבנה גבישי)
+		- unit cell
+		- crystal lattice
+		- lattice point
+		- lattice vector
+	- types:
+		- **ionic crystal**
+			- ionic bonds
+		- **network solid** (or **covalent network solid**) (סריג אטומרי, מוצק אטומרי)
+			- covalent bond
+		- **metallic solid**
+			- metallic bond
+- **molecular solid** (גביש מולקולרי)
+
+
+
+
+- **macromolecule**
+- **nanomaterials**
+- **polymer**
+- **monomer**
+
 
 
 [^1]: https://chemistry.stackexchange.com/questions/86399/are-all-ionic-compounds-salts

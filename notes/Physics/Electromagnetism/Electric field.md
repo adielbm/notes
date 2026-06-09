@@ -4,8 +4,7 @@
 	- $F$ is the force on a charge (in $\mathrm{N}$)
 	- $q$ is the **test charge** (in $\mathrm{C}$)
 - (vector form: $\displaystyle \vec{\boldsymbol{E}}=\frac{\vec{\boldsymbol{F}}}{q}$) or $\displaystyle \vec{\boldsymbol{E}}=\lim_{ q \to 0}\frac{\vec{\boldsymbol{F}}}{q}$
-- The SI unit of electric field is $\mathrm{N/C}=\mathrm{V/m}$
-
+- SI unit: **volt per meter** $\mathrm{N/C}=\mathrm{V/m}=\mathrm{kg \cdot m \cdot s^{-3} \cdot A^{-1}}$
 ### Electric field due to a point charge 
 
 - $\displaystyle E =k\frac{Q}{r^2}$ 

@@ -24,13 +24,6 @@
 	- "a property that does depend on the quantity of matter" [@Denniston, 2022]
 
 
-- atomic physics
-	- **energy level**
-		- **ground state**
-		- **excited state**
-	- [[Nuclear chemistry|nuclide]]
-	- [[Particles|subatomic particle]]
-
 ## nomenclature
 
 - nomenclature for chemical compounds:

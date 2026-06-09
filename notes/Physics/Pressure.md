@@ -15,13 +15,14 @@
 
 ## Units
 
-| unit of pressure                    |                                                                                                         |                                                                        |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| **pascal**                          | ${\displaystyle {\rm {1~Pa=1~{\frac {N}{m^{2}}}=1~{\frac {kg}{m{\cdot }s^{2}}}=1~{\frac {J}{m^{3}}}}}}$ | the SI unit                                                            |
-| **atmosphere**                      | $1 \, \text{atm} = 101325 \, \text{Pa}$                                                                 | roughly equivalent to the mean sea-level atmospheric pressure on Earth |
-| **torr**                            | $1 \, \text{Torr}=\frac{1}{760}\,\mathrm{atm} \approx 133.32 \, \text{Pa}$                              |                                                                        |
-| **bar**                             | $1 \, \text{bar} = 10^5 \, \text{Pa}$                                                                   |                                                                        |
-| **pound per square inch** (**psi**) | $1 \, \text{psi}\approx 6894.76 \, \text{Pa}$                                                           | also: $\mathrm{lbf/in^2}$                                              |
+| unit of pressure                     |                                                                                                                                                   |                                                                        |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| **pascal**                           | ${\displaystyle {\rm {1~Pa=1~{\frac {N}{m^{2}}}=1~{\frac {kg}{m{\cdot }s^{2}}}=1~{\frac {J}{m^{3}}}}}}=1\,\mathrm{kg   \cdot m^{−1}\cdot s^{−2}}$ | the SI unit                                                            |
+| **atmosphere**                       | $1 \, \text{atm} = 101325 \, \text{Pa}$                                                                                                           | roughly equivalent to the mean sea-level atmospheric pressure on Earth |
+| **torr**                             | $1 \, \text{Torr}=\frac{1}{760}\,\mathrm{atm} \approx 133.32 \, \text{Pa}$                                                                        |                                                                        |
+| **bar**                              | $1 \, \text{bar} = 10^5 \, \text{Pa}$                                                                                                             |                                                                        |
+| **pound per square inch** (**psi**)  | $1 \, \text{psi}\approx 6894.76 \, \text{Pa}$                                                                                                     | also: $\mathrm{lbf/in^2}$                                              |
+| **millimetre of mercury** (**mmHg**) | $1 \, \text{mmHg}=133.322387415\,\mathrm{Pa} \approx 1 \, \text{torr}$                                                                            |                                                                        |
 
 # Pascal's law
 

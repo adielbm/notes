@@ -2,7 +2,6 @@
 - **wireless communication** (or just **wireless**)
 
 
-
 - radio frequency (RF)
 - RF currents
 - radio waves

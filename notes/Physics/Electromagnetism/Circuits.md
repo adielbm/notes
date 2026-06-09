@@ -75,16 +75,12 @@ classification of elements:
 - the electric current through a conductor between two points is directly proportional to the voltage across the two points
 	- Ohm's Law holds for **ohmic materials** (like most metals) but not for **non-ohmic materials** (like diodes, transistors, and other semiconductors)
 	- The unit of resistance is the $\mathrm{ohm}$ ($\mathrm{\Omega}$) defined as $\mathrm{1\ \Omega = 1\ V/A}$
-	- The reciprocal of resistance is called the **electrical conductance** (in $\mathrm{S}$, siemens, which is $\mathrm{1\ S = 1 \Omega^{-1}}$)
+	- The reciprocal of resistance is called the **electrical conductance** (מוליכות חשמלית) (in $\mathrm{S}$, siemens, which is $\mathrm{1\ S = 1 \Omega^{-1}}$)
 	- $\displaystyle V=IR$
 		- $V$ is the voltage (in $\mathrm{V}$)
 		- $I$ is the current (in $\mathrm{A}$)
-		- $R$ is the resistance (in $\mathrm{\Omega}$)
-- The **(electrical) resistivity** (or **specific resistance**) $\rho$ (in $\mathrm{\Omega\cdot m}$) of a material is a measure of how strongly that material opposes the flow of electric current  
-	- $\displaystyle R=\rho\frac{L}{A}$ is the resistance of a conductor of length $L$ and cross-sectional area $A$ with resistivity $\rho$
-	- $\rho=\frac{E}{J}$ where $E$ is the electric field (in $\mathrm{V/m}$) and $J$ is the current density (in $\mathrm{A/m^2}$)
-	- $\rho(T)=\rho_0[1+\alpha(T-T_0)]$
-	- The reciprocal of the resistivity, called the **electrical conductivity** (or **specific conductance**) is $\sigma=\frac{1}{\rho}$ (in $\mathrm{S/m}$, siemens per meter, or $\mathrm{(\Omega\cdot m)^{-1}}$)
+		- $R$ is the [[Impedance|resistance]] (in $\mathrm{\Omega}$)
+	- $\displaystyle R=\rho\frac{L}{A}$ is the resistance of a conductor of length $L$ and cross-sectional area $A$ with [[Conductivity|resistivity]] $\rho$
 
 ### Resistor
 

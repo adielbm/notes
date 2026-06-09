@@ -1,8 +1,9 @@
 
 - An **angle** is the union of two rays that share a common endpoint
+	- SI unit: **radian** ($\mathrm{rad}$)
+	- other units: **degree** (or **degree of arc**)
 - The **bisector of an angle** is the ray that separates the given angle into two congruent angles.
 	- There is one and only one bisector for a given angle.
-
 
 
 - **Protractor Postulate** - The measure of an angle is a unique positive number

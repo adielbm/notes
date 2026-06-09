@@ -2,7 +2,7 @@
 
 - Electric charge is **quantized**, that is, exists in discrete quantities which are integer multiples of the **elementary charge** $e=1.6022\times 10 ^{-19}\,\mathsf{C}\approx 1.6\times 10^{-19}\,\mathsf{C}$
 	- The charge of an electron is $-e$ and the charge of a proton is $+e$
-	- The SI unit of charge is the **coulomb** (C)
+	- The SI unit of charge is the **coulomb** ($\mathrm{C}=\mathrm{s\cdot A}$)
 - **Conservation of charge**: the total charge in an isolated system remains constant
 - An object can become charged by:
 	- rubbing (friction)
@@ -57,6 +57,7 @@
 - $\vec{\boldsymbol{\tau}}=\vec{\boldsymbol{p}}\times\vec{\boldsymbol{E}}$ is the torque on an electric dipole
 - $U=-\vec{\boldsymbol{p}}\cdot\vec{\boldsymbol{E}}$ is the potential energy for an electric dipole in an electric field>
 
+- **polarizability**
 
 ## Polarization density
 

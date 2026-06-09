@@ -49,7 +49,7 @@
 
 ## Related quantities 
 
-- **mole fraction**  (or **molar fraction**) $\displaystyle\chi_{i}=\frac{n_{i}}{n_{\text{total}}}$
+- **mole fraction** (or **molar fraction**) $\displaystyle\chi_{i}=\frac{n_{i}}{n_{\text{total}}}$
 	- (see also [[Gases#Dalton's law|Dalton's law]])
 - **mass fraction** ${\displaystyle w_{i}={\frac {m_{i}}{m_{\mathrm {total} }}}.}$
 - **volume fraction** $\displaystyle\varphi_{i}=\frac{V_{i}}{V_{\text{total}}}$

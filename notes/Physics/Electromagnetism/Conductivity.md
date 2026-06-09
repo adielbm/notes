@@ -1,0 +1,4 @@
+- The **(electrical) resistivity** (or **specific resistance** (התנגדות סגולית)) $\rho$ (in $\mathrm{\Omega\cdot m}$) of a material is a measure of how strongly that material opposes the flow of electric current 
+	- $\rho=\frac{E}{J}$ where $E$ is the electric field (in $\mathrm{V/m}$) and $J$ is the current density (in $\mathrm{A/m^2}$)
+	- $\rho(T)=\rho_0[1+\alpha(T-T_0)]$
+- The reciprocal of the resistivity, called the **electrical conductivity** (or **specific conductance** (מוליכות סגולית)) is $\sigma=\frac{1}{\rho}$ (in $\mathrm{S/m}$, siemens per meter, or $\mathrm{(\Omega\cdot m)^{-1}}$)

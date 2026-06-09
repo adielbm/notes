@@ -31,7 +31,6 @@
 	- "The condition of a solution being more highly concentrated than is normally possible" (Wiktionary)
 	- **supersaturated solution** (תמיסה רווית-יתר)
 - **saturated solution** (תמיסה רוויה)
-- **supernate** (or **supernatant** or **supernatant liquid**) (נוזל עליון)
 
 - **dilution** (מיהול)
 	- $M_1V_1 = M_2V_2$
@@ -42,13 +41,29 @@
 - **aqueous solution** (תמיסה מימית)
 	- **spectator ions** (יונים משקיפים)
 
+# Precipitation
+
+- **precipitation** (תגובת שיקוע, פְּרֶסיפּיטציה)
+	- $\ce{AgNO3(aq) + NaCl(aq) -> \underset{ precipitate }{ AgCl(s) v } + NaNO3(aq)}$
+	- **precipitate** (_noun_) `/-tət/` (משקע)
+		- the insoluble product
+	- **precipitate** (_verb_) `/-teɪt/`
+	- **precipitant** 
+		- (_adj_.) "that causes precipitation" (Wiktionary)
+		- (_noun_) "A substance that, when added to a solution, causes a dissolved substance to form a precipitate." (Wiktionary)
+
+- **supernate** (or **supernatant** or **supernatant liquid**) (נוזל עליון)
+
+
 # Electrolyte
 
 - **electrolyte** (אלקטרוליט)
 	- "A substance that produces ions when dissolved in water; its solution conducts electricity." [@Timberlake, 2017]
 	- "a substance that conducts electricity through the movement of ions, but not through the movement of electrons" (Wikipedia)
 	- **strong electrolyte**
+		- "solutes that exist in solution completely or nearly completely as ions" [@Brown, 2012]
 	- **weak electrolyte**
+		- "solutes that exist in solution mostly in the form of neutral molecules with only a small fraction in the form of ions" [@Brown, 2012]
 - **nonelectrolyte**
 	- "A substance that dissolves in water as molecules; its solution does not conduct an electrical current." [@Timberlake, 2017]
 
@@ -56,15 +71,14 @@
 	- soluble ionic compound → strong electrolyte
 	- covalent compound
 		- ionize completely in water → strong electrolyte
+		- strong acid → strong electrolyte
 		- ionize partially in water → weak electrolyte
+		- weak acid/base → weak electrolyte
 		- not ionize in water → non-electrolytes 
-
-
-
 
 # Dissociation
 
-- **dissociation** (דיסוציאציה, הִתְפָּרְדוּת, פירוק ליונים)
+- **dissociation** (דיסוציאציה, התפרדות, פירוד)
 	- "The separation of an acid or a base into ions in water." [@Timberlake, 2017]
 	- "The separation of ions that occurs when an ionic solid dissolves" [@Jones, 2016]
 	- "a general process in which molecules (or ionic compounds such as salts, or complexes) separate or split into other things such as atoms, ions, or radicals, usually in a reversible manner" (Wikipedia)

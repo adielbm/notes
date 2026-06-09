@@ -11,7 +11,6 @@
 	- $\ce{HA(aq) + H2O(l) <=> H3O+(aq) + A^-(aq)}$
 - base: produces $\ce{OH-}$ in water
 	- $\ce{BOH(aq) -> B+(aq) + OH-(aq)}$
-	- 
 
 # Brønsted–Lowry definition
 
@@ -20,7 +19,6 @@
 - "An acid–base reaction is, thus, the removal of a proton from the acid and its addition to the base." (Wikipedia)
 - acid: proton ($\ce{H+}$) donor
 - base: proton ($\ce{H+}$) acceptor
-- $\ce{\underset{\text{acid}}{HA} + \underset{\text{base}}{B} <=> \underset{\text{conj. base}}{A-} + \underset{{\text{conj. acid}}}{BH+}}$
 - **conjugate acid** (חומצה צמודה)
 - **conjugate base** (בסיס צמוד)
 - conjugate acid base pairs
@@ -31,6 +29,10 @@
 	- has lone pairs that can accept $\ce{H^+}$ → basicity indicator
 	- net positive charge → acidity indicator
 	- net negative charge → basicity indicator
+
+
+
+
 
 - In a acid–base reaction $\ce{HA + B <=> A^- + BH^+}$, equilibrium favors the side containing the weaker acid and the weaker base. The [[Chemical equilibrium|equilibrium constant]] for the reaction: 
 	- $K_{\text{eq}} = \frac{[\ce{A^-}][\ce{BH^+}]}{[\ce{HA}][\ce{B}]}=\frac{K_a(\ce{HA})}{K_a(\ce{BH^+})}=10^{\mathrm{p}K_a(\ce{BH^+}) - \mathrm{p}K_a(\ce{HA})}$, therefore:
@@ -46,19 +48,31 @@
 	- **amphiprotic**
 
 
-
-
-
 # Neutralization
 
 - **neutralization** (סתירה)
-	- "a chemical reaction in which acid and a base react with an equivalent quantity of each other" (Wikipedia)
-	- $\ce{\underset{strong acid }{ HA(aq) } + \underset{strong base }{ BOH(aq) }-> \underset{neutral salt }{ BA(aq) } + H2O(l)}$
-		- net ionic equation:  $\ce{H3O+(aq) + OH-(aq)->2H2O(l)}$
+- "a chemical reaction in which acid and a base react with an equivalent quantity of each other" (Wikipedia)
+- "In general, a neutralization reaction between an acid and a metal hydroxide produces water and a salt" [@Brown, 2012]
+
+
+# Examples 
+
+- $\ce{HA(aq)  +  BOH(aq) ->  BA(aq) + H2O(l)}$
+	- net ionic equation:  
+		- $\ce{H3O+(aq) + OH-(aq)->2H2O(l)}$
 			- (or $\ce{H+ (aq) + OH- (aq) -> H2O (l)}$)
-		- examples: 
-			- $\ce{ HCl  +  NaOH  ->  NaCl  + H_{2}O }$
-			- $\ce{HNO3 + KOH -> KNO3 + H2O}$
+	- $\ce{strong acid(aq) + strong base(aq) -> \underset{ neutral }{ salt(aq) } + H2O(l)}$
+		- (e.g. $\ce{ HCl(aq)  +  NaOH(aq)  ->  NaCl(aq)  + H_{2}O(l) }$)
+	- $\ce{strong acid(aq) + weak base(aq) -> \underset{ acidic }{ salt(aq) } + H2O(l)}$
+	- $\ce{weak acid(aq) + strong base(aq) -> \underset{ basic }{ salt(aq) } + H2O(l)}$
+	- $\ce{weak acid(aq) + weak base(aq) -> salt(aq) + H2O(l)}$
+- $\ce{HA(aq) + H_{2}O(l) -> H3O+(aq) + A-(aq)}$
+- $\ce{\underset{ weak base }{ B(aq) } + \underset{ weak acid }{ H2O(l) } <=> \underset{ \text{conj. acid} }{ BH+(aq) } + \underset{ \text{conj. base} }{ OH-(aq) }}$
+- $\ce{\underset{ weak acid }{ HA(aq) } + \underset{ weak base }{ H2O(l) } <=> \underset{ \text{conj. base} }{ A-(aq) } + \underset{ \text{conj. acid} }{ H_{3}O+(aq) }}$
+- $\ce{acid(g) + base(g) -> salt(s)}$
+- $\ce{NH4+(aq) + OH-(aq) -> NH3(aq) + H2O(l)}$
+- $\ce{\underset{\text{acid}}{HA(aq)} + \underset{\text{base}}{B(aq)} <=> \underset{\text{conj. base}}{A-(aq)} + \underset{{\text{conj. acid}}}{BH+(aq)}}$
+
 
 # Acid strength
 

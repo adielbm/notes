@@ -1,5 +1,3 @@
-
-
 # Electrostatics
 
 - **electrostatics**
@@ -35,7 +33,7 @@
 - [[Electromagnetic induction]]
 	- [[Electromagnetic induction|Faraday's law of induction]]
 - Eddy current
-
+- [[Electromagnetic radiation]]
 # Electrical network
 
 

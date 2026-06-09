@@ -1,5 +1,5 @@
 $$\displaystyle f=\frac{1}{T}=\frac{\omega}{2\pi}= \frac{v}{\lambda}$$
-- $f$ the **frequency** of the wave (in $\mathrm{Hz}$)
+- $f$ the **[[Units#frequency|frequency]]** of the wave (in $\mathrm{Hz}$)
 - $\omega$ is the **angular frequency** of the wave (in $\mathrm{rad/s}$)
 - $T$ is the **period** of the wave (in $\mathrm{s}$)
 - $v$ is the **wave speed** of the wave (in $\mathrm{m/s}$)

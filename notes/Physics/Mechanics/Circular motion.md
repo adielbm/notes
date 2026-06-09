@@ -20,6 +20,7 @@
 - The **moment of inertia** (more accurately _rotational inertia_) of a rigid body relative to a given axis of rotation is defined as: 
 	- The ratio of the torque applied to the body to the resulting angular acceleration about the axis of rotation: $$I = \frac{\tau}{\alpha}$$
 	- moment of inertia I = angular momentum L / angular velocity ω
+	- SI unit: $\mathrm{kg \cdot m^2}$
 
 ### Angular Momentum
 

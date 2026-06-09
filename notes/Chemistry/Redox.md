@@ -1,15 +1,11 @@
-
+	
 - **redox** (**reduction-oxidation**, חִמצון־חיזור, חִמְזוּר) is a reaction in which the oxidation states of the reactants change.
 - The **oxidizing agent** (or **oxidant**) (גורם מחמצן) is the species that:
 	- **oxidizes** (מחמצן) (or causes **oxidation** to) the reductant
-	- undergoes **reduction** (or being **reduced** (מתחזר)) which is to:
-		- decrease in its oxidation number of one of its atoms
-		- (historicaly: loss oxygen)
+	- undergoes **reduction** (or being **reduced** (מתחזר)) which is a decrease in the oxidation number of one of its atoms
 - The **reducing agent** (or **reductant**) (גורם מחזר) is the species that: 
 	- **reduces** (מחזר) (or causes **reduction** to) the oxidant
-	- undergoes **oxidation** (or being **oxidized** (מתחמצן)) which is to:
-		- increase in its oxidation number of one of its atoms
-		- (historicaly: gain oxygen)
+	- undergoes **oxidation** (or being **oxidized** (מתחמצן)) which is an increase in the oxidation number of one of its atoms
 - mnemonic: [OIL RIG](https://en.wikipedia.org/wiki/Redox#Mnemonics)
 
 - **disproportionation** 
@@ -29,22 +25,6 @@
 	- ex. Each $\ce{Cl}$ atom in $\ce{Cl2}$ has an oxidation number of $0$.
 - The sum of oxidation numbers of all atoms in a species equals its total charge.
 	- The oxidation number of a monatomic ion is equal to its charge
-	- examples:
-		- $\ce{H2O}$: 
-			- $\ce{H} = +1$ (each), $\ce{O} = -2$
-			- $2(+1) + (-2) = 0$
-		- $\ce{CO2}$: 
-			- $\ce{O} = -2$, $\ce{C} = +4$
-			- $(+4) + 2(-2) = 0$
-		- $\ce{SO4^{2-}}$
-			- $\ce{O} = -2$, $\ce{S} = +6$
-			- $(+6) + 4(-2) = -2$
-		- $\ce{Cr2O7^{2-}}$
-			- $\ce{O} = -2$, $\ce{Cr} = +6$
-			- $2(+6) + 7(-2) = -2$
-		- $\ce{H2O2}$
-			- $\ce{H} = +1$, $\ce{O} = -1$
-			- $2(+1) + 2(-1) = 0$
 - When combined with other elements: 
 	- (group 1) alkali metals are $+1$
 	- (group 2) alkaline earth metals are $+2$.

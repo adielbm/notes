@@ -1,0 +1,38 @@
+- photoelectric effect
+- black body
+	- black body radiation
+- **quantum**
+- **Planck constant** $h$
+	- Si unit: $\mathrm{J \cdot s}$
+	- **reduced Planck constant** $\displaystyle\hbar=\frac{h}{2\pi}$
+- **Planck relation** $E=hf$
+- **photon energy**
+- [[Energy#Kinetic energy|radiant energy]]
+- **work function**
+- **monochromatic radiation**
+	- **monochromatic light**
+- **spectrum**
+- **electromagnetic spectrum**
+- emission spectrum
+- absorption spectrum
+- **line spectrum**
+- **continuous spectrum**
+
+- **quantum jump** (or **quantum leap**)
+	- **atomic electron transition** (or **atomic transition**)
+- atomic physics
+	- **energy level**
+		- **ground state**
+		- **excited state**
+	- [[Nuclear chemistry|nuclide]]
+	- [[Particles|subatomic particle]]
+- **matter waves** (or **de Broglie waves**)
+	- (de Broglie wavelength) $\displaystyle \lambda ={\frac {h}{p}}$, where $p$ is the momentum
+- $\displaystyle\Delta x \cdot \Delta p \ge \frac{h}{4\pi}={\frac {\hbar }{2}}$
+- **spin**
+	- spin angular momentum 
+	- **spin quantum number** ($s$)
+		- for electron $s=\frac{1}{2}$
+
+- **Pauli exclusion principle**
+	- "two or more identical particles with half-integer spins (i.e., fermions) cannot simultaneously occupy the same quantum state within a system that obeys the laws of quantum mechanics" (Wikipedia)

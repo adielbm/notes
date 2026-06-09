@@ -6,8 +6,8 @@
     "includeName": false,
     "pageSize": "A4",
     "landscape": false,
-    "margin": "0",
-    "downscalePercent": 75
+    "margin": "2",
+    "downscalePercent": 78
   },
   "showInlineTitle": true,
   "propertiesInDocument": "source",

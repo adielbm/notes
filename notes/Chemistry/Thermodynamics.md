@@ -14,6 +14,7 @@
 - **second law of thermodynamics**
 	- _Clausius statement_:
 		- "Heat can never pass from a colder to a warmer body without some other change, connected therewith, occurring at the same time" (Wikipedia)
+		- "no device is possible whose sole effect is to transfer heat from one system at a temperature $T_\text{L}$ into a second system at a higher temperature $T_\text{H}$"
 	- _Kelvin-Planck statement_: (see: https://en.wikipedia.org/wiki/Second_law_of_thermodynamics#Relation_between_Kelvin's_statement_and_Planck's_proposition)
 		- "no device is possible whose sole effect is to transform a given amount of heat completely into work" [@Giancoli, 2015] 
 - **third law of thermodynamics**
@@ -46,6 +47,7 @@
 		- $W = \int P\,dV$
 	- $W = \int V I \, dt$
 
+- **thermodynamic equilibrium**
 
 # Thermodynamic system
 
@@ -75,8 +77,13 @@
 - polytropic
 - **free expansion**
 	- **Joule expansion**
+- **quasi-static process** (or **quasi-equilibrium process**)
+
 - **reversible** (הפיך)
+	- 
 - **irreversible** (לא-הפיך)
+
+
 - endoreversibility
 
 
@@ -127,9 +134,7 @@
 		- **thermal conductivity** $\kappa$
 		- **thermal resistivity** $\rho$
 	- **convection** (הסעה)
-	- **thermal radiation** (קרינה תרמית)
-		- "electromagnetic radiation emitted by the thermal motion of particles in matter" (Wikipedia)
-
+	- [[Electromagnetic radiation#Thermal radiation|thermal radiation]]
 
 - **thermal equilibrium**
 
@@ -190,13 +195,22 @@
 
 # Heat engine 
 
-![](https://upload.wikimedia.org/wikipedia/commons/2/22/Carnot_heat_engine_2.svg)
+![248](https://upload.wikimedia.org/wikipedia/commons/2/22/Carnot_heat_engine_2.svg)
 
 
 - $W = Q_H - Q_L$ (from the first law of thermodynamics)
 - $\displaystyle \eta_{\text{th}}=\frac{W}{Q_{\mathrm{H}}}=\frac{Q_{\mathrm{H}}-Q_{\mathrm{L}}}{Q_{\mathrm{H}}}=1-\frac{Q_{\mathrm{L}}}{Q_{\mathrm{H}}}$
 - **Carnot's theorem**
 	- $\displaystyle \eta_{\text{max}}=\frac{T_{\mathrm{H}}-T_{\mathrm{L}}}{T_{\mathrm{H}}} =1-\frac{T_{\mathrm{L}}}{T_{\mathrm{H}}}$
+
+## COP
+
+- heat pump:
+	- $\displaystyle\text{COP} = \frac{Q_\text{H}}{W}$
+	- $\displaystyle \text{COP}_{\text{ideal}} =\frac{T_{\mathrm{H}}}{T_{\mathrm{H}}-T_{\mathrm{L}}}$
+- refrigerator/AC:
+	- $\displaystyle\text{COP} = \frac{Q_\text{L}}{W}$
+	- $\displaystyle\text{COP}_{\text{ideal}} = \frac{T_\text{L}}{T_\text{H} - T_\text{L}}$
 
 # Potentials
 
@@ -268,7 +282,7 @@
 # Entropy
 
 - **entropy** ($S$)
-
+- $\Delta S= \frac{Q}{T}$ 
 
 
 # misc.

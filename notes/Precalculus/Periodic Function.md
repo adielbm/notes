@@ -4,11 +4,11 @@
 - If $x(t)$ is periodic with period $T$, then: 
 	- $\forall n \in \mathbb{N}, x(t+nT)=x(t)$
 	- The function $G(t)=x(at)$ is periodic with period $\frac{T}{a}$ (for any nonzero constant $a$)
-	- The **amplitude** of $x$ is $A=\frac{1}{2}(\text{max}(F)-\text{min}(F))$ 
+	- The **amplitude** (תנופה, אַמְפְּלִיטוּדָה, מִשְׂרַעַת) of $x$ is $A=\frac{1}{2}(\text{max}(F)-\text{min}(F))$ 
 	- When $x$ is a function of time $t$, then:
 		- The **period** $T$ is the time it takes to complete one full cycle
-		- The **frequency** of $x$ is $f=\frac{1}{T}$ (in $\mathsf{s^{-1}}= \mathsf{Hz}$)
-		- The **angular frequency** of $x$ is $\omega=2\pi f$ (in $\mathsf{rad\cdot s^{-1}}$)
+		- The **[[Units#frequency|frequency]]** of $x$ is $f=\frac{1}{T}$ (in $\mathsf{s^{-1}}= \mathsf{Hz}$)
+		- The **[[Units#frequency|angular frequency]]** of $x$ is $\omega=2\pi f$ (in $\mathsf{rad\cdot s^{-1}}$)
 	- (Fourier Series)
 		- $\displaystyle x(t)=\frac{A_{0}}{2}+\sum_{n=1}^{\infty} \left[ A_n \sin(2\pi nf_{0}t) +  B_n \cos(2\pi nf_{0}t)\right]$
 			- $f_{0}$ is the **fundamental frequency** (or **fundamental harmonic**) of $x(t)$

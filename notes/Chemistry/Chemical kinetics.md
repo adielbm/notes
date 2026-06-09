@@ -2,6 +2,14 @@
 - **collision theory**
 - **reaction mechanism**
 
+- **activated complex** (קומפלקס משופעל, תצמיד משופעל)
+	- **transition state** (מצב מעבר)
+- **activation energy** ($E_a$) (אנרגיית שפעול) 
+- **effective collision** (התנגשות פוריה)
+
+- **catalysis** (זֵירוז, קִטלוז, קטליזה)
+	- **catalyst** (זָרָז, קָטָלִיזָטוֹר)
+
 # Reaction rate
 
 - **reaction rate** (or **rate of reaction**) (קצב תגובה, מהירות תגובה)
@@ -14,6 +22,7 @@
 - **rate equation** (or **rate law** or **empirical differential rate equation**)
 - **reaction rate constant** (or **rate coefficient**) $k$
 	- **Arrhenius equation**
+- an increase in temperature, surface area, the presence of a catalyst, and an increase in pressure (for gaseous reactants) generally increases the reaction rate
 ## $\ce{aA -> products}$
 
 - $v=k[\ce{A} ]^{n}$, where: 
@@ -33,15 +42,5 @@
 	- $n$ and $m$ are the **partial orders**, and $m+n$ is the **overall order**
 		- determined experimentally. It is not necessarily $n=b,m=a$ unless the reaction is elementary
 
-
----
-
-- **activated complex** (קומפלקס משופעל, תצמיד משופעל)
-	- **transition state** (מצב מעבר)
-- **activation energy** ($E_a$) (אנרגיית שפעול) 
-- **effective collision** (התנגשות פוריה)
-
-- **catalysis** (זֵירוז, קִטלוז, קטליזה)
-	- **catalyst** (זָרָז, קָטָלִיזָטוֹר)
 
 

@@ -16,7 +16,8 @@ $$\displaystyle V = V_a - V_b =\frac{W_{a \to b}}{q} =-\frac{\Delta U}{q}=\int_a
 - $V_a$ and $V_b$ are the electric potentials at points $a$ and $b$ (in $\mathrm{V}$)
 - $\Delta U=(U_b- U_a)$ 
 - $\frac{W_{a \to b}}{q} = -\frac{\Delta U}{q}$ is the work done by the electric field in moving a unit charge $q$ from point $a$ to point $b$ (in $\mathrm{J}$)
-- The SI unit of voltage is the volt
+- The SI unit of voltage is the **volt** ($\mathrm{V}$)
+	- $1\,\mathrm{V}=1\,\mathrm{kg   \cdot m^2\cdot s^{−3}\cdot A^{-1}}$
 - If $V_a>V_b$:
 	- A negative charge $q^{-}$ placed at $b$ has higher potential energy than at $a$ (i.e. $U _a < U _b$)
 	- A positive charge $q^{+}$ placed at $b$ has lower potential energy than at $a$ (i.e. $U _a > U _b$)

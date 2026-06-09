@@ -19,6 +19,10 @@
 		- "molecule composed of only two atoms, of the same or different chemical elements" (Wikipedia)
 	- **homonuclear molecule** (molecule composed of only one element)
 
+
+
+- **isomers**
+
 ### Properties
 
 - [[Gases#Vapor pressure|vapor pressure]]

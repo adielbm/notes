@@ -7,6 +7,8 @@
 		- $X = X_L - X_C$  
 	- $|Z| = \sqrt{R^2 + X^2}$ is the magnitude of impedance  
 	- $\tan \phi = \frac{X}{R}$ is the phase angle  
+	- SI unit: **ohm** ($\Omega$) 
+		- $1\,\Omega=1\,\mathrm{kg   \cdot m^2\cdot s^{−3}\cdot A^{-2}}$
 - $Y = G + jB$ is the **admittance** (in S, siemens)  
 	- $G = \frac{1}{R}$ is the **conductance**  
 	- $B$ is the **susceptance**, where:  
