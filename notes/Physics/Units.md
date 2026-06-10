@@ -77,9 +77,17 @@ $\mathrm{m^2}$
 
 ## intensity
 
-| $\mathrm{W /m^2}$                       | $\mathrm{J\cdot   s^{-1}\cdot  m^{-2}}$  | intensity $I$              | $I=\frac{P}{A}$ (power/area) |
-| --------------------------------------- | ---------------------------------------- | -------------------------- | ---------------------------- |
-
+- "The **intensity** (or **flux**) of radiant energy is the power transferred per unit area, where the area is measured on the plane perpendicular to the direction of propagation of the energy" (Wikipedia)
+	- also called: **flux**
+	- $\displaystyle I=\frac{\text{power}}{\text{area}}$
+- SI unit: $\mathrm{W /m^2 =J\cdot   s^{-1}\cdot  m^{-2}}$
+- quantities with the same dimension:
+	- [[Sound#measurements|sound intensity]]
+	- [[Electromagnetic radiation#Radiometry|irradiance]]
+	- [[Electromagnetic radiation#Radiometry|radiant exitance]]
+	- [[Electromagnetic radiation#Radiometry|radiosity]]
+	- [[Thermodynamics#Heat transfer|heat flux]]
+- [other meanings of _intensity_](https://en.wikipedia.org/wiki/Intensity_(physics)#Alternative_definitions)
 ## force
 
 - **newton**
@@ -134,19 +142,14 @@ $\mathrm{m^2}$
 	- $P$ and $P_0$ said to differ by $L_P$ decibels
 	- $L_P$ is a **power level**
 	- examples:
-		- **sound power level** (SWL): $L_{W}= 10\log_{10}\left(\frac{P}{P_0}\right)\,\mathrm{dB}$
-			- $P$ is the sound power
-			- $P_0=1\,\mathrm{pW}=10^{-12}\,\mathrm{W}$ is the standard reference
-		- **sound intensity level** (SIL): $\beta= 10\log_{10}\left(\frac{I}{I_0}\right)\,\mathrm{dB}$
-			- $I$ is the sound intensity
-			- $I_0=1\,\mathrm{pW/m^2}=10^{-12}\,\mathrm{W/m^2}$ is the standard reference
+		- [[Sound|sound power level]]
+		- [[sound|sound intensity level]]
 		- **decibel watt** (dBW): ${\text{power}\,[\mathrm{dBW}]}=10\log _{10}{\frac {\text{power}\,[\mathrm{W}]}{1\,\mathrm {W} }}$
 		- **dBm** (or **dBmW**): ${\text{power}\,[\mathrm{dBm}]}=10\log _{10}{\frac {\text{power}\,[\mathrm{mW}]}{1\,\mathrm {mW} }}$
 - for any root-power quantities $F$ and $F_0$ (reference):
 	- $\displaystyle L_{F} = 20 \log_{10}\left(\frac{F}{F_0}\right)\,\mathrm{dB}=10 \log_{10}\left(\frac{F^2}{F_0^2}\right)\,\mathrm{dB}=2\log_{10}\left(\frac{F}{F_0}\right)\,\mathrm{B}$
 	- $L_F$ is a **root-power level** (or **field level**)
 	- examples:
-		- **sound pressure level** (SPL): $L_p = 20 \log_{10} \left( \frac{p}{p_{0}}\right)\,\mathrm{dB}$
-			- $p_{0}=20\ \mu\text{Pa} = 2 \times 10^{-5}\text{ Pa}$ (threshold of human hearing at $1\,\mathrm{kHz}$)
+		- [[sound|sound pressure level]]
 		- **decibel volts**: $\text{voltage}\,[\mathrm{dBV}] = 20\log_{10}{\frac{\text{voltage}\,[\mathrm{V}]}{1\,\mathrm{V}}}$
 		- **dBu**: $\text{voltage}_{\text{rms}}\,[\mathrm{dBu}] = 20\log_{10}{\frac{\text{voltage}_{\text{rms}}\,[\mathrm{V}]}{\sqrt{ 0.0006 }\,\mathrm{V}}}$

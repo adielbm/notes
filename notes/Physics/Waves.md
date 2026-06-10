@@ -106,11 +106,6 @@ https://www.youtube.com/watch?v=-j8PzkZ70Lg
 
 
 # Mechanical waves
-## Sound
 
-- Sound is a longitudinal wave.
-- speed of sound 
-	- (e.g. in air at $20\,^\circ\mathrm{C}$ is $343\,\mathrm{m/s}$, in water is $1482\,\mathrm{m/s}$)
-- (sound [[Units|intensity]]) $I=\frac{P}{A}$ (in $\mathrm{W/m^2}$), where $P$ is the sound power (in $\mathrm{W}$) and $A$ is the area through which the sound power flows (in $\mathrm{m^2}$)
-- (**Sound intensity level**) $L_I = 10 \, \log_{10}\!\left(\frac{I}{I_0}\right)$ (in dB), where $I_0 = 10^{-12} \, \mathrm{W/m^2}$ is the reference intensity. 
-- (**Sound power level**) $L_W = 10 \, \log_{10}\!\left(\frac{W}{W_0}\right)$ (in dB), where $W$ is the sound power and $W_0 = 10^{-12} \, \mathrm{W}$.
+- [[sound|acoustic waves]]
+

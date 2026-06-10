@@ -140,6 +140,12 @@
 
 - **calorimetry** (קלורימטריה)
 
+- $q$ is the **heat flux**
+	- SI unit: $\mathrm{W /m^2}$
+	- $q = \frac{dQ}{dA \cdot dt}$
+	- $q = h\Delta T$
+	- $h$ is the **heat transfer coefficient**
+
 
 ## Latent heat
 

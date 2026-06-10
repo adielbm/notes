@@ -2,12 +2,25 @@
 - black body
 	- black body radiation
 - **quantum**
+
+
+# Planck constant
+
+- **photon energy**
 - **Planck constant** $h$
 	- Si unit: $\mathrm{J \cdot s}$
 	- **reduced Planck constant** $\displaystyle\hbar=\frac{h}{2\pi}$
-- **Planck relation** $E=hf$
-- **photon energy**
-- [[Energy#Kinetic energy|radiant energy]]
+- photon:
+	- energy: $E=h\nu$ (**Planck relation**)
+		- $\nu$ (or $f$) is the frequency
+	- momentum: $\displaystyle p = \frac{h\nu}{c}=\frac{h}{\lambda}$
+
+---
+
+
+
+
+- [[Electromagnetic radiation#Radiometry|radiant energy]]
 - **work function**
 - **monochromatic radiation**
 	- **monochromatic light**
@@ -36,3 +49,7 @@
 
 - **Pauli exclusion principle**
 	- "two or more identical particles with half-integer spins (i.e., fermions) cannot simultaneously occupy the same quantum state within a system that obeys the laws of quantum mechanics" (Wikipedia)
+
+- quantum state
+	- stationary state
+	- -

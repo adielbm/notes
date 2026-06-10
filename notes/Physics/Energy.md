@@ -10,7 +10,7 @@
 - $E_{k}=\frac{1}{2}I\omega^2$ is the **rotational/angular kinetic energy**
 	- $I$ is the moment of inertia ($\mathrm{kg \cdot m^2}$)
 	- $\omega$ is the angular velocity ($\mathrm{rad/s}$)
-- **radiant energy**
+- **[[Electromagnetic radiation#Radiometry|radiant energy]]** 
 	- "the energy of electromagnetic and gravitational radiation" (Wikipedia)
 # Potential energy
 
