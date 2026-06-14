@@ -11,6 +11,8 @@
 
 # Atomic orbitals 
 
+![149](https://upload.wikimedia.org/wikipedia/commons/2/2e/Aufbau_Principle-en.svg)
+
 - **electron shell**
 	- orbitals with the same $n$ are in the same shell
 	- electrons with the same $n$ are in the same shell
@@ -43,29 +45,23 @@
 	- determines the orientation of the electron's spin
 	- spin-up ($\uparrow$) $m_s = +\frac{1}{2}$
 	- spin-down ($\downarrow$) $m_s = -\frac{1}{2}$
-- **valence electrons** (אלקטרוני ערכיות)
-	- electrons in the **valence shell** (outermost shell) of the atom.
-	- _number of valence electrons_
-	- **valence** (or **valency**) of an atom
-- The **core electrons** are the electrons in the inner shells of the atom. 
+
 - energy level
 - [[Quantum mechanics|Pauli exclusion principle]]
+    - No two electrons in an atom can have the same set of four quantum numbers.
 - **Aufbau principle** (or **Aufbau rule**)
     - "a maximum of two electrons are put into orbitals in the order of increasing orbital energy: the lowest-energy subshells are filled before electrons are placed in higher-energy orbitals." (Wikipedia)
-- Pauli exclusion principle
-    - No two electrons in an atom can have the same set of four quantum numbers.
-- **Hund's rules**
-    - Electrons fill orbitals singly before pairing up.
-- **octet rule**
-	- "atoms usually react in such a way as to obtain a noble gas configuration" [@Denniston, 2022]
-	- "elements in groups 1A to 7A (1, 2, 13 to 17) react with other elements by forming ionic or covalent bonds to produce a stable electron arrangement, usually eight electrons in the outer shell." [@Timberlake, 2017]
-	- "In covalent bond formation, atoms go as far as possible toward completing their octets by sharing electron pairs." [@Jones, 2016]
+	- [Madelung energy ordering rule](https://en.wikipedia.org/wiki/Aufbau_principle#Madelung_energy_ordering_rule):
+		- subshells with a lower value of $n+\ell$ are filled first
+		- if two subshells have the same $n+\ell$ value, the subshell with the lower $n$ is filled first
+		- [exceptions](https://en.wikipedia.org/wiki/Aufbau_principle#Exceptions_in_the_d-block)
+- When removing electrons to form a cation, electrons are always removed from the subshell with the highest $n$.
+- **Hund's rule of maximum multiplicity**
+    - "in a subshell of an atom, electrons are first singly filled with same spin before they are filled doubly" (Wikipedia)
+- [[Lewis structure|octet rule]]
 
-- **unpaired electron**
-- **electron pair** (or **Lewis pair**)
-	- **lone pair** (or **unshared pair**, **non-bonding pair**, or **electron pair**)
-		- "Two paired electrons localized in the valence shell on a single atom. Lone pairs should be designated with two dots. The term 'nonbonding electron pair' is more appropriate, and is found in many modern text books." (_IUPAC Gold Book_)
-	- **shared pairs** (or **bonding pairs**)
+
+
 
 - **electron density** (or **electronic density**)
 - isoelectronicity
@@ -99,3 +95,4 @@
 - radial probability density $R(r)^2$
 	- radial probability function $4\pi r^2 R(r)^2$
 	- nodes and peaks 
+

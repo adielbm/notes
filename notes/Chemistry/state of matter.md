@@ -48,9 +48,5 @@
 
 
 
-- **compressibility** (or **coefficient of compressibility**) (דחיסות)
-- **viscosity** (צְמִיגוּת)
-	- dynamic viscosity
-		- **pascal-second** ($\mathrm{Pa\cdot s}$)
-- **surface tension** (מתח פנים)
+
 - **surfactant** (חומרים פעילי שטח)

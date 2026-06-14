@@ -31,7 +31,12 @@
 	- net negative charge → basicity indicator
 
 
-
+- metal and nonmetal oxides #todo 
+	- most nonmetals oxide are acidic
+	- water soluble metal oxides + water -> metal hydroxide
+	- water insoluble metal oxides + acid -> salt + water
+	- water soluble nonmetal oxide + water -> acid
+	- water insoluble nonmetal oxide + base -> salt + water
 
 
 - In a acid–base reaction $\ce{HA + B <=> A^- + BH^+}$, equilibrium favors the side containing the weaker acid and the weaker base. The [[Chemical equilibrium|equilibrium constant]] for the reaction: 
@@ -150,6 +155,7 @@
 		- (equivalently $\mathrm{pH} > \tfrac{1}{2}\mathrm{p}K_w$)
 	- **acidic**, if $\ce{[H3O+] > [OH-]}$ 
 		- (equivalently $\mathrm{pH} < \tfrac{1}{2}\mathrm{p}K_w$)
+	- (or to have a higher **acidity** (or **basicity**))
 - **Henderson-Hasselbalch equation** 
 	- $\displaystyle\mathrm{pH}=\mathrm{p}K_{a}+\log_{10}\left( \frac{[\text{conj. base}]}{[\text{weak acid}]} \right)$
 - $K_a = \frac{10^{-2\mathrm{pH}}}{C_0 - 10^{-\mathrm{pH}}}$

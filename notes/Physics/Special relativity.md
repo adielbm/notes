@@ -1,5 +1,3 @@
-
-
 - **energy–momentum relation** (or **relativistic dispersion relation**) 
 	- $E^{2}=(pc)^{2}+\left(mc^{2}\right)^{2}$
 		- $E$ is the **total relativistic energy** (or **relativistic energy** (אנרגייה יחסותית))
@@ -12,7 +10,7 @@
 - $m$ is the **rest mass** (or just **mass**)
 - $\displaystyle \gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}$ is the **Lorentz factor**
 - $p = \gamma mv$ is the momentum
-- $K=E-E_0$ is the **relativistic kinetic energy**
+- $K=E-E_0=(\gamma-1)mc^2$ is the **relativistic kinetic energy**
 
 ---
 
@@ -31,4 +29,11 @@
 
 🪼 https://lamda-openu.psik.io/pdfViewer/6088 
 
-- $\displaystyle u = \frac{v + u'}{1 + \frac{vu'}{c^2}}$
+
+- relativistic velocity addition (one dimension)
+	- $\displaystyle u' = \frac{u+v}{1+\frac{uv}{c^2}}$
+	- $u$ is the object velocity in one inertial frame
+	- $v$ frame velocity relative to another frame along the same line
+	- $u'$ the object's velocity in the second frame
+
+

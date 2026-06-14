@@ -55,7 +55,7 @@
 	- units: $\mathrm{C\cdot m}$ (SI unit), and debye ($\mathrm{D}$) 
 	- (chemistry) **molecular dipole moment** $\mu$ (often measured in $\mathrm{D}$, and the dipole arrow often points from _positive to negative_)
 - $\vec{\boldsymbol{\tau}}=\vec{\boldsymbol{p}}\times\vec{\boldsymbol{E}}$ is the torque on an electric dipole
-- $U=-\vec{\boldsymbol{p}}\cdot\vec{\boldsymbol{E}}$ is the potential energy for an electric dipole in an electric field>
+- $U=-\vec{\boldsymbol{p}}\cdot\vec{\boldsymbol{E}}$ is the potential energy for an electric dipole in an electric field
 
 - **polarizability**
 

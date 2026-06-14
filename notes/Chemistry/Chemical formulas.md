@@ -5,7 +5,7 @@
 		- **[[#empirical formula]]** of a compound gives the simplest whole-number ratio of the atoms of each element in the compound.
 		- **formula unit**
 	- **structural formula**s (uses lines to represent covalent bonds and *shows* how atoms in a molecule connect or bond to each other)
-		- **[[#Lewis structure]]**
+		- [[Lewis structure]]
 		- **skeletal formula** (or **line-angle formula**, **bond-line formula** or **shorthand formula**)
 - **molecular model**
 	- **ball-and-stick model**
@@ -43,24 +43,6 @@
 > 4. The empirical formula of the compound is $$\ce{CH2O}$$.
 
 
-
-# Lewis structure
-
-- count and add total valence electrons
-- central atom:
-	- the least electronegative atom is usually central
-	- hydrogen is almost never a central atom
-	- halogens are usually terminal
-	- carbon is very commonly the central atom in organic molecules
-- each bond corresponds to 2 electrons
-- complete octets of terminal atoms distribute remaining electrons as lone pairs on outer atoms until each has an octet (or 2 for H)
-- **incomplete octet**
-- **resonance** (or **mesomerism**)
-	- **resonance hybrid**
-	- **resonance form** (or **contributing structure**)
-
-- odd electron
-- expanded octet
 
 
 # VSEPR theory

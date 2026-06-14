@@ -7,6 +7,7 @@
 - $E_{k}=\frac{1}{2}mv^2$ is the (translational) **kinetic energy**
 	- $m$ is the mass ($\mathrm{kg}$)
 	- $v$ is the velocity ($\mathrm{m/s}$)
+	- see also: [[Special relativity|relativistic kinetic energy]]
 - $E_{k}=\frac{1}{2}I\omega^2$ is the **rotational/angular kinetic energy**
 	- $I$ is the moment of inertia ($\mathrm{kg \cdot m^2}$)
 	- $\omega$ is the angular velocity ($\mathrm{rad/s}$)
@@ -21,7 +22,7 @@
 	- $\Delta \text{EPE} = \frac{1}{2}k \cdot \Delta x^2$
 - [[Electric energy#Electric potential energy|electric potential energy]]
 - [[Force#Gravitational Potential Energy|gravitational (potential) energy]]
-- [[Thermodynamics#Chemical energy|chemical energy]]
+- [[Thermochemistry#Chemical energy|chemical energy]]
 
 
 # Mechanical energy
@@ -30,14 +31,18 @@
 # Others
 
 - [[Thermodynamics|internal energy]]
-- [[Thermodynamics|thermal energy]]
+- **thermal energy** (אנרגייה תרמית)
+	- by Wikipedia it can refer to:
+		- [[#internal energy]]
+		- [[#heat]]
+		- the characteristic energy
 
 # Binding energy
 
 - **binding energy**
 	- gravitational binding energy
-	- [[Thermodynamics#Bond energy|bond energy]] and [[Thermodynamics#Bond energy|bond-dissociation energy]]
-	- [[Periodic table#Periodic trends|ionization energy]]
+	- [[Thermochemistry#Bond energy|bond energy]] and [[Thermochemistry#Bond energy|bond-dissociation energy]]
+	- [[ionization energy]]
 	- [[Nuclear chemistry|nuclear binding energy]]
 
 # Units 

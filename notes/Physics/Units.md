@@ -30,7 +30,8 @@
 
 - **light-year** (**ly**) 
 	- $1\,\mathrm{ly}\approx 9.4607 \times 10^{15}\,\mathrm{m}$
-
+- **angstrom** (or **ångström**) 
+	- $1\,\mathrm{Å}=10^{-10}\,\mathrm{m}=0.1\,\mathrm{nm}=100\,\mathrm{pm}$
 
 ## area $A$
 

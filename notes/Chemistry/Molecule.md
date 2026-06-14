@@ -26,6 +26,6 @@
 ### Properties
 
 - [[Gases#Vapor pressure|vapor pressure]]
-- [[Electric charge#Electric dipole moment|molecular dipole moment]] $\mu$
+- [[Electric charge#Electric dipole moment|molecular dipole moment]] ($\mu$)
 - [[Mole#Molar mass|molar mass]]
 

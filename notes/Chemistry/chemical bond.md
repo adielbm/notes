@@ -9,29 +9,27 @@
 - **metallic bond**
 - **covalent bond**
 	- **single**, **double** or **triple** bond occurs when one (or two or three) pairs of electrons are shared.
+	- [[Molecule|homonuclear diatomic molecules]] have a covalent bond
+- **bond polarity**: 
+	- "All bonds between atoms of different elements are polar to some extent." [@Jones, 2016]
+	- "In reality, however, there is a continuum between the extremes of ionic and covalent bonding." [@Brown, 2012]
 	- **polar covalent bond** (electrons are shared unequally)
 		- "A bond in which there are nonzero partial charges on the atoms" [@Jones, 2016]
 		- "The partial charges on the two atoms in a polar covalent bond form an [[Electric charge#Electric dipole|electric dipole]]"
 	- **non-polar covalent bond** (electrons are shared equally)
 		- "_completely nonpolar bond_ occurs when the electronegativities are identical and therefore possess a difference of zero" (Wikipedia)
-- "All bonds between atoms of different elements are polar to some extent." [@Jones, 2016]
-- [[Molecule|homonuclear diatomic molecules]] have a covalent bond
-- polarity of a bond: 
 	- $\Delta \chi \gtrsim 1.7$ → predominantly ionic bond
 	- $0.4 \lesssim \Delta \chi \lesssim 1.7$ → polar covalent bond
 	- $\Delta \chi \lesssim 0.4$ → nonpolar covalent bond
-
+	- **Fajans' rules**
 - **partial charge** (or **net atomic charge**)
 	- $\delta+$ and $\delta-$
-
-
-
+- [[Thermochemistry#Bond energy|bond energy]]
 - **bond order**
-
-
+	- "The number of electron pair bonds that link a specific pair of atoms" [@Jones, 2016]
 - **bond length** (or **bond distance**)
+	- common unit: $\mathrm{Å}$
 	- $\text{bond length: triple} < \text{double} < \text{single}$
-
 
 # Intermolecular forces
 
@@ -39,7 +37,7 @@
 
 - **hydrogen bond** (**H-bond**)
 	- **Dn−H···Ac**
-	- Dn (donor) and Ac (acceptor) are a highly [[Periodic table|electronegative]] atoms (specifically $\ce{N,O,F}$)
+	- Dn (donor) and Ac (acceptor) are a highly [[Elements|electronegative]] atoms (specifically $\ce{N,O,F}$)
 	- Ac has at least one lone pair of electrons
 	- H is covalently bonded to Dn
 	- ··· is the hydrogen bond (weaker than a covalent bond but stronger than van der Waals forces)

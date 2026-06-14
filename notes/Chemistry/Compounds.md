@@ -1,12 +1,19 @@
 
 - **ionic compound** (or **salt**[^1] [^2])
-	- metal and nonmetal
 	- "a chemical compound consisting of an assembly of cations and anions, which results in a compound with no net electric charge. The constituent ions are held together by ionic bonds." (Wikipedia)
 	- "A compound that consists of ions in a ratio that results in overall electrical neutrality" [@Jones, 2016]
 	- ionic compounds are not molecules
 - **molecular compound** (or **covalant compound**)
 	- "consists of electrically neutral molecules" [@Jones, 2016]
-	- 2 nonmetals
+
+- compounds made up of a metal and a nonmetal are typically ionic compounds. compounds made up of two nonmetal are typically molecular compound.
+	- examples: 
+		- $\ce{NaCl}$, $\ce{MnO}$, $\ce{CaCl2}$ (metal and nonmetal, ionic compound)
+		- $\ce{CO2}$, $\ce{H2O}$, $\ce{CH4}$ (two nonmetal, molecular compound)
+	- non-examples:
+		- $\ce{SnCl4}$, $\ce{Mn2O7}$ (metal and nonmetal, molecular compound)
+		- $\ce{NH4Cl}$ (two nonmetal, ionic compound)
+
 - A **binary**, **ternary**, or **quaternary** compound is a compound that contains two, three, or four different elements, respectively.
 
 

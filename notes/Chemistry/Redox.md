@@ -17,10 +17,11 @@
 # Oxidation state
 
 - **oxidation state** (O.S.)
-- **oxidation number** 
+- **oxidation number**
+- possible-oxidation-states(element)=(n1, n2, ...)
+	- [List of oxidation states of the elements](https://en.wikipedia.org/wiki/Template:List_of_oxidation_states_of_the_elements)
 - oxidation-state(species, atom)=n
 - "the hypothetical charge of an atom if all of its bonds to other atoms are fully ionic" (Wikipedia)
-- [List of oxidation states of the elements](https://en.wikipedia.org/wiki/Template:List_of_oxidation_states_of_the_elements)
 - An atom of a free element has an oxidation number of $0$.
 	- ex. Each $\ce{Cl}$ atom in $\ce{Cl2}$ has an oxidation number of $0$.
 - The sum of oxidation numbers of all atoms in a species equals its total charge.

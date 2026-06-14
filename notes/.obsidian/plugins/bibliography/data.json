@@ -464,5 +464,25 @@
       ]
     },
     "publisher": "Pearson Higher Education & Professional Group"
+  },
+  {
+    "id": "Tro, 2023",
+    "type": "book",
+    "ISBN": "9781292725802",
+    "title": "Introductory Chemistry, Global Edition",
+    "author": [
+      {
+        "family": "Tro",
+        "given": "Nivaldo J."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "publisher": "Pearson Education, Limited"
   }
 ]
