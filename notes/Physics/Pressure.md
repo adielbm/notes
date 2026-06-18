@@ -5,7 +5,7 @@
 	- $F$ is the force applied
 	- $A$ is the area of the surface`
 
-- see also [[Gases#Vapor pressure|vapor pressure]]
+- see also [[vapor pressure]]
 - **atmospheric pressure** (or **air pressure** or **barometric pressure**) 
 	- he: לחץ אטמוספירי, לחץ ברומטרי, לחץ האטמוספרה, לחץ האוויר
 	- **ambient pressure**

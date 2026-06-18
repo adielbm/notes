@@ -7,7 +7,7 @@
 - **ionic bond** ("completely polar bond")
 	- **electrovalence**
 - **metallic bond**
-- **covalent bond**
+- **covalent bond** (קשר קוולנטי, קשר שיתופי)
 	- **single**, **double** or **triple** bond occurs when one (or two or three) pairs of electrons are shared.
 	- [[Molecule|homonuclear diatomic molecules]] have a covalent bond
 - **bond polarity**: 

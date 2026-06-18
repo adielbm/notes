@@ -157,15 +157,23 @@
 		- (equivalently $\mathrm{pH} < \tfrac{1}{2}\mathrm{p}K_w$)
 	- (or to have a higher **acidity** (or **basicity**))
 - **Henderson-Hasselbalch equation** 
-	- $\displaystyle\mathrm{pH}=\mathrm{p}K_{a}+\log_{10}\left( \frac{[\text{conj. base}]}{[\text{weak acid}]} \right)$
-- $K_a = \frac{10^{-2\mathrm{pH}}}{C_0 - 10^{-\mathrm{pH}}}$
-
+	- $\displaystyle\mathrm{pH}\approx\mathrm{p}K_{a}+\log_{10}\frac{[\ce{A-}]}{[\ce{HA}]}$
+	- $\displaystyle\mathrm{pH}\approx\mathrm{p}K_{a}+\log_{10}\frac{[\text{base}]_{\text{initial}}}{[\text{acid}]_{\text{initial}}}$
+- $C_0$ is the initial concentration (of the acid or base) 
+- The **degree of dissociation** ($\alpha$) (of the acid or base) 
+- For a monoprotic acid:
+	- $\displaystyle K_a = \frac{10^{-2\mathrm{pH}}}{C_0 - 10^{-\mathrm{pH}}}=\frac{[\ce{H3O+}]^2}{C_0-[\ce{H3O+}]}$
+	- $\displaystyle\alpha = \frac{[\ce{H3O+}]}{C_0} = \frac{10^{-\mathrm{pH}}}{C_0}$
+		- if $\alpha \ll 1$, the acid is weak
+		- if $\alpha \approx 1$, the acid is strong
+- For a monoprotic base:
+	- $K_b = \frac{[\ce{BH+}][\ce{OH^-}]}{[\ce{B}]}= \frac{[\ce{OH^-}]^2}{C_0 - [\ce{OH^-}]}= \frac{10^{-2\mathrm{pOH}}}{C_0 - 10^{-\mathrm{pOH}}}$
+	- $\displaystyle \alpha = \frac{[\ce{BH+}]}{C_0} = \frac{[\ce{OH^-}]}{C_0}=\frac{10^{\mathrm{pH} - 14}}{C_0}$
+		- if $\alpha \ll 1$, the base is weak
+		- if $\alpha \approx 1$, the base is strong
 
 
 ---
-
-
-- **Le Chatelier's principle**
 
 - **titration** (or **titrimetry** or **volumetric analysis**) (טיטוּר, טיטרציה, תהליך סתירה)
 	- **standard solution** (or **titrant** or **titrator**) (תמיסה תיקנית)

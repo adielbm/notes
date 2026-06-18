@@ -2,18 +2,34 @@
 - [[Thermodynamics]]
 	- **chemical thermodynamics**
 	- **thermochemistry**
-- [[Thermodynamics#Potentials|Gibbs free energy]]
+- [[Thermodynamics#Gibbs free energy|Gibbs free energy]]
 - [[Thermodynamics|first law of thermodynamics]]
+	- in this page, the [[Thermodynamics#Sign conventions|IUPAC convention of work]] is used
 - [[Thermodynamics|second law of thermodynamics]]
 - [[Thermodynamics#Heat|heat]]: $Q = mc\Delta T$
 
-- **exothermic reaction** 
-	- "A reaction for which the overall standard enthalpy change $\Delta H^{\,\unicode{x26ac}}$ is negative" (IUPAC)
 - _spontaneous_ and _nonspontaneous_ reaction
+
+# Internal energy
+
+- $\Delta U_{\text{reaction}} = \sum U_{\text{products}} - \sum U_{\text{reactants}}$
+
+# Enthalpy 
+
+The [[Thermodynamics#Enthalpy|enthalpy change]] here is _molar enthalpy change_ (i.e. per one mole) (unit: $\mathrm{kJ/mol}$)
+
+### Hess's law
+
+- **Hess's law of constant heat summation** (or **Hess's law**)
+	- $\Delta H(\ce{A -> B})=-\Delta H(\ce{B -> A})$
+	- $\Delta H(\ce{A -> B})=c\Delta H(\ce{cA -> cB})$
+	- $\Delta H(\ce{A -> C}) = \Delta H(\ce{A -> B}) + \Delta H(\ce{B -> C})$
+- #todo Lavoisier and Laplace's law 
+
 ## Enthalpy of reaction
 
-The [[Thermodynamics#Enthalpy|enthalpy change]] here is _molar enthalpy change_ (i.e. per one mole) (SI unit: $\mathrm{J/mol}$)
-
+- **[[Thermodynamics#Thermodynamic processes|exothermic]] reaction**: $\Delta H < 0$
+- **[[Thermodynamics#Thermodynamic processes|endothermic]] reaction**: $\Delta H > 0$
 - The **enthalpy of reaction** ($\Delta H_{\text{rxn}}$) (or _heat of reaction_) is the enthalpy change of a reaction. (i.e. $\Delta H_{\text{rxn}}=H_{\text{products}}-H_{\text{reactants}}$).
 - There are two methods to calculate the enthalpy of reaction:
 	- using [[#Bond energy|average bond enthalpies]]:
@@ -27,13 +43,6 @@ The [[Thermodynamics#Enthalpy|enthalpy change]] here is _molar enthalpy change_ 
 			- enthalpy change for a reaction under standard-state conditions
 			- $\Delta H^\circ_{\text{rxn}}=\sum \nu_{p} \Delta H_f^\circ(p)-\sum \nu_{r} \Delta H_f^\circ(r)$
 			- $\nu$ are the [[Reactions#Stoichiometry|stoichiometric coefficients]] of the reactants and products
-
-### Hess's law
-
-- **Hess's law of constant heat summation** (or **Hess's law**)
-	- $\Delta H(\ce{A -> B})=-\Delta H(\ce{B -> A})$
-	- $\Delta H(\ce{A -> B})=c\Delta H(\ce{cA -> cB})$
-	- $\Delta H(\ce{A -> C}) = \Delta H(\ce{A -> B}) + \Delta H(\ce{B -> C})$
 
 ## Enthalpy of formation
 
@@ -49,10 +58,26 @@ The [[Thermodynamics#Enthalpy|enthalpy change]] here is _molar enthalpy change_ 
 	- reference table: https://en.wikipedia.org/wiki/Standard_enthalpy_of_formation#Examples:_standard_enthalpies_of_formation_at_25_%C2%B0C
 
 
+## Enthalpy of solution
+
+- **enthalpy of solution** (**heat of solution** or **enthalpy of solvation**)
+- $\Delta H_{\text{solution}}=\Delta H_{\text{solute}}+\Delta H_{\text{solvent}}+\Delta H_{\text{mix}}$
+
+
+## Latent heat
+
+- **latent heat** (or **latent energy**, **heat of transformation**) (חום כמוס)
+	- $Q = m L$
+		- $L$ is the specific latent heat of the substance
+- **enthalpy of fusion** (or **(latent) heat of fusion**)
+- **enthalpy of sublimation** (or **(latent) heat of sublimation**)
+- **enthalpy of vaporization** (or **(latent) heat of vaporization**)
+
 ## Lattice energy
 
 - $\Delta U_{\text{lattice}}=\Delta H_{\text{lattice}}-P\Delta V_{m}$
-	- $\Delta V_{m}$ is the change of [[Gases#Volume of gases|molar volume]] due to the formation of the lattice
+	- $\Delta V_{m}$ is the change of [[Mole#Molar volume|molar volume]] due to the formation of the lattice
+	- (notice: [[Thermodynamics#Sign conventions|IUPAC convention]] is used)
 - **lattice energy** ($\Delta U_{\text{lattice}}$)
 	- "the energy change (released) upon formation of one mole of a crystalline compound from its infinitely separated constituents, which are assumed to initially be in the gaseous state at 0 K" (Wikipedia)
 - **lattice enthalpy** ($\Delta H_{\text{lattice}}$)
@@ -107,4 +132,3 @@ The [[Thermodynamics#Enthalpy|enthalpy change]] here is _molar enthalpy change_ 
 
 ---
 
-- **enthalpy of solution** (**heat of solution** or **enthalpy of solvation**)

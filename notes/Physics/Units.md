@@ -50,6 +50,8 @@ $\mathrm{m^2}$
 - (**pound**, **pound-mass**) $\mathrm{1\,lb=0.453\,592\,37\,kg}$
 	- also denoted like: $5''$ or $5\#$
 - [[Mass#Unified atomic mass unit|Unified atomic mass unit]]
+
+
 ## Energy 
 
 
@@ -154,3 +156,15 @@ $\mathrm{m^2}$
 		- [[sound|sound pressure level]]
 		- **decibel volts**: $\text{voltage}\,[\mathrm{dBV}] = 20\log_{10}{\frac{\text{voltage}\,[\mathrm{V}]}{1\,\mathrm{V}}}$
 		- **dBu**: $\text{voltage}_{\text{rms}}\,[\mathrm{dBu}] = 20\log_{10}{\frac{\text{voltage}_{\text{rms}}\,[\mathrm{V}]}{\sqrt{ 0.0006 }\,\mathrm{V}}}$
+
+
+## Specific quantities
+
+- A **specific** (or **massic**) quantity
+	- Per unit of mass: "an intensive quantity obtained by dividing an extensive quantity of interest by mass" (Wikipedia)
+		- [[Electromagnetic radiation#Radiometry|specific activity]]
+		- [[Thermochemistry#Heating value|specific energy]]
+		- [[Thermodynamics#Enthalpy|specific enthalpy]]
+	- Per unit of other types:
+		- specific gravity
+		- specific capacity

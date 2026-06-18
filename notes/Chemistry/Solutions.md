@@ -4,12 +4,18 @@
 	- "A liquid or solid phase containing more than one substance, when for convenience one (or more) substance, which is called the solvent, is treated differently from the other substances, which are called solutes. When, as is often but not necessarily the case, the sum of the mole fractions of solutes is small compared with unity, the solution is called a dilute solution." (_IUPAC Gold Book_)
 	- **true solution**
 		- "a homogeneous mixture with uniform properties throughout. In a true solution, the solute cannot be isolated from the solution by filtration" [@Denniston, 2022]
-- **solubility** (מְסִיסוּת)
+- **solubility** (מְסִיסוּת) (of a solute in a solvent)
+	- "the ability of a substance, the solute, to form a solution with another substance, the solvent" (Wikipedia)
+	- quantification: a [[concentration]] of a saturated solution of the two
+	- factors:
+		- composition and structure of the solute and the solvent
+		- pressure
+		- temperature: an increase in temperature usually increases solubility
 	- "_like dissolves like_" (Latin: "_Similia similibus solventur_")
-	- an increase in temperature usually increases solubility
 	- **insolubility**
 - **solvation** (הֲמָסָה)
-- **hydration** (הִידְרַצְיָה)
+	- cf. **dissolution**
+- **hydration** (הִידְרַצְיָה, מִיּוּם)
 - **soluble** (מָסִיס)
 	- "A _soluble substance_ is one that dissolves to a significant extent in a specified solvent. When solubility is mentioned without indicating a solvent, it normally means “soluble in water.”" [@Jones, 2016]
 	- "An _insoluble substance_ is one that does not dissolve significantly in a specified solvent" [@Jones, 2016]
@@ -18,16 +24,8 @@
 - **solvent** (מֵמֵס, מְמִסִּים)
 	- "(1) The most abundant component of a solution. (2) The component of a solution in which the other components are considered to be dissolved." [@Jones, 2016]
 
-- **dispersion** (תַּפְזִיר, תִּפְזוּר)
-- **colloidal dispersion**
-- **suspension** (תַּרְחִיף)
-	- "a heterogeneous mixture that contains particles much larger than a colloidal dispersion" [@Denniston, 2022]
-	- "A mixture in which the solute particles are large enough and heavy enough to settle out and be retained by both filters and semipermeable membranes." [@Timberlake, 2017]
-	- it is neither a solution nor a precipitate
- - **colloid** (קולואיד)
-	 - "a dispersion of small particles (from 1 nm to 1 mm in diameter) in a solvent" [@Jones, 2016]
-	 - "A mixture having particles that are moderately large. Colloids pass through filters but cannot pass through semipermeable membranes." [@Timberlake, 2017]
-- **supersaturation** (רוויית יתר)
+
+- **supersaturation** (רְוָיַת-יֶתֶר, רִוּוּי-יֶתֶר)
 	- "The condition of a solution being more highly concentrated than is normally possible" (Wiktionary)
 	- **supersaturated solution** (תמיסה רווית-יתר)
 - **saturated solution** (תמיסה רוויה)
@@ -40,20 +38,6 @@
 
 - **aqueous solution** (תמיסה מימית)
 	- **spectator ions** (יונים משקיפים)
-
-# Precipitation
-
-- **precipitation** (תגובת שיקוע, פְּרֶסיפּיטציה)
-	- $\ce{AgNO3(aq) + NaCl(aq) -> \underset{ precipitate }{ AgCl(s) v } + NaNO3(aq)}$
-	- **precipitate** (_noun_) `/-tət/` (משקע)
-		- the insoluble product
-	- **precipitate** (_verb_) `/-teɪt/`
-	- **precipitant** 
-		- (_adj_.) "that causes precipitation" (Wiktionary)
-		- (_noun_) "A substance that, when added to a solution, causes a dissolved substance to form a precipitate." (Wiktionary)
-
-- **supernate** (or **supernatant** or **supernatant liquid**) (נוזל עליון)
-
 
 # Electrolyte
 
@@ -76,14 +60,7 @@
 		- weak acid/base → weak electrolyte
 		- not ionize in water → non-electrolytes 
 
-# Dissociation
 
-- **dissociation** (דיסוציאציה, התפרדות, פירוד)
-	- "The separation of an acid or a base into ions in water." [@Timberlake, 2017]
-	- "The separation of ions that occurs when an ionic solid dissolves" [@Jones, 2016]
-	- "a general process in which molecules (or ionic compounds such as salts, or complexes) separate or split into other things such as atoms, ions, or radicals, usually in a reversible manner" (Wikipedia)
-	- **dissociation constant** $K_{\rm{D}}$
-		- a type of [[Chemical equilibrium|equilibrium constant]]
 
 # Ideal solution
 

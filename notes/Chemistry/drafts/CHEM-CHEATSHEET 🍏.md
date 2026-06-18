@@ -1,23 +1,57 @@
 
+
+
+---
+
+- $\Delta \chi \gtrsim 2$ → ionic bond
+- $0.5 \lesssim \Delta \chi \lesssim 2.0$ → polar covalent bond
+- $\Delta \chi \lesssim 0.5$ → nonpolar covalent bond
+
+---
+
+- **nonpolar molecule**: A molecule that has only nonpolar bonds or in which the bond dipoles cancel (e.g. $\ce{CO2}$, $\ce{N2},\ce{H_{2},\ce{O_{2}}}$)
+- **polar molecule** A molecule containing bond dipoles that do not cancel. (e.g. $\ce{H_2O}$)
+- If the molecule does not contain polar bonds, it is _**nonpolar**_.
+- If the molecule is diatomic and its bond is polar, it is _**polar**_.
+- If the molecule contains two or more polar bonds, it may or may not be polar. The result depends on whether the bond dipoles cancel due to molecular geometry. We use the following key rules:
+	- Let $n$ be the number of lone pairs on the central atom:
+		- if $n=0$, and all terminal atoms are the same, then it is _**nonpolar**_. (e.g. $\ce{CO2}$, $\ce{CH4}$)
+		- if $n=1$, then it is _**polar**_. (e.g. $\ce{NH3}$, $\ce{SO2}$)
+		- if $n\geq 2$, then it is usually _**polar**_. (e.g. $\ce{H2O}$, $\ce{H2S}$ are polar, but $\ce{XeF4}$ is not)
+	- Most hydrocarbons are _**nonpolar**_.
+
+---
+
 - $1\,\mathrm{amu}=1.661 \times 10^{24}\,\mathrm{g}$
 - $N_\text{A}=6.022 \times 10^{23} \, \text{mol}^{-1}$
-- **molar mass** ($M$) (unit: $\mathrm{g/mol}$) $M=\frac{m}{N_A}$, $M=\frac{m}{n}$
+- **molar mass** (unit: $\mathrm{g/mol}$) $M=\frac{m}{N_A}$, $M=\frac{m}{n}$
+- **molar volume**: $\displaystyle V_m=\frac{V}{n}=\frac{M}{\rho}$
+	- SI unit: $\mathrm{m^3 / mol}$, others: $\mathrm{L / mol}$, $\mathrm{mL / mol}$
+	- at STP: $22.4 \,\mathrm{L/mol}$
 - **molar concentration** (or **molarity**) (ריכוז מולרי, מולריות)
-	- $\displaystyle c = \frac{n}{V}$ (also denoted $M$) 
+	- $\displaystyle c = \frac{n}{V}$ (also $M$) 
 	- $\ce{[A]}$ is the molarity of $\ce{A}$ 
 	- SI unit: $\mathrm{mol/m^3}$
 	- other units: $\mathrm{mol/L=M}$ (**molar**)
 - **mass concentration** (ריכוז מסה) $\displaystyle\rho_{i}=\frac{m_{i}}{V}$
 - **dilution** (מיהול) $M_1V_1 = M_2V_2$
+----
+
+- soluble ionic compound → strong electrolyte
+- covalent compound
+	- ionize completely in water → strong electrolyte
+	- strong acid → strong electrolyte
+	- ionize partially in water → weak electrolyte
+	- weak acid/base → weak electrolyte
+	- not ionize in water → non-electrolytes 
 
 ---
-- (**molar volume**) $\displaystyle V_m=\frac{V}{n}=\frac{M}{\rho}$
-	- SI unit: $\mathrm{m^3 / mol}$, other units: $\mathrm{L / mol}$, $\mathrm{mL / mol}$
-	- at STP: $22.4 \,\mathrm{L/mol}$
+
 - $PV=nRT$
 - $R=0.0821\,\mathrm{L\cdot atm \cdot K^{-1}\cdot mol^{-1}}$
-- STP: $T=273.15\,\mathrm{K},\,\, P=1\,\text{atm}$
-- **Dalton's law (of partial pressures)** $\displaystyle \chi_{ i }=\frac {n_{ i }}{n}=\frac {p_{ i }}{p}$ 
+- **STP**: $T=273.15\,\mathrm{K},\,\, P=1\,\text{atm}$
+- room temp.: $T=298\,\mathrm{K}=25^\circ\mathrm{C}$
+- **Dalton's law** $\displaystyle \chi_{ i }=\frac {n_{ i }}{n}=\frac {p_{ i }}{p}$ 
 - **total pressure** $p=\sum _{i=1}^{n}p_{i}$, **partial pressure** $p_i$
 - $\displaystyle\chi_{ i }=\frac {n_{ i }}{n}$ (mole fraction)
 - $T_\text{K}=T_{^\circ\mathrm{C}}+273.15$
@@ -27,7 +61,26 @@ pressure units:
 - $1 \, \text{Torr}=\frac{1}{760}\,\mathrm{atm} \approx 133.32 \, \text{Pa}$
 - $1 \, \text{bar} = 10^5 \, \text{Pa}$
 - $1 \, \text{mmHg}=133.322387415\,\mathrm{Pa} \approx 1 \, \text{torr}$
-- $1 \, \text{psi}\approx 6894.76 \, \text{Pa}$
+
+----
+- **Le Chatelier's principle**
+- $\ce{aA + bB <=> cC + dD}$
+- $n_g^P$ (and $n_g^R$): total moles of gaseous products (and reactants); $\Delta n_g =  n_g^P-n_{g}^R$
+- pressure/volume changes:
+	- shift only if $\Delta n_g \neq 0$
+	- inert gas addition: at constant volume: no shift (partial pressures unchanged); at constant pressure: volume increases; shifts toward the side with more gas moles
+- concentration changes: no shift for changes in the amount of a pure solid or pure liquid (as long as the phase remains present)
+- catalyst: no shift; only speeds up attainment of equilibrium
+
+| stress                                       | shift                            |
+| -------------------------------------------- | -------------------------------- |
+| $\uparrow[\ce{A}]$ (or $\downarrow[\ce{C}]$) | $\rightarrow$                    |
+| $\downarrow[\ce{A}]$ (or $\uparrow[\ce{C}]$) | $\leftarrow$                     |
+| $P\uparrow$ (or $V\downarrow$)               | $\min(n_g^R, n_g^P)$             |
+| $P\downarrow$ (or $V\uparrow$)               | $\max(n_g^R, n_g^P)$             |
+| $T\uparrow$ (exo)                            | $\leftarrow$ (and $K\downarrow$) |
+| $T\uparrow$ (endo)                           | $\rightarrow$ (and $K\uparrow$)  |
+| catalyst                                     | none                             |
 
 ---
 - **acid**: $\ce{H+}$ donor, **base**: $\ce{H+}$ acceptor
@@ -40,7 +93,18 @@ pressure units:
 	- $\mathrm{p}K_{\mathrm{w}}=-\log_{10}K_{\mathrm{w}}=\mathrm{pH}+\mathrm{pOH}$ ($=14$ at $25^\circ\mathrm{C}$) 
 - $\mathrm{pH}=-\log_{10}[\ce{H_{3}O+}],\quad\mathrm{pOH}=-\log_{10}[\ce{OH-}]$
 - **basic**: $\ce{[H3O+] < [OH-]}$, **neutral**: $\ce{[H3O+] = [OH-]}$, **acidic**: $\ce{[H3O+] > [OH-]}$ 
-
+- $C_0$ is the initial concentration (of the acid or base) 
+- The **degree of dissociation** ($\alpha$) (of the acid or base) 
+- For a monoprotic acid:
+	- $\displaystyle K_a = \frac{10^{-2\mathrm{pH}}}{C_0 - 10^{-\mathrm{pH}}}=\frac{[\ce{H3O+}]^2}{C_0-[\ce{H3O+}]}$
+	- $\displaystyle\alpha = \frac{[\ce{H3O+}]}{C_0} = \frac{10^{-\mathrm{pH}}}{C_0}$
+		- if $\alpha \ll 1$, the acid is weak
+		- if $\alpha \approx 1$, the acid is strong
+- For a monoprotic base:
+	- $K_b = \frac{[\ce{BH+}][\ce{OH^-}]}{[\ce{B}]}= \frac{[\ce{OH^-}]^2}{C_0 - [\ce{OH^-}]}= \frac{10^{-2\mathrm{pOH}}}{C_0 - 10^{-\mathrm{pOH}}}$
+	- $\displaystyle \alpha = \frac{[\ce{BH+}]}{C_0} = \frac{[\ce{OH^-}]}{C_0}=\frac{10^{\mathrm{pH} - 14}}{C_0}$
+		- if $\alpha \ll 1$, the base is weak
+		- if $\alpha \approx 1$, the base is strong
 --- 
 
 - The **oxidizing agent** (or **oxidant**) (גורם מחמצן) is the species that:
@@ -75,3 +139,8 @@ pressure units:
 - weak IMFs → high volatility (evaporates easily) → low boiling point
 - strong IMFs → low volatility (evaporates slowly) → high boiling point
 - higher vapor pressure ↔ higher volatility
+
+---
+
+- $N(n t_{1/2})=N_0 \cdot (1/2)^n$ is the amount (mass) after $n$ half-lives.
+- $n=t/t_{1/2}$

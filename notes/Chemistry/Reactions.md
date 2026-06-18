@@ -33,7 +33,7 @@
 	- [[Acids and bases#Neutralization|neutralization]]
 - [[redox]]
 	- [[Redox#Combustion|combustion]]
-- [[Solutions#Precipitation|precipitation]]
+- [[precipitation]]
 - [[Organic chemistry|condensation reaction]] (תגובת דחיסה, קוֹנדֶנסָציה)
 - **hydrolysis** (הידרוליזה, תהליך הידרוליטי, הִדְרוּל)
 

@@ -1,3 +1,6 @@
 - **mixture**
-- **homogeneous mixture** (or _uniform mixture_)
-- **heterogeneous mixture** (or _non-uniform mixture_)
+	- **homogeneous mixture** (or _uniform mixture_)
+		- [[solutions]]
+	- **heterogeneous mixture** (or _non-uniform mixture_)
+		- [[Dispersion|colloid]]
+		- [[Dispersion|suspension]]

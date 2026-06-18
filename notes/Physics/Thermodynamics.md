@@ -15,7 +15,7 @@
 
 - **zeroth law of thermodynamics**
 - **first law of thermodynamics** 
-	- $\Delta U = Q - W$ is the change in internal energy of the system, where:
+	- $\Delta U = Q - W$ is the change in [[#internal energy]] of the system, where:
 		- $Q$ is the heat added to the system
 		- $W$ is the work done by the system
 	- (or equivalently $\Delta U = Q + W$, where $W$ is the work done on the system (IUPAC convention))
@@ -42,7 +42,7 @@
 
 - **equation of state**
 	- $f(p,V,T)=0$
-	- e.g., [[Gases#Ideal gas law|ideal gas law]]
+	- e.g., [[Gas laws#Ideal gas law|ideal gas law]]
 - **state function** (פונקציית מצב)
 	- examples: 
 		- internal energy ($U$)
@@ -83,18 +83,15 @@
 	- **Joule expansion**
 - **quasi-static process** (or **quasi-equilibrium process**)
 
-- **reversible** (הפיך)
-	- 
-- **irreversible** (לא-הפיך)
-
-
+- **reversible** (הפיך) and **irreversible** (לא-הפיך)
+	- see also: [[Chemical equilibrium]]
 - endoreversibility
 
 
 ---
 
 - **exothermic process** and **endothermic process**
-	- [[Thermochemistry|exothermic and endothermic reaction]]
+	- [[Thermochemistry#Enthalpy of reaction|exothermic and endothermic reaction]]
 - **spontaneous** process
 	- (thermodynamically favorable)
 - **nonspontaneous** process
@@ -120,6 +117,7 @@
 
 - **heat** ($Q$)
 	- "the form of energy crossing the boundary of a thermodynamic system by virtue of a temperature difference across the boundary" (Wikipedia)
+	- "Energy in transfer between a system and its surroundings by mechanisms other than thermodynamic work and transfer of matter" (Wikipedia)
 	- $Q = mc\Delta T=C\Delta T$
 	- SI unit: $\mathrm{J}$
 
@@ -152,14 +150,7 @@
 	- $q = h\Delta T$
 	- $h$ is the **heat transfer coefficient**
 
-### Latent heat
 
-- **latent heat** (or **latent energy**, **heat of transformation**) (חום כמוס)
-	- $Q = m L$
-		- $L$ is the specific latent heat of the substance
-- **enthalpy of fusion** (or **(latent) heat of fusion**)
-- **enthalpy of sublimation** (or **(latent) heat of sublimation**)
-- **enthalpy of vaporization** (or **(latent) heat of vaporization**)
 
 # Temperature
 
@@ -173,32 +164,10 @@
 
 
 
-
-
-![](https://upload.wikimedia.org/wikipedia/commons/3/34/Phase-diag2.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original)
-
-- **phase diagram**
-	- **lines of equilibrium** (or **phase boundaries**)
-	- The **critical point** (specifically **liquid–vapor critical point**) is the point $(T_c, P_c)$ in which the liquid–gas equilibrium curve ends. Beyond this point, the distinction between liquid and gas vanishes, and the substance becomes a supercritical fluid.
-		- $T_c$ is the **critical temperature**
-		- $P_c$ is the **critical pressure**
-	- The **triple point** is the point $(T_{tp}, P_{tp})$ in which all three phases coexist in dynamic equilibrium
-
-
-
-
-
 # Potentials
 
 - **thermodynamic potential** (or **thermodynamic potential energy**)
-	- **Gibbs free energy** (or **Gibbs energy**)
-		- $G=U+PV-TS$
-		- $\Delta G=\Delta H-T\Delta S$
-			- the enthalpy contribution is favorable when $\Delta H < 0$
-			- the entropy contribution is favorable when $\Delta S > 0$
-		- $\Delta G<0$ → spontaneous
-		- $\Delta G = 0$ → equilibrium
-		- $\Delta G>0$ → nonspontaneous
+	- [[#Gibbs free energy]]
 	- [[#enthalpy]]
 	- [[#internal energy]]
 	- **Helmholtz free energy** ($A$)
@@ -206,52 +175,70 @@
 
 - **(thermodynamic) free energy**
 
-# Internal energy
+
+## Gibbs free energy
+
+- **Gibbs free energy** (or **Gibbs energy**)
+- $G=U+PV-TS$
+- $\Delta G=\Delta H-T\Delta S$
+	- the enthalpy contribution is favorable when $\Delta H < 0$
+	- the entropy contribution is favorable when $\Delta S > 0$
+- $\Delta G<0$ → spontaneous
+- $\Delta G = 0$ → equilibrium
+- $\Delta G>0$ → nonspontaneous
+- $\Delta H < 0 \land \Delta S > 0\implies \Delta G<0$
+- $\Delta H > 0 \land \Delta S < 0\implies \Delta G>0$
+
+## Internal energy
 
 - **internal energy** ($U$) (אנרגיה פנימית)
+	- in contrast to:
+		- macroscopic kinetic energy
+		- macroscopic potential energy
+			- elastic
+			- gravitational
+	- for an ideal gas: $U = \frac{f}{2}nRT$
+		- $f$ is the degrees of freedom
+			- monatomic gas: $f = 3$ 
+			- diatomic gas: $f = 5$
+- change in internal energy ($\Delta U$)
 	- [[#Laws of thermodynamics|first law of thermodynamics]]
-- in contrast to:
-	- macroscopic kinetic energy
-	- macroscopic potential energy
-		- elastic
-		- gravitational
-- for an ideal gas: $U = \frac{f}{2}nRT$
-	- $f$ is the degrees of freedom
-		- monatomic gas: $f = 3$ 
-		- diatomic gas: $f = 5$
-- for an ideal gas (or real gas with constant presure):
-	- $\Delta U = n C_{V,m} \Delta T$
-	- $n$ is the number of moles
-	- $C_{V,m}$ is [[#Heat capacity|molar heat capacity]] at constant volume
-	- $\Delta T$ is the change in temperature
+	- for an ideal gas (or real gas with constant presure):
+		- $\Delta U = n C_{V,m} \Delta T$
+		- $n$ is the number of moles
+		- $C_{V,m}$ is [[#Heat capacity|molar heat capacity]] at constant volume
+		- $\Delta T$ is the change in temperature
+	- 
+	- #todo 
+		- $\Delta U=\sum_{i}p_{i}E_{i}$
+		- ${\displaystyle \Delta U=\sum _{i}E_{i}}$
+		- ${\displaystyle U=U_{\text{micro,pot}}+U_{\text{micro,kin}}}$
+		- $\Delta U=\sum U_{\text{products}}-\sum U_{\text{reactants}}$
 
-- #todo 
-	- $\Delta U=\sum_{i}p_{i}E_{i}$
-	- ${\displaystyle \Delta U=\sum _{i}E_{i}}$
-	- ${\displaystyle U=U_{\text{micro,pot}}+U_{\text{micro,kin}}}$
-	- $\Delta U=\sum U_{\text{products}}-\sum U_{\text{reactants}}$
-
-# Enthalpy
+## Enthalpy
 
 - **enthalpy** (אֶנְתַּלְפִּיָּה)
 	- $H = U + PV$
 	- SI unit: $\mathrm{J}$
-- **enthalpy change** ($\Delta H$) of any process (as [[Reactions#Chemical reaction|chemical reaction]], [[State of matter|phase transition]])
-	- $\Delta H = H_{\text{final}} - H_{\text{initial}}$
-		- [[Thermochemistry#Enthalpy of reaction|enthalpy change of reaction]]
-	- $\Delta H=\Delta U+P\Delta V=q_{P}$
-		- $\Delta U$ is the internal energy change
-		- $q_P$ is the heat at constant pressure
-		- $P\Delta V$ is the PV work
-	- $\Delta H>0$ for an endothermic process
-	- $\Delta H<0$ for an exothermic process
 - **specific enthalpy** 
 	- $h=H/m$
 	- SI unit: $\mathrm{J/kg}$
 - **molar enthalpy** 
 	- $H_m=H/n$
 	- SI unit: $\mathrm{J/mol}$
-
+- **enthalpy change** ($\Delta H$) of any process (as [[Reactions#Chemical reaction|chemical reaction]], [[State of matter#Phase transition|phase transition]])
+	- SI unit: $\mathrm{J}$ (or $\mathrm{J/mol}$ for _molar enthalpy change_) 
+	- $\Delta H = H_{\text{final}} - H_{\text{initial}}$
+	- examples:
+		- [[Thermochemistry#Enthalpy of reaction|enthalpy change of reaction]]
+		- [[Thermochemistry#Enthalpy of solution|enthalpy of solution]]
+		- 
+	- $\Delta H=\Delta U+P\Delta V=q_{P}$
+		- $\Delta U$ is the internal energy change
+		- $q_P$ is the heat at constant pressure
+		- $P\Delta V$ is the [[#Work|PV work]]
+	- $\Delta H>0$ for an endothermic process
+	- $\Delta H<0$ for an exothermic process
 
 # Entropy
 

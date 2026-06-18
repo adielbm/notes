@@ -10,7 +10,14 @@
 	- other unit: **equivalent** (symbol: $\mathrm{equiv}$ or $\mathrm{Eq}$)
 		- $1\,\mathrm{Eq}$ is the amount of a substance that reacts with (or is equivalent to) an arbitrary amount (typically $1\,\mathrm{mol}$) of another substance in a given chemical reaction
 
-# Molar mass
+
+# Molar quantities
+
+- [[#molar mass]]
+- [[#molar volume]]
+- [[Thermodynamics#Heat capacity|molar heat capacity]]
+
+## Molar mass
 
 - **molar mass** ($M$) (unit: $\mathrm{g/mol}$)
 	- The molar mass of an _element_ is the mass per mole of its atoms.
@@ -28,30 +35,21 @@
     - $M=\frac{m}{n}$, where:
         - $m$ is the mass of the substance (in $\mathrm{g}$)
         - $n$ is the number of moles of the substance (in $\mathrm{mol}$)
-	- 
 
+## Molar volume
 
-
-# Concentration
-
-- **concentration** (ריכוז)
-	- **molar concentration** (or **molarity**) (ריכוז מולרי, מולריות)
-		- $\displaystyle c = \frac{n}{V}$ (also denoted $M$) 
-		- $\ce{[A]}$ is the molarity of $\ce{A}$ 
-		- SI unit: $\mathrm{mol/m^3}$
-		- other units: $\mathrm{mol/L=M}$ (**molar**)
-		- **equivalent concentration** (or **normality**) $\mathrm{N=\frac{eq}{L}}$
-			- $\text{eq/L} = \text{molarity} \times \text{valence}$
-	- **mass concentration** (ריכוז מסה)
-		- $\displaystyle\rho_{i}=\frac{m_{i}}{V}$
-	- **volume concentration** $\displaystyle \sigma _{i}={\frac {V_{i}}{V}}$
-	- **number concentration**
-
+- The **molar volume** of a substance: $\displaystyle V_m=\frac{V}{n}=\frac{M}{\rho}$ where:
+	- $M$ is the [[Mole#Molar mass|molar mass]] of the substance
+	- $\rho$ is the [[density]] of the substance
+	- $V$ is the volume occupied by the substance
+	- $n$ is the [[Mole#Amount of substance|amount of substance]] (in $\mathrm{mol}$)
+- SI unit: $\mathrm{m^3 / mol}$, other units: $\mathrm{L / mol}$, $\mathrm{mL / mol}$
+- at STP: $22.4 \,\mathrm{L/mol}$
 
 ## Related quantities 
 
 - **mole fraction** (or **molar fraction**) $\displaystyle\chi_{i}=\frac{n_{i}}{n_{\text{total}}}$
-	- (see also [[Gases#Dalton's law|Dalton's law]])
+	- (see also [[Gas laws#Dalton's law|Dalton's law]])
 - **mass fraction** ${\displaystyle w_{i}={\frac {m_{i}}{m_{\mathrm {total} }}}.}$
 - **volume fraction** $\displaystyle\varphi_{i}=\frac{V_{i}}{V_{\text{total}}}$
 	- for ideal gases: $\phi_i = x_i$

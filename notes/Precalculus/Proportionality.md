@@ -14,9 +14,9 @@ Given an independent variable $x$ and a dependent variable $y$:
 	- denoted by $y\propto x^n$
 	- special cases:
 		- $n=1$: direct proportionality
-			- (e.g., [[Circuits#Resistance & Conductance|Ohm's law]]: $V = IR$, [[Circle|circumference of a circle]]: $C = \pi d$, [[Gases#Ideal gas law|Charles's law]]: $V \propto T$)
+			- (e.g., [[Circuits#Resistance & Conductance|Ohm's law]]: $V = IR$, [[Circle|circumference of a circle]]: $C = \pi d$, [[Gas laws#Ideal gas law|Charles's law]]: $V \propto T$)
 		- $n=-1$: inverse proportionality
-			- (e.g., [[Gases#Ideal gas law|Boyle's law]]: $\displaystyle P \propto \frac{1}{V}$)
+			- (e.g., [[Gas laws#Ideal gas law|Boyle's law]]: $\displaystyle P \propto \frac{1}{V}$)
 		- $n=2$: quadratic proportionality
 			- (e.g., kinetic energy: $E_k = \frac{1}{2}mv^2$, [[Circle|area of a circle]]: $A=\pi r^2$, surface area of a sphere: $A = 4\pi r^2$)
 

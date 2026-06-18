@@ -30,12 +30,12 @@
 - (**mechanical energy**) $E_{\text{total}} = E_{k} + E_{p}$
 # Others
 
-- [[Thermodynamics|internal energy]]
+- [[Thermodynamics#Internal energy|internal energy]]
 - **thermal energy** (אנרגייה תרמית)
 	- by Wikipedia it can refer to:
-		- [[#internal energy]]
-		- [[#heat]]
-		- the characteristic energy
+		- [[Thermodynamics#Internal energy|internal energy]]
+		- [[Thermodynamics#Heat|heat]]
+		- [[Gas laws#Ideal gas law|kT product]]
 
 # Binding energy
 

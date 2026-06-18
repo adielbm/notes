@@ -93,7 +93,7 @@
 - **half-life** ($t_{1/2}$), where: 
 	- $N(t)=N_0 e^{-\lambda t}$ is an exponential decay function, where $\lambda$ is the decay constant. It gives the amount remaining after time $t$.
 	- $t_{1/2}=\frac{\ln(2)}{\lambda}$ is the time required for a quantity to reduce to half of its initial value.
-	- $N(n t_{1/2})=N_0 (1/2)^n$ is the amount after $n$ half-lives.
+	- $N(n t_{1/2})=N_0 \cdot (1/2)^n$ is the amount after $n$ half-lives.
 		- $\frac{1}{2}$ is the **decay factor** per half-life.
 		- $n=t/t_{1/2}$
 - $\displaystyle\frac{dN}{dt} = -\lambda N$

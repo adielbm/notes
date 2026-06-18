@@ -5,6 +5,8 @@
 
 # Classification
 
+- **halogens**
+- **noble gases** (גזים אצילים)
 - metallic classification
 	- **metals**
 		- **alkali metals** (מתכות אלקליות)
@@ -20,13 +22,13 @@
 
 - [[Mass#of an _element_|atomic mass]] (see also [[Mole#Molar mass|molar mass]])
 - physical properties:
-	- [[State of matter|melting point]] (at a given pressure)
-	- [[State of matter|boiling point]] (at a given pressure)
-	- [[Thermodynamics#Latent heat|heat of fusion]]
-	- [[Thermodynamics#Latent heat|heat of vaporization]]
+	- [[State of matter#Threshold temperatures|melting point]] (at a given pressure)
+	- [[State of matter#Threshold temperatures|boiling point]] (at a given pressure)
+	- [[Thermochemistry#Latent heat|heat of fusion]]
+	- [[Thermochemistry#Latent heat|heat of vaporization]]
 	- [[Thermodynamics#Heat capacity|molar heat capacity]]
 	- [[Thermodynamics#Heat capacity|specific heat capacity]]
-	- [[Gases#Vapor pressure|vapor pressure]] (at a given temp.)
+	- [[vapor pressure]] (at a given temp.)
 - atomic properties:
 	- [[Redox#Oxidation state|oxidation states of element]]
 	- [[ionization energy|ionization energies]] (1st, 2nd, ...) 
