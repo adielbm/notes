@@ -1,14 +1,14 @@
 
-- [[Thermodynamics]]
-	- **chemical thermodynamics**
-	- **thermochemistry**
-- [[Thermodynamics#Gibbs free energy|Gibbs free energy]]
-- [[Thermodynamics|first law of thermodynamics]]
-	- in this page, the [[Thermodynamics#Sign conventions|IUPAC convention of work]] is used
-- [[Thermodynamics|second law of thermodynamics]]
-- [[Thermodynamics#Heat|heat]]: $Q = mc\Delta T$
-
-- _spontaneous_ and _nonspontaneous_ reaction
+- **thermochemistry**
+	- related topics:
+		- [[Thermodynamics]]
+			- [[Thermodynamics|first law of thermodynamics]]
+			- [[Thermodynamics|second law of thermodynamics]]
+			- [[Thermodynamics#Heat|heat]]: $Q = mc\Delta T$
+		- **chemical thermodynamics**
+			- [[Thermodynamics#Gibbs free energy|Gibbs free energy]]
+			- _spontaneous_ and _nonspontaneous_ reaction
+- in this page, the [[Thermodynamics#Sign conventions|IUPAC convention of work]] is used
 
 # Internal energy
 
@@ -60,9 +60,7 @@ The [[Thermodynamics#Enthalpy|enthalpy change]] here is _molar enthalpy change_ 
 
 ## Enthalpy of solution
 
-- **enthalpy of solution** (**heat of solution** or **enthalpy of solvation**)
-- $\Delta H_{\text{solution}}=\Delta H_{\text{solute}}+\Delta H_{\text{solvent}}+\Delta H_{\text{mix}}$
-
+see [[Solutions]]
 
 ## Latent heat
 

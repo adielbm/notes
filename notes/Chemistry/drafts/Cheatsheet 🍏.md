@@ -1,6 +1,13 @@
 
-
-
+- **Lewis structures**
+- count and add total valence electrons
+- central atom:
+	- the least electronegative atom is usually central
+	- hydrogen is almost never a central atom
+	- halogens are usually terminal
+	- carbon is very commonly the central atom in organic molecules
+- each single (or double or triple) bond corresponds to 2 (or 4 or 6) electrons
+- complete octets of terminal atoms distribute remaining electrons as lone pairs on outer atoms until each has an octet (or 2 for H)
 ---
 
 - $\Delta \chi \gtrsim 2$ → ionic bond
@@ -9,17 +16,52 @@
 
 ---
 
-- **nonpolar molecule**: A molecule that has only nonpolar bonds or in which the bond dipoles cancel (e.g. $\ce{CO2}$, $\ce{N2},\ce{H_{2},\ce{O_{2}}}$)
+- **nonpolar molecule**: A molecule that has only nonpolar bonds or in which the bond dipoles cancel (e.g. $\ce{CO2}, \ce{N2}, \ce{H2}, \ce{O2}$)
 - **polar molecule** A molecule containing bond dipoles that do not cancel. (e.g. $\ce{H_2O}$)
-- If the molecule does not contain polar bonds, it is _**nonpolar**_.
+- If the molecule does not contain polar bonds, it is _**nonpolar**_ (Exception: $\ce{O3}$ is polar due to formal charge distribution in its bent shape).
 - If the molecule is diatomic and its bond is polar, it is _**polar**_.
-- If the molecule contains two or more polar bonds, it may or may not be polar. The result depends on whether the bond dipoles cancel due to molecular geometry. We use the following key rules:
+- If the molecule contains two or more polar bonds, the overall polarity depends on whether the bond dipoles cancel due to molecular geometry:
 	- Let $n$ be the number of lone pairs on the central atom:
-		- if $n=0$, and all terminal atoms are the same, then it is _**nonpolar**_. (e.g. $\ce{CO2}$, $\ce{CH4}$)
-		- if $n=1$, then it is _**polar**_. (e.g. $\ce{NH3}$, $\ce{SO2}$)
-		- if $n\geq 2$, then it is usually _**polar**_. (e.g. $\ce{H2O}$, $\ce{H2S}$ are polar, but $\ce{XeF4}$ is not)
+		- if $n=0$, and all terminal atoms are the same, then it is _**nonpolar**_ (e.g. $\ce{CO2}$, $\ce{CH4}$).
+		- if $n=1$, then it is _**polar**_ (e.g. $\ce{NH3}$, $\ce{SO2}$).
+		- if $n\geq 2$, then it is usually _**polar**_ (e.g. $\ce{H2O}$, $\ce{H2S}$), except when the lone pairs position themselves symmetrically to cancel out:
+			- Square planar structures with $n=2$ (e.g. $\ce{XeF4}$ → _**nonpolar**_).
+			- Linear structures with $n=3$ (e.g. $\ce{XeF2}$ → _**nonpolar**_).
 	- Most hydrocarbons are _**nonpolar**_.
+ Nonpolar examples:
+- Diatomic: $\ce{H2}$, $\ce{N2}$, $\ce{O2}$, $\ce{F2}$, $\ce{Cl2}$, $\ce{Br2}$, $\ce{I2}$
+- Linear: $\ce{CO2}$, $\ce{CS2}$, $\ce{C2H2}$
+- Trigonal planar: $\ce{BF3}$, $\ce{BCl3}$
+- Tetrahedral: $\ce{CH4}$, $\ce{CCl4}$, $\ce{CF4}$, $\ce{SiH4}$, $\ce{C2H6}$
+- Octahedral: $\ce{SF6}$
+- Hexagonal planar: $\ce{C6H6}$
+Polar examples:
+- Linear: $\ce{HF}$, $\ce{HCl}$, $\ce{HBr}$, $\ce{HI}$, $\ce{CO}$
+- Bent: $\ce{H2O}$, $\ce{SO2}$, $\ce{H2S}$, $\ce{O3}$, $\ce{CH2Cl2}$
+- Trigonal pyramidal: $\ce{NH3}$, $\ce{NF3}$
+- Asymmetrical tetrahedral: $\ce{CH3Cl}$, $\ce{CHCl3}$, $\ce{CH3OH}$
+- $\ce{N2O}$, $\ce{H2O2}$
+- $\ce{CH3COOH}$, $\ce{CH3COCH3}$, $\ce{C2H5OH}$
 
+---
+
+- **hydrogen bond** (**H-bond**)
+	- **Dn−H···Ac**
+	- Dn (donor) and Ac (acceptor) are a highly [[Elements|electronegative]] atoms (specifically $\ce{N,O,F}$)
+	- Ac has at least one lone pair of electrons
+	- H is covalently bonded to Dn
+	- ··· is the hydrogen bond (weaker than a covalent bond but stronger than van der Waals forces)
+- **van der Waals forces**
+	- greater if the molecules are closer
+	- **London dispersion force** (**LDF**)
+		- between instantaneously induced dipoles
+		- the weakest of the IMFs
+- **dipole-dipole** interaction
+	- interactions occur between polar molecules
+	- electrostatic interactions
+	- between molecules which have permanent dipoles
+- **ion–dipole** and **ion–induced dipole** forces
+	- stronger than hydrogen bonding
 ---
 
 - $1\,\mathrm{amu}=1.661 \times 10^{24}\,\mathrm{g}$
@@ -29,7 +71,7 @@
 	- SI unit: $\mathrm{m^3 / mol}$, others: $\mathrm{L / mol}$, $\mathrm{mL / mol}$
 	- at STP: $22.4 \,\mathrm{L/mol}$
 - **molar concentration** (or **molarity**) (ריכוז מולרי, מולריות)
-	- $\displaystyle c = \frac{n}{V}$ (also $M$) 
+	- $\displaystyle M = \frac{n}{V}$ (also $c$) 
 	- $\ce{[A]}$ is the molarity of $\ce{A}$ 
 	- SI unit: $\mathrm{mol/m^3}$
 	- other units: $\mathrm{mol/L=M}$ (**molar**)
@@ -105,6 +147,28 @@ pressure units:
 	- $\displaystyle \alpha = \frac{[\ce{BH+}]}{C_0} = \frac{[\ce{OH^-}]}{C_0}=\frac{10^{\mathrm{pH} - 14}}{C_0}$
 		- if $\alpha \ll 1$, the base is weak
 		- if $\alpha \approx 1$, the base is strong
+- non complete neutralization:
+	- $n_{\text{excess }}(\ce{H+}) = n(\ce{H+}) - n({\ce{OH-}})$
+	- $[\ce{H+}] = \frac{n_{\text{excess }}(\ce{H+})}{V_{\text{total}}}$
+---
+
+- $\ce{HA(aq)  +  BOH(aq) ->  BA(aq) + H2O(l)}$
+	- net ionic equation:  
+		- $\ce{H3O+(aq) + OH-(aq)->2H2O(l)}$
+			- (or $\ce{H+ (aq) + OH- (aq) -> H2O (l)}$)
+	- $\ce{strong acid(aq) + strong base(aq) -> \underset{ neutral }{ salt(aq) } + H2O(l)}$
+		- (e.g. $\ce{ HCl(aq)  +  NaOH(aq)  ->  NaCl(aq)  + H_{2}O(l) }$)
+	- $\ce{strong acid(aq) + weak base(aq) -> \underset{ acidic }{ salt(aq) } + H2O(l)}$
+	- $\ce{weak acid(aq) + strong base(aq) -> \underset{ basic }{ salt(aq) } + H2O(l)}$
+	- $\ce{weak acid(aq) + weak base(aq) -> salt(aq) + H2O(l)}$
+- $\ce{HA(aq) + H_{2}O(l) -> H3O+(aq) + A-(aq)}$
+- $\ce{\underset{ weak base }{ B(aq) } + \underset{ weak acid }{ H2O(l) } <=> \underset{ \text{conj. acid} }{ BH+(aq) } + \underset{ \text{conj. base} }{ OH-(aq) }}$
+- $\ce{\underset{ weak acid }{ HA(aq) } + \underset{ weak base }{ H2O(l) } <=> \underset{ \text{conj. base} }{ A-(aq) } + \underset{ \text{conj. acid} }{ H_{3}O+(aq) }}$
+- $\ce{acid(g) + base(g) -> salt(s)}$
+- $\ce{NH4+(aq) + OH-(aq) -> NH3(aq) + H2O(l)}$
+- $\ce{\underset{\text{acid}}{HA(aq)} + \underset{\text{base}}{B(aq)} <=> \underset{\text{conj. base}}{A-(aq)} + \underset{{\text{conj. acid}}}{BH+(aq)}}$
+
+
 --- 
 
 - The **oxidizing agent** (or **oxidant**) (גורם מחמצן) is the species that:

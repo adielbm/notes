@@ -15,7 +15,7 @@
 - $P$ is the pressure
 - $V$ is the volume
 - $n$ is the amount of substance of the gas (in $\mathrm{mol}$)
-- $T$ is the absolute temperature
+- $T$ is the [[Thermodynamics#Temperature|absolute temperature]]
 - $R$ is the **gas constant** (also **universal**, **ideal** or **molar gas constant**)
 	- $R=8.3145 \, \mathrm{J \cdot K^{-1}\cdot mol^{-1} }$.
 	- $R=0.0821\,\mathrm{L\cdot atm \cdot K^{-1}\cdot mol^{-1}}$
@@ -24,7 +24,7 @@
 - other forms:
 	- $\displaystyle\frac{PV}{TN}=k_b$
 		- $N$ is the total number of particles (atoms or molecules) in the gas.
-		- $k_b$ is the **Boltzmann constant**
+		- $k_b=1.380649 \times 10^{-23} \;\mathrm{J \cdot K^{-1}}$ is the **Boltzmann constant**
 		- ($k_bT$ is sometimes called "[[Energy#Others|thermal energy]]")
 	- $\rho = \frac{P M}{R T}$, where: $\rho$ is the [[density]] and $M$ is the [[Mole#Molar mass|molar mass]]
 
@@ -36,16 +36,11 @@
 	- $\displaystyle\chi_{ i }=\frac {n_{ i }}{n}$ is the [[Mole#Related quantities|mole fraction]]
 
 
-# Henry's law
-
-- **Henry's law** $C=kP$
-	- $C$: [[Mole|molarity]] (concentration) of the dissolved gas in the liquid
-	- $k$: Henry’s law constant (depends on the gas, solvent, and temperature)
-	- $P$: partial pressure of the gas above the liquid
-
-
-
 # Van der Waals equation
 
 - $\displaystyle p={\frac {RT}{v-b}}-{\frac {a}{v^{2}}}$
 	- $v$ is the [[Mole#Molar volume|molar volume]]
+
+---
+
+see also: [[Solutions#Henry's law]]

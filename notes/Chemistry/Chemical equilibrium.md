@@ -6,7 +6,7 @@
 	- examples: 
 		- [[vapor pressure]] in a closed container
 		- $\ce{H2O(s) <=> H2O(l)}$ (at $0^\circ\mathrm{C}$ and $1\,\mathrm{atm}$)
-- less common related terms:
+- related non-common terms:
 	- _physical equilibrium_
 		- "A state in which two or more phases of a substance coexist without a tendency to change." [@Jones, 2016]
 	- _phase equilibrium_ 

@@ -51,17 +51,15 @@
 		- pressure ($P$)
 			- $P = f(V, T, n) = \frac{nRT}{V}$
 		- temperature ($T$)
-	- (The [[differential]] $dX$ (of a state function) is an **exact differential**)
+	- (The [[differential]] $dX$ (of a state function $X$) is an **exact differential**)
 		- exact differential describes a change in a state function
-		- $\oint dX = 0$
-		- #todo https://youtu.be/FnoAK3Le0pw?list=PLYHaXvNA5JrcVn8pDXD9gkPgq4Ay83cRh
+		- $\oint dX = 0$ (or equivalently $\int^{X_{2}}_{X_{1}} \, dX=X_{2}-X_{1}$)
 - **path function** (or **process function**)
 	- examples: 
 		- [[#heat]] $Q$
 		- work $W$
 	- **inexact differential** (a differential whose integral depends on the path taken between two points)
 		- (e.g. $\delta W$ and $\delta Q$)
-
 
 
 # Thermodynamic processes
@@ -155,39 +153,33 @@
 # Temperature
 
 - **temperature**
-	- **thermodynamic temperature** (or **absolute temperature**) (טמפרטורה מוחלטת)
-	- **absolute zero**
-	- **Celsius**
-		- degree Celsius ($^\circ\mathrm{C}$)
-		- (sometimes $\mathrm{C}^\circ$ is used for temperature interval)
+	- SI unit: kelvin
 	- For an ideal gas, $\overline{\text{KE}}=\frac{3}{2}k_B T$
-
-
+- **scale of temperature**:
+	- absolute scales:
+		- **Kelvin scale**
+			- unit: **kelvin** ($\mathrm{K}$) – defined by fixing the [[Gas laws#Ideal gas law|Boltzmann constant]]
+		- **Rankine scale**
+			- unit: **degree Rankine** ($^\circ\mathrm{R}$) – unit equal to $1^\circ\mathrm{F}$ increment.
+	- relative scales
+		- **Celsius scale**: $T_{^\circ\mathrm{C}}=T_{\mathrm{K}}-273.15$ 
+			- unit: **degree Celsius** ($^\circ\mathrm{C}$) – unit equal to $1\,\mathrm{K}$ increment.
+				- (sometimes $\mathrm{C}^\circ$ is used for temperature interval)
+		- **Fahrenheit scale**: $T_{^\circ\mathrm{F}}=\frac{9}{5}T_{^\circ\mathrm{C}}+32$
+			- unit: **degree Fahrenheit** ($^\circ\mathrm{F}$) – unit equal to $\frac{5}{9}^\circ\mathrm{C}$ (or $\frac{5}{9}\,\mathrm{K}$) increment
+- **thermodynamic temperature** (or **absolute temperature**) (טמפרטורה מוחלטת) – temperature that is measured on an absolute scale 
+	- **absolute zero** (האפס המוחלט)
 
 # Potentials
 
 - **thermodynamic potential** (or **thermodynamic potential energy**)
-	- [[#Gibbs free energy]]
-	- [[#enthalpy]]
 	- [[#internal energy]]
 	- **Helmholtz free energy** ($A$)
+	- [[#enthalpy]]
+	- [[#Gibbs free energy]]
 	- **grand potential** (or **Landau potential**) ($\Omega$)
-
 - **(thermodynamic) free energy**
 
-
-## Gibbs free energy
-
-- **Gibbs free energy** (or **Gibbs energy**)
-- $G=U+PV-TS$
-- $\Delta G=\Delta H-T\Delta S$
-	- the enthalpy contribution is favorable when $\Delta H < 0$
-	- the entropy contribution is favorable when $\Delta S > 0$
-- $\Delta G<0$ → spontaneous
-- $\Delta G = 0$ → equilibrium
-- $\Delta G>0$ → nonspontaneous
-- $\Delta H < 0 \land \Delta S > 0\implies \Delta G<0$
-- $\Delta H > 0 \land \Delta S < 0\implies \Delta G>0$
 
 ## Internal energy
 
@@ -232,13 +224,32 @@
 	- examples:
 		- [[Thermochemistry#Enthalpy of reaction|enthalpy change of reaction]]
 		- [[Thermochemistry#Enthalpy of solution|enthalpy of solution]]
-		- 
 	- $\Delta H=\Delta U+P\Delta V=q_{P}$
 		- $\Delta U$ is the internal energy change
 		- $q_P$ is the heat at constant pressure
 		- $P\Delta V$ is the [[#Work|PV work]]
 	- $\Delta H>0$ for an endothermic process
 	- $\Delta H<0$ for an exothermic process
+
+## Gibbs free energy
+
+- **Gibbs free energy** (or **Gibbs energy**)
+- $G=U+PV-TS$
+	- $T$ is the thermodynamic temperature
+- $\Delta G=\Delta H-T\Delta S$
+	- the enthalpy contribution is favorable when $\Delta H < 0$
+	- the entropy contribution is favorable when $\Delta S > 0$
+- $\Delta H < 0 \land \Delta S > 0\implies \Delta G<0\implies$spontaneous
+- $\Delta H > 0 \land \Delta S < 0\implies \Delta G>0\implies$ nonspontaneous
+- $\Delta H < 0 \land \Delta S < 0$
+	- spontaneous only when $T < \frac{\Delta H}{\Delta S}$
+- $\Delta H> 0 \land \Delta S > 0$
+	- spontaneous only when $T > \frac{\Delta H}{\Delta S}$
+- $\Delta G = 0\implies$ 
+	- equilibrium
+	- $\displaystyle T=\frac{\Delta H}{\Delta S}$
+- exergonic and endergonic
+
 
 # Entropy
 

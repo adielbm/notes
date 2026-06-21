@@ -1,43 +1,87 @@
 
 
-- **solution**
+- **solution** (abbreviated **soln**)
 	- "A liquid or solid phase containing more than one substance, when for convenience one (or more) substance, which is called the solvent, is treated differently from the other substances, which are called solutes. When, as is often but not necessarily the case, the sum of the mole fractions of solutes is small compared with unity, the solution is called a dilute solution." (_IUPAC Gold Book_)
 	- **true solution**
 		- "a homogeneous mixture with uniform properties throughout. In a true solution, the solute cannot be isolated from the solution by filtration" [@Denniston, 2022]
-- **solubility** (מְסִיסוּת) (of a solute in a solvent)
-	- "the ability of a substance, the solute, to form a solution with another substance, the solvent" (Wikipedia)
-	- quantification: a [[concentration]] of a saturated solution of the two
-	- factors:
-		- composition and structure of the solute and the solvent
-		- pressure
-		- temperature: an increase in temperature usually increases solubility
-	- "_like dissolves like_" (Latin: "_Similia similibus solventur_")
-	- **insolubility**
-- **solvation** (הֲמָסָה)
-	- cf. **dissolution**
-- **hydration** (הִידְרַצְיָה, מִיּוּם)
-- **soluble** (מָסִיס)
-	- "A _soluble substance_ is one that dissolves to a significant extent in a specified solvent. When solubility is mentioned without indicating a solvent, it normally means “soluble in water.”" [@Jones, 2016]
-	- "An _insoluble substance_ is one that does not dissolve significantly in a specified solvent" [@Jones, 2016]
 - **solute** (מוּמָס) - dissolved substance
 	- **dissolved** (_adj_.) - that has been disintegrated in a solvent (Wiktionary) 
 - **solvent** (מֵמֵס, מְמִסִּים)
 	- "(1) The most abundant component of a solution. (2) The component of a solution in which the other components are considered to be dissolved." [@Jones, 2016]
-
-
-- **supersaturation** (רְוָיַת-יֶתֶר, רִוּוּי-יֶתֶר)
-	- "The condition of a solution being more highly concentrated than is normally possible" (Wiktionary)
-	- **supersaturated solution** (תמיסה רווית-יתר)
-- **saturated solution** (תמיסה רוויה)
-
 - **dilution** (מיהול)
 	- $M_1V_1 = M_2V_2$
 	- $V_1,V_2$ are the volumes of the solution before and after dilution, (resp.) 
 	- $M_1,M_2$ are the molarities of the solution before and after dilution (resp.)
+- **dissolution** (הֲמָסָה)
+	- **enthalpy of solution**: $\Delta H_{\text{solution}}=\Delta H_{\text{solute}}+\Delta H_{\text{solvent}}+\Delta H_{\text{solvation}}$
+	- process:
+		- breaking solute–solute attractions
+			- $\Delta H_{\text{solute}}$: energy required to separate solute particles (endothermic, positive)
+		- breaking solvent–solvent attractions
+			- $\Delta H_{\text{solvent}}$: energy required to create spaces between solvent molecules (endothermic, positive)
+		- **solvation** (מְסִיסָה) – forming solute–solvent attractions
+			- $\Delta H_{\text{solvation}}$: energy released when solute particles interact with solvent molecules (exothermic, negative)
+			- **hydration** (הִידְרַצְיָה, מִיּוּם)
 
 
+- $\displaystyle\ce{solute + solvent <=>[\text{dissolve}][\text{crystallize}] solution}$
+- $\ce{A <=>[\ce{+H2O}] B}$
 - **aqueous solution** (תמיסה מימית)
 	- **spectator ions** (יונים משקיפים)
+
+# Solubility
+
+- **soluble** (מָסִיס)
+	- "A _soluble substance_ is one that dissolves to a significant extent in a specified solvent. When solubility is mentioned without indicating a solvent, it normally means “soluble in water.”" [@Jones, 2016]
+	- "An _insoluble substance_ is one that does not dissolve significantly in a specified solvent" [@Jones, 2016]
+- **solubility** (מְסִיסוּת) (of a solute in a solvent)
+	- "the ability of a substance, the solute, to form a solution with another substance, the solvent" (Wikipedia)
+- **insolubility**
+- quantification:
+	- solute per quantity of solvent:
+		- [[Concentration|mass concentration]]: $\mathrm{g/100\,mL}$
+		- $\mathrm{g/100\,g}$
+		- $\mathrm{g/kg}$
+		- **molality**: ($m$ or $b$) ${\frac {n_{\mathrm {solute} }}{m_{\mathrm {solvent} }}}$
+			- unit: $\mathrm{mol/kg=m}$ (**molal**)
+	- solute per quantity of solution: $\frac{\text{solute}}{\text{saturated solution}}$ 
+		- [[Concentration|molarity]]: $\mathrm{mol/L}$
+		- mole fraction: $\mathrm{mol/mol}$
+		- mass fraction: $\mathrm{g/g}$
+- factors:
+	- composition and structure of the solute and the solvent
+		- "_like dissolves like_" (Latin: "_Similia similibus solventur_")
+		- "the stronger the attractions between solute and solvent molecules, the greater the solubility of the solute in that solvent" [@Brown, 2012]
+		- "Nonpolar liquids tend to be insoluble in polar liquids" [@Brown, 2012]
+	- pressure. see [[#Henry's law]]
+	- temperature: generally increases the solubility of solids in liquids, but decreases the solubility of gases in liquids
+- **solubility equilibrium**
+	- **solubility product** ($K_{sp}$) (מכפלת מסיסות)
+	- [[Chemical equilibrium|reaction quotient]] ($Q_{sp}$)
+- **miscibility** (מְזִיגוּת)
+	- **miscible** (מָזִיג)
+	- **immiscible** (לֹא-מָזִיג)
+
+
+### Henry's law
+
+- **Henry's law** $C=kP$
+	- $C$: [[Mole|molarity]] (concentration) of the dissolved gas in the liquid
+	- $k$: **Henry's law constant** (depends on the gas, solvent, and temperature)
+	- $P$: partial pressure of the gas above the liquid
+
+# Saturated solution
+
+- **unsaturated solution**
+	- "A solution containing less solute than a saturated solution" [@Brown, 2012]
+- **saturated solution** (תמיסה רוויה)
+	- "A solution in which undissolved solute and dissolved solute are in equilibrium." [@Brown, 2012]
+	- "a solution that is in equilibrium with undissolved solute" [@Brown, 2012]
+- **supersaturation** (רְוָיַת-יֶתֶר, רִוּוּי-יֶתֶר)
+	- "The condition of a solution being more highly concentrated than is normally possible" (Wiktionary)
+	- **supersaturated solution** (תמיסה רווית-יתר)
+		- "A solution containing more solute than an equivalent saturated solution."
+
 
 # Electrolyte
 
@@ -59,6 +103,7 @@
 		- ionize partially in water → weak electrolyte
 		- weak acid/base → weak electrolyte
 		- not ionize in water → non-electrolytes 
+
 
 
 

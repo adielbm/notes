@@ -33,7 +33,7 @@
 		- [[State of matter#Threshold temperatures|melting point]]
 		- [[State of matter#Threshold temperatures|boiling point]]
 		- [[Thermodynamics#Heat capacity|heat capacity]]
-		- [[Solutions|solubility]]
+		- [[Solutions#Solubility|solubility]]
 		- [[Continuum mechanics|viscosity]]
 		- volatility
 		- [[Continuum mechanics|surface tension]]

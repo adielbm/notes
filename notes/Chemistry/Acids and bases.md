@@ -71,6 +71,9 @@
 	- $\ce{strong acid(aq) + weak base(aq) -> \underset{ acidic }{ salt(aq) } + H2O(l)}$
 	- $\ce{weak acid(aq) + strong base(aq) -> \underset{ basic }{ salt(aq) } + H2O(l)}$
 	- $\ce{weak acid(aq) + weak base(aq) -> salt(aq) + H2O(l)}$
+	- $\ce{acid(aq) + \text{metal oxide}(aq) -> salt(aq) + H2O(l)}$
+	- $\ce{acid(aq) + \text{metal carbonate}(aq) -> salt(aq) + H2O(l) + CO_{2}(g)}$
+	- $\ce{acid(aq) + \text{metal hydroxide}(aq) -> salt(aq) + H2O(l)}$
 - $\ce{HA(aq) + H_{2}O(l) -> H3O+(aq) + A-(aq)}$
 - $\ce{\underset{ weak base }{ B(aq) } + \underset{ weak acid }{ H2O(l) } <=> \underset{ \text{conj. acid} }{ BH+(aq) } + \underset{ \text{conj. base} }{ OH-(aq) }}$
 - $\ce{\underset{ weak acid }{ HA(aq) } + \underset{ weak base }{ H2O(l) } <=> \underset{ \text{conj. base} }{ A-(aq) } + \underset{ \text{conj. acid} }{ H_{3}O+(aq) }}$

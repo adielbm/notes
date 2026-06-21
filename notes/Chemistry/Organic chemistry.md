@@ -7,6 +7,11 @@
 - **hydrocarbon** (פחמימן)
 
 
+- **organic compounds**
+- **saturated compound** (תרכובת רוויה)
+- **unsaturated compound**
+
+
 # Carbohydrate
 
 - **carbohydrate** (פחמימה, פחמימות)

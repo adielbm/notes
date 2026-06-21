@@ -53,9 +53,8 @@
 - **mass fraction** ${\displaystyle w_{i}={\frac {m_{i}}{m_{\mathrm {total} }}}.}$
 - **volume fraction** $\displaystyle\varphi_{i}=\frac{V_{i}}{V_{\text{total}}}$
 	- for ideal gases: $\phi_i = x_i$
-- **molality** $m$ (or $b$)
-	- $\displaystyle b={\frac {n_{\mathrm {solute} }}{m_{\mathrm {solvent} }}}$
-	- unit: $\mathrm{mol/kg=m}$ (**molal**)
+- [[Solutions#Solubility|molality]]
+
 
 
 # Yield

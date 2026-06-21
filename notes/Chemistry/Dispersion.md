@@ -14,6 +14,11 @@
  - particle size: $1\,\mathrm{nm}\text{–}1\,\mu\mathrm{m}$
 - **Tyndall effect** (or **Tyndall scattering**)
 
+- related terms:
+	- **adsorption** (סְפִיחָה)
+	- **adhesion**
+	- **absorption** (סְפִיגָה)
+
 # Suspension
 
 - **suspension** (תַּרְחִיף)
@@ -26,6 +31,22 @@
 - **aerosol** (אֵרוֹסוֹל, אֶרְסָס)
 	- aerosol spray
 	- spray (תַּרְסִיס)
-- **emulsion** (תחליב, אֵמוּלְסִיָּה)
+- **emulsion** (תַּחְלִיב, אֵמוּלְסִיָּה)
+	- examples:
+		- homogenized milk
+	- process: **emulsification** (תִּחְלוּב)
+	- **emulsifier** (מְתַחְלֵב, חֹמֶר מְתַחְלֵב)
+	- **emulsify** (v.) (תִּחְלֵב)
 - **foam**
 - **gel** (גֵ'ל, תַּקְרִישׁ, מִקְפָּה)
+
+
+---
+
+
+see also:
+- **phase separation** (היפרדות לפאזות)
+	- dispersed phase
+	- continuous phase
+	- dispersion medium
+- 

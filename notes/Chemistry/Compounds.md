@@ -19,17 +19,12 @@
 
 
 
-- **saturated compound** (תרכובת רוויה)
-- **unsaturated compound**
-
-- **organic compounds**
-
-
 # Solids
 
 - **amorphous solid** (or **non-crystalline solid**) (מוצק אמורפי)
 	- **amorphous metal** (or **metallic glass**)
 - **crystal** (or **crystalline solid**) (גביש, מוצק גבישי)
+	- **crystallization** – "the process in which molecules, ions, or atoms come together to form a crystalline solid" [@Brown, 2012]
 	- **crystal structure** (מבנה גבישי)
 		- unit cell
 		- crystal lattice

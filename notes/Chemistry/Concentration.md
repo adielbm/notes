@@ -1,5 +1,5 @@
 - **concentration** (ריכוז)
-	- **molar concentration** (or **molarity**) (ריכוז מולרי, מולריות)
+	- **molarity** (or **molar concentration**) (ריכוז מולרי, מולריות)
 		- $\displaystyle c = \frac{n}{V}$ (also denoted $M$) 
 		- $\ce{[A]}$ is the molarity of $\ce{A}$ 
 		- SI unit: $\mathrm{mol/m^3}$
