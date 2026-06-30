@@ -31,6 +31,8 @@
 	- common unit: $\mathrm{Å}$
 	- $\text{bond length: triple} < \text{double} < \text{single}$
 
+- isoelectronicity
+
 # Intermolecular forces
 
 - **intermolecular force** (**IMF**)

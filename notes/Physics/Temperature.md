@@ -1,0 +1,17 @@
+- **temperature**
+	- SI unit: kelvin
+	- For an ideal gas, $\overline{\text{KE}}=\frac{3}{2}k_B T$
+- **scale of temperature**:
+	- absolute scales:
+		- **Kelvin scale**
+			- unit: **kelvin** ($\mathrm{K}$) – defined by fixing the [[Gas laws#Ideal gas law|Boltzmann constant]]
+		- **Rankine scale**
+			- unit: **degree Rankine** ($^\circ\mathrm{R}$) – unit equal to $1^\circ\mathrm{F}$ increment.
+	- relative scales
+		- **Celsius scale**: $T_{^\circ\mathrm{C}}=T_{\mathrm{K}}-273.15$ 
+			- unit: **degree Celsius** ($^\circ\mathrm{C}$) – unit equal to $1\,\mathrm{K}$ increment.
+				- (sometimes $\mathrm{C}^\circ$ is used for temperature interval)
+		- **Fahrenheit scale**: $T_{^\circ\mathrm{F}}=\frac{9}{5}T_{^\circ\mathrm{C}}+32$
+			- unit: **degree Fahrenheit** ($^\circ\mathrm{F}$) – unit equal to $\frac{5}{9}^\circ\mathrm{C}$ (or $\frac{5}{9}\,\mathrm{K}$) increment
+- **thermodynamic temperature** (or **absolute temperature**) (טמפרטורה מוחלטת) – temperature that is measured on an absolute scale 
+	- **absolute zero** (האפס המוחלט)

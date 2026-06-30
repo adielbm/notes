@@ -15,7 +15,7 @@
 - $P$ is the pressure
 - $V$ is the volume
 - $n$ is the amount of substance of the gas (in $\mathrm{mol}$)
-- $T$ is the [[Thermodynamics#Temperature|absolute temperature]]
+- $T$ is the [[Temperature|absolute temperature]]
 - $R$ is the **gas constant** (also **universal**, **ideal** or **molar gas constant**)
 	- $R=8.3145 \, \mathrm{J \cdot K^{-1}\cdot mol^{-1} }$.
 	- $R=0.0821\,\mathrm{L\cdot atm \cdot K^{-1}\cdot mol^{-1}}$

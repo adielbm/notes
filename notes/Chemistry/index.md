@@ -29,7 +29,7 @@
 	- "a characteristic that can be observed or measured without changing the identity of the substance" [@Jones, 2016]
 	- examples:
 		- [[density]]
-		- [[Thermodynamics#Temperature|temperature]]
+		- [[temperature]]
 		- [[State of matter#Threshold temperatures|melting point]]
 		- [[State of matter#Threshold temperatures|boiling point]]
 		- [[Thermodynamics#Heat capacity|heat capacity]]

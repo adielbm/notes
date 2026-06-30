@@ -3,7 +3,7 @@
 # Nuclide
 
 - **nuclide** (or **nucleide**, **nuclear species**) (נוּקליד)
-	- Nuclides' classification:
+	- nuclides' classification:
 		- [[isotopes]] (equal $Z$) (see Wikipedia: [Isotope vs. nuclide](https://en.wikipedia.org/wiki/Isotope#Isotope_vs._nuclide))
 		- isotones (equal $A$)
 		- isobars (equal $N$)
@@ -78,6 +78,7 @@
 	- $\ce{^1_{1}p + ^0_{-1}e ->^1_{0}n}$
 - **gamma radiation** (or **gamma ray**)
 	- **gamma decay**
+	- $\ce{^{A{\mathit{m}}}_{Z}X -> ^{A}_{Z}X + \gamma}$
 
 
 |                  | [[Particles\|particle]] | $^{A}_{Z}\ce{E}^q$                                                   | $\ce{^{\mathit{A}}_{q}x}$              | mass ($\mathrm{u}$) |

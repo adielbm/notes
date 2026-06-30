@@ -1,3 +1,8 @@
+- atomic radius $\swarrow$
+- ionization energy $\nearrow$
+- electron affinity $\nearrow$
+- electronegativity $\nearrow$
+----
 
 - **Lewis structures**
 - count and add total valence electrons
@@ -28,29 +33,28 @@
 			- Square planar structures with $n=2$ (e.g. $\ce{XeF4}$ → _**nonpolar**_).
 			- Linear structures with $n=3$ (e.g. $\ce{XeF2}$ → _**nonpolar**_).
 	- Most hydrocarbons are _**nonpolar**_.
- Nonpolar examples:
-- Diatomic: $\ce{H2}$, $\ce{N2}$, $\ce{O2}$, $\ce{F2}$, $\ce{Cl2}$, $\ce{Br2}$, $\ce{I2}$
-- Linear: $\ce{CO2}$, $\ce{CS2}$, $\ce{C2H2}$
-- Trigonal planar: $\ce{BF3}$, $\ce{BCl3}$
-- Tetrahedral: $\ce{CH4}$, $\ce{CCl4}$, $\ce{CF4}$, $\ce{SiH4}$, $\ce{C2H6}$
-- Octahedral: $\ce{SF6}$
-- Hexagonal planar: $\ce{C6H6}$
-Polar examples:
-- Linear: $\ce{HF}$, $\ce{HCl}$, $\ce{HBr}$, $\ce{HI}$, $\ce{CO}$
-- Bent: $\ce{H2O}$, $\ce{SO2}$, $\ce{H2S}$, $\ce{O3}$, $\ce{CH2Cl2}$
-- Trigonal pyramidal: $\ce{NH3}$, $\ce{NF3}$
-- Asymmetrical tetrahedral: $\ce{CH3Cl}$, $\ce{CHCl3}$, $\ce{CH3OH}$
-- $\ce{N2O}$, $\ce{H2O2}$
-- $\ce{CH3COOH}$, $\ce{CH3COCH3}$, $\ce{C2H5OH}$
+- **Nonpolar examples**:
+	- Diatomic: $\ce{H2}$, $\ce{N2}$, $\ce{O2}$, $\ce{F2}$, $\ce{Cl2}$, $\ce{Br2}$, $\ce{I2}$
+	- Linear: $\ce{CO2}$, $\ce{CS2}$, $\ce{C2H2}$
+	- Trigonal planar: $\ce{BF3}$, $\ce{BCl3}$
+	- Tetrahedral: $\ce{CH4}$, $\ce{CCl4}$, $\ce{CF4}$, $\ce{SiH4}$, $\ce{C2H6}$
+	- Octahedral: $\ce{SF6}$
+	- Hexagonal planar: $\ce{C6H6}$
+- **Polar examples**:
+	- Linear: $\ce{HF}$, $\ce{HCl}$, $\ce{HBr}$, $\ce{HI}$, $\ce{CO}$
+	- Bent: $\ce{H2O}$, $\ce{SO2}$, $\ce{H2S}$, $\ce{O3}$, $\ce{CH2Cl2}$
+	- Trigonal pyramidal: $\ce{NH3}$, $\ce{NF3}$
+	- Asymmetrical tetrahedral: $\ce{CH3Cl}$, $\ce{CHCl3}$, $\ce{CH3OH}$
+	- $\ce{N2O}$, $\ce{H2O2}$
+	- $\ce{CH3COOH}$, $\ce{CH3COCH3}$, $\ce{C2H5OH}$
 
 ---
 
-- **hydrogen bond** (**H-bond**)
-	- **Dn−H···Ac**
-	- Dn (donor) and Ac (acceptor) are a highly [[Elements|electronegative]] atoms (specifically $\ce{N,O,F}$)
-	- Ac has at least one lone pair of electrons
-	- H is covalently bonded to Dn
-	- ··· is the hydrogen bond (weaker than a covalent bond but stronger than van der Waals forces)
+- **hydrogen bond** (**H-bond**): **Dn−H···Ac**
+	- **Dn** (donor) and Ac (acceptor) are a highly [[Elements|electronegative]] atoms (specifically $\ce{N,O,F}$)
+	- **Ac** has at least one lone pair of electrons
+	- **H** is covalently bonded to Dn
+	- **···** is the **hydrogen bond** (weaker than a covalent bond but stronger than van der Waals forces)
 - **van der Waals forces**
 	- greater if the molecules are closer
 	- **London dispersion force** (**LDF**)
@@ -67,6 +71,7 @@ Polar examples:
 - $1\,\mathrm{amu}=1.661 \times 10^{24}\,\mathrm{g}$
 - $N_\text{A}=6.022 \times 10^{23} \, \text{mol}^{-1}$
 - **molar mass** (unit: $\mathrm{g/mol}$) $M=\frac{m}{N_A}$, $M=\frac{m}{n}$
+- $\displaystyle n=\frac{m}{M}$
 - **molar volume**: $\displaystyle V_m=\frac{V}{n}=\frac{M}{\rho}$
 	- SI unit: $\mathrm{m^3 / mol}$, others: $\mathrm{L / mol}$, $\mathrm{mL / mol}$
 	- at STP: $22.4 \,\mathrm{L/mol}$
@@ -77,7 +82,23 @@ Polar examples:
 	- other units: $\mathrm{mol/L=M}$ (**molar**)
 - **mass concentration** (ריכוז מסה) $\displaystyle\rho_{i}=\frac{m_{i}}{V}$
 - **dilution** (מיהול) $M_1V_1 = M_2V_2$
-----
+- $\text{concentration[mol/L]} = \frac{\text{concentration[g/L]}}{\text{molar mass[g/mol]}}$
+- **solution** quantification:
+	- solute per quantity of solvent:
+		- [[Concentration|mass concentration]]: $\mathrm{g/100\,mL}$
+		- $\mathrm{g/100\,g}$
+		- **molality**: ($m$ or $b$) ${\frac {n_{\mathrm {solute} }}{m_{\mathrm {solvent} }}}$, in: $\mathrm{mol/kg=m}$ (**molal**)
+	- solute per quantity of solution: $\frac{\text{solute}}{\text{saturated solution}}$ 
+		- [[Concentration|molarity]]: $\mathrm{mol/L}$
+		- $\mathrm{g/L}$
+
+- **solubility**
+	- "the stronger the attractions between solute and solvent molecules, the greater the solubility of the solute in that solvent"
+	- "Nonpolar liquids tend to be insoluble in polar liquids"
+	- temperature: generally increases the solubility of solids in liquids, but decreases the solubility of gases in liquids
+
+---
+
 
 - soluble ionic compound → strong electrolyte
 - covalent compound
@@ -97,16 +118,34 @@ Polar examples:
 - **total pressure** $p=\sum _{i=1}^{n}p_{i}$, **partial pressure** $p_i$
 - $\displaystyle\chi_{ i }=\frac {n_{ i }}{n}$ (mole fraction)
 - $T_\text{K}=T_{^\circ\mathrm{C}}+273.15$
-pressure units:
-- ${{\rm {1~Pa=1~{\frac {N}{m^{2}}}=1~{\frac {kg}{m{\cdot }s^{2}}}=1~{\frac {J}{m^{3}}}}}}$
-- $1 \, \text{atm} = 101325 \, \text{Pa}$
-- $1 \, \text{Torr}=\frac{1}{760}\,\mathrm{atm} \approx 133.32 \, \text{Pa}$
-- $1 \, \text{bar} = 10^5 \, \text{Pa}$
-- $1 \, \text{mmHg}=133.322387415\,\mathrm{Pa} \approx 1 \, \text{torr}$
+- **pressure units**:
+	- ${{\rm {1~Pa=1~{\frac {N}{m^{2}}}=1~{\frac {kg}{m{\cdot }s^{2}}}=1~{\frac {J}{m^{3}}}}}}$
+	- $1 \, \text{atm} = 101325 \, \text{Pa}$
+	- $1 \, \text{mmHg}=1 \, \text{Torr}=\frac{1}{760}\,\mathrm{atm} \approx 133.32 \, \text{Pa}$
+	- $1 \, \text{bar} = 10^5 \, \text{Pa}$
+- **volume units**:
+	- $1\text{ mL} = 1\text{ cm}^3$
+	- $1\text{ L} = 1\text{ dm}^3$
+	- $1\text{ m}^3 = 1,000\text{ L}$
+
+---
+- $\Delta H>0\implies$ endothermic
+- $\Delta H<0\implies$ exothermic
+- $\Delta G=\Delta H-T\Delta S$
+	- the enthalpy contribution is favorable when $\Delta H < 0$
+	- the entropy contribution is favorable when $\Delta S > 0$
+- $\Delta H < 0 \land \Delta S > 0\implies \Delta G<0$
+- $\Delta H > 0 \land \Delta S < 0\implies \Delta G>0$
+- $\Delta H < 0 \land \Delta S < 0 \implies \left( T < \frac{\Delta H}{\Delta S} \iff \Delta G<0 \right)$
+- $\Delta H > 0 \land \Delta S > 0 \implies \left( T > \frac{\Delta H}{\Delta S} \iff \Delta G<0 \right)$
+- $\Delta G = 0\iff T=\frac{\Delta H}{\Delta S}\iff$ equilibrium
+- $\Delta G<0 \iff$ spontaneous
+- $\Delta G>0 \iff$ non-spontaneous 
 
 ----
-- **Le Chatelier's principle**
 - $\ce{aA + bB <=> cC + dD}$
+- **equilibrium constant**: $\displaystyle K_{\text{eq}}=\frac{[\ce{C}]^c [\ce{D}]^d}{[\ce{A}]^a [\ce{B}]^b}$
+- **Le Chatelier's principle**
 - $n_g^P$ (and $n_g^R$): total moles of gaseous products (and reactants); $\Delta n_g =  n_g^P-n_{g}^R$
 - pressure/volume changes:
 	- shift only if $\Delta n_g \neq 0$
@@ -123,6 +162,9 @@ pressure units:
 | $T\uparrow$ (exo)                            | $\leftarrow$ (and $K\downarrow$) |
 | $T\uparrow$ (endo)                           | $\rightarrow$ (and $K\uparrow$)  |
 | catalyst                                     | none                             |
+
+---
+- an increase in temperature, surface area, the presence of a catalyst, and an increase in pressure (for gaseous reactants) generally increases the **reaction rate**
 
 ---
 - **acid**: $\ce{H+}$ donor, **base**: $\ce{H+}$ acceptor
@@ -208,3 +250,10 @@ pressure units:
 
 - $N(n t_{1/2})=N_0 \cdot (1/2)^n$ is the amount (mass) after $n$ half-lives.
 - $n=t/t_{1/2}$
+-  **α-decay**: $\ce{^{A}_{Z}X -> ^{A-4}_{Z-2}Y + ^{4}_{2}He}$
+-  **β-decay**: $\ce{^{A}_{Z}X -> ^{A}_{Z+1}Y + e^-}$
+	- $\ce{^1_{0}n->^1_{1}p + ^0_{-1}e}$
+- **positron emission** (**β+ decay**) $\ce{^{A}_{Z}X -> ^{A}_{Z-1}Y + e^+}$
+	- $\ce{^1_{1}p->^1_{0}n + ^0_{1}e}$
+- **gamma ray**: $\ce{^{A{\mathit{m}}}_{Z}X -> ^{A}_{Z}X + \gamma}$
+

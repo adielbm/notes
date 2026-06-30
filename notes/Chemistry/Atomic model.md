@@ -64,7 +64,7 @@
 
 
 - **electron density** (or **electronic density**)
-- isoelectronicity
+
 
 
 

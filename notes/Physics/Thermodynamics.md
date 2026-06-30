@@ -19,13 +19,15 @@
 		- $Q$ is the heat added to the system
 		- $W$ is the work done by the system
 	- (or equivalently $\Delta U = Q + W$, where $W$ is the work done on the system (IUPAC convention))
+	- "The internal energy of an isolated system is constant" [@Atkins, 2014]
 	- for isochoric process: $\Delta U = q_v$
 - **second law of thermodynamics**
 	- _Clausius statement_:
 		- "Heat can never pass from a colder to a warmer body without some other change, connected therewith, occurring at the same time" (Wikipedia)
 		- "no device is possible whose sole effect is to transfer heat from one system at a temperature $T_\text{L}$ into a second system at a higher temperature $T_\text{H}$" [@Giancoli, 2015]
 	- _Kelvin-Planck statement_: (see: https://en.wikipedia.org/wiki/Second_law_of_thermodynamics#Relation_between_Kelvin's_statement_and_Planck's_proposition)
-		- "no device is possible whose sole effect is to transform a given amount of heat completely into work" [@Giancoli, 2015] 
+		- "no device is possible whose sole effect is to transform a given amount of heat completely into work" [@Giancoli, 2015]
+		- 
 - **third law of thermodynamics**
 
 # Thermodynamic system
@@ -81,21 +83,30 @@
 	- **Joule expansion**
 - **quasi-static process** (or **quasi-equilibrium process**)
 
-- **reversible** (הפיך) and **irreversible** (לא-הפיך)
-	- see also: [[Chemical equilibrium]]
-- endoreversibility
-
-
----
 
 - **exothermic process** and **endothermic process**
 	- [[Thermochemistry#Enthalpy of reaction|exothermic and endothermic reaction]]
+
+- **pressure–volume diagram** (or **PV diagram**)
+
+## Spontaneous and nonspontaneous  process
+
 - **spontaneous** process
 	- (thermodynamically favorable)
 - **nonspontaneous** process
 	- (thermodynamically unfavorable)
+- every spontaneous process is irreversible
 - [[Thermochemistry|spontaneous and nonspontaneous reaction]]
-- **pressure–volume diagram** (or **PV diagram**)
+
+## Reversible and irreversible process
+
+- **reversible process** (תהליך הפיך) 
+	- "a process whose direction can be reversed by infinitesimal changes in some properties of the surroundings, such as pressure or temperature" (Wikipedia)
+	- **reversible heat**: $q_{\text{rev}}$
+	- see also: [[Chemical equilibrium]]
+- **irreversible process** (תהליך לא-הפיך)
+
+- endoreversibility
 
 
 # Work
@@ -139,6 +150,7 @@
 	- [[Electromagnetic radiation#Thermal radiation|thermal radiation]]
 
 - **thermal equilibrium**
+	-  thermodynamic equilibrium $\implies$ thermal equilibrium
 - [[Thermochemistry#Heating value|heating value]]
 - **calorimetry** (קלורימטריה)
 
@@ -148,27 +160,6 @@
 	- $q = h\Delta T$
 	- $h$ is the **heat transfer coefficient**
 
-
-
-# Temperature
-
-- **temperature**
-	- SI unit: kelvin
-	- For an ideal gas, $\overline{\text{KE}}=\frac{3}{2}k_B T$
-- **scale of temperature**:
-	- absolute scales:
-		- **Kelvin scale**
-			- unit: **kelvin** ($\mathrm{K}$) – defined by fixing the [[Gas laws#Ideal gas law|Boltzmann constant]]
-		- **Rankine scale**
-			- unit: **degree Rankine** ($^\circ\mathrm{R}$) – unit equal to $1^\circ\mathrm{F}$ increment.
-	- relative scales
-		- **Celsius scale**: $T_{^\circ\mathrm{C}}=T_{\mathrm{K}}-273.15$ 
-			- unit: **degree Celsius** ($^\circ\mathrm{C}$) – unit equal to $1\,\mathrm{K}$ increment.
-				- (sometimes $\mathrm{C}^\circ$ is used for temperature interval)
-		- **Fahrenheit scale**: $T_{^\circ\mathrm{F}}=\frac{9}{5}T_{^\circ\mathrm{C}}+32$
-			- unit: **degree Fahrenheit** ($^\circ\mathrm{F}$) – unit equal to $\frac{5}{9}^\circ\mathrm{C}$ (or $\frac{5}{9}\,\mathrm{K}$) increment
-- **thermodynamic temperature** (or **absolute temperature**) (טמפרטורה מוחלטת) – temperature that is measured on an absolute scale 
-	- **absolute zero** (האפס המוחלט)
 
 # Potentials
 
@@ -233,30 +224,49 @@
 
 ## Gibbs free energy
 
+given constant $T$ and $P$:
+
 - **Gibbs free energy** (or **Gibbs energy**)
 - $G=U+PV-TS$
 	- $T$ is the thermodynamic temperature
 - $\Delta G=\Delta H-T\Delta S$
 	- the enthalpy contribution is favorable when $\Delta H < 0$
 	- the entropy contribution is favorable when $\Delta S > 0$
-- $\Delta H < 0 \land \Delta S > 0\implies \Delta G<0\implies$spontaneous
-- $\Delta H > 0 \land \Delta S < 0\implies \Delta G>0\implies$ nonspontaneous
-- $\Delta H < 0 \land \Delta S < 0$
-	- spontaneous only when $T < \frac{\Delta H}{\Delta S}$
-- $\Delta H> 0 \land \Delta S > 0$
-	- spontaneous only when $T > \frac{\Delta H}{\Delta S}$
-- $\Delta G = 0\implies$ 
-	- equilibrium
-	- $\displaystyle T=\frac{\Delta H}{\Delta S}$
+- $\Delta H < 0 \land \Delta S > 0\implies \Delta G<0$
+- $\Delta H > 0 \land \Delta S < 0\implies \Delta G>0$
+- $\Delta H < 0 \land \Delta S < 0 \implies \left( T < \frac{\Delta H}{\Delta S} \iff \Delta G<0 \right)$
+- $\Delta H > 0 \land \Delta S > 0 \implies \left( T > \frac{\Delta H}{\Delta S} \iff \Delta G<0 \right)$
+- $\Delta G = 0\iff T=\frac{\Delta H}{\Delta S}\iff$ equilibrium
+- $\Delta G<0 \iff$ spontaneous
+- $\Delta G>0 \iff$ non-spontaneous 
 - exergonic and endergonic
 
 
 # Entropy
 
 - **entropy** ($S$)
-- $\Delta S= \frac{Q}{T}$ 
-- $\Delta S = \int \frac{dq_{\text{rev}}}{T}$
 
+
+- $\Delta S$ refers to the entropy of the system ($\Delta S_{\text{sys}}$)
+
+- entropy change:
+	- $\displaystyle \Delta S = \int \frac{dq_{\text{rev}}}{T}$
+		- $\displaystyle\Delta S= \frac{q_{\text{rev}}}{T}$
+			- **entropy of fusion**: $\displaystyle\Delta S_{\text{fusion}}= \frac{\Delta H_{\text{fusion}}}{T}$
+	- $\Delta S_{\text{univ}} = \Delta S_{\text{sys}} + \Delta S_{\text{surr}}$
+	- For an ideal gas undergoing an isothermal process:
+		- $\Delta S = nR \ln \frac{V_2}{V_1}$
+
+- irreversible process: $\Delta S_{\text{univ}} > 0$
+- reversible process: $\Delta S_{\text{univ}} = 0$
+- isolated system: $\Delta S_{\text{surr}} = 0$
+- non-isolated system: $\Delta S_{\text{surr}} \neq 0$
+
+- for a process $A$:
+	- $\Delta S_{\text{univ},A} > 0 \iff$ process $A$ is spontaneous
+	- $\Delta S_{\text{univ},A} = 0 \iff$ system is at equilibrium
+	- $\Delta S_{\text{univ},A} < 0 \iff$ process $A$ is non-spontaneous
+		- there must be a process $B$ coupled to $A$ s.t. $\Delta S_{\text{univ}}=\Delta S_{\text{univ},A}+\Delta S_{\text{univ},B}>0$
 
 
 # Properties of materials

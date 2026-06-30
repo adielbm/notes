@@ -17,14 +17,14 @@
 - **carbohydrate** (פחמימה, פחמימות)
 	- **sugars** (סוכרים)
 		- **monosaccharides** (or **simple sugars**) (חד-סוכרים, סוכרים פשוטים)
-			- **glucose** (**Glc**) (גלוקוז, גלוקוזה, דקסטרוז, סוכר ענבים)
+			- **glucose** (**Glc**) (גְּלוּקוֹז, גלוקוזה, דֶּקְסְטְרוֹז, סוכר ענבים)
 			- **galactose** (גָלַקְטוֹז)
-			- **fructose** (פֿרוקטוז, סוכר פירות)
+			- **fructose** (פְרוּקְטוֹז, סוכר פירות)
 			- **xylose**
 		- **disaccharides** (or **double sugar**, **biose**) (דו-סוכרים)
-			- **sucrose** (סוכרוז)
+			- **sucrose** (סוּכְּרוֹז)
 			- **lactose** (לַקְטוֹז, סוכר חלב)
-			- **maltose** (or **maltobiose**, **malt sugar**) (מלטוז, סוכר לתת)
+			- **maltose** (or **maltobiose**, **malt sugar**) (מלטוז, סֻכַּר לֶתֶת)
 			- **isomaltulose**
 			- **trehalose**
 		- **polyols**
@@ -38,8 +38,8 @@
 			- **amylose**
 			- **amylopectin**
 		- non-starch polysaccharides
-			- **glycogen**
-			- **cellulose** (תאית)
+			- **glycogen** (גְּלִיקוֹגֵן)
+			- **cellulose** (תָּאִית, צֵלוּלוֹזָה)
 			- **hemicellulose**
 			- **pectins** 
 			- **hydrocolloids**

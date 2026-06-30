@@ -1,0 +1,2 @@
+- [[Thermodynamics#Gibbs free energy|Gibbs free energy]]
+- [[Thermodynamics#Thermodynamic processes|spontaneous and nonspontaneous reaction]]

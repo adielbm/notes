@@ -484,5 +484,29 @@
       ]
     },
     "publisher": "Pearson Education, Limited"
+  },
+  {
+    "id": "Atkins, 2014",
+    "type": "book",
+    "ISBN": "9781429290197",
+    "title": "Physical Chemistry",
+    "author": [
+      {
+        "family": "Atkins",
+        "given": "Peter W."
+      },
+      {
+        "family": "Paula",
+        "given": "Julio de"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    },
+    "publisher": "W. H. Freeman"
   }
 ]

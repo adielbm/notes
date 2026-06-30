@@ -5,9 +5,7 @@
 			- [[Thermodynamics|first law of thermodynamics]]
 			- [[Thermodynamics|second law of thermodynamics]]
 			- [[Thermodynamics#Heat|heat]]: $Q = mc\Delta T$
-		- **chemical thermodynamics**
-			- [[Thermodynamics#Gibbs free energy|Gibbs free energy]]
-			- _spontaneous_ and _nonspontaneous_ reaction
+		- [[chemical thermodynamics]]
 - in this page, the [[Thermodynamics#Sign conventions|IUPAC convention of work]] is used
 
 # Internal energy
@@ -71,9 +69,9 @@ see [[Solutions]]
 - **enthalpy of sublimation** (or **(latent) heat of sublimation**)
 - **enthalpy of vaporization** (or **(latent) heat of vaporization**)
 
-## Lattice energy
+## Lattice enthalpy
 
-- $\Delta U_{\text{lattice}}=\Delta H_{\text{lattice}}-P\Delta V_{m}$
+- $\Delta H_{\text{lattice}}=\Delta U_{\text{lattice}}+P\Delta V_{m}$
 	- $\Delta V_{m}$ is the change of [[Mole#Molar volume|molar volume]] due to the formation of the lattice
 	- (notice: [[Thermodynamics#Sign conventions|IUPAC convention]] is used)
 - **lattice energy** ($\Delta U_{\text{lattice}}$)

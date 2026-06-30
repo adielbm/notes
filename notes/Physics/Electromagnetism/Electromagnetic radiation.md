@@ -43,7 +43,7 @@
 	- $b$ is the **Wien's displacement constant**
 - **Stefan–Boltzmann law**
 	- $E = \sigma T^4$ is the [[#Radiometry|radiant exitance]]
-	- $T$ is the [[Thermodynamics#Temperature|absolute temperature]] of the black body
+	- $T$ is the [[Temperature|absolute temperature]] of the black body
 	- $\sigma$ is the Stefan–Boltzmann constant
 - **Planck's law**
 

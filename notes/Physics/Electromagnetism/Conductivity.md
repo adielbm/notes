@@ -2,3 +2,8 @@
 	- $\rho=\frac{E}{J}$ where $E$ is the electric field (in $\mathrm{V/m}$) and $J$ is the current density (in $\mathrm{A/m^2}$)
 	- $\rho(T)=\rho_0[1+\alpha(T-T_0)]$
 - The reciprocal of the resistivity, called the **electrical conductivity** (or **specific conductance** (מוליכות סגולית)) is $\sigma=\frac{1}{\rho}$ (in $\mathrm{S/m}$, siemens per meter, or $\mathrm{(\Omega\cdot m)^{-1}}$)
+	- factors:
+		- metals and ionic compound are good conductors, while molecular compound are poor ones
+		- strong electrolytes → high conductivity, weak electrolytes → low conductivity
+		- temperature
+		- 
