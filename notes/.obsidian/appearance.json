@@ -4,7 +4,8 @@
   "enabledCssSnippets": [
     "style",
     "custom1",
-    "print"
+    "print",
+    "print-two-col"
   ],
   "showRibbon": false,
   "baseFontSize": 16,
