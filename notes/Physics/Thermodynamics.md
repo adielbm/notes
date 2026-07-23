@@ -224,22 +224,24 @@
 
 ## Gibbs free energy
 
-given constant $T$ and $P$:
 
 - **Gibbs free energy** (or **Gibbs energy**)
 - $G=U+PV-TS$
 	- $T$ is the thermodynamic temperature
-- $\Delta G=\Delta H-T\Delta S$
-	- the enthalpy contribution is favorable when $\Delta H < 0$
-	- the entropy contribution is favorable when $\Delta S > 0$
-- $\Delta H < 0 \land \Delta S > 0\implies \Delta G<0$
-- $\Delta H > 0 \land \Delta S < 0\implies \Delta G>0$
-- $\Delta H < 0 \land \Delta S < 0 \implies \left( T < \frac{\Delta H}{\Delta S} \iff \Delta G<0 \right)$
-- $\Delta H > 0 \land \Delta S > 0 \implies \left( T > \frac{\Delta H}{\Delta S} \iff \Delta G<0 \right)$
-- $\Delta G = 0\iff T=\frac{\Delta H}{\Delta S}\iff$ equilibrium
-- $\Delta G<0 \iff$ spontaneous
-- $\Delta G>0 \iff$ non-spontaneous 
-- exergonic and endergonic
+- $\Delta G<0 \iff$ **exergonic**
+- $\Delta G>0 \iff$ **endergonic** 
+- Given constant $T$ and $P$:
+	- $\Delta G=\Delta H-T\Delta S$
+		- the enthalpy contribution is favorable when $\Delta H < 0$
+		- the entropy contribution is favorable when $\Delta S > 0$
+	- $\Delta H < 0 \land \Delta S > 0\implies \Delta G<0$
+	- $\Delta H > 0 \land \Delta S < 0\implies \Delta G>0$
+	- $\Delta H < 0 \land \Delta S < 0 \implies \left( T < \frac{\Delta H}{\Delta S} \iff \Delta G<0 \right)$
+	- $\Delta H > 0 \land \Delta S > 0 \implies \left( T > \frac{\Delta H}{\Delta S} \iff \Delta G<0 \right)$
+	- $\Delta G = 0\iff T=\frac{\Delta H}{\Delta S}\iff$ equilibrium
+	- $\Delta G<0 \iff$ spontaneous
+	- $\Delta G>0 \iff$ non-spontaneous 
+- 
 
 
 # Entropy

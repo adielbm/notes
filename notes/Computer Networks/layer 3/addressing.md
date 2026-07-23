@@ -36,7 +36,7 @@
 - **Address Resolution Protocol** (**ARP**)
 	- "used to translate high-level protocol addresses into physical hardware addresses" [@Peterson, 2020]
 	- _ARP cache_ (or _ARP table_)
-
+	- **ARP spoofing**
 
 #### DHCP
 

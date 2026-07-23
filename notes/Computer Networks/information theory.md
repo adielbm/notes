@@ -26,7 +26,9 @@
 	- $H(X) \geq 0$
 	- $H(X)\leq \log n$, with equality if and only if $X$ is uniformly distributed over $\mathcal{X}$
 	- $H(X, Y) = H(X) + H(Y)$ 
-
+- watch 3Blue1Brown:
+	- [Reinventing Entropy | Compression is Intelligence Part 1](https://www.youtube.com/watch?v=l6DKRf-fAAM)
+	- [But what is cross-entropy? | Compression is Intelligence Part 2](https://youtu.be/GlYgs6v2YfU)
 
 - (examples)
 	- (deterministic variable) Let $\displaystyle p(x_0)=1$ for some $x_0 \in \mathcal{X}$, then $H(X)=0$

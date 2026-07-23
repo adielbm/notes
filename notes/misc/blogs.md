@@ -1,5 +1,6 @@
 
 - how **JPEG** compression works? https://www.sophielwang.com/blog/jpeg
+	- [How PNG Works: Compromising Speed for Quality](https://www.youtube.com/watch?v=EFUYNoFRHQI)
 - https://www.makingsoftware.com/
 - https://razunitem.wordpress.com/
 

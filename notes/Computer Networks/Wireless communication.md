@@ -129,6 +129,13 @@
 - **Wi-Fi Direct**
 - **hotspot**
 
+#### security
+
+- **Wired Equivalent Privacy** (**WEP**)
+- **Wi-Fi Protected Access** (**WAP**, **WAP2**, and **WAP3**)
+	- **WPA-Personal** (**WPA-PSK**, pre-shared key)
+
+
 ## cellular network
 
 

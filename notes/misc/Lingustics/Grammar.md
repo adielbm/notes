@@ -18,7 +18,6 @@
 - (אפשר להחליף `verb-ing` בתואר `adjective`)
 
 
-
 # Verbs (פעלים)
 
 ### Regular verbs `-ed`

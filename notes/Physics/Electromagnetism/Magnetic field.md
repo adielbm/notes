@@ -11,6 +11,7 @@ $$\vec{\boldsymbol{H}}=\frac{1}{\mu_0}\vec{\boldsymbol{B}} - \vec{\boldsymbol{M}
 - $\mu_0$ is the permeability of free space 
 - $\vec{\boldsymbol{M}}$ is the magnetization of the material
 - **permeability**
+	- **relative permeability**: $\mu _{\mathrm {r} }={\frac {\mu }{\mu _{0}}}$
 
 
 # Magnetic flux
