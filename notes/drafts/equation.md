@@ -10,7 +10,7 @@ How to define an equation? is _equation_ a statement that connects two expressio
 
 this is based on https://math.stackexchange.com/a/2739033/1043399
 
-- An **equation** is a predicate $P(x): U \to \{\text{true}, \text{false}\}$ of the form $s(x) = t(x)$ where $x$ is a [[Logic/Predicate Logic/Syntax#Free & Bound Variables|free variable]] (or vector of free variables $x=(x_1, x_2, \dots,x_n)$) and $s(x), t(x)$ are [[Logic/Predicate Logic/Syntax#Terms|terms]] which evaluate to objects of the universe $U$ when other objects are substituted for variables.
+- An **equation** is a predicate $P(x): U \to \{\text{true}, \text{false}\}$ of the form $s(x) = t(x)$ where $x$ is a [[Math/Logic/Predicate Logic/Syntax#Free & Bound Variables|free variable]] (or vector of free variables $x=(x_1, x_2, \dots,x_n)$) and $s(x), t(x)$ are [[Math/Logic/Predicate Logic/Syntax#Terms|terms]] which evaluate to objects of the universe $U$ when other objects are substituted for variables.
 	- To **solve** an equation is to determine the **solution set** $P^{-1}(\text{true})=\{c \in U : P(c) = \text{true}\}$, the set of all elements of the universe for which the equation is true.
 	- An equation is **inconsistent** if $P^{-1}(\text{true}) = \emptyset$.
 	- An equation is **conditional** if $P^{-1}(\text{true}) \neq U$.

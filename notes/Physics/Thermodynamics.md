@@ -53,7 +53,7 @@
 		- pressure ($P$)
 			- $P = f(V, T, n) = \frac{nRT}{V}$
 		- temperature ($T$)
-	- (The [[differential]] $dX$ (of a state function $X$) is an **exact differential**)
+	- (The [[Differential]] $dX$ (of a state function $X$) is an **exact differential**)
 		- exact differential describes a change in a state function
 		- $\oint dX = 0$ (or equivalently $\int^{X_{2}}_{X_{1}} \, dX=X_{2}-X_{1}$)
 - **path function** (or **process function**)
