@@ -1,24 +1,41 @@
 
+# Fields
 
 - **defensive programming**
 - **computer security** (or **cybersecurity**)
 - **Information security** (or **infosec**)
-	- **CIA triad**
-		- **confidentiality**
-		- **integrity**
-		- **availability**
-	- **authentication**
-	- **non-repudiation**
+- **internet security**
+- [[cryptography]]
 
+# Properties and goals
 
+- **CIA triad** 
+	- **confidentiality** (חיסיון, סודיות)
+	- **integrity** (כלילות, שלמות)
+	- **availability** (זמינות)
+- **authentication** (אימות)
+- **authorization** (הרשאה)
+- **non-repudiation** (אי-התכחשות)
+- security (אבטחה)
+- reliability (אמינות)
+- privacy (פרטיות)
+- secrecy (סודיות)
+- anonymity 
+- validation (תיקוף)
+- verification (אימות)
+- sanitization (סניטציה)
+
+# misc. 
 
 - **security policy** (מדיניות אבטחה)
+- **business logic** (or **domain logic**)
 - **code audit**
 - white-box testing
 - black-box testing
-
 - **input validation** (or **data validation**)
+- **security through obscurity**
 
+# Threats
 
 - **threat** (איום)
 - **vulnerability** (פְּגִיעוּת, חולשת אבטחה, פרצת אבטחה)
@@ -26,26 +43,23 @@
 	- implementation vulnerability
 	- operational vulnerability
 - **exploit** (or *exploiting*) (נָצְלָה, ניצול חולשה)
+- computer hacking
+- **[[#cyberattacks|cyberattack]]**
+- binary exploitation
+	- **pwn** –  "An exploit in computer security, especially relating to machine code." (Wiktionary)
+- information leakage
 - **bug** (תֶּקֶל, באג)
 - **mitigation** (אִפְחוּת)
-- security
-- reliability (אמינות)
-- privacy
+- **malware** (**malicious software**)
+	- **computer virus**
+	- **computer worm**
+	- **spyware** (**spying software**) (רוגלה)
+	- **trojan horse** (or **trojan**)
 
+## Cyberattacks
 
-- **business logic** (or **domain logic**)
+### memory vulnerabilities
 
-
-- **cyberattack**
-	- **spoofing attack** (התחזות) (threat to confidentiality) 
-	- **eavesdropping** (threat to confidentiality)
-	- **denial-of-service attack** (**DoS attack**) (threat to availability)
-		- **SYN flood**
-			- **SYN cookie**
-		- **distributed denial-of-service attack** (**DDoS attack**)
-	- **man-in-the-middle (MITM) attack** (threat to both confidentiality and integrity)
-	- **session hijacking** (or **cookie hijacking**)
-	- **sniffing attack**
 - **buffer overflow** (גלישת חוצץ)
 	- types:
 		- **stack buffer overflow** (or **stack buffer overrun**)
@@ -59,22 +73,28 @@
 		- **return-to-libc**
 - see also:
 	- [[addressing#ARP|ARP spoofing]]
-
-
-
 - use-after-free (UAF)
-- binary exploitation
-- pwn
+- double free
+- time of check time of use (TOCTOU)
+- **control-flow integrity** (**CFI**)
 
----
+- code injection
+- **SQL injection** (**SQLi**)
+- **cross-site scripting** (**XSS**)
+### network and communication vulnerabilities
 
+- **spoofing attack** (התחזות)
+	- threat to: confidentiality 
+- **eavesdropping** (ציתות, האזנת סתר)
+	- **sniffing attack**
+	- threat to: confidentiality
+- **denial-of-service attack** (**DoS attack**)
+	- threat to: availability
+	- **SYN flood**
+		- **SYN cookie**
+	- **distributed denial-of-service attack** (**DDoS attack**)
+- **man-in-the-middle (MITM) attack**
+	- threat to: confidentiality and integrity
+- **session hijacking** (or **cookie hijacking**)
+	- threat to: confidentiality and integrity
 
-- **cryptographic protocol**
-- **Transport Layer Security** (**TLS**)
-- **certificate authority** (or **certification authority**) (**CA**) (רשות אישורים, רשות אישור)
-- **public-key certificate** (or **digital certificate** or **identity certificate**)
-	- **X.509**
-	- **domain validated certificate** (**DV**)
-- **public key infrastructure** (**PKI**)
-- **registration authority** (RA)
-- **validation authority** (VA)

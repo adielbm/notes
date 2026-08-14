@@ -103,7 +103,7 @@ memory segments (from low to high addresses) for a given process:
 		- memory leaks
 		- dangling pointers
 	- Java: uses automatic memory allocation and garbage collection
-- The **call stack** (or **execution stack** or the **stack**) (מחסנית קריאות) ![200](https://upload.wikimedia.org/wikipedia/commons/a/ac/ProgramCallStack2_en.svg)
+- The **call stack** (or **execution stack** or the **stack**) (מחסנית קריאות) ![250](https://upload.wikimedia.org/wikipedia/commons/a/ac/ProgramCallStack2_en.svg)
 	- bases on [[Abstract Data Types#Stack|stack]] ADT
 	- risk: **stack overflow**
 	- **stack frame** (or **activation record**, **procedure frame**) of a function. (allocated at runtime and is automatically deallocated when the function exits). contain:
