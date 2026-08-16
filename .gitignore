@@ -26,3 +26,6 @@ textbook
 study guide
 Untitled*
 Clippings
+/notes/*.md
+!/notes/index.md
+/notes/.obsidian/app.json
