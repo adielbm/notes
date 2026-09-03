@@ -78,6 +78,7 @@
 - time of check time of use (TOCTOU)
 - **control-flow integrity** (**CFI**)
 
+- heap spraying
 - code injection
 - **SQL injection** (**SQLi**)
 - **cross-site scripting** (**XSS**)

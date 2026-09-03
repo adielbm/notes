@@ -57,7 +57,8 @@
 	- **infrared** (**IR**) (or **infrared light**)
 	- [[Wireless communication|microwave]]
 	- [[Wireless communication|radio wave]]
-
+- **visible spectrum**
+- **optical spectrum**
 - **optical radiation**
 
 ## Visible light
