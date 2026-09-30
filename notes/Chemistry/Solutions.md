@@ -21,7 +21,8 @@
 			- $\Delta H_{\text{solvent}}$: energy required to create spaces between solvent molecules (endothermic, positive)
 		- **solvation** (מְסִיסָה) – forming solute–solvent attractions
 			- $\Delta H_{\text{solvation}}$: energy released when solute particles interact with solvent molecules (exothermic, negative)
-			- **hydration** (הִידְרַצְיָה, מִיּוּם)
+			- _hydration_ (הִידְרַצְיָה, מִיּוּם)
+				- (don't confuse with: _hydration reaction_)
 
 
 - $\displaystyle\ce{solute + solvent <=>[\text{dissolve}][\text{crystallize}] solution}$

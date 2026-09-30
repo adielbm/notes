@@ -1,44 +1,33 @@
 
-# Biodiversity
 
-- **biodiversity** (מגוון ביולוגי)
-- **phenotypic trait** (or **trait** or **character state**) 
-- **binomial nomenclature**
-	- **binomial name** (or **scientific name**) (שם מדעי)
-- **taxonomy** (טקסונומיה, מיון עולם הטבע)
-- **taxon** (pl.: **taxa**) (טַקסוֹן, יחידת מיון)
-	- **domain** (or **dominion**) (על־ממלכה)
-	- **kingdom** (ממלכה)
-	- **phylum** (pl.: **phyla**) (מערכה)
-	- **order** (סדרה)
-	- **family** (pl.: **familiae**) (משפחה)
-	- **genus** (pl.: **genera**) (סוג)
-	- **species** (מין)
+- **cellular differentiation** (התמיינות תאים)
 
-- **specific name** (or **specific epithet**) (כינוי ספציפי)
+# Cell cycle
 
-- **archaea** (sing.: **archaeon**) (אַרְכֵאוֹנִים, חיידקים קדמונים)
-- **bacteria** (חַיידקים, חיידקים אמיתיים)
-	- sing. [_bacterium_](https://en.wiktionary.org/wiki/bacterium#Usage_notes)
-- **eukaryotes** (**Eukaryota**, **Eukarya**) (אֵיקַרְיוֹטִים, בעלי גרעין)
-	- single-celled or multicellular
-	- **protist** (or **protoctist**) (פְּרוֹטִיסְטִים)
+- **cell cycle** (or **cell-division cycle**)
 
-- **prokaryote** (פרוקריוטים, חסרי גרעין)
-	- single-celled
-	- either archaea or bacteria
+- **spindle apparatus** (כישור החלוקה)
+	- **mitotic spindle**
+	- **meiotic spindle**
 
-# Biochemistry
+- eukaryotic phases
+	- gap 0 (G₀)
+	- interphase
+		- gap 1 (G₁)
+		- synthesis (S)
+		- gap 2 (G₂)
+	- cell division
+		- mitosis (M) (חלוקת גרעין התא)
+			- prophase (שלב תחילי)
+			- metaphase (שלב אמצעי)
+			- anaphase (שלב קיטוב)
+			- telophase (שלב סופי)
+	- cytokinesis (חלוקת הציטופלזמה)
+		- cleavage furrow (חריץ התלמה)
+		- cell plate (לוחית תא) 
 
-
-- **biochemistry** (or **biological chemistry**)
-	- **enzyme** (אֶנְזִים, תַּסָּס)
-		- **active site** (אתר פעיל)
-		- **substrate** (מוּסָב, מַצָּע, סוּבְּסְטְרָט)
-		- **induced-fit model**
-		- "Lock and key" model
-
-# Cell biology
+- **cell cycle checkpoints**
+	- **spindle checkpoint**
 
 ## types of cells
 
@@ -52,11 +41,7 @@
 	- bacterial cells
 	- archea cell
 
-
-
-
 ## anatomy
-
 
 - **organelle** (אֶבְרוֹן)
 
@@ -77,12 +62,13 @@
 	- **middle lamella**
 - **cytoplasm** (פלזמת התא, צִיטוֹפְּלַזְמָה)
 	- plasmid 
+- **cytosol** (or **cytoplasmic matrix**)
 
-- **chromatin**
-	- **chromosome** (כְרוֹמוֹזוֹם)
+
 
 - biofilm (קרום ביולוגי)
-- ribosome
+- [[Genetics#Gene expression|ribosome]]
+
 
 
 - **flagella** (pl.: **flagellum**) (שׁוֹטוֹן)
@@ -103,6 +89,7 @@
 - **endoplasmic reticulum** (**ER**) (רשתית תוך-פלזמית)
 - **chloroplast** (כְּלוֹרוֹפְּלַסְט, פְּלַסְטִידָה יְרֻקָּה)
 - **mitochondrion** (pl. **mitochondria**)
+	- "_powerhouse of the cell_"
 - **plastid** (פלסטידה)
 - **basal body** (גופיף בסיסי)
 - **motor protein**
@@ -134,16 +121,7 @@
 - **metabolism** (חילוף חומרים)
 - **metabolic pathway** (מסלול מטבולי)
 
-- **phosphate** $\ce{PO4^{3−}}$
-	- **inorganic phosphate** $\ce{P}_{i}$
-- **ATP** (**Adenosine triphosphate**)
-	- $\ce{C_{10}H_{16}N_{5}O_{13}P_{3}}$
-- **Nicotinamide adenine dinucleotide phosphate** 
-	- **NADP+**
-	- **NADPH** 
-- **ADP** (**Adenosine diphosphate**)
-- **ribose** (ריבּוֹז)
-- **pyruvate**
+
 
 ### Photosynthesis
 
@@ -181,7 +159,33 @@
 - **cellular respiration** (נשימה תאית)
 - **anaerobic respiration** (נשימה אל-אווירנית)
 - **aerobic respiration** (נשימה אווירנית)
+	- stages:
+		- (1) glycolysis
+		- pyruvate decarboxylation
+		- (2) Krebs cycle
+		- (3) oxidative phosphorylation
 	- $\ce{C6H12O6 + 6O2 -> 6CO2 + 6H2O + ATP}$
 - **glycolysis** (גְּלִיקוֹלִיזָה)
+
+	- $\ce{C6H12O6 + 2 NAD+ + 2 ADP + 2 Pi -> 2 C3H4O3 + 2 NADH + 2 H+ + 2 ATP + 2 H2O}$
+
+
+
+- **pyruvate decarboxylation**
+- **substrate-level phosphorylation** (זרחון ברמת סובסטרט)
+- **Krebs cycle** (or **citric acid cycle**)
+
+- **oxidative phosphorylation** (or **electron transport-linked phosphorylation**) (זרחון חמצוני, זרחון צמוד להעברת אלקטרונים)
+	- **electron transport chain** (ETC)
+	- **chemiosmosis**
+
+
+
+- **fermentation** (תסיסה)
+	- **lactic acid fermentation**
+		- homolactic fermentation
+		- hetrolactic fermentation
+	- **ethanol fermentation** (or **alcoholic fermentation**)
+
 
 

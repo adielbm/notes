@@ -117,7 +117,7 @@
 - **registration authority** (RA)
 - **validation authority** (VA)
 - **certificate authority** (or **certification authority**) (**CA**) (רשות אישורים, רשות אישור)
-- **public-key certificate** (or **digital certificate** or **identity certificate**) – binds a public key to an identity
+- **public-key certificate** (or **digital certificate** or **identity certificate**) – "an electronic document used to prove the valid attribution of a public key to the identity of its holder" (Wikipedia)
 	- **X.509**
 	- **domain validated certificate** (**DV**)
 - **certificate signing request** (**CSR** or **certification request**) – "a message sent from an applicant to a CA of the PKI in order to apply for a digital certificate"

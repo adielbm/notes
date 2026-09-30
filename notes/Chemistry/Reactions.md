@@ -35,7 +35,10 @@
 	- [[Redox#Combustion|combustion]]
 - [[precipitation]]
 - [[Organic chemistry|condensation reaction]] (תגובת דחיסה, קוֹנדֶנסָציה)
-- **hydrolysis** (הידרוליזה, תהליך הידרוליטי, הִדְרוּל)
+- **hydrolysis** (הידרוליזה, תהליך הידרוליטי, הִדְרוּל) – "A chemical reaction that breaks bonds between two molecules by the addition of water; functions in disassembly of polymers to monomers." [@Campbell, 2020]
+- hydration
+- **hydration reaction**
+- **dehydration reaction**
 
 # Stoichiometry
 

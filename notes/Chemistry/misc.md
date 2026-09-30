@@ -21,13 +21,14 @@
 	- **mineral oil** (שמן תעשייתי)
 	- **motor oil** (or **engine oil**, or **engine lubricant**) (שמן מנוע)
 	- **cooking oil** (or **edible oil**) (שמן בישול, שמן מאכל)
-
+	- **vegetable oils** (or **vegetable fats**) (שמנים מן הצומח)
+	- **essential oil** (שמן אֶתֶרִי)
 
 # fossil fuel
 
 - **fuel** (דלק)
 - **fossil fuel** (דלק מאובנים, דלק מאובן)
-	- **coal** (פֶּחָם או פחם אבן)
+	- **coal** (פֶּחָם, פחם אבן)
 	- **petroleum** (or **crude oil**) (נפט)
 		- extracted from **oil field** (שדה נפט, שדה קידוח)
 		- drilled by **oil platform**, (or **oil rig**, **offshore platform**, or **oil production platform**) (אסדת קידוח)

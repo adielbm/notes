@@ -508,5 +508,25 @@
       ]
     },
     "publisher": "W. H. Freeman"
+  },
+  {
+    "id": "Campbell, 2020",
+    "type": "book",
+    "ISBN": "0135188741",
+    "title": "Campbell Biology",
+    "author": [
+      {
+        "family": "Campbell",
+        "given": "Neil Allison"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "publisher": "Pearson Education"
   }
 ]
