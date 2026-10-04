@@ -1,7 +1,33 @@
+
+- The **central dogma of molecular biology**
+- **genetic material** (חומר תורשתי)
+- **genetic variation** (שׁוֹנוּת גֵּנֵטִית)
+	- [[#Mutations]]
+	- [[#Reproduction|genetic recombination]]
+
+# Realted branches 
+
+- molecular genetics
+- [[#genomics]] (גֵּנוֹמִיקָה)
+- **molecular biology**
+- **bioinformatics**
+- **biotechnology**
+- **computational biology**
+- **structural biology**
+- [[#genetic engineering]]
+- cytogenetics
+
+# DNA
+
 - [[Organic chemistry#Nucleic acids|nucleic acids]]
 - **DNA sequence**
-	- see also: **DNA sequencing**
+- **DNA sequencing**
+	- methods:
+		- **Sanger sequencing**
+- **nucleic acid hybridization**
 
+
+## DNA replication
 
 - **DNA replication** (שכפול)
 	- models:
@@ -11,12 +37,11 @@
 	- enzymes:
 		- **DNA ligase**
 		- **DNA polymerase**
+- **DNA repair**
+- **natural DNA damage**
+- **mutagen** (מְתַשְׁנֵת)
 
-
-- The **central dogma of molecular biology**
-
-- **genetic material** (חומר תורשתי)
-
+## non-coding DNA
 
 - **non-coding DNA** (**ncDNA**)
 	- cf. **junk DNA** (**non-functional DNA**)
@@ -25,22 +50,24 @@
 		- RNA genes – from which a functional **non-coding RNA (ncRNA)** (e.g.  tRNA, rRNA, miRNA, snRNA) is transcribed
 		- introns
 		- untranslated regions
+
+# Genes
+
+
 - **gene**
 	- protein-coding gene
 	- **regulator gene** (or **regulatory gene**)
 		- **homeotic genes**
 		- cf. _master regulator gene_
 	- **pseudogenes**
-
 - **allele** (אָלֵל)
 - **locus** (pl.: **loci**) – "a specific, fixed position on a chromosome where a particular gene or genetic marker is located" (Wikipedia)
-
-
 - **genome** (גֵּנוֹם, מִכְלוֹל הַגֵּנִים)
-
 - **genotype** (מערך גנטי)
 - **phenotype** (מערך חזותי)
 	- **phenotypic trait** 
+
+# Gene expression
 
 - **gene expression** (התבטאות גנים)
 
@@ -70,6 +97,8 @@
 			- P site (peptidyl site)
 			- E site (exit site)
 
+# Gene regulation
+
 - **gene regulation** (or **regulation of gene expression**)
 	- **epigenetics**
 		- **DNA methylation** (מִתּוּל)
@@ -88,17 +117,9 @@
 	- **post-transcriptional regulation**
 	- **translational regulation**
 	- **post-translational modifications** (PTMs)
-
-
-
-- **gene knockout** (הַשְׁבָּתַת גֵּנִים)
-
 - **X-inactivation** (or **Lyonization**)
 
-
-
-
--  **genetic variation** (שׁוֹנוּת גֵּנֵטִית)
+# Gene mutations
 
 - **mutation** (מוּטַצְיָה, תַּשְׁנִית)
 	- mechanisms:
@@ -115,18 +136,13 @@
 			- **silent mutation** (מוטציה שקטה)
 			- **frameshift mutation** (הסטת מסגרת)
 	
-	- **transposable element** (TE)
 	
+	- **transposable element** (TE)
 	- **reading frame** (מסגרת קריאה)
 
 
-- **DNA repair**
-- **natural DNA damage**
-- **mutagen** (מְתַשְׁנֵת)
 
-
- 
-- **cytogenetics** (גנטיקת הגרעין)
+# Chromosomes
 
 - **chromosome** (כְרוֹמוֹזוֹם)
 	- types:
@@ -136,7 +152,7 @@
 			- **Y chromosome**
 			- see also: **biological sex** (or **sex**) (זוויג, מין)
 			- dosage compensation
-	- parts:
+	- structure:
 		- **centromere** (צֶנְטְרוֹמֵר)
 		- **telomere** (טֵלוֹמֵר)
 			- see also: **telomerase** (or **terminal transferase**)
@@ -149,35 +165,161 @@
 					- histone tails
 		- **p-arm** (short)
 		- **q-arm** (long)
+		- **sister chromatid**
 
+- **karyotype**
+- **homologous chromosomes** (or **homologous pair**, **homologs**) (שווה מוצא) – "A pair of chromosomes of the same length, centromere position, and staining pattern that possess genes for the same characters at corresponding loci" [@Campbell, 2020]
+
+- **DNA content**
+
+- **cytogenetics** (גנטיקת הגרעין)
 
 - **dominant allele** – "An allele that is fully expressed in the phenotype of a heterozygote" [@Campbell, 2020]
 - **recessive allele** – "An allele whose phenotypic effect is not observed in a heterozygote" [@Campbell, 2020]
 - **dominant trait** – a phenotypic trait produced by a genotype containing at least one copy of the corresponding dominant allele
 - **recessive trait** – a phenotypic trait produced by a genotype containing two copies of the corresponding recessive allele
-- **homologous chromosomes** (or **homologous pair**, **homologs**) (שווה מוצא) – "A pair of chromosomes of the same length, centromere position, and staining pattern that possess genes for the same characters at corresponding loci" [@Campbell, 2020]
+- **codominance**
+- **incomplete dominance**
+
+
+
+
+
 
 - **zygosity**
-- **homozygous** (שְׁוֵה אָלֵלִים, הוֹמוֹזִיגוֹט) genotype – having identical alleles at corresponding loci on a pair of homologous chromosomes.
-	- cf. **homozygote**
-- **heterozygous** (שׁוֹנֵה אָלֵלִים, הֵטֵרוֹזִיגוֹט) genotype – having different alleles at corresponding loci on a pair of homologous chromosomes.
-	- cf. **heterozygote**
+	- **homozygous** (שְׁוֵה אָלֵלִים, הוֹמוֹזִיגוֹט) genotype has identical alleles at corresponding loci on a pair of homologous chromosomes.
+		- notation: $AA$ or $aa$
+		- cf. **homozygote**
+	- **heterozygous** (שׁוֹנֵה אָלֵלִים, הֵטֵרוֹזִיגוֹט) genotype has different alleles at corresponding loci on a pair of homologous chromosomes.
+		- notation: $Aa$
+		- cf. **heterozygote**
+
+## Chromosome mutations 
+
+- **chromosome mutation** (or **chromosome aberration**)
+	- structure
+		- **chromosomal inversion** (היפוך כרומוזומלי)
+		- **chromosomal translocation** (התקה כרומוזומלית)
+	- nubmer 
+		- **aneuploidy** ($2n\pm x$ chromosomes)
+			- **monosomy** ($2n-1$)
+			- **dissomy** ($2n$)
+			- **trisomy** ($2n+ 1$)
+		- **euploidy**
+			- see: [[#Ploidy]]
+
+# Mendelian genetics
+
+- **Mendelian inheritance** (or **Mendelism**) (תּוֹרָשָׁה מֶנְדֶלְיָאנִית)
+- **Punnett square** (ריבוע פַּ֫נֶט)
+- **Law of independent assortment** (חוק ההתפלגות הבלתי תלויה)
+- **Law of segregation** (חוק ההיפרדות)
+- **Law of dominance and uniformity**
+- **hybrid** (בֶּן-כִּלְאַיִם, מִכְלוֹאיו)
+	- **monohybrid** 
+	- **dihybrid**
+- **hybridization** (הַכְלָאָה) (Not to be confused with _nucleic acid hybridization_)
+	- **monohybrid cross** (הכלאה מונוהיברידית)
+		- $P:AA \times aa$
+			- $F_1: Aa$
+			- $F_2: 1AA:2Aa:1aa.$
+	- **dihybrid cross**
+		- $P:AABB \times aabb$
+			- $F_1: 100\%\,AaBb$
+		- $F_1:AaBb \times AaBb$
+			- $F_2: 1AABB:2AABb:1AAbb:2AaBB:4AaBb:2Aabb:1aaBB:2aaBb:1aabb$
+
+- **P generation** (**parental generation**)
+- **F₁ generation**
+- **F₂ generation**
+
+- **test cross** (הכלאת מבחן)
+
+
+- **heredity** (or **biological inheritance**) (תּוֹרָשָׁה)
+- **genetic linkage** (תַּאֲחִיזָה בין גנים, תאחיזה גנטית)
+	- **linkage group**
+
+
+
+# extensions of Mendelian genetics
+
+- **epistasis** (מִסּוּךְ גֵּן)
+	- modifier genes
+- **pleiotropy**
+
+
+# Reproduction
+
+- **sexual reproduction** (רְבִיָּה מִינִית)
+- **asexual reproduction** (רְבִיָּה אַל-מִינִית)
+
+- **reproductive cell** (תא רבייה)
+	- **gamete*** (or **sex cell**) (גָּמֵטָה, תא מין, תא זוויג)
+		- **sperm** (pl.: **sperm** or **sperms**) (זרע)
+			- **spermatozoa**
+			- **spermatozoon**
+			- **spermatia**
+		- **egg cell** (or **ovum** (pl.: **ova**)) (בֵּיצִית, תא ביצה)
+	 - **germ cell** (תא תחילי, תא נבט)
+	 - **precursor cell** (or **blast cell**)
+- **somatic cell** (or **vegetal cell**) (תא גוף)
+- **stem cell** (תא גזע)
+
+- **zygote** (בֵּיצָה מֻפְרֵית, זִיגוֹטָה)
+- **fertilization** (הַפְרָיָה)
+	- **allogamy** (or **cross-fertilization**) (הַפְרָיָה הֲדָדִית, זִוּוּג שׁוֹנִים)
+- **meiosis** (חֲלֻקַּת הַפְחָתָה)
+- **chromosomal crossover** (or **crossing over**)
+	- cf. **genetic recombination** (or **genetic reshuffling**)
+- in plants
+	- **gametophyte**
+	- **sporophyte**
+
+
+# Ploidy
 
 - **ploidy** (סִדְרָתִיּוּת)
-	- **haploid number** ($n$) – the number of chromosomes in one haploid chromosome set of an organism
-		- humans: 23
-	- **monoploid number** ($x$) (or **basic chromosome number**) – the number of distinct chromosome types in one basic chromosome set
-		- For a simple diploid organism with no polyploid history: $x=n$
-	- **ploidy level** ($p$ or $k$)
-		- monoploid: 1
-		- diploid: 2
-		- triploid: 3
-	- **chromosome number** $N=px$
-		- **haploid cell** ($N=n$)
-			- human gamete: 23
-		- **diploid cell** ($N=2n$)
-			- human somatic cell: 46
-- **DNA content**
-- **sister chromatid**
-- **karyotype**
+- **haploid number** ($n$) – the number of chromosomes in one haploid chromosome set of an organism
+	- humans: 23
+	- _Triticum aestivum_: 21
+	- _Solanum tuberosum_: 24
+- **monoploid number** ($x$) (or **basic chromosome number**) – the number of distinct chromosome types in one basic chromosome set
+	- humans: 23
+	- _Triticum aestivum_: 7
+	- _Solanum tuberosum_: 12
+- $n/x$ is number of sets in a haploid cell
+	- humans: 1
+	- _Triticum aestivum_: 3
+	- _Solanum tuberosum_: 2
+- **ploidy level** ($p$ or $k$) – the number of basic chromosome sets present in a cell
+	- **monoploid**: 1
+	- **diploid**: 2 (e.g. somatic cell of human)
+	- **triploid**: 3
+	- **tetraploid**: 4 (e.g. somatic cell of _Solanum tuberosum_)
+	- **pentaploid**: 5
+	- **hexaploid**: 6 (e.g. somatic cell of _Triticum aestivum_)
+	- **chromosome number** ($N=px$) – the total number of individual chromosomes in a cell
+		- human:
+			- gamete: 23
+			- somatic cell: 46
+		- _Triticum aestivum_:
+			- gamete: 21
+			- somatic cell: 42
+		- _Solanum tuberosum_:
+			- gamete: 24
+			- somatic: 48
 
+
+# Genomics 
+
+- **Short** **tandem** **repeat** (**STR**) analysis
+	- STR marker
+
+# Genetic engineering
+
+- **genetic engineering** (or **genetic modification**)
+- **genetically modified organism** (**GMO**)
+- **transgene**
+- **recombinant DNA** (**rDNA**)
+- **gene knockout** (הַשְׁבָּתַת גֵּנִים)
