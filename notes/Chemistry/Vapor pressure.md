@@ -26,3 +26,9 @@
 - **dew point**
 - **absolute humidity**
 - **relative humidity** $=\frac{\text{partial pressure of water vapor}}{\text{saturated vapor pressure of water}}$
+
+
+- todo: inequality describes the condition for water vapor to condense on the car windshield
+	- $p_{\ce{H2O}}\geq p_{\mathrm{sat}}(T_{\mathrm{glass}})$
+	- $\displaystyle\frac{p_{\ce{H2O}}}{p_{\mathrm{sat}}(T_{\mathrm{air}})}\geq\frac{p_{\mathrm{sat}}(T_{\mathrm{glass}})}{p_{\mathrm{sat}}(T_{\mathrm{air}})}$
+	- $T_{\mathrm{dew,cabin}}>T_{\mathrm{glass}}$

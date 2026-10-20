@@ -2,10 +2,10 @@
 - The **central dogma of molecular biology**
 - **genetic material** (חומר תורשתי)
 - **genetic variation** (שׁוֹנוּת גֵּנֵטִית)
-	- [[#Mutations]]
+	- [[#gene mutations]]
 	- [[#Reproduction|genetic recombination]]
 
-# Realted branches 
+# Fields
 
 - molecular genetics
 - [[#genomics]] (גֵּנוֹמִיקָה)
@@ -16,6 +16,9 @@
 - **structural biology**
 - [[#genetic engineering]]
 - cytogenetics
+- [[Evolution#Population genetics|population genetics]]
+- quantitative genetics
+- [[Reproduction]]
 
 # DNA
 
@@ -142,6 +145,10 @@
 
 
 
+- **neutral mutations**
+- **lethal mutations**
+
+
 # Chromosomes
 
 - **chromosome** (כְרוֹמוֹזוֹם)
@@ -196,7 +203,7 @@
 
 ## Chromosome mutations 
 
-- **chromosome mutation** (or **chromosome aberration**)
+- **chromosome mutation** ([aka](https://www.wikidata.org/wiki/Q744962))
 	- structure
 		- **chromosomal inversion** (היפוך כרומוזומלי)
 		- **chromosomal translocation** (התקה כרומוזומלית)
@@ -237,8 +244,7 @@
 
 
 - **heredity** (or **biological inheritance**) (תּוֹרָשָׁה)
-- **genetic linkage** (תַּאֲחִיזָה בין גנים, תאחיזה גנטית)
-	- **linkage group**
+
 
 
 
@@ -249,32 +255,8 @@
 - **pleiotropy**
 
 
-# Reproduction
 
-- **sexual reproduction** (רְבִיָּה מִינִית)
-- **asexual reproduction** (רְבִיָּה אַל-מִינִית)
 
-- **reproductive cell** (תא רבייה)
-	- **gamete*** (or **sex cell**) (גָּמֵטָה, תא מין, תא זוויג)
-		- **sperm** (pl.: **sperm** or **sperms**) (זרע)
-			- **spermatozoa**
-			- **spermatozoon**
-			- **spermatia**
-		- **egg cell** (or **ovum** (pl.: **ova**)) (בֵּיצִית, תא ביצה)
-	 - **germ cell** (תא תחילי, תא נבט)
-	 - **precursor cell** (or **blast cell**)
-- **somatic cell** (or **vegetal cell**) (תא גוף)
-- **stem cell** (תא גזע)
-
-- **zygote** (בֵּיצָה מֻפְרֵית, זִיגוֹטָה)
-- **fertilization** (הַפְרָיָה)
-	- **allogamy** (or **cross-fertilization**) (הַפְרָיָה הֲדָדִית, זִוּוּג שׁוֹנִים)
-- **meiosis** (חֲלֻקַּת הַפְחָתָה)
-- **chromosomal crossover** (or **crossing over**)
-	- cf. **genetic recombination** (or **genetic reshuffling**)
-- in plants
-	- **gametophyte**
-	- **sporophyte**
 
 
 # Ploidy
@@ -315,11 +297,27 @@
 
 - **Short** **tandem** **repeat** (**STR**) analysis
 	- STR marker
+- **single-nucleotide polymorphism** (**SNP**)
+- **DNA profiling**
 
 # Genetic engineering
 
 - **genetic engineering** (or **genetic modification**)
 - **genetically modified organism** (**GMO**)
 - **transgene**
+
+- **restriction enzyme** (אנזים הגבלה, אנזים קיטוע)
+- **cloning vector** (נשא שיבוט)
+- **reverse transcriptase** (**RT**)
 - **recombinant DNA** (**rDNA**)
+- **complementary DNA** (**cDNA**)
 - **gene knockout** (הַשְׁבָּתַת גֵּנִים)
+
+
+- **polymerase chain reaction** (**PCR**)
+- probe
+
+# misc
+
+- **molecular cloning**
+- **genetic vector** (or **vector**) (וקטור גנטי, נַשָּׂא)

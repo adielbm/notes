@@ -61,7 +61,7 @@
 	- **secondary cell wall**
 	- **middle lamella**
 - **cytoplasm** (פלזמת התא, צִיטוֹפְּלַזְמָה)
-	- plasmid 
+	- **plasmid** 
 - **cytosol** (or **cytoplasmic matrix**)
 
 
@@ -112,8 +112,6 @@
 	- **lignin**
 
 
-- **autotroph**
-- **heterotroph**
 
 
 ## Cellular metabolism

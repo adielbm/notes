@@ -7,7 +7,7 @@
     "pageSize": "A4",
     "landscape": false,
     "margin": "2",
-    "downscalePercent": 78
+    "downscalePercent": 73
   },
   "showInlineTitle": true,
   "propertiesInDocument": "source",

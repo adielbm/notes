@@ -55,6 +55,7 @@
 	- **computer worm**
 	- **spyware** (**spying software**) (רוגלה)
 	- **trojan horse** (or **trojan**)
+	- **ransomware** (כּוֹפְרָה)
 
 ## Cyberattacks
 

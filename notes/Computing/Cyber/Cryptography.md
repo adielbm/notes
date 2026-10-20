@@ -114,13 +114,19 @@
 # Public key infrastructure
 
 - **public key infrastructure** (**PKI**)
-- **registration authority** (RA)
-- **validation authority** (VA)
-- **certificate authority** (or **certification authority**) (**CA**) (רשות אישורים, רשות אישור)
+
+
 - **public-key certificate** (or **digital certificate** or **identity certificate**) – "an electronic document used to prove the valid attribution of a public key to the identity of its holder" (Wikipedia)
 	- **X.509**
 	- **domain validated certificate** (**DV**)
 - **certificate signing request** (**CSR** or **certification request**) – "a message sent from an applicant to a CA of the PKI in order to apply for a digital certificate"
+
+
+- **registration authority** (RA)
+- **validation authority** (VA)
+- **certificate authority** (or **certification authority**) (**CA**) (רשות אישורים, רשות אישור) – "an entity that stores, signs, and issues digital certificates" (Wikipedia)
+
+
 
 - **cryptographic protocol**
 	- **Transport Layer Security** (**TLS**)
