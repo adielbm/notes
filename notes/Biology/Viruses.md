@@ -2,7 +2,7 @@
 
 - **virus** (נְגִיף)
 - **viroid** (נְגִיפוֹן)
-- **virion** (pl.: **viria**, **virions**)
+- **virion** (pl. **viria**, **virions**)
 - **capsid** 
 
 

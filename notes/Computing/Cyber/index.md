@@ -2,7 +2,7 @@
 # Fields
 
 - **defensive programming**
-- **computer security** (or **cybersecurity**)
+- **computer security** (or **cybersecurity**) (אבטחת מחשבים)
 - **Information security** (or **infosec**)
 - **internet security**
 - [[cryptography]]
@@ -25,6 +25,27 @@
 - verification (אימות)
 - sanitization (סניטציה)
 
+
+
+
+# Security design principles
+
+- by [@Stallings, 2018a]
+	- Economy of mechanism
+	- Fail-safe defaults
+	- Complete mediation
+	- Open design
+	- Separation of privilege
+	- Least privilege
+	- Least common mechanism
+	- Psychological acceptability
+	- Isolation
+	- Encapsulation
+	- Modularity
+	- Layering
+	- Least astonishment
+- See also [The Protection of Information in Computer Systems](https://en.wikipedia.org/wiki/The_Protection_of_Information_in_Computer_Systems)
+
 # misc. 
 
 - **security policy** (מדיניות אבטחה)
@@ -35,16 +56,36 @@
 - **input validation** (or **data validation**)
 - **security through obscurity**
 
+
+# Defence
+
+- **countermeasure** (אמצעי נגד) 
+	- **security controls**, **security measures**
+
 # Threats
 
+
 - **threat** (איום)
+	- cf. **attack vector**
+	- threat model
+	- adversary, threat agent, threat actor, attacker
+	- types of attacks:
+		- active attack
+		- passive attack
+	- origin of attack:
+		- inside attack
+		- outside attack
+
 - **vulnerability** (פְּגִיעוּת, חולשת אבטחה, פרצת אבטחה)
-	- design vulnerability
-	- implementation vulnerability
-	- operational vulnerability
+	- types:
+		- design vulnerability
+		- implementation vulnerability
+		- operational vulnerability
+	- cf. **security weakness**
 - **exploit** (or *exploiting*) (נָצְלָה, ניצול חולשה)
 - computer hacking
-- **[[#cyberattacks|cyberattack]]**
+- **[[#cyberattacks|cyberattack]]** (or **cyber attack**) (מתקפת סייבר)
+	- also: **hack**, **cybersecurity incident** or **information security incident**
 - binary exploitation
 	- **pwn** –  "An exploit in computer security, especially relating to machine code." (Wiktionary)
 - information leakage
@@ -56,6 +97,9 @@
 	- **spyware** (**spying software**) (רוגלה)
 	- **trojan horse** (or **trojan**)
 	- **ransomware** (כּוֹפְרָה)
+	- **adware** (or **advertising-supported software**) (תוכנת פרסום)
+
+- attack surface
 
 ## Cyberattacks
 

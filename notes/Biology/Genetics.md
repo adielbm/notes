@@ -62,10 +62,13 @@
 	- **regulator gene** (or **regulatory gene**)
 		- **homeotic genes**
 		- cf. _master regulator gene_
-	- **pseudogenes**
+	- **pseudogene**
+	- essential gene
+	- dispensable gene
 - **allele** (אָלֵל)
-- **locus** (pl.: **loci**) – "a specific, fixed position on a chromosome where a particular gene or genetic marker is located" (Wikipedia)
+- **locus** (pl. **loci**) – "a specific, fixed position on a chromosome where a particular gene or genetic marker is located" (Wikipedia)
 - **genome** (גֵּנוֹם, מִכְלוֹל הַגֵּנִים)
+- **pan-genome** (**pangenome** or **supragenome**)
 - **genotype** (מערך גנטי)
 - **phenotype** (מערך חזותי)
 	- **phenotypic trait** 
@@ -185,11 +188,12 @@
 - **recessive allele** – "An allele whose phenotypic effect is not observed in a heterozygote" [@Campbell, 2020]
 - **dominant trait** – a phenotypic trait produced by a genotype containing at least one copy of the corresponding dominant allele
 - **recessive trait** – a phenotypic trait produced by a genotype containing two copies of the corresponding recessive allele
-- **codominance**
-- **incomplete dominance**
 
-
-
+- **dominance** (שַׁלְטָנוּת)
+	- **complete dominance** ([[#Mendelian genetics|Mendelian]])
+	- non-Mendelian:
+		- **codominance** – "the situation in which the phenotypes of both alleles are exhibited in the heterozygote because both alleles affect the phenotype in separate, distinguishable ways"
+		- **incomplete dominance** (or **partial dominance**) – "the situation in which the phenotype of heterozygotes is intermediate between the phenotypes of individuals homozygous for either allele" [@Campbell, 2020]
 
 
 

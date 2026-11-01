@@ -3,14 +3,14 @@
 - **binomial nomenclature**
 	- **binomial name** (or **scientific name**) (שם מדעי)
 - **taxonomy** (טקסונומיה, מיון עולם הטבע)
-- **taxon** (pl.: **taxa**) (טַקסוֹן, יחידת מיון)
+- **taxon** (pl. **taxa**) (טַקסוֹן, יחידת מיון)
 	- **domain** (or **dominion**) (על־ממלכה)
 	- **kingdom** (ממלכה)
-	- **phylum** (pl.: **phyla**) (מערכה)
+	- **phylum** (pl. **phyla**) (מערכה)
 	- **class** (מחלקה)
 	- **order** (סדרה)
-	- **family** (pl.: **familiae**) (משפחה)
-	- **genus** (pl.: **genera**) (סוג)
+	- **family** (pl. **familiae**) (משפחה)
+	- **genus** (pl. **genera**) (סוג)
 	- **species** (מין)
 
 - **specific name** (or **specific epithet**) (כינוי ספציפי)

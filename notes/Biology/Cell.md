@@ -1,6 +1,8 @@
 
 
-- **cellular differentiation** (התמיינות תאים)
+
+
+
 
 # Cell cycle
 
@@ -16,8 +18,8 @@
 		- gap 1 (G₁)
 		- synthesis (S)
 		- gap 2 (G₂)
-	- cell division
-		- mitosis (M) (חלוקת גרעין התא)
+	- **cell division** (חלוקת התא)
+		- **mitosis** (M) (חלוקת גרעין התא)
 			- prophase (שלב תחילי)
 			- metaphase (שלב אמצעי)
 			- anaphase (שלב קיטוב)
@@ -29,19 +31,28 @@
 - **cell cycle checkpoints**
 	- **spindle checkpoint**
 
-## types of cells
+# types of cells
 
-- cell type
-- eukaryotic cells
-	- animal cell
-	- plant cell
-	- fungal hypha
-	- protist
-- prokaryotic cells
-	- bacterial cells
-	- archea cell
 
-## anatomy
+- by presence of a nucleus:
+	- eukaryotic cells
+		- animal cell
+		- plant cell
+		- fungal hypha
+		- protist
+	- prokaryotic cells
+		- bacterial cells
+		- archea cell
+- by function in multicellular organisms:
+	- **somatic cell** (or **vegetal cell**) (2n) (תא גוף) – "any biological cell forming the body of a multicellular organism other than a gamete, germ cell, gametocyte or undifferentiated stem cell" (Wikipedia)
+	- **stem cell** (תא גזע)
+		- **embryonic stem cell** (תא גזע עוברי)
+		- adult stem cells
+		- todo: lymphoid and myeloid
+	- [[Reproduction#Sexual reproduction|reproduction cell]]
+	- **cellular differentiation** (or **cell differentiation**) (התמיינות תאים)
+
+# anatomy
 
 - **organelle** (אֶבְרוֹן)
 
@@ -71,12 +82,12 @@
 
 
 
-- **flagella** (pl.: **flagellum**) (שׁוֹטוֹן)
-- **pilus** (pl.: **pili**) (שַׂעֲרִית)
+- **flagella** (pl. **flagellum**) (שׁוֹטוֹן)
+- **pilus** (pl. **pili**) (שַׂעֲרִית)
 - **nucleoid** (נוקלאואיד)
 - **nucleus** (or **cell nucleus**) (גרעין)
 	- **nuclear envelope** (or **nuclear membrane**) (מעטפת הגרעין)
-	- **nucleolus** (pl.: **nucleoli**)
+	- **nucleolus** (pl. **nucleoli**)
 	- **nucleoplasm** (or **karyoplasm**) (נוקלאופלזמה)
 - **plasmodesmata** (si.: **plasmodesma**) (פלזמה מקשרת)
 - **vesicle** (בּוּעִית, וסיקולה)
@@ -94,7 +105,7 @@
 - **basal body** (גופיף בסיסי)
 - **motor protein**
 - **cytoskeleton** (שלד התא)
-- **cilium** (pl.: **cilia**) (ריסוֹן)
+- **cilium** (pl. **cilia**) (ריסוֹן)
 - **microfilaments** (or **actin filaments**)
 - **intermediate filaments** (**IFs**) (קורי ביניים)
 - **centriole** (צנטריול)
@@ -114,14 +125,14 @@
 
 
 
-## Cellular metabolism
+# Cellular metabolism
 
 - **metabolism** (חילוף חומרים)
 - **metabolic pathway** (מסלול מטבולי)
 
 
 
-### Photosynthesis
+## Photosynthesis
 
 - **photosynthesis** (פוֹטוֹסִינְתֵּזָה, סִנְתּוּז בָּאוֹר, סִנְתּוּז בָּאוֹר)
 - **chloroplast** (פְּלַסְטִידָה יְרֻקָּה)
@@ -152,7 +163,7 @@
 
 - **photorespiration** (נשימת אור)
 
-### Cellular respiration
+## Cellular respiration
 
 - **cellular respiration** (נשימה תאית)
 - **anaerobic respiration** (נשימה אל-אווירנית)

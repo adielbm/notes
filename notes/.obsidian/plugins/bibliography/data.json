@@ -528,5 +528,29 @@
       ]
     },
     "publisher": "Pearson Education"
+  },
+  {
+    "id": "Stallings, 2018a",
+    "type": "book",
+    "ISBN": "9781292220611",
+    "title": "Computer Security",
+    "author": [
+      {
+        "family": "Stallings",
+        "given": "William"
+      },
+      {
+        "family": "Brown",
+        "given": "Lawrie"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "publisher": "Pearson"
   }
 ]
