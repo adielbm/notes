@@ -1,0 +1,3 @@
+- **diffusion** (פִּעְפּוּעַ, דִּיפוּזְיָה)
+	- [[Solutions#Osmotic pressure|osmosis]]
+- see also: [[Cell#Membrane transport|Membrane transport]]

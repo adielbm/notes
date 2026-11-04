@@ -173,7 +173,7 @@
 	- if $c_A=c_B$, $A$ and $B$ are **isoosmotic** (or $A$  to $B$)
 	- (cf. **tonicity**: **hypertonic**, **hypotonic** and **isotonic**)
 - **turgor pressure** (לחץ טוּרְגּוֹר, מִלְחָץ)
-- see also: **diffusion** (פִּעְפּוּעַ, דִּיפוּזְיָה)
+- see also: [[diffusion]]
 
 # Water soluble compounds
 

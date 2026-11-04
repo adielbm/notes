@@ -1,8 +1,8 @@
 
+# Fields 
 
-
-
-
+- **cell theory**
+- **cell biology** (or **cellular biology**, **cytology**)
 
 # Cell cycle
 
@@ -31,8 +31,7 @@
 - **cell cycle checkpoints**
 	- **spindle checkpoint**
 
-# types of cells
-
+# Classification
 
 - by presence of a nucleus:
 	- eukaryotic cells
@@ -52,65 +51,19 @@
 	- [[Reproduction#Sexual reproduction|reproduction cell]]
 	- **cellular differentiation** (or **cell differentiation**) (התמיינות תאים)
 
-# anatomy
+# Structure
 
 - **organelle** (אֶבְרוֹן)
-
 - **vesicle** (בּוּעִית, וסיקולה)
-
-- cell
-
-
-- **cell theory**
-- **cell biology** (or **cellular biology**, **cytology**)
-
 - **cell membrane** (or **plasma membrane**) (קרום התא, ממברנת התא)
 	- **cell cortex**
-
-- **cell wall** (דופן התא)
-	- **primary cell wall**
-	- **secondary cell wall**
-	- **middle lamella**
+	- **lipid bilayer** (or **phospholipid bilayer**) (דו-שכבה ליפידית)
+	- see: [[#Membrane transport]]
 - **cytoplasm** (פלזמת התא, צִיטוֹפְּלַזְמָה)
 	- **plasmid** 
 - **cytosol** (or **cytoplasmic matrix**)
-
-
-
 - biofilm (קרום ביולוגי)
 - [[Genetics#Gene expression|ribosome]]
-
-
-
-- **flagella** (pl. **flagellum**) (שׁוֹטוֹן)
-- **pilus** (pl. **pili**) (שַׂעֲרִית)
-- **nucleoid** (נוקלאואיד)
-- **nucleus** (or **cell nucleus**) (גרעין)
-	- **nuclear envelope** (or **nuclear membrane**) (מעטפת הגרעין)
-	- **nucleolus** (pl. **nucleoli**)
-	- **nucleoplasm** (or **karyoplasm**) (נוקלאופלזמה)
-- **plasmodesmata** (si.: **plasmodesma**) (פלזמה מקשרת)
-- **vesicle** (בּוּעִית, וסיקולה)
-- **vacuole** (חֲלוּלִית)
-	- central vacuole
-- **lysosome** (לִיזוֹזוֹם)
-- **Golgi body** (or **Golgi apparatus**) (מערכת גוֹלְג'י)
-- **endomembrane system** (מערכת ממברנות תוך-תאית)
-- **peroxisome**
-- **endoplasmic reticulum** (**ER**) (רשתית תוך-פלזמית)
-- **chloroplast** (כְּלוֹרוֹפְּלַסְט, פְּלַסְטִידָה יְרֻקָּה)
-- **mitochondrion** (pl. **mitochondria**)
-	- "_powerhouse of the cell_"
-- **plastid** (פלסטידה)
-- **basal body** (גופיף בסיסי)
-- **motor protein**
-- **cytoskeleton** (שלד התא)
-- **cilium** (pl. **cilia**) (ריסוֹן)
-- **microfilaments** (or **actin filaments**)
-- **intermediate filaments** (**IFs**) (קורי ביניים)
-- **centriole** (צנטריול)
-- **microtubules**
-
 
 - histology
 	- **extracellular matrix** (**ECM**)
@@ -122,6 +75,123 @@
 	- **cuticle**
 	- **lignin**
 
+## Cell wall
+
+- **cell wall** (דופן התא)
+	- **primary cell wall**
+	- **secondary cell wall**
+	- **middle lamella**
+	- **plasmodesmata** (si.: **plasmodesma**) (פלזמה מקשרת)
+
+
+## Endomembrane system
+
+- **endomembrane system** (מערכת ממברנות תוך-תאית)
+	- **nucleoid** (נוקלאואיד)
+	- **nucleus** (or **cell nucleus**) (גרעין)
+		- **nuclear envelope** (or **nuclear membrane**) (מעטפת הגרעין)
+		- **nucleolus** (pl. **nucleoli**)
+		- **nucleoplasm** (or **karyoplasm**) (נוקלאופלזמה)
+	- **Golgi body** (or **Golgi apparatus**) (מערכת גוֹלְג'י)
+	- **vesicle** (בּוּעִית, שַׁלְפּוּחִית, וסיקולה)
+		- **lysosome** (לִיזוֹזוֹם)
+		- **vacuole** (חֲלוּלִית, בּוּעִית)
+			- central vacuole
+	- **granule**
+		- **peroxisome**
+
+	- **endoplasmic reticulum** (**ER**) (רשתית תוך-פלזמית)
+
+## Cytoskeleton
+
+- **cytoskeleton** (שלד התא)
+	- **microfilaments** (or **actin filaments**)
+		- made up of actin
+	- **intermediate filaments** (**IFs**) (קורי ביניים)
+	- **microtubules**
+		- made up of tubulin (α-tubulin, β-tubulin)
+
+- cell appendages
+	- **flagella** (pl. **flagellum**) (שׁוֹטוֹן)
+	- **cilium** (pl. **cilia**) (ריסוֹן)
+	- **pilus** (pl. **pili**) (שַׂעֲרִית)
+		- on bacteria and archaea
+
+- **centrosome**  
+	- see also: **microtubule-organizing center** (**MTOC**)
+	- **centriole** (צנטריול)
+		- made of microtubules
+
+- **basal body** (גופיף בסיסי)
+- **motor protein**
+
+## Endosymbionts
+
+- **endosymbionts**
+	- **mitochondrion** (pl. **mitochondria**)
+		- "_powerhouse of the cell_"
+	- **plastid** (פלסטידה)
+		- **chloroplast** (כְּלוֹרוֹפְּלַסְט, פְּלַסְטִידָה יְרֻקָּה)
+			- **stroma**
+			- **thylakoid**
+				- **thylakoid membrane**
+	- **nitroplast**
+
+# Membrane transport
+
+- **membrane transport** (or **cellular transport**) (cf. **transmembrane transport**)
+	- **passive transport** (העברה סבילה) – no ATP is required
+		- simple diffusion
+			- down gradient
+			- No transport proteins are required.
+			- Mainly transports small, nonpolar molecules and some small uncharged molecules. examples: $\ce{O2, CO2, N2}$
+			- used for: 
+				- small nonpolar uncharged gases
+				- small hydrophobic / lipid-soluble
+		- **facilitated diffusion** (פִּעְפּוּעַ מְסֻיָּע, פִּעְפּוּעַ מְזֹרָז)
+			- down gradient
+			- requires membrane transport proteins
+				- channel protein
+					- **ion channel** (תְּעָלַת יוֹנִים)
+					- used for: ions such as $\ce{Na+,K+,Cl-}$
+				- carrier protein 
+					- used for: Glucose
+			- transports substances that cannot easily cross the phospholipid bilayer. and
+		- [[Solutions#Osmotic pressure|osmosis]]
+			- water toward higher solute concentration
+			- **aquaporins** (or **water channels**)
+		- see also: [[diffusion]]
+	- **active transport** (העברה פעילה) – ATP is required, against gradient, transport proteins are required
+		- **primary active transport** (or **direct active transport**)
+			- ATP-driven
+		- **secondary active transport** (or **coupled transport**, **cotransport** (הוֹבָלַת-יַחַד))
+			- gradient-driven
+			- **symport**
+				- **symporter**
+			- **antiport**
+				- **antiporter** (or **exchanger**, **counter-transporter**)
+		- **vesicle-mediated transport** (or **vesicular transport**, **bulk transport**)
+			- **endocytosis** (בְּלִיעָה תָּאִית)
+				- **pinocytosis** (גַּמְעָנוּת)
+				- **phagocytosis** (בּוֹלְעָנוּת)
+				- **receptor-mediated endocytosis**
+			- **exocytosis** (פליטה תאית)
+
+
+- fluid mosaic model
+
+
+
+
+- **transport protein** (aka: transporter, escort protein, carrier protein, carrier proteins)
+	- **membrane transport protein**
+- membrane protein
+	- integral membrane protein
+		- transmembrane protein
+
+- **electrical gradient**
+- **concentration gradient** (or **chemical gradient**)
+- **electrochemical gradient**
 
 
 
@@ -130,15 +200,10 @@
 - **metabolism** (חילוף חומרים)
 - **metabolic pathway** (מסלול מטבולי)
 
-
-
 ## Photosynthesis
 
 - **photosynthesis** (פוֹטוֹסִינְתֵּזָה, סִנְתּוּז בָּאוֹר, סִנְתּוּז בָּאוֹר)
-- **chloroplast** (פְּלַסְטִידָה יְרֻקָּה)
-	- **stroma**
-	- **thylakoid**
-		- **thylakoid membrane**
+- [[#Structure|chloroplast]]
 - **pigment** (צִבְעָן)
 
 
@@ -157,6 +222,10 @@
 - **Glyceraldehyde 3-phosphate** (**PGAL** or **G3P**)
 - **light-dependent reactions**
 	- $\ce{ADP + Pi ->[light] ATP}$
+	- **photosystem**
+		- **photosystem I** (**PSI**)
+		- **photosystem II** (**PSII**)
+	- [[Reactions#misc|photolysis]] – $\ce{2H2O -> 4H+ + 4e- + O2}$
 - **light-independent reactions**
 	- **Calvin cycle**
 	- $\ce{6CO2 + 12NADPH + 18ATP -> C6H12O6 + 12NADP+ + 18ADP + 18Pi + 6H2O}$
@@ -175,7 +244,6 @@
 		- (3) oxidative phosphorylation
 	- $\ce{C6H12O6 + 6O2 -> 6CO2 + 6H2O + ATP}$
 - **glycolysis** (גְּלִיקוֹלִיזָה)
-
 	- $\ce{C6H12O6 + 2 NAD+ + 2 ADP + 2 Pi -> 2 C3H4O3 + 2 NADH + 2 H+ + 2 ATP + 2 H2O}$
 
 

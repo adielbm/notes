@@ -65,6 +65,7 @@
 	- "the number of molecules that come together to react in an elementary reaction and is equal to the sum of stoichiometric coefficients of reactants in the elementary reaction with effective collision and correct orientation" (Wikipedia)
 	- "The number of molecules that participate as reactants in an elementary reaction." [@Brown, 2012]
 	- **unimolecular reaction** (תגובה חד-מולקולרית)
+		- **photodissociation** (or **photolysis**) (פוטוליזה)
 	- **bimolecular reaction**
 	- **trimolecular reaction**
 
