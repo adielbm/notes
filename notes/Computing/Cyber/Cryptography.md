@@ -72,6 +72,16 @@
 	- **private key**
 
 - **RSA** (**Rivest–Shamir–Adleman**) **cryptosystem**
+	- Choose two large prime numbers: $p,q$.
+	- Calculate the modulus: $n=pq$.
+	- Calculate Euler's totient: $\varphi(n)=(p-1)(q-1)$
+	- Choose a public exponent $e$ s.t.: $1<e<\varphi(n),\quad \gcd(e,\varphi(n))=1$.
+	- Calculate the private exponent $d$: $ed\equiv 1\pmod{\varphi(n)}$
+	- The public key is $(e,n)$.
+	- The private key is $(d,n)$.
+	- encryption of plaintext $m$: $c=m^e\bmod n$
+	- encryption of cipher $c$: $m=c^d\bmod n$
+
 - **privacy-enhanced mail** (**PEM**)
 - **Edwards-curve Digital Signature Algorithm** (**EdDSA**)
 	- Ed25519

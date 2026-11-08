@@ -43,6 +43,11 @@
 
 - **gland** (בַּלּוּטָה)
 	- **endocrine gland** (בַּלּוּטַת הַפְרָשָׁה פְּנִימִית)
+		- **thyroid** (or **thyroid gland**) (בַּלּוּטַת הַתְּרִיס)
+		- **pituitary gland** (or **hypophysis cerebri**) (בלוטת יוֹתֶרֶת הַמּוֹחַ)
+			- **anterior pituitary** (or **adenohypophysis**) (בלוטת יותרת המוח הקדמית)
+			- **posterior pituitary** (or **neurohypophysis**)
+		- **pineal gland** (בלוטת האצטרובל)
 	- **exocrine gland** (בַּלּוּטַת הַפְרָשָׁה חִיצוֹנִית)
 
 - Animal tissues

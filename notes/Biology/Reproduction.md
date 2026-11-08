@@ -28,8 +28,7 @@
 - **zygote** (בֵּיצָה מֻפְרֵית, זִיגוֹטָה)
 
 
-- **embryo** (עֻבָּר, עובר-מוקדם)
-- **fetus** (עֻבָּר מִתְקַדֵּם, עֻבָּר, שְׁלִיל)
+
 
 # Asexual reproduction
 
@@ -84,19 +83,42 @@
 	- **genitals** (or **external genitalia**)
 	- **internal genitalia**
 	- **gonad** (or **sex gland**, **reproductive organ**) (בַּלּוּטַת מִין)
-	- male:
+	- [[#male]]:
 		- internal:
 			- [[#testicle]]
 		- external:
 			- **penis** (pl. **penises** or **penes**) (פִּין, אֵיבַר הַזָּכָר)
-	- female:
+	- [[#female]]
+		- external:
+			- **vulva** (פּוֹת)
+				- **clitoris** (דַּגְדְּגָן)
+				- labia majora
+				- labia minora
+				- vestibule
 		- internal:
 			- **ovary** (שַׁחֲלָה)
 				- see also: [[Plants|ovary in plants]]
+			- **vagina** (נַרְתִּיק)
+			- **uterus** (or **womb**) (רֵחֶם)
+				- **cervix** (צַוַּאר הָרֶחֶם)
+				- **endometrium** (רִירִית הָרֶחֶם)
+
+			- **fallopian tube** (or **uterine tube**, **oviduct**) (חֲצוֹצְרָה, חֲצוֹצְרַת הָרֶחֶם)
+
 
 - **semen** (or **seminal fluid**) (נוזל זרע)
 
-- **testosterone**
+
+
+## Female
+
+
+
+
+
+ 
+
+## Male
 
 ### Testicle
 
@@ -104,10 +126,55 @@
 - **scrotum** (שַׂק הָאֲשָׁכִים, כִּיס הָאֲשָׁכִים)
 - **tunica vaginalis** (גְּלִימָה נַרְתִּיקִית)
 - **tunica albuginea** (הַגְּלִימָה הַלְּבָנָה)
-- **seminiferous tubules** (צִנּוֹר הַזֶּרַע)
+- **seminiferous tubule** (צינוריות הזרע, אבוביות הזרע, צִנּוֹר הַזֶּרַע)
 - **rete testis** (רֶשֶׁת הָאֶשֶׁךְ)
 - **epididymis** (pl. **epididymides**) (יוֹתֶרֶת הָאֶשֶׁךְ, עִלִּית הָאֶשֶׁךְ)
 - **vas deferens** (צִנּוֹר הַזֶּרַע)
+
+- **Sertoli cells** (תָּאֵי סֶרְטוֹלִי)
+
+# Hormones
+
+- **hypothalamic–pituitary–gonadal axis** (**HPG axis**)
+	- **gonadotropin-releasing hormone** (**GnRH**)
+		- produced by hypothalamus
+		- stimulates the anterior pituitary to release FSH and LH
+	- **follicle-stimulating hormone** (**FSH**) (הורמון מגרה זקיק, מעורר זקיק)
+		- produced by anterior pituitary
+		- stimulates [[#spermatogenesis]] in males
+		- stimulates [[#Reproductive system|ovarian follicle]] development in females 
+	- **luteinizing hormone** (**LH**) (הורמון מחלמן, הצהבה, מעורר גופיף צהוב)
+		- produced by anterior pituitary
+		- triggers ovulation and corpus luteum formation
+		- stimulates testosterone production in males
+
+
+- **testosterone** (הוֹרְמוֹן זְכָרִי, טֶסְטוֹסְטֵרוֹן)
+- **estrogen** (אֶסְטְרוֹגֵן)
+	- **estradiol** (E2)
+	- **estrone** (E1)
+	- **estriol** (E3)
+- **progesterone** (פְּרוֹגֶסְטֵרוֹן)
+
+
+# Menstrual cycle
+
+- **menstrual cycle** (מַחְזוֹר הַוֶּסֶת, מַחְזוֹר הַבִּיּוּץ, המחזור החודשי)
+	- **ovarian cycle** (המחזור השחלתי)
+		- **follicular phase** (שְׁלַב הַזָּקִיק)
+		- **ovulation** (בִּיּוּץ)
+		- **luteal phase**
+	- **uterine cycle** (מחזור הרחם)
+		- **menstruation** phase (or **menses**, **period**) (וֶסֶת)
+		- **proliferative phase** (שלב השגשוג)
+		- **secretory phase** (שלב ההפרשה)
+
+
+- **menarche** (וֶסֶת רִאשׁוֹן, בֹּחַל, פְּרֹס הַוֶּסֶת)
+- **menopause** (חֶדְלוֹן וֶסֶת, תֹּם וֶסֶת, גיל המעבר)
+	- cf. **climacteric**
+
+
 
 # Meiosis
 
@@ -166,15 +233,25 @@
 - **ootidogenesis** (meiosis): 1 primary oocyte (2n) → 1 ootid (n) + 2–3 polar bodies
 	- meiosis I: 1 primary oocyte (2n) → 1 secondary oocyte (n) + 1 first polar body (n)
 	- meiosis II: 1 secondary oocyte (n) → 1 ootid (n) + 1 second polar body (n)
-		- **ovulation** (בִּיּוּץ)
+		- [[#Menstrual cycle|ovulation]]
 		- **polar body** (גּוּפִיף קוֹטְבִי)
 		- **ootid** (n)
 - 1 ootid → 1 ovum (n)
 	- **ovum** (pl. **ova**) (n)
-- **folliculogenesis**
-	- **follicle** (זָקִיק)
 - result: 1 ovum + 2–3 polar bodies
 
+
+- **folliculogenesis**
+	- **ovarian follicle** (זָקִיק שַׁחֲלָתִי)
+		- **primordial follicle**
+		- **primary follicle**
+		- **secondary follicle**
+		- **antral follicle** (or **tertiary follicle**)
+	- [[#Menstrual cycle|ovulation]]
+		- **ruptured follicle**
+	- **corpus luteum** (גּוּפִיף צָהֹב)
+
+	
 
 
 
@@ -234,7 +311,7 @@
 - **endosex**
 - **disorders of sex development** (**DSDs**)
 - **hermaphrodite** (הֶרְמַפְרוֹדִיט, אַנְדְּרוֹגִינוֹס)
-	- cf. [אַנְדְּרוֹגִינוֹס בהלכה](https://he.wikipedia.org/wiki/%D7%98%D7%95%D7%9E%D7%98%D7%95%D7%9D_%D7%95%D7%90%D7%A0%D7%93%D7%A8%D7%95%D7%92%D7%99%D7%A0%D7%95%D7%A1)
+	- cf. [אַנְדְּרוֹגִינוֹס](https://he.wikipedia.org/wiki/%D7%98%D7%95%D7%9E%D7%98%D7%95%D7%9D_%D7%95%D7%90%D7%A0%D7%93%D7%A8%D7%95%D7%92%D7%99%D7%A0%D7%95%D7%A1)
 
 - genetic sex
 - chromosomal sex
@@ -245,9 +322,67 @@
 - hormonal sex
 
 
-# Embryology
+# Developmental biology
+
+- **cellular differentiation** (or **cell differentiation**) (התמיינות תאים)
+
+- **morphogen**
+- **apoptosis**
+
+## Embryology
+
+
+
+- [[#Sexual reproduction|fertilization]]
+	- [[#Sexual reproduction|zygote]]
+- **morula**
+- **cleavage** (הַתְלָמָה)
+	- **blastocyst** (כִּיסְתָה רִאשׁוֹנִית)
+- **gastrulation** (גסטרולציה)
+	- **gastrula** (מְעִית)
+		- **germ layer** (שִׁכְבַת נֶבֶט)
+			- **endoderm** (שִׁכְבָה פְּנִימִית)
+			- **mesoderm** (שִׁכְבַת בֵּינַיִם, שכבה אמצעית)
+				- **somite**
+			- **ectoderm** (שִׁכְבָה חִיצוֹנִית)
+- **embryo** (עֻבָּר, עובר-מוקדם)
+- **fetus** (עֻבָּר מִתְקַדֵּם, עֻבָּר, שְׁלִיל)
 
 - **placenta** (pl. **placentae**) (שִׁלְיָה)
+- **chorion** (עֲטִיף)
+- **yolk sac** (שַׂק הַחֶלְמוֹן)
+- **amnion** (pl. **amnions** or **amnia**) (שָׁפִיר)
+- **amniotic fluid** (or **water**, **waters**) (מֵי הַשָּׁפִיר)
+- **allantois**
+
+## Child development
+
+![](https://upload.wikimedia.org/wikipedia/commons/9/9e/Child_development_stages.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original)
+
+
+- **puberty** (התבגרות מינית)
+
+- **childhood** (יַלְדוּת)
+	- **early childhood**
+		- **neonate** (or **new-born**) (יִלּוֹד)
+		- **baby** (or **infant**) (תִּינוֹק)
+		- **toddlerhood**
+			- **toddler** (פָּעוֹט)
+	- **middle childhood**
+	- **preadolescence** (late childhood)
+- **adolescence** (נַעֲרוּת, גיל ההתבגרות, הִתְבַּגְּרוּת, עֲלוּמִים)
+	- cf. maturation
+	- **adolescent** (מִתְבַּגֵּר, מִתְבַּגֶּרֶת; עֶלֶם, עַלְמָה; נַעַר)
+		- see also:
+			- **teenager** (or **teen**)
+				- **teen age** (שְׁנוֹת הָעֶשְׂרֵה)
+			- **juvenile**
+			- **youth**
+- **adulthood** (בַּגְרוּת)
+	- **adult**
+		- young adult
+		- middle age
+
 
 # Misc.
 

@@ -49,8 +49,7 @@
 		- adult stem cells
 		- todo: lymphoid and myeloid
 	- [[Reproduction#Sexual reproduction|reproduction cell]]
-	- **cellular differentiation** (or **cell differentiation**) (התמיינות תאים)
-
+	- see also: [[Reproduction#Developmental biology|cellular differentiation]]
 # Structure
 
 - **organelle** (אֶבְרוֹן)

@@ -27,5 +27,14 @@
 	- Moreover, $\gcd(a, b)$ is the smallest positive integer of the form $as + bt$.
 - Two non-zero integers $a$ and $b$ are **coprime** (or **relatively prime**) if $\gcd(a,b)=1$
 	- Integers $a$ and $b$ are relatively prime if and only if there exist integers $s$ and $t$ such that $as + bt = 1$
+- (**Fermat's little theorem**) 
+	- If $p$ is prime and $a$ is an integer, then $a^p \equiv a \pmod p$
+	- If $p$ is prime and $a$ is an integer not divisible by $p$, then $a^{p-1}\equiv 1\pmod p$
+## Primality test
 
-
+- **trial division** – if any integer $d$ in the range $2 \leq d \leq \lfloor\sqrt n\rfloor$ divides $n$ evenly then $n$ is composite. otherwise, $n$ is prime.
+- **Fermat primality test**
+	- Choose a random integer $a$, where $1<a<n$.
+	- Calculate $a^{n-1}\bmod n$.
+	- If the result is not $1$, $n$ is composite.
+	- If the result is $1$, $n$ is probably prime.
