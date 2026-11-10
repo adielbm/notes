@@ -136,10 +136,6 @@
 	- **linkage group**
 	- **linkage disequilibrium**
 
-# Geology 
-
-- **plate tectonics** (טֶקְטוֹנִיקַת הלוחות)
-- **geologic time scale**
 
 
 
