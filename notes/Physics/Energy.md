@@ -32,10 +32,9 @@
 
 - [[Thermodynamics#Internal energy|internal energy]]
 - **thermal energy** (אנרגייה תרמית)
-	- by Wikipedia it can refer to:
-		- [[Thermodynamics#Internal energy|internal energy]]
-		- [[Thermodynamics#Heat|heat]]
-		- [[Gas laws#Ideal gas law|kT product]]
+	- cf. [[Thermodynamics#Internal energy|internal energy]]
+	- https://en.wikipedia.org/wiki/Thermal_energy
+	- https://physics.stackexchange.com/questions/278539
 
 # Binding energy
 

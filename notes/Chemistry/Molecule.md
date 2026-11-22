@@ -18,10 +18,16 @@
 	- **diatomic molecule**
 		- "molecule composed of only two atoms, of the same or different chemical elements" (Wikipedia)
 	- **homonuclear molecule** (molecule composed of only one element)
+
 - **hydrophile** (הִידְרוֹפִילִי)
 - **hydrophobicity** (הידרופוביות)
 	- **hydrophobe**
 	- **hydrophobic** (הִידְרוֹפוֹבִּי)
+- **lipophilicity**
+	- **lipophilic**
+- **amphiphile** (or **amphipath**) – "a dipolar chemical compound possessing both hydrophilic (water-loving, polar) and lipophilic (fat-loving, nonpolar) properties within the same molecule" (Wikipedia)
+	- **amphiphilic** (or **amphipathic**)
+
 - **molecular entity** (or **chemical entity**)
 - **isomers** (אִיזוֹמֵרִים)
 

@@ -1,7 +1,7 @@
 
 - **biogeochemical cycle** (or **cycle of matter**)
 	- **water cycle** (or **hydrologic cycle**)
-	- **carbon cycle**
+	- [[Cell#Photosynthesis|carbon cycle]]
 	- **nutrient cycle**
 		- **[[#nitrogen cycle]]**
 		- **phosphorus cycle**

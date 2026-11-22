@@ -109,9 +109,10 @@
 	- **intermediate filaments** (**IFs**) (קורי ביניים)
 	- **microtubules**
 		- made up of tubulin (α-tubulin, β-tubulin)
+		- see also: microtubule motors
 
 - cell appendages
-	- **flagella** (pl. **flagellum**) (שׁוֹטוֹן)
+	- **flagellum** (pl. **flagella**) (שׁוֹטוֹן)
 	- **cilium** (pl. **cilia**) (ריסוֹן)
 	- **pilus** (pl. **pili**) (שַׂעֲרִית)
 		- on bacteria and archaea
@@ -123,6 +124,11 @@
 
 - **basal body** (גופיף בסיסי)
 - **motor protein**
+	- actin motors
+		- myosin
+	- microtubule motors
+		- dynein
+		- kinesin
 
 ## Endosymbionts
 
@@ -150,11 +156,11 @@
 		- **facilitated diffusion** (פִּעְפּוּעַ מְסֻיָּע, פִּעְפּוּעַ מְזֹרָז)
 			- down gradient
 			- requires membrane transport proteins
-				- channel protein
+				- [[#Proteins|channel protein]]
 					- **ion channel** (תְּעָלַת יוֹנִים)
 					- used for: ions such as $\ce{Na+,K+,Cl-}$
-				- carrier protein 
-					- used for: Glucose
+				- [[#Proteins|carrier protein]] 
+					- used for: Glucose (see [[#Proteins|glucose transporter]])
 			- transports substances that cannot easily cross the phospholipid bilayer. and
 		- [[Solutions#Osmotic pressure|osmosis]]
 			- water toward higher solute concentration
@@ -181,13 +187,24 @@
 
 
 
+## Proteins
 
-- **transport protein** (aka: transporter, escort protein, carrier protein, carrier proteins)
-	- **membrane transport protein**
-- membrane protein
-	- integral membrane protein
-		- transmembrane protein
+- **transport protein**
+	- membrane transport protein
+- **membrane protein**
+	- **integral membrane protein**
+		- **transmembrane protein**
+			- **membrane transport protein**
+				- **channel protein**
+				- **carrier protein** (or **carriers**, **permeases**, or **transporters**)
+					- **glucose transporter**
+						- GLUT
+						- SGLT
+							- (also a type of secondary active transporters)
+					- primary active transporters
+					- secondary active transporters
 
+	
 - **electrical gradient**
 - **concentration gradient** (or **chemical gradient**)
 - **electrochemical gradient**
@@ -207,6 +224,7 @@
 
 
 - $\ce{6CO2 + 6H2O ->[light] C6H12O6 + 6O2}$
+
 
 
 

@@ -15,3 +15,5 @@
 - https://idkn.wordpress.com (לראות שונה)
 - https://www.yoramorzach.co.il/%d7%94%d7%91%d7%9c%d7%95%d7%92/
 - https://www.sci-princess.info/
+- https://theslightestclue.com/  בלוג על פיזיקה, מדע ושאר ירקות - שמץ של מושג
+

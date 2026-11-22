@@ -44,6 +44,15 @@
 	- **exocarp** (שִׁכְבַת פְּרִי חִיצוֹנָה)
 		- **epicarp**
 
+# Tree
+
+- **branch** (or **ramus**)
+	- **twig**
+- **trunk** (or **bole**)
+- **offshoot**
+
+
+
 
 
 

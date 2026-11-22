@@ -19,7 +19,7 @@
 	- **human digestive system**
 	- **endocrine system** (מַעֲרֶכֶת הַהַפְרָשָׁה הַפְּנִימִית)
 	- **lymphatic system** (or **lymphoid system**) (מערכת הלימפה)
-		- part of: circulatory system and immune system
+		- part of: circulatory system and [[Immune system#Immune system|immune system]]
 	- **respiratory system** (מערכת הנשימה)
 	- **urinary system** (or **urinary tract**, **renal system**) (מערכת השתן, מערכת ההפרשה)
 	- [[Reproduction#Reproductive system|reproductive system]]

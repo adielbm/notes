@@ -299,7 +299,7 @@
 	- cf. **genetic recombination** (or **genetic reshuffling**)
 - **horizontal gene transfer** (**HGT**)
 	- **transduction** (הַשְׁנָיָה) 
-		- see: [[Viruses|bacteriophage]]
+		- see: [[Immune system#Viruses|bacteriophage]]
 	- **transformation** (הַתְמָרָה)
 	- **bacterial conjugation** (חֲבִירָה, הִזְדַּוְּגוּת)
 

@@ -552,5 +552,29 @@
       ]
     },
     "publisher": "Pearson"
+  },
+  {
+    "id": "Starr, 2014",
+    "type": "book",
+    "ISBN": "9781305073951",
+    "title": "Biology",
+    "author": [
+      {
+        "family": "Starr",
+        "given": "Cecie"
+      },
+      {
+        "family": "Taggart",
+        "given": "Ralph"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    },
+    "publisher": "Cengage Learning"
   }
 ]

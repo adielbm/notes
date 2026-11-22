@@ -49,7 +49,7 @@
 	- examples: 
 		- internal energy ($U$)
 		- enthalpy ($H$)
-		- entropy ($S$)
+		- [[#entropy]] ($S$)
 		- pressure ($P$)
 			- $P = f(V, T, n) = \frac{nRT}{V}$
 		- temperature ($T$)
@@ -247,8 +247,8 @@
 # Entropy
 
 - **entropy** ($S$)
-
-
+	- SI unit: $\mathrm{J/K}$
+	- see also [[Statistical mechanics|entropy in statistical mechanics]]
 - $\Delta S$ refers to the entropy of the system ($\Delta S_{\text{sys}}$)
 
 - entropy change:

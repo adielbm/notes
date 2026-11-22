@@ -113,23 +113,7 @@
 - cellular part:
 	- **red blood cells** (**RBC**) (or **erythrocytes**) (תאי דם אדומים, כדוריות דם אדומות)
 		- **reticulocytes** (immature red blood cells)
-	- **white blood cells** (**WBC**) (or **leukocytes**, **immune cells**, **immunocytes**) (תאי דם לבנים, כדוריות דם לבנות)
-		- granulocytes
-			- neutrophils
-			- basophil
-			- eosinophils
-		- agranulocytes
-			- lymphocytes
-				- T cells
-				- B cells
-			- monocytes
-				- types:
-					- classical
-					- intermediate
-					- non-classical
-				- potential differentiated cell types
-					- macrophages
-					- dendritic cells
+	- **[[Immune system#White blood cells|white blood cells]]** (**WBC**) (or **leukocytes**, **immune cells**, **immunocytes**) (תאי דם לבנים, כדוריות דם לבנות)
 	- **platelet** (or **thrombocytes**) (טסיות)
 
 

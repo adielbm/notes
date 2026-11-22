@@ -1,10 +1,10 @@
 {
    "window.title": "notes (obsidian)", 
-   "workbench.colorTheme": "Abyss",
-    "workbench.colorCustomizations": {
-        "titleBar.activeBackground": "#604ba8",
-        "titleBar.inactiveBackground": "#2b2640",
-    },
+//    "workbench.colorTheme": "Abyss",
+//     "workbench.colorCustomizations": {
+//         "titleBar.activeBackground": "#604ba8",
+//         "titleBar.inactiveBackground": "#2b2640",
+//     },
     "terminal.integrated.suggest.enabled": false,
     "editor.accessibilitySupport": "off",
     "terminal.integrated.suggest.builtinCompletions": {
