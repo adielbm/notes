@@ -3,7 +3,7 @@
 - **genetic material** (חומר תורשתי)
 - **genetic variation** (שׁוֹנוּת גֵּנֵטִית)
 	- [[#gene mutations]]
-	- [[#Reproduction|genetic recombination]]
+	- [[Reproduction#Homologous recombination|genetic recombination]]
 
 # Fields
 
@@ -147,9 +147,13 @@
 	- **reading frame** (מסגרת קריאה)
 
 
-
-- **neutral mutations**
-- **lethal mutations**
+- see also:
+	- [[Evolution#Population genetics|neutral theory of molecular evolution]]
+	- [[Evolution#Population genetics|neutral mutations]]
+	- **lethal mutations**
+	- **amino acid replacement**
+		- **conservative replacement** (or **conservative mutation**)
+		- radical replacement
 
 
 # Chromosomes
@@ -248,6 +252,7 @@
 
 
 - **heredity** (or **biological inheritance**) (תּוֹרָשָׁה)
+	- not to be confused with [[Evolution#Population genetics|heritability]]
 
 
 

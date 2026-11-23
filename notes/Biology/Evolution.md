@@ -7,20 +7,36 @@
 	- **[[#population genetics]]**
 - **biogeography** (ביוגאוגרפיה)
 - **molecular evolution**
-	- **molecular clock**
+	- [[#Population genetics|molecular clock]]
 - [[#geology]]
 - **evolutionary ecology**
 - **abiogenesis** (or the **origin of life**)
 
-# Evolutionary biology
 
-- **extinction** (הכחדה)
-	- **extinct species** (מין נכחד)
-	- **extinction event** (or **mass extinction**) (הכחדה המונית)
-	- **fossil** (מאובן)
-- **naturalist**
-- **lineage** (שׁוֹשֶׁלֶת)
+## History
+
+
+- **natural history** (תּוֹלְדוֹת הַטֶּבַע)
+	- **naturalist** (or **natural historian**)
 - **catastrophism**
+- **Lamarckism** (or **Lamarckian inheritance**)
+	- **inheritance of acquired characteristics** (or **soft inheritance**)
+		- cf. **[acquired characteristic](https://en.wikipedia.org/wiki/Acquired_characteristic)** (or **acquired trait**)
+- **Darwinism**
+	- natural selection
+	- [[#Macroevolution|common descent]]
+	- **Pangenesis**
+		- _The Variation of Animals and Plants Under Domestication_ (1868) by Charles Darwin
+		- **gemmules** (not to be confused with [Gemmule (buds)](https://en.wikipedia.org/wiki/Gemmule))
+- **neo-Darwinism**
+- **survival of the fittest** (coined by Herbert Spencer, 1864, _The Principles of Biology_)
+
+- see also: 
+	- [panselectionism](https://en.wiktionary.org/wiki/panselectionism)
+	- adaptationism
+
+
+# Evolutionary biology
 
 - selection
 	- **natural selection** (ברירה טבעית)
@@ -32,12 +48,16 @@
 			- see also: **balanced polymorphism**
 	- **sexual selection** (ברירה מינית)
 	- **selective breeding** (or **artificial selection**) (ברירה מלאכותית)
+- **lineage** (שׁוֹשֶׁלֶת)
+- **fitness landscapes** (or **adaptive landscapes**)
 
 
-# Macroevolution
-
-- **macroevolution** (אבולוציה על-מינית)
+- **[[#macroevolution]]** (אבולוציה על-מינית)
 	- **coevolution** (אבולוציית גומלין)
+- **[[#microevolution]]** (אבולוציה תוך-מינית)
+
+## Macroevolution
+
 - **reproductive isolation** (בידוד רבייתי)
 	- pre-zygotic isolation
 		- **temporal isolation** (or **allochronic speciation**) (בידוד בזמן)
@@ -60,6 +80,11 @@
 	- **adaptive radiation** (התפצלות סתגלתנית)
 	- **nonadaptive radiations**
 
+- **extinction** (הכחדה)
+	- **extinct species** (מין נכחד)
+	- **extinction event** (or **mass extinction**) (הכחדה המונית)
+	- **fossil** (מאובן)
+
 
 - **exaptation** (or **co-option**)
 	- **pre-adaptation**
@@ -67,7 +92,7 @@
 - **evolutionary radiation**
 
 - **common descent** (מוצא משותף)
-
+- **descent with modification**
 
 - **punctuated equilibrium** (שיווי משקל מקוטע)
 - **stasis** (עימדון)
@@ -85,7 +110,7 @@
 	- gene flow
 
 
-## Phylogenetics
+### Phylogenetics
 
 - **cladistics** (עינוף, מיון לענפים, קלדיסטיקה)
 	- **cladogram** (קלדוגרם)
@@ -96,7 +121,7 @@
 	- **polyphyletic**
 	- **paraphyly**
 
-## Morphology
+### Morphology
 
 - **morphology**
 	- **comparative anatomy**
@@ -106,15 +131,17 @@
 			- often producing **analogous structures**
 	- **anatomy**
 
-## Population genetics
+
+## Microevolution
+
+### Population genetics
 
 - **population** (אֻכְלוּסִיָּה)
 - **gene pool** (מאגר גנים)
 - **genetic equilibrium** (שיווי משקל גנטי)
 	- **Hardy–Weinberg principle**
 
-
-- **microevolution** (אבולוציה תוך-מינית)
+- **heritability** (תּוֹרַשְׁתִּיּוּת)
 
 - **fitness** (מותאמות)
 
@@ -129,6 +156,11 @@
 
 - **gene flow** (or **allele flow**) (זרימת גנים)
 - **genetic drift** (סחף גנטי)
+- **neutral theory of molecular evolution**
+	- **neutral mutations**
+	- **molecular clock**
+
+
 - **population bottleneck** (or **genetic bottleneck**)
 - **inbreeding** (רביית שארים)
 
